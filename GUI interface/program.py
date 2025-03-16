@@ -1,5 +1,8 @@
 import customtkinter
 
+# use spidev to talk SPI 
+
+
 # Create main window
 root = customtkinter.CTk() # creation of main application window
 root.geometry("800x480")
@@ -16,6 +19,7 @@ root.rowconfigure((0, 1, 2, 3), weight=1) # row heights
 label_right = customtkinter.CTkLabel(root, text="size of drink:", font=("Arial", 38))
 label_right.grid(row=0, column=1, padx=20, pady=20)
 
+# label that updates. 
 label_right2 = customtkinter.CTkLabel(root, text="\nnone", font=("Arial", 52))
 label_right2.grid(row=1, column=1, padx=20, pady=20)
 
