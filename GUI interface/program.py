@@ -1,4 +1,8 @@
 import customtkinter
+import I2C_psoc as psoc
+import threading
+import time
+
 
 # use spidev to talk SPI 
 
@@ -26,6 +30,34 @@ label_right2.grid(row=1, column=1, padx=20, pady=20)
 # function to update text 
 def update_label(text):
     label_right2.configure(text=f"{text}")
+
+
+
+
+# change all below here 
+# Function to send I2C command
+def send_drink_size(value):
+    psoc.send_data(value)  # Send value to PSoC
+    update_label(f"Sent: {value}")
+
+# Function to continuously read PSoC data
+def i2c_listener():
+    while True:
+        response = psoc.read_data()
+        if response is not None:
+            update_label(f"PSoC: {response}")
+        time.sleep(1)
+
+# Start I2C listener in a separate thread
+i2c_thread = threading.Thread(target=i2c_listener, daemon=True)
+i2c_thread.start()
+
+
+# to here
+
+
+
+
 
 # buttons left side
 button1 = customtkinter.CTkButton(root, text="Shots glass", width=200, height=100, font=("Arial", 24), command=lambda: update_label("30mL"))
