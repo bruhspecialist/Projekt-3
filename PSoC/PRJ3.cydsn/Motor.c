@@ -77,10 +77,8 @@ void RunDriveSequence(const uint8_t sequence[][4], uint8_t steps){
 // Sætter kørsel: tændt/slukket
 void Motor_SetDriveState(bool newState) {
     currentState = newState;
-    UART_PutString("Hello1\r\n");
     if (newState == false) {
         SetStators(MOTOR_STOPPED_DRIVE);
-        UART_PutString("Hello2\r\n");
     }
 }
 

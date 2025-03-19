@@ -31,7 +31,7 @@ int main(void)
     isr_uart_rx_StartEx(ISR_UART_rx_handler);
     UART_Start();
     I2C_Start();
-    
+    ColorSensor_Initialize();
     Motor_SetDriveState(motorRotating); // Sikrer at motor er stoppet i starten
     Motor_SetDriveSpeed(100); // 100%
     

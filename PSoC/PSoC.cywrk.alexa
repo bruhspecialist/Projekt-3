@@ -211,7 +211,18 @@
 </userData>
 </CyGuid_fdba8dfd-b15b-4469-9bbb-9e40c3e70997>
 <Unloaded />
-<OpenDocs />
+<OpenDocs>
+<name v=".\PRJ3.cydsn\main.c" />
+<name v=".\PRJ3.cydsn\Motor.h" />
+<name v=".\PRJ3.cydsn\Motor.c" />
+</OpenDocs>
+<OpenDocsLayout><![CDATA[<?xml version="1.0"?><!--
+
+  Actipro Docking/MDI for WinForms
+  Copyright (c) 2001-2016 Actipro Software LLC.  All rights reserved.
+  http://www.actiprosoftware.com
+
+--><DocumentLayout Version="1.0"><LayoutData><TabbedMdiRootContainer Orientation="Horizontal"><TabbedMdiContainer Size="1623, 605" SelectedTabbedMdiWindow="b11fcfa5-e53b-4b6e-8a53-3df0d28b5a0d"><DocumentWindow Key="C:\Users\alexa\Documents\GitHub\Projekt-3\PSoC\PRJ3.cydsn\main.c" Guid="b11fcfa5-e53b-4b6e-8a53-3df0d28b5a0d" /><DocumentWindow Key="C:\Users\alexa\Documents\GitHub\Projekt-3\PSoC\PRJ3.cydsn\Motor.h" Guid="5d73ad77-5b0c-45fe-9655-603c49b4020e" /><DocumentWindow Key="C:\Users\alexa\Documents\GitHub\Projekt-3\PSoC\PRJ3.cydsn\Motor.c" Guid="f14b476e-74cd-4401-8479-59df0d4b37ae" /></TabbedMdiContainer></TabbedMdiRootContainer><FloatingContainers /></LayoutData></DocumentLayout>]]></OpenDocsLayout>
 <config v="" />
 <AutoUpdate v="true" />
 </CyGuid_843a90a4-0c4b-4e44-991d-05e7fb117a21>
