@@ -1,0 +1,2350 @@
+ARM GAS  C:\Users\alexa\AppData\Local\Temp\ccr0op6K.s 			page 1
+
+
+   1              		.syntax unified
+   2              		.cpu cortex-m3
+   3              		.fpu softvfp
+   4              		.eabi_attribute 20, 1
+   5              		.eabi_attribute 21, 1
+   6              		.eabi_attribute 23, 3
+   7              		.eabi_attribute 24, 1
+   8              		.eabi_attribute 25, 1
+   9              		.eabi_attribute 26, 1
+  10              		.eabi_attribute 30, 1
+  11              		.eabi_attribute 34, 1
+  12              		.eabi_attribute 18, 4
+  13              		.thumb
+  14              		.syntax unified
+  15              		.file	"Motor.c"
+  16              		.text
+  17              	.Ltext0:
+  18              		.cfi_sections	.debug_frame
+  19              		.section	.text.SetStators,"ax",%progbits
+  20              		.align	2
+  21              		.global	SetStators
+  22              		.thumb
+  23              		.thumb_func
+  24              		.type	SetStators, %function
+  25              	SetStators:
+  26              	.LFB64:
+  27              		.file 1 "Motor.c"
+   1:Motor.c       **** /*
+   2:Motor.c       ****     Implementationsfil for SP2575M0206-A
+   3:Motor.c       ****                                             */
+   4:Motor.c       **** 
+   5:Motor.c       **** 
+   6:Motor.c       **** #include "project.h"
+   7:Motor.c       **** #include "Motor.h"
+   8:Motor.c       **** #include <stdint.h>
+   9:Motor.c       **** 
+  10:Motor.c       **** /* Statorenes step sekvenser for de forskellige drive modes */
+  11:Motor.c       **** const uint8_t MOTOR_WAVE_DRIVE_SEQUENCE[4][4] = {
+  12:Motor.c       ****     {1, 0, 0, 0},
+  13:Motor.c       ****     {0, 1, 0, 0},
+  14:Motor.c       ****     {0, 0, 1, 0},
+  15:Motor.c       ****     {0, 0, 0, 1}
+  16:Motor.c       **** };
+  17:Motor.c       **** const uint8_t MOTOR_FULL_DRIVE_SEQUENCE[4][4] = {
+  18:Motor.c       ****     {1, 1, 0, 0},
+  19:Motor.c       ****     {0, 1, 1, 0},
+  20:Motor.c       ****     {0, 0, 1, 1},
+  21:Motor.c       ****     {1, 0, 0, 1}
+  22:Motor.c       **** };
+  23:Motor.c       **** const uint8_t MOTOR_HALF_DRIVE_SEQUENCE[8][4] = {
+  24:Motor.c       ****     {1, 0, 0, 0},
+  25:Motor.c       ****     {1, 1, 0, 0},
+  26:Motor.c       ****     {0, 1, 0, 0},
+  27:Motor.c       ****     {0, 1, 1, 0},
+  28:Motor.c       ****     {0, 0, 1, 0},
+  29:Motor.c       ****     {0, 0, 1, 1},
+  30:Motor.c       ****     {0, 0, 0, 1},
+ARM GAS  C:\Users\alexa\AppData\Local\Temp\ccr0op6K.s 			page 2
+
+
+  31:Motor.c       ****     {1, 0, 0, 1}
+  32:Motor.c       **** };
+  33:Motor.c       **** 
+  34:Motor.c       **** /* Tilstand for slukkede statore */
+  35:Motor.c       **** const uint8_t MOTOR_STOPPED_DRIVE[4] = {0, 0, 0, 0};
+  36:Motor.c       **** 
+  37:Motor.c       **** // Variabler
+  38:Motor.c       **** static bool currentState = false; // Slukket som standard
+  39:Motor.c       **** static driveModes currentMode = MOTOR_MODE_FULL_STEP; // I Full Step som standard
+  40:Motor.c       **** static driveDirections currentDirection = MOTOR_DIRECTION_FORWARD; // Kører fremad som standard
+  41:Motor.c       **** static uint8_t currentSpeed = 50; // 50% hastighed som standard
+  42:Motor.c       **** 
+  43:Motor.c       **** // Sætter tilstande af statore
+  44:Motor.c       **** void SetStators(const uint8_t states[4]) {
+  28              		.loc 1 44 0
+  29              		.cfi_startproc
+  30              		@ args = 0, pretend = 0, frame = 0
+  31              		@ frame_needed = 0, uses_anonymous_args = 0
+  32              	.LVL0:
+  33 0000 10B5     		push	{r4, lr}
+  34              		.cfi_def_cfa_offset 8
+  35              		.cfi_offset 4, -8
+  36              		.cfi_offset 14, -4
+  37 0002 0446     		mov	r4, r0
+  45:Motor.c       ****     STEP_1a_Write(states[0]);
+  38              		.loc 1 45 0
+  39 0004 0078     		ldrb	r0, [r0]	@ zero_extendqisi2
+  40              	.LVL1:
+  41 0006 FFF7FEFF 		bl	STEP_1a_Write
+  42              	.LVL2:
+  46:Motor.c       ****     STEP_2a_Write(states[1]);
+  43              		.loc 1 46 0
+  44 000a 6078     		ldrb	r0, [r4, #1]	@ zero_extendqisi2
+  45 000c FFF7FEFF 		bl	STEP_2a_Write
+  46              	.LVL3:
+  47:Motor.c       ****     STEP_1b_Write(states[2]);
+  47              		.loc 1 47 0
+  48 0010 A078     		ldrb	r0, [r4, #2]	@ zero_extendqisi2
+  49 0012 FFF7FEFF 		bl	STEP_1b_Write
+  50              	.LVL4:
+  48:Motor.c       ****     STEP_2b_Write(states[3]);
+  51              		.loc 1 48 0
+  52 0016 E078     		ldrb	r0, [r4, #3]	@ zero_extendqisi2
+  53 0018 FFF7FEFF 		bl	STEP_2b_Write
+  54              	.LVL5:
+  55 001c 10BD     		pop	{r4, pc}
+  56              		.cfi_endproc
+  57              	.LFE64:
+  58              		.size	SetStators, .-SetStators
+  59 001e 00BF     		.section	.text.CalculateDelay,"ax",%progbits
+  60              		.align	2
+  61              		.global	CalculateDelay
+  62              		.thumb
+  63              		.thumb_func
+  64              		.type	CalculateDelay, %function
+  65              	CalculateDelay:
+  66              	.LFB65:
+ARM GAS  C:\Users\alexa\AppData\Local\Temp\ccr0op6K.s 			page 3
+
+
+  49:Motor.c       **** }
+  50:Motor.c       **** 
+  51:Motor.c       **** // Kalkulerer tiden (ms) til næste stator-skift
+  52:Motor.c       **** uint16_t CalculateDelay() {
+  67              		.loc 1 52 0
+  68              		.cfi_startproc
+  69              		@ args = 0, pretend = 0, frame = 0
+  70              		@ frame_needed = 0, uses_anonymous_args = 0
+  71              		@ link register save eliminated.
+  72              	.LVL6:
+  53:Motor.c       ****     uint16_t delayLimitDiff = MAX_SPEED_DELAY - MIN_SPEED_DELAY;
+  54:Motor.c       ****     uint16_t speedDiff = 100 - currentSpeed;
+  73              		.loc 1 54 0
+  74 0000 094B     		ldr	r3, .L4
+  75 0002 1B78     		ldrb	r3, [r3]	@ zero_extendqisi2
+  76 0004 C3F16403 		rsb	r3, r3, #100
+  77 0008 98B2     		uxth	r0, r3
+  78              	.LVL7:
+  55:Motor.c       ****     uint16_t delay = MIN_SPEED_DELAY + (delayLimitDiff * speedDiff * speedDiff) / (100 * 100);
+  79              		.loc 1 55 0
+  80 000a 40F2DE33 		movw	r3, #990
+  81 000e 03FB00F3 		mul	r3, r3, r0
+  82 0012 03FB00F3 		mul	r3, r3, r0
+  83 0016 0548     		ldr	r0, .L4+4
+  84              	.LVL8:
+  85 0018 80FB0320 		smull	r2, r0, r0, r3
+  86 001c DB17     		asrs	r3, r3, #31
+  87 001e C3EB2030 		rsb	r0, r3, r0, asr #12
+  88 0022 0A30     		adds	r0, r0, #10
+  89              	.LVL9:
+  56:Motor.c       ****     return delay;
+  57:Motor.c       **** }
+  90              		.loc 1 57 0
+  91 0024 80B2     		uxth	r0, r0
+  92 0026 7047     		bx	lr
+  93              	.L5:
+  94              		.align	2
+  95              	.L4:
+  96 0028 00000000 		.word	.LANCHOR0
+  97 002c AD8BDB68 		.word	1759218605
+  98              		.cfi_endproc
+  99              	.LFE65:
+ 100              		.size	CalculateDelay, .-CalculateDelay
+ 101              		.section	.text.RunDriveSequence,"ax",%progbits
+ 102              		.align	2
+ 103              		.global	RunDriveSequence
+ 104              		.thumb
+ 105              		.thumb_func
+ 106              		.type	RunDriveSequence, %function
+ 107              	RunDriveSequence:
+ 108              	.LFB66:
+  58:Motor.c       **** 
+  59:Motor.c       **** // Kører én step sekvens
+  60:Motor.c       **** void RunDriveSequence(const uint8_t sequence[][4], uint8_t steps){
+ 109              		.loc 1 60 0
+ 110              		.cfi_startproc
+ 111              		@ args = 0, pretend = 0, frame = 0
+ARM GAS  C:\Users\alexa\AppData\Local\Temp\ccr0op6K.s 			page 4
+
+
+ 112              		@ frame_needed = 0, uses_anonymous_args = 0
+ 113              	.LVL10:
+ 114 0000 2DE9F041 		push	{r4, r5, r6, r7, r8, lr}
+ 115              		.cfi_def_cfa_offset 24
+ 116              		.cfi_offset 4, -24
+ 117              		.cfi_offset 5, -20
+ 118              		.cfi_offset 6, -16
+ 119              		.cfi_offset 7, -12
+ 120              		.cfi_offset 8, -8
+ 121              		.cfi_offset 14, -4
+ 122 0004 0746     		mov	r7, r0
+ 123 0006 0E46     		mov	r6, r1
+  61:Motor.c       ****     uint8_t init_direction = currentDirection;
+ 124              		.loc 1 61 0
+ 125 0008 114B     		ldr	r3, .L15
+ 126 000a 1D78     		ldrb	r5, [r3]	@ zero_extendqisi2
+ 127              	.LVL11:
+  62:Motor.c       ****     uint8_t i = (init_direction == MOTOR_DIRECTION_FORWARD)?(0):(steps-1);
+ 128              		.loc 1 62 0
+ 129 000c 15B1     		cbz	r5, .L12
+ 130              		.loc 1 62 0 is_stmt 0 discriminator 1
+ 131 000e 4C1E     		subs	r4, r1, #1
+ 132 0010 E4B2     		uxtb	r4, r4
+ 133 0012 00E0     		b	.L7
+ 134              	.L12:
+ 135              		.loc 1 62 0
+ 136 0014 0024     		movs	r4, #0
+ 137              	.L7:
+ 138              	.LVL12:
+  63:Motor.c       ****     int8_t step_inc = (init_direction == MOTOR_DIRECTION_FORWARD)?(1):(-1);
+ 139              		.loc 1 63 0 is_stmt 1 discriminator 4
+ 140 0016 15B9     		cbnz	r5, .L13
+ 141              		.loc 1 63 0 is_stmt 0
+ 142 0018 4FF00108 		mov	r8, #1
+ 143 001c 13E0     		b	.L9
+ 144              	.L13:
+ 145 001e 4FF0FF38 		mov	r8, #-1
+ 146              	.LVL13:
+  64:Motor.c       ****     for (; (i < steps && i >= 0); i += step_inc) {
+ 147              		.loc 1 64 0 is_stmt 1
+ 148 0022 10E0     		b	.L9
+ 149              	.LVL14:
+ 150              	.L11:
+  65:Motor.c       ****         
+  66:Motor.c       ****         if (
+ 151              		.loc 1 66 0
+ 152 0024 0A4B     		ldr	r3, .L15
+ 153 0026 5B78     		ldrb	r3, [r3, #1]	@ zero_extendqisi2
+ 154 0028 7BB1     		cbz	r3, .L6
+  67:Motor.c       ****             currentState == true
+  68:Motor.c       ****             && currentDirection == init_direction
+ 155              		.loc 1 68 0
+ 156 002a 094B     		ldr	r3, .L15
+ 157 002c 1B78     		ldrb	r3, [r3]	@ zero_extendqisi2
+ 158 002e 9D42     		cmp	r5, r3
+ 159 0030 0BD1     		bne	.L6
+  69:Motor.c       ****         ) {
+ARM GAS  C:\Users\alexa\AppData\Local\Temp\ccr0op6K.s 			page 5
+
+
+  70:Motor.c       ****             SetStators(sequence[i]);
+ 160              		.loc 1 70 0
+ 161 0032 07EB8400 		add	r0, r7, r4, lsl #2
+ 162 0036 FFF7FEFF 		bl	SetStators
+ 163              	.LVL15:
+  71:Motor.c       ****             CyDelay(CalculateDelay());
+ 164              		.loc 1 71 0
+ 165 003a FFF7FEFF 		bl	CalculateDelay
+ 166              	.LVL16:
+ 167 003e FFF7FEFF 		bl	CyDelay
+ 168              	.LVL17:
+  64:Motor.c       ****         
+ 169              		.loc 1 64 0
+ 170 0042 4444     		add	r4, r4, r8
+ 171              	.LVL18:
+ 172 0044 E4B2     		uxtb	r4, r4
+ 173              	.LVL19:
+ 174              	.L9:
+  64:Motor.c       ****         
+ 175              		.loc 1 64 0 is_stmt 0 discriminator 1
+ 176 0046 B442     		cmp	r4, r6
+ 177 0048 ECD3     		bcc	.L11
+ 178              	.L6:
+ 179 004a BDE8F081 		pop	{r4, r5, r6, r7, r8, pc}
+ 180              	.LVL20:
+ 181              	.L16:
+ 182 004e 00BF     		.align	2
+ 183              	.L15:
+ 184 0050 00000000 		.word	.LANCHOR1
+ 185              		.cfi_endproc
+ 186              	.LFE66:
+ 187              		.size	RunDriveSequence, .-RunDriveSequence
+ 188              		.section	.text.Motor_SetDriveState,"ax",%progbits
+ 189              		.align	2
+ 190              		.global	Motor_SetDriveState
+ 191              		.thumb
+ 192              		.thumb_func
+ 193              		.type	Motor_SetDriveState, %function
+ 194              	Motor_SetDriveState:
+ 195              	.LFB67:
+  72:Motor.c       ****         }
+  73:Motor.c       ****         else break;
+  74:Motor.c       ****     }
+  75:Motor.c       **** }
+  76:Motor.c       **** 
+  77:Motor.c       **** // Sætter kørsel: tændt/slukket
+  78:Motor.c       **** void Motor_SetDriveState(bool newState) {
+ 196              		.loc 1 78 0 is_stmt 1
+ 197              		.cfi_startproc
+ 198              		@ args = 0, pretend = 0, frame = 0
+ 199              		@ frame_needed = 0, uses_anonymous_args = 0
+ 200              	.LVL21:
+ 201 0000 10B5     		push	{r4, lr}
+ 202              		.cfi_def_cfa_offset 8
+ 203              		.cfi_offset 4, -8
+ 204              		.cfi_offset 14, -4
+ 205 0002 0446     		mov	r4, r0
+ARM GAS  C:\Users\alexa\AppData\Local\Temp\ccr0op6K.s 			page 6
+
+
+  79:Motor.c       ****     currentState = newState;
+ 206              		.loc 1 79 0
+ 207 0004 064B     		ldr	r3, .L20
+ 208 0006 5870     		strb	r0, [r3, #1]
+  80:Motor.c       ****     UART_PutString("Hello1\r\n");
+ 209              		.loc 1 80 0
+ 210 0008 0648     		ldr	r0, .L20+4
+ 211              	.LVL22:
+ 212 000a FFF7FEFF 		bl	UART_PutString
+ 213              	.LVL23:
+  81:Motor.c       ****     if (newState == false) {
+ 214              		.loc 1 81 0
+ 215 000e 2CB9     		cbnz	r4, .L17
+  82:Motor.c       ****         SetStators(MOTOR_STOPPED_DRIVE);
+ 216              		.loc 1 82 0
+ 217 0010 0548     		ldr	r0, .L20+8
+ 218 0012 FFF7FEFF 		bl	SetStators
+ 219              	.LVL24:
+  83:Motor.c       ****         UART_PutString("Hello2\r\n");
+ 220              		.loc 1 83 0
+ 221 0016 0548     		ldr	r0, .L20+12
+ 222 0018 FFF7FEFF 		bl	UART_PutString
+ 223              	.LVL25:
+ 224              	.L17:
+ 225 001c 10BD     		pop	{r4, pc}
+ 226              	.L21:
+ 227 001e 00BF     		.align	2
+ 228              	.L20:
+ 229 0020 00000000 		.word	.LANCHOR1
+ 230 0024 00000000 		.word	.LC0
+ 231 0028 00000000 		.word	.LANCHOR2
+ 232 002c 0C000000 		.word	.LC1
+ 233              		.cfi_endproc
+ 234              	.LFE67:
+ 235              		.size	Motor_SetDriveState, .-Motor_SetDriveState
+ 236              		.section	.text.Motor_SetDriveMode,"ax",%progbits
+ 237              		.align	2
+ 238              		.global	Motor_SetDriveMode
+ 239              		.thumb
+ 240              		.thumb_func
+ 241              		.type	Motor_SetDriveMode, %function
+ 242              	Motor_SetDriveMode:
+ 243              	.LFB68:
+  84:Motor.c       ****     }
+  85:Motor.c       **** }
+  86:Motor.c       **** 
+  87:Motor.c       **** // Sætter Drive Mode
+  88:Motor.c       **** void Motor_SetDriveMode(driveModes newMode) {
+ 244              		.loc 1 88 0
+ 245              		.cfi_startproc
+ 246              		@ args = 0, pretend = 0, frame = 0
+ 247              		@ frame_needed = 0, uses_anonymous_args = 0
+ 248              		@ link register save eliminated.
+ 249              	.LVL26:
+  89:Motor.c       ****     currentMode = newMode;
+ 250              		.loc 1 89 0
+ 251 0000 014B     		ldr	r3, .L23
+ARM GAS  C:\Users\alexa\AppData\Local\Temp\ccr0op6K.s 			page 7
+
+
+ 252 0002 5870     		strb	r0, [r3, #1]
+ 253 0004 7047     		bx	lr
+ 254              	.L24:
+ 255 0006 00BF     		.align	2
+ 256              	.L23:
+ 257 0008 00000000 		.word	.LANCHOR0
+ 258              		.cfi_endproc
+ 259              	.LFE68:
+ 260              		.size	Motor_SetDriveMode, .-Motor_SetDriveMode
+ 261              		.section	.text.Motor_SetDriveDirection,"ax",%progbits
+ 262              		.align	2
+ 263              		.global	Motor_SetDriveDirection
+ 264              		.thumb
+ 265              		.thumb_func
+ 266              		.type	Motor_SetDriveDirection, %function
+ 267              	Motor_SetDriveDirection:
+ 268              	.LFB69:
+  90:Motor.c       **** }
+  91:Motor.c       **** 
+  92:Motor.c       **** // Sætter kørselsretning: fremad/bagud
+  93:Motor.c       **** void Motor_SetDriveDirection(driveDirections newDirection) {
+ 269              		.loc 1 93 0
+ 270              		.cfi_startproc
+ 271              		@ args = 0, pretend = 0, frame = 0
+ 272              		@ frame_needed = 0, uses_anonymous_args = 0
+ 273              		@ link register save eliminated.
+ 274              	.LVL27:
+  94:Motor.c       ****     currentDirection = newDirection;
+ 275              		.loc 1 94 0
+ 276 0000 014B     		ldr	r3, .L26
+ 277 0002 1870     		strb	r0, [r3]
+ 278 0004 7047     		bx	lr
+ 279              	.L27:
+ 280 0006 00BF     		.align	2
+ 281              	.L26:
+ 282 0008 00000000 		.word	.LANCHOR1
+ 283              		.cfi_endproc
+ 284              	.LFE69:
+ 285              		.size	Motor_SetDriveDirection, .-Motor_SetDriveDirection
+ 286              		.section	.text.Motor_SetDriveSpeed,"ax",%progbits
+ 287              		.align	2
+ 288              		.global	Motor_SetDriveSpeed
+ 289              		.thumb
+ 290              		.thumb_func
+ 291              		.type	Motor_SetDriveSpeed, %function
+ 292              	Motor_SetDriveSpeed:
+ 293              	.LFB70:
+  95:Motor.c       **** }
+  96:Motor.c       **** 
+  97:Motor.c       **** // Sætter kørselshastighed: Mellem 0 tom. 100. Kan forstås som procent
+  98:Motor.c       **** uint8_t Motor_SetDriveSpeed(uint8_t newSpeed) {
+ 294              		.loc 1 98 0
+ 295              		.cfi_startproc
+ 296              		@ args = 0, pretend = 0, frame = 0
+ 297              		@ frame_needed = 0, uses_anonymous_args = 0
+ 298              		@ link register save eliminated.
+ 299              	.LVL28:
+ARM GAS  C:\Users\alexa\AppData\Local\Temp\ccr0op6K.s 			page 8
+
+
+  99:Motor.c       ****     uint8_t speed = (newSpeed >= 0 && newSpeed <= 100)?newSpeed:currentSpeed;
+ 300              		.loc 1 99 0
+ 301 0000 6428     		cmp	r0, #100
+ 302 0002 01D9     		bls	.L29
+ 303              		.loc 1 99 0 is_stmt 0 discriminator 2
+ 304 0004 024B     		ldr	r3, .L30
+ 305 0006 1878     		ldrb	r0, [r3]	@ zero_extendqisi2
+ 306              	.LVL29:
+ 307              	.L29:
+ 100:Motor.c       ****     currentSpeed = speed;
+ 308              		.loc 1 100 0 is_stmt 1 discriminator 4
+ 309 0008 014B     		ldr	r3, .L30
+ 310 000a 1870     		strb	r0, [r3]
+ 101:Motor.c       ****     return speed;
+ 102:Motor.c       **** }
+ 311              		.loc 1 102 0 discriminator 4
+ 312 000c 7047     		bx	lr
+ 313              	.L31:
+ 314 000e 00BF     		.align	2
+ 315              	.L30:
+ 316 0010 00000000 		.word	.LANCHOR0
+ 317              		.cfi_endproc
+ 318              	.LFE70:
+ 319              		.size	Motor_SetDriveSpeed, .-Motor_SetDriveSpeed
+ 320              		.section	.text.Motor_GetDriveDirection,"ax",%progbits
+ 321              		.align	2
+ 322              		.global	Motor_GetDriveDirection
+ 323              		.thumb
+ 324              		.thumb_func
+ 325              		.type	Motor_GetDriveDirection, %function
+ 326              	Motor_GetDriveDirection:
+ 327              	.LFB71:
+ 103:Motor.c       **** 
+ 104:Motor.c       **** // Returnerer kørselsretning
+ 105:Motor.c       **** driveDirections Motor_GetDriveDirection() {
+ 328              		.loc 1 105 0
+ 329              		.cfi_startproc
+ 330              		@ args = 0, pretend = 0, frame = 0
+ 331              		@ frame_needed = 0, uses_anonymous_args = 0
+ 332              		@ link register save eliminated.
+ 106:Motor.c       ****     return currentDirection;
+ 107:Motor.c       **** }
+ 333              		.loc 1 107 0
+ 334 0000 014B     		ldr	r3, .L33
+ 335 0002 1878     		ldrb	r0, [r3]	@ zero_extendqisi2
+ 336 0004 7047     		bx	lr
+ 337              	.L34:
+ 338 0006 00BF     		.align	2
+ 339              	.L33:
+ 340 0008 00000000 		.word	.LANCHOR1
+ 341              		.cfi_endproc
+ 342              	.LFE71:
+ 343              		.size	Motor_GetDriveDirection, .-Motor_GetDriveDirection
+ 344              		.section	.text.Motor_GetDriveSpeed,"ax",%progbits
+ 345              		.align	2
+ 346              		.global	Motor_GetDriveSpeed
+ 347              		.thumb
+ARM GAS  C:\Users\alexa\AppData\Local\Temp\ccr0op6K.s 			page 9
+
+
+ 348              		.thumb_func
+ 349              		.type	Motor_GetDriveSpeed, %function
+ 350              	Motor_GetDriveSpeed:
+ 351              	.LFB72:
+ 108:Motor.c       **** 
+ 109:Motor.c       **** // Returnerer kørselshastighed
+ 110:Motor.c       **** uint8_t Motor_GetDriveSpeed() {
+ 352              		.loc 1 110 0
+ 353              		.cfi_startproc
+ 354              		@ args = 0, pretend = 0, frame = 0
+ 355              		@ frame_needed = 0, uses_anonymous_args = 0
+ 356              		@ link register save eliminated.
+ 111:Motor.c       ****     return currentSpeed;
+ 112:Motor.c       **** }
+ 357              		.loc 1 112 0
+ 358 0000 014B     		ldr	r3, .L36
+ 359 0002 1878     		ldrb	r0, [r3]	@ zero_extendqisi2
+ 360 0004 7047     		bx	lr
+ 361              	.L37:
+ 362 0006 00BF     		.align	2
+ 363              	.L36:
+ 364 0008 00000000 		.word	.LANCHOR0
+ 365              		.cfi_endproc
+ 366              	.LFE72:
+ 367              		.size	Motor_GetDriveSpeed, .-Motor_GetDriveSpeed
+ 368              		.section	.text.Motor_UpdateState,"ax",%progbits
+ 369              		.align	2
+ 370              		.global	Motor_UpdateState
+ 371              		.thumb
+ 372              		.thumb_func
+ 373              		.type	Motor_UpdateState, %function
+ 374              	Motor_UpdateState:
+ 375              	.LFB73:
+ 113:Motor.c       **** 
+ 114:Motor.c       **** // Opdaterer step sekvensen, baseret på aktuel drive mode
+ 115:Motor.c       **** void Motor_UpdateState() {
+ 376              		.loc 1 115 0
+ 377              		.cfi_startproc
+ 378              		@ args = 0, pretend = 0, frame = 0
+ 379              		@ frame_needed = 0, uses_anonymous_args = 0
+ 380 0000 08B5     		push	{r3, lr}
+ 381              		.cfi_def_cfa_offset 8
+ 382              		.cfi_offset 3, -8
+ 383              		.cfi_offset 14, -4
+ 116:Motor.c       ****     switch (currentMode) {
+ 384              		.loc 1 116 0
+ 385 0002 0B4B     		ldr	r3, .L44
+ 386 0004 5B78     		ldrb	r3, [r3, #1]	@ zero_extendqisi2
+ 387 0006 012B     		cmp	r3, #1
+ 388 0008 08D0     		beq	.L40
+ 389 000a 13B1     		cbz	r3, .L41
+ 390 000c 022B     		cmp	r3, #2
+ 391 000e 0AD0     		beq	.L42
+ 392 0010 08BD     		pop	{r3, pc}
+ 393              	.L41:
+ 117:Motor.c       ****         case MOTOR_MODE_WAVE_DRIVE :  RunDriveSequence(MOTOR_WAVE_DRIVE_SEQUENCE, 4); break;
+ 394              		.loc 1 117 0
+ARM GAS  C:\Users\alexa\AppData\Local\Temp\ccr0op6K.s 			page 10
+
+
+ 395 0012 0421     		movs	r1, #4
+ 396 0014 0748     		ldr	r0, .L44+4
+ 397 0016 FFF7FEFF 		bl	RunDriveSequence
+ 398              	.LVL30:
+ 399 001a 08BD     		pop	{r3, pc}
+ 400              	.L40:
+ 118:Motor.c       ****         case MOTOR_MODE_FULL_STEP  :  RunDriveSequence(MOTOR_FULL_DRIVE_SEQUENCE, 4); break;
+ 401              		.loc 1 118 0
+ 402 001c 0421     		movs	r1, #4
+ 403 001e 0648     		ldr	r0, .L44+8
+ 404 0020 FFF7FEFF 		bl	RunDriveSequence
+ 405              	.LVL31:
+ 406 0024 08BD     		pop	{r3, pc}
+ 407              	.L42:
+ 119:Motor.c       ****         case MOTOR_MODE_HALF_STEP  :  RunDriveSequence(MOTOR_HALF_DRIVE_SEQUENCE, 8); break;
+ 408              		.loc 1 119 0
+ 409 0026 0821     		movs	r1, #8
+ 410 0028 0448     		ldr	r0, .L44+12
+ 411 002a FFF7FEFF 		bl	RunDriveSequence
+ 412              	.LVL32:
+ 413 002e 08BD     		pop	{r3, pc}
+ 414              	.L45:
+ 415              		.align	2
+ 416              	.L44:
+ 417 0030 00000000 		.word	.LANCHOR0
+ 418 0034 04000000 		.word	.LANCHOR2+4
+ 419 0038 14000000 		.word	.LANCHOR2+20
+ 420 003c 24000000 		.word	.LANCHOR2+36
+ 421              		.cfi_endproc
+ 422              	.LFE73:
+ 423              		.size	Motor_UpdateState, .-Motor_UpdateState
+ 424              		.global	MOTOR_STOPPED_DRIVE
+ 425              		.global	MOTOR_HALF_DRIVE_SEQUENCE
+ 426              		.global	MOTOR_FULL_DRIVE_SEQUENCE
+ 427              		.global	MOTOR_WAVE_DRIVE_SEQUENCE
+ 428              		.section	.rodata
+ 429              		.align	2
+ 430              		.set	.LANCHOR2,. + 0
+ 431              		.type	MOTOR_STOPPED_DRIVE, %object
+ 432              		.size	MOTOR_STOPPED_DRIVE, 4
+ 433              	MOTOR_STOPPED_DRIVE:
+ 434 0000 00000000 		.space	4
+ 435              		.type	MOTOR_WAVE_DRIVE_SEQUENCE, %object
+ 436              		.size	MOTOR_WAVE_DRIVE_SEQUENCE, 16
+ 437              	MOTOR_WAVE_DRIVE_SEQUENCE:
+ 438 0004 01       		.byte	1
+ 439 0005 00       		.byte	0
+ 440 0006 00       		.byte	0
+ 441 0007 00       		.byte	0
+ 442 0008 00       		.byte	0
+ 443 0009 01       		.byte	1
+ 444 000a 00       		.byte	0
+ 445 000b 00       		.byte	0
+ 446 000c 00       		.byte	0
+ 447 000d 00       		.byte	0
+ 448 000e 01       		.byte	1
+ 449 000f 00       		.byte	0
+ARM GAS  C:\Users\alexa\AppData\Local\Temp\ccr0op6K.s 			page 11
+
+
+ 450 0010 00       		.byte	0
+ 451 0011 00       		.byte	0
+ 452 0012 00       		.byte	0
+ 453 0013 01       		.byte	1
+ 454              		.type	MOTOR_FULL_DRIVE_SEQUENCE, %object
+ 455              		.size	MOTOR_FULL_DRIVE_SEQUENCE, 16
+ 456              	MOTOR_FULL_DRIVE_SEQUENCE:
+ 457 0014 01       		.byte	1
+ 458 0015 01       		.byte	1
+ 459 0016 00       		.byte	0
+ 460 0017 00       		.byte	0
+ 461 0018 00       		.byte	0
+ 462 0019 01       		.byte	1
+ 463 001a 01       		.byte	1
+ 464 001b 00       		.byte	0
+ 465 001c 00       		.byte	0
+ 466 001d 00       		.byte	0
+ 467 001e 01       		.byte	1
+ 468 001f 01       		.byte	1
+ 469 0020 01       		.byte	1
+ 470 0021 00       		.byte	0
+ 471 0022 00       		.byte	0
+ 472 0023 01       		.byte	1
+ 473              		.type	MOTOR_HALF_DRIVE_SEQUENCE, %object
+ 474              		.size	MOTOR_HALF_DRIVE_SEQUENCE, 32
+ 475              	MOTOR_HALF_DRIVE_SEQUENCE:
+ 476 0024 01       		.byte	1
+ 477 0025 00       		.byte	0
+ 478 0026 00       		.byte	0
+ 479 0027 00       		.byte	0
+ 480 0028 01       		.byte	1
+ 481 0029 01       		.byte	1
+ 482 002a 00       		.byte	0
+ 483 002b 00       		.byte	0
+ 484 002c 00       		.byte	0
+ 485 002d 01       		.byte	1
+ 486 002e 00       		.byte	0
+ 487 002f 00       		.byte	0
+ 488 0030 00       		.byte	0
+ 489 0031 01       		.byte	1
+ 490 0032 01       		.byte	1
+ 491 0033 00       		.byte	0
+ 492 0034 00       		.byte	0
+ 493 0035 00       		.byte	0
+ 494 0036 01       		.byte	1
+ 495 0037 00       		.byte	0
+ 496 0038 00       		.byte	0
+ 497 0039 00       		.byte	0
+ 498 003a 01       		.byte	1
+ 499 003b 01       		.byte	1
+ 500 003c 00       		.byte	0
+ 501 003d 00       		.byte	0
+ 502 003e 00       		.byte	0
+ 503 003f 01       		.byte	1
+ 504 0040 01       		.byte	1
+ 505 0041 00       		.byte	0
+ 506 0042 00       		.byte	0
+ARM GAS  C:\Users\alexa\AppData\Local\Temp\ccr0op6K.s 			page 12
+
+
+ 507 0043 01       		.byte	1
+ 508              		.data
+ 509              		.set	.LANCHOR0,. + 0
+ 510              		.type	currentSpeed, %object
+ 511              		.size	currentSpeed, 1
+ 512              	currentSpeed:
+ 513 0000 32       		.byte	50
+ 514              		.type	currentMode, %object
+ 515              		.size	currentMode, 1
+ 516              	currentMode:
+ 517 0001 01       		.byte	1
+ 518              		.section	.rodata.str1.4,"aMS",%progbits,1
+ 519              		.align	2
+ 520              	.LC0:
+ 521 0000 48656C6C 		.ascii	"Hello1\015\012\000"
+ 521      6F310D0A 
+ 521      00
+ 522 0009 000000   		.space	3
+ 523              	.LC1:
+ 524 000c 48656C6C 		.ascii	"Hello2\015\012\000"
+ 524      6F320D0A 
+ 524      00
+ 525              		.bss
+ 526              		.set	.LANCHOR1,. + 0
+ 527              		.type	currentDirection, %object
+ 528              		.size	currentDirection, 1
+ 529              	currentDirection:
+ 530 0000 00       		.space	1
+ 531              		.type	currentState, %object
+ 532              		.size	currentState, 1
+ 533              	currentState:
+ 534 0001 00       		.space	1
+ 535              		.text
+ 536              	.Letext0:
+ 537              		.file 2 "c:\\program files (x86)\\cypress\\psoc creator\\4.4\\psoc creator\\import\\gnu\\arm\\5.4.
+ 538              		.file 3 "c:\\program files (x86)\\cypress\\psoc creator\\4.4\\psoc creator\\import\\gnu\\arm\\5.4.
+ 539              		.file 4 "Motor.h"
+ 540              		.file 5 "Generated_Source\\PSoC5/core_cm3.h"
+ 541              		.file 6 "Generated_Source\\PSoC5/STEP_1a.h"
+ 542              		.file 7 "Generated_Source\\PSoC5/STEP_2a.h"
+ 543              		.file 8 "Generated_Source\\PSoC5/STEP_1b.h"
+ 544              		.file 9 "Generated_Source\\PSoC5/STEP_2b.h"
+ 545              		.file 10 "Generated_Source\\PSoC5/CyLib.h"
+ 546              		.file 11 "Generated_Source\\PSoC5/UART.h"
+ 547              		.section	.debug_info,"",%progbits
+ 548              	.Ldebug_info0:
+ 549 0000 FC040000 		.4byte	0x4fc
+ 550 0004 0400     		.2byte	0x4
+ 551 0006 00000000 		.4byte	.Ldebug_abbrev0
+ 552 000a 04       		.byte	0x4
+ 553 000b 01       		.uleb128 0x1
+ 554 000c A2030000 		.4byte	.LASF66
+ 555 0010 0C       		.byte	0xc
+ 556 0011 A6010000 		.4byte	.LASF67
+ 557 0015 23030000 		.4byte	.LASF68
+ 558 0019 00000000 		.4byte	.Ldebug_ranges0+0
+ 559 001d 00000000 		.4byte	0
+ARM GAS  C:\Users\alexa\AppData\Local\Temp\ccr0op6K.s 			page 13
+
+
+ 560 0021 00000000 		.4byte	.Ldebug_line0
+ 561 0025 02       		.uleb128 0x2
+ 562 0026 5B020000 		.4byte	.LASF0
+ 563 002a 02       		.byte	0x2
+ 564 002b 1B       		.byte	0x1b
+ 565 002c 30000000 		.4byte	0x30
+ 566 0030 03       		.uleb128 0x3
+ 567 0031 01       		.byte	0x1
+ 568 0032 06       		.byte	0x6
+ 569 0033 DD010000 		.4byte	.LASF2
+ 570 0037 02       		.uleb128 0x2
+ 571 0038 52010000 		.4byte	.LASF1
+ 572 003c 02       		.byte	0x2
+ 573 003d 1D       		.byte	0x1d
+ 574 003e 42000000 		.4byte	0x42
+ 575 0042 03       		.uleb128 0x3
+ 576 0043 01       		.byte	0x1
+ 577 0044 08       		.byte	0x8
+ 578 0045 80010000 		.4byte	.LASF3
+ 579 0049 03       		.uleb128 0x3
+ 580 004a 02       		.byte	0x2
+ 581 004b 05       		.byte	0x5
+ 582 004c 4E000000 		.4byte	.LASF4
+ 583 0050 02       		.uleb128 0x2
+ 584 0051 9F000000 		.4byte	.LASF5
+ 585 0055 02       		.byte	0x2
+ 586 0056 2B       		.byte	0x2b
+ 587 0057 5B000000 		.4byte	0x5b
+ 588 005b 03       		.uleb128 0x3
+ 589 005c 02       		.byte	0x2
+ 590 005d 07       		.byte	0x7
+ 591 005e 48020000 		.4byte	.LASF6
+ 592 0062 02       		.uleb128 0x2
+ 593 0063 19030000 		.4byte	.LASF7
+ 594 0067 02       		.byte	0x2
+ 595 0068 3F       		.byte	0x3f
+ 596 0069 6D000000 		.4byte	0x6d
+ 597 006d 03       		.uleb128 0x3
+ 598 006e 04       		.byte	0x4
+ 599 006f 05       		.byte	0x5
+ 600 0070 A8020000 		.4byte	.LASF8
+ 601 0074 03       		.uleb128 0x3
+ 602 0075 04       		.byte	0x4
+ 603 0076 07       		.byte	0x7
+ 604 0077 FE020000 		.4byte	.LASF9
+ 605 007b 03       		.uleb128 0x3
+ 606 007c 08       		.byte	0x8
+ 607 007d 05       		.byte	0x5
+ 608 007e 72040000 		.4byte	.LASF10
+ 609 0082 03       		.uleb128 0x3
+ 610 0083 08       		.byte	0x8
+ 611 0084 07       		.byte	0x7
+ 612 0085 E9010000 		.4byte	.LASF11
+ 613 0089 04       		.uleb128 0x4
+ 614 008a 04       		.byte	0x4
+ 615 008b 05       		.byte	0x5
+ 616 008c 696E7400 		.ascii	"int\000"
+ARM GAS  C:\Users\alexa\AppData\Local\Temp\ccr0op6K.s 			page 14
+
+
+ 617 0090 03       		.uleb128 0x3
+ 618 0091 04       		.byte	0x4
+ 619 0092 07       		.byte	0x7
+ 620 0093 00020000 		.4byte	.LASF12
+ 621 0097 02       		.uleb128 0x2
+ 622 0098 2F000000 		.4byte	.LASF13
+ 623 009c 03       		.byte	0x3
+ 624 009d 14       		.byte	0x14
+ 625 009e 25000000 		.4byte	0x25
+ 626 00a2 02       		.uleb128 0x2
+ 627 00a3 C9000000 		.4byte	.LASF14
+ 628 00a7 03       		.byte	0x3
+ 629 00a8 18       		.byte	0x18
+ 630 00a9 37000000 		.4byte	0x37
+ 631 00ad 02       		.uleb128 0x2
+ 632 00ae 0D020000 		.4byte	.LASF15
+ 633 00b2 03       		.byte	0x3
+ 634 00b3 24       		.byte	0x24
+ 635 00b4 50000000 		.4byte	0x50
+ 636 00b8 02       		.uleb128 0x2
+ 637 00b9 B1020000 		.4byte	.LASF16
+ 638 00bd 03       		.byte	0x3
+ 639 00be 2C       		.byte	0x2c
+ 640 00bf 62000000 		.4byte	0x62
+ 641 00c3 03       		.uleb128 0x3
+ 642 00c4 04       		.byte	0x4
+ 643 00c5 04       		.byte	0x4
+ 644 00c6 E6000000 		.4byte	.LASF17
+ 645 00ca 03       		.uleb128 0x3
+ 646 00cb 08       		.byte	0x8
+ 647 00cc 04       		.byte	0x4
+ 648 00cd 6F030000 		.4byte	.LASF18
+ 649 00d1 03       		.uleb128 0x3
+ 650 00d2 01       		.byte	0x1
+ 651 00d3 08       		.byte	0x8
+ 652 00d4 8B020000 		.4byte	.LASF19
+ 653 00d8 03       		.uleb128 0x3
+ 654 00d9 08       		.byte	0x8
+ 655 00da 04       		.byte	0x4
+ 656 00db 00000000 		.4byte	.LASF20
+ 657 00df 03       		.uleb128 0x3
+ 658 00e0 04       		.byte	0x4
+ 659 00e1 07       		.byte	0x7
+ 660 00e2 75000000 		.4byte	.LASF21
+ 661 00e6 05       		.uleb128 0x5
+ 662 00e7 01       		.byte	0x1
+ 663 00e8 42000000 		.4byte	0x42
+ 664 00ec 04       		.byte	0x4
+ 665 00ed 09       		.byte	0x9
+ 666 00ee 05010000 		.4byte	0x105
+ 667 00f2 06       		.uleb128 0x6
+ 668 00f3 3C010000 		.4byte	.LASF22
+ 669 00f7 00       		.byte	0
+ 670 00f8 06       		.uleb128 0x6
+ 671 00f9 2D020000 		.4byte	.LASF23
+ 672 00fd 01       		.byte	0x1
+ 673 00fe 06       		.uleb128 0x6
+ARM GAS  C:\Users\alexa\AppData\Local\Temp\ccr0op6K.s 			page 15
+
+
+ 674 00ff EC000000 		.4byte	.LASF24
+ 675 0103 02       		.byte	0x2
+ 676 0104 00       		.byte	0
+ 677 0105 02       		.uleb128 0x2
+ 678 0106 0C000000 		.4byte	.LASF25
+ 679 010a 04       		.byte	0x4
+ 680 010b 0D       		.byte	0xd
+ 681 010c E6000000 		.4byte	0xe6
+ 682 0110 05       		.uleb128 0x5
+ 683 0111 01       		.byte	0x1
+ 684 0112 42000000 		.4byte	0x42
+ 685 0116 04       		.byte	0x4
+ 686 0117 10       		.byte	0x10
+ 687 0118 29010000 		.4byte	0x129
+ 688 011c 06       		.uleb128 0x6
+ 689 011d 90020000 		.4byte	.LASF26
+ 690 0121 00       		.byte	0
+ 691 0122 06       		.uleb128 0x6
+ 692 0123 64020000 		.4byte	.LASF27
+ 693 0127 01       		.byte	0x1
+ 694 0128 00       		.byte	0
+ 695 0129 02       		.uleb128 0x2
+ 696 012a B9000000 		.4byte	.LASF28
+ 697 012e 04       		.byte	0x4
+ 698 012f 13       		.byte	0x13
+ 699 0130 10010000 		.4byte	0x110
+ 700 0134 07       		.uleb128 0x7
+ 701 0135 8A030000 		.4byte	.LASF29
+ 702 0139 01       		.byte	0x1
+ 703 013a 2C       		.byte	0x2c
+ 704 013b 00000000 		.4byte	.LFB64
+ 705 013f 1E000000 		.4byte	.LFE64-.LFB64
+ 706 0143 01       		.uleb128 0x1
+ 707 0144 9C       		.byte	0x9c
+ 708 0145 7D010000 		.4byte	0x17d
+ 709 0149 08       		.uleb128 0x8
+ 710 014a 01010000 		.4byte	.LASF35
+ 711 014e 01       		.byte	0x1
+ 712 014f 2C       		.byte	0x2c
+ 713 0150 7D010000 		.4byte	0x17d
+ 714 0154 00000000 		.4byte	.LLST0
+ 715 0158 09       		.uleb128 0x9
+ 716 0159 0A000000 		.4byte	.LVL2
+ 717 015d BD040000 		.4byte	0x4bd
+ 718 0161 09       		.uleb128 0x9
+ 719 0162 10000000 		.4byte	.LVL3
+ 720 0166 C8040000 		.4byte	0x4c8
+ 721 016a 09       		.uleb128 0x9
+ 722 016b 16000000 		.4byte	.LVL4
+ 723 016f D3040000 		.4byte	0x4d3
+ 724 0173 09       		.uleb128 0x9
+ 725 0174 1C000000 		.4byte	.LVL5
+ 726 0178 DE040000 		.4byte	0x4de
+ 727 017c 00       		.byte	0
+ 728 017d 0A       		.uleb128 0xa
+ 729 017e 04       		.byte	0x4
+ 730 017f 83010000 		.4byte	0x183
+ARM GAS  C:\Users\alexa\AppData\Local\Temp\ccr0op6K.s 			page 16
+
+
+ 731 0183 0B       		.uleb128 0xb
+ 732 0184 A2000000 		.4byte	0xa2
+ 733 0188 0C       		.uleb128 0xc
+ 734 0189 E0020000 		.4byte	.LASF30
+ 735 018d 01       		.byte	0x1
+ 736 018e 34       		.byte	0x34
+ 737 018f AD000000 		.4byte	0xad
+ 738 0193 00000000 		.4byte	.LFB65
+ 739 0197 30000000 		.4byte	.LFE65-.LFB65
+ 740 019b 01       		.uleb128 0x1
+ 741 019c 9C       		.byte	0x9c
+ 742 019d CB010000 		.4byte	0x1cb
+ 743 01a1 0D       		.uleb128 0xd
+ 744 01a2 8E010000 		.4byte	.LASF31
+ 745 01a6 01       		.byte	0x1
+ 746 01a7 35       		.byte	0x35
+ 747 01a8 AD000000 		.4byte	0xad
+ 748 01ac DE03     		.2byte	0x3de
+ 749 01ae 0E       		.uleb128 0xe
+ 750 01af 76010000 		.4byte	.LASF32
+ 751 01b3 01       		.byte	0x1
+ 752 01b4 36       		.byte	0x36
+ 753 01b5 AD000000 		.4byte	0xad
+ 754 01b9 1E000000 		.4byte	.LLST1
+ 755 01bd 0F       		.uleb128 0xf
+ 756 01be 8B000000 		.4byte	.LASF33
+ 757 01c2 01       		.byte	0x1
+ 758 01c3 37       		.byte	0x37
+ 759 01c4 AD000000 		.4byte	0xad
+ 760 01c8 01       		.uleb128 0x1
+ 761 01c9 50       		.byte	0x50
+ 762 01ca 00       		.byte	0
+ 763 01cb 07       		.uleb128 0x7
+ 764 01cc 1C020000 		.4byte	.LASF34
+ 765 01d0 01       		.byte	0x1
+ 766 01d1 3C       		.byte	0x3c
+ 767 01d2 00000000 		.4byte	.LFB66
+ 768 01d6 54000000 		.4byte	.LFE66-.LFB66
+ 769 01da 01       		.uleb128 0x1
+ 770 01db 9C       		.byte	0x9c
+ 771 01dc 55020000 		.4byte	0x255
+ 772 01e0 08       		.uleb128 0x8
+ 773 01e1 6C000000 		.4byte	.LASF36
+ 774 01e5 01       		.byte	0x1
+ 775 01e6 3C       		.byte	0x3c
+ 776 01e7 65020000 		.4byte	0x265
+ 777 01eb 49000000 		.4byte	.LLST2
+ 778 01ef 08       		.uleb128 0x8
+ 779 01f0 42020000 		.4byte	.LASF37
+ 780 01f4 01       		.byte	0x1
+ 781 01f5 3C       		.byte	0x3c
+ 782 01f6 A2000000 		.4byte	0xa2
+ 783 01fa 75000000 		.4byte	.LLST3
+ 784 01fe 0E       		.uleb128 0xe
+ 785 01ff EF020000 		.4byte	.LASF38
+ 786 0203 01       		.byte	0x1
+ 787 0204 3D       		.byte	0x3d
+ARM GAS  C:\Users\alexa\AppData\Local\Temp\ccr0op6K.s 			page 17
+
+
+ 788 0205 A2000000 		.4byte	0xa2
+ 789 0209 96000000 		.4byte	.LLST4
+ 790 020d 10       		.uleb128 0x10
+ 791 020e 6900     		.ascii	"i\000"
+ 792 0210 01       		.byte	0x1
+ 793 0211 3E       		.byte	0x3e
+ 794 0212 A2000000 		.4byte	0xa2
+ 795 0216 A9000000 		.4byte	.LLST5
+ 796 021a 0E       		.uleb128 0xe
+ 797 021b 9D010000 		.4byte	.LASF39
+ 798 021f 01       		.byte	0x1
+ 799 0220 3F       		.byte	0x3f
+ 800 0221 97000000 		.4byte	0x97
+ 801 0225 C7000000 		.4byte	.LLST6
+ 802 0229 11       		.uleb128 0x11
+ 803 022a 3A000000 		.4byte	.LVL15
+ 804 022e 34010000 		.4byte	0x134
+ 805 0232 42020000 		.4byte	0x242
+ 806 0236 12       		.uleb128 0x12
+ 807 0237 01       		.uleb128 0x1
+ 808 0238 50       		.byte	0x50
+ 809 0239 07       		.uleb128 0x7
+ 810 023a 74       		.byte	0x74
+ 811 023b 00       		.sleb128 0
+ 812 023c 32       		.byte	0x32
+ 813 023d 24       		.byte	0x24
+ 814 023e 77       		.byte	0x77
+ 815 023f 00       		.sleb128 0
+ 816 0240 22       		.byte	0x22
+ 817 0241 00       		.byte	0
+ 818 0242 09       		.uleb128 0x9
+ 819 0243 3E000000 		.4byte	.LVL16
+ 820 0247 88010000 		.4byte	0x188
+ 821 024b 09       		.uleb128 0x9
+ 822 024c 42000000 		.4byte	.LVL17
+ 823 0250 E9040000 		.4byte	0x4e9
+ 824 0254 00       		.byte	0
+ 825 0255 13       		.uleb128 0x13
+ 826 0256 83010000 		.4byte	0x183
+ 827 025a 65020000 		.4byte	0x265
+ 828 025e 14       		.uleb128 0x14
+ 829 025f DF000000 		.4byte	0xdf
+ 830 0263 03       		.byte	0x3
+ 831 0264 00       		.byte	0
+ 832 0265 0A       		.uleb128 0xa
+ 833 0266 04       		.byte	0x4
+ 834 0267 55020000 		.4byte	0x255
+ 835 026b 07       		.uleb128 0x7
+ 836 026c C6020000 		.4byte	.LASF40
+ 837 0270 01       		.byte	0x1
+ 838 0271 4E       		.byte	0x4e
+ 839 0272 00000000 		.4byte	.LFB67
+ 840 0276 30000000 		.4byte	.LFE67-.LFB67
+ 841 027a 01       		.uleb128 0x1
+ 842 027b 9C       		.byte	0x9c
+ 843 027c D1020000 		.4byte	0x2d1
+ 844 0280 08       		.uleb128 0x8
+ARM GAS  C:\Users\alexa\AppData\Local\Temp\ccr0op6K.s 			page 18
+
+
+ 845 0281 D1000000 		.4byte	.LASF41
+ 846 0285 01       		.byte	0x1
+ 847 0286 4E       		.byte	0x4e
+ 848 0287 D1020000 		.4byte	0x2d1
+ 849 028b DA000000 		.4byte	.LLST7
+ 850 028f 11       		.uleb128 0x11
+ 851 0290 0E000000 		.4byte	.LVL23
+ 852 0294 F4040000 		.4byte	0x4f4
+ 853 0298 A6020000 		.4byte	0x2a6
+ 854 029c 12       		.uleb128 0x12
+ 855 029d 01       		.uleb128 0x1
+ 856 029e 50       		.byte	0x50
+ 857 029f 05       		.uleb128 0x5
+ 858 02a0 03       		.byte	0x3
+ 859 02a1 00000000 		.4byte	.LC0
+ 860 02a5 00       		.byte	0
+ 861 02a6 11       		.uleb128 0x11
+ 862 02a7 16000000 		.4byte	.LVL24
+ 863 02ab 34010000 		.4byte	0x134
+ 864 02af BD020000 		.4byte	0x2bd
+ 865 02b3 12       		.uleb128 0x12
+ 866 02b4 01       		.uleb128 0x1
+ 867 02b5 50       		.byte	0x50
+ 868 02b6 05       		.uleb128 0x5
+ 869 02b7 03       		.byte	0x3
+ 870 02b8 00000000 		.4byte	.LANCHOR2
+ 871 02bc 00       		.byte	0
+ 872 02bd 15       		.uleb128 0x15
+ 873 02be 1C000000 		.4byte	.LVL25
+ 874 02c2 F4040000 		.4byte	0x4f4
+ 875 02c6 12       		.uleb128 0x12
+ 876 02c7 01       		.uleb128 0x1
+ 877 02c8 50       		.byte	0x50
+ 878 02c9 05       		.uleb128 0x5
+ 879 02ca 03       		.byte	0x3
+ 880 02cb 0C000000 		.4byte	.LC1
+ 881 02cf 00       		.byte	0
+ 882 02d0 00       		.byte	0
+ 883 02d1 03       		.uleb128 0x3
+ 884 02d2 01       		.byte	0x1
+ 885 02d3 02       		.byte	0x2
+ 886 02d4 DA020000 		.4byte	.LASF42
+ 887 02d8 07       		.uleb128 0x7
+ 888 02d9 30040000 		.4byte	.LASF43
+ 889 02dd 01       		.byte	0x1
+ 890 02de 58       		.byte	0x58
+ 891 02df 00000000 		.4byte	.LFB68
+ 892 02e3 0C000000 		.4byte	.LFE68-.LFB68
+ 893 02e7 01       		.uleb128 0x1
+ 894 02e8 9C       		.byte	0x9c
+ 895 02e9 FB020000 		.4byte	0x2fb
+ 896 02ed 16       		.uleb128 0x16
+ 897 02ee 4B040000 		.4byte	.LASF44
+ 898 02f2 01       		.byte	0x1
+ 899 02f3 58       		.byte	0x58
+ 900 02f4 05010000 		.4byte	0x105
+ 901 02f8 01       		.uleb128 0x1
+ARM GAS  C:\Users\alexa\AppData\Local\Temp\ccr0op6K.s 			page 19
+
+
+ 902 02f9 50       		.byte	0x50
+ 903 02fa 00       		.byte	0
+ 904 02fb 07       		.uleb128 0x7
+ 905 02fc 36000000 		.4byte	.LASF45
+ 906 0300 01       		.byte	0x1
+ 907 0301 5D       		.byte	0x5d
+ 908 0302 00000000 		.4byte	.LFB69
+ 909 0306 0C000000 		.4byte	.LFE69-.LFB69
+ 910 030a 01       		.uleb128 0x1
+ 911 030b 9C       		.byte	0x9c
+ 912 030c 1E030000 		.4byte	0x31e
+ 913 0310 16       		.uleb128 0x16
+ 914 0311 AE010000 		.4byte	.LASF46
+ 915 0315 01       		.byte	0x1
+ 916 0316 5D       		.byte	0x5d
+ 917 0317 29010000 		.4byte	0x129
+ 918 031b 01       		.uleb128 0x1
+ 919 031c 50       		.byte	0x50
+ 920 031d 00       		.byte	0
+ 921 031e 17       		.uleb128 0x17
+ 922 031f 58000000 		.4byte	.LASF69
+ 923 0323 01       		.byte	0x1
+ 924 0324 62       		.byte	0x62
+ 925 0325 A2000000 		.4byte	0xa2
+ 926 0329 00000000 		.4byte	.LFB70
+ 927 032d 14000000 		.4byte	.LFE70-.LFB70
+ 928 0331 01       		.uleb128 0x1
+ 929 0332 9C       		.byte	0x9c
+ 930 0333 54030000 		.4byte	0x354
+ 931 0337 08       		.uleb128 0x8
+ 932 0338 10030000 		.4byte	.LASF47
+ 933 033c 01       		.byte	0x1
+ 934 033d 62       		.byte	0x62
+ 935 033e A2000000 		.4byte	0xa2
+ 936 0342 0A010000 		.4byte	.LLST8
+ 937 0346 0F       		.uleb128 0xf
+ 938 0347 16020000 		.4byte	.LASF48
+ 939 034b 01       		.byte	0x1
+ 940 034c 63       		.byte	0x63
+ 941 034d A2000000 		.4byte	0xa2
+ 942 0351 01       		.uleb128 0x1
+ 943 0352 50       		.byte	0x50
+ 944 0353 00       		.byte	0
+ 945 0354 18       		.uleb128 0x18
+ 946 0355 17000000 		.4byte	.LASF49
+ 947 0359 01       		.byte	0x1
+ 948 035a 69       		.byte	0x69
+ 949 035b 29010000 		.4byte	0x129
+ 950 035f 00000000 		.4byte	.LFB71
+ 951 0363 0C000000 		.4byte	.LFE71-.LFB71
+ 952 0367 01       		.uleb128 0x1
+ 953 0368 9C       		.byte	0x9c
+ 954 0369 18       		.uleb128 0x18
+ 955 036a 76030000 		.4byte	.LASF50
+ 956 036e 01       		.byte	0x1
+ 957 036f 6E       		.byte	0x6e
+ 958 0370 A2000000 		.4byte	0xa2
+ARM GAS  C:\Users\alexa\AppData\Local\Temp\ccr0op6K.s 			page 20
+
+
+ 959 0374 00000000 		.4byte	.LFB72
+ 960 0378 0C000000 		.4byte	.LFE72-.LFB72
+ 961 037c 01       		.uleb128 0x1
+ 962 037d 9C       		.byte	0x9c
+ 963 037e 19       		.uleb128 0x19
+ 964 037f 5D030000 		.4byte	.LASF70
+ 965 0383 01       		.byte	0x1
+ 966 0384 73       		.byte	0x73
+ 967 0385 00000000 		.4byte	.LFB73
+ 968 0389 40000000 		.4byte	.LFE73-.LFB73
+ 969 038d 01       		.uleb128 0x1
+ 970 038e 9C       		.byte	0x9c
+ 971 038f E4030000 		.4byte	0x3e4
+ 972 0393 11       		.uleb128 0x11
+ 973 0394 1A000000 		.4byte	.LVL30
+ 974 0398 CB010000 		.4byte	0x1cb
+ 975 039c AF030000 		.4byte	0x3af
+ 976 03a0 12       		.uleb128 0x12
+ 977 03a1 01       		.uleb128 0x1
+ 978 03a2 50       		.byte	0x50
+ 979 03a3 05       		.uleb128 0x5
+ 980 03a4 03       		.byte	0x3
+ 981 03a5 04000000 		.4byte	.LANCHOR2+4
+ 982 03a9 12       		.uleb128 0x12
+ 983 03aa 01       		.uleb128 0x1
+ 984 03ab 51       		.byte	0x51
+ 985 03ac 01       		.uleb128 0x1
+ 986 03ad 34       		.byte	0x34
+ 987 03ae 00       		.byte	0
+ 988 03af 11       		.uleb128 0x11
+ 989 03b0 24000000 		.4byte	.LVL31
+ 990 03b4 CB010000 		.4byte	0x1cb
+ 991 03b8 CB030000 		.4byte	0x3cb
+ 992 03bc 12       		.uleb128 0x12
+ 993 03bd 01       		.uleb128 0x1
+ 994 03be 50       		.byte	0x50
+ 995 03bf 05       		.uleb128 0x5
+ 996 03c0 03       		.byte	0x3
+ 997 03c1 14000000 		.4byte	.LANCHOR2+20
+ 998 03c5 12       		.uleb128 0x12
+ 999 03c6 01       		.uleb128 0x1
+ 1000 03c7 51       		.byte	0x51
+ 1001 03c8 01       		.uleb128 0x1
+ 1002 03c9 34       		.byte	0x34
+ 1003 03ca 00       		.byte	0
+ 1004 03cb 15       		.uleb128 0x15
+ 1005 03cc 2E000000 		.4byte	.LVL32
+ 1006 03d0 CB010000 		.4byte	0x1cb
+ 1007 03d4 12       		.uleb128 0x12
+ 1008 03d5 01       		.uleb128 0x1
+ 1009 03d6 50       		.byte	0x50
+ 1010 03d7 05       		.uleb128 0x5
+ 1011 03d8 03       		.byte	0x3
+ 1012 03d9 24000000 		.4byte	.LANCHOR2+36
+ 1013 03dd 12       		.uleb128 0x12
+ 1014 03de 01       		.uleb128 0x1
+ 1015 03df 51       		.byte	0x51
+ARM GAS  C:\Users\alexa\AppData\Local\Temp\ccr0op6K.s 			page 21
+
+
+ 1016 03e0 01       		.uleb128 0x1
+ 1017 03e1 38       		.byte	0x38
+ 1018 03e2 00       		.byte	0
+ 1019 03e3 00       		.byte	0
+ 1020 03e4 0F       		.uleb128 0xf
+ 1021 03e5 B9020000 		.4byte	.LASF51
+ 1022 03e9 01       		.byte	0x1
+ 1023 03ea 26       		.byte	0x26
+ 1024 03eb D1020000 		.4byte	0x2d1
+ 1025 03ef 05       		.uleb128 0x5
+ 1026 03f0 03       		.byte	0x3
+ 1027 03f1 01000000 		.4byte	currentState
+ 1028 03f5 0F       		.uleb128 0xf
+ 1029 03f6 DA000000 		.4byte	.LASF52
+ 1030 03fa 01       		.byte	0x1
+ 1031 03fb 27       		.byte	0x27
+ 1032 03fc 05010000 		.4byte	0x105
+ 1033 0400 05       		.uleb128 0x5
+ 1034 0401 03       		.byte	0x3
+ 1035 0402 01000000 		.4byte	currentMode
+ 1036 0406 0F       		.uleb128 0xf
+ 1037 0407 53040000 		.4byte	.LASF53
+ 1038 040b 01       		.byte	0x1
+ 1039 040c 28       		.byte	0x28
+ 1040 040d 29010000 		.4byte	0x129
+ 1041 0411 05       		.uleb128 0x5
+ 1042 0412 03       		.byte	0x3
+ 1043 0413 00000000 		.4byte	currentDirection
+ 1044 0417 0F       		.uleb128 0xf
+ 1045 0418 7E000000 		.4byte	.LASF54
+ 1046 041c 01       		.byte	0x1
+ 1047 041d 29       		.byte	0x29
+ 1048 041e A2000000 		.4byte	0xa2
+ 1049 0422 05       		.uleb128 0x5
+ 1050 0423 03       		.byte	0x3
+ 1051 0424 00000000 		.4byte	currentSpeed
+ 1052 0428 1A       		.uleb128 0x1a
+ 1053 0429 95030000 		.4byte	.LASF55
+ 1054 042d 05       		.byte	0x5
+ 1055 042e 1207     		.2byte	0x712
+ 1056 0430 34040000 		.4byte	0x434
+ 1057 0434 1B       		.uleb128 0x1b
+ 1058 0435 B8000000 		.4byte	0xb8
+ 1059 0439 13       		.uleb128 0x13
+ 1060 043a 83010000 		.4byte	0x183
+ 1061 043e 4F040000 		.4byte	0x44f
+ 1062 0442 14       		.uleb128 0x14
+ 1063 0443 DF000000 		.4byte	0xdf
+ 1064 0447 03       		.byte	0x3
+ 1065 0448 14       		.uleb128 0x14
+ 1066 0449 DF000000 		.4byte	0xdf
+ 1067 044d 03       		.byte	0x3
+ 1068 044e 00       		.byte	0
+ 1069 044f 1C       		.uleb128 0x1c
+ 1070 0450 22010000 		.4byte	.LASF56
+ 1071 0454 01       		.byte	0x1
+ 1072 0455 0B       		.byte	0xb
+ARM GAS  C:\Users\alexa\AppData\Local\Temp\ccr0op6K.s 			page 22
+
+
+ 1073 0456 60040000 		.4byte	0x460
+ 1074 045a 05       		.uleb128 0x5
+ 1075 045b 03       		.byte	0x3
+ 1076 045c 00000000 		.4byte	MOTOR_WAVE_DRIVE_SEQUENCE
+ 1077 0460 0B       		.uleb128 0xb
+ 1078 0461 39040000 		.4byte	0x439
+ 1079 0465 1C       		.uleb128 0x1c
+ 1080 0466 5C010000 		.4byte	.LASF57
+ 1081 046a 01       		.byte	0x1
+ 1082 046b 11       		.byte	0x11
+ 1083 046c 76040000 		.4byte	0x476
+ 1084 0470 05       		.uleb128 0x5
+ 1085 0471 03       		.byte	0x3
+ 1086 0472 00000000 		.4byte	MOTOR_FULL_DRIVE_SEQUENCE
+ 1087 0476 0B       		.uleb128 0xb
+ 1088 0477 39040000 		.4byte	0x439
+ 1089 047b 13       		.uleb128 0x13
+ 1090 047c 83010000 		.4byte	0x183
+ 1091 0480 91040000 		.4byte	0x491
+ 1092 0484 14       		.uleb128 0x14
+ 1093 0485 DF000000 		.4byte	0xdf
+ 1094 0489 07       		.byte	0x7
+ 1095 048a 14       		.uleb128 0x14
+ 1096 048b DF000000 		.4byte	0xdf
+ 1097 048f 03       		.byte	0x3
+ 1098 0490 00       		.byte	0
+ 1099 0491 1C       		.uleb128 0x1c
+ 1100 0492 08010000 		.4byte	.LASF58
+ 1101 0496 01       		.byte	0x1
+ 1102 0497 17       		.byte	0x17
+ 1103 0498 A2040000 		.4byte	0x4a2
+ 1104 049c 05       		.uleb128 0x5
+ 1105 049d 03       		.byte	0x3
+ 1106 049e 00000000 		.4byte	MOTOR_HALF_DRIVE_SEQUENCE
+ 1107 04a2 0B       		.uleb128 0xb
+ 1108 04a3 7B040000 		.4byte	0x47b
+ 1109 04a7 1C       		.uleb128 0x1c
+ 1110 04a8 BB010000 		.4byte	.LASF59
+ 1111 04ac 01       		.byte	0x1
+ 1112 04ad 23       		.byte	0x23
+ 1113 04ae B8040000 		.4byte	0x4b8
+ 1114 04b2 05       		.uleb128 0x5
+ 1115 04b3 03       		.byte	0x3
+ 1116 04b4 00000000 		.4byte	MOTOR_STOPPED_DRIVE
+ 1117 04b8 0B       		.uleb128 0xb
+ 1118 04b9 55020000 		.4byte	0x255
+ 1119 04bd 1D       		.uleb128 0x1d
+ 1120 04be 7D020000 		.4byte	.LASF60
+ 1121 04c2 7D020000 		.4byte	.LASF60
+ 1122 04c6 06       		.byte	0x6
+ 1123 04c7 26       		.byte	0x26
+ 1124 04c8 1D       		.uleb128 0x1d
+ 1125 04c9 64040000 		.4byte	.LASF61
+ 1126 04cd 64040000 		.4byte	.LASF61
+ 1127 04d1 07       		.byte	0x7
+ 1128 04d2 26       		.byte	0x26
+ 1129 04d3 1D       		.uleb128 0x1d
+ARM GAS  C:\Users\alexa\AppData\Local\Temp\ccr0op6K.s 			page 23
+
+
+ 1130 04d4 91000000 		.4byte	.LASF62
+ 1131 04d8 91000000 		.4byte	.LASF62
+ 1132 04dc 08       		.byte	0x8
+ 1133 04dd 26       		.byte	0x26
+ 1134 04de 1D       		.uleb128 0x1d
+ 1135 04df CF010000 		.4byte	.LASF63
+ 1136 04e3 CF010000 		.4byte	.LASF63
+ 1137 04e7 09       		.byte	0x9
+ 1138 04e8 26       		.byte	0x26
+ 1139 04e9 1D       		.uleb128 0x1d
+ 1140 04ea 43040000 		.4byte	.LASF64
+ 1141 04ee 43040000 		.4byte	.LASF64
+ 1142 04f2 0A       		.byte	0xa
+ 1143 04f3 76       		.byte	0x76
+ 1144 04f4 1D       		.uleb128 0x1d
+ 1145 04f5 AA000000 		.4byte	.LASF65
+ 1146 04f9 AA000000 		.4byte	.LASF65
+ 1147 04fd 0B       		.byte	0xb
+ 1148 04fe 8B       		.byte	0x8b
+ 1149 04ff 00       		.byte	0
+ 1150              		.section	.debug_abbrev,"",%progbits
+ 1151              	.Ldebug_abbrev0:
+ 1152 0000 01       		.uleb128 0x1
+ 1153 0001 11       		.uleb128 0x11
+ 1154 0002 01       		.byte	0x1
+ 1155 0003 25       		.uleb128 0x25
+ 1156 0004 0E       		.uleb128 0xe
+ 1157 0005 13       		.uleb128 0x13
+ 1158 0006 0B       		.uleb128 0xb
+ 1159 0007 03       		.uleb128 0x3
+ 1160 0008 0E       		.uleb128 0xe
+ 1161 0009 1B       		.uleb128 0x1b
+ 1162 000a 0E       		.uleb128 0xe
+ 1163 000b 55       		.uleb128 0x55
+ 1164 000c 17       		.uleb128 0x17
+ 1165 000d 11       		.uleb128 0x11
+ 1166 000e 01       		.uleb128 0x1
+ 1167 000f 10       		.uleb128 0x10
+ 1168 0010 17       		.uleb128 0x17
+ 1169 0011 00       		.byte	0
+ 1170 0012 00       		.byte	0
+ 1171 0013 02       		.uleb128 0x2
+ 1172 0014 16       		.uleb128 0x16
+ 1173 0015 00       		.byte	0
+ 1174 0016 03       		.uleb128 0x3
+ 1175 0017 0E       		.uleb128 0xe
+ 1176 0018 3A       		.uleb128 0x3a
+ 1177 0019 0B       		.uleb128 0xb
+ 1178 001a 3B       		.uleb128 0x3b
+ 1179 001b 0B       		.uleb128 0xb
+ 1180 001c 49       		.uleb128 0x49
+ 1181 001d 13       		.uleb128 0x13
+ 1182 001e 00       		.byte	0
+ 1183 001f 00       		.byte	0
+ 1184 0020 03       		.uleb128 0x3
+ 1185 0021 24       		.uleb128 0x24
+ 1186 0022 00       		.byte	0
+ARM GAS  C:\Users\alexa\AppData\Local\Temp\ccr0op6K.s 			page 24
+
+
+ 1187 0023 0B       		.uleb128 0xb
+ 1188 0024 0B       		.uleb128 0xb
+ 1189 0025 3E       		.uleb128 0x3e
+ 1190 0026 0B       		.uleb128 0xb
+ 1191 0027 03       		.uleb128 0x3
+ 1192 0028 0E       		.uleb128 0xe
+ 1193 0029 00       		.byte	0
+ 1194 002a 00       		.byte	0
+ 1195 002b 04       		.uleb128 0x4
+ 1196 002c 24       		.uleb128 0x24
+ 1197 002d 00       		.byte	0
+ 1198 002e 0B       		.uleb128 0xb
+ 1199 002f 0B       		.uleb128 0xb
+ 1200 0030 3E       		.uleb128 0x3e
+ 1201 0031 0B       		.uleb128 0xb
+ 1202 0032 03       		.uleb128 0x3
+ 1203 0033 08       		.uleb128 0x8
+ 1204 0034 00       		.byte	0
+ 1205 0035 00       		.byte	0
+ 1206 0036 05       		.uleb128 0x5
+ 1207 0037 04       		.uleb128 0x4
+ 1208 0038 01       		.byte	0x1
+ 1209 0039 0B       		.uleb128 0xb
+ 1210 003a 0B       		.uleb128 0xb
+ 1211 003b 49       		.uleb128 0x49
+ 1212 003c 13       		.uleb128 0x13
+ 1213 003d 3A       		.uleb128 0x3a
+ 1214 003e 0B       		.uleb128 0xb
+ 1215 003f 3B       		.uleb128 0x3b
+ 1216 0040 0B       		.uleb128 0xb
+ 1217 0041 01       		.uleb128 0x1
+ 1218 0042 13       		.uleb128 0x13
+ 1219 0043 00       		.byte	0
+ 1220 0044 00       		.byte	0
+ 1221 0045 06       		.uleb128 0x6
+ 1222 0046 28       		.uleb128 0x28
+ 1223 0047 00       		.byte	0
+ 1224 0048 03       		.uleb128 0x3
+ 1225 0049 0E       		.uleb128 0xe
+ 1226 004a 1C       		.uleb128 0x1c
+ 1227 004b 0B       		.uleb128 0xb
+ 1228 004c 00       		.byte	0
+ 1229 004d 00       		.byte	0
+ 1230 004e 07       		.uleb128 0x7
+ 1231 004f 2E       		.uleb128 0x2e
+ 1232 0050 01       		.byte	0x1
+ 1233 0051 3F       		.uleb128 0x3f
+ 1234 0052 19       		.uleb128 0x19
+ 1235 0053 03       		.uleb128 0x3
+ 1236 0054 0E       		.uleb128 0xe
+ 1237 0055 3A       		.uleb128 0x3a
+ 1238 0056 0B       		.uleb128 0xb
+ 1239 0057 3B       		.uleb128 0x3b
+ 1240 0058 0B       		.uleb128 0xb
+ 1241 0059 27       		.uleb128 0x27
+ 1242 005a 19       		.uleb128 0x19
+ 1243 005b 11       		.uleb128 0x11
+ARM GAS  C:\Users\alexa\AppData\Local\Temp\ccr0op6K.s 			page 25
+
+
+ 1244 005c 01       		.uleb128 0x1
+ 1245 005d 12       		.uleb128 0x12
+ 1246 005e 06       		.uleb128 0x6
+ 1247 005f 40       		.uleb128 0x40
+ 1248 0060 18       		.uleb128 0x18
+ 1249 0061 9742     		.uleb128 0x2117
+ 1250 0063 19       		.uleb128 0x19
+ 1251 0064 01       		.uleb128 0x1
+ 1252 0065 13       		.uleb128 0x13
+ 1253 0066 00       		.byte	0
+ 1254 0067 00       		.byte	0
+ 1255 0068 08       		.uleb128 0x8
+ 1256 0069 05       		.uleb128 0x5
+ 1257 006a 00       		.byte	0
+ 1258 006b 03       		.uleb128 0x3
+ 1259 006c 0E       		.uleb128 0xe
+ 1260 006d 3A       		.uleb128 0x3a
+ 1261 006e 0B       		.uleb128 0xb
+ 1262 006f 3B       		.uleb128 0x3b
+ 1263 0070 0B       		.uleb128 0xb
+ 1264 0071 49       		.uleb128 0x49
+ 1265 0072 13       		.uleb128 0x13
+ 1266 0073 02       		.uleb128 0x2
+ 1267 0074 17       		.uleb128 0x17
+ 1268 0075 00       		.byte	0
+ 1269 0076 00       		.byte	0
+ 1270 0077 09       		.uleb128 0x9
+ 1271 0078 898201   		.uleb128 0x4109
+ 1272 007b 00       		.byte	0
+ 1273 007c 11       		.uleb128 0x11
+ 1274 007d 01       		.uleb128 0x1
+ 1275 007e 31       		.uleb128 0x31
+ 1276 007f 13       		.uleb128 0x13
+ 1277 0080 00       		.byte	0
+ 1278 0081 00       		.byte	0
+ 1279 0082 0A       		.uleb128 0xa
+ 1280 0083 0F       		.uleb128 0xf
+ 1281 0084 00       		.byte	0
+ 1282 0085 0B       		.uleb128 0xb
+ 1283 0086 0B       		.uleb128 0xb
+ 1284 0087 49       		.uleb128 0x49
+ 1285 0088 13       		.uleb128 0x13
+ 1286 0089 00       		.byte	0
+ 1287 008a 00       		.byte	0
+ 1288 008b 0B       		.uleb128 0xb
+ 1289 008c 26       		.uleb128 0x26
+ 1290 008d 00       		.byte	0
+ 1291 008e 49       		.uleb128 0x49
+ 1292 008f 13       		.uleb128 0x13
+ 1293 0090 00       		.byte	0
+ 1294 0091 00       		.byte	0
+ 1295 0092 0C       		.uleb128 0xc
+ 1296 0093 2E       		.uleb128 0x2e
+ 1297 0094 01       		.byte	0x1
+ 1298 0095 3F       		.uleb128 0x3f
+ 1299 0096 19       		.uleb128 0x19
+ 1300 0097 03       		.uleb128 0x3
+ARM GAS  C:\Users\alexa\AppData\Local\Temp\ccr0op6K.s 			page 26
+
+
+ 1301 0098 0E       		.uleb128 0xe
+ 1302 0099 3A       		.uleb128 0x3a
+ 1303 009a 0B       		.uleb128 0xb
+ 1304 009b 3B       		.uleb128 0x3b
+ 1305 009c 0B       		.uleb128 0xb
+ 1306 009d 49       		.uleb128 0x49
+ 1307 009e 13       		.uleb128 0x13
+ 1308 009f 11       		.uleb128 0x11
+ 1309 00a0 01       		.uleb128 0x1
+ 1310 00a1 12       		.uleb128 0x12
+ 1311 00a2 06       		.uleb128 0x6
+ 1312 00a3 40       		.uleb128 0x40
+ 1313 00a4 18       		.uleb128 0x18
+ 1314 00a5 9742     		.uleb128 0x2117
+ 1315 00a7 19       		.uleb128 0x19
+ 1316 00a8 01       		.uleb128 0x1
+ 1317 00a9 13       		.uleb128 0x13
+ 1318 00aa 00       		.byte	0
+ 1319 00ab 00       		.byte	0
+ 1320 00ac 0D       		.uleb128 0xd
+ 1321 00ad 34       		.uleb128 0x34
+ 1322 00ae 00       		.byte	0
+ 1323 00af 03       		.uleb128 0x3
+ 1324 00b0 0E       		.uleb128 0xe
+ 1325 00b1 3A       		.uleb128 0x3a
+ 1326 00b2 0B       		.uleb128 0xb
+ 1327 00b3 3B       		.uleb128 0x3b
+ 1328 00b4 0B       		.uleb128 0xb
+ 1329 00b5 49       		.uleb128 0x49
+ 1330 00b6 13       		.uleb128 0x13
+ 1331 00b7 1C       		.uleb128 0x1c
+ 1332 00b8 05       		.uleb128 0x5
+ 1333 00b9 00       		.byte	0
+ 1334 00ba 00       		.byte	0
+ 1335 00bb 0E       		.uleb128 0xe
+ 1336 00bc 34       		.uleb128 0x34
+ 1337 00bd 00       		.byte	0
+ 1338 00be 03       		.uleb128 0x3
+ 1339 00bf 0E       		.uleb128 0xe
+ 1340 00c0 3A       		.uleb128 0x3a
+ 1341 00c1 0B       		.uleb128 0xb
+ 1342 00c2 3B       		.uleb128 0x3b
+ 1343 00c3 0B       		.uleb128 0xb
+ 1344 00c4 49       		.uleb128 0x49
+ 1345 00c5 13       		.uleb128 0x13
+ 1346 00c6 02       		.uleb128 0x2
+ 1347 00c7 17       		.uleb128 0x17
+ 1348 00c8 00       		.byte	0
+ 1349 00c9 00       		.byte	0
+ 1350 00ca 0F       		.uleb128 0xf
+ 1351 00cb 34       		.uleb128 0x34
+ 1352 00cc 00       		.byte	0
+ 1353 00cd 03       		.uleb128 0x3
+ 1354 00ce 0E       		.uleb128 0xe
+ 1355 00cf 3A       		.uleb128 0x3a
+ 1356 00d0 0B       		.uleb128 0xb
+ 1357 00d1 3B       		.uleb128 0x3b
+ARM GAS  C:\Users\alexa\AppData\Local\Temp\ccr0op6K.s 			page 27
+
+
+ 1358 00d2 0B       		.uleb128 0xb
+ 1359 00d3 49       		.uleb128 0x49
+ 1360 00d4 13       		.uleb128 0x13
+ 1361 00d5 02       		.uleb128 0x2
+ 1362 00d6 18       		.uleb128 0x18
+ 1363 00d7 00       		.byte	0
+ 1364 00d8 00       		.byte	0
+ 1365 00d9 10       		.uleb128 0x10
+ 1366 00da 34       		.uleb128 0x34
+ 1367 00db 00       		.byte	0
+ 1368 00dc 03       		.uleb128 0x3
+ 1369 00dd 08       		.uleb128 0x8
+ 1370 00de 3A       		.uleb128 0x3a
+ 1371 00df 0B       		.uleb128 0xb
+ 1372 00e0 3B       		.uleb128 0x3b
+ 1373 00e1 0B       		.uleb128 0xb
+ 1374 00e2 49       		.uleb128 0x49
+ 1375 00e3 13       		.uleb128 0x13
+ 1376 00e4 02       		.uleb128 0x2
+ 1377 00e5 17       		.uleb128 0x17
+ 1378 00e6 00       		.byte	0
+ 1379 00e7 00       		.byte	0
+ 1380 00e8 11       		.uleb128 0x11
+ 1381 00e9 898201   		.uleb128 0x4109
+ 1382 00ec 01       		.byte	0x1
+ 1383 00ed 11       		.uleb128 0x11
+ 1384 00ee 01       		.uleb128 0x1
+ 1385 00ef 31       		.uleb128 0x31
+ 1386 00f0 13       		.uleb128 0x13
+ 1387 00f1 01       		.uleb128 0x1
+ 1388 00f2 13       		.uleb128 0x13
+ 1389 00f3 00       		.byte	0
+ 1390 00f4 00       		.byte	0
+ 1391 00f5 12       		.uleb128 0x12
+ 1392 00f6 8A8201   		.uleb128 0x410a
+ 1393 00f9 00       		.byte	0
+ 1394 00fa 02       		.uleb128 0x2
+ 1395 00fb 18       		.uleb128 0x18
+ 1396 00fc 9142     		.uleb128 0x2111
+ 1397 00fe 18       		.uleb128 0x18
+ 1398 00ff 00       		.byte	0
+ 1399 0100 00       		.byte	0
+ 1400 0101 13       		.uleb128 0x13
+ 1401 0102 01       		.uleb128 0x1
+ 1402 0103 01       		.byte	0x1
+ 1403 0104 49       		.uleb128 0x49
+ 1404 0105 13       		.uleb128 0x13
+ 1405 0106 01       		.uleb128 0x1
+ 1406 0107 13       		.uleb128 0x13
+ 1407 0108 00       		.byte	0
+ 1408 0109 00       		.byte	0
+ 1409 010a 14       		.uleb128 0x14
+ 1410 010b 21       		.uleb128 0x21
+ 1411 010c 00       		.byte	0
+ 1412 010d 49       		.uleb128 0x49
+ 1413 010e 13       		.uleb128 0x13
+ 1414 010f 2F       		.uleb128 0x2f
+ARM GAS  C:\Users\alexa\AppData\Local\Temp\ccr0op6K.s 			page 28
+
+
+ 1415 0110 0B       		.uleb128 0xb
+ 1416 0111 00       		.byte	0
+ 1417 0112 00       		.byte	0
+ 1418 0113 15       		.uleb128 0x15
+ 1419 0114 898201   		.uleb128 0x4109
+ 1420 0117 01       		.byte	0x1
+ 1421 0118 11       		.uleb128 0x11
+ 1422 0119 01       		.uleb128 0x1
+ 1423 011a 31       		.uleb128 0x31
+ 1424 011b 13       		.uleb128 0x13
+ 1425 011c 00       		.byte	0
+ 1426 011d 00       		.byte	0
+ 1427 011e 16       		.uleb128 0x16
+ 1428 011f 05       		.uleb128 0x5
+ 1429 0120 00       		.byte	0
+ 1430 0121 03       		.uleb128 0x3
+ 1431 0122 0E       		.uleb128 0xe
+ 1432 0123 3A       		.uleb128 0x3a
+ 1433 0124 0B       		.uleb128 0xb
+ 1434 0125 3B       		.uleb128 0x3b
+ 1435 0126 0B       		.uleb128 0xb
+ 1436 0127 49       		.uleb128 0x49
+ 1437 0128 13       		.uleb128 0x13
+ 1438 0129 02       		.uleb128 0x2
+ 1439 012a 18       		.uleb128 0x18
+ 1440 012b 00       		.byte	0
+ 1441 012c 00       		.byte	0
+ 1442 012d 17       		.uleb128 0x17
+ 1443 012e 2E       		.uleb128 0x2e
+ 1444 012f 01       		.byte	0x1
+ 1445 0130 3F       		.uleb128 0x3f
+ 1446 0131 19       		.uleb128 0x19
+ 1447 0132 03       		.uleb128 0x3
+ 1448 0133 0E       		.uleb128 0xe
+ 1449 0134 3A       		.uleb128 0x3a
+ 1450 0135 0B       		.uleb128 0xb
+ 1451 0136 3B       		.uleb128 0x3b
+ 1452 0137 0B       		.uleb128 0xb
+ 1453 0138 27       		.uleb128 0x27
+ 1454 0139 19       		.uleb128 0x19
+ 1455 013a 49       		.uleb128 0x49
+ 1456 013b 13       		.uleb128 0x13
+ 1457 013c 11       		.uleb128 0x11
+ 1458 013d 01       		.uleb128 0x1
+ 1459 013e 12       		.uleb128 0x12
+ 1460 013f 06       		.uleb128 0x6
+ 1461 0140 40       		.uleb128 0x40
+ 1462 0141 18       		.uleb128 0x18
+ 1463 0142 9742     		.uleb128 0x2117
+ 1464 0144 19       		.uleb128 0x19
+ 1465 0145 01       		.uleb128 0x1
+ 1466 0146 13       		.uleb128 0x13
+ 1467 0147 00       		.byte	0
+ 1468 0148 00       		.byte	0
+ 1469 0149 18       		.uleb128 0x18
+ 1470 014a 2E       		.uleb128 0x2e
+ 1471 014b 00       		.byte	0
+ARM GAS  C:\Users\alexa\AppData\Local\Temp\ccr0op6K.s 			page 29
+
+
+ 1472 014c 3F       		.uleb128 0x3f
+ 1473 014d 19       		.uleb128 0x19
+ 1474 014e 03       		.uleb128 0x3
+ 1475 014f 0E       		.uleb128 0xe
+ 1476 0150 3A       		.uleb128 0x3a
+ 1477 0151 0B       		.uleb128 0xb
+ 1478 0152 3B       		.uleb128 0x3b
+ 1479 0153 0B       		.uleb128 0xb
+ 1480 0154 49       		.uleb128 0x49
+ 1481 0155 13       		.uleb128 0x13
+ 1482 0156 11       		.uleb128 0x11
+ 1483 0157 01       		.uleb128 0x1
+ 1484 0158 12       		.uleb128 0x12
+ 1485 0159 06       		.uleb128 0x6
+ 1486 015a 40       		.uleb128 0x40
+ 1487 015b 18       		.uleb128 0x18
+ 1488 015c 9742     		.uleb128 0x2117
+ 1489 015e 19       		.uleb128 0x19
+ 1490 015f 00       		.byte	0
+ 1491 0160 00       		.byte	0
+ 1492 0161 19       		.uleb128 0x19
+ 1493 0162 2E       		.uleb128 0x2e
+ 1494 0163 01       		.byte	0x1
+ 1495 0164 3F       		.uleb128 0x3f
+ 1496 0165 19       		.uleb128 0x19
+ 1497 0166 03       		.uleb128 0x3
+ 1498 0167 0E       		.uleb128 0xe
+ 1499 0168 3A       		.uleb128 0x3a
+ 1500 0169 0B       		.uleb128 0xb
+ 1501 016a 3B       		.uleb128 0x3b
+ 1502 016b 0B       		.uleb128 0xb
+ 1503 016c 11       		.uleb128 0x11
+ 1504 016d 01       		.uleb128 0x1
+ 1505 016e 12       		.uleb128 0x12
+ 1506 016f 06       		.uleb128 0x6
+ 1507 0170 40       		.uleb128 0x40
+ 1508 0171 18       		.uleb128 0x18
+ 1509 0172 9742     		.uleb128 0x2117
+ 1510 0174 19       		.uleb128 0x19
+ 1511 0175 01       		.uleb128 0x1
+ 1512 0176 13       		.uleb128 0x13
+ 1513 0177 00       		.byte	0
+ 1514 0178 00       		.byte	0
+ 1515 0179 1A       		.uleb128 0x1a
+ 1516 017a 34       		.uleb128 0x34
+ 1517 017b 00       		.byte	0
+ 1518 017c 03       		.uleb128 0x3
+ 1519 017d 0E       		.uleb128 0xe
+ 1520 017e 3A       		.uleb128 0x3a
+ 1521 017f 0B       		.uleb128 0xb
+ 1522 0180 3B       		.uleb128 0x3b
+ 1523 0181 05       		.uleb128 0x5
+ 1524 0182 49       		.uleb128 0x49
+ 1525 0183 13       		.uleb128 0x13
+ 1526 0184 3F       		.uleb128 0x3f
+ 1527 0185 19       		.uleb128 0x19
+ 1528 0186 3C       		.uleb128 0x3c
+ARM GAS  C:\Users\alexa\AppData\Local\Temp\ccr0op6K.s 			page 30
+
+
+ 1529 0187 19       		.uleb128 0x19
+ 1530 0188 00       		.byte	0
+ 1531 0189 00       		.byte	0
+ 1532 018a 1B       		.uleb128 0x1b
+ 1533 018b 35       		.uleb128 0x35
+ 1534 018c 00       		.byte	0
+ 1535 018d 49       		.uleb128 0x49
+ 1536 018e 13       		.uleb128 0x13
+ 1537 018f 00       		.byte	0
+ 1538 0190 00       		.byte	0
+ 1539 0191 1C       		.uleb128 0x1c
+ 1540 0192 34       		.uleb128 0x34
+ 1541 0193 00       		.byte	0
+ 1542 0194 03       		.uleb128 0x3
+ 1543 0195 0E       		.uleb128 0xe
+ 1544 0196 3A       		.uleb128 0x3a
+ 1545 0197 0B       		.uleb128 0xb
+ 1546 0198 3B       		.uleb128 0x3b
+ 1547 0199 0B       		.uleb128 0xb
+ 1548 019a 49       		.uleb128 0x49
+ 1549 019b 13       		.uleb128 0x13
+ 1550 019c 3F       		.uleb128 0x3f
+ 1551 019d 19       		.uleb128 0x19
+ 1552 019e 02       		.uleb128 0x2
+ 1553 019f 18       		.uleb128 0x18
+ 1554 01a0 00       		.byte	0
+ 1555 01a1 00       		.byte	0
+ 1556 01a2 1D       		.uleb128 0x1d
+ 1557 01a3 2E       		.uleb128 0x2e
+ 1558 01a4 00       		.byte	0
+ 1559 01a5 3F       		.uleb128 0x3f
+ 1560 01a6 19       		.uleb128 0x19
+ 1561 01a7 3C       		.uleb128 0x3c
+ 1562 01a8 19       		.uleb128 0x19
+ 1563 01a9 6E       		.uleb128 0x6e
+ 1564 01aa 0E       		.uleb128 0xe
+ 1565 01ab 03       		.uleb128 0x3
+ 1566 01ac 0E       		.uleb128 0xe
+ 1567 01ad 3A       		.uleb128 0x3a
+ 1568 01ae 0B       		.uleb128 0xb
+ 1569 01af 3B       		.uleb128 0x3b
+ 1570 01b0 0B       		.uleb128 0xb
+ 1571 01b1 00       		.byte	0
+ 1572 01b2 00       		.byte	0
+ 1573 01b3 00       		.byte	0
+ 1574              		.section	.debug_loc,"",%progbits
+ 1575              	.Ldebug_loc0:
+ 1576              	.LLST0:
+ 1577 0000 00000000 		.4byte	.LVL0
+ 1578 0004 06000000 		.4byte	.LVL1
+ 1579 0008 0100     		.2byte	0x1
+ 1580 000a 50       		.byte	0x50
+ 1581 000b 06000000 		.4byte	.LVL1
+ 1582 000f 1E000000 		.4byte	.LFE64
+ 1583 0013 0100     		.2byte	0x1
+ 1584 0015 54       		.byte	0x54
+ 1585 0016 00000000 		.4byte	0
+ARM GAS  C:\Users\alexa\AppData\Local\Temp\ccr0op6K.s 			page 31
+
+
+ 1586 001a 00000000 		.4byte	0
+ 1587              	.LLST1:
+ 1588 001e 0A000000 		.4byte	.LVL7
+ 1589 0022 18000000 		.4byte	.LVL8
+ 1590 0026 0100     		.2byte	0x1
+ 1591 0028 50       		.byte	0x50
+ 1592 0029 18000000 		.4byte	.LVL8
+ 1593 002d 30000000 		.4byte	.LFE65
+ 1594 0031 0E00     		.2byte	0xe
+ 1595 0033 08       		.byte	0x8
+ 1596 0034 64       		.byte	0x64
+ 1597 0035 03       		.byte	0x3
+ 1598 0036 00000000 		.4byte	currentSpeed
+ 1599 003a 94       		.byte	0x94
+ 1600 003b 01       		.byte	0x1
+ 1601 003c 08       		.byte	0x8
+ 1602 003d FF       		.byte	0xff
+ 1603 003e 1A       		.byte	0x1a
+ 1604 003f 1C       		.byte	0x1c
+ 1605 0040 9F       		.byte	0x9f
+ 1606 0041 00000000 		.4byte	0
+ 1607 0045 00000000 		.4byte	0
+ 1608              	.LLST2:
+ 1609 0049 00000000 		.4byte	.LVL10
+ 1610 004d 24000000 		.4byte	.LVL14
+ 1611 0051 0100     		.2byte	0x1
+ 1612 0053 50       		.byte	0x50
+ 1613 0054 24000000 		.4byte	.LVL14
+ 1614 0058 4E000000 		.4byte	.LVL20
+ 1615 005c 0100     		.2byte	0x1
+ 1616 005e 57       		.byte	0x57
+ 1617 005f 4E000000 		.4byte	.LVL20
+ 1618 0063 54000000 		.4byte	.LFE66
+ 1619 0067 0400     		.2byte	0x4
+ 1620 0069 F3       		.byte	0xf3
+ 1621 006a 01       		.uleb128 0x1
+ 1622 006b 50       		.byte	0x50
+ 1623 006c 9F       		.byte	0x9f
+ 1624 006d 00000000 		.4byte	0
+ 1625 0071 00000000 		.4byte	0
+ 1626              	.LLST3:
+ 1627 0075 00000000 		.4byte	.LVL10
+ 1628 0079 24000000 		.4byte	.LVL14
+ 1629 007d 0100     		.2byte	0x1
+ 1630 007f 51       		.byte	0x51
+ 1631 0080 24000000 		.4byte	.LVL14
+ 1632 0084 54000000 		.4byte	.LFE66
+ 1633 0088 0400     		.2byte	0x4
+ 1634 008a F3       		.byte	0xf3
+ 1635 008b 01       		.uleb128 0x1
+ 1636 008c 51       		.byte	0x51
+ 1637 008d 9F       		.byte	0x9f
+ 1638 008e 00000000 		.4byte	0
+ 1639 0092 00000000 		.4byte	0
+ 1640              	.LLST4:
+ 1641 0096 0C000000 		.4byte	.LVL11
+ 1642 009a 4E000000 		.4byte	.LVL20
+ARM GAS  C:\Users\alexa\AppData\Local\Temp\ccr0op6K.s 			page 32
+
+
+ 1643 009e 0100     		.2byte	0x1
+ 1644 00a0 55       		.byte	0x55
+ 1645 00a1 00000000 		.4byte	0
+ 1646 00a5 00000000 		.4byte	0
+ 1647              	.LLST5:
+ 1648 00a9 16000000 		.4byte	.LVL12
+ 1649 00ad 44000000 		.4byte	.LVL18
+ 1650 00b1 0100     		.2byte	0x1
+ 1651 00b3 54       		.byte	0x54
+ 1652 00b4 46000000 		.4byte	.LVL19
+ 1653 00b8 4E000000 		.4byte	.LVL20
+ 1654 00bc 0100     		.2byte	0x1
+ 1655 00be 54       		.byte	0x54
+ 1656 00bf 00000000 		.4byte	0
+ 1657 00c3 00000000 		.4byte	0
+ 1658              	.LLST6:
+ 1659 00c7 22000000 		.4byte	.LVL13
+ 1660 00cb 24000000 		.4byte	.LVL14
+ 1661 00cf 0100     		.2byte	0x1
+ 1662 00d1 58       		.byte	0x58
+ 1663 00d2 00000000 		.4byte	0
+ 1664 00d6 00000000 		.4byte	0
+ 1665              	.LLST7:
+ 1666 00da 00000000 		.4byte	.LVL21
+ 1667 00de 0A000000 		.4byte	.LVL22
+ 1668 00e2 0100     		.2byte	0x1
+ 1669 00e4 50       		.byte	0x50
+ 1670 00e5 0A000000 		.4byte	.LVL22
+ 1671 00e9 0D000000 		.4byte	.LVL23-1
+ 1672 00ed 0500     		.2byte	0x5
+ 1673 00ef 03       		.byte	0x3
+ 1674 00f0 01000000 		.4byte	currentState
+ 1675 00f4 0D000000 		.4byte	.LVL23-1
+ 1676 00f8 30000000 		.4byte	.LFE67
+ 1677 00fc 0400     		.2byte	0x4
+ 1678 00fe F3       		.byte	0xf3
+ 1679 00ff 01       		.uleb128 0x1
+ 1680 0100 50       		.byte	0x50
+ 1681 0101 9F       		.byte	0x9f
+ 1682 0102 00000000 		.4byte	0
+ 1683 0106 00000000 		.4byte	0
+ 1684              	.LLST8:
+ 1685 010a 00000000 		.4byte	.LVL28
+ 1686 010e 08000000 		.4byte	.LVL29
+ 1687 0112 0100     		.2byte	0x1
+ 1688 0114 50       		.byte	0x50
+ 1689 0115 08000000 		.4byte	.LVL29
+ 1690 0119 14000000 		.4byte	.LFE70
+ 1691 011d 0400     		.2byte	0x4
+ 1692 011f F3       		.byte	0xf3
+ 1693 0120 01       		.uleb128 0x1
+ 1694 0121 50       		.byte	0x50
+ 1695 0122 9F       		.byte	0x9f
+ 1696 0123 00000000 		.4byte	0
+ 1697 0127 00000000 		.4byte	0
+ 1698              		.section	.debug_aranges,"",%progbits
+ 1699 0000 64000000 		.4byte	0x64
+ARM GAS  C:\Users\alexa\AppData\Local\Temp\ccr0op6K.s 			page 33
+
+
+ 1700 0004 0200     		.2byte	0x2
+ 1701 0006 00000000 		.4byte	.Ldebug_info0
+ 1702 000a 04       		.byte	0x4
+ 1703 000b 00       		.byte	0
+ 1704 000c 0000     		.2byte	0
+ 1705 000e 0000     		.2byte	0
+ 1706 0010 00000000 		.4byte	.LFB64
+ 1707 0014 1E000000 		.4byte	.LFE64-.LFB64
+ 1708 0018 00000000 		.4byte	.LFB65
+ 1709 001c 30000000 		.4byte	.LFE65-.LFB65
+ 1710 0020 00000000 		.4byte	.LFB66
+ 1711 0024 54000000 		.4byte	.LFE66-.LFB66
+ 1712 0028 00000000 		.4byte	.LFB67
+ 1713 002c 30000000 		.4byte	.LFE67-.LFB67
+ 1714 0030 00000000 		.4byte	.LFB68
+ 1715 0034 0C000000 		.4byte	.LFE68-.LFB68
+ 1716 0038 00000000 		.4byte	.LFB69
+ 1717 003c 0C000000 		.4byte	.LFE69-.LFB69
+ 1718 0040 00000000 		.4byte	.LFB70
+ 1719 0044 14000000 		.4byte	.LFE70-.LFB70
+ 1720 0048 00000000 		.4byte	.LFB71
+ 1721 004c 0C000000 		.4byte	.LFE71-.LFB71
+ 1722 0050 00000000 		.4byte	.LFB72
+ 1723 0054 0C000000 		.4byte	.LFE72-.LFB72
+ 1724 0058 00000000 		.4byte	.LFB73
+ 1725 005c 40000000 		.4byte	.LFE73-.LFB73
+ 1726 0060 00000000 		.4byte	0
+ 1727 0064 00000000 		.4byte	0
+ 1728              		.section	.debug_ranges,"",%progbits
+ 1729              	.Ldebug_ranges0:
+ 1730 0000 00000000 		.4byte	.LFB64
+ 1731 0004 1E000000 		.4byte	.LFE64
+ 1732 0008 00000000 		.4byte	.LFB65
+ 1733 000c 30000000 		.4byte	.LFE65
+ 1734 0010 00000000 		.4byte	.LFB66
+ 1735 0014 54000000 		.4byte	.LFE66
+ 1736 0018 00000000 		.4byte	.LFB67
+ 1737 001c 30000000 		.4byte	.LFE67
+ 1738 0020 00000000 		.4byte	.LFB68
+ 1739 0024 0C000000 		.4byte	.LFE68
+ 1740 0028 00000000 		.4byte	.LFB69
+ 1741 002c 0C000000 		.4byte	.LFE69
+ 1742 0030 00000000 		.4byte	.LFB70
+ 1743 0034 14000000 		.4byte	.LFE70
+ 1744 0038 00000000 		.4byte	.LFB71
+ 1745 003c 0C000000 		.4byte	.LFE71
+ 1746 0040 00000000 		.4byte	.LFB72
+ 1747 0044 0C000000 		.4byte	.LFE72
+ 1748 0048 00000000 		.4byte	.LFB73
+ 1749 004c 40000000 		.4byte	.LFE73
+ 1750 0050 00000000 		.4byte	0
+ 1751 0054 00000000 		.4byte	0
+ 1752              		.section	.debug_line,"",%progbits
+ 1753              	.Ldebug_line0:
+ 1754 0000 7D020000 		.section	.debug_str,"MS",%progbits,1
+ 1754      02009401 
+ 1754      00000201 
+ARM GAS  C:\Users\alexa\AppData\Local\Temp\ccr0op6K.s 			page 34
+
+
+ 1754      FB0E0D00 
+ 1754      01010101 
+ 1755              	.LASF20:
+ 1756 0000 6C6F6E67 		.ascii	"long double\000"
+ 1756      20646F75 
+ 1756      626C6500 
+ 1757              	.LASF25:
+ 1758 000c 64726976 		.ascii	"driveModes\000"
+ 1758      654D6F64 
+ 1758      657300
+ 1759              	.LASF49:
+ 1760 0017 4D6F746F 		.ascii	"Motor_GetDriveDirection\000"
+ 1760      725F4765 
+ 1760      74447269 
+ 1760      76654469 
+ 1760      72656374 
+ 1761              	.LASF13:
+ 1762 002f 696E7438 		.ascii	"int8_t\000"
+ 1762      5F7400
+ 1763              	.LASF45:
+ 1764 0036 4D6F746F 		.ascii	"Motor_SetDriveDirection\000"
+ 1764      725F5365 
+ 1764      74447269 
+ 1764      76654469 
+ 1764      72656374 
+ 1765              	.LASF4:
+ 1766 004e 73686F72 		.ascii	"short int\000"
+ 1766      7420696E 
+ 1766      7400
+ 1767              	.LASF69:
+ 1768 0058 4D6F746F 		.ascii	"Motor_SetDriveSpeed\000"
+ 1768      725F5365 
+ 1768      74447269 
+ 1768      76655370 
+ 1768      65656400 
+ 1769              	.LASF36:
+ 1770 006c 73657175 		.ascii	"sequence\000"
+ 1770      656E6365 
+ 1770      00
+ 1771              	.LASF21:
+ 1772 0075 73697A65 		.ascii	"sizetype\000"
+ 1772      74797065 
+ 1772      00
+ 1773              	.LASF54:
+ 1774 007e 63757272 		.ascii	"currentSpeed\000"
+ 1774      656E7453 
+ 1774      70656564 
+ 1774      00
+ 1775              	.LASF33:
+ 1776 008b 64656C61 		.ascii	"delay\000"
+ 1776      7900
+ 1777              	.LASF62:
+ 1778 0091 53544550 		.ascii	"STEP_1b_Write\000"
+ 1778      5F31625F 
+ 1778      57726974 
+ 1778      6500
+ 1779              	.LASF5:
+ARM GAS  C:\Users\alexa\AppData\Local\Temp\ccr0op6K.s 			page 35
+
+
+ 1780 009f 5F5F7569 		.ascii	"__uint16_t\000"
+ 1780      6E743136 
+ 1780      5F7400
+ 1781              	.LASF65:
+ 1782 00aa 55415254 		.ascii	"UART_PutString\000"
+ 1782      5F507574 
+ 1782      53747269 
+ 1782      6E6700
+ 1783              	.LASF28:
+ 1784 00b9 64726976 		.ascii	"driveDirections\000"
+ 1784      65446972 
+ 1784      65637469 
+ 1784      6F6E7300 
+ 1785              	.LASF14:
+ 1786 00c9 75696E74 		.ascii	"uint8_t\000"
+ 1786      385F7400 
+ 1787              	.LASF41:
+ 1788 00d1 6E657753 		.ascii	"newState\000"
+ 1788      74617465 
+ 1788      00
+ 1789              	.LASF52:
+ 1790 00da 63757272 		.ascii	"currentMode\000"
+ 1790      656E744D 
+ 1790      6F646500 
+ 1791              	.LASF17:
+ 1792 00e6 666C6F61 		.ascii	"float\000"
+ 1792      7400
+ 1793              	.LASF24:
+ 1794 00ec 4D4F544F 		.ascii	"MOTOR_MODE_HALF_STEP\000"
+ 1794      525F4D4F 
+ 1794      44455F48 
+ 1794      414C465F 
+ 1794      53544550 
+ 1795              	.LASF35:
+ 1796 0101 73746174 		.ascii	"states\000"
+ 1796      657300
+ 1797              	.LASF58:
+ 1798 0108 4D4F544F 		.ascii	"MOTOR_HALF_DRIVE_SEQUENCE\000"
+ 1798      525F4841 
+ 1798      4C465F44 
+ 1798      52495645 
+ 1798      5F534551 
+ 1799              	.LASF56:
+ 1800 0122 4D4F544F 		.ascii	"MOTOR_WAVE_DRIVE_SEQUENCE\000"
+ 1800      525F5741 
+ 1800      56455F44 
+ 1800      52495645 
+ 1800      5F534551 
+ 1801              	.LASF22:
+ 1802 013c 4D4F544F 		.ascii	"MOTOR_MODE_WAVE_DRIVE\000"
+ 1802      525F4D4F 
+ 1802      44455F57 
+ 1802      4156455F 
+ 1802      44524956 
+ 1803              	.LASF1:
+ 1804 0152 5F5F7569 		.ascii	"__uint8_t\000"
+ 1804      6E74385F 
+ARM GAS  C:\Users\alexa\AppData\Local\Temp\ccr0op6K.s 			page 36
+
+
+ 1804      7400
+ 1805              	.LASF57:
+ 1806 015c 4D4F544F 		.ascii	"MOTOR_FULL_DRIVE_SEQUENCE\000"
+ 1806      525F4655 
+ 1806      4C4C5F44 
+ 1806      52495645 
+ 1806      5F534551 
+ 1807              	.LASF32:
+ 1808 0176 73706565 		.ascii	"speedDiff\000"
+ 1808      64446966 
+ 1808      6600
+ 1809              	.LASF3:
+ 1810 0180 756E7369 		.ascii	"unsigned char\000"
+ 1810      676E6564 
+ 1810      20636861 
+ 1810      7200
+ 1811              	.LASF31:
+ 1812 018e 64656C61 		.ascii	"delayLimitDiff\000"
+ 1812      794C696D 
+ 1812      69744469 
+ 1812      666600
+ 1813              	.LASF39:
+ 1814 019d 73746570 		.ascii	"step_inc\000"
+ 1814      5F696E63 
+ 1814      00
+ 1815              	.LASF67:
+ 1816 01a6 4D6F746F 		.ascii	"Motor.c\000"
+ 1816      722E6300 
+ 1817              	.LASF46:
+ 1818 01ae 6E657744 		.ascii	"newDirection\000"
+ 1818      69726563 
+ 1818      74696F6E 
+ 1818      00
+ 1819              	.LASF59:
+ 1820 01bb 4D4F544F 		.ascii	"MOTOR_STOPPED_DRIVE\000"
+ 1820      525F5354 
+ 1820      4F505045 
+ 1820      445F4452 
+ 1820      49564500 
+ 1821              	.LASF63:
+ 1822 01cf 53544550 		.ascii	"STEP_2b_Write\000"
+ 1822      5F32625F 
+ 1822      57726974 
+ 1822      6500
+ 1823              	.LASF2:
+ 1824 01dd 7369676E 		.ascii	"signed char\000"
+ 1824      65642063 
+ 1824      68617200 
+ 1825              	.LASF11:
+ 1826 01e9 6C6F6E67 		.ascii	"long long unsigned int\000"
+ 1826      206C6F6E 
+ 1826      6720756E 
+ 1826      7369676E 
+ 1826      65642069 
+ 1827              	.LASF12:
+ 1828 0200 756E7369 		.ascii	"unsigned int\000"
+ 1828      676E6564 
+ARM GAS  C:\Users\alexa\AppData\Local\Temp\ccr0op6K.s 			page 37
+
+
+ 1828      20696E74 
+ 1828      00
+ 1829              	.LASF15:
+ 1830 020d 75696E74 		.ascii	"uint16_t\000"
+ 1830      31365F74 
+ 1830      00
+ 1831              	.LASF48:
+ 1832 0216 73706565 		.ascii	"speed\000"
+ 1832      6400
+ 1833              	.LASF34:
+ 1834 021c 52756E44 		.ascii	"RunDriveSequence\000"
+ 1834      72697665 
+ 1834      53657175 
+ 1834      656E6365 
+ 1834      00
+ 1835              	.LASF23:
+ 1836 022d 4D4F544F 		.ascii	"MOTOR_MODE_FULL_STEP\000"
+ 1836      525F4D4F 
+ 1836      44455F46 
+ 1836      554C4C5F 
+ 1836      53544550 
+ 1837              	.LASF37:
+ 1838 0242 73746570 		.ascii	"steps\000"
+ 1838      7300
+ 1839              	.LASF6:
+ 1840 0248 73686F72 		.ascii	"short unsigned int\000"
+ 1840      7420756E 
+ 1840      7369676E 
+ 1840      65642069 
+ 1840      6E7400
+ 1841              	.LASF0:
+ 1842 025b 5F5F696E 		.ascii	"__int8_t\000"
+ 1842      74385F74 
+ 1842      00
+ 1843              	.LASF27:
+ 1844 0264 4D4F544F 		.ascii	"MOTOR_DIRECTION_BACKWARD\000"
+ 1844      525F4449 
+ 1844      52454354 
+ 1844      494F4E5F 
+ 1844      4241434B 
+ 1845              	.LASF60:
+ 1846 027d 53544550 		.ascii	"STEP_1a_Write\000"
+ 1846      5F31615F 
+ 1846      57726974 
+ 1846      6500
+ 1847              	.LASF19:
+ 1848 028b 63686172 		.ascii	"char\000"
+ 1848      00
+ 1849              	.LASF26:
+ 1850 0290 4D4F544F 		.ascii	"MOTOR_DIRECTION_FORWARD\000"
+ 1850      525F4449 
+ 1850      52454354 
+ 1850      494F4E5F 
+ 1850      464F5257 
+ 1851              	.LASF8:
+ 1852 02a8 6C6F6E67 		.ascii	"long int\000"
+ 1852      20696E74 
+ARM GAS  C:\Users\alexa\AppData\Local\Temp\ccr0op6K.s 			page 38
+
+
+ 1852      00
+ 1853              	.LASF16:
+ 1854 02b1 696E7433 		.ascii	"int32_t\000"
+ 1854      325F7400 
+ 1855              	.LASF51:
+ 1856 02b9 63757272 		.ascii	"currentState\000"
+ 1856      656E7453 
+ 1856      74617465 
+ 1856      00
+ 1857              	.LASF40:
+ 1858 02c6 4D6F746F 		.ascii	"Motor_SetDriveState\000"
+ 1858      725F5365 
+ 1858      74447269 
+ 1858      76655374 
+ 1858      61746500 
+ 1859              	.LASF42:
+ 1860 02da 5F426F6F 		.ascii	"_Bool\000"
+ 1860      6C00
+ 1861              	.LASF30:
+ 1862 02e0 43616C63 		.ascii	"CalculateDelay\000"
+ 1862      756C6174 
+ 1862      6544656C 
+ 1862      617900
+ 1863              	.LASF38:
+ 1864 02ef 696E6974 		.ascii	"init_direction\000"
+ 1864      5F646972 
+ 1864      65637469 
+ 1864      6F6E00
+ 1865              	.LASF9:
+ 1866 02fe 6C6F6E67 		.ascii	"long unsigned int\000"
+ 1866      20756E73 
+ 1866      69676E65 
+ 1866      6420696E 
+ 1866      7400
+ 1867              	.LASF47:
+ 1868 0310 6E657753 		.ascii	"newSpeed\000"
+ 1868      70656564 
+ 1868      00
+ 1869              	.LASF7:
+ 1870 0319 5F5F696E 		.ascii	"__int32_t\000"
+ 1870      7433325F 
+ 1870      7400
+ 1871              	.LASF68:
+ 1872 0323 433A5C55 		.ascii	"C:\\Users\\alexa\\Documents\\GitHub\\Projekt-3\\PSo"
+ 1872      73657273 
+ 1872      5C616C65 
+ 1872      78615C44 
+ 1872      6F63756D 
+ 1873 0350 435C5052 		.ascii	"C\\PRJ3.cydsn\000"
+ 1873      4A332E63 
+ 1873      7964736E 
+ 1873      00
+ 1874              	.LASF70:
+ 1875 035d 4D6F746F 		.ascii	"Motor_UpdateState\000"
+ 1875      725F5570 
+ 1875      64617465 
+ 1875      53746174 
+ARM GAS  C:\Users\alexa\AppData\Local\Temp\ccr0op6K.s 			page 39
+
+
+ 1875      6500
+ 1876              	.LASF18:
+ 1877 036f 646F7562 		.ascii	"double\000"
+ 1877      6C6500
+ 1878              	.LASF50:
+ 1879 0376 4D6F746F 		.ascii	"Motor_GetDriveSpeed\000"
+ 1879      725F4765 
+ 1879      74447269 
+ 1879      76655370 
+ 1879      65656400 
+ 1880              	.LASF29:
+ 1881 038a 53657453 		.ascii	"SetStators\000"
+ 1881      7461746F 
+ 1881      727300
+ 1882              	.LASF55:
+ 1883 0395 49544D5F 		.ascii	"ITM_RxBuffer\000"
+ 1883      52784275 
+ 1883      66666572 
+ 1883      00
+ 1884              	.LASF66:
+ 1885 03a2 474E5520 		.ascii	"GNU C11 5.4.1 20160609 (release) [ARM/embedded-5-br"
+ 1885      43313120 
+ 1885      352E342E 
+ 1885      31203230 
+ 1885      31363036 
+ 1886 03d5 616E6368 		.ascii	"anch revision 237715] -mcpu=cortex-m3 -mthumb -g -O"
+ 1886      20726576 
+ 1886      6973696F 
+ 1886      6E203233 
+ 1886      37373135 
+ 1887 0408 67202D66 		.ascii	"g -ffunction-sections -ffat-lto-objects\000"
+ 1887      66756E63 
+ 1887      74696F6E 
+ 1887      2D736563 
+ 1887      74696F6E 
+ 1888              	.LASF43:
+ 1889 0430 4D6F746F 		.ascii	"Motor_SetDriveMode\000"
+ 1889      725F5365 
+ 1889      74447269 
+ 1889      76654D6F 
+ 1889      646500
+ 1890              	.LASF64:
+ 1891 0443 43794465 		.ascii	"CyDelay\000"
+ 1891      6C617900 
+ 1892              	.LASF44:
+ 1893 044b 6E65774D 		.ascii	"newMode\000"
+ 1893      6F646500 
+ 1894              	.LASF53:
+ 1895 0453 63757272 		.ascii	"currentDirection\000"
+ 1895      656E7444 
+ 1895      69726563 
+ 1895      74696F6E 
+ 1895      00
+ 1896              	.LASF61:
+ 1897 0464 53544550 		.ascii	"STEP_2a_Write\000"
+ 1897      5F32615F 
+ 1897      57726974 
+ARM GAS  C:\Users\alexa\AppData\Local\Temp\ccr0op6K.s 			page 40
+
+
+ 1897      6500
+ 1898              	.LASF10:
+ 1899 0472 6C6F6E67 		.ascii	"long long int\000"
+ 1899      206C6F6E 
+ 1899      6720696E 
+ 1899      7400
+ 1900              		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 5.4.1 20160609 (release) [ARM/embedded-5-bran
