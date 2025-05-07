@@ -1,78 +1,90 @@
-import customtkinter
-import I2C_psoc as psoc
+import customtkinter as ctk
+import UART as UART
 import threading
 import time
 
 
-# use spidev to talk SPI 
-
 
 # Create main window
-root = customtkinter.CTk() # creation of main application window
+root = ctk.CTk() # creation of main application window
 root.geometry("800x480")
 root.attributes("-fullscreen", True)
 root.title("Beer game!")
 root.eval('tk::PlaceWindow . center')
+
+ctk.set_appearance_mode("dark") # dark mode
+ctk.set_default_color_theme("blue") # blue theme
 
 #Grid layout configuration
 root.columnconfigure(0, weight=1) # left
 root.columnconfigure(1, weight=1) # right
 root.rowconfigure((0, 1, 2, 3), weight=1) # row heights
 
-#label right side
-label_right = customtkinter.CTkLabel(root, text="size of drink:", font=("Arial", 38))
+root.grid_propagate(False) # prevent resizing of the window
+
+# list of buttons to be tracked
+buttons = []
+
+# when button is pressed, check if it is already green. If not, set it to green and reset others to blue with label update
+def updateWhenButtonPressed(selectedButton, text):
+    for button in buttons:
+        if button == selectedButton:
+            if button.cget("fg_color") == "green":
+                return
+            else:
+                button.configure(fg_color="green")
+        else:
+            #reset all to blue
+            button.configure(fg_color="blue")
+
+    # update the label
+    label_right2.configure(text=f"{text}")
+    #prints the button pressed to the console
+    print(f"Button pressed: {selectedButton.cget('text')}")
+
+
+#label right side top
+label_right = ctk.CTkLabel(root, text="size of drink:", font=("Arial", 38))
 label_right.grid(row=0, column=1, padx=20, pady=20)
 
-# label that updates. 
-label_right2 = customtkinter.CTkLabel(root, text="\nnone", font=("Arial", 52))
-label_right2.grid(row=1, column=1, padx=20, pady=20)
-
-# function to update text 
-def update_label(text):
-    label_right2.configure(text=f"{text}")
+# label that updates drink size. 
+label_right2 = ctk.CTkLabel(root, text="\nnone", font=("Arial", 52))
+label_right2.grid(row=1, column=1, padx=5, pady=5)
 
 
 
+# buttons left side (shot)
+button1 = ctk.CTkButton(root, text="Shots glass", width=200, height=100, font=("Arial", 24), command=lambda: updateWhenButtonPressed(button1,"30mL"))
+button1.grid(row=0, column=0, padx=10, pady=10)
+buttons.append(button1)
 
-# change all below here 
-# Function to send I2C command
-def send_drink_size(value):
-    psoc.send_data(value)  # Send value to PSoC
-    update_label(f"Sent: {value}")
+# buttons left side (mediom)
+button2 = ctk.CTkButton(root, text="lille størelse", width=200, height=100, font=("Arial", 24), command=lambda:  updateWhenButtonPressed(button2, "250mL"))
+button2.grid(row=1, column=0, padx=10, pady=10)
+buttons.append(button2)
 
-# Function to continuously read PSoC data
-def i2c_listener():
-    while True:
-        response = psoc.read_data()
-        if response is not None:
-            update_label(f"PSoC: {response}")
-        time.sleep(1)
-
-# Start I2C listener in a separate thread
-i2c_thread = threading.Thread(target=i2c_listener, daemon=True)
-i2c_thread.start()
-
-
-# to here
-
-
-
-
-
-# buttons left side
-button1 = customtkinter.CTkButton(root, text="Shots glass", width=200, height=100, font=("Arial", 24), command=lambda: update_label("30mL"))
-button1.grid(row=0, column=0, padx=20, pady=20)
-
-button2 = customtkinter.CTkButton(root, text="lille størelse", width=200, height=100, font=("Arial", 24), command=lambda:  update_label("250mL"))
-button2.grid(row=1, column=0, padx=20, pady=20)
-
-button3 = customtkinter.CTkButton(root, text="normal størelse", width=200, height=100, font=("Arial", 24), command=lambda:  update_label("330mL"))
-button3.grid(row=2, column=0, padx=20, pady=20)
+# buttons left side (large)
+button3 = ctk.CTkButton(root, text="normal størelse", width=200, height=100, font=("Arial", 24), command=lambda:  updateWhenButtonPressed(button3, "330mL"))
+button3.grid(row=2, column=0, padx=10, pady=10)
+buttons.append(button3)
 
 
 #buttons right side bottom
-button4 = customtkinter.CTkButton(root, text="Throw the dice!", width=300, height=175, font=("Arial", 24), command=lambda: update_label("Dice has\n been dropped!!"))
-button4.grid(row=3, column=1, padx=20, pady=20)
+button4 = ctk.CTkButton(root, text="Throw the dice!", width=300, height=175, font=("Arial", 24), command=lambda: 
+                        [
+                            updateWhenButtonPressed(button4,"Dice has\n been dropped!!"),
+                            testbuttonlight()
+                        ])
+
+button4.grid(row=3, column=1, padx=10, pady=10)
+buttons.append(button4)
+
+
+
+# button4 to work with psoc
+def testbuttonlight():
+    UART.sendCommand("test1\n")  # Send string command to PSoC
+
 
 # Run the app
 root.mainloop()
