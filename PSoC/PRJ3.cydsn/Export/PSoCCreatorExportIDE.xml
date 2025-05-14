@@ -39,10 +39,12 @@
           <File BuildType="BUILD" Toolchain="">main.c</File>
           <File BuildType="BUILD" Toolchain="">ColorSensor.c</File>
           <File BuildType="BUILD" Toolchain="">Motor.c</File>
+          <File BuildType="BUILD" Toolchain="">Pump.c</File>
           <File BuildType="BUILD" Toolchain="">cyapicallbacks.h</File>
           <File BuildType="BUILD" Toolchain="">StringToInteger.h</File>
           <File BuildType="BUILD" Toolchain="">ColorSensor.h</File>
           <File BuildType="BUILD" Toolchain="">Motor.h</File>
+          <File BuildType="BUILD" Toolchain="">Pump.h</File>
         </Files>
       </Folder>
       <Folder BuildType="STRICT" Path="C:\Users\alexa\Documents\GitHub\Projekt-3\PSoC\PRJ3.cydsn\Generated_Source\PSoC5">

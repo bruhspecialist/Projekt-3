@@ -6,6 +6,7 @@
 
 #include "ColorSensor.h"
 #include "Motor.h"
+#include "Pump.h"
 
 CY_ISR_PROTO(UART_USB_RX_ISR_handler);
 CY_ISR_PROTO(UART_PI_RX_ISR_handler);
@@ -26,9 +27,13 @@ int main(void)
 
     for(;;)
     {
-        const char* color = TCS37073M_Read();
-        UART_USB_PutString(color);
-        UART_USB_PutString("\r\n");
+        // Farvesensor test
+//        const char* color = TCS37073M_Read();
+//        UART_USB_PutString(color);
+//        UART_USB_PutString("\r\n");
+        
+        // Pumpt test
+            //for (int i = 1; i <= 6; ++i) Pump(i);
     }
 }
 
