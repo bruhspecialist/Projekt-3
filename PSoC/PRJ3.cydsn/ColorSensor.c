@@ -65,13 +65,17 @@ const char* DetectColor(const uint16_t* rgb) {
     return "blue";
 }
 
-const char* Read() {
-    // code
-    return "amogus";
+const char* TCS37073M_Read() {
+    uint16_t rgbData[3];
+    uint16_t rgbNorm[3];
+    TCS37073M_ReadColorData(rgbData);
+    CalibrateColor(rgbData, rgbNorm);
+    return DetectColor(rgbNorm);
 }
 
 void TCS37073M_Initialize()
 {
+    I2C_Start();
     TCS37073M_WriteRegister(0x81, 0x1D); // ?
     TCS37073M_WriteRegister(0xCA, 0x57); // ?
     TCS37073M_WriteRegister(0xCB, 0x02); // ?

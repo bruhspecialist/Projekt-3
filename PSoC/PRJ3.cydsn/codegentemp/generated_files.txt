@@ -61,6 +61,24 @@
   <file name="C:\Users\alexa\Documents\GitHub\Projekt-3\PSoC\PRJ3.cydsn\codegentemp\UART_PI_BOOT.c" value="SOURCE_C;CortexM3;;;;UART_PI" />
   <file name="C:\Users\alexa\Documents\GitHub\Projekt-3\PSoC\PRJ3.cydsn\codegentemp\UART_PI_RX_ISR.c" value="SOURCE_C;CortexM3;;;;UART_PI_RX_ISR" />
   <file name="C:\Users\alexa\Documents\GitHub\Projekt-3\PSoC\PRJ3.cydsn\codegentemp\UART_PI_RX_ISR.h" value="HEADER;;;;;UART_PI_RX_ISR" />
+  <file name="C:\Users\alexa\Documents\GitHub\Projekt-3\PSoC\PRJ3.cydsn\codegentemp\PUMP_1_aliases.h" value="HEADER;;;;;PUMP_1" />
+  <file name="C:\Users\alexa\Documents\GitHub\Projekt-3\PSoC\PRJ3.cydsn\codegentemp\PUMP_1.c" value="SOURCE_C;CortexM3;;;;PUMP_1" />
+  <file name="C:\Users\alexa\Documents\GitHub\Projekt-3\PSoC\PRJ3.cydsn\codegentemp\PUMP_1.h" value="HEADER;;;;;PUMP_1" />
+  <file name="C:\Users\alexa\Documents\GitHub\Projekt-3\PSoC\PRJ3.cydsn\codegentemp\PUMP_2_aliases.h" value="HEADER;;;;;PUMP_2" />
+  <file name="C:\Users\alexa\Documents\GitHub\Projekt-3\PSoC\PRJ3.cydsn\codegentemp\PUMP_2.c" value="SOURCE_C;CortexM3;;;;PUMP_2" />
+  <file name="C:\Users\alexa\Documents\GitHub\Projekt-3\PSoC\PRJ3.cydsn\codegentemp\PUMP_2.h" value="HEADER;;;;;PUMP_2" />
+  <file name="C:\Users\alexa\Documents\GitHub\Projekt-3\PSoC\PRJ3.cydsn\codegentemp\PUMP_3_aliases.h" value="HEADER;;;;;PUMP_3" />
+  <file name="C:\Users\alexa\Documents\GitHub\Projekt-3\PSoC\PRJ3.cydsn\codegentemp\PUMP_3.c" value="SOURCE_C;CortexM3;;;;PUMP_3" />
+  <file name="C:\Users\alexa\Documents\GitHub\Projekt-3\PSoC\PRJ3.cydsn\codegentemp\PUMP_3.h" value="HEADER;;;;;PUMP_3" />
+  <file name="C:\Users\alexa\Documents\GitHub\Projekt-3\PSoC\PRJ3.cydsn\codegentemp\PUMP_4_aliases.h" value="HEADER;;;;;PUMP_4" />
+  <file name="C:\Users\alexa\Documents\GitHub\Projekt-3\PSoC\PRJ3.cydsn\codegentemp\PUMP_4.c" value="SOURCE_C;CortexM3;;;;PUMP_4" />
+  <file name="C:\Users\alexa\Documents\GitHub\Projekt-3\PSoC\PRJ3.cydsn\codegentemp\PUMP_4.h" value="HEADER;;;;;PUMP_4" />
+  <file name="C:\Users\alexa\Documents\GitHub\Projekt-3\PSoC\PRJ3.cydsn\codegentemp\PUMP_5_aliases.h" value="HEADER;;;;;PUMP_5" />
+  <file name="C:\Users\alexa\Documents\GitHub\Projekt-3\PSoC\PRJ3.cydsn\codegentemp\PUMP_5.c" value="SOURCE_C;CortexM3;;;;PUMP_5" />
+  <file name="C:\Users\alexa\Documents\GitHub\Projekt-3\PSoC\PRJ3.cydsn\codegentemp\PUMP_5.h" value="HEADER;;;;;PUMP_5" />
+  <file name="C:\Users\alexa\Documents\GitHub\Projekt-3\PSoC\PRJ3.cydsn\codegentemp\PUMP_6_aliases.h" value="HEADER;;;;;PUMP_6" />
+  <file name="C:\Users\alexa\Documents\GitHub\Projekt-3\PSoC\PRJ3.cydsn\codegentemp\PUMP_6.c" value="SOURCE_C;CortexM3;;;;PUMP_6" />
+  <file name="C:\Users\alexa\Documents\GitHub\Projekt-3\PSoC\PRJ3.cydsn\codegentemp\PUMP_6.h" value="HEADER;;;;;PUMP_6" />
   <file name="C:\Users\alexa\Documents\GitHub\Projekt-3\PSoC\PRJ3.cydsn\codegentemp\UART_USB_IntClock.c" value="SOURCE_C;CortexM3;;;;UART_USB_IntClock" />
   <file name="C:\Users\alexa\Documents\GitHub\Projekt-3\PSoC\PRJ3.cydsn\codegentemp\UART_USB_IntClock.h" value="HEADER;;;;;UART_USB_IntClock" />
   <file name="C:\Users\alexa\Documents\GitHub\Projekt-3\PSoC\PRJ3.cydsn\codegentemp\UART_PI_IntClock.c" value="SOURCE_C;CortexM3;;;;UART_PI_IntClock" />

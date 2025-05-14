@@ -1,5 +1,5 @@
 # PRJ3
-# 2025-05-14 09:59:26Z
+# 2025-05-14 11:01:20Z
 
 # IO_0@[IOP=(1)][IoId=(0)] is reserved: SWDDebugEnabled
 dont_use_io iocell 1 0
@@ -15,5 +15,12 @@ set_io "STEP_1b(0)" iocell 2 4
 set_io "STEP_2b(0)" iocell 2 6
 set_io "UART_USB_RX(0)" iocell 12 6
 set_io "UART_USB_TX(0)" iocell 12 7
-set_io "UART_PI_RX(0)" iocell 15 4
-set_io "UART_PI_TX(0)" iocell 15 5
+set_io "LED_BUILTIN(0)" iocell 2 1
+set_io "UART_PI_RX(0)" iocell 0 0
+set_io "UART_PI_TX(0)" iocell 0 1
+set_io "PUMP_1(0)" iocell 15 0
+set_io "PUMP_2(0)" iocell 15 1
+set_io "PUMP_3(0)" iocell 15 2
+set_io "PUMP_4(0)" iocell 15 3
+set_io "PUMP_5(0)" iocell 15 4
+set_io "PUMP_6(0)" iocell 15 5

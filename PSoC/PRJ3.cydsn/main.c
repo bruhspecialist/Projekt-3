@@ -4,6 +4,9 @@
 #include <stdlib.h>
 #include <string.h>
 
+#include "ColorSensor.h"
+#include "Motor.h"
+
 CY_ISR_PROTO(UART_USB_RX_ISR_handler);
 CY_ISR_PROTO(UART_PI_RX_ISR_handler);
 void HandleStringReceived(char* stringReceived);
@@ -18,10 +21,14 @@ int main(void)
     UART_PI_RX_ISR_StartEx(UART_PI_RX_ISR_handler);
     UART_USB_Start();
     UART_PI_Start();
+    
+    TCS37073M_Initialize();
 
     for(;;)
     {
-        
+        const char* color = TCS37073M_Read();
+        UART_USB_PutString(color);
+        UART_USB_PutString("\r\n");
     }
 }
 

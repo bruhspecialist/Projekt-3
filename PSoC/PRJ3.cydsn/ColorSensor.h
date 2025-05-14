@@ -11,16 +11,16 @@
 
 #define MAX_VALUE 17999
 
-void TCS37073M_ReadRegister(uint8_t REG, uint8_t bytesAmount, uint8_t* bytes);
-void TCS37073M_WriteRegister(uint8_t REG, uint8_t data);
+//void TCS37073M_ReadRegister(uint8_t REG, uint8_t bytesAmount, uint8_t* bytes);
+//void TCS37073M_WriteRegister(uint8_t REG, uint8_t data);
 
-void TCS37073M_ReadColorData(uint16_t* rgbData);
+//void TCS37073M_ReadColorData(uint16_t* rgbData);
 
-uint16_t FindMaxColor(const uint16_t rgb[3]);
+//uint16_t FindMaxColor(const uint16_t rgb[3]);
 
-void CalibrateColor(const uint16_t *rgb, uint16_t *rgbNorm);
-const char* DetectColor(const uint16_t* rgb);
+//void CalibrateColor(const uint16_t *rgb, uint16_t *rgbNorm);
+//const char* DetectColor(const uint16_t* rgb);
 
-const char* Read();
+const char* TCS37073M_Read();
 
 void TCS37073M_Initialize();

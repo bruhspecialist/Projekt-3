@@ -253,13 +253,19 @@
     <Group key="Pin">
       <Data key="2b4e479d-5048-4ef0-9ca9-3e797a7a0e9e" value="STEP_1a" />
       <Data key="02f2cf2c-2c7a-49df-9246-7a3435c21be3" value="scl" />
+      <Data key="3d0e074c-6408-4389-94cf-17f55467850e" value="PUMP_1" />
+      <Data key="5be987b5-e556-4e41-b8bc-623874da6637" value="PUMP_6" />
+      <Data key="34e420e9-6f08-4846-9fd3-385bebfeeb65" value="PUMP_5" />
       <Data key="83fdbac2-2f0a-4969-aa39-2f98370edcf1" value="UART_USB_TX" />
       <Data key="210db643-a536-4b6d-953c-ca64aa3f6c26" value="STEP_1b" />
+      <Data key="223f956f-c3df-4881-bfa5-3a4fc48f5307" value="PUMP_4" />
       <Data key="790d54f8-a653-4cd7-8ee8-b60b0c43c8de" value="STEP_2b" />
+      <Data key="4693e54b-4418-4438-bd7a-f2cf07bc2fe0" value="PUMP_3" />
       <Data key="22863ebe-a37b-476f-b252-6e49a8c00b12" value="sda" />
       <Data key="68332f09-a954-46f1-95f1-a37dd5397c73" value="UART_PI_TX" />
       <Data key="1425177d-0d0e-4468-8bcc-e638e5509a9b" value="rx" />
       <Data key="a9ecba00-79d0-4858-8071-3c5b421c4cc0" value="UART_PI_RX" />
+      <Data key="da701001-e250-4797-8301-04a82e976a78" value="PUMP_2" />
       <Data key="e2da5a93-64a6-4603-a100-351feeb2bfe4" value="UART_USB_RX" />
       <Data key="e851a3b9-efb8-48be-bbb8-b303b216c393" value="LED_BUILTIN" />
       <Data key="ed092b9b-d398-4703-be89-cebf998501f6" value="tx" />
@@ -3360,6 +3366,21 @@
         <Data key="Port Format" value="12,0" />
       </Group>
     </Group>
+    <Group key="3d0e074c-6408-4389-94cf-17f55467850e">
+      <Group key="0">
+        <Data key="Port Format" value="15,0" />
+      </Group>
+    </Group>
+    <Group key="5be987b5-e556-4e41-b8bc-623874da6637">
+      <Group key="0">
+        <Data key="Port Format" value="15,5" />
+      </Group>
+    </Group>
+    <Group key="34e420e9-6f08-4846-9fd3-385bebfeeb65">
+      <Group key="0">
+        <Data key="Port Format" value="15,4" />
+      </Group>
+    </Group>
     <Group key="83fdbac2-2f0a-4969-aa39-2f98370edcf1">
       <Group key="0">
         <Data key="Port Format" value="12,7" />
@@ -3370,9 +3391,19 @@
         <Data key="Port Format" value="2,4" />
       </Group>
     </Group>
+    <Group key="223f956f-c3df-4881-bfa5-3a4fc48f5307">
+      <Group key="0">
+        <Data key="Port Format" value="15,3" />
+      </Group>
+    </Group>
     <Group key="790d54f8-a653-4cd7-8ee8-b60b0c43c8de">
       <Group key="0">
         <Data key="Port Format" value="2,6" />
+      </Group>
+    </Group>
+    <Group key="4693e54b-4418-4438-bd7a-f2cf07bc2fe0">
+      <Group key="0">
+        <Data key="Port Format" value="15,2" />
       </Group>
     </Group>
     <Group key="22863ebe-a37b-476f-b252-6e49a8c00b12">
@@ -3382,7 +3413,7 @@
     </Group>
     <Group key="68332f09-a954-46f1-95f1-a37dd5397c73">
       <Group key="0">
-        <Data key="Port Format" value="15,5" />
+        <Data key="Port Format" value="0,1" />
       </Group>
     </Group>
     <Group key="1425177d-0d0e-4468-8bcc-e638e5509a9b">
@@ -3392,12 +3423,22 @@
     </Group>
     <Group key="a9ecba00-79d0-4858-8071-3c5b421c4cc0">
       <Group key="0">
-        <Data key="Port Format" value="15,4" />
+        <Data key="Port Format" value="0,0" />
+      </Group>
+    </Group>
+    <Group key="da701001-e250-4797-8301-04a82e976a78">
+      <Group key="0">
+        <Data key="Port Format" value="15,1" />
       </Group>
     </Group>
     <Group key="e2da5a93-64a6-4603-a100-351feeb2bfe4">
       <Group key="0">
         <Data key="Port Format" value="12,6" />
+      </Group>
+    </Group>
+    <Group key="e851a3b9-efb8-48be-bbb8-b303b216c393">
+      <Group key="0">
+        <Data key="Port Format" value="2,1" />
       </Group>
     </Group>
     <Group key="ed092b9b-d398-4703-be89-cebf998501f6">
