@@ -292,7 +292,20 @@
 </userData>
 </CyGuid_fdba8dfd-b15b-4469-9bbb-9e40c3e70997>
 <Unloaded />
-<OpenDocs />
+<OpenDocs>
+<name v=".\PRJ3.cydsn\main.c" />
+<name v=".\PRJ3.cydsn\Pump.h" />
+<name v=".\PRJ3.cydsn\Pump.c" />
+<name v=".\PRJ3.cydsn\ColorSensor.c" />
+<name v=".\PRJ3.cydsn\PRJ3.cydwr" />
+</OpenDocs>
+<OpenDocsLayout><![CDATA[<?xml version="1.0"?><!--
+
+  Actipro Docking/MDI for WinForms
+  Copyright (c) 2001-2016 Actipro Software LLC.  All rights reserved.
+  http://www.actiprosoftware.com
+
+--><DocumentLayout Version="1.0"><LayoutData><TabbedMdiRootContainer Orientation="Horizontal"><TabbedMdiContainer Size="2297, 1223" SelectedTabbedMdiWindow="d4e77024-465d-4874-9386-dbe10c9a8ef3"><DocumentWindow Key="C:\Users\alexa\Documents\GitHub\Projekt-3\PSoC\PRJ3.cydsn\main.c" Guid="b15d538c-3b84-4f76-ad2f-35984ce254d4" /><DocumentWindow Key="C:\Users\alexa\Documents\GitHub\Projekt-3\PSoC\PRJ3.cydsn\Pump.h" Guid="19c83ea5-7736-4f56-9c4d-4d2d75a478fe" /><DocumentWindow Key="C:\Users\alexa\Documents\GitHub\Projekt-3\PSoC\PRJ3.cydsn\Pump.c" Guid="5c3b6fc0-8dea-40cf-8014-b15504625251" /><DocumentWindow Key="C:\Users\alexa\Documents\GitHub\Projekt-3\PSoC\PRJ3.cydsn\ColorSensor.c" Guid="8a27cccd-306e-41e5-8831-149e0a2ad941" /><DocumentWindow Key="C:\Users\alexa\Documents\GitHub\Projekt-3\PSoC\PRJ3.cydsn\PRJ3.cydwr" Guid="d4e77024-465d-4874-9386-dbe10c9a8ef3" /></TabbedMdiContainer></TabbedMdiRootContainer><FloatingContainers /></LayoutData></DocumentLayout>]]></OpenDocsLayout>
 <config v="" />
 <AutoUpdate v="true" />
 </CyGuid_843a90a4-0c4b-4e44-991d-05e7fb117a21>
