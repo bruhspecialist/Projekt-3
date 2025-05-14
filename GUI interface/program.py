@@ -54,26 +54,42 @@ label_right2.grid(row=1, column=1, padx=5, pady=5)
 
 
 # buttons left side (shot)
-button1 = ctk.CTkButton(root, text="Shots glass", width=200, height=100, font=("Arial", 24), command=lambda: updateWhenButtonPressed(button1,"30mL"))
+button1 = ctk.CTkButton(root, text="Shots size", width=200, height=100, font=("Arial", 24), 
+                        command=lambda: 
+                        [
+                            updateWhenButtonPressed(button1,"30mL"),
+                            UART.sendGlassSize("shot")
+                        ])
 button1.grid(row=0, column=0, padx=10, pady=10)
 buttons.append(button1)
 
 # buttons left side (mediom)
-button2 = ctk.CTkButton(root, text="lille størelse", width=200, height=100, font=("Arial", 24), command=lambda:  updateWhenButtonPressed(button2, "250mL"))
+button2 = ctk.CTkButton(root, text="Medium size", width=200, height=100, font=("Arial", 24), 
+                        command=lambda:
+                        [
+                            updateWhenButtonPressed(button2, "250mL"),
+                            UART.sendGlassSize("medium")
+                        ])
 button2.grid(row=1, column=0, padx=10, pady=10)
 buttons.append(button2)
 
 # buttons left side (large)
-button3 = ctk.CTkButton(root, text="normal størelse", width=200, height=100, font=("Arial", 24), command=lambda:  updateWhenButtonPressed(button3, "330mL"))
+button3 = ctk.CTkButton(root, text="Large size", width=200, height=100, font=("Arial", 24), 
+                        command=lambda:
+                        [
+                            updateWhenButtonPressed(button3, "330mL"),
+                            UART.sendGlassSize("large")
+                        ])
 button3.grid(row=2, column=0, padx=10, pady=10)
 buttons.append(button3)
 
 
 #buttons right side bottom
-button4 = ctk.CTkButton(root, text="Throw the dice!", width=300, height=175, font=("Arial", 24), command=lambda: 
+button4 = ctk.CTkButton(root, text="Throw the dice!", width=300, height=175, font=("Arial", 24), 
+                        command=lambda: 
                         [
                             updateWhenButtonPressed(button4,"Dice has\n been dropped!!"),
-                            testbuttonlight()
+                            UART.testbuttonlight()
                         ])
 
 button4.grid(row=3, column=1, padx=10, pady=10)
@@ -81,9 +97,8 @@ buttons.append(button4)
 
 
 
-# button4 to work with psoc
-def testbuttonlight():
-    UART.sendCommand("test1\n")  # Send string command to PSoC
+
+
 
 
 # Run the app
