@@ -13,7 +13,7 @@
 <v>Output</v>
 </TreeKeys>
 <TreeStates>
-<CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237 type_name="CyDesigner.Common.Base.Controls.CyTreeViewState" version="1" SelectedNodeId="">
+<CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237 type_name="CyDesigner.Common.Base.Controls.CyTreeViewState" version="1" SelectedNodeId="PSoC\PRJ3\Header Files\Motor.h">
 <ExpandedNodeIds>
 <v>PSoC</v>
 <v>PSoC\PRJ3</v>
@@ -37,6 +37,8 @@
 <v>PSoC\PRJ3\Source Files\ColorSensor.c</v>
 <v>PSoC\PRJ3\Source Files\main.c</v>
 <v>PSoC\PRJ3\Source Files\Motor.c</v>
+<v>PSoC\PRJ3\Generated_Source</v>
+<v>PSoC\PRJ3\Generated_Source\PSoC5</v>
 </ExpandedNodeIds>
 <VisibleNodeIds>
 <v>PSoC</v>
@@ -62,6 +64,43 @@
 <v>PSoC\PRJ3\Source Files\main.c</v>
 <v>PSoC\PRJ3\Source Files\Motor.c</v>
 <v>PSoC\PRJ3\Generated_Source</v>
+<v>PSoC\PRJ3\Generated_Source\PSoC5</v>
+<v>PSoC\PRJ3\Generated_Source\PSoC5\cy_boot</v>
+<v>PSoC\PRJ3\Generated_Source\PSoC5\Em_EEPROM_Dynamic</v>
+<v>PSoC\PRJ3\Generated_Source\PSoC5\I2C</v>
+<v>PSoC\PRJ3\Generated_Source\PSoC5\LED_BUILTIN</v>
+<v>PSoC\PRJ3\Generated_Source\PSoC5\scl</v>
+<v>PSoC\PRJ3\Generated_Source\PSoC5\sda</v>
+<v>PSoC\PRJ3\Generated_Source\PSoC5\STEP_1a</v>
+<v>PSoC\PRJ3\Generated_Source\PSoC5\STEP_1b</v>
+<v>PSoC\PRJ3\Generated_Source\PSoC5\STEP_2a</v>
+<v>PSoC\PRJ3\Generated_Source\PSoC5\STEP_2b</v>
+<v>PSoC\PRJ3\Generated_Source\PSoC5\UART_PI</v>
+<v>PSoC\PRJ3\Generated_Source\PSoC5\UART_PI_IntClock</v>
+<v>PSoC\PRJ3\Generated_Source\PSoC5\UART_PI_RX_ISR</v>
+<v>PSoC\PRJ3\Generated_Source\PSoC5\UART_USB</v>
+<v>PSoC\PRJ3\Generated_Source\PSoC5\UART_USB_IntClock</v>
+<v>PSoC\PRJ3\Generated_Source\PSoC5\UART_USB_RX_ISR</v>
+<v>PSoC\PRJ3\Generated_Source\PSoC5\cycodeshareexport.ld</v>
+<v>PSoC\PRJ3\Generated_Source\PSoC5\cycodeshareimport.ld</v>
+<v>PSoC\PRJ3\Generated_Source\PSoC5\cycodeshareimport.scat</v>
+<v>PSoC\PRJ3\Generated_Source\PSoC5\cydevice.h</v>
+<v>PSoC\PRJ3\Generated_Source\PSoC5\cydevice_trm.h</v>
+<v>PSoC\PRJ3\Generated_Source\PSoC5\cydevicegnu.inc</v>
+<v>PSoC\PRJ3\Generated_Source\PSoC5\cydevicegnu_trm.inc</v>
+<v>PSoC\PRJ3\Generated_Source\PSoC5\cydeviceiar.inc</v>
+<v>PSoC\PRJ3\Generated_Source\PSoC5\cydeviceiar_trm.inc</v>
+<v>PSoC\PRJ3\Generated_Source\PSoC5\cydevicerv.inc</v>
+<v>PSoC\PRJ3\Generated_Source\PSoC5\cydevicerv_trm.inc</v>
+<v>PSoC\PRJ3\Generated_Source\PSoC5\cydisabledsheets.h</v>
+<v>PSoC\PRJ3\Generated_Source\PSoC5\cyfitter.h</v>
+<v>PSoC\PRJ3\Generated_Source\PSoC5\cyfitter_cfg.c</v>
+<v>PSoC\PRJ3\Generated_Source\PSoC5\cyfitter_cfg.h</v>
+<v>PSoC\PRJ3\Generated_Source\PSoC5\cyfittergnu.inc</v>
+<v>PSoC\PRJ3\Generated_Source\PSoC5\cyfitteriar.inc</v>
+<v>PSoC\PRJ3\Generated_Source\PSoC5\cyfitterrv.inc</v>
+<v>PSoC\PRJ3\Generated_Source\PSoC5\cymetadata.c</v>
+<v>PSoC\PRJ3\Generated_Source\PSoC5\project.h</v>
 </VisibleNodeIds>
 </CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237>
 <CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237 type_name="CyDesigner.Common.Base.Controls.CyTreeViewState" version="1" SelectedNodeId="">
@@ -104,7 +143,7 @@
 <v>PSoC\PRJ3\CortexM3\ARM_GCC_541\Debug\Listing Files\I2C_MASTER.lst</v>
 <v>PSoC\PRJ3\CortexM3\ARM_GCC_541\Debug\Listing Files\I2C_PM.lst</v>
 <v>PSoC\PRJ3\CortexM3\ARM_GCC_541\Debug\Listing Files\I2C_SLAVE.lst</v>
-<v>PSoC\PRJ3\CortexM3\ARM_GCC_541\Debug\Listing Files\isr_uart_rx.lst</v>
+<v>PSoC\PRJ3\CortexM3\ARM_GCC_541\Debug\Listing Files\LED_BUILTIN.lst</v>
 <v>PSoC\PRJ3\CortexM3\ARM_GCC_541\Debug\Listing Files\main.lst</v>
 <v>PSoC\PRJ3\CortexM3\ARM_GCC_541\Debug\Listing Files\Motor.lst</v>
 <v>PSoC\PRJ3\CortexM3\ARM_GCC_541\Debug\Listing Files\scl.lst</v>
@@ -113,11 +152,18 @@
 <v>PSoC\PRJ3\CortexM3\ARM_GCC_541\Debug\Listing Files\STEP_1b.lst</v>
 <v>PSoC\PRJ3\CortexM3\ARM_GCC_541\Debug\Listing Files\STEP_2a.lst</v>
 <v>PSoC\PRJ3\CortexM3\ARM_GCC_541\Debug\Listing Files\STEP_2b.lst</v>
-<v>PSoC\PRJ3\CortexM3\ARM_GCC_541\Debug\Listing Files\UART.lst</v>
-<v>PSoC\PRJ3\CortexM3\ARM_GCC_541\Debug\Listing Files\UART_BOOT.lst</v>
-<v>PSoC\PRJ3\CortexM3\ARM_GCC_541\Debug\Listing Files\UART_INT.lst</v>
-<v>PSoC\PRJ3\CortexM3\ARM_GCC_541\Debug\Listing Files\UART_IntClock.lst</v>
-<v>PSoC\PRJ3\CortexM3\ARM_GCC_541\Debug\Listing Files\UART_PM.lst</v>
+<v>PSoC\PRJ3\CortexM3\ARM_GCC_541\Debug\Listing Files\UART_PI.lst</v>
+<v>PSoC\PRJ3\CortexM3\ARM_GCC_541\Debug\Listing Files\UART_PI_BOOT.lst</v>
+<v>PSoC\PRJ3\CortexM3\ARM_GCC_541\Debug\Listing Files\UART_PI_INT.lst</v>
+<v>PSoC\PRJ3\CortexM3\ARM_GCC_541\Debug\Listing Files\UART_PI_IntClock.lst</v>
+<v>PSoC\PRJ3\CortexM3\ARM_GCC_541\Debug\Listing Files\UART_PI_PM.lst</v>
+<v>PSoC\PRJ3\CortexM3\ARM_GCC_541\Debug\Listing Files\UART_PI_RX_ISR.lst</v>
+<v>PSoC\PRJ3\CortexM3\ARM_GCC_541\Debug\Listing Files\UART_USB.lst</v>
+<v>PSoC\PRJ3\CortexM3\ARM_GCC_541\Debug\Listing Files\UART_USB_BOOT.lst</v>
+<v>PSoC\PRJ3\CortexM3\ARM_GCC_541\Debug\Listing Files\UART_USB_INT.lst</v>
+<v>PSoC\PRJ3\CortexM3\ARM_GCC_541\Debug\Listing Files\UART_USB_IntClock.lst</v>
+<v>PSoC\PRJ3\CortexM3\ARM_GCC_541\Debug\Listing Files\UART_USB_PM.lst</v>
+<v>PSoC\PRJ3\CortexM3\ARM_GCC_541\Debug\Listing Files\UART_USB_RX_ISR.lst</v>
 <v>PSoC\PRJ3\CortexM3\ARM_GCC_541\Debug\PRJ3.elf</v>
 <v>PSoC\PRJ3\CortexM3\ARM_GCC_541\Debug\PRJ3.hex</v>
 <v>PSoC\PRJ3\CortexM3\ARM_GCC_541\Debug\PRJ3.map</v>
@@ -128,46 +174,6 @@
 <VisibleNodeIds>
 <v>PSoC</v>
 <v>PSoC\PRJ3</v>
-<v>PSoC\PRJ3\CortexM3</v>
-<v>PSoC\PRJ3\CortexM3\ARM_GCC_541</v>
-<v>PSoC\PRJ3\CortexM3\ARM_GCC_541\Debug</v>
-<v>PSoC\PRJ3\CortexM3\ARM_GCC_541\Debug\Listing Files</v>
-<v>PSoC\PRJ3\CortexM3\ARM_GCC_541\Debug\Listing Files\Cm3Start.lst</v>
-<v>PSoC\PRJ3\CortexM3\ARM_GCC_541\Debug\Listing Files\ColorSensor.lst</v>
-<v>PSoC\PRJ3\CortexM3\ARM_GCC_541\Debug\Listing Files\cy_em_eeprom.lst</v>
-<v>PSoC\PRJ3\CortexM3\ARM_GCC_541\Debug\Listing Files\CyBootAsmGnu.lst</v>
-<v>PSoC\PRJ3\CortexM3\ARM_GCC_541\Debug\Listing Files\CyDmac.lst</v>
-<v>PSoC\PRJ3\CortexM3\ARM_GCC_541\Debug\Listing Files\cyfitter_cfg.lst</v>
-<v>PSoC\PRJ3\CortexM3\ARM_GCC_541\Debug\Listing Files\CyFlash.lst</v>
-<v>PSoC\PRJ3\CortexM3\ARM_GCC_541\Debug\Listing Files\CyLib.lst</v>
-<v>PSoC\PRJ3\CortexM3\ARM_GCC_541\Debug\Listing Files\cymetadata.lst</v>
-<v>PSoC\PRJ3\CortexM3\ARM_GCC_541\Debug\Listing Files\cyPm.lst</v>
-<v>PSoC\PRJ3\CortexM3\ARM_GCC_541\Debug\Listing Files\CySpc.lst</v>
-<v>PSoC\PRJ3\CortexM3\ARM_GCC_541\Debug\Listing Files\cyutils.lst</v>
-<v>PSoC\PRJ3\CortexM3\ARM_GCC_541\Debug\Listing Files\I2C.lst</v>
-<v>PSoC\PRJ3\CortexM3\ARM_GCC_541\Debug\Listing Files\I2C_BOOT.lst</v>
-<v>PSoC\PRJ3\CortexM3\ARM_GCC_541\Debug\Listing Files\I2C_INT.lst</v>
-<v>PSoC\PRJ3\CortexM3\ARM_GCC_541\Debug\Listing Files\I2C_MASTER.lst</v>
-<v>PSoC\PRJ3\CortexM3\ARM_GCC_541\Debug\Listing Files\I2C_PM.lst</v>
-<v>PSoC\PRJ3\CortexM3\ARM_GCC_541\Debug\Listing Files\I2C_SLAVE.lst</v>
-<v>PSoC\PRJ3\CortexM3\ARM_GCC_541\Debug\Listing Files\isr_uart_rx.lst</v>
-<v>PSoC\PRJ3\CortexM3\ARM_GCC_541\Debug\Listing Files\main.lst</v>
-<v>PSoC\PRJ3\CortexM3\ARM_GCC_541\Debug\Listing Files\Motor.lst</v>
-<v>PSoC\PRJ3\CortexM3\ARM_GCC_541\Debug\Listing Files\scl.lst</v>
-<v>PSoC\PRJ3\CortexM3\ARM_GCC_541\Debug\Listing Files\sda.lst</v>
-<v>PSoC\PRJ3\CortexM3\ARM_GCC_541\Debug\Listing Files\STEP_1a.lst</v>
-<v>PSoC\PRJ3\CortexM3\ARM_GCC_541\Debug\Listing Files\STEP_1b.lst</v>
-<v>PSoC\PRJ3\CortexM3\ARM_GCC_541\Debug\Listing Files\STEP_2a.lst</v>
-<v>PSoC\PRJ3\CortexM3\ARM_GCC_541\Debug\Listing Files\STEP_2b.lst</v>
-<v>PSoC\PRJ3\CortexM3\ARM_GCC_541\Debug\Listing Files\UART.lst</v>
-<v>PSoC\PRJ3\CortexM3\ARM_GCC_541\Debug\Listing Files\UART_BOOT.lst</v>
-<v>PSoC\PRJ3\CortexM3\ARM_GCC_541\Debug\Listing Files\UART_INT.lst</v>
-<v>PSoC\PRJ3\CortexM3\ARM_GCC_541\Debug\Listing Files\UART_IntClock.lst</v>
-<v>PSoC\PRJ3\CortexM3\ARM_GCC_541\Debug\Listing Files\UART_PM.lst</v>
-<v>PSoC\PRJ3\CortexM3\ARM_GCC_541\Debug\PRJ3.elf</v>
-<v>PSoC\PRJ3\CortexM3\ARM_GCC_541\Debug\PRJ3.hex</v>
-<v>PSoC\PRJ3\CortexM3\ARM_GCC_541\Debug\PRJ3.map</v>
-<v>PSoC\PRJ3\PRJ3.gpdsc</v>
 <v>PSoC\PRJ3\PRJ3.rpt</v>
 <v>PSoC\PRJ3\PRJ3_timing.html</v>
 </VisibleNodeIds>
@@ -185,11 +191,13 @@
 <v>PSoC\PRJ3\CY8C58LP Family Datasheet</v>
 <v>PSoC\PRJ3\System Reference Guides</v>
 <v>PSoC\PRJ3\System Reference Guides\cy_boot_v6_0</v>
-<v>PSoC\PRJ3\cy_isr_v1_70.pdf</v>
+<v>PSoC\PRJ3\cy_isr_v1_70</v>
+<v>PSoC\PRJ3\cy_isr_v1_70\cy_isr_v1_70.pdf</v>
 <v>PSoC\PRJ3\cy_pins_v2_20</v>
 <v>PSoC\PRJ3\cy_pins_v2_20\cy_pins_v2_20.pdf</v>
 <v>PSoC\PRJ3\I2C_v3_50.pdf</v>
-<v>PSoC\PRJ3\UART_v2_50.pdf</v>
+<v>PSoC\PRJ3\UART_v2_50</v>
+<v>PSoC\PRJ3\UART_v2_50\UART_v2_50.pdf</v>
 </ExpandedNodeIds>
 <VisibleNodeIds>
 <v>PSoC</v>
@@ -198,11 +206,13 @@
 <v>PSoC\PRJ3\CY8C58LP Family Datasheet</v>
 <v>PSoC\PRJ3\System Reference Guides</v>
 <v>PSoC\PRJ3\System Reference Guides\cy_boot_v6_0</v>
-<v>PSoC\PRJ3\cy_isr_v1_70.pdf</v>
+<v>PSoC\PRJ3\cy_isr_v1_70</v>
+<v>PSoC\PRJ3\cy_isr_v1_70\cy_isr_v1_70.pdf</v>
 <v>PSoC\PRJ3\cy_pins_v2_20</v>
 <v>PSoC\PRJ3\cy_pins_v2_20\cy_pins_v2_20.pdf</v>
 <v>PSoC\PRJ3\I2C_v3_50.pdf</v>
-<v>PSoC\PRJ3\UART_v2_50.pdf</v>
+<v>PSoC\PRJ3\UART_v2_50</v>
+<v>PSoC\PRJ3\UART_v2_50\UART_v2_50.pdf</v>
 </VisibleNodeIds>
 </CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237>
 </TreeStatesV2>
@@ -211,18 +221,7 @@
 </userData>
 </CyGuid_fdba8dfd-b15b-4469-9bbb-9e40c3e70997>
 <Unloaded />
-<OpenDocs>
-<name v=".\PRJ3.cydsn\main.c" />
-<name v=".\PRJ3.cydsn\Motor.h" />
-<name v=".\PRJ3.cydsn\Motor.c" />
-</OpenDocs>
-<OpenDocsLayout><![CDATA[<?xml version="1.0"?><!--
-
-  Actipro Docking/MDI for WinForms
-  Copyright (c) 2001-2016 Actipro Software LLC.  All rights reserved.
-  http://www.actiprosoftware.com
-
---><DocumentLayout Version="1.0"><LayoutData><TabbedMdiRootContainer Orientation="Horizontal"><TabbedMdiContainer Size="1623, 605" SelectedTabbedMdiWindow="b11fcfa5-e53b-4b6e-8a53-3df0d28b5a0d"><DocumentWindow Key="C:\Users\alexa\Documents\GitHub\Projekt-3\PSoC\PRJ3.cydsn\main.c" Guid="b11fcfa5-e53b-4b6e-8a53-3df0d28b5a0d" /><DocumentWindow Key="C:\Users\alexa\Documents\GitHub\Projekt-3\PSoC\PRJ3.cydsn\Motor.h" Guid="5d73ad77-5b0c-45fe-9655-603c49b4020e" /><DocumentWindow Key="C:\Users\alexa\Documents\GitHub\Projekt-3\PSoC\PRJ3.cydsn\Motor.c" Guid="f14b476e-74cd-4401-8479-59df0d4b37ae" /></TabbedMdiContainer></TabbedMdiRootContainer><FloatingContainers /></LayoutData></DocumentLayout>]]></OpenDocsLayout>
+<OpenDocs />
 <config v="" />
 <AutoUpdate v="true" />
 </CyGuid_843a90a4-0c4b-4e44-991d-05e7fb117a21>

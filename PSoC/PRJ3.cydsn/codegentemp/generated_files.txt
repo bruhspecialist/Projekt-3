@@ -18,13 +18,6 @@
   <file name="C:\Users\alexa\Documents\GitHub\Projekt-3\PSoC\PRJ3.cydsn\codegentemp\cyfitteriar.inc" value="HEADER;;;;;" />
   <file name="C:\Users\alexa\Documents\GitHub\Projekt-3\PSoC\PRJ3.cydsn\codegentemp\cyfitter.h" value="HEADER;;;;;" />
   <file name="C:\Users\alexa\Documents\GitHub\Projekt-3\PSoC\PRJ3.cydsn\codegentemp\cydisabledsheets.h" value="HEADER;;;;;" />
-  <file name="C:\Users\alexa\Documents\GitHub\Projekt-3\PSoC\PRJ3.cydsn\codegentemp\UART.c" value="SOURCE_C;CortexM3;;;;UART" />
-  <file name="C:\Users\alexa\Documents\GitHub\Projekt-3\PSoC\PRJ3.cydsn\codegentemp\UART.h" value="HEADER;;;;;UART" />
-  <file name="C:\Users\alexa\Documents\GitHub\Projekt-3\PSoC\PRJ3.cydsn\codegentemp\UART_PM.c" value="SOURCE_C;CortexM3;;;;UART" />
-  <file name="C:\Users\alexa\Documents\GitHub\Projekt-3\PSoC\PRJ3.cydsn\codegentemp\UART_INT.c" value="SOURCE_C;CortexM3;;;;UART" />
-  <file name="C:\Users\alexa\Documents\GitHub\Projekt-3\PSoC\PRJ3.cydsn\codegentemp\UART_BOOT.c" value="SOURCE_C;CortexM3;;;;UART" />
-  <file name="C:\Users\alexa\Documents\GitHub\Projekt-3\PSoC\PRJ3.cydsn\codegentemp\isr_uart_rx.c" value="SOURCE_C;CortexM3;;;;isr_uart_rx" />
-  <file name="C:\Users\alexa\Documents\GitHub\Projekt-3\PSoC\PRJ3.cydsn\codegentemp\isr_uart_rx.h" value="HEADER;;;;;isr_uart_rx" />
   <file name="C:\Users\alexa\Documents\GitHub\Projekt-3\PSoC\PRJ3.cydsn\codegentemp\sda_aliases.h" value="HEADER;;;;;sda" />
   <file name="C:\Users\alexa\Documents\GitHub\Projekt-3\PSoC\PRJ3.cydsn\codegentemp\sda.c" value="SOURCE_C;CortexM3;;;;sda" />
   <file name="C:\Users\alexa\Documents\GitHub\Projekt-3\PSoC\PRJ3.cydsn\codegentemp\sda.h" value="HEADER;;;;;sda" />
@@ -51,8 +44,27 @@
   <file name="C:\Users\alexa\Documents\GitHub\Projekt-3\PSoC\PRJ3.cydsn\codegentemp\STEP_2b_aliases.h" value="HEADER;;;;;STEP_2b" />
   <file name="C:\Users\alexa\Documents\GitHub\Projekt-3\PSoC\PRJ3.cydsn\codegentemp\STEP_2b.c" value="SOURCE_C;CortexM3;;;;STEP_2b" />
   <file name="C:\Users\alexa\Documents\GitHub\Projekt-3\PSoC\PRJ3.cydsn\codegentemp\STEP_2b.h" value="HEADER;;;;;STEP_2b" />
-  <file name="C:\Users\alexa\Documents\GitHub\Projekt-3\PSoC\PRJ3.cydsn\codegentemp\UART_IntClock.c" value="SOURCE_C;CortexM3;;;;UART_IntClock" />
-  <file name="C:\Users\alexa\Documents\GitHub\Projekt-3\PSoC\PRJ3.cydsn\codegentemp\UART_IntClock.h" value="HEADER;;;;;UART_IntClock" />
+  <file name="C:\Users\alexa\Documents\GitHub\Projekt-3\PSoC\PRJ3.cydsn\codegentemp\UART_USB.c" value="SOURCE_C;CortexM3;;;;UART_USB" />
+  <file name="C:\Users\alexa\Documents\GitHub\Projekt-3\PSoC\PRJ3.cydsn\codegentemp\UART_USB.h" value="HEADER;;;;;UART_USB" />
+  <file name="C:\Users\alexa\Documents\GitHub\Projekt-3\PSoC\PRJ3.cydsn\codegentemp\UART_USB_PM.c" value="SOURCE_C;CortexM3;;;;UART_USB" />
+  <file name="C:\Users\alexa\Documents\GitHub\Projekt-3\PSoC\PRJ3.cydsn\codegentemp\UART_USB_INT.c" value="SOURCE_C;CortexM3;;;;UART_USB" />
+  <file name="C:\Users\alexa\Documents\GitHub\Projekt-3\PSoC\PRJ3.cydsn\codegentemp\UART_USB_BOOT.c" value="SOURCE_C;CortexM3;;;;UART_USB" />
+  <file name="C:\Users\alexa\Documents\GitHub\Projekt-3\PSoC\PRJ3.cydsn\codegentemp\UART_USB_RX_ISR.c" value="SOURCE_C;CortexM3;;;;UART_USB_RX_ISR" />
+  <file name="C:\Users\alexa\Documents\GitHub\Projekt-3\PSoC\PRJ3.cydsn\codegentemp\UART_USB_RX_ISR.h" value="HEADER;;;;;UART_USB_RX_ISR" />
+  <file name="C:\Users\alexa\Documents\GitHub\Projekt-3\PSoC\PRJ3.cydsn\codegentemp\LED_BUILTIN_aliases.h" value="HEADER;;;;;LED_BUILTIN" />
+  <file name="C:\Users\alexa\Documents\GitHub\Projekt-3\PSoC\PRJ3.cydsn\codegentemp\LED_BUILTIN.c" value="SOURCE_C;CortexM3;;;;LED_BUILTIN" />
+  <file name="C:\Users\alexa\Documents\GitHub\Projekt-3\PSoC\PRJ3.cydsn\codegentemp\LED_BUILTIN.h" value="HEADER;;;;;LED_BUILTIN" />
+  <file name="C:\Users\alexa\Documents\GitHub\Projekt-3\PSoC\PRJ3.cydsn\codegentemp\UART_PI.c" value="SOURCE_C;CortexM3;;;;UART_PI" />
+  <file name="C:\Users\alexa\Documents\GitHub\Projekt-3\PSoC\PRJ3.cydsn\codegentemp\UART_PI.h" value="HEADER;;;;;UART_PI" />
+  <file name="C:\Users\alexa\Documents\GitHub\Projekt-3\PSoC\PRJ3.cydsn\codegentemp\UART_PI_PM.c" value="SOURCE_C;CortexM3;;;;UART_PI" />
+  <file name="C:\Users\alexa\Documents\GitHub\Projekt-3\PSoC\PRJ3.cydsn\codegentemp\UART_PI_INT.c" value="SOURCE_C;CortexM3;;;;UART_PI" />
+  <file name="C:\Users\alexa\Documents\GitHub\Projekt-3\PSoC\PRJ3.cydsn\codegentemp\UART_PI_BOOT.c" value="SOURCE_C;CortexM3;;;;UART_PI" />
+  <file name="C:\Users\alexa\Documents\GitHub\Projekt-3\PSoC\PRJ3.cydsn\codegentemp\UART_PI_RX_ISR.c" value="SOURCE_C;CortexM3;;;;UART_PI_RX_ISR" />
+  <file name="C:\Users\alexa\Documents\GitHub\Projekt-3\PSoC\PRJ3.cydsn\codegentemp\UART_PI_RX_ISR.h" value="HEADER;;;;;UART_PI_RX_ISR" />
+  <file name="C:\Users\alexa\Documents\GitHub\Projekt-3\PSoC\PRJ3.cydsn\codegentemp\UART_USB_IntClock.c" value="SOURCE_C;CortexM3;;;;UART_USB_IntClock" />
+  <file name="C:\Users\alexa\Documents\GitHub\Projekt-3\PSoC\PRJ3.cydsn\codegentemp\UART_USB_IntClock.h" value="HEADER;;;;;UART_USB_IntClock" />
+  <file name="C:\Users\alexa\Documents\GitHub\Projekt-3\PSoC\PRJ3.cydsn\codegentemp\UART_PI_IntClock.c" value="SOURCE_C;CortexM3;;;;UART_PI_IntClock" />
+  <file name="C:\Users\alexa\Documents\GitHub\Projekt-3\PSoC\PRJ3.cydsn\codegentemp\UART_PI_IntClock.h" value="HEADER;;;;;UART_PI_IntClock" />
   <file name="C:\Users\alexa\Documents\GitHub\Projekt-3\PSoC\PRJ3.cydsn\codegentemp\cm3gcc.ld" value="LINKER_SCRIPT;;;b98f980c-3bd1-4fc7-a887-c56a20a46fdd;;cy_boot" />
   <file name="C:\Users\alexa\Documents\GitHub\Projekt-3\PSoC\PRJ3.cydsn\codegentemp\Cm3RealView.scat" value="LINKER_SCRIPT;;;fdb8e1ae-f83a-46cf-9446-1d703716f38a;;cy_boot" />
   <file name="C:\Users\alexa\Documents\GitHub\Projekt-3\PSoC\PRJ3.cydsn\codegentemp\Cm3Start.c" value="SOURCE_C;CortexM3;;;;cy_boot" />
