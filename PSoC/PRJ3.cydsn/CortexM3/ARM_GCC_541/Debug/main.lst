@@ -1,4 +1,4 @@
-ARM GAS  C:\Users\alexa\AppData\Local\Temp\cciAHySg.s 			page 1
+ARM GAS  C:\Users\alexa\AppData\Local\Temp\ccBS3NZa.s 			page 1
 
 
    1              		.syntax unified
@@ -58,7 +58,7 @@ ARM GAS  C:\Users\alexa\AppData\Local\Temp\cciAHySg.s 			page 1
   11:ErrorMessage.h ****         case (-2) : return "Failed to read Color Sensor";
   12:ErrorMessage.h ****     }
   13:ErrorMessage.h ****     return "Unknown error";
-ARM GAS  C:\Users\alexa\AppData\Local\Temp\cciAHySg.s 			page 2
+ARM GAS  C:\Users\alexa\AppData\Local\Temp\ccBS3NZa.s 			page 2
 
 
   45              		.loc 1 13 0
@@ -118,7 +118,7 @@ ARM GAS  C:\Users\alexa\AppData\Local\Temp\cciAHySg.s 			page 1
   93              	.LVL10:
   19:ErrorMessage.h ****     UART_USB_PutString("\r\n");
   94              		.loc 1 19 0
-ARM GAS  C:\Users\alexa\AppData\Local\Temp\cciAHySg.s 			page 3
+ARM GAS  C:\Users\alexa\AppData\Local\Temp\ccBS3NZa.s 			page 3
 
 
   95 0014 0248     		ldr	r0, .L11+4
@@ -178,7 +178,7 @@ ARM GAS  C:\Users\alexa\AppData\Local\Temp\cciAHySg.s 			page 1
  137 0016 0648     		ldr	r0, .L17
  138 0018 FFF7FEFF 		bl	UART_USB_PutString
  139              	.LVL14:
-ARM GAS  C:\Users\alexa\AppData\Local\Temp\cciAHySg.s 			page 4
+ARM GAS  C:\Users\alexa\AppData\Local\Temp\ccBS3NZa.s 			page 4
 
 
   13:TempTests.h   ****         UART_USB_PutString(color);
@@ -238,7 +238,7 @@ ARM GAS  C:\Users\alexa\AppData\Local\Temp\cciAHySg.s 			page 1
  178              		.cfi_offset 14, -4
  179              	.LVL17:
   13:main.c        ****     int8_t err = 0;
-ARM GAS  C:\Users\alexa\AppData\Local\Temp\cciAHySg.s 			page 5
+ARM GAS  C:\Users\alexa\AppData\Local\Temp\ccBS3NZa.s 			page 5
 
 
   14:main.c        ****     CyGlobalIntEnable;
@@ -298,7 +298,7 @@ ARM GAS  C:\Users\alexa\AppData\Local\Temp\cciAHySg.s 			page 1
   22:main.c        ****     CyDelay(100);
  225              		.loc 3 22 0
  226 0006 6420     		movs	r0, #100
-ARM GAS  C:\Users\alexa\AppData\Local\Temp\cciAHySg.s 			page 6
+ARM GAS  C:\Users\alexa\AppData\Local\Temp\ccBS3NZa.s 			page 6
 
 
  227 0008 FFF7FEFF 		bl	CyDelay
@@ -330,7 +330,7 @@ ARM GAS  C:\Users\alexa\AppData\Local\Temp\cciAHySg.s 			page 1
  249              		.loc 3 26 0
  250 0002 FFF7FEFF 		bl	setup
  251              	.LVL23:
-  27:main.c        ****     if (err != 0) {PrintError(err); return -1;}
+  27:main.c        ****     if (err != 0) {PrintError(err); return -1;} // Stop hvis setup fejler
  252              		.loc 3 27 0
  253 0006 10B9     		cbnz	r0, .L28
  254              	.LVL24:
@@ -342,7 +342,7 @@ ARM GAS  C:\Users\alexa\AppData\Local\Temp\cciAHySg.s 			page 1
  259 000c FCE7     		b	.L26
  260              	.LVL26:
  261              	.L28:
-  27:main.c        ****     if (err != 0) {PrintError(err); return -1;}
+  27:main.c        ****     if (err != 0) {PrintError(err); return -1;} // Stop hvis setup fejler
  262              		.loc 3 27 0 discriminator 1
  263 000e FFF7FEFF 		bl	PrintError
  264              	.LVL27:
@@ -358,7 +358,7 @@ ARM GAS  C:\Users\alexa\AppData\Local\Temp\cciAHySg.s 			page 1
  273              	.LC0:
  274 0000 4661696C 		.ascii	"Failed to initialize Color Sensor\000"
  274      65642074 
-ARM GAS  C:\Users\alexa\AppData\Local\Temp\cciAHySg.s 			page 7
+ARM GAS  C:\Users\alexa\AppData\Local\Temp\ccBS3NZa.s 			page 7
 
 
  274      6F20696E 
@@ -418,7 +418,7 @@ ARM GAS  C:\Users\alexa\AppData\Local\Temp\cciAHySg.s 			page 1
  314 002b 1B       		.byte	0x1b
  315 002c 30000000 		.4byte	0x30
  316 0030 03       		.uleb128 0x3
-ARM GAS  C:\Users\alexa\AppData\Local\Temp\cciAHySg.s 			page 8
+ARM GAS  C:\Users\alexa\AppData\Local\Temp\ccBS3NZa.s 			page 8
 
 
  317 0031 01       		.byte	0x1
@@ -478,7 +478,7 @@ ARM GAS  C:\Users\alexa\AppData\Local\Temp\cciAHySg.s 			page 1
  371 0097 03       		.uleb128 0x3
  372 0098 04       		.byte	0x4
  373 0099 04       		.byte	0x4
-ARM GAS  C:\Users\alexa\AppData\Local\Temp\cciAHySg.s 			page 9
+ARM GAS  C:\Users\alexa\AppData\Local\Temp\ccBS3NZa.s 			page 9
 
 
  374 009a 87000000 		.4byte	.LASF13
@@ -538,7 +538,7 @@ ARM GAS  C:\Users\alexa\AppData\Local\Temp\cciAHySg.s 			page 1
  428 0112 0A       		.uleb128 0xa
  429 0113 0A000000 		.4byte	.LVL8
  430 0117 98020000 		.4byte	0x298
-ARM GAS  C:\Users\alexa\AppData\Local\Temp\cciAHySg.s 			page 10
+ARM GAS  C:\Users\alexa\AppData\Local\Temp\ccBS3NZa.s 			page 10
 
 
  431 011b 29010000 		.4byte	0x129
@@ -598,7 +598,7 @@ ARM GAS  C:\Users\alexa\AppData\Local\Temp\cciAHySg.s 			page 1
  485 018a 0B       		.uleb128 0xb
  486 018b 01       		.uleb128 0x1
  487 018c 50       		.byte	0x50
-ARM GAS  C:\Users\alexa\AppData\Local\Temp\cciAHySg.s 			page 11
+ARM GAS  C:\Users\alexa\AppData\Local\Temp\ccBS3NZa.s 			page 11
 
 
  488 018d 02       		.uleb128 0x2
@@ -658,7 +658,7 @@ ARM GAS  C:\Users\alexa\AppData\Local\Temp\cciAHySg.s 			page 1
  542 01f9 81000000 		.4byte	0x81
  543 01fd 74000000 		.4byte	.LLST2
  544 0201 0C       		.uleb128 0xc
-ARM GAS  C:\Users\alexa\AppData\Local\Temp\cciAHySg.s 			page 12
+ARM GAS  C:\Users\alexa\AppData\Local\Temp\ccBS3NZa.s 			page 12
 
 
  545 0202 08000000 		.4byte	.LVL18
@@ -718,7 +718,7 @@ ARM GAS  C:\Users\alexa\AppData\Local\Temp\cciAHySg.s 			page 1
  599 0286 00       		.byte	0
  600 0287 12       		.uleb128 0x12
  601 0288 5F010000 		.4byte	.LASF34
-ARM GAS  C:\Users\alexa\AppData\Local\Temp\cciAHySg.s 			page 13
+ARM GAS  C:\Users\alexa\AppData\Local\Temp\ccBS3NZa.s 			page 13
 
 
  602 028c 0A       		.byte	0xa
@@ -778,7 +778,7 @@ ARM GAS  C:\Users\alexa\AppData\Local\Temp\cciAHySg.s 			page 1
  656 0015 00       		.byte	0
  657 0016 03       		.uleb128 0x3
  658 0017 0E       		.uleb128 0xe
-ARM GAS  C:\Users\alexa\AppData\Local\Temp\cciAHySg.s 			page 14
+ARM GAS  C:\Users\alexa\AppData\Local\Temp\ccBS3NZa.s 			page 14
 
 
  659 0018 3A       		.uleb128 0x3a
@@ -838,7 +838,7 @@ ARM GAS  C:\Users\alexa\AppData\Local\Temp\cciAHySg.s 			page 1
  713 004e 0B       		.uleb128 0xb
  714 004f 3B       		.uleb128 0x3b
  715 0050 0B       		.uleb128 0xb
-ARM GAS  C:\Users\alexa\AppData\Local\Temp\cciAHySg.s 			page 15
+ARM GAS  C:\Users\alexa\AppData\Local\Temp\ccBS3NZa.s 			page 15
 
 
  716 0051 27       		.uleb128 0x27
@@ -898,7 +898,7 @@ ARM GAS  C:\Users\alexa\AppData\Local\Temp\cciAHySg.s 			page 1
  770 0089 00       		.byte	0
  771 008a 00       		.byte	0
  772 008b 0A       		.uleb128 0xa
-ARM GAS  C:\Users\alexa\AppData\Local\Temp\cciAHySg.s 			page 16
+ARM GAS  C:\Users\alexa\AppData\Local\Temp\ccBS3NZa.s 			page 16
 
 
  773 008c 898201   		.uleb128 0x4109
@@ -958,7 +958,7 @@ ARM GAS  C:\Users\alexa\AppData\Local\Temp\cciAHySg.s 			page 1
  827 00cb 9742     		.uleb128 0x2117
  828 00cd 19       		.uleb128 0x19
  829 00ce 01       		.uleb128 0x1
-ARM GAS  C:\Users\alexa\AppData\Local\Temp\cciAHySg.s 			page 17
+ARM GAS  C:\Users\alexa\AppData\Local\Temp\ccBS3NZa.s 			page 17
 
 
  830 00cf 13       		.uleb128 0x13
@@ -1018,7 +1018,7 @@ ARM GAS  C:\Users\alexa\AppData\Local\Temp\cciAHySg.s 			page 1
  884 0106 02       		.uleb128 0x2
  885 0107 17       		.uleb128 0x17
  886 0108 00       		.byte	0
-ARM GAS  C:\Users\alexa\AppData\Local\Temp\cciAHySg.s 			page 18
+ARM GAS  C:\Users\alexa\AppData\Local\Temp\ccBS3NZa.s 			page 18
 
 
  887 0109 00       		.byte	0
@@ -1078,7 +1078,7 @@ ARM GAS  C:\Users\alexa\AppData\Local\Temp\cciAHySg.s 			page 1
  941 0016 01       		.uleb128 0x1
  942 0017 50       		.byte	0x50
  943 0018 9F       		.byte	0x9f
-ARM GAS  C:\Users\alexa\AppData\Local\Temp\cciAHySg.s 			page 19
+ARM GAS  C:\Users\alexa\AppData\Local\Temp\ccBS3NZa.s 			page 19
 
 
  944 0019 10000000 		.4byte	.LVL2
@@ -1138,7 +1138,7 @@ ARM GAS  C:\Users\alexa\AppData\Local\Temp\cciAHySg.s 			page 1
  998 009d 50       		.byte	0x50
  999 009e 0E000000 		.4byte	.LVL26
  1000 00a2 11000000 		.4byte	.LVL27-1
-ARM GAS  C:\Users\alexa\AppData\Local\Temp\cciAHySg.s 			page 20
+ARM GAS  C:\Users\alexa\AppData\Local\Temp\ccBS3NZa.s 			page 20
 
 
  1001 00a6 0100     		.2byte	0x1
@@ -1198,7 +1198,7 @@ ARM GAS  C:\Users\alexa\AppData\Local\Temp\cciAHySg.s 			page 1
  1049 000b 5F5F696E 		.ascii	"__int8_t\000"
  1049      74385F74 
  1049      00
-ARM GAS  C:\Users\alexa\AppData\Local\Temp\cciAHySg.s 			page 21
+ARM GAS  C:\Users\alexa\AppData\Local\Temp\ccBS3NZa.s 			page 21
 
 
  1050              	.LASF20:
@@ -1258,7 +1258,7 @@ ARM GAS  C:\Users\alexa\AppData\Local\Temp\cciAHySg.s 			page 1
  1072      74696F6E 
  1072      2D736563 
  1072      74696F6E 
-ARM GAS  C:\Users\alexa\AppData\Local\Temp\cciAHySg.s 			page 22
+ARM GAS  C:\Users\alexa\AppData\Local\Temp\ccBS3NZa.s 			page 22
 
 
  1073              	.LASF7:
@@ -1318,7 +1318,7 @@ ARM GAS  C:\Users\alexa\AppData\Local\Temp\cciAHySg.s 			page 1
  1096      5F555342 
  1096      5F507574 
  1096      53747269 
-ARM GAS  C:\Users\alexa\AppData\Local\Temp\cciAHySg.s 			page 23
+ARM GAS  C:\Users\alexa\AppData\Local\Temp\ccBS3NZa.s 			page 23
 
 
  1096      6E6700
