@@ -1,6 +1,10 @@
 #include "project.h"
 #include "Motor.h"
 
+#include <stdio.h>
+#include <stdbool.h>
+#include <stdlib.h>
+
 const uint8_t FULL_DRIVE_SEQUENCE[4][4] = {
     {1, 1, 0, 0},
     {0, 1, 1, 0},

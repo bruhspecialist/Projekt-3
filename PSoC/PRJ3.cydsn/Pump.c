@@ -1,44 +1,20 @@
 #include "project.h"
 #include "Pump.h"
 
-void Pump(int color)
+void Pump(uint8_t color)
 {
-    if (color >= 1 && color <= 6)
-    {
-        switch(color)
-        {
-            case 1:
-                PUMP_1_Write(1);
-                CyDelay(5000);
-                PUMP_1_Write(0);
-                break;
-            case 2:
-                PUMP_2_Write(1);
-                CyDelay(5000);
-                PUMP_2_Write(0);
-                break;
-            case 3:
-                PUMP_3_Write(1);
-                CyDelay(5000);
-                PUMP_3_Write(0);
-                break;
-            case 4:
-                PUMP_4_Write(1);
-                CyDelay(5000);
-                PUMP_4_Write(0);
-                break;
-            case 5:
-                PUMP_5_Write(1);
-                CyDelay(5000);
-                PUMP_5_Write(0);
-                break;
-            case 6:
-                PUMP_6_Write(1);
-                CyDelay(5000);
-                PUMP_6_Write(0);
-                break;
-        }
+    if (color < 1 || color > 6) return; // Ugyldig farve-tal --> Returnér
 
+    void (*pumpWrite[])(uint8_t) = {
+        PUMP_1_Write,
+        PUMP_2_Write,
+        PUMP_3_Write,
+        PUMP_4_Write,
+        PUMP_5_Write,
+        PUMP_6_Write
+    };
 
-    }
+    pumpWrite[color - 1](1); // Tænd pumpen
+    CyDelay(5000);
+    pumpWrite[color - 1](0); // Sluk pumpen
 }

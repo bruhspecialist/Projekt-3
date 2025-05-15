@@ -1,3 +1,5 @@
 #pragma once
 
-void Pump(int color);
+#include <stdint.h>
+
+void Pump(uint8_t color);

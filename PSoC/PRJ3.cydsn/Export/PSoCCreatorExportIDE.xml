@@ -40,11 +40,15 @@
           <File BuildType="BUILD" Toolchain="">ColorSensor.c</File>
           <File BuildType="BUILD" Toolchain="">Motor.c</File>
           <File BuildType="BUILD" Toolchain="">Pump.c</File>
+          <File BuildType="BUILD" Toolchain="">UART.c</File>
           <File BuildType="BUILD" Toolchain="">cyapicallbacks.h</File>
           <File BuildType="BUILD" Toolchain="">StringToInteger.h</File>
           <File BuildType="BUILD" Toolchain="">ColorSensor.h</File>
           <File BuildType="BUILD" Toolchain="">Motor.h</File>
           <File BuildType="BUILD" Toolchain="">Pump.h</File>
+          <File BuildType="BUILD" Toolchain="">UART.h</File>
+          <File BuildType="BUILD" Toolchain="">ErrorMessage.h</File>
+          <File BuildType="BUILD" Toolchain="">TempTests.h</File>
         </Files>
       </Folder>
       <Folder BuildType="STRICT" Path="C:\Users\alexa\Documents\GitHub\Projekt-3\PSoC\PRJ3.cydsn\Generated_Source\PSoC5">

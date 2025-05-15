@@ -1,41 +1,45 @@
+#include "project.h"
 #include "ColorSensor.h"
 
-const uint16_t rgb_ref[3] = {17506, 17156, 15056}; // Med udgangspunkt i hvid skærm fra iPhone 15 Pro
-const uint8_t address = 0x39;
+#include <stdio.h>
+#include <stdlib.h>
+#include <stdint.h>
 
-void TCS37073M_ReadRegister(uint8_t REG, uint8_t dataBytes, uint8_t* bytes)
+const uint16_t rgb_ref[3] = {R_REF, G_REF, B_REF}; // Med udgangspunkt i hvid skærm fra iPhone 15 Pro
+
+bool ReadRegister(uint8_t REG, uint8_t dataBytes, uint8_t* bytes)
 {
-    I2C_MasterSendStart(address, 0);
-    I2C_MasterWriteByte(REG); // Register at starte aflæsning ved
-    I2C_MasterSendRestart(address, 1);
+    if (I2C_MasterSendStart(ADDRESS, 0)   != I2C_MSTR_NO_ERROR) return false;
+    if (I2C_MasterWriteByte(REG)          != I2C_MSTR_NO_ERROR) return false;
+    if (I2C_MasterSendRestart(ADDRESS, 1) != I2C_MSTR_NO_ERROR) return false;
     for (uint8_t i = 0; i < dataBytes; ++i) { // Loop for hver efterfølgende byte der skal læses
         bool isLastByte = (i == dataBytes - 1); // Sikrer NACK ved sidste byte, i stedet for ACK
         bytes[i] = I2C_MasterReadByte(isLastByte?I2C_NAK_DATA:I2C_ACK_DATA);
     }
     I2C_MasterSendStop();
+    return true;
 }
 
-void TCS37073M_WriteRegister(uint8_t REG, uint8_t data)
+bool WriteRegister(uint8_t REG, uint8_t data)
 {
-    I2C_MasterSendStart(address, 0);
-    I2C_MasterWriteByte(REG);
-    I2C_MasterWriteByte(data);
+    if (I2C_MasterSendStart(ADDRESS, 0) != I2C_MSTR_NO_ERROR) return false;
+    if (I2C_MasterWriteByte(REG)        != I2C_MSTR_NO_ERROR) return false;
+    if (I2C_MasterWriteByte(data)       != I2C_MSTR_NO_ERROR) return false;
     I2C_MasterSendStop();
+    return true;
 }
 
-void TCS37073M_ReadColorData(uint16_t* rgbData) {
+bool ReadColorDataRegisters(uint16_t* rgbData) {
     uint8_t dataBytes = DATA_REG_END_ADDR - DATA_REG_START_ADDR; // Antal af bytes at læse i ALS data registre
     uint8_t data[dataBytes];
     
-    TCS37073M_ReadRegister(DATA_REG_START_ADDR, dataBytes, data);
+    if (!ReadRegister(DATA_REG_START_ADDR, dataBytes, data)) return false;
     
-    uint16_t red = (data[3] << 8) + data[2];    // Rød (0x97 - 0x98)
-    uint16_t green = (data[5] << 8) + data[4];  // Grøn (0x99 - 0x9A)
-    uint16_t blue = (data[7] << 8) + data[6];   // Blå (0x9B - 0x9C)
+    rgbData[0] = (data[3] << 8) | data[2];    // Rød (0x97 - 0x98)
+    rgbData[1] = (data[5] << 8) | data[4];  // Grøn (0x99 - 0x9A)
+    rgbData[2] = (data[7] << 8) | data[6];   // Blå (0x9B - 0x9C)
     
-    rgbData[0] = red;
-    rgbData[1] = green;
-    rgbData[2] = blue;
+    return true;
 }
 
 uint16_t FindMaxColor(const uint16_t rgb[3]) {
@@ -46,7 +50,6 @@ uint16_t FindMaxColor(const uint16_t rgb[3]) {
 void CalibrateColor(const uint16_t *rgb, uint16_t *rgbNorm) {
     uint16_t maxRef = FindMaxColor(rgb_ref);
     for (uint8_t i = 0; i < 3; ++i) {
-        //rgbNorm[i] = (rgb[i] * maxRef) / rgb_ref[i];
         uint32_t norm = ((uint32_t)rgb[i] * maxRef) / rgb_ref[i];
         rgbNorm[i] = (norm > MAX_VALUE) ? MAX_VALUE : norm;
     }
@@ -65,20 +68,21 @@ const char* DetectColor(const uint16_t* rgb) {
     return "blue";
 }
 
-const char* TCS37073M_Read() {
+bool TCS37073M_Read(const char** color) {
     uint16_t rgbData[3];
     uint16_t rgbNorm[3];
-    TCS37073M_ReadColorData(rgbData);
+    if (!ReadColorDataRegisters(rgbData)) return false;
     CalibrateColor(rgbData, rgbNorm);
-    return DetectColor(rgbNorm);
+    *color = DetectColor(rgbNorm);
+    return true;
 }
 
-void TCS37073M_Initialize()
+bool TCS37073M_Initialize()
 {
     I2C_Start();
-    TCS37073M_WriteRegister(0x81, 0x1D); // ?
-    TCS37073M_WriteRegister(0xCA, 0x57); // ?
-    TCS37073M_WriteRegister(0xCB, 0x02); // ?
-    
-    TCS37073M_WriteRegister(0x80, 0b00000011); // Enable AEN & PON bits
+    if (!WriteRegister(0x81, 0x1D)) return false; // ?
+    if (!WriteRegister(0xCA, 0x57)) return false; // ?
+    if (!WriteRegister(0xCB, 0x02)) return false; // ?
+    if (!WriteRegister(0x80, 0b00000011)) return false; // Enable AEN & PON bits
+    return true;
 }

@@ -1,7 +1,9 @@
---------------- Rebuild Started: 05/14/2025 11:59:22 Project: PRJ3, Configuration: ARM GCC 5.4-2016-q2-update Debug ---------------
+--------------- Rebuild Started: 05/14/2025 23:33:58 Project: PRJ3, Configuration: ARM GCC 5.4-2016-q2-update Debug ---------------
 Deleting file ".\CortexM3\ARM_GCC_541\Debug\main.o"
 Deleting file ".\CortexM3\ARM_GCC_541\Debug\ColorSensor.o"
 Deleting file ".\CortexM3\ARM_GCC_541\Debug\Motor.o"
+Deleting file ".\CortexM3\ARM_GCC_541\Debug\Pump.o"
+Deleting file ".\CortexM3\ARM_GCC_541\Debug\UART.o"
 Deleting file ".\CortexM3\ARM_GCC_541\Debug\cyfitter_cfg.o"
 Deleting file ".\CortexM3\ARM_GCC_541\Debug\cymetadata.o"
 Deleting file ".\CortexM3\ARM_GCC_541\Debug\sda.o"
@@ -38,6 +40,12 @@ Deleting file ".\CortexM3\ARM_GCC_541\Debug\UART_PI_BOOT.o"
 Deleting file ".\CortexM3\ARM_GCC_541\Debug\UART_PI_RX_ISR.o"
 Deleting file ".\CortexM3\ARM_GCC_541\Debug\UART_USB_IntClock.o"
 Deleting file ".\CortexM3\ARM_GCC_541\Debug\UART_PI_IntClock.o"
+Deleting file ".\CortexM3\ARM_GCC_541\Debug\PUMP_1.o"
+Deleting file ".\CortexM3\ARM_GCC_541\Debug\PUMP_2.o"
+Deleting file ".\CortexM3\ARM_GCC_541\Debug\PUMP_3.o"
+Deleting file ".\CortexM3\ARM_GCC_541\Debug\PUMP_4.o"
+Deleting file ".\CortexM3\ARM_GCC_541\Debug\PUMP_5.o"
+Deleting file ".\CortexM3\ARM_GCC_541\Debug\PUMP_6.o"
 Deleting file ".\CortexM3\ARM_GCC_541\Debug\PRJ3.hex"
 Deleting file ".\CortexM3\ARM_GCC_541\Debug\PRJ3.elf"
 Deleting file ".\CortexM3\ARM_GCC_541\Debug\PRJ3.map"
@@ -52,7 +60,6 @@ Elaborating Design...
 HDL Generation...
 Synthesis...
 Tech Mapping...
-ADD: pft.M0040: information: The following 1 pin(s) will be assigned a location by the fitter: LED_BUILTIN(0)
 Analog Placement...
 Analog Routing...
 Analog Code Generation...
@@ -65,16 +72,14 @@ API Generation...
 Dependency Generation...
 Cleanup...
 arm-none-eabi-gcc.exe -mcpu=cortex-m3 -mthumb -I. -IGenerated_Source\PSoC5 -Wa,-alh=.\CortexM3\ARM_GCC_541\Debug/main.lst -g -D DEBUG -D CY_CORE_ID=0 -Wall -ffunction-sections -ffat-lto-objects -Og -c main.c -o .\CortexM3\ARM_GCC_541\Debug\main.o
-main.c: In function 'HandleStringReceived':
-main.c:89:11: warning: variable 'params' set but not used [-Wunused-but-set-variable]
-     char* params[MAX_PARAMS]; // Er pt. ubrugt: Ã…rsag til warning
-           ^
 arm-none-eabi-gcc.exe -mcpu=cortex-m3 -mthumb -I. -IGenerated_Source\PSoC5 -Wa,-alh=.\CortexM3\ARM_GCC_541\Debug/ColorSensor.lst -g -D DEBUG -D CY_CORE_ID=0 -Wall -ffunction-sections -ffat-lto-objects -Og -c ColorSensor.c -o .\CortexM3\ARM_GCC_541\Debug\ColorSensor.o
-ColorSensor.c: In function 'Read':
-ColorSensor.c:70:1: warning: control reaches end of non-void function [-Wreturn-type]
- }
- ^
 arm-none-eabi-gcc.exe -mcpu=cortex-m3 -mthumb -I. -IGenerated_Source\PSoC5 -Wa,-alh=.\CortexM3\ARM_GCC_541\Debug/Motor.lst -g -D DEBUG -D CY_CORE_ID=0 -Wall -ffunction-sections -ffat-lto-objects -Og -c Motor.c -o .\CortexM3\ARM_GCC_541\Debug\Motor.o
+arm-none-eabi-gcc.exe -mcpu=cortex-m3 -mthumb -I. -IGenerated_Source\PSoC5 -Wa,-alh=.\CortexM3\ARM_GCC_541\Debug/Pump.lst -g -D DEBUG -D CY_CORE_ID=0 -Wall -ffunction-sections -ffat-lto-objects -Og -c Pump.c -o .\CortexM3\ARM_GCC_541\Debug\Pump.o
+arm-none-eabi-gcc.exe -mcpu=cortex-m3 -mthumb -I. -IGenerated_Source\PSoC5 -Wa,-alh=.\CortexM3\ARM_GCC_541\Debug/UART.lst -g -D DEBUG -D CY_CORE_ID=0 -Wall -ffunction-sections -ffat-lto-objects -Og -c UART.c -o .\CortexM3\ARM_GCC_541\Debug\UART.o
+UART.c: In function 'HandleStringReceived':
+UART.c:13:11: warning: variable 'params' set but not used [-Wunused-but-set-variable]
+     char* params[MAX_PARAMS];
+           ^
 arm-none-eabi-gcc.exe -mcpu=cortex-m3 -mthumb -I. -IGenerated_Source\PSoC5 -Wa,-alh=.\CortexM3\ARM_GCC_541\Debug/cyfitter_cfg.lst -g -D DEBUG -D CY_CORE_ID=0 -Wall -ffunction-sections -ffat-lto-objects -Og -c Generated_Source\PSoC5\cyfitter_cfg.c -o .\CortexM3\ARM_GCC_541\Debug\cyfitter_cfg.o
 arm-none-eabi-gcc.exe -mcpu=cortex-m3 -mthumb -I. -IGenerated_Source\PSoC5 -Wa,-alh=.\CortexM3\ARM_GCC_541\Debug/cymetadata.lst -g -D DEBUG -D CY_CORE_ID=0 -Wall -ffunction-sections -ffat-lto-objects -Og -c Generated_Source\PSoC5\cymetadata.c -o .\CortexM3\ARM_GCC_541\Debug\cymetadata.o
 arm-none-eabi-gcc.exe -mcpu=cortex-m3 -mthumb -I. -IGenerated_Source\PSoC5 -Wa,-alh=.\CortexM3\ARM_GCC_541\Debug/sda.lst -g -D DEBUG -D CY_CORE_ID=0 -Wall -ffunction-sections -ffat-lto-objects -Og -c Generated_Source\PSoC5\sda.c -o .\CortexM3\ARM_GCC_541\Debug\sda.o
@@ -110,15 +115,21 @@ arm-none-eabi-gcc.exe -mcpu=cortex-m3 -mthumb -I. -IGenerated_Source\PSoC5 -Wa,-
 arm-none-eabi-gcc.exe -mcpu=cortex-m3 -mthumb -I. -IGenerated_Source\PSoC5 -Wa,-alh=.\CortexM3\ARM_GCC_541\Debug/UART_PI_RX_ISR.lst -g -D DEBUG -D CY_CORE_ID=0 -Wall -ffunction-sections -ffat-lto-objects -Og -c Generated_Source\PSoC5\UART_PI_RX_ISR.c -o .\CortexM3\ARM_GCC_541\Debug\UART_PI_RX_ISR.o
 arm-none-eabi-gcc.exe -mcpu=cortex-m3 -mthumb -I. -IGenerated_Source\PSoC5 -Wa,-alh=.\CortexM3\ARM_GCC_541\Debug/UART_USB_IntClock.lst -g -D DEBUG -D CY_CORE_ID=0 -Wall -ffunction-sections -ffat-lto-objects -Og -c Generated_Source\PSoC5\UART_USB_IntClock.c -o .\CortexM3\ARM_GCC_541\Debug\UART_USB_IntClock.o
 arm-none-eabi-gcc.exe -mcpu=cortex-m3 -mthumb -I. -IGenerated_Source\PSoC5 -Wa,-alh=.\CortexM3\ARM_GCC_541\Debug/UART_PI_IntClock.lst -g -D DEBUG -D CY_CORE_ID=0 -Wall -ffunction-sections -ffat-lto-objects -Og -c Generated_Source\PSoC5\UART_PI_IntClock.c -o .\CortexM3\ARM_GCC_541\Debug\UART_PI_IntClock.o
+arm-none-eabi-gcc.exe -mcpu=cortex-m3 -mthumb -I. -IGenerated_Source\PSoC5 -Wa,-alh=.\CortexM3\ARM_GCC_541\Debug/PUMP_1.lst -g -D DEBUG -D CY_CORE_ID=0 -Wall -ffunction-sections -ffat-lto-objects -Og -c Generated_Source\PSoC5\PUMP_1.c -o .\CortexM3\ARM_GCC_541\Debug\PUMP_1.o
+arm-none-eabi-gcc.exe -mcpu=cortex-m3 -mthumb -I. -IGenerated_Source\PSoC5 -Wa,-alh=.\CortexM3\ARM_GCC_541\Debug/PUMP_2.lst -g -D DEBUG -D CY_CORE_ID=0 -Wall -ffunction-sections -ffat-lto-objects -Og -c Generated_Source\PSoC5\PUMP_2.c -o .\CortexM3\ARM_GCC_541\Debug\PUMP_2.o
+arm-none-eabi-gcc.exe -mcpu=cortex-m3 -mthumb -I. -IGenerated_Source\PSoC5 -Wa,-alh=.\CortexM3\ARM_GCC_541\Debug/PUMP_3.lst -g -D DEBUG -D CY_CORE_ID=0 -Wall -ffunction-sections -ffat-lto-objects -Og -c Generated_Source\PSoC5\PUMP_3.c -o .\CortexM3\ARM_GCC_541\Debug\PUMP_3.o
+arm-none-eabi-gcc.exe -mcpu=cortex-m3 -mthumb -I. -IGenerated_Source\PSoC5 -Wa,-alh=.\CortexM3\ARM_GCC_541\Debug/PUMP_4.lst -g -D DEBUG -D CY_CORE_ID=0 -Wall -ffunction-sections -ffat-lto-objects -Og -c Generated_Source\PSoC5\PUMP_4.c -o .\CortexM3\ARM_GCC_541\Debug\PUMP_4.o
+arm-none-eabi-gcc.exe -mcpu=cortex-m3 -mthumb -I. -IGenerated_Source\PSoC5 -Wa,-alh=.\CortexM3\ARM_GCC_541\Debug/PUMP_5.lst -g -D DEBUG -D CY_CORE_ID=0 -Wall -ffunction-sections -ffat-lto-objects -Og -c Generated_Source\PSoC5\PUMP_5.c -o .\CortexM3\ARM_GCC_541\Debug\PUMP_5.o
+arm-none-eabi-gcc.exe -mcpu=cortex-m3 -mthumb -I. -IGenerated_Source\PSoC5 -Wa,-alh=.\CortexM3\ARM_GCC_541\Debug/PUMP_6.lst -g -D DEBUG -D CY_CORE_ID=0 -Wall -ffunction-sections -ffat-lto-objects -Og -c Generated_Source\PSoC5\PUMP_6.c -o .\CortexM3\ARM_GCC_541\Debug\PUMP_6.o
 arm-none-eabi-as.exe -mcpu=cortex-m3 -mthumb -I. -IGenerated_Source\PSoC5 -alh=.\CortexM3\ARM_GCC_541\Debug/CyBootAsmGnu.lst -g -W -o .\CortexM3\ARM_GCC_541\Debug\CyBootAsmGnu.o Generated_Source\PSoC5\CyBootAsmGnu.s
-arm-none-eabi-ar.exe -rs .\CortexM3\ARM_GCC_541\Debug\PRJ3.a .\CortexM3\ARM_GCC_541\Debug\sda.o .\CortexM3\ARM_GCC_541\Debug\scl.o .\CortexM3\ARM_GCC_541\Debug\I2C.o .\CortexM3\ARM_GCC_541\Debug\I2C_BOOT.o .\CortexM3\ARM_GCC_541\Debug\I2C_INT.o .\CortexM3\ARM_GCC_541\Debug\I2C_PM.o .\CortexM3\ARM_GCC_541\Debug\I2C_SLAVE.o .\CortexM3\ARM_GCC_541\Debug\I2C_MASTER.o .\CortexM3\ARM_GCC_541\Debug\CyDmac.o .\CortexM3\ARM_GCC_541\Debug\CyFlash.o .\CortexM3\ARM_GCC_541\Debug\CyLib.o .\CortexM3\ARM_GCC_541\Debug\cyPm.o .\CortexM3\ARM_GCC_541\Debug\CySpc.o .\CortexM3\ARM_GCC_541\Debug\cyutils.o .\CortexM3\ARM_GCC_541\Debug\cy_em_eeprom.o .\CortexM3\ARM_GCC_541\Debug\STEP_2a.o .\CortexM3\ARM_GCC_541\Debug\STEP_1a.o .\CortexM3\ARM_GCC_541\Debug\STEP_1b.o .\CortexM3\ARM_GCC_541\Debug\STEP_2b.o .\CortexM3\ARM_GCC_541\Debug\UART_USB.o .\CortexM3\ARM_GCC_541\Debug\UART_USB_PM.o .\CortexM3\ARM_GCC_541\Debug\UART_USB_INT.o .\CortexM3\ARM_GCC_541\Debug\UART_USB_BOOT.o .\CortexM3\ARM_GCC_541\Debug\UART_USB_RX_ISR.o .\CortexM3\ARM_GCC_541\Debug\LED_BUILTIN.o .\CortexM3\ARM_GCC_541\Debug\UART_PI.o .\CortexM3\ARM_GCC_541\Debug\UART_PI_PM.o .\CortexM3\ARM_GCC_541\Debug\UART_PI_INT.o .\CortexM3\ARM_GCC_541\Debug\UART_PI_BOOT.o .\CortexM3\ARM_GCC_541\Debug\UART_PI_RX_ISR.o .\CortexM3\ARM_GCC_541\Debug\UART_USB_IntClock.o .\CortexM3\ARM_GCC_541\Debug\UART_PI_IntClock.o .\CortexM3\ARM_GCC_541\Debug\CyBootAsmGnu.o
+arm-none-eabi-ar.exe -rs .\CortexM3\ARM_GCC_541\Debug\PRJ3.a .\CortexM3\ARM_GCC_541\Debug\sda.o .\CortexM3\ARM_GCC_541\Debug\scl.o .\CortexM3\ARM_GCC_541\Debug\I2C.o .\CortexM3\ARM_GCC_541\Debug\I2C_BOOT.o .\CortexM3\ARM_GCC_541\Debug\I2C_INT.o .\CortexM3\ARM_GCC_541\Debug\I2C_PM.o .\CortexM3\ARM_GCC_541\Debug\I2C_SLAVE.o .\CortexM3\ARM_GCC_541\Debug\I2C_MASTER.o .\CortexM3\ARM_GCC_541\Debug\CyDmac.o .\CortexM3\ARM_GCC_541\Debug\CyFlash.o .\CortexM3\ARM_GCC_541\Debug\CyLib.o .\CortexM3\ARM_GCC_541\Debug\cyPm.o .\CortexM3\ARM_GCC_541\Debug\CySpc.o .\CortexM3\ARM_GCC_541\Debug\cyutils.o .\CortexM3\ARM_GCC_541\Debug\cy_em_eeprom.o .\CortexM3\ARM_GCC_541\Debug\STEP_2a.o .\CortexM3\ARM_GCC_541\Debug\STEP_1a.o .\CortexM3\ARM_GCC_541\Debug\STEP_1b.o .\CortexM3\ARM_GCC_541\Debug\STEP_2b.o .\CortexM3\ARM_GCC_541\Debug\UART_USB.o .\CortexM3\ARM_GCC_541\Debug\UART_USB_PM.o .\CortexM3\ARM_GCC_541\Debug\UART_USB_INT.o .\CortexM3\ARM_GCC_541\Debug\UART_USB_BOOT.o .\CortexM3\ARM_GCC_541\Debug\UART_USB_RX_ISR.o .\CortexM3\ARM_GCC_541\Debug\LED_BUILTIN.o .\CortexM3\ARM_GCC_541\Debug\UART_PI.o .\CortexM3\ARM_GCC_541\Debug\UART_PI_PM.o .\CortexM3\ARM_GCC_541\Debug\UART_PI_INT.o .\CortexM3\ARM_GCC_541\Debug\UART_PI_BOOT.o .\CortexM3\ARM_GCC_541\Debug\UART_PI_RX_ISR.o .\CortexM3\ARM_GCC_541\Debug\UART_USB_IntClock.o .\CortexM3\ARM_GCC_541\Debug\UART_PI_IntClock.o .\CortexM3\ARM_GCC_541\Debug\PUMP_1.o .\CortexM3\ARM_GCC_541\Debug\PUMP_2.o .\CortexM3\ARM_GCC_541\Debug\PUMP_3.o .\CortexM3\ARM_GCC_541\Debug\PUMP_4.o .\CortexM3\ARM_GCC_541\Debug\PUMP_5.o .\CortexM3\ARM_GCC_541\Debug\PUMP_6.o .\CortexM3\ARM_GCC_541\Debug\CyBootAsmGnu.o
 arm-none-eabi-ar.exe: creating .\CortexM3\ARM_GCC_541\Debug\PRJ3.a
-arm-none-eabi-gcc.exe -Wl,--start-group -o C:\Users\alexa\Documents\GitHub\Projekt-3\PSoC\PRJ3.cydsn\CortexM3\ARM_GCC_541\Debug\PRJ3.elf .\CortexM3\ARM_GCC_541\Debug\main.o .\CortexM3\ARM_GCC_541\Debug\ColorSensor.o .\CortexM3\ARM_GCC_541\Debug\Motor.o .\CortexM3\ARM_GCC_541\Debug\cyfitter_cfg.o .\CortexM3\ARM_GCC_541\Debug\cymetadata.o .\CortexM3\ARM_GCC_541\Debug\Cm3Start.o .\CortexM3\ARM_GCC_541\Debug\PRJ3.a "C:\Program Files (x86)\Cypress\PSoC Creator\4.4\PSoC Creator\psoc\content\cycomponentlibrary\CyComponentLibrary.cylib\CortexM3\ARM_GCC_541\Debug\CyComponentLibrary.a" -mcpu=cortex-m3 -mthumb -L Generated_Source\PSoC5 -Wl,-Map,.\CortexM3\ARM_GCC_541\Debug/PRJ3.map -T Generated_Source\PSoC5\cm3gcc.ld -specs=nano.specs -u _printf_float -Wl,--gc-sections -g -ffunction-sections -Og -ffat-lto-objects -Wl,--end-group
+arm-none-eabi-gcc.exe -Wl,--start-group -o C:\Users\alexa\Documents\GitHub\Projekt-3\PSoC\PRJ3.cydsn\CortexM3\ARM_GCC_541\Debug\PRJ3.elf .\CortexM3\ARM_GCC_541\Debug\main.o .\CortexM3\ARM_GCC_541\Debug\ColorSensor.o .\CortexM3\ARM_GCC_541\Debug\Motor.o .\CortexM3\ARM_GCC_541\Debug\Pump.o .\CortexM3\ARM_GCC_541\Debug\UART.o .\CortexM3\ARM_GCC_541\Debug\cyfitter_cfg.o .\CortexM3\ARM_GCC_541\Debug\cymetadata.o .\CortexM3\ARM_GCC_541\Debug\Cm3Start.o .\CortexM3\ARM_GCC_541\Debug\PRJ3.a "C:\Program Files (x86)\Cypress\PSoC Creator\4.4\PSoC Creator\psoc\content\cycomponentlibrary\CyComponentLibrary.cylib\CortexM3\ARM_GCC_541\Debug\CyComponentLibrary.a" -mcpu=cortex-m3 -mthumb -L Generated_Source\PSoC5 -Wl,-Map,.\CortexM3\ARM_GCC_541\Debug/PRJ3.map -T Generated_Source\PSoC5\cm3gcc.ld -specs=nano.specs -u _printf_float -Wl,--gc-sections -g -ffunction-sections -Og -ffat-lto-objects -Wl,--end-group
 cyelftool.exe -C C:\Users\alexa\Documents\GitHub\Projekt-3\PSoC\PRJ3.cydsn\CortexM3\ARM_GCC_541\Debug\PRJ3.elf --flash_row_size 256 --flash_size 262144 --flash_offset 0x00000000
 No ELF section .cychecksum found, creating one
 Application checksum calculated and stored in ELF section .cychecksum
 Checksum calculated and stored in ELF section .cymeta
 cyelftool.exe -S C:\Users\alexa\Documents\GitHub\Projekt-3\PSoC\PRJ3.cydsn\CortexM3\ARM_GCC_541\Debug\PRJ3.elf
-Flash used: 13680 of 262144 bytes (5,2 %).
-SRAM used: 3233 of 65536 bytes (4,9 %). Stack: 2048 bytes. Heap: 512 bytes.
---------------- Rebuild Succeeded: 05/14/2025 11:59:35 ---------------
+Flash used: 15056 of 262144 bytes (5,7 %).
+SRAM used: 3257 of 65536 bytes (5,0 %). Stack: 2048 bytes. Heap: 512 bytes.
+--------------- Rebuild Succeeded: 05/14/2025 23:34:19 ---------------
