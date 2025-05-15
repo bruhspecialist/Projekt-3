@@ -8,5 +8,7 @@
 CY_ISR_PROTO(UART_USB_RX_ISR_handler);
 CY_ISR_PROTO(UART_PI_RX_ISR_handler);
 
+const char* GetCmd();
+void ResetCmd();
 void HandleStringReceived(char* stringReceived);
 void UART_Initialize();

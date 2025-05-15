@@ -11,6 +11,8 @@ typedef struct {
     CommandFunc func;
 } CommandEntry;
 
+const char* latestCmd = "\0";
+
 // --- Kommando-implementeringer ---
 void Cmd_Test1(char* params[]) {
     LED_BUILTIN_Write(1);
@@ -29,6 +31,9 @@ static const CommandEntry commandTable[] = {
     {NULL, NULL} // Terminator
 };
 
+const char* GetCmd() {return latestCmd;}
+void ResetCmd() {latestCmd = "\0";}
+
 void HandleStringReceived(char* receivedString)
 {
     char msg[MAX_MSG_BUFFER_SIZE];
@@ -44,13 +49,14 @@ void HandleStringReceived(char* receivedString)
         params[i++] = token;
         token = strtok(NULL, "\r\n ");
     }
-
+    
+    latestCmd = command;
     snprintf(msg, MAX_MSG_BUFFER_SIZE, "Received command: %s\r\n", command);
     UART_USB_PutString(msg);
 
     for (int j = 0; commandTable[j].name != NULL; ++j) {
         if (strcmp(command, commandTable[j].name) == 0) {
-            commandTable[j].func(params);
+            //commandTable[j].func(params);
             return;
         }
     }

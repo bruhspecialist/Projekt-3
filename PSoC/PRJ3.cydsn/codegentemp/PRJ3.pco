@@ -1,5 +1,5 @@
 # PRJ3
-# 2025-05-14 21:34:04Z
+# 2025-05-15 12:47:46Z
 
 # IO_0@[IOP=(1)][IoId=(0)] is reserved: SWDDebugEnabled
 dont_use_io iocell 1 0
@@ -25,67 +25,67 @@ set_io "PUMP_3(0)" iocell 15 2
 set_io "PUMP_4(0)" iocell 15 3
 set_io "PUMP_5(0)" iocell 15 4
 set_io "PUMP_6(0)" iocell 15 5
-set_location "Net_33" 2 2 1 2
-set_location "\UART_USB:BUART:counter_load_not\" 2 1 1 1
-set_location "\UART_USB:BUART:tx_status_0\" 2 0 0 1
+set_location "Net_33" 2 3 0 1
+set_location "\UART_USB:BUART:counter_load_not\" 2 1 0 2
+set_location "\UART_USB:BUART:tx_status_0\" 2 0 0 2
 set_location "\UART_USB:BUART:tx_status_2\" 2 3 0 3
-set_location "\UART_USB:BUART:rx_counter_load\" 3 2 0 1
-set_location "\UART_USB:BUART:rx_postpoll\" 3 1 0 1
-set_location "\UART_USB:BUART:rx_status_4\" 2 2 0 3
-set_location "\UART_USB:BUART:rx_status_5\" 2 3 0 2
-set_location "Net_45" 2 3 1 1
-set_location "\UART_PI:BUART:counter_load_not\" 2 0 1 3
-set_location "\UART_PI:BUART:tx_status_0\" 2 0 0 2
-set_location "\UART_PI:BUART:tx_status_2\" 2 2 0 2
+set_location "\UART_USB:BUART:rx_counter_load\" 2 2 0 1
+set_location "\UART_USB:BUART:rx_postpoll\" 2 1 1 1
+set_location "\UART_USB:BUART:rx_status_4\" 3 1 0 1
+set_location "\UART_USB:BUART:rx_status_5\" 3 1 1 0
+set_location "Net_45" 2 3 0 0
+set_location "\UART_PI:BUART:counter_load_not\" 3 0 1 3
+set_location "\UART_PI:BUART:tx_status_0\" 3 0 1 1
+set_location "\UART_PI:BUART:tx_status_2\" 2 3 0 2
 set_location "\UART_PI:BUART:rx_counter_load\" 3 3 0 1
-set_location "\UART_PI:BUART:rx_postpoll\" 3 1 1 1
-set_location "\UART_PI:BUART:rx_status_4\" 2 3 0 1
-set_location "\UART_PI:BUART:rx_status_5\" 2 3 0 0
+set_location "\UART_PI:BUART:rx_postpoll\" 3 2 1 2
+set_location "\UART_PI:BUART:rx_status_4\" 3 2 0 1
+set_location "\UART_PI:BUART:rx_status_5\" 3 2 0 3
 set_location "\I2C:I2C_IRQ\" interrupt -1 -1 15
 set_location "\I2C:I2C_FF\" i2ccell -1 -1 0
-set_location "\UART_USB:BUART:sTX:TxShifter:u0\" 2 1 2
+set_location "\UART_USB:BUART:sTX:TxShifter:u0\" 2 0 2
 set_location "\UART_USB:BUART:sTX:sCLOCK:TxBitClkGen\" 2 2 2
 set_location "\UART_USB:BUART:sTX:TxSts\" 2 1 4
-set_location "\UART_USB:BUART:sRX:RxShifter:u0\" 3 2 2
-set_location "\UART_USB:BUART:sRX:RxBitCounter\" 3 2 7
-set_location "\UART_USB:BUART:sRX:RxSts\" 2 2 4
+set_location "\UART_USB:BUART:sRX:RxShifter:u0\" 2 1 2
+set_location "\UART_USB:BUART:sRX:RxBitCounter\" 2 2 7
+set_location "\UART_USB:BUART:sRX:RxSts\" 3 1 4
 set_location "UART_USB_RX_ISR" interrupt -1 -1 1
-set_location "\UART_PI:BUART:sTX:TxShifter:u0\" 2 0 2
+set_location "\UART_PI:BUART:sTX:TxShifter:u0\" 3 1 2
 set_location "\UART_PI:BUART:sTX:sCLOCK:TxBitClkGen\" 3 0 2
-set_location "\UART_PI:BUART:sTX:TxSts\" 2 0 4
-set_location "\UART_PI:BUART:sRX:RxShifter:u0\" 3 1 2
+set_location "\UART_PI:BUART:sTX:TxSts\" 3 0 4
+set_location "\UART_PI:BUART:sRX:RxShifter:u0\" 3 3 2
 set_location "\UART_PI:BUART:sRX:RxBitCounter\" 3 3 7
-set_location "\UART_PI:BUART:sRX:RxSts\" 2 3 4
+set_location "\UART_PI:BUART:sRX:RxSts\" 3 2 4
 set_location "UART_PI_RX_ISR" interrupt -1 -1 0
-set_location "\UART_USB:BUART:txn\" 2 1 0 0
+set_location "\UART_USB:BUART:txn\" 2 0 1 0
 set_location "\UART_USB:BUART:tx_state_1\" 2 1 0 1
 set_location "\UART_USB:BUART:tx_state_0\" 2 0 0 0
-set_location "\UART_USB:BUART:tx_state_2\" 2 1 1 0
-set_location "\UART_USB:BUART:tx_bitclk\" 2 1 1 2
-set_location "\UART_USB:BUART:tx_ctrl_mark_last\" 3 2 1 1
-set_location "\UART_USB:BUART:rx_state_0\" 3 2 0 0
-set_location "\UART_USB:BUART:rx_load_fifo\" 3 2 0 3
-set_location "\UART_USB:BUART:rx_state_3\" 3 2 0 2
-set_location "\UART_USB:BUART:rx_state_2\" 3 2 1 0
-set_location "\UART_USB:BUART:rx_bitclk_enable\" 3 1 0 3
-set_location "\UART_USB:BUART:rx_state_stop1_reg\" 3 2 1 3
-set_location "MODIN1_1" 3 1 0 0
-set_location "MODIN1_0" 3 1 0 2
-set_location "\UART_USB:BUART:rx_status_3\" 3 2 1 2
+set_location "\UART_USB:BUART:tx_state_2\" 2 1 0 0
+set_location "\UART_USB:BUART:tx_bitclk\" 2 0 0 1
+set_location "\UART_USB:BUART:tx_ctrl_mark_last\" 3 2 0 0
+set_location "\UART_USB:BUART:rx_state_0\" 2 2 0 0
+set_location "\UART_USB:BUART:rx_load_fifo\" 2 2 0 3
+set_location "\UART_USB:BUART:rx_state_3\" 2 2 0 2
+set_location "\UART_USB:BUART:rx_state_2\" 2 2 1 0
+set_location "\UART_USB:BUART:rx_bitclk_enable\" 2 1 1 3
+set_location "\UART_USB:BUART:rx_state_stop1_reg\" 2 2 1 3
+set_location "MODIN1_1" 2 1 1 0
+set_location "MODIN1_0" 2 1 1 2
+set_location "\UART_USB:BUART:rx_status_3\" 2 2 1 2
 set_location "\UART_USB:BUART:rx_last\" 2 0 0 3
-set_location "\UART_PI:BUART:txn\" 3 0 0 0
-set_location "\UART_PI:BUART:tx_state_1\" 3 0 1 3
-set_location "\UART_PI:BUART:tx_state_0\" 2 0 1 0
+set_location "\UART_PI:BUART:txn\" 3 1 1 3
+set_location "\UART_PI:BUART:tx_state_1\" 3 0 0 2
+set_location "\UART_PI:BUART:tx_state_0\" 3 0 0 0
 set_location "\UART_PI:BUART:tx_state_2\" 3 0 1 0
-set_location "\UART_PI:BUART:tx_bitclk\" 2 0 1 2
+set_location "\UART_PI:BUART:tx_bitclk\" 3 0 0 1
 set_location "\UART_PI:BUART:tx_ctrl_mark_last\" 3 3 1 1
 set_location "\UART_PI:BUART:rx_state_0\" 3 3 0 0
 set_location "\UART_PI:BUART:rx_load_fifo\" 3 3 0 3
 set_location "\UART_PI:BUART:rx_state_3\" 3 3 0 2
 set_location "\UART_PI:BUART:rx_state_2\" 3 3 1 0
-set_location "\UART_PI:BUART:rx_bitclk_enable\" 3 1 1 3
+set_location "\UART_PI:BUART:rx_bitclk_enable\" 3 2 1 3
 set_location "\UART_PI:BUART:rx_state_stop1_reg\" 3 3 1 3
-set_location "\UART_PI:BUART:pollcount_1\" 3 1 1 0
-set_location "\UART_PI:BUART:pollcount_0\" 3 1 1 2
+set_location "\UART_PI:BUART:pollcount_1\" 3 2 1 0
+set_location "\UART_PI:BUART:pollcount_0\" 3 2 1 1
 set_location "\UART_PI:BUART:rx_status_3\" 3 3 1 2
-set_location "\UART_PI:BUART:rx_last\" 2 2 0 1
+set_location "\UART_PI:BUART:rx_last\" 3 1 0 0
