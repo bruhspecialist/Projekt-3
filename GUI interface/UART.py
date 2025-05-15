@@ -1,15 +1,18 @@
 import serial
 import time
 
-ser = serial.Serial('/dev/serial0', 57600, timeout=1)  # Open serial port with baudrate 57600
-ser.flush()
+try:
+    ser = serial.Serial('/dev/serial0', 9600, timeout=1)  # Open serial port with baudrate 57600
+    ser.flush()
+except serial.SerialException as e:
+    print("Error opening serial port:", e)
+    ser = None
+
 
 #function to send data to the PSoC
 def sendCommand(text):
-    try:
+    try:         
         ser.write(text.encode())  # Send string command
-        print("Sent: ", text)
-
     except Exception as e:
         print("UART Error:", e)
 
@@ -20,29 +23,29 @@ def testbuttonlight():
     sendCommand("test1\n")  # Send string command to PSoC
 
 
-# if statement. when choosing class 
+
 def sendGlassSize(size):
-    sendCommand(size + "\n")  # Send string command to PSoC
-
-
-
-
     try:
-        if size == "shot":
-            ser.write(b"shot\n")
-            print("Sent: shot glass chosen")
+        sendCommand(size + "\n")
+        print("sent to PSoC: ", repr(size + "\n")) # debug
+        timeout = 1  # seconds
+        start_time = time.time()
 
-        elif size == "medium":
-            ser.write(b"medium\n")
-            print("Sent: medium glass chosen")
+        while time.time() - start_time < timeout:
+            if ser.in_waiting > 0:
+                try:
+                    response = ser.readline().decode(errors="ignore").strip()
+                    print("Received: ", response)
+                    return response
+                except Exception as e:
+                    print("Decode error:", e)
+                    return "decode_error"
+            time.sleep(0.05)  # check every 50 ms
 
-        elif size == "large":
-            ser.write(b"large\n")
-            print("Sent: large glass chosen")
-
-        else:
-            print("error: invalid size")
+        print("No response received within timeout")
+        return "no_response"
 
     except Exception as e:
-        print("UART drink Error:", e)
-        return False
+        print("UART communication error:", e)
+        return "serial_error"
+

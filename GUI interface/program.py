@@ -4,6 +4,8 @@ import threading
 import time
 
 
+# list of buttons to be tracked
+buttons = []
 
 # Create main window
 root = ctk.CTk() # creation of main application window
@@ -11,7 +13,6 @@ root.geometry("800x480")
 root.attributes("-fullscreen", True)
 root.title("Beer game!")
 root.eval('tk::PlaceWindow . center')
-
 ctk.set_appearance_mode("dark") # dark mode
 ctk.set_default_color_theme("blue") # blue theme
 
@@ -19,11 +20,9 @@ ctk.set_default_color_theme("blue") # blue theme
 root.columnconfigure(0, weight=1) # left
 root.columnconfigure(1, weight=1) # right
 root.rowconfigure((0, 1, 2, 3), weight=1) # row heights
-
 root.grid_propagate(False) # prevent resizing of the window
 
-# list of buttons to be tracked
-buttons = []
+
 
 # when button is pressed, check if it is already green. If not, set it to green and reset others to blue with label update
 def updateWhenButtonPressed(selectedButton, text):
@@ -43,6 +42,26 @@ def updateWhenButtonPressed(selectedButton, text):
     print(f"Button pressed: {selectedButton.cget('text')}")
 
 
+
+# function to handle glass size selection
+def HandleGlassSize(button, size_text, glassSize):
+    updateWhenButtonPressed(button, size_text)
+    glassSizeChosen = UART.sendGlassSize(glassSize)
+    print(f"DEBUG: Received from UART: {glassSizeChosen}")  
+    if glassSizeChosen == "err":
+        label_right2.configure(text="wrong glass size")
+    elif glassSizeChosen == "ok":
+        label_right2.configure(text=f"Glass size: {glassSize}")
+    else:
+        label_right2.configure(text="timeout\nerror in glass size")
+
+
+
+
+
+
+
+
 #label right side top
 label_right = ctk.CTkLabel(root, text="size of drink:", font=("Arial", 38))
 label_right.grid(row=0, column=1, padx=20, pady=20)
@@ -57,8 +76,7 @@ label_right2.grid(row=1, column=1, padx=5, pady=5)
 button1 = ctk.CTkButton(root, text="Shots size", width=200, height=100, font=("Arial", 24), 
                         command=lambda: 
                         [
-                            updateWhenButtonPressed(button1,"30mL"),
-                            UART.sendGlassSize("shot")
+                            HandleGlassSize(button1, "Shot size", "shot")
                         ])
 button1.grid(row=0, column=0, padx=10, pady=10)
 buttons.append(button1)
@@ -67,8 +85,7 @@ buttons.append(button1)
 button2 = ctk.CTkButton(root, text="Medium size", width=200, height=100, font=("Arial", 24), 
                         command=lambda:
                         [
-                            updateWhenButtonPressed(button2, "250mL"),
-                            UART.sendGlassSize("medium")
+                            HandleGlassSize(button2, "medium size", "medium")
                         ])
 button2.grid(row=1, column=0, padx=10, pady=10)
 buttons.append(button2)
@@ -77,8 +94,7 @@ buttons.append(button2)
 button3 = ctk.CTkButton(root, text="Large size", width=200, height=100, font=("Arial", 24), 
                         command=lambda:
                         [
-                            updateWhenButtonPressed(button3, "330mL"),
-                            UART.sendGlassSize("large")
+                            HandleGlassSize(button3, "Large size", "large")
                         ])
 button3.grid(row=2, column=0, padx=10, pady=10)
 buttons.append(button3)
@@ -94,11 +110,6 @@ button4 = ctk.CTkButton(root, text="Throw the dice!", width=300, height=175, fon
 
 button4.grid(row=3, column=1, padx=10, pady=10)
 buttons.append(button4)
-
-
-
-
-
 
 
 # Run the app
