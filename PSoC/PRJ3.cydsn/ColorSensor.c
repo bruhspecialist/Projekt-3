@@ -3,7 +3,6 @@
 
 #include <stdio.h>
 #include <stdlib.h>
-#include <stdint.h>
 
 const uint16_t rgb_ref[3] = {R_REF, G_REF, B_REF}; // Med udgangspunkt i hvid skærm fra iPhone 15 Pro
 
@@ -55,20 +54,48 @@ void CalibrateColor(const uint16_t *rgb, uint16_t *rgbNorm) {
     }
 }
 
-const char* DetectColor(const uint16_t* rgb) {
-    const double tol = 0.20;
-    if (rgb[0] > rgb[1]*(1+tol) && rgb[0] > rgb[2]*(1+tol)) return "red";
-    if (rgb[1] > rgb[0]*(1+tol) && rgb[1] > rgb[2]*(1+tol)) return "green";
-    if (rgb[2] > rgb[0]*(1+tol) && rgb[2] > rgb[1]*(1+tol)) return "blue";
-    if (rgb[0] > rgb[2] && rgb[1] > rgb[2]) return "yellow";
-    if (rgb[0] > rgb[1] && rgb[2] > rgb[1]) return "magenta";
-    if (rgb[1] > rgb[0] && rgb[2] > rgb[0]) return "cyan";
-    if (rgb[0] >= rgb[1] && rgb[0] >= rgb[2]) return "red";
-    if (rgb[1] >= rgb[0] && rgb[1] >= rgb[2]) return "green";
-    return "blue";
+uint8_t DetectColor(const uint16_t* rgb) {
+    const double tol = 0.20; // 20%
+    const double closeTol = 0.05; // 5%
+
+    uint16_t r = rgb[0], g = rgb[1], b = rgb[2];
+
+    uint16_t max = r;
+    if (g > max) max = g;
+    if (b > max) max = b;
+
+    uint16_t min = r;
+    if (g < min) min = g;
+    if (b < min) min = b;
+
+    if (max - min <= max * closeTol)
+        return tone; // For lidt kontrast til at afgøre farve
+
+    if (r > g * (1 + tol) && r > b * (1 + tol)) return red;
+    if (g > r * (1 + tol) && g > b * (1 + tol)) return green;
+    if (b > r * (1 + tol) && b > g * (1 + tol)) return blue;
+    if (r > b && g > b) return yellow;
+    if (g > r && b > r) return cyan;
+    if (r > g && b > g) return magenta;
+    if (r >= g && r >= b) return red;
+    if (g >= r && g >= b) return green;
+    return blue;
 }
 
-bool TCS37073M_Read(const char** color) {
+const char* ColorToString(uint8_t color) {
+    switch (color) {
+        case tone    : return "tone";
+        case red     : return "red";
+        case green   : return "green";
+        case blue    : return "blue";
+        case yellow  : return "yellow";
+        case cyan    : return "cyan";
+        case magenta : return "magenta";
+        default      : return "error";
+    }
+}
+
+bool ColorSensor_Read(uint8_t* color) {
     uint16_t rgbData[3];
     uint16_t rgbNorm[3];
     if (!ReadColorDataRegisters(rgbData)) return false;
@@ -77,7 +104,7 @@ bool TCS37073M_Read(const char** color) {
     return true;
 }
 
-bool TCS37073M_Initialize()
+bool ColorSensor_Initialize()
 {
     I2C_Start();
     if (!WriteRegister(0x81, 0x1D)) return false; // ?

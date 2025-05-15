@@ -13,7 +13,7 @@ const uint8_t FULL_DRIVE_SEQUENCE[4][4] = {
 };
 const uint8_t STOPPED_DRIVE[4] = {0, 0, 0, 0};
 
-static uint8_t currentStep = 0; // 0 - 47 (0° - 352.5°)
+static uint16_t currentStep = 0; // 0 - 47 (0° - 352.5°)
 
 // Sætter tilstande af statore
 void SetStators(const uint8_t states[4]) {
@@ -32,7 +32,7 @@ uint16_t CalculateDelay(uint8_t speed) {
 }
 
 // Kalkulerer ny 'step-værdi', som er proportional med vinklen
-uint8_t CalculateNewStep(uint8_t step, int16_t stepDiff) {
+uint16_t CalculateNewStep(uint16_t step, int16_t stepDiff) {
     int16_t newStep = (step + stepDiff) % TOTAL_STEPS;
     if (newStep < 0) newStep += TOTAL_STEPS;
     return newStep;
