@@ -13,7 +13,7 @@
 <v>Output</v>
 </TreeKeys>
 <TreeStates>
-<CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237 type_name="CyDesigner.Common.Base.Controls.CyTreeViewState" version="1" SelectedNodeId="PSoC\PRJ3\Header Files">
+<CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237 type_name="CyDesigner.Common.Base.Controls.CyTreeViewState" version="1" SelectedNodeId="PSoC\PRJ3\Header Files\cyapicallbacks.h">
 <ExpandedNodeIds>
 <v>PSoC</v>
 <v>PSoC\PRJ3</v>
@@ -265,7 +265,20 @@
 </userData>
 </CyGuid_fdba8dfd-b15b-4469-9bbb-9e40c3e70997>
 <Unloaded />
-<OpenDocs />
+<OpenDocs>
+<name v=".\PRJ3.cydsn\main.c" />
+<name v=".\PRJ3.cydsn\ColorSensor.h" />
+<name v=".\PRJ3.cydsn\ColorSensor.c" />
+<name v=".\PRJ3.cydsn\ErrorMessage.h" />
+<name v=".\PRJ3.cydsn\TempTests.h" />
+</OpenDocs>
+<OpenDocsLayout><![CDATA[<?xml version="1.0"?><!--
+
+  Actipro Docking/MDI for WinForms
+  Copyright (c) 2001-2016 Actipro Software LLC.  All rights reserved.
+  http://www.actiprosoftware.com
+
+--><DocumentLayout Version="1.0"><LayoutData><TabbedMdiRootContainer Orientation="Horizontal"><TabbedMdiContainer Size="1623, 605" SelectedTabbedMdiWindow="c3a7d499-15e6-40d5-8ef1-0dc74ad9642f"><DocumentWindow Key="C:\Users\alexa\Documents\GitHub\Projekt-3\PSoC\PRJ3.cydsn\main.c" Guid="c3a7d499-15e6-40d5-8ef1-0dc74ad9642f" /><DocumentWindow Key="C:\Users\alexa\Documents\GitHub\Projekt-3\PSoC\PRJ3.cydsn\ColorSensor.h" Guid="3a7cb6a0-c804-47b2-a8a3-97d25af2e9cf" /><DocumentWindow Key="C:\Users\alexa\Documents\GitHub\Projekt-3\PSoC\PRJ3.cydsn\ColorSensor.c" Guid="2e7c4a53-eb69-46d2-9d15-a72ef2cb5076" /><DocumentWindow Key="C:\Users\alexa\Documents\GitHub\Projekt-3\PSoC\PRJ3.cydsn\ErrorMessage.h" Guid="8f5500e4-c243-4dbe-b202-ccc63c83a077" /><DocumentWindow Key="C:\Users\alexa\Documents\GitHub\Projekt-3\PSoC\PRJ3.cydsn\TempTests.h" Guid="e6488820-692e-46b9-a8ca-4b298c52f080" /></TabbedMdiContainer></TabbedMdiRootContainer><FloatingContainers /></LayoutData></DocumentLayout>]]></OpenDocsLayout>
 <config v="" />
 <AutoUpdate v="true" />
 </CyGuid_843a90a4-0c4b-4e44-991d-05e7fb117a21>
