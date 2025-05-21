@@ -104,6 +104,24 @@ bool ColorSensor_Read(uint8_t* color) {
     return true;
 }
 
+bool ColorSensor_ReadAverage(uint8_t* color, uint16_t measurements) {
+    bool isReadingSuccessful = true;
+    uint8_t colorFrequency[7] = {0};
+    UART_USB_PutString("Color measurement started\r\n");
+    for (uint16_t i = 0; i < measurements; ++i) {
+        uint8_t color_index;
+        if (!ColorSensor_Read(&color_index)) isReadingSuccessful = false;
+        else colorFrequency[color_index]++;
+    }
+    UART_USB_PutString("Color measurement stopped\r\n"); 
+    uint8_t hottestColor = 0;
+    for (uint8_t i = 1; i < 7; ++i) { // Find den farve der opstår mest
+        if (colorFrequency[i] > colorFrequency[hottestColor]) hottestColor = i;
+    }
+    *color = hottestColor;
+    return isReadingSuccessful;
+}
+
 bool ColorSensor_Initialize()
 {
     I2C_Start();

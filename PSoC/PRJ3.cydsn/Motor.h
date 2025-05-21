@@ -2,13 +2,12 @@
 
 #include <stdint.h>
 
-// Grænser for 'speed' (i form af delay)
-#define MIN_SPEED_DELAY 1 // Minimum delay (ms) mellem stator-skift
-#define MAX_SPEED_DELAY 10 // Maksimum delay (ms) mellem stator-skift
+// Delaygrænser (i ms) mellem stator-skift
+#define MIN_SPEED_DELAY 5
+#define MAX_SPEED_DELAY 20
 
-// Antal af steps for én omdrejning
+// Steps pr. omdrejning
 #define TOTAL_STEPS 2048
 
-// Prototyper
-void SetAngle(int16_t newAngle, uint8_t speed);
-void Deactivate();
+void SetAngle(int16_t angleDeg, uint8_t speedPercent);
+void Deactivate(void);

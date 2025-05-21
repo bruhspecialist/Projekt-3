@@ -3,66 +3,46 @@
 #include <string.h>
 #include <stdio.h>
 
-// Kommandotype
-typedef void (*CommandFunc)(char*[]);
+char* latestCmd = NULL;
+char* latestParams[MAX_PARAMS] = {0};
 
-typedef struct {
-    const char* name;
-    CommandFunc func;
-} CommandEntry;
-
-const char* latestCmd = "\0";
-
-// --- Kommando-implementeringer ---
-void Cmd_Test1(char* params[]) {
-    LED_BUILTIN_Write(1);
-    UART_USB_PutString("LED: ON\r\n");
+const char* UART_GetCommand() {
+    return latestCmd;
+}
+const char* UART_GetParameter(uint8_t parameter) {
+    return latestParams[parameter - 1];
 }
 
-void Cmd_Test2(char* params[]) {
-    LED_BUILTIN_Write(0);
-    UART_USB_PutString("LED: OFF\r\n");
+void UART_ResetBuffer() {
+    latestCmd = NULL;
+    memset(latestParams, 0, sizeof(latestParams));
 }
-
-// --- Kommandotabel ---
-static const CommandEntry commandTable[] = {
-    {"test1", Cmd_Test1},
-    {"test2", Cmd_Test2},
-    {NULL, NULL} // Terminator
-};
-
-const char* GetCmd() {return latestCmd;}
-void ResetCmd() {latestCmd = "\0";}
 
 void HandleStringReceived(char* receivedString)
 {
-    char msg[MAX_MSG_BUFFER_SIZE];
-    char* params[MAX_PARAMS] = {0};
-    int i = 0;
-
-    char* token = strtok(receivedString, "\r\n ");
-    if (!token) return;
-
-    char* command = token;
-    token = strtok(NULL, "\r\n ");
-    while (token && i < MAX_PARAMS) {
-        params[i++] = token;
-        token = strtok(NULL, "\r\n ");
-    }
+    UART_ResetBuffer(); // Nulstil først
     
-    latestCmd = command;
-    snprintf(msg, MAX_MSG_BUFFER_SIZE, "Received command: %s\r\n", command);
-    UART_USB_PutString(msg);
+    const char* delimiters = "\r\n ";
 
-    for (int j = 0; commandTable[j].name != NULL; ++j) {
-        if (strcmp(command, commandTable[j].name) == 0) {
-            //commandTable[j].func(params);
-            return;
-        }
-    }
+    char* token = strtok(receivedString, delimiters);
+    if (token == NULL) return;
 
-    UART_USB_PutString("Unknown command\r\n");
+    latestCmd = token;
+    
+    uint8_t i = 0;
+    while ((token = strtok(NULL, delimiters)) && i < MAX_PARAMS) latestParams[i++] = token;
+    
+//    char msg[MAX_MSG_BUFFER_SIZE];
+//    snprintf(msg, MAX_MSG_BUFFER_SIZE, "Received command: %s\r\n", latestCmd ? latestCmd : "(null)");
+//    UART_USB_PutString(msg);
+//    for (uint8_t j = 0; j < MAX_PARAMS; ++j) {
+//        if (latestParams[j]) {
+//            snprintf(msg, MAX_MSG_BUFFER_SIZE, "Received parameter: %s\r\n", latestParams[j]);
+//            UART_USB_PutString(msg);
+//        }
+//    }
 }
+
 
 static void UART_HandleRxByte(uint8_t byteReceived, char* buffer, uint8_t* index)
 {

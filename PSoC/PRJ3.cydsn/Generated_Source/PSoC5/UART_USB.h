@@ -137,6 +137,7 @@ void UART_USB_Wakeup(void) ;
     uint8 UART_USB_ReadTxStatus(void) ;
     void UART_USB_PutChar(uint8 txDataByte) ;
     void UART_USB_PutString(const char8 string[]) ;
+    void UART_USB_PutInt(int num) ;
     void UART_USB_PutArray(const uint8 string[], uint8 byteCount)
                                                             ;
     void UART_USB_PutCRLF(uint8 txDataByte) ;

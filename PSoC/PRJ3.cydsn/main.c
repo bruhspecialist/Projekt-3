@@ -11,18 +11,17 @@
 #include "CustomMath.h"
 
 #include "time.h"
-#include <stdio.h>
+#include "stdio.h"
 #include "stdbool.h"
 
-#define MAX_STR_SIZE 10
-
-#define COLOR_MEASUREMENTS 100  // Antal målinger
-#define COLOR_SENSING_TIME 1000 // ms
+#define MAX_STR_LENGTH 32
 
 typedef enum {
     STATE_IDLE,
     STATE_DROPPING,
-    STATE_SENSING,
+    STATE_COLOR_READING,
+    STATE_PUMPING,
+    STATE_RESET,
     STATE_ERROR
 } State;
 
@@ -32,15 +31,19 @@ int8_t setup() {
     int8_t err = 0;
     CyGlobalIntEnable;
     UART_Initialize();
-    //if (!ColorSensor_Initialize()) err = -1;
+    if (!ColorSensor_Initialize()) err = -1;
+    InitializeSimulationConditions(); // Midlertidig
     return err;
 }
 
-char cupSize[MAX_STR_SIZE] = "\0";
-
+char selectedCupSize[7] = "\0";
 void UpdateState() {
-    const char* cmd = GetCmd();
-    if (cmd == NULL) return;
+    const char* cmd = UART_GetCommand();
+    const char* param1 = UART_GetParameter(1);
+    const char* param2 = UART_GetParameter(2);
+    if (cmd != NULL) UART_ResetBuffer();
+    (void)param1; // Fjerner warning at de potentielt er ubrugt
+    (void)param2;
 
     switch (currentState) {
         case STATE_IDLE: {
@@ -51,68 +54,80 @@ void UpdateState() {
             ) {
                 if (ValidateCupSize()) {
                     UART_PI_PutString("ok");
-                    UART_USB_PutString("'ok' sent to pi\r\n");
-                    strncpy(cupSize, cmd, MAX_STR_SIZE);
-                    cupSize[sizeof(cupSize) - 1] = '\0';
+                    strncpy(selectedCupSize, cmd, 7); // 7 pga. medium er længst + nul-terminering
+                    selectedCupSize[sizeof(selectedCupSize) - 1] = '\0';
                     UART_USB_PutString("Cup size set to ");
-                    UART_USB_PutString(cupSize);
+                    UART_USB_PutString(selectedCupSize);
                     UART_USB_PutString("\r\n");
                 }
                 else {
                     UART_PI_PutString("err");
-                    UART_USB_PutString("'err' sent to pi\r\n");
+                    PrintError(-3);
+                    currentState = STATE_ERROR;
                 }
-                ResetCmd();
+                
             }
-            else if (strcmp(cmd, "test1") == 0) currentState = STATE_DROPPING;
+            else if (strcmp(cmd, "test1") == 0) {
+                if (strcmp(selectedCupSize, "\0") != 0) currentState = STATE_DROPPING;
+                else PrintError(-4);
+            }
             break;
         }
         case STATE_DROPPING: {
             UART_USB_PutString("Dropping die!\n");
-            SetAngle(180, 100);
+            SetAngle(-115, 100);
             SetAngle(0, 100);
             CyDelay(1000); // Tiden det tager terningen at nå til bunds
-            currentState = STATE_SENSING;
+            currentState = STATE_COLOR_READING;
             break;
         }
-        case STATE_SENSING:{
-            uint16_t colorFrequency[COLOR_MEASUREMENTS] = {0};
-            for (uint8_t i = 0; i < COLOR_MEASUREMENTS; ++i) {
-                uint8_t color_index;
-                //if (!ColorSensor_Read(&color_index)) PrintError(-2);
-                if (!SimulateColorSensor(&color_index)) PrintError(-2);
-                else colorFrequency[i]++;
-                CyDelay(COLOR_SENSING_TIME/COLOR_MEASUREMENTS);
+        case STATE_COLOR_READING: {
+            uint8_t color;
+            ColorSensor_ReadAverage(&color, 200);
+            char msg[MAX_STR_LENGTH];
+            snprintf(msg, MAX_STR_LENGTH, "Detected color: %s\r\n", ColorToString(color));
+            UART_USB_PutString(msg);
+            if (color != tone) {
+                memset(msg, 0, MAX_STR_LENGTH); // Rydder bufferen i msg
+                snprintf(msg, MAX_STR_LENGTH, "result %s", ColorToString(color));
+                UART_PI_PutString(msg);
+                currentState = STATE_PUMPING;
             }
-            
-            uint8_t mostFrequentColor = MostFrequent(colorFrequency);
-            
-            UART_USB_PutString("Detected color: \r\n");
-            UART_USB_PutString(ColorToString(mostFrequentColor));
-            UART_USB_PutString("\r\n");
+            else {
+                PrintError(-5);
+                currentState = STATE_ERROR;
+            }
+            break;
+        }
+        case STATE_PUMPING: {
+            /*  Pseudo-kode:
+                * Tænd pumpe én gang
+                * Vent indtil vægt er nået 80% af kendt grænse
+                * Sluk pumpe
+                                                                */
+            break;
+        }
+        case STATE_RESET: {
+            memset(selectedCupSize, 0, 7);
+            selectedCupSize[0] = '\0';
+            currentState = STATE_IDLE;
             break;
         }
         case STATE_ERROR: {
-            UART_USB_PutString("In ERROR state\n");
+            UART_USB_PutString("In ERROR state\r\n");
+            currentState = STATE_RESET;
             break;
         }
         default: {
-            currentState = STATE_IDLE;
+            currentState = STATE_ERROR; // Bør aldrig ske
             break;
         }
     }
 }
 
-
-//void loop() {
-//    TestColorSensor();
-//    CyDelay(100);
-//}
-
 int main() {
     int8_t err = setup();
     if (err == 0) UART_USB_PutString("PSoC has booted and successfully completed setup\r\n");
-    else {PrintError(err); return -1;
-    } // Stop hvis setup fejler
-    while (1) {UpdateState(); CyDelay(100);}
+    else {PrintError(err); return -1;} // Stop hvis setup fejler
+    while (1) UpdateState();
 }

@@ -1,4 +1,4 @@
-ARM GAS  C:\Users\alexa\AppData\Local\Temp\ccDtNEgi.s 			page 1
+ARM GAS  C:\Users\alexa\AppData\Local\Temp\ccmMHdsD.s 			page 1
 
 
    1              		.syntax unified
@@ -58,7 +58,7 @@ ARM GAS  C:\Users\alexa\AppData\Local\Temp\ccDtNEgi.s 			page 1
   44              		.loc 1 11 0
   45 000a 0021     		movs	r1, #0
   46              	.LVL1:
-ARM GAS  C:\Users\alexa\AppData\Local\Temp\ccDtNEgi.s 			page 2
+ARM GAS  C:\Users\alexa\AppData\Local\Temp\ccmMHdsD.s 			page 2
 
 
   47 000c 3920     		movs	r0, #57
@@ -118,7 +118,7 @@ ARM GAS  C:\Users\alexa\AppData\Local\Temp\ccDtNEgi.s 			page 1
   94 0046 F1D3     		bcc	.L5
   95              	.LBE2:
   17:ColorSensor.c ****     }
-ARM GAS  C:\Users\alexa\AppData\Local\Temp\ccDtNEgi.s 			page 3
+ARM GAS  C:\Users\alexa\AppData\Local\Temp\ccmMHdsD.s 			page 3
 
 
   18:ColorSensor.c ****     I2C_MasterSendStop();
@@ -178,7 +178,7 @@ ARM GAS  C:\Users\alexa\AppData\Local\Temp\ccDtNEgi.s 			page 1
  141 0004 0D46     		mov	r5, r1
   24:ColorSensor.c ****     if (I2C_MasterSendStart(ADDRESS, 0) != I2C_MSTR_NO_ERROR) return false;
  142              		.loc 1 24 0
-ARM GAS  C:\Users\alexa\AppData\Local\Temp\ccDtNEgi.s 			page 4
+ARM GAS  C:\Users\alexa\AppData\Local\Temp\ccmMHdsD.s 			page 4
 
 
  143 0006 0021     		movs	r1, #0
@@ -238,7 +238,7 @@ ARM GAS  C:\Users\alexa\AppData\Local\Temp\ccDtNEgi.s 			page 1
  189              	.LFB66:
   30:ColorSensor.c **** 
   31:ColorSensor.c **** bool ReadColorDataRegisters(uint16_t* rgbData) {
-ARM GAS  C:\Users\alexa\AppData\Local\Temp\ccDtNEgi.s 			page 5
+ARM GAS  C:\Users\alexa\AppData\Local\Temp\ccmMHdsD.s 			page 5
 
 
  190              		.loc 1 31 0
@@ -298,7 +298,7 @@ ARM GAS  C:\Users\alexa\AppData\Local\Temp\ccDtNEgi.s 			page 1
  233              		@ sp needed
  234 0042 10BD     		pop	{r4, pc}
  235              		.cfi_endproc
-ARM GAS  C:\Users\alexa\AppData\Local\Temp\ccDtNEgi.s 			page 6
+ARM GAS  C:\Users\alexa\AppData\Local\Temp\ccmMHdsD.s 			page 6
 
 
  236              	.LFE66:
@@ -358,7 +358,7 @@ ARM GAS  C:\Users\alexa\AppData\Local\Temp\ccDtNEgi.s 			page 1
  283 0000 38B5     		push	{r3, r4, r5, lr}
  284              		.cfi_def_cfa_offset 16
  285              		.cfi_offset 3, -16
-ARM GAS  C:\Users\alexa\AppData\Local\Temp\ccDtNEgi.s 			page 7
+ARM GAS  C:\Users\alexa\AppData\Local\Temp\ccmMHdsD.s 			page 7
 
 
  286              		.cfi_offset 4, -12
@@ -418,7 +418,7 @@ ARM GAS  C:\Users\alexa\AppData\Local\Temp\ccDtNEgi.s 			page 1
  332              	.L26:
  333 003a 00BF     		.align	2
  334              	.L25:
-ARM GAS  C:\Users\alexa\AppData\Local\Temp\ccDtNEgi.s 			page 8
+ARM GAS  C:\Users\alexa\AppData\Local\Temp\ccmMHdsD.s 			page 8
 
 
  335 003c 00000000 		.word	.LANCHOR0
@@ -478,7 +478,7 @@ ARM GAS  C:\Users\alexa\AppData\Local\Temp\ccDtNEgi.s 			page 1
   63:ColorSensor.c ****     if (g > max) max = g;
  380              		.loc 1 63 0
  381 0012 A846     		mov	r8, r5
-ARM GAS  C:\Users\alexa\AppData\Local\Temp\ccDtNEgi.s 			page 9
+ARM GAS  C:\Users\alexa\AppData\Local\Temp\ccmMHdsD.s 			page 9
 
 
  382 0014 00E0     		b	.L28
@@ -538,7 +538,7 @@ ARM GAS  C:\Users\alexa\AppData\Local\Temp\ccDtNEgi.s 			page 1
  428 004c 0B46     		mov	r3, r1
  429 004e 3046     		mov	r0, r6
  430 0050 3946     		mov	r1, r7
-ARM GAS  C:\Users\alexa\AppData\Local\Temp\ccDtNEgi.s 			page 10
+ARM GAS  C:\Users\alexa\AppData\Local\Temp\ccmMHdsD.s 			page 10
 
 
  431 0052 FFF7FEFF 		bl	__aeabi_dcmple
@@ -598,7 +598,7 @@ ARM GAS  C:\Users\alexa\AppData\Local\Temp\ccDtNEgi.s 			page 1
  481 00b4 FFF7FEFF 		bl	__aeabi_dmul
  482              	.LVL63:
  483 00b8 0646     		mov	r6, r0
-ARM GAS  C:\Users\alexa\AppData\Local\Temp\ccDtNEgi.s 			page 11
+ARM GAS  C:\Users\alexa\AppData\Local\Temp\ccmMHdsD.s 			page 11
 
 
  484 00ba 0F46     		mov	r7, r1
@@ -658,7 +658,7 @@ ARM GAS  C:\Users\alexa\AppData\Local\Temp\ccDtNEgi.s 			page 1
   78:ColorSensor.c ****     if (g > r && b > r) return cyan;
  536              		.loc 1 78 0 is_stmt 1
  537 0116 5545     		cmp	r5, r10
-ARM GAS  C:\Users\alexa\AppData\Local\Temp\ccDtNEgi.s 			page 12
+ARM GAS  C:\Users\alexa\AppData\Local\Temp\ccmMHdsD.s 			page 12
 
 
  538 0118 01D2     		bcs	.L40
@@ -718,7 +718,7 @@ ARM GAS  C:\Users\alexa\AppData\Local\Temp\ccDtNEgi.s 			page 1
  584              	.L51:
   77:ColorSensor.c ****     if (g > r && b > r) return cyan;
  585              		.loc 1 77 0
-ARM GAS  C:\Users\alexa\AppData\Local\Temp\ccDtNEgi.s 			page 13
+ARM GAS  C:\Users\alexa\AppData\Local\Temp\ccmMHdsD.s 			page 13
 
 
  586 014a 0420     		movs	r0, #4
@@ -778,7 +778,7 @@ ARM GAS  C:\Users\alexa\AppData\Local\Temp\ccDtNEgi.s 			page 1
  633              		@ args = 0, pretend = 0, frame = 0
  634              		@ frame_needed = 0, uses_anonymous_args = 0
  635              		@ link register save eliminated.
-ARM GAS  C:\Users\alexa\AppData\Local\Temp\ccDtNEgi.s 			page 14
+ARM GAS  C:\Users\alexa\AppData\Local\Temp\ccmMHdsD.s 			page 14
 
 
  636              	.LVL74:
@@ -838,7 +838,7 @@ ARM GAS  C:\Users\alexa\AppData\Local\Temp\ccDtNEgi.s 			page 1
  682 0024 0748     		ldr	r0, .L74+20
  683              	.LVL85:
  684 0026 7047     		bx	lr
-ARM GAS  C:\Users\alexa\AppData\Local\Temp\ccDtNEgi.s 			page 15
+ARM GAS  C:\Users\alexa\AppData\Local\Temp\ccmMHdsD.s 			page 15
 
 
  685              	.LVL86:
@@ -898,7 +898,7 @@ ARM GAS  C:\Users\alexa\AppData\Local\Temp\ccDtNEgi.s 			page 1
   99:ColorSensor.c ****     uint16_t rgbData[3];
  100:ColorSensor.c ****     uint16_t rgbNorm[3];
  101:ColorSensor.c ****     if (!ReadColorDataRegisters(rgbData)) return false;
-ARM GAS  C:\Users\alexa\AppData\Local\Temp\ccDtNEgi.s 			page 16
+ARM GAS  C:\Users\alexa\AppData\Local\Temp\ccmMHdsD.s 			page 16
 
 
  733              		.loc 1 101 0
@@ -932,2208 +932,2668 @@ ARM GAS  C:\Users\alexa\AppData\Local\Temp\ccDtNEgi.s 			page 1
  757              		.cfi_endproc
  758              	.LFE71:
  759              		.size	ColorSensor_Read, .-ColorSensor_Read
- 760 0026 00BF     		.section	.text.ColorSensor_Initialize,"ax",%progbits
+ 760 0026 00BF     		.section	.text.ColorSensor_ReadAverage,"ax",%progbits
  761              		.align	2
- 762              		.global	ColorSensor_Initialize
+ 762              		.global	ColorSensor_ReadAverage
  763              		.thumb
  764              		.thumb_func
- 765              		.type	ColorSensor_Initialize, %function
- 766              	ColorSensor_Initialize:
+ 765              		.type	ColorSensor_ReadAverage, %function
+ 766              	ColorSensor_ReadAverage:
  767              	.LFB72:
  106:ColorSensor.c **** 
- 107:ColorSensor.c **** bool ColorSensor_Initialize()
- 108:ColorSensor.c **** {
- 768              		.loc 1 108 0
+ 107:ColorSensor.c **** bool ColorSensor_ReadAverage(uint8_t* color, uint16_t measurements) {
+ 768              		.loc 1 107 0
  769              		.cfi_startproc
- 770              		@ args = 0, pretend = 0, frame = 0
+ 770              		@ args = 0, pretend = 0, frame = 16
  771              		@ frame_needed = 0, uses_anonymous_args = 0
- 772 0000 08B5     		push	{r3, lr}
- 773              		.cfi_def_cfa_offset 8
- 774              		.cfi_offset 3, -8
- 775              		.cfi_offset 14, -4
- 109:ColorSensor.c ****     I2C_Start();
- 776              		.loc 1 109 0
- 777 0002 FFF7FEFF 		bl	I2C_Start
- 778              	.LVL95:
- 110:ColorSensor.c ****     if (!WriteRegister(0x81, 0x1D)) return false; // ?
- 779              		.loc 1 110 0
- 780 0006 1D21     		movs	r1, #29
-ARM GAS  C:\Users\alexa\AppData\Local\Temp\ccDtNEgi.s 			page 17
-
-
- 781 0008 8120     		movs	r0, #129
- 782 000a FFF7FEFF 		bl	WriteRegister
- 783              	.LVL96:
- 784 000e 0346     		mov	r3, r0
- 785 0010 80B1     		cbz	r0, .L80
- 111:ColorSensor.c ****     if (!WriteRegister(0xCA, 0x57)) return false; // ?
- 786              		.loc 1 111 0
- 787 0012 5721     		movs	r1, #87
- 788 0014 CA20     		movs	r0, #202
- 789 0016 FFF7FEFF 		bl	WriteRegister
- 790              	.LVL97:
- 791 001a 0346     		mov	r3, r0
- 792 001c 50B1     		cbz	r0, .L80
- 112:ColorSensor.c ****     if (!WriteRegister(0xCB, 0x02)) return false; // ?
- 793              		.loc 1 112 0
- 794 001e 0221     		movs	r1, #2
- 795 0020 CB20     		movs	r0, #203
- 796 0022 FFF7FEFF 		bl	WriteRegister
- 797              	.LVL98:
- 798 0026 0346     		mov	r3, r0
- 799 0028 20B1     		cbz	r0, .L80
- 113:ColorSensor.c ****     if (!WriteRegister(0x80, 0b00000011)) return false; // Enable AEN & PON bits
- 800              		.loc 1 113 0
- 801 002a 0321     		movs	r1, #3
- 802 002c 8020     		movs	r0, #128
- 803 002e FFF7FEFF 		bl	WriteRegister
- 804              	.LVL99:
- 805 0032 0346     		mov	r3, r0
- 806              	.L80:
- 114:ColorSensor.c ****     return true;
- 115:ColorSensor.c **** }...
- 807              		.loc 1 115 0
- 808 0034 1846     		mov	r0, r3
- 809 0036 08BD     		pop	{r3, pc}
- 810              		.cfi_endproc
- 811              	.LFE72:
- 812              		.size	ColorSensor_Initialize, .-ColorSensor_Initialize
- 813              		.global	rgb_ref
- 814              		.section	.rodata
- 815              		.align	2
- 816              		.set	.LANCHOR0,. + 0
- 817              		.type	rgb_ref, %object
- 818              		.size	rgb_ref, 6
- 819              	rgb_ref:
- 820 0000 6244     		.short	17506
- 821 0002 0443     		.short	17156
- 822 0004 D03A     		.short	15056
- 823              		.section	.rodata.str1.4,"aMS",%progbits,1
- 824              		.align	2
- 825              	.LC0:
- 826 0000 746F6E65 		.ascii	"tone\000"
- 826      00
- 827 0005 000000   		.space	3
- 828              	.LC1:
- 829 0008 72656400 		.ascii	"red\000"
- 830              	.LC2:
- 831 000c 67726565 		.ascii	"green\000"
-ARM GAS  C:\Users\alexa\AppData\Local\Temp\ccDtNEgi.s 			page 18
-
-
- 831      6E00
- 832 0012 0000     		.space	2
- 833              	.LC3:
- 834 0014 626C7565 		.ascii	"blue\000"
- 834      00
- 835 0019 000000   		.space	3
- 836              	.LC4:
- 837 001c 79656C6C 		.ascii	"yellow\000"
- 837      6F7700
- 838 0023 00       		.space	1
- 839              	.LC5:
- 840 0024 6379616E 		.ascii	"cyan\000"
- 840      00
- 841 0029 000000   		.space	3
- 842              	.LC6:
- 843 002c 6D616765 		.ascii	"magenta\000"
- 843      6E746100 
- 844              	.LC7:
- 845 0034 6572726F 		.ascii	"error\000"
- 845      7200
- 846              		.text
- 847              	.Letext0:
- 848              		.file 2 "c:\\program files (x86)\\cypress\\psoc creator\\4.4\\psoc creator\\import\\gnu\\arm\\5.4.
- 849              		.file 3 "c:\\program files (x86)\\cypress\\psoc creator\\4.4\\psoc creator\\import\\gnu\\arm\\5.4.
- 850              		.file 4 "Generated_Source\\PSoC5/core_cm3.h"
- 851              		.file 5 "Generated_Source\\PSoC5/I2C.h"
- 852              		.file 6 "ColorSensor.h"
- 853              		.section	.debug_info,"",%progbits
- 854              	.Ldebug_info0:
- 855 0000 1A060000 		.4byte	0x61a
- 856 0004 0400     		.2byte	0x4
- 857 0006 00000000 		.4byte	.Ldebug_abbrev0
- 858 000a 04       		.byte	0x4
- 859 000b 01       		.uleb128 0x1
- 860 000c 9A020000 		.4byte	.LASF55
- 861 0010 0C       		.byte	0xc
- 862 0011 E0010000 		.4byte	.LASF56
- 863 0015 47020000 		.4byte	.LASF57
- 864 0019 00000000 		.4byte	.Ldebug_ranges0+0
- 865 001d 00000000 		.4byte	0
- 866 0021 00000000 		.4byte	.Ldebug_line0
- 867 0025 02       		.uleb128 0x2
- 868 0026 04       		.byte	0x4
- 869 0027 07       		.byte	0x7
- 870 0028 79010000 		.4byte	.LASF0
- 871 002c 02       		.uleb128 0x2
- 872 002d 01       		.byte	0x1
- 873 002e 06       		.byte	0x6
- 874 002f 45010000 		.4byte	.LASF1
- 875 0033 03       		.uleb128 0x3
- 876 0034 52030000 		.4byte	.LASF4
- 877 0038 02       		.byte	0x2
- 878 0039 1D       		.byte	0x1d
- 879 003a 3E000000 		.4byte	0x3e
- 880 003e 02       		.uleb128 0x2
- 881 003f 01       		.byte	0x1
- 882 0040 08       		.byte	0x8
-ARM GAS  C:\Users\alexa\AppData\Local\Temp\ccDtNEgi.s 			page 19
-
-
- 883 0041 1D010000 		.4byte	.LASF2
- 884 0045 02       		.uleb128 0x2
- 885 0046 02       		.byte	0x2
- 886 0047 05       		.byte	0x5
- 887 0048 16000000 		.4byte	.LASF3
- 888 004c 03       		.uleb128 0x3
- 889 004d 3A000000 		.4byte	.LASF5
- 890 0051 02       		.byte	0x2
- 891 0052 2B       		.byte	0x2b
- 892 0053 57000000 		.4byte	0x57
- 893 0057 02       		.uleb128 0x2
- 894 0058 02       		.byte	0x2
- 895 0059 07       		.byte	0x7
- 896 005a C7010000 		.4byte	.LASF6
- 897 005e 03       		.uleb128 0x3
- 898 005f 3D020000 		.4byte	.LASF7
- 899 0063 02       		.byte	0x2
- 900 0064 3F       		.byte	0x3f
- 901 0065 69000000 		.4byte	0x69
- 902 0069 02       		.uleb128 0x2
- 903 006a 04       		.byte	0x4
- 904 006b 05       		.byte	0x5
- 905 006c AF000000 		.4byte	.LASF8
- 906 0070 03       		.uleb128 0x3
- 907 0071 32020000 		.4byte	.LASF9
- 908 0075 02       		.byte	0x2
- 909 0076 41       		.byte	0x41
- 910 0077 7B000000 		.4byte	0x7b
- 911 007b 02       		.uleb128 0x2
- 912 007c 04       		.byte	0x4
- 913 007d 07       		.byte	0x7
- 914 007e 13020000 		.4byte	.LASF10
- 915 0082 02       		.uleb128 0x2
- 916 0083 08       		.byte	0x8
- 917 0084 05       		.byte	0x5
- 918 0085 90000000 		.4byte	.LASF11
- 919 0089 02       		.uleb128 0x2
- 920 008a 08       		.byte	0x8
- 921 008b 07       		.byte	0x7
- 922 008c 59010000 		.4byte	.LASF12
- 923 0090 04       		.uleb128 0x4
- 924 0091 04       		.byte	0x4
- 925 0092 05       		.byte	0x5
- 926 0093 696E7400 		.ascii	"int\000"
- 927 0097 03       		.uleb128 0x3
- 928 0098 4F000000 		.4byte	.LASF13
- 929 009c 03       		.byte	0x3
- 930 009d 18       		.byte	0x18
- 931 009e 33000000 		.4byte	0x33
- 932 00a2 03       		.uleb128 0x3
- 933 00a3 AE010000 		.4byte	.LASF14
- 934 00a7 03       		.byte	0x3
- 935 00a8 24       		.byte	0x24
- 936 00a9 4C000000 		.4byte	0x4c
- 937 00ad 03       		.uleb128 0x3
- 938 00ae 51010000 		.4byte	.LASF15
- 939 00b2 03       		.byte	0x3
-ARM GAS  C:\Users\alexa\AppData\Local\Temp\ccDtNEgi.s 			page 20
-
-
- 940 00b3 2C       		.byte	0x2c
- 941 00b4 5E000000 		.4byte	0x5e
- 942 00b8 03       		.uleb128 0x3
- 943 00b9 70010000 		.4byte	.LASF16
- 944 00bd 03       		.byte	0x3
- 945 00be 30       		.byte	0x30
- 946 00bf 70000000 		.4byte	0x70
- 947 00c3 02       		.uleb128 0x2
- 948 00c4 04       		.byte	0x4
- 949 00c5 04       		.byte	0x4
- 950 00c6 82000000 		.4byte	.LASF17
- 951 00ca 02       		.uleb128 0x2
- 952 00cb 08       		.byte	0x8
- 953 00cc 04       		.byte	0x4
- 954 00cd 2B020000 		.4byte	.LASF18
- 955 00d1 02       		.uleb128 0x2
- 956 00d2 01       		.byte	0x1
- 957 00d3 08       		.byte	0x8
- 958 00d4 A9010000 		.4byte	.LASF19
- 959 00d8 02       		.uleb128 0x2
- 960 00d9 08       		.byte	0x8
- 961 00da 04       		.byte	0x4
- 962 00db 11010000 		.4byte	.LASF20
- 963 00df 02       		.uleb128 0x2
- 964 00e0 04       		.byte	0x4
- 965 00e1 07       		.byte	0x7
- 966 00e2 C1000000 		.4byte	.LASF21
- 967 00e6 05       		.uleb128 0x5
- 968 00e7 04       		.byte	0x4
- 969 00e8 EC000000 		.4byte	0xec
- 970 00ec 06       		.uleb128 0x6
- 971 00ed D1000000 		.4byte	0xd1
- 972 00f1 07       		.uleb128 0x7
- 973 00f2 81020000 		.4byte	.LASF58
- 974 00f6 01       		.byte	0x1
- 975 00f7 3E000000 		.4byte	0x3e
- 976 00fb 06       		.byte	0x6
- 977 00fc 12       		.byte	0x12
- 978 00fd 2C010000 		.4byte	0x12c
- 979 0101 08       		.uleb128 0x8
- 980 0102 88020000 		.4byte	.LASF22
- 981 0106 00       		.byte	0
- 982 0107 09       		.uleb128 0x9
- 983 0108 72656400 		.ascii	"red\000"
- 984 010c 01       		.byte	0x1
- 985 010d 08       		.uleb128 0x8
- 986 010e E9000000 		.4byte	.LASF23
- 987 0112 02       		.byte	0x2
- 988 0113 08       		.uleb128 0x8
- 989 0114 4A000000 		.4byte	.LASF24
- 990 0118 03       		.byte	0x3
- 991 0119 08       		.uleb128 0x8
- 992 011a 2B010000 		.4byte	.LASF25
- 993 011e 04       		.byte	0x4
- 994 011f 08       		.uleb128 0x8
- 995 0120 C2010000 		.4byte	.LASF26
- 996 0124 05       		.byte	0x5
-ARM GAS  C:\Users\alexa\AppData\Local\Temp\ccDtNEgi.s 			page 21
-
-
- 997 0125 08       		.uleb128 0x8
- 998 0126 CA000000 		.4byte	.LASF27
- 999 012a 06       		.byte	0x6
- 1000 012b 00       		.byte	0
- 1001 012c 0A       		.uleb128 0xa
- 1002 012d 5F000000 		.4byte	.LASF31
- 1003 0131 01       		.byte	0x1
- 1004 0132 09       		.byte	0x9
- 1005 0133 FB010000 		.4byte	0x1fb
- 1006 0137 00000000 		.4byte	.LFB64
- 1007 013b 64000000 		.4byte	.LFE64-.LFB64
- 1008 013f 01       		.uleb128 0x1
- 1009 0140 9C       		.byte	0x9c
- 1010 0141 FB010000 		.4byte	0x1fb
- 1011 0145 0B       		.uleb128 0xb
- 1012 0146 52454700 		.ascii	"REG\000"
- 1013 014a 01       		.byte	0x1
- 1014 014b 09       		.byte	0x9
- 1015 014c 97000000 		.4byte	0x97
- 1016 0150 00000000 		.4byte	.LLST0
- 1017 0154 0C       		.uleb128 0xc
- 1018 0155 78000000 		.4byte	.LASF28
- 1019 0159 01       		.byte	0x1
- 1020 015a 09       		.byte	0x9
- 1021 015b 97000000 		.4byte	0x97
- 1022 015f 21000000 		.4byte	.LLST1
- 1023 0163 0C       		.uleb128 0xc
- 1024 0164 25020000 		.4byte	.LASF29
- 1025 0168 01       		.byte	0x1
- 1026 0169 09       		.byte	0x9
- 1027 016a 02020000 		.4byte	0x202
- 1028 016e 42000000 		.4byte	.LLST2
- 1029 0172 0D       		.uleb128 0xd
- 1030 0173 2C000000 		.4byte	.LBB2
- 1031 0177 1C000000 		.4byte	.LBE2-.LBB2
- 1032 017b AB010000 		.4byte	0x1ab
- 1033 017f 0E       		.uleb128 0xe
- 1034 0180 6900     		.ascii	"i\000"
- 1035 0182 01       		.byte	0x1
- 1036 0183 0E       		.byte	0xe
- 1037 0184 97000000 		.4byte	0x97
- 1038 0188 60000000 		.4byte	.LLST3
- 1039 018c 0F       		.uleb128 0xf
- 1040 018d 2C000000 		.4byte	.LBB3
- 1041 0191 14000000 		.4byte	.LBE3-.LBB3
- 1042 0195 10       		.uleb128 0x10
- 1043 0196 B7010000 		.4byte	.LASF59
- 1044 019a 01       		.byte	0x1
- 1045 019b 0F       		.byte	0xf
- 1046 019c FB010000 		.4byte	0x1fb
- 1047 01a0 11       		.uleb128 0x11
- 1048 01a1 3E000000 		.4byte	.LVL7
- 1049 01a5 DB050000 		.4byte	0x5db
- 1050 01a9 00       		.byte	0
- 1051 01aa 00       		.byte	0
- 1052 01ab 12       		.uleb128 0x12
- 1053 01ac 12000000 		.4byte	.LVL3
-ARM GAS  C:\Users\alexa\AppData\Local\Temp\ccDtNEgi.s 			page 22
-
-
- 1054 01b0 E6050000 		.4byte	0x5e6
- 1055 01b4 C4010000 		.4byte	0x1c4
- 1056 01b8 13       		.uleb128 0x13
- 1057 01b9 01       		.uleb128 0x1
- 1058 01ba 50       		.byte	0x50
- 1059 01bb 02       		.uleb128 0x2
- 1060 01bc 08       		.byte	0x8
- 1061 01bd 39       		.byte	0x39
- 1062 01be 13       		.uleb128 0x13
- 1063 01bf 01       		.uleb128 0x1
- 1064 01c0 51       		.byte	0x51
- 1065 01c1 01       		.uleb128 0x1
- 1066 01c2 30       		.byte	0x30
- 1067 01c3 00       		.byte	0
- 1068 01c4 12       		.uleb128 0x12
- 1069 01c5 1A000000 		.4byte	.LVL4
- 1070 01c9 F1050000 		.4byte	0x5f1
- 1071 01cd D8010000 		.4byte	0x1d8
- 1072 01d1 13       		.uleb128 0x13
- 1073 01d2 01       		.uleb128 0x1
- 1074 01d3 50       		.byte	0x50
- 1075 01d4 02       		.uleb128 0x2
- 1076 01d5 74       		.byte	0x74
- 1077 01d6 00       		.sleb128 0
- 1078 01d7 00       		.byte	0
- 1079 01d8 12       		.uleb128 0x12
- 1080 01d9 24000000 		.4byte	.LVL5
- 1081 01dd FC050000 		.4byte	0x5fc
- 1082 01e1 F1010000 		.4byte	0x1f1
- 1083 01e5 13       		.uleb128 0x13
- 1084 01e6 01       		.uleb128 0x1
- 1085 01e7 50       		.byte	0x50
- 1086 01e8 02       		.uleb128 0x2
- 1087 01e9 08       		.byte	0x8
- 1088 01ea 39       		.byte	0x39
- 1089 01eb 13       		.uleb128 0x13
- 1090 01ec 01       		.uleb128 0x1
- 1091 01ed 51       		.byte	0x51
- 1092 01ee 01       		.uleb128 0x1
- 1093 01ef 31       		.byte	0x31
- 1094 01f0 00       		.byte	0
- 1095 01f1 11       		.uleb128 0x11
- 1096 01f2 4C000000 		.4byte	.LVL10
- 1097 01f6 07060000 		.4byte	0x607
- 1098 01fa 00       		.byte	0
- 1099 01fb 02       		.uleb128 0x2
- 1100 01fc 01       		.byte	0x1
- 1101 01fd 02       		.byte	0x2
- 1102 01fe DA010000 		.4byte	.LASF30
- 1103 0202 05       		.uleb128 0x5
- 1104 0203 04       		.byte	0x4
- 1105 0204 97000000 		.4byte	0x97
- 1106 0208 0A       		.uleb128 0xa
- 1107 0209 EE010000 		.4byte	.LASF32
- 1108 020d 01       		.byte	0x1
- 1109 020e 16       		.byte	0x16
- 1110 020f FB010000 		.4byte	0x1fb
-ARM GAS  C:\Users\alexa\AppData\Local\Temp\ccDtNEgi.s 			page 23
-
-
- 1111 0213 00000000 		.4byte	.LFB65
- 1112 0217 34000000 		.4byte	.LFE65-.LFB65
- 1113 021b 01       		.uleb128 0x1
- 1114 021c 9C       		.byte	0x9c
- 1115 021d 8A020000 		.4byte	0x28a
- 1116 0221 0B       		.uleb128 0xb
- 1117 0222 52454700 		.ascii	"REG\000"
- 1118 0226 01       		.byte	0x1
- 1119 0227 16       		.byte	0x16
- 1120 0228 97000000 		.4byte	0x97
- 1121 022c 7E000000 		.4byte	.LLST4
- 1122 0230 0C       		.uleb128 0xc
- 1123 0231 35000000 		.4byte	.LASF33
- 1124 0235 01       		.byte	0x1
- 1125 0236 16       		.byte	0x16
- 1126 0237 97000000 		.4byte	0x97
- 1127 023b 9F000000 		.4byte	.LLST5
- 1128 023f 12       		.uleb128 0x12
- 1129 0240 0E000000 		.4byte	.LVL17
- 1130 0244 E6050000 		.4byte	0x5e6
- 1131 0248 58020000 		.4byte	0x258
- 1132 024c 13       		.uleb128 0x13
- 1133 024d 01       		.uleb128 0x1
- 1134 024e 50       		.byte	0x50
- 1135 024f 02       		.uleb128 0x2
- 1136 0250 08       		.byte	0x8
- 1137 0251 39       		.byte	0x39
- 1138 0252 13       		.uleb128 0x13
- 1139 0253 01       		.uleb128 0x1
- 1140 0254 51       		.byte	0x51
- 1141 0255 01       		.uleb128 0x1
- 1142 0256 30       		.byte	0x30
- 1143 0257 00       		.byte	0
- 1144 0258 12       		.uleb128 0x12
- 1145 0259 16000000 		.4byte	.LVL18
- 1146 025d F1050000 		.4byte	0x5f1
- 1147 0261 6C020000 		.4byte	0x26c
- 1148 0265 13       		.uleb128 0x13
- 1149 0266 01       		.uleb128 0x1
- 1150 0267 50       		.byte	0x50
- 1151 0268 02       		.uleb128 0x2
- 1152 0269 74       		.byte	0x74
- 1153 026a 00       		.sleb128 0
- 1154 026b 00       		.byte	0
- 1155 026c 12       		.uleb128 0x12
- 1156 026d 1E000000 		.4byte	.LVL19
- 1157 0271 F1050000 		.4byte	0x5f1
- 1158 0275 80020000 		.4byte	0x280
- 1159 0279 13       		.uleb128 0x13
- 1160 027a 01       		.uleb128 0x1
- 1161 027b 50       		.byte	0x50
- 1162 027c 02       		.uleb128 0x2
- 1163 027d 75       		.byte	0x75
- 1164 027e 00       		.sleb128 0
- 1165 027f 00       		.byte	0
- 1166 0280 11       		.uleb128 0x11
- 1167 0281 24000000 		.4byte	.LVL20
-ARM GAS  C:\Users\alexa\AppData\Local\Temp\ccDtNEgi.s 			page 24
-
-
- 1168 0285 07060000 		.4byte	0x607
- 1169 0289 00       		.byte	0
- 1170 028a 0A       		.uleb128 0xa
- 1171 028b D2000000 		.4byte	.LASF34
- 1172 028f 01       		.byte	0x1
- 1173 0290 1F       		.byte	0x1f
- 1174 0291 FB010000 		.4byte	0x1fb
- 1175 0295 00000000 		.4byte	.LFB66
- 1176 0299 44000000 		.4byte	.LFE66-.LFB66
- 1177 029d 01       		.uleb128 0x1
- 1178 029e 9C       		.byte	0x9c
- 1179 029f E9020000 		.4byte	0x2e9
- 1180 02a3 0C       		.uleb128 0xc
- 1181 02a4 57000000 		.4byte	.LASF35
- 1182 02a8 01       		.byte	0x1
- 1183 02a9 1F       		.byte	0x1f
- 1184 02aa E9020000 		.4byte	0x2e9
- 1185 02ae C0000000 		.4byte	.LLST6
- 1186 02b2 14       		.uleb128 0x14
- 1187 02b3 78000000 		.4byte	.LASF28
- 1188 02b7 01       		.byte	0x1
- 1189 02b8 20       		.byte	0x20
- 1190 02b9 97000000 		.4byte	0x97
- 1191 02bd 0B       		.byte	0xb
- 1192 02be 15       		.uleb128 0x15
- 1193 02bf 35000000 		.4byte	.LASF33
- 1194 02c3 01       		.byte	0x1
- 1195 02c4 21       		.byte	0x21
- 1196 02c5 EF020000 		.4byte	0x2ef
- 1197 02c9 DE000000 		.4byte	.LLST7
- 1198 02cd 16       		.uleb128 0x16
- 1199 02ce 10000000 		.4byte	.LVL25
- 1200 02d2 2C010000 		.4byte	0x12c
- 1201 02d6 13       		.uleb128 0x13
- 1202 02d7 01       		.uleb128 0x1
- 1203 02d8 50       		.byte	0x50
- 1204 02d9 02       		.uleb128 0x2
- 1205 02da 09       		.byte	0x9
- 1206 02db 95       		.byte	0x95
- 1207 02dc 13       		.uleb128 0x13
- 1208 02dd 01       		.uleb128 0x1
- 1209 02de 51       		.byte	0x51
- 1210 02df 01       		.uleb128 0x1
- 1211 02e0 3B       		.byte	0x3b
- 1212 02e1 13       		.uleb128 0x13
- 1213 02e2 01       		.uleb128 0x1
- 1214 02e3 52       		.byte	0x52
- 1215 02e4 02       		.uleb128 0x2
- 1216 02e5 91       		.byte	0x91
- 1217 02e6 6C       		.sleb128 -20
- 1218 02e7 00       		.byte	0
- 1219 02e8 00       		.byte	0
- 1220 02e9 05       		.uleb128 0x5
- 1221 02ea 04       		.byte	0x4
- 1222 02eb A2000000 		.4byte	0xa2
- 1223 02ef 17       		.uleb128 0x17
- 1224 02f0 97000000 		.4byte	0x97
-ARM GAS  C:\Users\alexa\AppData\Local\Temp\ccDtNEgi.s 			page 25
-
-
- 1225 02f4 00030000 		.4byte	0x300
- 1226 02f8 18       		.uleb128 0x18
- 1227 02f9 DF000000 		.4byte	0xdf
- 1228 02fd 01       		.uleb128 0x1
- 1229 02fe 3A       		.byte	0x3a
- 1230 02ff 00       		.byte	0
- 1231 0300 0A       		.uleb128 0xa
- 1232 0301 28030000 		.4byte	.LASF36
- 1233 0305 01       		.byte	0x1
- 1234 0306 2C       		.byte	0x2c
- 1235 0307 A2000000 		.4byte	0xa2
- 1236 030b 00000000 		.4byte	.LFB67
- 1237 030f 14000000 		.4byte	.LFE67-.LFB67
- 1238 0313 01       		.uleb128 0x1
- 1239 0314 9C       		.byte	0x9c
- 1240 0315 36030000 		.4byte	0x336
- 1241 0319 0B       		.uleb128 0xb
- 1242 031a 72676200 		.ascii	"rgb\000"
- 1243 031e 01       		.byte	0x1
- 1244 031f 2C       		.byte	0x2c
- 1245 0320 36030000 		.4byte	0x336
- 1246 0324 0A010000 		.4byte	.LLST8
- 1247 0328 19       		.uleb128 0x19
- 1248 0329 6D617800 		.ascii	"max\000"
- 1249 032d 01       		.byte	0x1
- 1250 032e 2D       		.byte	0x2d
- 1251 032f A2000000 		.4byte	0xa2
- 1252 0333 01       		.uleb128 0x1
- 1253 0334 53       		.byte	0x53
- 1254 0335 00       		.byte	0
- 1255 0336 05       		.uleb128 0x5
- 1256 0337 04       		.byte	0x4
- 1257 0338 3C030000 		.4byte	0x33c
- 1258 033c 06       		.uleb128 0x6
- 1259 033d A2000000 		.4byte	0xa2
- 1260 0341 1A       		.uleb128 0x1a
- 1261 0342 26000000 		.4byte	.LASF45
- 1262 0346 01       		.byte	0x1
- 1263 0347 31       		.byte	0x31
- 1264 0348 00000000 		.4byte	.LFB68
- 1265 034c 40000000 		.4byte	.LFE68-.LFB68
- 1266 0350 01       		.uleb128 0x1
- 1267 0351 9C       		.byte	0x9c
- 1268 0352 C9030000 		.4byte	0x3c9
- 1269 0356 0B       		.uleb128 0xb
- 1270 0357 72676200 		.ascii	"rgb\000"
- 1271 035b 01       		.byte	0x1
- 1272 035c 31       		.byte	0x31
- 1273 035d 36030000 		.4byte	0x336
- 1274 0361 2B010000 		.4byte	.LLST9
- 1275 0365 0C       		.uleb128 0xc
- 1276 0366 A1010000 		.4byte	.LASF37
- 1277 036a 01       		.byte	0x1
- 1278 036b 31       		.byte	0x31
- 1279 036c E9020000 		.4byte	0x2e9
- 1280 0370 57010000 		.4byte	.LLST10
- 1281 0374 1B       		.uleb128 0x1b
-ARM GAS  C:\Users\alexa\AppData\Local\Temp\ccDtNEgi.s 			page 26
-
-
- 1282 0375 86010000 		.4byte	.LASF38
- 1283 0379 01       		.byte	0x1
- 1284 037a 32       		.byte	0x32
- 1285 037b A2000000 		.4byte	0xa2
- 1286 037f 01       		.uleb128 0x1
- 1287 0380 50       		.byte	0x50
- 1288 0381 0D       		.uleb128 0xd
- 1289 0382 0C000000 		.4byte	.LBB4
- 1290 0386 2C000000 		.4byte	.LBE4-.LBB4
- 1291 038a B5030000 		.4byte	0x3b5
- 1292 038e 0E       		.uleb128 0xe
- 1293 038f 6900     		.ascii	"i\000"
- 1294 0391 01       		.byte	0x1
- 1295 0392 33       		.byte	0x33
- 1296 0393 97000000 		.4byte	0x97
- 1297 0397 83010000 		.4byte	.LLST11
- 1298 039b 0F       		.uleb128 0xf
- 1299 039c 10000000 		.4byte	.LBB5
- 1300 03a0 20000000 		.4byte	.LBE5-.LBB5
- 1301 03a4 15       		.uleb128 0x15
- 1302 03a5 45000000 		.4byte	.LASF39
- 1303 03a9 01       		.byte	0x1
- 1304 03aa 34       		.byte	0x34
- 1305 03ab B8000000 		.4byte	0xb8
- 1306 03af AD010000 		.4byte	.LLST12
- 1307 03b3 00       		.byte	0
- 1308 03b4 00       		.byte	0
- 1309 03b5 16       		.uleb128 0x16
- 1310 03b6 0C000000 		.4byte	.LVL31
- 1311 03ba 00030000 		.4byte	0x300
- 1312 03be 13       		.uleb128 0x13
- 1313 03bf 01       		.uleb128 0x1
- 1314 03c0 50       		.byte	0x50
- 1315 03c1 05       		.uleb128 0x5
- 1316 03c2 03       		.byte	0x3
- 1317 03c3 00000000 		.4byte	.LANCHOR0
- 1318 03c7 00       		.byte	0
- 1319 03c8 00       		.byte	0
- 1320 03c9 1C       		.uleb128 0x1c
- 1321 03ca 6C000000 		.4byte	.LASF40
- 1322 03ce 01       		.byte	0x1
- 1323 03cf 39       		.byte	0x39
- 1324 03d0 97000000 		.4byte	0x97
- 1325 03d4 00000000 		.4byte	.LFB69
- 1326 03d8 74010000 		.4byte	.LFE69-.LFB69
- 1327 03dc 01       		.uleb128 0x1
- 1328 03dd 9C       		.byte	0x9c
- 1329 03de 5F040000 		.4byte	0x45f
- 1330 03e2 0B       		.uleb128 0xb
- 1331 03e3 72676200 		.ascii	"rgb\000"
- 1332 03e7 01       		.byte	0x1
- 1333 03e8 39       		.byte	0x39
- 1334 03e9 36030000 		.4byte	0x336
- 1335 03ed F2010000 		.4byte	.LLST13
- 1336 03f1 1D       		.uleb128 0x1d
- 1337 03f2 746F6C00 		.ascii	"tol\000"
- 1338 03f6 01       		.byte	0x1
-ARM GAS  C:\Users\alexa\AppData\Local\Temp\ccDtNEgi.s 			page 27
-
-
- 1339 03f7 3A       		.byte	0x3a
- 1340 03f8 5F040000 		.4byte	0x45f
- 1341 03fc 08       		.byte	0x8
- 1342 03fd 9A999999 		.4byte	0x9999999a
- 1343 0401 9999C93F 		.4byte	0x3fc99999
- 1344 0405 1E       		.uleb128 0x1e
- 1345 0406 B8000000 		.4byte	.LASF41
- 1346 040a 01       		.byte	0x1
- 1347 040b 3B       		.byte	0x3b
- 1348 040c 5F040000 		.4byte	0x45f
- 1349 0410 08       		.byte	0x8
- 1350 0411 9A999999 		.4byte	0x9999999a
- 1351 0415 9999A93F 		.4byte	0x3fa99999
- 1352 0419 0E       		.uleb128 0xe
- 1353 041a 7200     		.ascii	"r\000"
- 1354 041c 01       		.byte	0x1
- 1355 041d 3D       		.byte	0x3d
- 1356 041e A2000000 		.4byte	0xa2
- 1357 0422 2C020000 		.4byte	.LLST14
- 1358 0426 0E       		.uleb128 0xe
- 1359 0427 6700     		.ascii	"g\000"
- 1360 0429 01       		.byte	0x1
- 1361 042a 3D       		.byte	0x3d
- 1362 042b A2000000 		.4byte	0xa2
- 1363 042f 3F020000 		.4byte	.LLST15
- 1364 0433 0E       		.uleb128 0xe
- 1365 0434 6200     		.ascii	"b\000"
- 1366 0436 01       		.byte	0x1
- 1367 0437 3D       		.byte	0x3d
- 1368 0438 A2000000 		.4byte	0xa2
- 1369 043c 52020000 		.4byte	.LLST16
- 1370 0440 0E       		.uleb128 0xe
- 1371 0441 6D617800 		.ascii	"max\000"
- 1372 0445 01       		.byte	0x1
- 1373 0446 3F       		.byte	0x3f
- 1374 0447 A2000000 		.4byte	0xa2
- 1375 044b 65020000 		.4byte	.LLST17
- 1376 044f 0E       		.uleb128 0xe
- 1377 0450 6D696E00 		.ascii	"min\000"
- 1378 0454 01       		.byte	0x1
- 1379 0455 43       		.byte	0x43
- 1380 0456 A2000000 		.4byte	0xa2
- 1381 045a 8E020000 		.4byte	.LLST18
- 1382 045e 00       		.byte	0
- 1383 045f 06       		.uleb128 0x6
- 1384 0460 CA000000 		.4byte	0xca
- 1385 0464 0A       		.uleb128 0xa
- 1386 0465 EF000000 		.4byte	.LASF42
- 1387 0469 01       		.byte	0x1
- 1388 046a 55       		.byte	0x55
- 1389 046b E6000000 		.4byte	0xe6
- 1390 046f 00000000 		.4byte	.LFB70
- 1391 0473 50000000 		.4byte	.LFE70-.LFB70
- 1392 0477 01       		.uleb128 0x1
- 1393 0478 9C       		.byte	0x9c
- 1394 0479 8D040000 		.4byte	0x48d
- 1395 047d 0C       		.uleb128 0xc
-ARM GAS  C:\Users\alexa\AppData\Local\Temp\ccDtNEgi.s 			page 28
-
-
- 1396 047e 20000000 		.4byte	.LASF43
- 1397 0482 01       		.byte	0x1
- 1398 0483 55       		.byte	0x55
- 1399 0484 97000000 		.4byte	0x97
- 1400 0488 AC020000 		.4byte	.LLST19
- 1401 048c 00       		.byte	0
- 1402 048d 0A       		.uleb128 0xa
- 1403 048e 9E000000 		.4byte	.LASF44
- 1404 0492 01       		.byte	0x1
- 1405 0493 62       		.byte	0x62
- 1406 0494 FB010000 		.4byte	0x1fb
- 1407 0498 00000000 		.4byte	.LFB71
- 1408 049c 26000000 		.4byte	.LFE71-.LFB71
- 1409 04a0 01       		.uleb128 0x1
- 1410 04a1 9C       		.byte	0x9c
- 1411 04a2 10050000 		.4byte	0x510
- 1412 04a6 0C       		.uleb128 0xc
- 1413 04a7 20000000 		.4byte	.LASF43
- 1414 04ab 01       		.byte	0x1
- 1415 04ac 62       		.byte	0x62
- 1416 04ad 02020000 		.4byte	0x202
- 1417 04b1 7C030000 		.4byte	.LLST20
- 1418 04b5 1B       		.uleb128 0x1b
- 1419 04b6 57000000 		.4byte	.LASF35
- 1420 04ba 01       		.byte	0x1
- 1421 04bb 63       		.byte	0x63
- 1422 04bc 10050000 		.4byte	0x510
- 1423 04c0 02       		.uleb128 0x2
- 1424 04c1 91       		.byte	0x91
- 1425 04c2 68       		.sleb128 -24
- 1426 04c3 1B       		.uleb128 0x1b
- 1427 04c4 A1010000 		.4byte	.LASF37
- 1428 04c8 01       		.byte	0x1
- 1429 04c9 64       		.byte	0x64
- 1430 04ca 10050000 		.4byte	0x510
- 1431 04ce 02       		.uleb128 0x2
- 1432 04cf 91       		.byte	0x91
- 1433 04d0 60       		.sleb128 -32
- 1434 04d1 12       		.uleb128 0x12
- 1435 04d2 0C000000 		.4byte	.LVL92
- 1436 04d6 8A020000 		.4byte	0x28a
- 1437 04da E5040000 		.4byte	0x4e5
- 1438 04de 13       		.uleb128 0x13
- 1439 04df 01       		.uleb128 0x1
- 1440 04e0 50       		.byte	0x50
- 1441 04e1 02       		.uleb128 0x2
- 1442 04e2 91       		.byte	0x91
- 1443 04e3 68       		.sleb128 -24
- 1444 04e4 00       		.byte	0
- 1445 04e5 12       		.uleb128 0x12
- 1446 04e6 18000000 		.4byte	.LVL93
- 1447 04ea 41030000 		.4byte	0x341
- 1448 04ee FF040000 		.4byte	0x4ff
- 1449 04f2 13       		.uleb128 0x13
- 1450 04f3 01       		.uleb128 0x1
- 1451 04f4 50       		.byte	0x50
- 1452 04f5 02       		.uleb128 0x2
-ARM GAS  C:\Users\alexa\AppData\Local\Temp\ccDtNEgi.s 			page 29
-
-
- 1453 04f6 91       		.byte	0x91
- 1454 04f7 68       		.sleb128 -24
- 1455 04f8 13       		.uleb128 0x13
- 1456 04f9 01       		.uleb128 0x1
- 1457 04fa 51       		.byte	0x51
- 1458 04fb 02       		.uleb128 0x2
- 1459 04fc 7D       		.byte	0x7d
- 1460 04fd 00       		.sleb128 0
- 1461 04fe 00       		.byte	0
- 1462 04ff 16       		.uleb128 0x16
- 1463 0500 1E000000 		.4byte	.LVL94
- 1464 0504 C9030000 		.4byte	0x3c9
- 1465 0508 13       		.uleb128 0x13
- 1466 0509 01       		.uleb128 0x1
- 1467 050a 50       		.byte	0x50
- 1468 050b 02       		.uleb128 0x2
- 1469 050c 7D       		.byte	0x7d
- 1470 050d 00       		.sleb128 0
- 1471 050e 00       		.byte	0
- 1472 050f 00       		.byte	0
- 1473 0510 17       		.uleb128 0x17
- 1474 0511 A2000000 		.4byte	0xa2
- 1475 0515 20050000 		.4byte	0x520
- 1476 0519 1F       		.uleb128 0x1f
- 1477 051a DF000000 		.4byte	0xdf
- 1478 051e 02       		.byte	0x2
- 1479 051f 00       		.byte	0
- 1480 0520 20       		.uleb128 0x20
- 1481 0521 FC010000 		.4byte	.LASF46
- 1482 0525 01       		.byte	0x1
- 1483 0526 6B       		.byte	0x6b
- 1484 0527 FB010000 		.4byte	0x1fb
- 1485 052b 00000000 		.4byte	.LFB72
- 1486 052f 38000000 		.4byte	.LFE72-.LFB72
- 1487 0533 01       		.uleb128 0x1
- 1488 0534 9C       		.byte	0x9c
- 1489 0535 A4050000 		.4byte	0x5a4
- 1490 0539 11       		.uleb128 0x11
- 1491 053a 06000000 		.4byte	.LVL95
- 1492 053e 12060000 		.4byte	0x612
- 1493 0542 12       		.uleb128 0x12
- 1494 0543 0E000000 		.4byte	.LVL96
- 1495 0547 08020000 		.4byte	0x208
- 1496 054b 5B050000 		.4byte	0x55b
- 1497 054f 13       		.uleb128 0x13
- 1498 0550 01       		.uleb128 0x1
- 1499 0551 50       		.byte	0x50
- 1500 0552 02       		.uleb128 0x2
- 1501 0553 09       		.byte	0x9
- 1502 0554 81       		.byte	0x81
- 1503 0555 13       		.uleb128 0x13
- 1504 0556 01       		.uleb128 0x1
- 1505 0557 51       		.byte	0x51
- 1506 0558 01       		.uleb128 0x1
- 1507 0559 4D       		.byte	0x4d
- 1508 055a 00       		.byte	0
- 1509 055b 12       		.uleb128 0x12
-ARM GAS  C:\Users\alexa\AppData\Local\Temp\ccDtNEgi.s 			page 30
-
-
- 1510 055c 1A000000 		.4byte	.LVL97
- 1511 0560 08020000 		.4byte	0x208
- 1512 0564 75050000 		.4byte	0x575
- 1513 0568 13       		.uleb128 0x13
- 1514 0569 01       		.uleb128 0x1
- 1515 056a 50       		.byte	0x50
- 1516 056b 02       		.uleb128 0x2
- 1517 056c 09       		.byte	0x9
- 1518 056d CA       		.byte	0xca
- 1519 056e 13       		.uleb128 0x13
- 1520 056f 01       		.uleb128 0x1
- 1521 0570 51       		.byte	0x51
- 1522 0571 02       		.uleb128 0x2
- 1523 0572 08       		.byte	0x8
- 1524 0573 57       		.byte	0x57
- 1525 0574 00       		.byte	0
- 1526 0575 12       		.uleb128 0x12
- 1527 0576 26000000 		.4byte	.LVL98
- 1528 057a 08020000 		.4byte	0x208
- 1529 057e 8E050000 		.4byte	0x58e
- 1530 0582 13       		.uleb128 0x13
- 1531 0583 01       		.uleb128 0x1
- 1532 0584 50       		.byte	0x50
- 1533 0585 02       		.uleb128 0x2
- 1534 0586 09       		.byte	0x9
- 1535 0587 CB       		.byte	0xcb
- 1536 0588 13       		.uleb128 0x13
- 1537 0589 01       		.uleb128 0x1
- 1538 058a 51       		.byte	0x51
- 1539 058b 01       		.uleb128 0x1
- 1540 058c 32       		.byte	0x32
- 1541 058d 00       		.byte	0
- 1542 058e 16       		.uleb128 0x16
- 1543 058f 32000000 		.4byte	.LVL99
- 1544 0593 08020000 		.4byte	0x208
- 1545 0597 13       		.uleb128 0x13
- 1546 0598 01       		.uleb128 0x1
- 1547 0599 50       		.byte	0x50
- 1548 059a 02       		.uleb128 0x2
- 1549 059b 09       		.byte	0x9
- 1550 059c 80       		.byte	0x80
- 1551 059d 13       		.uleb128 0x13
- 1552 059e 01       		.uleb128 0x1
- 1553 059f 51       		.byte	0x51
- 1554 05a0 01       		.uleb128 0x1
- 1555 05a1 33       		.byte	0x33
- 1556 05a2 00       		.byte	0
- 1557 05a3 00       		.byte	0
- 1558 05a4 21       		.uleb128 0x21
- 1559 05a5 8D020000 		.4byte	.LASF47
- 1560 05a9 04       		.byte	0x4
- 1561 05aa 1207     		.2byte	0x712
- 1562 05ac B0050000 		.4byte	0x5b0
- 1563 05b0 22       		.uleb128 0x22
- 1564 05b1 AD000000 		.4byte	0xad
- 1565 05b5 17       		.uleb128 0x17
- 1566 05b6 3C030000 		.4byte	0x33c
-ARM GAS  C:\Users\alexa\AppData\Local\Temp\ccDtNEgi.s 			page 31
-
-
- 1567 05ba C5050000 		.4byte	0x5c5
- 1568 05be 1F       		.uleb128 0x1f
- 1569 05bf DF000000 		.4byte	0xdf
- 1570 05c3 02       		.byte	0x2
- 1571 05c4 00       		.byte	0
- 1572 05c5 23       		.uleb128 0x23
- 1573 05c6 88000000 		.4byte	.LASF48
- 1574 05ca 01       		.byte	0x1
- 1575 05cb 07       		.byte	0x7
- 1576 05cc D6050000 		.4byte	0x5d6
- 1577 05d0 05       		.uleb128 0x5
- 1578 05d1 03       		.byte	0x3
- 1579 05d2 00000000 		.4byte	rgb_ref
- 1580 05d6 06       		.uleb128 0x6
- 1581 05d7 B5050000 		.4byte	0x5b5
- 1582 05db 24       		.uleb128 0x24
- 1583 05dc 32010000 		.4byte	.LASF49
- 1584 05e0 32010000 		.4byte	.LASF49
- 1585 05e4 05       		.byte	0x5
- 1586 05e5 B7       		.byte	0xb7
- 1587 05e6 24       		.uleb128 0x24
- 1588 05e7 8D010000 		.4byte	.LASF50
- 1589 05eb 8D010000 		.4byte	.LASF50
- 1590 05ef 05       		.byte	0x5
- 1591 05f0 B1       		.byte	0xb1
- 1592 05f1 24       		.uleb128 0x24
- 1593 05f2 FD000000 		.4byte	.LASF51
- 1594 05f6 FD000000 		.4byte	.LASF51
- 1595 05fa 05       		.byte	0x5
- 1596 05fb B6       		.byte	0xb6
- 1597 05fc 24       		.uleb128 0x24
- 1598 05fd 00000000 		.4byte	.LASF52
- 1599 0601 00000000 		.4byte	.LASF52
- 1600 0605 05       		.byte	0x5
- 1601 0606 B3       		.byte	0xb3
- 1602 0607 24       		.uleb128 0x24
- 1603 0608 3F030000 		.4byte	.LASF53
- 1604 060c 3F030000 		.4byte	.LASF53
- 1605 0610 05       		.byte	0x5
- 1606 0611 B5       		.byte	0xb5
- 1607 0612 24       		.uleb128 0x24
- 1608 0613 35030000 		.4byte	.LASF54
- 1609 0617 35030000 		.4byte	.LASF54
- 1610 061b 05       		.byte	0x5
- 1611 061c 93       		.byte	0x93
- 1612 061d 00       		.byte	0
- 1613              		.section	.debug_abbrev,"",%progbits
- 1614              	.Ldebug_abbrev0:
- 1615 0000 01       		.uleb128 0x1
- 1616 0001 11       		.uleb128 0x11
- 1617 0002 01       		.byte	0x1
- 1618 0003 25       		.uleb128 0x25
- 1619 0004 0E       		.uleb128 0xe
- 1620 0005 13       		.uleb128 0x13
- 1621 0006 0B       		.uleb128 0xb
- 1622 0007 03       		.uleb128 0x3
- 1623 0008 0E       		.uleb128 0xe
-ARM GAS  C:\Users\alexa\AppData\Local\Temp\ccDtNEgi.s 			page 32
-
-
- 1624 0009 1B       		.uleb128 0x1b
- 1625 000a 0E       		.uleb128 0xe
- 1626 000b 55       		.uleb128 0x55
- 1627 000c 17       		.uleb128 0x17
- 1628 000d 11       		.uleb128 0x11
- 1629 000e 01       		.uleb128 0x1
- 1630 000f 10       		.uleb128 0x10
- 1631 0010 17       		.uleb128 0x17
- 1632 0011 00       		.byte	0
- 1633 0012 00       		.byte	0
- 1634 0013 02       		.uleb128 0x2
- 1635 0014 24       		.uleb128 0x24
- 1636 0015 00       		.byte	0
- 1637 0016 0B       		.uleb128 0xb
- 1638 0017 0B       		.uleb128 0xb
- 1639 0018 3E       		.uleb128 0x3e
- 1640 0019 0B       		.uleb128 0xb
- 1641 001a 03       		.uleb128 0x3
- 1642 001b 0E       		.uleb128 0xe
- 1643 001c 00       		.byte	0
- 1644 001d 00       		.byte	0
- 1645 001e 03       		.uleb128 0x3
- 1646 001f 16       		.uleb128 0x16
- 1647 0020 00       		.byte	0
- 1648 0021 03       		.uleb128 0x3
- 1649 0022 0E       		.uleb128 0xe
- 1650 0023 3A       		.uleb128 0x3a
- 1651 0024 0B       		.uleb128 0xb
- 1652 0025 3B       		.uleb128 0x3b
- 1653 0026 0B       		.uleb128 0xb
- 1654 0027 49       		.uleb128 0x49
- 1655 0028 13       		.uleb128 0x13
- 1656 0029 00       		.byte	0
- 1657 002a 00       		.byte	0
- 1658 002b 04       		.uleb128 0x4
- 1659 002c 24       		.uleb128 0x24
- 1660 002d 00       		.byte	0
- 1661 002e 0B       		.uleb128 0xb
- 1662 002f 0B       		.uleb128 0xb
- 1663 0030 3E       		.uleb128 0x3e
- 1664 0031 0B       		.uleb128 0xb
- 1665 0032 03       		.uleb128 0x3
- 1666 0033 08       		.uleb128 0x8
- 1667 0034 00       		.byte	0
- 1668 0035 00       		.byte	0
- 1669 0036 05       		.uleb128 0x5
- 1670 0037 0F       		.uleb128 0xf
- 1671 0038 00       		.byte	0
- 1672 0039 0B       		.uleb128 0xb
- 1673 003a 0B       		.uleb128 0xb
- 1674 003b 49       		.uleb128 0x49
- 1675 003c 13       		.uleb128 0x13
- 1676 003d 00       		.byte	0
- 1677 003e 00       		.byte	0
- 1678 003f 06       		.uleb128 0x6
- 1679 0040 26       		.uleb128 0x26
- 1680 0041 00       		.byte	0
-ARM GAS  C:\Users\alexa\AppData\Local\Temp\ccDtNEgi.s 			page 33
-
-
- 1681 0042 49       		.uleb128 0x49
- 1682 0043 13       		.uleb128 0x13
- 1683 0044 00       		.byte	0
- 1684 0045 00       		.byte	0
- 1685 0046 07       		.uleb128 0x7
- 1686 0047 04       		.uleb128 0x4
- 1687 0048 01       		.byte	0x1
- 1688 0049 03       		.uleb128 0x3
- 1689 004a 0E       		.uleb128 0xe
- 1690 004b 0B       		.uleb128 0xb
- 1691 004c 0B       		.uleb128 0xb
- 1692 004d 49       		.uleb128 0x49
- 1693 004e 13       		.uleb128 0x13
- 1694 004f 3A       		.uleb128 0x3a
- 1695 0050 0B       		.uleb128 0xb
- 1696 0051 3B       		.uleb128 0x3b
- 1697 0052 0B       		.uleb128 0xb
- 1698 0053 01       		.uleb128 0x1
- 1699 0054 13       		.uleb128 0x13
- 1700 0055 00       		.byte	0
- 1701 0056 00       		.byte	0
- 1702 0057 08       		.uleb128 0x8
- 1703 0058 28       		.uleb128 0x28
- 1704 0059 00       		.byte	0
- 1705 005a 03       		.uleb128 0x3
- 1706 005b 0E       		.uleb128 0xe
- 1707 005c 1C       		.uleb128 0x1c
- 1708 005d 0B       		.uleb128 0xb
- 1709 005e 00       		.byte	0
- 1710 005f 00       		.byte	0
- 1711 0060 09       		.uleb128 0x9
- 1712 0061 28       		.uleb128 0x28
- 1713 0062 00       		.byte	0
- 1714 0063 03       		.uleb128 0x3
- 1715 0064 08       		.uleb128 0x8
- 1716 0065 1C       		.uleb128 0x1c
- 1717 0066 0B       		.uleb128 0xb
- 1718 0067 00       		.byte	0
- 1719 0068 00       		.byte	0
- 1720 0069 0A       		.uleb128 0xa
- 1721 006a 2E       		.uleb128 0x2e
- 1722 006b 01       		.byte	0x1
- 1723 006c 3F       		.uleb128 0x3f
- 1724 006d 19       		.uleb128 0x19
- 1725 006e 03       		.uleb128 0x3
- 1726 006f 0E       		.uleb128 0xe
- 1727 0070 3A       		.uleb128 0x3a
- 1728 0071 0B       		.uleb128 0xb
- 1729 0072 3B       		.uleb128 0x3b
- 1730 0073 0B       		.uleb128 0xb
- 1731 0074 27       		.uleb128 0x27
- 1732 0075 19       		.uleb128 0x19
- 1733 0076 49       		.uleb128 0x49
- 1734 0077 13       		.uleb128 0x13
- 1735 0078 11       		.uleb128 0x11
- 1736 0079 01       		.uleb128 0x1
- 1737 007a 12       		.uleb128 0x12
-ARM GAS  C:\Users\alexa\AppData\Local\Temp\ccDtNEgi.s 			page 34
-
-
- 1738 007b 06       		.uleb128 0x6
- 1739 007c 40       		.uleb128 0x40
- 1740 007d 18       		.uleb128 0x18
- 1741 007e 9742     		.uleb128 0x2117
- 1742 0080 19       		.uleb128 0x19
- 1743 0081 01       		.uleb128 0x1
- 1744 0082 13       		.uleb128 0x13
- 1745 0083 00       		.byte	0
- 1746 0084 00       		.byte	0
- 1747 0085 0B       		.uleb128 0xb
- 1748 0086 05       		.uleb128 0x5
- 1749 0087 00       		.byte	0
- 1750 0088 03       		.uleb128 0x3
- 1751 0089 08       		.uleb128 0x8
- 1752 008a 3A       		.uleb128 0x3a
- 1753 008b 0B       		.uleb128 0xb
- 1754 008c 3B       		.uleb128 0x3b
- 1755 008d 0B       		.uleb128 0xb
- 1756 008e 49       		.uleb128 0x49
- 1757 008f 13       		.uleb128 0x13
- 1758 0090 02       		.uleb128 0x2
- 1759 0091 17       		.uleb128 0x17
- 1760 0092 00       		.byte	0
- 1761 0093 00       		.byte	0
- 1762 0094 0C       		.uleb128 0xc
- 1763 0095 05       		.uleb128 0x5
- 1764 0096 00       		.byte	0
- 1765 0097 03       		.uleb128 0x3
- 1766 0098 0E       		.uleb128 0xe
- 1767 0099 3A       		.uleb128 0x3a
- 1768 009a 0B       		.uleb128 0xb
- 1769 009b 3B       		.uleb128 0x3b
- 1770 009c 0B       		.uleb128 0xb
- 1771 009d 49       		.uleb128 0x49
- 1772 009e 13       		.uleb128 0x13
- 1773 009f 02       		.uleb128 0x2
- 1774 00a0 17       		.uleb128 0x17
- 1775 00a1 00       		.byte	0
- 1776 00a2 00       		.byte	0
- 1777 00a3 0D       		.uleb128 0xd
- 1778 00a4 0B       		.uleb128 0xb
- 1779 00a5 01       		.byte	0x1
- 1780 00a6 11       		.uleb128 0x11
- 1781 00a7 01       		.uleb128 0x1
- 1782 00a8 12       		.uleb128 0x12
- 1783 00a9 06       		.uleb128 0x6
- 1784 00aa 01       		.uleb128 0x1
- 1785 00ab 13       		.uleb128 0x13
- 1786 00ac 00       		.byte	0
- 1787 00ad 00       		.byte	0
- 1788 00ae 0E       		.uleb128 0xe
- 1789 00af 34       		.uleb128 0x34
- 1790 00b0 00       		.byte	0
- 1791 00b1 03       		.uleb128 0x3
- 1792 00b2 08       		.uleb128 0x8
- 1793 00b3 3A       		.uleb128 0x3a
- 1794 00b4 0B       		.uleb128 0xb
-ARM GAS  C:\Users\alexa\AppData\Local\Temp\ccDtNEgi.s 			page 35
-
-
- 1795 00b5 3B       		.uleb128 0x3b
- 1796 00b6 0B       		.uleb128 0xb
- 1797 00b7 49       		.uleb128 0x49
- 1798 00b8 13       		.uleb128 0x13
- 1799 00b9 02       		.uleb128 0x2
- 1800 00ba 17       		.uleb128 0x17
- 1801 00bb 00       		.byte	0
- 1802 00bc 00       		.byte	0
- 1803 00bd 0F       		.uleb128 0xf
- 1804 00be 0B       		.uleb128 0xb
- 1805 00bf 01       		.byte	0x1
- 1806 00c0 11       		.uleb128 0x11
- 1807 00c1 01       		.uleb128 0x1
- 1808 00c2 12       		.uleb128 0x12
- 1809 00c3 06       		.uleb128 0x6
- 1810 00c4 00       		.byte	0
- 1811 00c5 00       		.byte	0
- 1812 00c6 10       		.uleb128 0x10
- 1813 00c7 34       		.uleb128 0x34
- 1814 00c8 00       		.byte	0
- 1815 00c9 03       		.uleb128 0x3
- 1816 00ca 0E       		.uleb128 0xe
- 1817 00cb 3A       		.uleb128 0x3a
- 1818 00cc 0B       		.uleb128 0xb
- 1819 00cd 3B       		.uleb128 0x3b
- 1820 00ce 0B       		.uleb128 0xb
- 1821 00cf 49       		.uleb128 0x49
- 1822 00d0 13       		.uleb128 0x13
- 1823 00d1 00       		.byte	0
- 1824 00d2 00       		.byte	0
- 1825 00d3 11       		.uleb128 0x11
- 1826 00d4 898201   		.uleb128 0x4109
- 1827 00d7 00       		.byte	0
- 1828 00d8 11       		.uleb128 0x11
- 1829 00d9 01       		.uleb128 0x1
- 1830 00da 31       		.uleb128 0x31
- 1831 00db 13       		.uleb128 0x13
- 1832 00dc 00       		.byte	0
- 1833 00dd 00       		.byte	0
- 1834 00de 12       		.uleb128 0x12
- 1835 00df 898201   		.uleb128 0x4109
- 1836 00e2 01       		.byte	0x1
- 1837 00e3 11       		.uleb128 0x11
- 1838 00e4 01       		.uleb128 0x1
- 1839 00e5 31       		.uleb128 0x31
- 1840 00e6 13       		.uleb128 0x13
- 1841 00e7 01       		.uleb128 0x1
- 1842 00e8 13       		.uleb128 0x13
- 1843 00e9 00       		.byte	0
- 1844 00ea 00       		.byte	0
- 1845 00eb 13       		.uleb128 0x13
- 1846 00ec 8A8201   		.uleb128 0x410a
- 1847 00ef 00       		.byte	0
- 1848 00f0 02       		.uleb128 0x2
- 1849 00f1 18       		.uleb128 0x18
- 1850 00f2 9142     		.uleb128 0x2111
- 1851 00f4 18       		.uleb128 0x18
-ARM GAS  C:\Users\alexa\AppData\Local\Temp\ccDtNEgi.s 			page 36
-
-
- 1852 00f5 00       		.byte	0
- 1853 00f6 00       		.byte	0
- 1854 00f7 14       		.uleb128 0x14
- 1855 00f8 34       		.uleb128 0x34
- 1856 00f9 00       		.byte	0
- 1857 00fa 03       		.uleb128 0x3
- 1858 00fb 0E       		.uleb128 0xe
- 1859 00fc 3A       		.uleb128 0x3a
- 1860 00fd 0B       		.uleb128 0xb
- 1861 00fe 3B       		.uleb128 0x3b
- 1862 00ff 0B       		.uleb128 0xb
- 1863 0100 49       		.uleb128 0x49
- 1864 0101 13       		.uleb128 0x13
- 1865 0102 1C       		.uleb128 0x1c
- 1866 0103 0B       		.uleb128 0xb
- 1867 0104 00       		.byte	0
- 1868 0105 00       		.byte	0
- 1869 0106 15       		.uleb128 0x15
- 1870 0107 34       		.uleb128 0x34
- 1871 0108 00       		.byte	0
- 1872 0109 03       		.uleb128 0x3
- 1873 010a 0E       		.uleb128 0xe
- 1874 010b 3A       		.uleb128 0x3a
- 1875 010c 0B       		.uleb128 0xb
- 1876 010d 3B       		.uleb128 0x3b
- 1877 010e 0B       		.uleb128 0xb
- 1878 010f 49       		.uleb128 0x49
- 1879 0110 13       		.uleb128 0x13
- 1880 0111 02       		.uleb128 0x2
- 1881 0112 17       		.uleb128 0x17
- 1882 0113 00       		.byte	0
- 1883 0114 00       		.byte	0
- 1884 0115 16       		.uleb128 0x16
- 1885 0116 898201   		.uleb128 0x4109
- 1886 0119 01       		.byte	0x1
- 1887 011a 11       		.uleb128 0x11
- 1888 011b 01       		.uleb128 0x1
- 1889 011c 31       		.uleb128 0x31
- 1890 011d 13       		.uleb128 0x13
- 1891 011e 00       		.byte	0
- 1892 011f 00       		.byte	0
- 1893 0120 17       		.uleb128 0x17
- 1894 0121 01       		.uleb128 0x1
- 1895 0122 01       		.byte	0x1
- 1896 0123 49       		.uleb128 0x49
- 1897 0124 13       		.uleb128 0x13
- 1898 0125 01       		.uleb128 0x1
- 1899 0126 13       		.uleb128 0x13
- 1900 0127 00       		.byte	0
- 1901 0128 00       		.byte	0
- 1902 0129 18       		.uleb128 0x18
- 1903 012a 21       		.uleb128 0x21
- 1904 012b 00       		.byte	0
- 1905 012c 49       		.uleb128 0x49
- 1906 012d 13       		.uleb128 0x13
- 1907 012e 2F       		.uleb128 0x2f
- 1908 012f 18       		.uleb128 0x18
-ARM GAS  C:\Users\alexa\AppData\Local\Temp\ccDtNEgi.s 			page 37
-
-
- 1909 0130 00       		.byte	0
- 1910 0131 00       		.byte	0
- 1911 0132 19       		.uleb128 0x19
- 1912 0133 34       		.uleb128 0x34
- 1913 0134 00       		.byte	0
- 1914 0135 03       		.uleb128 0x3
- 1915 0136 08       		.uleb128 0x8
- 1916 0137 3A       		.uleb128 0x3a
- 1917 0138 0B       		.uleb128 0xb
- 1918 0139 3B       		.uleb128 0x3b
- 1919 013a 0B       		.uleb128 0xb
- 1920 013b 49       		.uleb128 0x49
- 1921 013c 13       		.uleb128 0x13
- 1922 013d 02       		.uleb128 0x2
- 1923 013e 18       		.uleb128 0x18
- 1924 013f 00       		.byte	0
- 1925 0140 00       		.byte	0
- 1926 0141 1A       		.uleb128 0x1a
- 1927 0142 2E       		.uleb128 0x2e
- 1928 0143 01       		.byte	0x1
- 1929 0144 3F       		.uleb128 0x3f
- 1930 0145 19       		.uleb128 0x19
- 1931 0146 03       		.uleb128 0x3
- 1932 0147 0E       		.uleb128 0xe
- 1933 0148 3A       		.uleb128 0x3a
- 1934 0149 0B       		.uleb128 0xb
- 1935 014a 3B       		.uleb128 0x3b
- 1936 014b 0B       		.uleb128 0xb
- 1937 014c 27       		.uleb128 0x27
- 1938 014d 19       		.uleb128 0x19
- 1939 014e 11       		.uleb128 0x11
- 1940 014f 01       		.uleb128 0x1
- 1941 0150 12       		.uleb128 0x12
- 1942 0151 06       		.uleb128 0x6
- 1943 0152 40       		.uleb128 0x40
- 1944 0153 18       		.uleb128 0x18
- 1945 0154 9742     		.uleb128 0x2117
- 1946 0156 19       		.uleb128 0x19
- 1947 0157 01       		.uleb128 0x1
- 1948 0158 13       		.uleb128 0x13
- 1949 0159 00       		.byte	0
- 1950 015a 00       		.byte	0
- 1951 015b 1B       		.uleb128 0x1b
- 1952 015c 34       		.uleb128 0x34
- 1953 015d 00       		.byte	0
- 1954 015e 03       		.uleb128 0x3
- 1955 015f 0E       		.uleb128 0xe
- 1956 0160 3A       		.uleb128 0x3a
- 1957 0161 0B       		.uleb128 0xb
- 1958 0162 3B       		.uleb128 0x3b
- 1959 0163 0B       		.uleb128 0xb
- 1960 0164 49       		.uleb128 0x49
- 1961 0165 13       		.uleb128 0x13
- 1962 0166 02       		.uleb128 0x2
- 1963 0167 18       		.uleb128 0x18
- 1964 0168 00       		.byte	0
- 1965 0169 00       		.byte	0
-ARM GAS  C:\Users\alexa\AppData\Local\Temp\ccDtNEgi.s 			page 38
-
-
- 1966 016a 1C       		.uleb128 0x1c
- 1967 016b 2E       		.uleb128 0x2e
- 1968 016c 01       		.byte	0x1
- 1969 016d 3F       		.uleb128 0x3f
- 1970 016e 19       		.uleb128 0x19
- 1971 016f 03       		.uleb128 0x3
- 1972 0170 0E       		.uleb128 0xe
- 1973 0171 3A       		.uleb128 0x3a
- 1974 0172 0B       		.uleb128 0xb
- 1975 0173 3B       		.uleb128 0x3b
- 1976 0174 0B       		.uleb128 0xb
- 1977 0175 27       		.uleb128 0x27
- 1978 0176 19       		.uleb128 0x19
- 1979 0177 49       		.uleb128 0x49
- 1980 0178 13       		.uleb128 0x13
- 1981 0179 11       		.uleb128 0x11
- 1982 017a 01       		.uleb128 0x1
- 1983 017b 12       		.uleb128 0x12
- 1984 017c 06       		.uleb128 0x6
- 1985 017d 40       		.uleb128 0x40
- 1986 017e 18       		.uleb128 0x18
- 1987 017f 9642     		.uleb128 0x2116
- 1988 0181 19       		.uleb128 0x19
- 1989 0182 01       		.uleb128 0x1
- 1990 0183 13       		.uleb128 0x13
- 1991 0184 00       		.byte	0
- 1992 0185 00       		.byte	0
- 1993 0186 1D       		.uleb128 0x1d
- 1994 0187 34       		.uleb128 0x34
- 1995 0188 00       		.byte	0
- 1996 0189 03       		.uleb128 0x3
- 1997 018a 08       		.uleb128 0x8
- 1998 018b 3A       		.uleb128 0x3a
- 1999 018c 0B       		.uleb128 0xb
- 2000 018d 3B       		.uleb128 0x3b
- 2001 018e 0B       		.uleb128 0xb
- 2002 018f 49       		.uleb128 0x49
- 2003 0190 13       		.uleb128 0x13
- 2004 0191 1C       		.uleb128 0x1c
- 2005 0192 0A       		.uleb128 0xa
- 2006 0193 00       		.byte	0
- 2007 0194 00       		.byte	0
- 2008 0195 1E       		.uleb128 0x1e
- 2009 0196 34       		.uleb128 0x34
- 2010 0197 00       		.byte	0
- 2011 0198 03       		.uleb128 0x3
- 2012 0199 0E       		.uleb128 0xe
- 2013 019a 3A       		.uleb128 0x3a
- 2014 019b 0B       		.uleb128 0xb
- 2015 019c 3B       		.uleb128 0x3b
- 2016 019d 0B       		.uleb128 0xb
- 2017 019e 49       		.uleb128 0x49
- 2018 019f 13       		.uleb128 0x13
- 2019 01a0 1C       		.uleb128 0x1c
- 2020 01a1 0A       		.uleb128 0xa
- 2021 01a2 00       		.byte	0
- 2022 01a3 00       		.byte	0
-ARM GAS  C:\Users\alexa\AppData\Local\Temp\ccDtNEgi.s 			page 39
-
-
- 2023 01a4 1F       		.uleb128 0x1f
- 2024 01a5 21       		.uleb128 0x21
- 2025 01a6 00       		.byte	0
- 2026 01a7 49       		.uleb128 0x49
- 2027 01a8 13       		.uleb128 0x13
- 2028 01a9 2F       		.uleb128 0x2f
- 2029 01aa 0B       		.uleb128 0xb
- 2030 01ab 00       		.byte	0
- 2031 01ac 00       		.byte	0
- 2032 01ad 20       		.uleb128 0x20
- 2033 01ae 2E       		.uleb128 0x2e
- 2034 01af 01       		.byte	0x1
- 2035 01b0 3F       		.uleb128 0x3f
- 2036 01b1 19       		.uleb128 0x19
- 2037 01b2 03       		.uleb128 0x3
- 2038 01b3 0E       		.uleb128 0xe
- 2039 01b4 3A       		.uleb128 0x3a
- 2040 01b5 0B       		.uleb128 0xb
- 2041 01b6 3B       		.uleb128 0x3b
- 2042 01b7 0B       		.uleb128 0xb
- 2043 01b8 49       		.uleb128 0x49
- 2044 01b9 13       		.uleb128 0x13
- 2045 01ba 11       		.uleb128 0x11
- 2046 01bb 01       		.uleb128 0x1
- 2047 01bc 12       		.uleb128 0x12
- 2048 01bd 06       		.uleb128 0x6
- 2049 01be 40       		.uleb128 0x40
- 2050 01bf 18       		.uleb128 0x18
- 2051 01c0 9742     		.uleb128 0x2117
- 2052 01c2 19       		.uleb128 0x19
- 2053 01c3 01       		.uleb128 0x1
- 2054 01c4 13       		.uleb128 0x13
- 2055 01c5 00       		.byte	0
- 2056 01c6 00       		.byte	0
- 2057 01c7 21       		.uleb128 0x21
- 2058 01c8 34       		.uleb128 0x34
- 2059 01c9 00       		.byte	0
- 2060 01ca 03       		.uleb128 0x3
- 2061 01cb 0E       		.uleb128 0xe
- 2062 01cc 3A       		.uleb128 0x3a
- 2063 01cd 0B       		.uleb128 0xb
- 2064 01ce 3B       		.uleb128 0x3b
- 2065 01cf 05       		.uleb128 0x5
- 2066 01d0 49       		.uleb128 0x49
- 2067 01d1 13       		.uleb128 0x13
- 2068 01d2 3F       		.uleb128 0x3f
- 2069 01d3 19       		.uleb128 0x19
- 2070 01d4 3C       		.uleb128 0x3c
- 2071 01d5 19       		.uleb128 0x19
- 2072 01d6 00       		.byte	0
- 2073 01d7 00       		.byte	0
- 2074 01d8 22       		.uleb128 0x22
- 2075 01d9 35       		.uleb128 0x35
- 2076 01da 00       		.byte	0
- 2077 01db 49       		.uleb128 0x49
- 2078 01dc 13       		.uleb128 0x13
- 2079 01dd 00       		.byte	0
-ARM GAS  C:\Users\alexa\AppData\Local\Temp\ccDtNEgi.s 			page 40
-
-
- 2080 01de 00       		.byte	0
- 2081 01df 23       		.uleb128 0x23
- 2082 01e0 34       		.uleb128 0x34
- 2083 01e1 00       		.byte	0
- 2084 01e2 03       		.uleb128 0x3
- 2085 01e3 0E       		.uleb128 0xe
- 2086 01e4 3A       		.uleb128 0x3a
- 2087 01e5 0B       		.uleb128 0xb
- 2088 01e6 3B       		.uleb128 0x3b
- 2089 01e7 0B       		.uleb128 0xb
- 2090 01e8 49       		.uleb128 0x49
- 2091 01e9 13       		.uleb128 0x13
- 2092 01ea 3F       		.uleb128 0x3f
- 2093 01eb 19       		.uleb128 0x19
- 2094 01ec 02       		.uleb128 0x2
- 2095 01ed 18       		.uleb128 0x18
- 2096 01ee 00       		.byte	0
- 2097 01ef 00       		.byte	0
- 2098 01f0 24       		.uleb128 0x24
- 2099 01f1 2E       		.uleb128 0x2e
- 2100 01f2 00       		.byte	0
- 2101 01f3 3F       		.uleb128 0x3f
- 2102 01f4 19       		.uleb128 0x19
- 2103 01f5 3C       		.uleb128 0x3c
- 2104 01f6 19       		.uleb128 0x19
- 2105 01f7 6E       		.uleb128 0x6e
- 2106 01f8 0E       		.uleb128 0xe
- 2107 01f9 03       		.uleb128 0x3
- 2108 01fa 0E       		.uleb128 0xe
- 2109 01fb 3A       		.uleb128 0x3a
- 2110 01fc 0B       		.uleb128 0xb
- 2111 01fd 3B       		.uleb128 0x3b
- 2112 01fe 0B       		.uleb128 0xb
- 2113 01ff 00       		.byte	0
- 2114 0200 00       		.byte	0
- 2115 0201 00       		.byte	0
- 2116              		.section	.debug_loc,"",%progbits
- 2117              	.Ldebug_loc0:
- 2118              	.LLST0:
- 2119 0000 00000000 		.4byte	.LVL0
- 2120 0004 0E000000 		.4byte	.LVL2
- 2121 0008 0100     		.2byte	0x1
- 2122 000a 50       		.byte	0x50
- 2123 000b 0E000000 		.4byte	.LVL2
- 2124 000f 64000000 		.4byte	.LFE64
- 2125 0013 0400     		.2byte	0x4
- 2126 0015 F3       		.byte	0xf3
- 2127 0016 01       		.uleb128 0x1
- 2128 0017 50       		.byte	0x50
- 2129 0018 9F       		.byte	0x9f
- 2130 0019 00000000 		.4byte	0
- 2131 001d 00000000 		.4byte	0
- 2132              	.LLST1:
- 2133 0021 00000000 		.4byte	.LVL0
- 2134 0025 0C000000 		.4byte	.LVL1
- 2135 0029 0100     		.2byte	0x1
- 2136 002b 51       		.byte	0x51
-ARM GAS  C:\Users\alexa\AppData\Local\Temp\ccDtNEgi.s 			page 41
-
-
- 2137 002c 0C000000 		.4byte	.LVL1
- 2138 0030 64000000 		.4byte	.LFE64
- 2139 0034 0400     		.2byte	0x4
- 2140 0036 F3       		.byte	0xf3
- 2141 0037 01       		.uleb128 0x1
- 2142 0038 51       		.byte	0x51
- 2143 0039 9F       		.byte	0x9f
- 2144 003a 00000000 		.4byte	0
- 2145 003e 00000000 		.4byte	0
- 2146              	.LLST2:
- 2147 0042 00000000 		.4byte	.LVL0
- 2148 0046 11000000 		.4byte	.LVL3-1
- 2149 004a 0100     		.2byte	0x1
- 2150 004c 52       		.byte	0x52
- 2151 004d 11000000 		.4byte	.LVL3-1
- 2152 0051 64000000 		.4byte	.LFE64
- 2153 0055 0100     		.2byte	0x1
- 2154 0057 56       		.byte	0x56
- 2155 0058 00000000 		.4byte	0
- 2156 005c 00000000 		.4byte	0
- 2157              	.LLST3:
- 2158 0060 2C000000 		.4byte	.LVL6
- 2159 0064 42000000 		.4byte	.LVL8
- 2160 0068 0100     		.2byte	0x1
- 2161 006a 54       		.byte	0x54
- 2162 006b 44000000 		.4byte	.LVL9
- 2163 006f 52000000 		.4byte	.LVL11
- 2164 0073 0100     		.2byte	0x1
- 2165 0075 54       		.byte	0x54
- 2166 0076 00000000 		.4byte	0
- 2167 007a 00000000 		.4byte	0
- 2168              	.LLST4:
- 2169 007e 00000000 		.4byte	.LVL14
- 2170 0082 0A000000 		.4byte	.LVL16
- 2171 0086 0100     		.2byte	0x1
- 2172 0088 50       		.byte	0x50
- 2173 0089 0A000000 		.4byte	.LVL16
- 2174 008d 34000000 		.4byte	.LFE65
- 2175 0091 0400     		.2byte	0x4
- 2176 0093 F3       		.byte	0xf3
- 2177 0094 01       		.uleb128 0x1
- 2178 0095 50       		.byte	0x50
- 2179 0096 9F       		.byte	0x9f
- 2180 0097 00000000 		.4byte	0
- 2181 009b 00000000 		.4byte	0
- 2182              	.LLST5:
- 2183 009f 00000000 		.4byte	.LVL14
- 2184 00a3 08000000 		.4byte	.LVL15
- 2185 00a7 0100     		.2byte	0x1
- 2186 00a9 51       		.byte	0x51
- 2187 00aa 08000000 		.4byte	.LVL15
- 2188 00ae 34000000 		.4byte	.LFE65
- 2189 00b2 0400     		.2byte	0x4
- 2190 00b4 F3       		.byte	0xf3
- 2191 00b5 01       		.uleb128 0x1
- 2192 00b6 51       		.byte	0x51
- 2193 00b7 9F       		.byte	0x9f
-ARM GAS  C:\Users\alexa\AppData\Local\Temp\ccDtNEgi.s 			page 42
-
-
- 2194 00b8 00000000 		.4byte	0
- 2195 00bc 00000000 		.4byte	0
- 2196              	.LLST6:
- 2197 00c0 00000000 		.4byte	.LVL21
- 2198 00c4 0C000000 		.4byte	.LVL24
- 2199 00c8 0100     		.2byte	0x1
- 2200 00ca 50       		.byte	0x50
- 2201 00cb 0C000000 		.4byte	.LVL24
- 2202 00cf 44000000 		.4byte	.LFE66
- 2203 00d3 0100     		.2byte	0x1
- 2204 00d5 54       		.byte	0x54
- 2205 00d6 00000000 		.4byte	0
- 2206 00da 00000000 		.4byte	0
- 2207              	.LLST7:
- 2208 00de 06000000 		.4byte	.LVL22
- 2209 00e2 08000000 		.4byte	.LVL23
- 2210 00e6 0200     		.2byte	0x2
- 2211 00e8 91       		.byte	0x91
- 2212 00e9 6C       		.sleb128 -20
- 2213 00ea 08000000 		.4byte	.LVL23
- 2214 00ee 0F000000 		.4byte	.LVL25-1
- 2215 00f2 0200     		.2byte	0x2
- 2216 00f4 72       		.byte	0x72
- 2217 00f5 00       		.sleb128 0
- 2218 00f6 0F000000 		.4byte	.LVL25-1
- 2219 00fa 44000000 		.4byte	.LFE66
- 2220 00fe 0200     		.2byte	0x2
- 2221 0100 91       		.byte	0x91
- 2222 0101 6C       		.sleb128 -20
- 2223 0102 00000000 		.4byte	0
- 2224 0106 00000000 		.4byte	0
- 2225              	.LLST8:
- 2226 010a 00000000 		.4byte	.LVL26
- 2227 010e 0C000000 		.4byte	.LVL28
- 2228 0112 0100     		.2byte	0x1
- 2229 0114 50       		.byte	0x50
- 2230 0115 0C000000 		.4byte	.LVL28
- 2231 0119 14000000 		.4byte	.LFE67
- 2232 011d 0400     		.2byte	0x4
- 2233 011f F3       		.byte	0xf3
- 2234 0120 01       		.uleb128 0x1
- 2235 0121 50       		.byte	0x50
- 2236 0122 9F       		.byte	0x9f
- 2237 0123 00000000 		.4byte	0
- 2238 0127 00000000 		.4byte	0
- 2239              	.LLST9:
- 2240 012b 00000000 		.4byte	.LVL29
- 2241 012f 08000000 		.4byte	.LVL30
- 2242 0133 0100     		.2byte	0x1
- 2243 0135 50       		.byte	0x50
- 2244 0136 08000000 		.4byte	.LVL30
- 2245 013a 3A000000 		.4byte	.LVL38
- 2246 013e 0100     		.2byte	0x1
- 2247 0140 55       		.byte	0x55
- 2248 0141 3A000000 		.4byte	.LVL38
- 2249 0145 40000000 		.4byte	.LFE68
- 2250 0149 0400     		.2byte	0x4
-ARM GAS  C:\Users\alexa\AppData\Local\Temp\ccDtNEgi.s 			page 43
-
-
- 2251 014b F3       		.byte	0xf3
- 2252 014c 01       		.uleb128 0x1
- 2253 014d 50       		.byte	0x50
- 2254 014e 9F       		.byte	0x9f
- 2255 014f 00000000 		.4byte	0
- 2256 0153 00000000 		.4byte	0
- 2257              	.LLST10:
- 2258 0157 00000000 		.4byte	.LVL29
- 2259 015b 0B000000 		.4byte	.LVL31-1
- 2260 015f 0100     		.2byte	0x1
- 2261 0161 51       		.byte	0x51
- 2262 0162 0B000000 		.4byte	.LVL31-1
- 2263 0166 3A000000 		.4byte	.LVL38
- 2264 016a 0100     		.2byte	0x1
- 2265 016c 54       		.byte	0x54
- 2266 016d 3A000000 		.4byte	.LVL38
- 2267 0171 40000000 		.4byte	.LFE68
- 2268 0175 0400     		.2byte	0x4
- 2269 0177 F3       		.byte	0xf3
- 2270 0178 01       		.uleb128 0x1
- 2271 0179 51       		.byte	0x51
- 2272 017a 9F       		.byte	0x9f
- 2273 017b 00000000 		.4byte	0
- 2274 017f 00000000 		.4byte	0
- 2275              	.LLST11:
- 2276 0183 0C000000 		.4byte	.LVL31
- 2277 0187 10000000 		.4byte	.LVL32
- 2278 018b 0200     		.2byte	0x2
- 2279 018d 30       		.byte	0x30
- 2280 018e 9F       		.byte	0x9f
- 2281 018f 10000000 		.4byte	.LVL32
- 2282 0193 32000000 		.4byte	.LVL36
- 2283 0197 0100     		.2byte	0x1
- 2284 0199 53       		.byte	0x53
- 2285 019a 34000000 		.4byte	.LVL37
- 2286 019e 3A000000 		.4byte	.LVL38
- 2287 01a2 0100     		.2byte	0x1
- 2288 01a4 53       		.byte	0x53
- 2289 01a5 00000000 		.4byte	0
- 2290 01a9 00000000 		.4byte	0
- 2291              	.LLST12:
- 2292 01ad 22000000 		.4byte	.LVL33
- 2293 01b1 2C000000 		.4byte	.LVL34
- 2294 01b5 0100     		.2byte	0x1
- 2295 01b7 52       		.byte	0x52
- 2296 01b8 2C000000 		.4byte	.LVL34
- 2297 01bc 30000000 		.4byte	.LVL35
- 2298 01c0 2800     		.2byte	0x28
- 2299 01c2 73       		.byte	0x73
- 2300 01c3 00       		.sleb128 0
- 2301 01c4 31       		.byte	0x31
- 2302 01c5 24       		.byte	0x24
- 2303 01c6 75       		.byte	0x75
- 2304 01c7 00       		.sleb128 0
- 2305 01c8 22       		.byte	0x22
- 2306 01c9 94       		.byte	0x94
- 2307 01ca 02       		.byte	0x2
-ARM GAS  C:\Users\alexa\AppData\Local\Temp\ccDtNEgi.s 			page 44
-
-
- 2308 01cb 0A       		.byte	0xa
- 2309 01cc FFFF     		.2byte	0xffff
- 2310 01ce 1A       		.byte	0x1a
- 2311 01cf 70       		.byte	0x70
- 2312 01d0 00       		.sleb128 0
- 2313 01d1 1E       		.byte	0x1e
- 2314 01d2 F7       		.byte	0xf7
- 2315 01d3 25       		.uleb128 0x25
- 2316 01d4 73       		.byte	0x73
- 2317 01d5 00       		.sleb128 0
- 2318 01d6 31       		.byte	0x31
- 2319 01d7 24       		.byte	0x24
- 2320 01d8 03       		.byte	0x3
- 2321 01d9 00000000 		.4byte	.LANCHOR0
- 2322 01dd 22       		.byte	0x22
- 2323 01de 94       		.byte	0x94
- 2324 01df 02       		.byte	0x2
- 2325 01e0 0A       		.byte	0xa
- 2326 01e1 FFFF     		.2byte	0xffff
- 2327 01e3 1A       		.byte	0x1a
- 2328 01e4 F7       		.byte	0xf7
- 2329 01e5 25       		.uleb128 0x25
- 2330 01e6 1B       		.byte	0x1b
- 2331 01e7 F7       		.byte	0xf7
- 2332 01e8 00       		.uleb128 0
- 2333 01e9 9F       		.byte	0x9f
- 2334 01ea 00000000 		.4byte	0
- 2335 01ee 00000000 		.4byte	0
- 2336              	.LLST13:
- 2337 01f2 00000000 		.4byte	.LVL39
- 2338 01f6 24000000 		.4byte	.LVL46
- 2339 01fa 0100     		.2byte	0x1
- 2340 01fc 50       		.byte	0x50
- 2341 01fd 24000000 		.4byte	.LVL46
- 2342 0201 26000000 		.4byte	.LVL47
- 2343 0205 0400     		.2byte	0x4
- 2344 0207 F3       		.byte	0xf3
- 2345 0208 01       		.uleb128 0x1
- 2346 0209 50       		.byte	0x50
- 2347 020a 9F       		.byte	0x9f
- 2348 020b 26000000 		.4byte	.LVL47
- 2349 020f 28000000 		.4byte	.LVL48
- 2350 0213 0100     		.2byte	0x1
- 2351 0215 50       		.byte	0x50
- 2352 0216 28000000 		.4byte	.LVL48
- 2353 021a 74010000 		.4byte	.LFE69
- 2354 021e 0400     		.2byte	0x4
- 2355 0220 F3       		.byte	0xf3
- 2356 0221 01       		.uleb128 0x1
- 2357 0222 50       		.byte	0x50
- 2358 0223 9F       		.byte	0x9f
- 2359 0224 00000000 		.4byte	0
- 2360 0228 00000000 		.4byte	0
- 2361              	.LLST14:
- 2362 022c 08000000 		.4byte	.LVL41
- 2363 0230 66010000 		.4byte	.LVL73
- 2364 0234 0100     		.2byte	0x1
-ARM GAS  C:\Users\alexa\AppData\Local\Temp\ccDtNEgi.s 			page 45
-
-
- 2365 0236 55       		.byte	0x55
- 2366 0237 00000000 		.4byte	0
- 2367 023b 00000000 		.4byte	0
- 2368              	.LLST15:
- 2369 023f 0C000000 		.4byte	.LVL42
- 2370 0243 66010000 		.4byte	.LVL73
- 2371 0247 0100     		.2byte	0x1
- 2372 0249 5A       		.byte	0x5a
- 2373 024a 00000000 		.4byte	0
- 2374 024e 00000000 		.4byte	0
- 2375              	.LLST16:
- 2376 0252 0E000000 		.4byte	.LVL43
- 2377 0256 66010000 		.4byte	.LVL73
- 2378 025a 0100     		.2byte	0x1
- 2379 025c 54       		.byte	0x54
- 2380 025d 00000000 		.4byte	0
- 2381 0261 00000000 		.4byte	0
- 2382              	.LLST17:
- 2383 0265 0E000000 		.4byte	.LVL43
- 2384 0269 18000000 		.4byte	.LVL44
- 2385 026d 0100     		.2byte	0x1
- 2386 026f 55       		.byte	0x55
- 2387 0270 18000000 		.4byte	.LVL44
- 2388 0274 6C000000 		.4byte	.LVL57
- 2389 0278 0100     		.2byte	0x1
- 2390 027a 58       		.byte	0x58
- 2391 027b 3A010000 		.4byte	.LVL71
- 2392 027f 3E010000 		.4byte	.LVL72
- 2393 0283 0100     		.2byte	0x1
- 2394 0285 58       		.byte	0x58
- 2395 0286 00000000 		.4byte	0
- 2396 028a 00000000 		.4byte	0
- 2397              	.LLST18:
- 2398 028e 1E000000 		.4byte	.LVL45
- 2399 0292 28000000 		.4byte	.LVL48
- 2400 0296 0100     		.2byte	0x1
- 2401 0298 55       		.byte	0x55
- 2402 0299 28000000 		.4byte	.LVL48
- 2403 029d 32000000 		.4byte	.LVL50
- 2404 02a1 0100     		.2byte	0x1
- 2405 02a3 50       		.byte	0x50
- 2406 02a4 00000000 		.4byte	0
- 2407 02a8 00000000 		.4byte	0
- 2408              	.LLST19:
- 2409 02ac 00000000 		.4byte	.LVL74
- 2410 02b0 12000000 		.4byte	.LVL75
- 2411 02b4 0100     		.2byte	0x1
- 2412 02b6 50       		.byte	0x50
- 2413 02b7 12000000 		.4byte	.LVL75
- 2414 02bb 14000000 		.4byte	.LVL76
- 2415 02bf 0400     		.2byte	0x4
- 2416 02c1 F3       		.byte	0xf3
- 2417 02c2 01       		.uleb128 0x1
- 2418 02c3 50       		.byte	0x50
- 2419 02c4 9F       		.byte	0x9f
- 2420 02c5 14000000 		.4byte	.LVL76
- 2421 02c9 16000000 		.4byte	.LVL77
-ARM GAS  C:\Users\alexa\AppData\Local\Temp\ccDtNEgi.s 			page 46
-
-
- 2422 02cd 0100     		.2byte	0x1
- 2423 02cf 50       		.byte	0x50
- 2424 02d0 16000000 		.4byte	.LVL77
- 2425 02d4 18000000 		.4byte	.LVL78
- 2426 02d8 0400     		.2byte	0x4
- 2427 02da F3       		.byte	0xf3
- 2428 02db 01       		.uleb128 0x1
- 2429 02dc 50       		.byte	0x50
- 2430 02dd 9F       		.byte	0x9f
- 2431 02de 18000000 		.4byte	.LVL78
- 2432 02e2 1A000000 		.4byte	.LVL79
- 2433 02e6 0100     		.2byte	0x1
- 2434 02e8 50       		.byte	0x50
- 2435 02e9 1A000000 		.4byte	.LVL79
- 2436 02ed 1C000000 		.4byte	.LVL80
- 2437 02f1 0400     		.2byte	0x4
- 2438 02f3 F3       		.byte	0xf3
- 2439 02f4 01       		.uleb128 0x1
- 2440 02f5 50       		.byte	0x50
- 2441 02f6 9F       		.byte	0x9f
- 2442 02f7 1C000000 		.4byte	.LVL80
- 2443 02fb 1E000000 		.4byte	.LVL81
- 2444 02ff 0100     		.2byte	0x1
- 2445 0301 50       		.byte	0x50
- 2446 0302 1E000000 		.4byte	.LVL81
- 2447 0306 20000000 		.4byte	.LVL82
- 2448 030a 0400     		.2byte	0x4
- 2449 030c F3       		.byte	0xf3
- 2450 030d 01       		.uleb128 0x1
- 2451 030e 50       		.byte	0x50
- 2452 030f 9F       		.byte	0x9f
- 2453 0310 20000000 		.4byte	.LVL82
- 2454 0314 22000000 		.4byte	.LVL83
- 2455 0318 0100     		.2byte	0x1
- 2456 031a 50       		.byte	0x50
- 2457 031b 22000000 		.4byte	.LVL83
- 2458 031f 24000000 		.4byte	.LVL84
- 2459 0323 0400     		.2byte	0x4
- 2460 0325 F3       		.byte	0xf3
- 2461 0326 01       		.uleb128 0x1
- 2462 0327 50       		.byte	0x50
- 2463 0328 9F       		.byte	0x9f
- 2464 0329 24000000 		.4byte	.LVL84
- 2465 032d 26000000 		.4byte	.LVL85
- 2466 0331 0100     		.2byte	0x1
- 2467 0333 50       		.byte	0x50
- 2468 0334 26000000 		.4byte	.LVL85
- 2469 0338 28000000 		.4byte	.LVL86
- 2470 033c 0400     		.2byte	0x4
- 2471 033e F3       		.byte	0xf3
- 2472 033f 01       		.uleb128 0x1
- 2473 0340 50       		.byte	0x50
- 2474 0341 9F       		.byte	0x9f
- 2475 0342 28000000 		.4byte	.LVL86
- 2476 0346 2A000000 		.4byte	.LVL87
- 2477 034a 0100     		.2byte	0x1
- 2478 034c 50       		.byte	0x50
-ARM GAS  C:\Users\alexa\AppData\Local\Temp\ccDtNEgi.s 			page 47
-
-
- 2479 034d 2A000000 		.4byte	.LVL87
- 2480 0351 2C000000 		.4byte	.LVL88
- 2481 0355 0400     		.2byte	0x4
- 2482 0357 F3       		.byte	0xf3
- 2483 0358 01       		.uleb128 0x1
- 2484 0359 50       		.byte	0x50
- 2485 035a 9F       		.byte	0x9f
- 2486 035b 2C000000 		.4byte	.LVL88
- 2487 035f 2E000000 		.4byte	.LVL89
- 2488 0363 0100     		.2byte	0x1
- 2489 0365 50       		.byte	0x50
- 2490 0366 2E000000 		.4byte	.LVL89
- 2491 036a 50000000 		.4byte	.LFE70
- 2492 036e 0400     		.2byte	0x4
- 2493 0370 F3       		.byte	0xf3
- 2494 0371 01       		.uleb128 0x1
- 2495 0372 50       		.byte	0x50
- 2496 0373 9F       		.byte	0x9f
- 2497 0374 00000000 		.4byte	0
- 2498 0378 00000000 		.4byte	0
- 2499              	.LLST20:
- 2500 037c 00000000 		.4byte	.LVL90
- 2501 0380 08000000 		.4byte	.LVL91
- 2502 0384 0100     		.2byte	0x1
- 2503 0386 50       		.byte	0x50
- 2504 0387 08000000 		.4byte	.LVL91
- 2505 038b 26000000 		.4byte	.LFE71
- 2506 038f 0100     		.2byte	0x1
- 2507 0391 55       		.byte	0x55
- 2508 0392 00000000 		.4byte	0
- 2509 0396 00000000 		.4byte	0
- 2510              		.section	.debug_aranges,"",%progbits
- 2511 0000 5C000000 		.4byte	0x5c
- 2512 0004 0200     		.2byte	0x2
- 2513 0006 00000000 		.4byte	.Ldebug_info0
- 2514 000a 04       		.byte	0x4
- 2515 000b 00       		.byte	0
- 2516 000c 0000     		.2byte	0
- 2517 000e 0000     		.2byte	0
- 2518 0010 00000000 		.4byte	.LFB64
- 2519 0014 64000000 		.4byte	.LFE64-.LFB64
- 2520 0018 00000000 		.4byte	.LFB65
- 2521 001c 34000000 		.4byte	.LFE65-.LFB65
- 2522 0020 00000000 		.4byte	.LFB66
- 2523 0024 44000000 		.4byte	.LFE66-.LFB66
- 2524 0028 00000000 		.4byte	.LFB67
- 2525 002c 14000000 		.4byte	.LFE67-.LFB67
- 2526 0030 00000000 		.4byte	.LFB68
- 2527 0034 40000000 		.4byte	.LFE68-.LFB68
- 2528 0038 00000000 		.4byte	.LFB69
- 2529 003c 74010000 		.4byte	.LFE69-.LFB69
- 2530 0040 00000000 		.4byte	.LFB70
- 2531 0044 50000000 		.4byte	.LFE70-.LFB70
- 2532 0048 00000000 		.4byte	.LFB71
- 2533 004c 26000000 		.4byte	.LFE71-.LFB71
- 2534 0050 00000000 		.4byte	.LFB72
- 2535 0054 38000000 		.4byte	.LFE72-.LFB72
-ARM GAS  C:\Users\alexa\AppData\Local\Temp\ccDtNEgi.s 			page 48
-
-
- 2536 0058 00000000 		.4byte	0
- 2537 005c 00000000 		.4byte	0
- 2538              		.section	.debug_ranges,"",%progbits
- 2539              	.Ldebug_ranges0:
- 2540 0000 00000000 		.4byte	.LFB64
- 2541 0004 64000000 		.4byte	.LFE64
- 2542 0008 00000000 		.4byte	.LFB65
- 2543 000c 34000000 		.4byte	.LFE65
- 2544 0010 00000000 		.4byte	.LFB66
- 2545 0014 44000000 		.4byte	.LFE66
- 2546 0018 00000000 		.4byte	.LFB67
- 2547 001c 14000000 		.4byte	.LFE67
- 2548 0020 00000000 		.4byte	.LFB68
- 2549 0024 40000000 		.4byte	.LFE68
- 2550 0028 00000000 		.4byte	.LFB69
- 2551 002c 74010000 		.4byte	.LFE69
- 2552 0030 00000000 		.4byte	.LFB70
- 2553 0034 50000000 		.4byte	.LFE70
- 2554 0038 00000000 		.4byte	.LFB71
- 2555 003c 26000000 		.4byte	.LFE71
- 2556 0040 00000000 		.4byte	.LFB72
- 2557 0044 38000000 		.4byte	.LFE72
- 2558 0048 00000000 		.4byte	0
- 2559 004c 00000000 		.4byte	0
- 2560              		.section	.debug_line,"",%progbits
- 2561              	.Ldebug_line0:
- 2562 0000 A9020000 		.section	.debug_str,"MS",%progbits,1
- 2562      02006001 
- 2562      00000201 
- 2562      FB0E0D00 
- 2562      01010101 
- 2563              	.LASF52:
- 2564 0000 4932435F 		.ascii	"I2C_MasterSendRestart\000"
- 2564      4D617374 
- 2564      65725365 
- 2564      6E645265 
- 2564      73746172 
- 2565              	.LASF3:
- 2566 0016 73686F72 		.ascii	"short int\000"
- 2566      7420696E 
- 2566      7400
- 2567              	.LASF43:
- 2568 0020 636F6C6F 		.ascii	"color\000"
- 2568      7200
- 2569              	.LASF45:
- 2570 0026 43616C69 		.ascii	"CalibrateColor\000"
- 2570      62726174 
- 2570      65436F6C 
- 2570      6F7200
- 2571              	.LASF33:
- 2572 0035 64617461 		.ascii	"data\000"
- 2572      00
- 2573              	.LASF5:
- 2574 003a 5F5F7569 		.ascii	"__uint16_t\000"
- 2574      6E743136 
- 2574      5F7400
- 2575              	.LASF39:
-ARM GAS  C:\Users\alexa\AppData\Local\Temp\ccDtNEgi.s 			page 49
-
-
- 2576 0045 6E6F726D 		.ascii	"norm\000"
- 2576      00
- 2577              	.LASF24:
- 2578 004a 626C7565 		.ascii	"blue\000"
- 2578      00
- 2579              	.LASF13:
- 2580 004f 75696E74 		.ascii	"uint8_t\000"
- 2580      385F7400 
- 2581              	.LASF35:
- 2582 0057 72676244 		.ascii	"rgbData\000"
- 2582      61746100 
- 2583              	.LASF31:
- 2584 005f 52656164 		.ascii	"ReadRegister\000"
- 2584      52656769 
- 2584      73746572 
- 2584      00
- 2585              	.LASF40:
- 2586 006c 44657465 		.ascii	"DetectColor\000"
- 2586      6374436F 
- 2586      6C6F7200 
- 2587              	.LASF28:
- 2588 0078 64617461 		.ascii	"dataBytes\000"
- 2588      42797465 
- 2588      7300
- 2589              	.LASF17:
- 2590 0082 666C6F61 		.ascii	"float\000"
- 2590      7400
- 2591              	.LASF48:
- 2592 0088 7267625F 		.ascii	"rgb_ref\000"
- 2592      72656600 
- 2593              	.LASF11:
- 2594 0090 6C6F6E67 		.ascii	"long long int\000"
- 2594      206C6F6E 
- 2594      6720696E 
- 2594      7400
- 2595              	.LASF44:
- 2596 009e 436F6C6F 		.ascii	"ColorSensor_Read\000"
- 2596      7253656E 
- 2596      736F725F 
- 2596      52656164 
- 2596      00
- 2597              	.LASF8:
- 2598 00af 6C6F6E67 		.ascii	"long int\000"
- 2598      20696E74 
- 2598      00
- 2599              	.LASF41:
- 2600 00b8 636C6F73 		.ascii	"closeTol\000"
- 2600      65546F6C 
- 2600      00
- 2601              	.LASF21:
- 2602 00c1 73697A65 		.ascii	"sizetype\000"
- 2602      74797065 
- 2602      00
- 2603              	.LASF27:
- 2604 00ca 6D616765 		.ascii	"magenta\000"
- 2604      6E746100 
- 2605              	.LASF34:
-ARM GAS  C:\Users\alexa\AppData\Local\Temp\ccDtNEgi.s 			page 50
-
-
- 2606 00d2 52656164 		.ascii	"ReadColorDataRegisters\000"
- 2606      436F6C6F 
- 2606      72446174 
- 2606      61526567 
- 2606      69737465 
- 2607              	.LASF23:
- 2608 00e9 67726565 		.ascii	"green\000"
- 2608      6E00
- 2609              	.LASF42:
- 2610 00ef 436F6C6F 		.ascii	"ColorToString\000"
- 2610      72546F53 
- 2610      7472696E 
- 2610      6700
- 2611              	.LASF51:
- 2612 00fd 4932435F 		.ascii	"I2C_MasterWriteByte\000"
- 2612      4D617374 
- 2612      65725772 
- 2612      69746542 
- 2612      79746500 
- 2613              	.LASF20:
- 2614 0111 6C6F6E67 		.ascii	"long double\000"
- 2614      20646F75 
- 2614      626C6500 
- 2615              	.LASF2:
- 2616 011d 756E7369 		.ascii	"unsigned char\000"
- 2616      676E6564 
- 2616      20636861 
- 2616      7200
- 2617              	.LASF25:
- 2618 012b 79656C6C 		.ascii	"yellow\000"
- 2618      6F7700
- 2619              	.LASF49:
- 2620 0132 4932435F 		.ascii	"I2C_MasterReadByte\000"
- 2620      4D617374 
- 2620      65725265 
- 2620      61644279 
- 2620      746500
- 2621              	.LASF1:
- 2622 0145 7369676E 		.ascii	"signed char\000"
- 2622      65642063 
- 2622      68617200 
- 2623              	.LASF15:
- 2624 0151 696E7433 		.ascii	"int32_t\000"
- 2624      325F7400 
- 2625              	.LASF12:
- 2626 0159 6C6F6E67 		.ascii	"long long unsigned int\000"
- 2626      206C6F6E 
- 2626      6720756E 
- 2626      7369676E 
- 2626      65642069 
- 2627              	.LASF16:
- 2628 0170 75696E74 		.ascii	"uint32_t\000"
- 2628      33325F74 
- 2628      00
- 2629              	.LASF0:
- 2630 0179 756E7369 		.ascii	"unsigned int\000"
- 2630      676E6564 
-ARM GAS  C:\Users\alexa\AppData\Local\Temp\ccDtNEgi.s 			page 51
-
-
- 2630      20696E74 
- 2630      00
- 2631              	.LASF38:
- 2632 0186 6D617852 		.ascii	"maxRef\000"
- 2632      656600
- 2633              	.LASF50:
- 2634 018d 4932435F 		.ascii	"I2C_MasterSendStart\000"
- 2634      4D617374 
- 2634      65725365 
- 2634      6E645374 
- 2634      61727400 
- 2635              	.LASF37:
- 2636 01a1 7267624E 		.ascii	"rgbNorm\000"
- 2636      6F726D00 
- 2637              	.LASF19:
- 2638 01a9 63686172 		.ascii	"char\000"
- 2638      00
- 2639              	.LASF14:
- 2640 01ae 75696E74 		.ascii	"uint16_t\000"
- 2640      31365F74 
- 2640      00
- 2641              	.LASF59:
- 2642 01b7 69734C61 		.ascii	"isLastByte\000"
- 2642      73744279 
- 2642      746500
- 2643              	.LASF26:
- 2644 01c2 6379616E 		.ascii	"cyan\000"
- 2644      00
- 2645              	.LASF6:
- 2646 01c7 73686F72 		.ascii	"short unsigned int\000"
- 2646      7420756E 
- 2646      7369676E 
- 2646      65642069 
- 2646      6E7400
- 2647              	.LASF30:
- 2648 01da 5F426F6F 		.ascii	"_Bool\000"
- 2648      6C00
- 2649              	.LASF56:
- 2650 01e0 436F6C6F 		.ascii	"ColorSensor.c\000"
- 2650      7253656E 
- 2650      736F722E 
- 2650      6300
- 2651              	.LASF32:
- 2652 01ee 57726974 		.ascii	"WriteRegister\000"
- 2652      65526567 
- 2652      69737465 
- 2652      7200
- 2653              	.LASF46:
- 2654 01fc 436F6C6F 		.ascii	"ColorSensor_Initialize\000"
- 2654      7253656E 
- 2654      736F725F 
- 2654      496E6974 
- 2654      69616C69 
- 2655              	.LASF10:
- 2656 0213 6C6F6E67 		.ascii	"long unsigned int\000"
- 2656      20756E73 
- 2656      69676E65 
-ARM GAS  C:\Users\alexa\AppData\Local\Temp\ccDtNEgi.s 			page 52
-
-
- 2656      6420696E 
- 2656      7400
- 2657              	.LASF29:
- 2658 0225 62797465 		.ascii	"bytes\000"
- 2658      7300
- 2659              	.LASF18:
- 2660 022b 646F7562 		.ascii	"double\000"
- 2660      6C6500
- 2661              	.LASF9:
- 2662 0232 5F5F7569 		.ascii	"__uint32_t\000"
- 2662      6E743332 
- 2662      5F7400
- 2663              	.LASF7:
- 2664 023d 5F5F696E 		.ascii	"__int32_t\000"
- 2664      7433325F 
- 2664      7400
- 2665              	.LASF57:
- 2666 0247 433A5C55 		.ascii	"C:\\Users\\alexa\\Documents\\GitHub\\Projekt-3\\PSo"
- 2666      73657273 
- 2666      5C616C65 
- 2666      78615C44 
- 2666      6F63756D 
- 2667 0274 435C5052 		.ascii	"C\\PRJ3.cydsn\000"
- 2667      4A332E63 
- 2667      7964736E 
- 2667      00
- 2668              	.LASF58:
- 2669 0281 436F6C6F 		.ascii	"Colors\000"
- 2669      727300
- 2670              	.LASF22:
- 2671 0288 746F6E65 		.ascii	"tone\000"
- 2671      00
- 2672              	.LASF47:
- 2673 028d 49544D5F 		.ascii	"ITM_RxBuffer\000"
- 2673      52784275 
- 2673      66666572 
- 2673      00
- 2674              	.LASF55:
- 2675 029a 474E5520 		.ascii	"GNU C11 5.4.1 20160609 (release) [ARM/embedded-5-br"
- 2675      43313120 
- 2675      352E342E 
- 2675      31203230 
- 2675      31363036 
- 2676 02cd 616E6368 		.ascii	"anch revision 237715] -mcpu=cortex-m3 -mthumb -g -O"
- 2676      20726576 
- 2676      6973696F 
- 2676      6E203233 
- 2676      37373135 
- 2677 0300 67202D66 		.ascii	"g -ffunction-sections -ffat-lto-objects\000"
- 2677      66756E63 
- 2677      74696F6E 
- 2677      2D736563 
- 2677      74696F6E 
- 2678              	.LASF36:
- 2679 0328 46696E64 		.ascii	"FindMaxColor\000"
- 2679      4D617843 
- 2679      6F6C6F72 
-ARM GAS  C:\Users\alexa\AppData\Local\Temp\ccDtNEgi.s 			page 53
-
-
- 2679      00
- 2680              	.LASF54:
- 2681 0335 4932435F 		.ascii	"I2C_Start\000"
- 2681      53746172 
- 2681      7400
- 2682              	.LASF53:
- 2683 033f 4932435F 		.ascii	"I2C_MasterSendStop\000"
- 2683      4D617374 
- 2683      65725365 
- 2683      6E645374 
- 2683      6F7000
- 2684              	.LASF4:
- 2685 0352 5F5F7569 		.ascii	"__uint8_t\000"
- 2685      6E74385F 
- 2685      7400
- 2686              		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 5.4.1 20160609 (release) [ARM/embedded-5-bran
+ 772              	.LVL95:
+ 773 0000 F0B5     		push	{r4, r5, r6, r7, lr}
+ 774              		.cfi_def_cfa_offset 20
+ 775              		.cfi_offset 4, -20
+ 776              		.cfi_offset 5, -16
+ 777              		.cfi_offset 6, -12
+ 778              		.cfi_offset 7, -8
+ 779              		.cfi_offset 14, -4
+ 780 0002 85B0     		sub	sp, sp, #20
+ 781              		.cfi_def_cfa_offset 40
+ 782 0004 0546     		mov	r5, r0
+ 783 0006 0F46     		mov	r7, r1
+ARM GAS  C:\Users\alexa\AppData\Local\Temp\ccmMHdsD.s 			page 17
+
+
+ 784              	.LVL96:
+ 108:ColorSensor.c ****     bool isReadingSuccessful = true;
+ 109:ColorSensor.c ****     uint8_t colorFrequency[7] = {0};
+ 785              		.loc 1 109 0
+ 786 0008 0024     		movs	r4, #0
+ 787 000a 0294     		str	r4, [sp, #8]
+ 788 000c CDF80B40 		str	r4, [sp, #11]	@ unaligned
+ 110:ColorSensor.c ****     UART_USB_PutString("Color measurement started\r\n");
+ 789              		.loc 1 110 0
+ 790 0010 1848     		ldr	r0, .L89
+ 791              	.LVL97:
+ 792 0012 FFF7FEFF 		bl	UART_USB_PutString
+ 793              	.LVL98:
+ 108:ColorSensor.c ****     bool isReadingSuccessful = true;
+ 794              		.loc 1 108 0
+ 795 0016 0126     		movs	r6, #1
+ 796              	.LBB6:
+ 111:ColorSensor.c ****     for (uint16_t i = 0; i < measurements; ++i) {
+ 797              		.loc 1 111 0
+ 798 0018 11E0     		b	.L80
+ 799              	.LVL99:
+ 800              	.L82:
+ 801              	.LBB7:
+ 112:ColorSensor.c ****         uint8_t color_index;
+ 113:ColorSensor.c ****         if (!ColorSensor_Read(&color_index)) isReadingSuccessful = false;
+ 802              		.loc 1 113 0
+ 803 001a 0DF10700 		add	r0, sp, #7
+ 804 001e FFF7FEFF 		bl	ColorSensor_Read
+ 805              	.LVL100:
+ 806 0022 48B1     		cbz	r0, .L86
+ 114:ColorSensor.c ****         else colorFrequency[color_index]++;
+ 807              		.loc 1 114 0
+ 808 0024 9DF80730 		ldrb	r3, [sp, #7]	@ zero_extendqisi2
+ 809 0028 04AA     		add	r2, sp, #16
+ 810 002a 1344     		add	r3, r3, r2
+ 811 002c 13F8082C 		ldrb	r2, [r3, #-8]	@ zero_extendqisi2
+ 812 0030 0132     		adds	r2, r2, #1
+ 813 0032 03F8082C 		strb	r2, [r3, #-8]
+ 814 0036 00E0     		b	.L81
+ 815              	.L86:
+ 113:ColorSensor.c ****         else colorFrequency[color_index]++;
+ 816              		.loc 1 113 0
+ 817 0038 0026     		movs	r6, #0
+ 818              	.LVL101:
+ 819              	.L81:
+ 820              	.LBE7:
+ 111:ColorSensor.c ****         uint8_t color_index;
+ 821              		.loc 1 111 0 discriminator 2
+ 822 003a 0134     		adds	r4, r4, #1
+ 823              	.LVL102:
+ 824 003c A4B2     		uxth	r4, r4
+ 825              	.LVL103:
+ 826              	.L80:
+ 111:ColorSensor.c ****         uint8_t color_index;
+ 827              		.loc 1 111 0 is_stmt 0 discriminator 1
+ 828 003e BC42     		cmp	r4, r7
+ 829 0040 EBD3     		bcc	.L82
+ARM GAS  C:\Users\alexa\AppData\Local\Temp\ccmMHdsD.s 			page 18
+
+
+ 830              	.LBE6:
+ 115:ColorSensor.c ****     }
+ 116:ColorSensor.c ****     UART_USB_PutString("Color measurement stopped\r\n"); 
+ 831              		.loc 1 116 0 is_stmt 1
+ 832 0042 0D48     		ldr	r0, .L89+4
+ 833 0044 FFF7FEFF 		bl	UART_USB_PutString
+ 834              	.LVL104:
+ 835              	.LBB8:
+ 117:ColorSensor.c ****     uint8_t hottestColor = 0;
+ 118:ColorSensor.c ****     for (uint8_t i = 1; i < 7; ++i) { // Find den farve der opstår mest
+ 836              		.loc 1 118 0
+ 837 0048 0123     		movs	r3, #1
+ 838              	.LBE8:
+ 117:ColorSensor.c ****     uint8_t hottestColor = 0;
+ 839              		.loc 1 117 0
+ 840 004a 0020     		movs	r0, #0
+ 841              	.LBB9:
+ 842              		.loc 1 118 0
+ 843 004c 0CE0     		b	.L83
+ 844              	.LVL105:
+ 845              	.L85:
+ 119:ColorSensor.c ****         if (colorFrequency[i] > colorFrequency[hottestColor]) hottestColor = i;
+ 846              		.loc 1 119 0
+ 847 004e 04AA     		add	r2, sp, #16
+ 848 0050 1A44     		add	r2, r2, r3
+ 849 0052 12F8081C 		ldrb	r1, [r2, #-8]	@ zero_extendqisi2
+ 850 0056 04AA     		add	r2, sp, #16
+ 851 0058 0244     		add	r2, r2, r0
+ 852 005a 12F8082C 		ldrb	r2, [r2, #-8]	@ zero_extendqisi2
+ 853 005e 9142     		cmp	r1, r2
+ 854 0060 00D9     		bls	.L84
+ 855 0062 1846     		mov	r0, r3
+ 856              	.LVL106:
+ 857              	.L84:
+ 118:ColorSensor.c ****         if (colorFrequency[i] > colorFrequency[hottestColor]) hottestColor = i;
+ 858              		.loc 1 118 0 discriminator 2
+ 859 0064 0133     		adds	r3, r3, #1
+ 860              	.LVL107:
+ 861 0066 DBB2     		uxtb	r3, r3
+ 862              	.LVL108:
+ 863              	.L83:
+ 118:ColorSensor.c ****         if (colorFrequency[i] > colorFrequency[hottestColor]) hottestColor = i;
+ 864              		.loc 1 118 0 is_stmt 0 discriminator 1
+ 865 0068 062B     		cmp	r3, #6
+ 866 006a F0D9     		bls	.L85
+ 867              	.LBE9:
+ 120:ColorSensor.c ****     }
+ 121:ColorSensor.c ****     *color = hottestColor;
+ 868              		.loc 1 121 0 is_stmt 1
+ 869 006c 2870     		strb	r0, [r5]
+ 122:ColorSensor.c ****     return isReadingSuccessful;
+ 123:ColorSensor.c **** }
+ 870              		.loc 1 123 0
+ 871 006e 3046     		mov	r0, r6
+ 872              	.LVL109:
+ 873 0070 05B0     		add	sp, sp, #20
+ 874              		.cfi_def_cfa_offset 20
+ARM GAS  C:\Users\alexa\AppData\Local\Temp\ccmMHdsD.s 			page 19
+
+
+ 875              		@ sp needed
+ 876 0072 F0BD     		pop	{r4, r5, r6, r7, pc}
+ 877              	.LVL110:
+ 878              	.L90:
+ 879              		.align	2
+ 880              	.L89:
+ 881 0074 3C000000 		.word	.LC8
+ 882 0078 58000000 		.word	.LC9
+ 883              		.cfi_endproc
+ 884              	.LFE72:
+ 885              		.size	ColorSensor_ReadAverage, .-ColorSensor_ReadAverage
+ 886              		.section	.text.ColorSensor_Initialize,"ax",%progbits
+ 887              		.align	2
+ 888              		.global	ColorSensor_Initialize
+ 889              		.thumb
+ 890              		.thumb_func
+ 891              		.type	ColorSensor_Initialize, %function
+ 892              	ColorSensor_Initialize:
+ 893              	.LFB73:
+ 124:ColorSensor.c **** 
+ 125:ColorSensor.c **** bool ColorSensor_Initialize()
+ 126:ColorSensor.c **** {
+ 894              		.loc 1 126 0
+ 895              		.cfi_startproc
+ 896              		@ args = 0, pretend = 0, frame = 0
+ 897              		@ frame_needed = 0, uses_anonymous_args = 0
+ 898 0000 08B5     		push	{r3, lr}
+ 899              		.cfi_def_cfa_offset 8
+ 900              		.cfi_offset 3, -8
+ 901              		.cfi_offset 14, -4
+ 127:ColorSensor.c ****     I2C_Start();
+ 902              		.loc 1 127 0
+ 903 0002 FFF7FEFF 		bl	I2C_Start
+ 904              	.LVL111:
+ 128:ColorSensor.c ****     if (!WriteRegister(0x81, 0x1D)) return false; // ?
+ 905              		.loc 1 128 0
+ 906 0006 1D21     		movs	r1, #29
+ 907 0008 8120     		movs	r0, #129
+ 908 000a FFF7FEFF 		bl	WriteRegister
+ 909              	.LVL112:
+ 910 000e 0346     		mov	r3, r0
+ 911 0010 80B1     		cbz	r0, .L92
+ 129:ColorSensor.c ****     if (!WriteRegister(0xCA, 0x57)) return false; // ?
+ 912              		.loc 1 129 0
+ 913 0012 5721     		movs	r1, #87
+ 914 0014 CA20     		movs	r0, #202
+ 915 0016 FFF7FEFF 		bl	WriteRegister
+ 916              	.LVL113:
+ 917 001a 0346     		mov	r3, r0
+ 918 001c 50B1     		cbz	r0, .L92
+ 130:ColorSensor.c ****     if (!WriteRegister(0xCB, 0x02)) return false; // ?
+ 919              		.loc 1 130 0
+ 920 001e 0221     		movs	r1, #2
+ 921 0020 CB20     		movs	r0, #203
+ 922 0022 FFF7FEFF 		bl	WriteRegister
+ 923              	.LVL114:
+ 924 0026 0346     		mov	r3, r0
+ARM GAS  C:\Users\alexa\AppData\Local\Temp\ccmMHdsD.s 			page 20
+
+
+ 925 0028 20B1     		cbz	r0, .L92
+ 131:ColorSensor.c ****     if (!WriteRegister(0x80, 0b00000011)) return false; // Enable AEN & PON bits
+ 926              		.loc 1 131 0
+ 927 002a 0321     		movs	r1, #3
+ 928 002c 8020     		movs	r0, #128
+ 929 002e FFF7FEFF 		bl	WriteRegister
+ 930              	.LVL115:
+ 931 0032 0346     		mov	r3, r0
+ 932              	.L92:
+ 132:ColorSensor.c ****     return true;
+ 133:ColorSensor.c **** }...
+ 933              		.loc 1 133 0
+ 934 0034 1846     		mov	r0, r3
+ 935 0036 08BD     		pop	{r3, pc}
+ 936              		.cfi_endproc
+ 937              	.LFE73:
+ 938              		.size	ColorSensor_Initialize, .-ColorSensor_Initialize
+ 939              		.global	rgb_ref
+ 940              		.section	.rodata
+ 941              		.align	2
+ 942              		.set	.LANCHOR0,. + 0
+ 943              		.type	rgb_ref, %object
+ 944              		.size	rgb_ref, 6
+ 945              	rgb_ref:
+ 946 0000 6244     		.short	17506
+ 947 0002 0443     		.short	17156
+ 948 0004 D03A     		.short	15056
+ 949              		.section	.rodata.str1.4,"aMS",%progbits,1
+ 950              		.align	2
+ 951              	.LC0:
+ 952 0000 746F6E65 		.ascii	"tone\000"
+ 952      00
+ 953 0005 000000   		.space	3
+ 954              	.LC1:
+ 955 0008 72656400 		.ascii	"red\000"
+ 956              	.LC2:
+ 957 000c 67726565 		.ascii	"green\000"
+ 957      6E00
+ 958 0012 0000     		.space	2
+ 959              	.LC3:
+ 960 0014 626C7565 		.ascii	"blue\000"
+ 960      00
+ 961 0019 000000   		.space	3
+ 962              	.LC4:
+ 963 001c 79656C6C 		.ascii	"yellow\000"
+ 963      6F7700
+ 964 0023 00       		.space	1
+ 965              	.LC5:
+ 966 0024 6379616E 		.ascii	"cyan\000"
+ 966      00
+ 967 0029 000000   		.space	3
+ 968              	.LC6:
+ 969 002c 6D616765 		.ascii	"magenta\000"
+ 969      6E746100 
+ 970              	.LC7:
+ 971 0034 6572726F 		.ascii	"error\000"
+ 971      7200
+ARM GAS  C:\Users\alexa\AppData\Local\Temp\ccmMHdsD.s 			page 21
+
+
+ 972 003a 0000     		.space	2
+ 973              	.LC8:
+ 974 003c 436F6C6F 		.ascii	"Color measurement started\015\012\000"
+ 974      72206D65 
+ 974      61737572 
+ 974      656D656E 
+ 974      74207374 
+ 975              	.LC9:
+ 976 0058 436F6C6F 		.ascii	"Color measurement stopped\015\012\000"
+ 976      72206D65 
+ 976      61737572 
+ 976      656D656E 
+ 976      74207374 
+ 977              		.text
+ 978              	.Letext0:
+ 979              		.file 2 "c:\\program files (x86)\\cypress\\psoc creator\\4.4\\psoc creator\\import\\gnu\\arm\\5.4.
+ 980              		.file 3 "c:\\program files (x86)\\cypress\\psoc creator\\4.4\\psoc creator\\import\\gnu\\arm\\5.4.
+ 981              		.file 4 "Generated_Source\\PSoC5/core_cm3.h"
+ 982              		.file 5 "Generated_Source\\PSoC5/I2C.h"
+ 983              		.file 6 "Generated_Source\\PSoC5/UART_USB.h"
+ 984              		.file 7 "ColorSensor.h"
+ 985              		.section	.debug_info,"",%progbits
+ 986              	.Ldebug_info0:
+ 987 0000 1D070000 		.4byte	0x71d
+ 988 0004 0400     		.2byte	0x4
+ 989 0006 00000000 		.4byte	.Ldebug_abbrev0
+ 990 000a 04       		.byte	0x4
+ 991 000b 01       		.uleb128 0x1
+ 992 000c FB020000 		.4byte	.LASF62
+ 993 0010 0C       		.byte	0xc
+ 994 0011 1C020000 		.4byte	.LASF63
+ 995 0015 A8020000 		.4byte	.LASF64
+ 996 0019 18000000 		.4byte	.Ldebug_ranges0+0x18
+ 997 001d 00000000 		.4byte	0
+ 998 0021 00000000 		.4byte	.Ldebug_line0
+ 999 0025 02       		.uleb128 0x2
+ 1000 0026 04       		.byte	0x4
+ 1001 0027 07       		.byte	0x7
+ 1002 0028 9A010000 		.4byte	.LASF0
+ 1003 002c 02       		.uleb128 0x2
+ 1004 002d 01       		.byte	0x1
+ 1005 002e 06       		.byte	0x6
+ 1006 002f 66010000 		.4byte	.LASF1
+ 1007 0033 03       		.uleb128 0x3
+ 1008 0034 C6030000 		.4byte	.LASF4
+ 1009 0038 02       		.byte	0x2
+ 1010 0039 1D       		.byte	0x1d
+ 1011 003a 3E000000 		.4byte	0x3e
+ 1012 003e 02       		.uleb128 0x2
+ 1013 003f 01       		.byte	0x1
+ 1014 0040 08       		.byte	0x8
+ 1015 0041 3E010000 		.4byte	.LASF2
+ 1016 0045 02       		.uleb128 0x2
+ 1017 0046 02       		.byte	0x2
+ 1018 0047 05       		.byte	0x5
+ 1019 0048 23000000 		.4byte	.LASF3
+ 1020 004c 03       		.uleb128 0x3
+ARM GAS  C:\Users\alexa\AppData\Local\Temp\ccmMHdsD.s 			page 22
+
+
+ 1021 004d 47000000 		.4byte	.LASF5
+ 1022 0051 02       		.byte	0x2
+ 1023 0052 2B       		.byte	0x2b
+ 1024 0053 57000000 		.4byte	0x57
+ 1025 0057 02       		.uleb128 0x2
+ 1026 0058 02       		.byte	0x2
+ 1027 0059 07       		.byte	0x7
+ 1028 005a 03020000 		.4byte	.LASF6
+ 1029 005e 03       		.uleb128 0x3
+ 1030 005f 9E020000 		.4byte	.LASF7
+ 1031 0063 02       		.byte	0x2
+ 1032 0064 3F       		.byte	0x3f
+ 1033 0065 69000000 		.4byte	0x69
+ 1034 0069 02       		.uleb128 0x2
+ 1035 006a 04       		.byte	0x4
+ 1036 006b 05       		.byte	0x5
+ 1037 006c BC000000 		.4byte	.LASF8
+ 1038 0070 03       		.uleb128 0x3
+ 1039 0071 86020000 		.4byte	.LASF9
+ 1040 0075 02       		.byte	0x2
+ 1041 0076 41       		.byte	0x41
+ 1042 0077 7B000000 		.4byte	0x7b
+ 1043 007b 02       		.uleb128 0x2
+ 1044 007c 04       		.byte	0x4
+ 1045 007d 07       		.byte	0x7
+ 1046 007e 67020000 		.4byte	.LASF10
+ 1047 0082 02       		.uleb128 0x2
+ 1048 0083 08       		.byte	0x8
+ 1049 0084 05       		.byte	0x5
+ 1050 0085 9D000000 		.4byte	.LASF11
+ 1051 0089 02       		.uleb128 0x2
+ 1052 008a 08       		.byte	0x8
+ 1053 008b 07       		.byte	0x7
+ 1054 008c 7A010000 		.4byte	.LASF12
+ 1055 0090 04       		.uleb128 0x4
+ 1056 0091 04       		.byte	0x4
+ 1057 0092 05       		.byte	0x5
+ 1058 0093 696E7400 		.ascii	"int\000"
+ 1059 0097 03       		.uleb128 0x3
+ 1060 0098 5C000000 		.4byte	.LASF13
+ 1061 009c 03       		.byte	0x3
+ 1062 009d 18       		.byte	0x18
+ 1063 009e 33000000 		.4byte	0x33
+ 1064 00a2 03       		.uleb128 0x3
+ 1065 00a3 DB010000 		.4byte	.LASF14
+ 1066 00a7 03       		.byte	0x3
+ 1067 00a8 24       		.byte	0x24
+ 1068 00a9 4C000000 		.4byte	0x4c
+ 1069 00ad 03       		.uleb128 0x3
+ 1070 00ae 72010000 		.4byte	.LASF15
+ 1071 00b2 03       		.byte	0x3
+ 1072 00b3 2C       		.byte	0x2c
+ 1073 00b4 5E000000 		.4byte	0x5e
+ 1074 00b8 03       		.uleb128 0x3
+ 1075 00b9 91010000 		.4byte	.LASF16
+ 1076 00bd 03       		.byte	0x3
+ 1077 00be 30       		.byte	0x30
+ARM GAS  C:\Users\alexa\AppData\Local\Temp\ccmMHdsD.s 			page 23
+
+
+ 1078 00bf 70000000 		.4byte	0x70
+ 1079 00c3 02       		.uleb128 0x2
+ 1080 00c4 04       		.byte	0x4
+ 1081 00c5 04       		.byte	0x4
+ 1082 00c6 8F000000 		.4byte	.LASF17
+ 1083 00ca 02       		.uleb128 0x2
+ 1084 00cb 08       		.byte	0x8
+ 1085 00cc 04       		.byte	0x4
+ 1086 00cd 7F020000 		.4byte	.LASF18
+ 1087 00d1 02       		.uleb128 0x2
+ 1088 00d2 01       		.byte	0x1
+ 1089 00d3 08       		.byte	0x8
+ 1090 00d4 D6010000 		.4byte	.LASF19
+ 1091 00d8 02       		.uleb128 0x2
+ 1092 00d9 08       		.byte	0x8
+ 1093 00da 04       		.byte	0x4
+ 1094 00db 32010000 		.4byte	.LASF20
+ 1095 00df 02       		.uleb128 0x2
+ 1096 00e0 04       		.byte	0x4
+ 1097 00e1 07       		.byte	0x7
+ 1098 00e2 CE000000 		.4byte	.LASF21
+ 1099 00e6 05       		.uleb128 0x5
+ 1100 00e7 04       		.byte	0x4
+ 1101 00e8 EC000000 		.4byte	0xec
+ 1102 00ec 06       		.uleb128 0x6
+ 1103 00ed D1000000 		.4byte	0xd1
+ 1104 00f1 07       		.uleb128 0x7
+ 1105 00f2 E2020000 		.4byte	.LASF65
+ 1106 00f6 01       		.byte	0x1
+ 1107 00f7 3E000000 		.4byte	0x3e
+ 1108 00fb 07       		.byte	0x7
+ 1109 00fc 12       		.byte	0x12
+ 1110 00fd 2C010000 		.4byte	0x12c
+ 1111 0101 08       		.uleb128 0x8
+ 1112 0102 E9020000 		.4byte	.LASF22
+ 1113 0106 00       		.byte	0
+ 1114 0107 09       		.uleb128 0x9
+ 1115 0108 72656400 		.ascii	"red\000"
+ 1116 010c 01       		.byte	0x1
+ 1117 010d 08       		.uleb128 0x8
+ 1118 010e 0A010000 		.4byte	.LASF23
+ 1119 0112 02       		.byte	0x2
+ 1120 0113 08       		.uleb128 0x8
+ 1121 0114 57000000 		.4byte	.LASF24
+ 1122 0118 03       		.byte	0x3
+ 1123 0119 08       		.uleb128 0x8
+ 1124 011a 4C010000 		.4byte	.LASF25
+ 1125 011e 04       		.byte	0x4
+ 1126 011f 08       		.uleb128 0x8
+ 1127 0120 FE010000 		.4byte	.LASF26
+ 1128 0124 05       		.byte	0x5
+ 1129 0125 08       		.uleb128 0x8
+ 1130 0126 D7000000 		.4byte	.LASF27
+ 1131 012a 06       		.byte	0x6
+ 1132 012b 00       		.byte	0
+ 1133 012c 0A       		.uleb128 0xa
+ 1134 012d 6C000000 		.4byte	.LASF31
+ARM GAS  C:\Users\alexa\AppData\Local\Temp\ccmMHdsD.s 			page 24
+
+
+ 1135 0131 01       		.byte	0x1
+ 1136 0132 09       		.byte	0x9
+ 1137 0133 FB010000 		.4byte	0x1fb
+ 1138 0137 00000000 		.4byte	.LFB64
+ 1139 013b 64000000 		.4byte	.LFE64-.LFB64
+ 1140 013f 01       		.uleb128 0x1
+ 1141 0140 9C       		.byte	0x9c
+ 1142 0141 FB010000 		.4byte	0x1fb
+ 1143 0145 0B       		.uleb128 0xb
+ 1144 0146 52454700 		.ascii	"REG\000"
+ 1145 014a 01       		.byte	0x1
+ 1146 014b 09       		.byte	0x9
+ 1147 014c 97000000 		.4byte	0x97
+ 1148 0150 00000000 		.4byte	.LLST0
+ 1149 0154 0C       		.uleb128 0xc
+ 1150 0155 85000000 		.4byte	.LASF28
+ 1151 0159 01       		.byte	0x1
+ 1152 015a 09       		.byte	0x9
+ 1153 015b 97000000 		.4byte	0x97
+ 1154 015f 21000000 		.4byte	.LLST1
+ 1155 0163 0C       		.uleb128 0xc
+ 1156 0164 79020000 		.4byte	.LASF29
+ 1157 0168 01       		.byte	0x1
+ 1158 0169 09       		.byte	0x9
+ 1159 016a 02020000 		.4byte	0x202
+ 1160 016e 42000000 		.4byte	.LLST2
+ 1161 0172 0D       		.uleb128 0xd
+ 1162 0173 2C000000 		.4byte	.LBB2
+ 1163 0177 1C000000 		.4byte	.LBE2-.LBB2
+ 1164 017b AB010000 		.4byte	0x1ab
+ 1165 017f 0E       		.uleb128 0xe
+ 1166 0180 6900     		.ascii	"i\000"
+ 1167 0182 01       		.byte	0x1
+ 1168 0183 0E       		.byte	0xe
+ 1169 0184 97000000 		.4byte	0x97
+ 1170 0188 60000000 		.4byte	.LLST3
+ 1171 018c 0F       		.uleb128 0xf
+ 1172 018d 2C000000 		.4byte	.LBB3
+ 1173 0191 14000000 		.4byte	.LBE3-.LBB3
+ 1174 0195 10       		.uleb128 0x10
+ 1175 0196 E4010000 		.4byte	.LASF66
+ 1176 019a 01       		.byte	0x1
+ 1177 019b 0F       		.byte	0xf
+ 1178 019c FB010000 		.4byte	0x1fb
+ 1179 01a0 11       		.uleb128 0x11
+ 1180 01a1 3E000000 		.4byte	.LVL7
+ 1181 01a5 D3060000 		.4byte	0x6d3
+ 1182 01a9 00       		.byte	0
+ 1183 01aa 00       		.byte	0
+ 1184 01ab 12       		.uleb128 0x12
+ 1185 01ac 12000000 		.4byte	.LVL3
+ 1186 01b0 DE060000 		.4byte	0x6de
+ 1187 01b4 C4010000 		.4byte	0x1c4
+ 1188 01b8 13       		.uleb128 0x13
+ 1189 01b9 01       		.uleb128 0x1
+ 1190 01ba 50       		.byte	0x50
+ 1191 01bb 02       		.uleb128 0x2
+ARM GAS  C:\Users\alexa\AppData\Local\Temp\ccmMHdsD.s 			page 25
+
+
+ 1192 01bc 08       		.byte	0x8
+ 1193 01bd 39       		.byte	0x39
+ 1194 01be 13       		.uleb128 0x13
+ 1195 01bf 01       		.uleb128 0x1
+ 1196 01c0 51       		.byte	0x51
+ 1197 01c1 01       		.uleb128 0x1
+ 1198 01c2 30       		.byte	0x30
+ 1199 01c3 00       		.byte	0
+ 1200 01c4 12       		.uleb128 0x12
+ 1201 01c5 1A000000 		.4byte	.LVL4
+ 1202 01c9 E9060000 		.4byte	0x6e9
+ 1203 01cd D8010000 		.4byte	0x1d8
+ 1204 01d1 13       		.uleb128 0x13
+ 1205 01d2 01       		.uleb128 0x1
+ 1206 01d3 50       		.byte	0x50
+ 1207 01d4 02       		.uleb128 0x2
+ 1208 01d5 74       		.byte	0x74
+ 1209 01d6 00       		.sleb128 0
+ 1210 01d7 00       		.byte	0
+ 1211 01d8 12       		.uleb128 0x12
+ 1212 01d9 24000000 		.4byte	.LVL5
+ 1213 01dd F4060000 		.4byte	0x6f4
+ 1214 01e1 F1010000 		.4byte	0x1f1
+ 1215 01e5 13       		.uleb128 0x13
+ 1216 01e6 01       		.uleb128 0x1
+ 1217 01e7 50       		.byte	0x50
+ 1218 01e8 02       		.uleb128 0x2
+ 1219 01e9 08       		.byte	0x8
+ 1220 01ea 39       		.byte	0x39
+ 1221 01eb 13       		.uleb128 0x13
+ 1222 01ec 01       		.uleb128 0x1
+ 1223 01ed 51       		.byte	0x51
+ 1224 01ee 01       		.uleb128 0x1
+ 1225 01ef 31       		.byte	0x31
+ 1226 01f0 00       		.byte	0
+ 1227 01f1 11       		.uleb128 0x11
+ 1228 01f2 4C000000 		.4byte	.LVL10
+ 1229 01f6 FF060000 		.4byte	0x6ff
+ 1230 01fa 00       		.byte	0
+ 1231 01fb 02       		.uleb128 0x2
+ 1232 01fc 01       		.byte	0x1
+ 1233 01fd 02       		.byte	0x2
+ 1234 01fe 16020000 		.4byte	.LASF30
+ 1235 0202 05       		.uleb128 0x5
+ 1236 0203 04       		.byte	0x4
+ 1237 0204 97000000 		.4byte	0x97
+ 1238 0208 0A       		.uleb128 0xa
+ 1239 0209 2A020000 		.4byte	.LASF32
+ 1240 020d 01       		.byte	0x1
+ 1241 020e 16       		.byte	0x16
+ 1242 020f FB010000 		.4byte	0x1fb
+ 1243 0213 00000000 		.4byte	.LFB65
+ 1244 0217 34000000 		.4byte	.LFE65-.LFB65
+ 1245 021b 01       		.uleb128 0x1
+ 1246 021c 9C       		.byte	0x9c
+ 1247 021d 8A020000 		.4byte	0x28a
+ 1248 0221 0B       		.uleb128 0xb
+ARM GAS  C:\Users\alexa\AppData\Local\Temp\ccmMHdsD.s 			page 26
+
+
+ 1249 0222 52454700 		.ascii	"REG\000"
+ 1250 0226 01       		.byte	0x1
+ 1251 0227 16       		.byte	0x16
+ 1252 0228 97000000 		.4byte	0x97
+ 1253 022c 7E000000 		.4byte	.LLST4
+ 1254 0230 0C       		.uleb128 0xc
+ 1255 0231 42000000 		.4byte	.LASF33
+ 1256 0235 01       		.byte	0x1
+ 1257 0236 16       		.byte	0x16
+ 1258 0237 97000000 		.4byte	0x97
+ 1259 023b 9F000000 		.4byte	.LLST5
+ 1260 023f 12       		.uleb128 0x12
+ 1261 0240 0E000000 		.4byte	.LVL17
+ 1262 0244 DE060000 		.4byte	0x6de
+ 1263 0248 58020000 		.4byte	0x258
+ 1264 024c 13       		.uleb128 0x13
+ 1265 024d 01       		.uleb128 0x1
+ 1266 024e 50       		.byte	0x50
+ 1267 024f 02       		.uleb128 0x2
+ 1268 0250 08       		.byte	0x8
+ 1269 0251 39       		.byte	0x39
+ 1270 0252 13       		.uleb128 0x13
+ 1271 0253 01       		.uleb128 0x1
+ 1272 0254 51       		.byte	0x51
+ 1273 0255 01       		.uleb128 0x1
+ 1274 0256 30       		.byte	0x30
+ 1275 0257 00       		.byte	0
+ 1276 0258 12       		.uleb128 0x12
+ 1277 0259 16000000 		.4byte	.LVL18
+ 1278 025d E9060000 		.4byte	0x6e9
+ 1279 0261 6C020000 		.4byte	0x26c
+ 1280 0265 13       		.uleb128 0x13
+ 1281 0266 01       		.uleb128 0x1
+ 1282 0267 50       		.byte	0x50
+ 1283 0268 02       		.uleb128 0x2
+ 1284 0269 74       		.byte	0x74
+ 1285 026a 00       		.sleb128 0
+ 1286 026b 00       		.byte	0
+ 1287 026c 12       		.uleb128 0x12
+ 1288 026d 1E000000 		.4byte	.LVL19
+ 1289 0271 E9060000 		.4byte	0x6e9
+ 1290 0275 80020000 		.4byte	0x280
+ 1291 0279 13       		.uleb128 0x13
+ 1292 027a 01       		.uleb128 0x1
+ 1293 027b 50       		.byte	0x50
+ 1294 027c 02       		.uleb128 0x2
+ 1295 027d 75       		.byte	0x75
+ 1296 027e 00       		.sleb128 0
+ 1297 027f 00       		.byte	0
+ 1298 0280 11       		.uleb128 0x11
+ 1299 0281 24000000 		.4byte	.LVL20
+ 1300 0285 FF060000 		.4byte	0x6ff
+ 1301 0289 00       		.byte	0
+ 1302 028a 0A       		.uleb128 0xa
+ 1303 028b F3000000 		.4byte	.LASF34
+ 1304 028f 01       		.byte	0x1
+ 1305 0290 1F       		.byte	0x1f
+ARM GAS  C:\Users\alexa\AppData\Local\Temp\ccmMHdsD.s 			page 27
+
+
+ 1306 0291 FB010000 		.4byte	0x1fb
+ 1307 0295 00000000 		.4byte	.LFB66
+ 1308 0299 44000000 		.4byte	.LFE66-.LFB66
+ 1309 029d 01       		.uleb128 0x1
+ 1310 029e 9C       		.byte	0x9c
+ 1311 029f E9020000 		.4byte	0x2e9
+ 1312 02a3 0C       		.uleb128 0xc
+ 1313 02a4 64000000 		.4byte	.LASF35
+ 1314 02a8 01       		.byte	0x1
+ 1315 02a9 1F       		.byte	0x1f
+ 1316 02aa E9020000 		.4byte	0x2e9
+ 1317 02ae C0000000 		.4byte	.LLST6
+ 1318 02b2 14       		.uleb128 0x14
+ 1319 02b3 85000000 		.4byte	.LASF28
+ 1320 02b7 01       		.byte	0x1
+ 1321 02b8 20       		.byte	0x20
+ 1322 02b9 97000000 		.4byte	0x97
+ 1323 02bd 0B       		.byte	0xb
+ 1324 02be 15       		.uleb128 0x15
+ 1325 02bf 42000000 		.4byte	.LASF33
+ 1326 02c3 01       		.byte	0x1
+ 1327 02c4 21       		.byte	0x21
+ 1328 02c5 EF020000 		.4byte	0x2ef
+ 1329 02c9 DE000000 		.4byte	.LLST7
+ 1330 02cd 16       		.uleb128 0x16
+ 1331 02ce 10000000 		.4byte	.LVL25
+ 1332 02d2 2C010000 		.4byte	0x12c
+ 1333 02d6 13       		.uleb128 0x13
+ 1334 02d7 01       		.uleb128 0x1
+ 1335 02d8 50       		.byte	0x50
+ 1336 02d9 02       		.uleb128 0x2
+ 1337 02da 09       		.byte	0x9
+ 1338 02db 95       		.byte	0x95
+ 1339 02dc 13       		.uleb128 0x13
+ 1340 02dd 01       		.uleb128 0x1
+ 1341 02de 51       		.byte	0x51
+ 1342 02df 01       		.uleb128 0x1
+ 1343 02e0 3B       		.byte	0x3b
+ 1344 02e1 13       		.uleb128 0x13
+ 1345 02e2 01       		.uleb128 0x1
+ 1346 02e3 52       		.byte	0x52
+ 1347 02e4 02       		.uleb128 0x2
+ 1348 02e5 91       		.byte	0x91
+ 1349 02e6 6C       		.sleb128 -20
+ 1350 02e7 00       		.byte	0
+ 1351 02e8 00       		.byte	0
+ 1352 02e9 05       		.uleb128 0x5
+ 1353 02ea 04       		.byte	0x4
+ 1354 02eb A2000000 		.4byte	0xa2
+ 1355 02ef 17       		.uleb128 0x17
+ 1356 02f0 97000000 		.4byte	0x97
+ 1357 02f4 00030000 		.4byte	0x300
+ 1358 02f8 18       		.uleb128 0x18
+ 1359 02f9 DF000000 		.4byte	0xdf
+ 1360 02fd 01       		.uleb128 0x1
+ 1361 02fe 3A       		.byte	0x3a
+ 1362 02ff 00       		.byte	0
+ARM GAS  C:\Users\alexa\AppData\Local\Temp\ccmMHdsD.s 			page 28
+
+
+ 1363 0300 0A       		.uleb128 0xa
+ 1364 0301 89030000 		.4byte	.LASF36
+ 1365 0305 01       		.byte	0x1
+ 1366 0306 2C       		.byte	0x2c
+ 1367 0307 A2000000 		.4byte	0xa2
+ 1368 030b 00000000 		.4byte	.LFB67
+ 1369 030f 14000000 		.4byte	.LFE67-.LFB67
+ 1370 0313 01       		.uleb128 0x1
+ 1371 0314 9C       		.byte	0x9c
+ 1372 0315 36030000 		.4byte	0x336
+ 1373 0319 0B       		.uleb128 0xb
+ 1374 031a 72676200 		.ascii	"rgb\000"
+ 1375 031e 01       		.byte	0x1
+ 1376 031f 2C       		.byte	0x2c
+ 1377 0320 36030000 		.4byte	0x336
+ 1378 0324 0A010000 		.4byte	.LLST8
+ 1379 0328 19       		.uleb128 0x19
+ 1380 0329 6D617800 		.ascii	"max\000"
+ 1381 032d 01       		.byte	0x1
+ 1382 032e 2D       		.byte	0x2d
+ 1383 032f A2000000 		.4byte	0xa2
+ 1384 0333 01       		.uleb128 0x1
+ 1385 0334 53       		.byte	0x53
+ 1386 0335 00       		.byte	0
+ 1387 0336 05       		.uleb128 0x5
+ 1388 0337 04       		.byte	0x4
+ 1389 0338 3C030000 		.4byte	0x33c
+ 1390 033c 06       		.uleb128 0x6
+ 1391 033d A2000000 		.4byte	0xa2
+ 1392 0341 1A       		.uleb128 0x1a
+ 1393 0342 33000000 		.4byte	.LASF51
+ 1394 0346 01       		.byte	0x1
+ 1395 0347 31       		.byte	0x31
+ 1396 0348 00000000 		.4byte	.LFB68
+ 1397 034c 40000000 		.4byte	.LFE68-.LFB68
+ 1398 0350 01       		.uleb128 0x1
+ 1399 0351 9C       		.byte	0x9c
+ 1400 0352 C9030000 		.4byte	0x3c9
+ 1401 0356 0B       		.uleb128 0xb
+ 1402 0357 72676200 		.ascii	"rgb\000"
+ 1403 035b 01       		.byte	0x1
+ 1404 035c 31       		.byte	0x31
+ 1405 035d 36030000 		.4byte	0x336
+ 1406 0361 2B010000 		.4byte	.LLST9
+ 1407 0365 0C       		.uleb128 0xc
+ 1408 0366 CE010000 		.4byte	.LASF37
+ 1409 036a 01       		.byte	0x1
+ 1410 036b 31       		.byte	0x31
+ 1411 036c E9020000 		.4byte	0x2e9
+ 1412 0370 57010000 		.4byte	.LLST10
+ 1413 0374 1B       		.uleb128 0x1b
+ 1414 0375 A7010000 		.4byte	.LASF38
+ 1415 0379 01       		.byte	0x1
+ 1416 037a 32       		.byte	0x32
+ 1417 037b A2000000 		.4byte	0xa2
+ 1418 037f 01       		.uleb128 0x1
+ 1419 0380 50       		.byte	0x50
+ARM GAS  C:\Users\alexa\AppData\Local\Temp\ccmMHdsD.s 			page 29
+
+
+ 1420 0381 0D       		.uleb128 0xd
+ 1421 0382 0C000000 		.4byte	.LBB4
+ 1422 0386 2C000000 		.4byte	.LBE4-.LBB4
+ 1423 038a B5030000 		.4byte	0x3b5
+ 1424 038e 0E       		.uleb128 0xe
+ 1425 038f 6900     		.ascii	"i\000"
+ 1426 0391 01       		.byte	0x1
+ 1427 0392 33       		.byte	0x33
+ 1428 0393 97000000 		.4byte	0x97
+ 1429 0397 83010000 		.4byte	.LLST11
+ 1430 039b 0F       		.uleb128 0xf
+ 1431 039c 10000000 		.4byte	.LBB5
+ 1432 03a0 20000000 		.4byte	.LBE5-.LBB5
+ 1433 03a4 15       		.uleb128 0x15
+ 1434 03a5 52000000 		.4byte	.LASF39
+ 1435 03a9 01       		.byte	0x1
+ 1436 03aa 34       		.byte	0x34
+ 1437 03ab B8000000 		.4byte	0xb8
+ 1438 03af AD010000 		.4byte	.LLST12
+ 1439 03b3 00       		.byte	0
+ 1440 03b4 00       		.byte	0
+ 1441 03b5 16       		.uleb128 0x16
+ 1442 03b6 0C000000 		.4byte	.LVL31
+ 1443 03ba 00030000 		.4byte	0x300
+ 1444 03be 13       		.uleb128 0x13
+ 1445 03bf 01       		.uleb128 0x1
+ 1446 03c0 50       		.byte	0x50
+ 1447 03c1 05       		.uleb128 0x5
+ 1448 03c2 03       		.byte	0x3
+ 1449 03c3 00000000 		.4byte	.LANCHOR0
+ 1450 03c7 00       		.byte	0
+ 1451 03c8 00       		.byte	0
+ 1452 03c9 1C       		.uleb128 0x1c
+ 1453 03ca 79000000 		.4byte	.LASF40
+ 1454 03ce 01       		.byte	0x1
+ 1455 03cf 39       		.byte	0x39
+ 1456 03d0 97000000 		.4byte	0x97
+ 1457 03d4 00000000 		.4byte	.LFB69
+ 1458 03d8 74010000 		.4byte	.LFE69-.LFB69
+ 1459 03dc 01       		.uleb128 0x1
+ 1460 03dd 9C       		.byte	0x9c
+ 1461 03de 5F040000 		.4byte	0x45f
+ 1462 03e2 0B       		.uleb128 0xb
+ 1463 03e3 72676200 		.ascii	"rgb\000"
+ 1464 03e7 01       		.byte	0x1
+ 1465 03e8 39       		.byte	0x39
+ 1466 03e9 36030000 		.4byte	0x336
+ 1467 03ed F2010000 		.4byte	.LLST13
+ 1468 03f1 1D       		.uleb128 0x1d
+ 1469 03f2 746F6C00 		.ascii	"tol\000"
+ 1470 03f6 01       		.byte	0x1
+ 1471 03f7 3A       		.byte	0x3a
+ 1472 03f8 5F040000 		.4byte	0x45f
+ 1473 03fc 08       		.byte	0x8
+ 1474 03fd 9A999999 		.4byte	0x9999999a
+ 1475 0401 9999C93F 		.4byte	0x3fc99999
+ 1476 0405 1E       		.uleb128 0x1e
+ARM GAS  C:\Users\alexa\AppData\Local\Temp\ccmMHdsD.s 			page 30
+
+
+ 1477 0406 C5000000 		.4byte	.LASF41
+ 1478 040a 01       		.byte	0x1
+ 1479 040b 3B       		.byte	0x3b
+ 1480 040c 5F040000 		.4byte	0x45f
+ 1481 0410 08       		.byte	0x8
+ 1482 0411 9A999999 		.4byte	0x9999999a
+ 1483 0415 9999A93F 		.4byte	0x3fa99999
+ 1484 0419 0E       		.uleb128 0xe
+ 1485 041a 7200     		.ascii	"r\000"
+ 1486 041c 01       		.byte	0x1
+ 1487 041d 3D       		.byte	0x3d
+ 1488 041e A2000000 		.4byte	0xa2
+ 1489 0422 2C020000 		.4byte	.LLST14
+ 1490 0426 0E       		.uleb128 0xe
+ 1491 0427 6700     		.ascii	"g\000"
+ 1492 0429 01       		.byte	0x1
+ 1493 042a 3D       		.byte	0x3d
+ 1494 042b A2000000 		.4byte	0xa2
+ 1495 042f 3F020000 		.4byte	.LLST15
+ 1496 0433 0E       		.uleb128 0xe
+ 1497 0434 6200     		.ascii	"b\000"
+ 1498 0436 01       		.byte	0x1
+ 1499 0437 3D       		.byte	0x3d
+ 1500 0438 A2000000 		.4byte	0xa2
+ 1501 043c 52020000 		.4byte	.LLST16
+ 1502 0440 0E       		.uleb128 0xe
+ 1503 0441 6D617800 		.ascii	"max\000"
+ 1504 0445 01       		.byte	0x1
+ 1505 0446 3F       		.byte	0x3f
+ 1506 0447 A2000000 		.4byte	0xa2
+ 1507 044b 65020000 		.4byte	.LLST17
+ 1508 044f 0E       		.uleb128 0xe
+ 1509 0450 6D696E00 		.ascii	"min\000"
+ 1510 0454 01       		.byte	0x1
+ 1511 0455 43       		.byte	0x43
+ 1512 0456 A2000000 		.4byte	0xa2
+ 1513 045a 8E020000 		.4byte	.LLST18
+ 1514 045e 00       		.byte	0
+ 1515 045f 06       		.uleb128 0x6
+ 1516 0460 CA000000 		.4byte	0xca
+ 1517 0464 0A       		.uleb128 0xa
+ 1518 0465 10010000 		.4byte	.LASF42
+ 1519 0469 01       		.byte	0x1
+ 1520 046a 55       		.byte	0x55
+ 1521 046b E6000000 		.4byte	0xe6
+ 1522 046f 00000000 		.4byte	.LFB70
+ 1523 0473 50000000 		.4byte	.LFE70-.LFB70
+ 1524 0477 01       		.uleb128 0x1
+ 1525 0478 9C       		.byte	0x9c
+ 1526 0479 8D040000 		.4byte	0x48d
+ 1527 047d 0C       		.uleb128 0xc
+ 1528 047e 2D000000 		.4byte	.LASF43
+ 1529 0482 01       		.byte	0x1
+ 1530 0483 55       		.byte	0x55
+ 1531 0484 97000000 		.4byte	0x97
+ 1532 0488 AC020000 		.4byte	.LLST19
+ 1533 048c 00       		.byte	0
+ARM GAS  C:\Users\alexa\AppData\Local\Temp\ccmMHdsD.s 			page 31
+
+
+ 1534 048d 0A       		.uleb128 0xa
+ 1535 048e AB000000 		.4byte	.LASF44
+ 1536 0492 01       		.byte	0x1
+ 1537 0493 62       		.byte	0x62
+ 1538 0494 FB010000 		.4byte	0x1fb
+ 1539 0498 00000000 		.4byte	.LFB71
+ 1540 049c 26000000 		.4byte	.LFE71-.LFB71
+ 1541 04a0 01       		.uleb128 0x1
+ 1542 04a1 9C       		.byte	0x9c
+ 1543 04a2 10050000 		.4byte	0x510
+ 1544 04a6 0C       		.uleb128 0xc
+ 1545 04a7 2D000000 		.4byte	.LASF43
+ 1546 04ab 01       		.byte	0x1
+ 1547 04ac 62       		.byte	0x62
+ 1548 04ad 02020000 		.4byte	0x202
+ 1549 04b1 7C030000 		.4byte	.LLST20
+ 1550 04b5 1B       		.uleb128 0x1b
+ 1551 04b6 64000000 		.4byte	.LASF35
+ 1552 04ba 01       		.byte	0x1
+ 1553 04bb 63       		.byte	0x63
+ 1554 04bc 10050000 		.4byte	0x510
+ 1555 04c0 02       		.uleb128 0x2
+ 1556 04c1 91       		.byte	0x91
+ 1557 04c2 68       		.sleb128 -24
+ 1558 04c3 1B       		.uleb128 0x1b
+ 1559 04c4 CE010000 		.4byte	.LASF37
+ 1560 04c8 01       		.byte	0x1
+ 1561 04c9 64       		.byte	0x64
+ 1562 04ca 10050000 		.4byte	0x510
+ 1563 04ce 02       		.uleb128 0x2
+ 1564 04cf 91       		.byte	0x91
+ 1565 04d0 60       		.sleb128 -32
+ 1566 04d1 12       		.uleb128 0x12
+ 1567 04d2 0C000000 		.4byte	.LVL92
+ 1568 04d6 8A020000 		.4byte	0x28a
+ 1569 04da E5040000 		.4byte	0x4e5
+ 1570 04de 13       		.uleb128 0x13
+ 1571 04df 01       		.uleb128 0x1
+ 1572 04e0 50       		.byte	0x50
+ 1573 04e1 02       		.uleb128 0x2
+ 1574 04e2 91       		.byte	0x91
+ 1575 04e3 68       		.sleb128 -24
+ 1576 04e4 00       		.byte	0
+ 1577 04e5 12       		.uleb128 0x12
+ 1578 04e6 18000000 		.4byte	.LVL93
+ 1579 04ea 41030000 		.4byte	0x341
+ 1580 04ee FF040000 		.4byte	0x4ff
+ 1581 04f2 13       		.uleb128 0x13
+ 1582 04f3 01       		.uleb128 0x1
+ 1583 04f4 50       		.byte	0x50
+ 1584 04f5 02       		.uleb128 0x2
+ 1585 04f6 91       		.byte	0x91
+ 1586 04f7 68       		.sleb128 -24
+ 1587 04f8 13       		.uleb128 0x13
+ 1588 04f9 01       		.uleb128 0x1
+ 1589 04fa 51       		.byte	0x51
+ 1590 04fb 02       		.uleb128 0x2
+ARM GAS  C:\Users\alexa\AppData\Local\Temp\ccmMHdsD.s 			page 32
+
+
+ 1591 04fc 7D       		.byte	0x7d
+ 1592 04fd 00       		.sleb128 0
+ 1593 04fe 00       		.byte	0
+ 1594 04ff 16       		.uleb128 0x16
+ 1595 0500 1E000000 		.4byte	.LVL94
+ 1596 0504 C9030000 		.4byte	0x3c9
+ 1597 0508 13       		.uleb128 0x13
+ 1598 0509 01       		.uleb128 0x1
+ 1599 050a 50       		.byte	0x50
+ 1600 050b 02       		.uleb128 0x2
+ 1601 050c 7D       		.byte	0x7d
+ 1602 050d 00       		.sleb128 0
+ 1603 050e 00       		.byte	0
+ 1604 050f 00       		.byte	0
+ 1605 0510 17       		.uleb128 0x17
+ 1606 0511 A2000000 		.4byte	0xa2
+ 1607 0515 20050000 		.4byte	0x520
+ 1608 0519 1F       		.uleb128 0x1f
+ 1609 051a DF000000 		.4byte	0xdf
+ 1610 051e 02       		.byte	0x2
+ 1611 051f 00       		.byte	0
+ 1612 0520 0A       		.uleb128 0xa
+ 1613 0521 4F020000 		.4byte	.LASF45
+ 1614 0525 01       		.byte	0x1
+ 1615 0526 6B       		.byte	0x6b
+ 1616 0527 FB010000 		.4byte	0x1fb
+ 1617 052b 00000000 		.4byte	.LFB72
+ 1618 052f 7C000000 		.4byte	.LFE72-.LFB72
+ 1619 0533 01       		.uleb128 0x1
+ 1620 0534 9C       		.byte	0x9c
+ 1621 0535 08060000 		.4byte	0x608
+ 1622 0539 0C       		.uleb128 0xc
+ 1623 053a 2D000000 		.4byte	.LASF43
+ 1624 053e 01       		.byte	0x1
+ 1625 053f 6B       		.byte	0x6b
+ 1626 0540 02020000 		.4byte	0x202
+ 1627 0544 9A030000 		.4byte	.LLST21
+ 1628 0548 0C       		.uleb128 0xc
+ 1629 0549 91020000 		.4byte	.LASF46
+ 1630 054d 01       		.byte	0x1
+ 1631 054e 6B       		.byte	0x6b
+ 1632 054f A2000000 		.4byte	0xa2
+ 1633 0553 C6030000 		.4byte	.LLST22
+ 1634 0557 15       		.uleb128 0x15
+ 1635 0558 DF000000 		.4byte	.LASF47
+ 1636 055c 01       		.byte	0x1
+ 1637 055d 6C       		.byte	0x6c
+ 1638 055e FB010000 		.4byte	0x1fb
+ 1639 0562 E7030000 		.4byte	.LLST23
+ 1640 0566 1B       		.uleb128 0x1b
+ 1641 0567 EF010000 		.4byte	.LASF48
+ 1642 056b 01       		.byte	0x1
+ 1643 056c 6D       		.byte	0x6d
+ 1644 056d 08060000 		.4byte	0x608
+ 1645 0571 02       		.uleb128 0x2
+ 1646 0572 91       		.byte	0x91
+ 1647 0573 60       		.sleb128 -32
+ARM GAS  C:\Users\alexa\AppData\Local\Temp\ccmMHdsD.s 			page 33
+
+
+ 1648 0574 15       		.uleb128 0x15
+ 1649 0575 16000000 		.4byte	.LASF49
+ 1650 0579 01       		.byte	0x1
+ 1651 057a 75       		.byte	0x75
+ 1652 057b 97000000 		.4byte	0x97
+ 1653 057f 06040000 		.4byte	.LLST24
+ 1654 0583 0D       		.uleb128 0xd
+ 1655 0584 18000000 		.4byte	.LBB6
+ 1656 0588 2A000000 		.4byte	.LBE6-.LBB6
+ 1657 058c C6050000 		.4byte	0x5c6
+ 1658 0590 0E       		.uleb128 0xe
+ 1659 0591 6900     		.ascii	"i\000"
+ 1660 0593 01       		.byte	0x1
+ 1661 0594 6F       		.byte	0x6f
+ 1662 0595 A2000000 		.4byte	0xa2
+ 1663 0599 3E040000 		.4byte	.LLST25
+ 1664 059d 0F       		.uleb128 0xf
+ 1665 059e 1A000000 		.4byte	.LBB7
+ 1666 05a2 20000000 		.4byte	.LBE7-.LBB7
+ 1667 05a6 1B       		.uleb128 0x1b
+ 1668 05a7 AE010000 		.4byte	.LASF50
+ 1669 05ab 01       		.byte	0x1
+ 1670 05ac 70       		.byte	0x70
+ 1671 05ad 97000000 		.4byte	0x97
+ 1672 05b1 02       		.uleb128 0x2
+ 1673 05b2 91       		.byte	0x91
+ 1674 05b3 5F       		.sleb128 -33
+ 1675 05b4 16       		.uleb128 0x16
+ 1676 05b5 22000000 		.4byte	.LVL100
+ 1677 05b9 8D040000 		.4byte	0x48d
+ 1678 05bd 13       		.uleb128 0x13
+ 1679 05be 01       		.uleb128 0x1
+ 1680 05bf 50       		.byte	0x50
+ 1681 05c0 02       		.uleb128 0x2
+ 1682 05c1 91       		.byte	0x91
+ 1683 05c2 5F       		.sleb128 -33
+ 1684 05c3 00       		.byte	0
+ 1685 05c4 00       		.byte	0
+ 1686 05c5 00       		.byte	0
+ 1687 05c6 20       		.uleb128 0x20
+ 1688 05c7 00000000 		.4byte	.Ldebug_ranges0+0
+ 1689 05cb DD050000 		.4byte	0x5dd
+ 1690 05cf 0E       		.uleb128 0xe
+ 1691 05d0 6900     		.ascii	"i\000"
+ 1692 05d2 01       		.byte	0x1
+ 1693 05d3 76       		.byte	0x76
+ 1694 05d4 97000000 		.4byte	0x97
+ 1695 05d8 68040000 		.4byte	.LLST26
+ 1696 05dc 00       		.byte	0
+ 1697 05dd 12       		.uleb128 0x12
+ 1698 05de 16000000 		.4byte	.LVL98
+ 1699 05e2 0A070000 		.4byte	0x70a
+ 1700 05e6 F4050000 		.4byte	0x5f4
+ 1701 05ea 13       		.uleb128 0x13
+ 1702 05eb 01       		.uleb128 0x1
+ 1703 05ec 50       		.byte	0x50
+ 1704 05ed 05       		.uleb128 0x5
+ARM GAS  C:\Users\alexa\AppData\Local\Temp\ccmMHdsD.s 			page 34
+
+
+ 1705 05ee 03       		.byte	0x3
+ 1706 05ef 3C000000 		.4byte	.LC8
+ 1707 05f3 00       		.byte	0
+ 1708 05f4 16       		.uleb128 0x16
+ 1709 05f5 48000000 		.4byte	.LVL104
+ 1710 05f9 0A070000 		.4byte	0x70a
+ 1711 05fd 13       		.uleb128 0x13
+ 1712 05fe 01       		.uleb128 0x1
+ 1713 05ff 50       		.byte	0x50
+ 1714 0600 05       		.uleb128 0x5
+ 1715 0601 03       		.byte	0x3
+ 1716 0602 58000000 		.4byte	.LC9
+ 1717 0606 00       		.byte	0
+ 1718 0607 00       		.byte	0
+ 1719 0608 17       		.uleb128 0x17
+ 1720 0609 97000000 		.4byte	0x97
+ 1721 060d 18060000 		.4byte	0x618
+ 1722 0611 1F       		.uleb128 0x1f
+ 1723 0612 DF000000 		.4byte	0xdf
+ 1724 0616 06       		.byte	0x6
+ 1725 0617 00       		.byte	0
+ 1726 0618 21       		.uleb128 0x21
+ 1727 0619 38020000 		.4byte	.LASF52
+ 1728 061d 01       		.byte	0x1
+ 1729 061e 7D       		.byte	0x7d
+ 1730 061f FB010000 		.4byte	0x1fb
+ 1731 0623 00000000 		.4byte	.LFB73
+ 1732 0627 38000000 		.4byte	.LFE73-.LFB73
+ 1733 062b 01       		.uleb128 0x1
+ 1734 062c 9C       		.byte	0x9c
+ 1735 062d 9C060000 		.4byte	0x69c
+ 1736 0631 11       		.uleb128 0x11
+ 1737 0632 06000000 		.4byte	.LVL111
+ 1738 0636 15070000 		.4byte	0x715
+ 1739 063a 12       		.uleb128 0x12
+ 1740 063b 0E000000 		.4byte	.LVL112
+ 1741 063f 08020000 		.4byte	0x208
+ 1742 0643 53060000 		.4byte	0x653
+ 1743 0647 13       		.uleb128 0x13
+ 1744 0648 01       		.uleb128 0x1
+ 1745 0649 50       		.byte	0x50
+ 1746 064a 02       		.uleb128 0x2
+ 1747 064b 09       		.byte	0x9
+ 1748 064c 81       		.byte	0x81
+ 1749 064d 13       		.uleb128 0x13
+ 1750 064e 01       		.uleb128 0x1
+ 1751 064f 51       		.byte	0x51
+ 1752 0650 01       		.uleb128 0x1
+ 1753 0651 4D       		.byte	0x4d
+ 1754 0652 00       		.byte	0
+ 1755 0653 12       		.uleb128 0x12
+ 1756 0654 1A000000 		.4byte	.LVL113
+ 1757 0658 08020000 		.4byte	0x208
+ 1758 065c 6D060000 		.4byte	0x66d
+ 1759 0660 13       		.uleb128 0x13
+ 1760 0661 01       		.uleb128 0x1
+ 1761 0662 50       		.byte	0x50
+ARM GAS  C:\Users\alexa\AppData\Local\Temp\ccmMHdsD.s 			page 35
+
+
+ 1762 0663 02       		.uleb128 0x2
+ 1763 0664 09       		.byte	0x9
+ 1764 0665 CA       		.byte	0xca
+ 1765 0666 13       		.uleb128 0x13
+ 1766 0667 01       		.uleb128 0x1
+ 1767 0668 51       		.byte	0x51
+ 1768 0669 02       		.uleb128 0x2
+ 1769 066a 08       		.byte	0x8
+ 1770 066b 57       		.byte	0x57
+ 1771 066c 00       		.byte	0
+ 1772 066d 12       		.uleb128 0x12
+ 1773 066e 26000000 		.4byte	.LVL114
+ 1774 0672 08020000 		.4byte	0x208
+ 1775 0676 86060000 		.4byte	0x686
+ 1776 067a 13       		.uleb128 0x13
+ 1777 067b 01       		.uleb128 0x1
+ 1778 067c 50       		.byte	0x50
+ 1779 067d 02       		.uleb128 0x2
+ 1780 067e 09       		.byte	0x9
+ 1781 067f CB       		.byte	0xcb
+ 1782 0680 13       		.uleb128 0x13
+ 1783 0681 01       		.uleb128 0x1
+ 1784 0682 51       		.byte	0x51
+ 1785 0683 01       		.uleb128 0x1
+ 1786 0684 32       		.byte	0x32
+ 1787 0685 00       		.byte	0
+ 1788 0686 16       		.uleb128 0x16
+ 1789 0687 32000000 		.4byte	.LVL115
+ 1790 068b 08020000 		.4byte	0x208
+ 1791 068f 13       		.uleb128 0x13
+ 1792 0690 01       		.uleb128 0x1
+ 1793 0691 50       		.byte	0x50
+ 1794 0692 02       		.uleb128 0x2
+ 1795 0693 09       		.byte	0x9
+ 1796 0694 80       		.byte	0x80
+ 1797 0695 13       		.uleb128 0x13
+ 1798 0696 01       		.uleb128 0x1
+ 1799 0697 51       		.byte	0x51
+ 1800 0698 01       		.uleb128 0x1
+ 1801 0699 33       		.byte	0x33
+ 1802 069a 00       		.byte	0
+ 1803 069b 00       		.byte	0
+ 1804 069c 22       		.uleb128 0x22
+ 1805 069d EE020000 		.4byte	.LASF53
+ 1806 06a1 04       		.byte	0x4
+ 1807 06a2 1207     		.2byte	0x712
+ 1808 06a4 A8060000 		.4byte	0x6a8
+ 1809 06a8 23       		.uleb128 0x23
+ 1810 06a9 AD000000 		.4byte	0xad
+ 1811 06ad 17       		.uleb128 0x17
+ 1812 06ae 3C030000 		.4byte	0x33c
+ 1813 06b2 BD060000 		.4byte	0x6bd
+ 1814 06b6 1F       		.uleb128 0x1f
+ 1815 06b7 DF000000 		.4byte	0xdf
+ 1816 06bb 02       		.byte	0x2
+ 1817 06bc 00       		.byte	0
+ 1818 06bd 24       		.uleb128 0x24
+ARM GAS  C:\Users\alexa\AppData\Local\Temp\ccmMHdsD.s 			page 36
+
+
+ 1819 06be 95000000 		.4byte	.LASF54
+ 1820 06c2 01       		.byte	0x1
+ 1821 06c3 07       		.byte	0x7
+ 1822 06c4 CE060000 		.4byte	0x6ce
+ 1823 06c8 05       		.uleb128 0x5
+ 1824 06c9 03       		.byte	0x3
+ 1825 06ca 00000000 		.4byte	rgb_ref
+ 1826 06ce 06       		.uleb128 0x6
+ 1827 06cf AD060000 		.4byte	0x6ad
+ 1828 06d3 25       		.uleb128 0x25
+ 1829 06d4 53010000 		.4byte	.LASF55
+ 1830 06d8 53010000 		.4byte	.LASF55
+ 1831 06dc 05       		.byte	0x5
+ 1832 06dd B7       		.byte	0xb7
+ 1833 06de 25       		.uleb128 0x25
+ 1834 06df BA010000 		.4byte	.LASF56
+ 1835 06e3 BA010000 		.4byte	.LASF56
+ 1836 06e7 05       		.byte	0x5
+ 1837 06e8 B1       		.byte	0xb1
+ 1838 06e9 25       		.uleb128 0x25
+ 1839 06ea 1E010000 		.4byte	.LASF57
+ 1840 06ee 1E010000 		.4byte	.LASF57
+ 1841 06f2 05       		.byte	0x5
+ 1842 06f3 B6       		.byte	0xb6
+ 1843 06f4 25       		.uleb128 0x25
+ 1844 06f5 00000000 		.4byte	.LASF58
+ 1845 06f9 00000000 		.4byte	.LASF58
+ 1846 06fd 05       		.byte	0x5
+ 1847 06fe B3       		.byte	0xb3
+ 1848 06ff 25       		.uleb128 0x25
+ 1849 0700 A0030000 		.4byte	.LASF59
+ 1850 0704 A0030000 		.4byte	.LASF59
+ 1851 0708 05       		.byte	0x5
+ 1852 0709 B5       		.byte	0xb5
+ 1853 070a 25       		.uleb128 0x25
+ 1854 070b B3030000 		.4byte	.LASF60
+ 1855 070f B3030000 		.4byte	.LASF60
+ 1856 0713 06       		.byte	0x6
+ 1857 0714 8B       		.byte	0x8b
+ 1858 0715 25       		.uleb128 0x25
+ 1859 0716 96030000 		.4byte	.LASF61
+ 1860 071a 96030000 		.4byte	.LASF61
+ 1861 071e 05       		.byte	0x5
+ 1862 071f 93       		.byte	0x93
+ 1863 0720 00       		.byte	0
+ 1864              		.section	.debug_abbrev,"",%progbits
+ 1865              	.Ldebug_abbrev0:
+ 1866 0000 01       		.uleb128 0x1
+ 1867 0001 11       		.uleb128 0x11
+ 1868 0002 01       		.byte	0x1
+ 1869 0003 25       		.uleb128 0x25
+ 1870 0004 0E       		.uleb128 0xe
+ 1871 0005 13       		.uleb128 0x13
+ 1872 0006 0B       		.uleb128 0xb
+ 1873 0007 03       		.uleb128 0x3
+ 1874 0008 0E       		.uleb128 0xe
+ 1875 0009 1B       		.uleb128 0x1b
+ARM GAS  C:\Users\alexa\AppData\Local\Temp\ccmMHdsD.s 			page 37
+
+
+ 1876 000a 0E       		.uleb128 0xe
+ 1877 000b 55       		.uleb128 0x55
+ 1878 000c 17       		.uleb128 0x17
+ 1879 000d 11       		.uleb128 0x11
+ 1880 000e 01       		.uleb128 0x1
+ 1881 000f 10       		.uleb128 0x10
+ 1882 0010 17       		.uleb128 0x17
+ 1883 0011 00       		.byte	0
+ 1884 0012 00       		.byte	0
+ 1885 0013 02       		.uleb128 0x2
+ 1886 0014 24       		.uleb128 0x24
+ 1887 0015 00       		.byte	0
+ 1888 0016 0B       		.uleb128 0xb
+ 1889 0017 0B       		.uleb128 0xb
+ 1890 0018 3E       		.uleb128 0x3e
+ 1891 0019 0B       		.uleb128 0xb
+ 1892 001a 03       		.uleb128 0x3
+ 1893 001b 0E       		.uleb128 0xe
+ 1894 001c 00       		.byte	0
+ 1895 001d 00       		.byte	0
+ 1896 001e 03       		.uleb128 0x3
+ 1897 001f 16       		.uleb128 0x16
+ 1898 0020 00       		.byte	0
+ 1899 0021 03       		.uleb128 0x3
+ 1900 0022 0E       		.uleb128 0xe
+ 1901 0023 3A       		.uleb128 0x3a
+ 1902 0024 0B       		.uleb128 0xb
+ 1903 0025 3B       		.uleb128 0x3b
+ 1904 0026 0B       		.uleb128 0xb
+ 1905 0027 49       		.uleb128 0x49
+ 1906 0028 13       		.uleb128 0x13
+ 1907 0029 00       		.byte	0
+ 1908 002a 00       		.byte	0
+ 1909 002b 04       		.uleb128 0x4
+ 1910 002c 24       		.uleb128 0x24
+ 1911 002d 00       		.byte	0
+ 1912 002e 0B       		.uleb128 0xb
+ 1913 002f 0B       		.uleb128 0xb
+ 1914 0030 3E       		.uleb128 0x3e
+ 1915 0031 0B       		.uleb128 0xb
+ 1916 0032 03       		.uleb128 0x3
+ 1917 0033 08       		.uleb128 0x8
+ 1918 0034 00       		.byte	0
+ 1919 0035 00       		.byte	0
+ 1920 0036 05       		.uleb128 0x5
+ 1921 0037 0F       		.uleb128 0xf
+ 1922 0038 00       		.byte	0
+ 1923 0039 0B       		.uleb128 0xb
+ 1924 003a 0B       		.uleb128 0xb
+ 1925 003b 49       		.uleb128 0x49
+ 1926 003c 13       		.uleb128 0x13
+ 1927 003d 00       		.byte	0
+ 1928 003e 00       		.byte	0
+ 1929 003f 06       		.uleb128 0x6
+ 1930 0040 26       		.uleb128 0x26
+ 1931 0041 00       		.byte	0
+ 1932 0042 49       		.uleb128 0x49
+ARM GAS  C:\Users\alexa\AppData\Local\Temp\ccmMHdsD.s 			page 38
+
+
+ 1933 0043 13       		.uleb128 0x13
+ 1934 0044 00       		.byte	0
+ 1935 0045 00       		.byte	0
+ 1936 0046 07       		.uleb128 0x7
+ 1937 0047 04       		.uleb128 0x4
+ 1938 0048 01       		.byte	0x1
+ 1939 0049 03       		.uleb128 0x3
+ 1940 004a 0E       		.uleb128 0xe
+ 1941 004b 0B       		.uleb128 0xb
+ 1942 004c 0B       		.uleb128 0xb
+ 1943 004d 49       		.uleb128 0x49
+ 1944 004e 13       		.uleb128 0x13
+ 1945 004f 3A       		.uleb128 0x3a
+ 1946 0050 0B       		.uleb128 0xb
+ 1947 0051 3B       		.uleb128 0x3b
+ 1948 0052 0B       		.uleb128 0xb
+ 1949 0053 01       		.uleb128 0x1
+ 1950 0054 13       		.uleb128 0x13
+ 1951 0055 00       		.byte	0
+ 1952 0056 00       		.byte	0
+ 1953 0057 08       		.uleb128 0x8
+ 1954 0058 28       		.uleb128 0x28
+ 1955 0059 00       		.byte	0
+ 1956 005a 03       		.uleb128 0x3
+ 1957 005b 0E       		.uleb128 0xe
+ 1958 005c 1C       		.uleb128 0x1c
+ 1959 005d 0B       		.uleb128 0xb
+ 1960 005e 00       		.byte	0
+ 1961 005f 00       		.byte	0
+ 1962 0060 09       		.uleb128 0x9
+ 1963 0061 28       		.uleb128 0x28
+ 1964 0062 00       		.byte	0
+ 1965 0063 03       		.uleb128 0x3
+ 1966 0064 08       		.uleb128 0x8
+ 1967 0065 1C       		.uleb128 0x1c
+ 1968 0066 0B       		.uleb128 0xb
+ 1969 0067 00       		.byte	0
+ 1970 0068 00       		.byte	0
+ 1971 0069 0A       		.uleb128 0xa
+ 1972 006a 2E       		.uleb128 0x2e
+ 1973 006b 01       		.byte	0x1
+ 1974 006c 3F       		.uleb128 0x3f
+ 1975 006d 19       		.uleb128 0x19
+ 1976 006e 03       		.uleb128 0x3
+ 1977 006f 0E       		.uleb128 0xe
+ 1978 0070 3A       		.uleb128 0x3a
+ 1979 0071 0B       		.uleb128 0xb
+ 1980 0072 3B       		.uleb128 0x3b
+ 1981 0073 0B       		.uleb128 0xb
+ 1982 0074 27       		.uleb128 0x27
+ 1983 0075 19       		.uleb128 0x19
+ 1984 0076 49       		.uleb128 0x49
+ 1985 0077 13       		.uleb128 0x13
+ 1986 0078 11       		.uleb128 0x11
+ 1987 0079 01       		.uleb128 0x1
+ 1988 007a 12       		.uleb128 0x12
+ 1989 007b 06       		.uleb128 0x6
+ARM GAS  C:\Users\alexa\AppData\Local\Temp\ccmMHdsD.s 			page 39
+
+
+ 1990 007c 40       		.uleb128 0x40
+ 1991 007d 18       		.uleb128 0x18
+ 1992 007e 9742     		.uleb128 0x2117
+ 1993 0080 19       		.uleb128 0x19
+ 1994 0081 01       		.uleb128 0x1
+ 1995 0082 13       		.uleb128 0x13
+ 1996 0083 00       		.byte	0
+ 1997 0084 00       		.byte	0
+ 1998 0085 0B       		.uleb128 0xb
+ 1999 0086 05       		.uleb128 0x5
+ 2000 0087 00       		.byte	0
+ 2001 0088 03       		.uleb128 0x3
+ 2002 0089 08       		.uleb128 0x8
+ 2003 008a 3A       		.uleb128 0x3a
+ 2004 008b 0B       		.uleb128 0xb
+ 2005 008c 3B       		.uleb128 0x3b
+ 2006 008d 0B       		.uleb128 0xb
+ 2007 008e 49       		.uleb128 0x49
+ 2008 008f 13       		.uleb128 0x13
+ 2009 0090 02       		.uleb128 0x2
+ 2010 0091 17       		.uleb128 0x17
+ 2011 0092 00       		.byte	0
+ 2012 0093 00       		.byte	0
+ 2013 0094 0C       		.uleb128 0xc
+ 2014 0095 05       		.uleb128 0x5
+ 2015 0096 00       		.byte	0
+ 2016 0097 03       		.uleb128 0x3
+ 2017 0098 0E       		.uleb128 0xe
+ 2018 0099 3A       		.uleb128 0x3a
+ 2019 009a 0B       		.uleb128 0xb
+ 2020 009b 3B       		.uleb128 0x3b
+ 2021 009c 0B       		.uleb128 0xb
+ 2022 009d 49       		.uleb128 0x49
+ 2023 009e 13       		.uleb128 0x13
+ 2024 009f 02       		.uleb128 0x2
+ 2025 00a0 17       		.uleb128 0x17
+ 2026 00a1 00       		.byte	0
+ 2027 00a2 00       		.byte	0
+ 2028 00a3 0D       		.uleb128 0xd
+ 2029 00a4 0B       		.uleb128 0xb
+ 2030 00a5 01       		.byte	0x1
+ 2031 00a6 11       		.uleb128 0x11
+ 2032 00a7 01       		.uleb128 0x1
+ 2033 00a8 12       		.uleb128 0x12
+ 2034 00a9 06       		.uleb128 0x6
+ 2035 00aa 01       		.uleb128 0x1
+ 2036 00ab 13       		.uleb128 0x13
+ 2037 00ac 00       		.byte	0
+ 2038 00ad 00       		.byte	0
+ 2039 00ae 0E       		.uleb128 0xe
+ 2040 00af 34       		.uleb128 0x34
+ 2041 00b0 00       		.byte	0
+ 2042 00b1 03       		.uleb128 0x3
+ 2043 00b2 08       		.uleb128 0x8
+ 2044 00b3 3A       		.uleb128 0x3a
+ 2045 00b4 0B       		.uleb128 0xb
+ 2046 00b5 3B       		.uleb128 0x3b
+ARM GAS  C:\Users\alexa\AppData\Local\Temp\ccmMHdsD.s 			page 40
+
+
+ 2047 00b6 0B       		.uleb128 0xb
+ 2048 00b7 49       		.uleb128 0x49
+ 2049 00b8 13       		.uleb128 0x13
+ 2050 00b9 02       		.uleb128 0x2
+ 2051 00ba 17       		.uleb128 0x17
+ 2052 00bb 00       		.byte	0
+ 2053 00bc 00       		.byte	0
+ 2054 00bd 0F       		.uleb128 0xf
+ 2055 00be 0B       		.uleb128 0xb
+ 2056 00bf 01       		.byte	0x1
+ 2057 00c0 11       		.uleb128 0x11
+ 2058 00c1 01       		.uleb128 0x1
+ 2059 00c2 12       		.uleb128 0x12
+ 2060 00c3 06       		.uleb128 0x6
+ 2061 00c4 00       		.byte	0
+ 2062 00c5 00       		.byte	0
+ 2063 00c6 10       		.uleb128 0x10
+ 2064 00c7 34       		.uleb128 0x34
+ 2065 00c8 00       		.byte	0
+ 2066 00c9 03       		.uleb128 0x3
+ 2067 00ca 0E       		.uleb128 0xe
+ 2068 00cb 3A       		.uleb128 0x3a
+ 2069 00cc 0B       		.uleb128 0xb
+ 2070 00cd 3B       		.uleb128 0x3b
+ 2071 00ce 0B       		.uleb128 0xb
+ 2072 00cf 49       		.uleb128 0x49
+ 2073 00d0 13       		.uleb128 0x13
+ 2074 00d1 00       		.byte	0
+ 2075 00d2 00       		.byte	0
+ 2076 00d3 11       		.uleb128 0x11
+ 2077 00d4 898201   		.uleb128 0x4109
+ 2078 00d7 00       		.byte	0
+ 2079 00d8 11       		.uleb128 0x11
+ 2080 00d9 01       		.uleb128 0x1
+ 2081 00da 31       		.uleb128 0x31
+ 2082 00db 13       		.uleb128 0x13
+ 2083 00dc 00       		.byte	0
+ 2084 00dd 00       		.byte	0
+ 2085 00de 12       		.uleb128 0x12
+ 2086 00df 898201   		.uleb128 0x4109
+ 2087 00e2 01       		.byte	0x1
+ 2088 00e3 11       		.uleb128 0x11
+ 2089 00e4 01       		.uleb128 0x1
+ 2090 00e5 31       		.uleb128 0x31
+ 2091 00e6 13       		.uleb128 0x13
+ 2092 00e7 01       		.uleb128 0x1
+ 2093 00e8 13       		.uleb128 0x13
+ 2094 00e9 00       		.byte	0
+ 2095 00ea 00       		.byte	0
+ 2096 00eb 13       		.uleb128 0x13
+ 2097 00ec 8A8201   		.uleb128 0x410a
+ 2098 00ef 00       		.byte	0
+ 2099 00f0 02       		.uleb128 0x2
+ 2100 00f1 18       		.uleb128 0x18
+ 2101 00f2 9142     		.uleb128 0x2111
+ 2102 00f4 18       		.uleb128 0x18
+ 2103 00f5 00       		.byte	0
+ARM GAS  C:\Users\alexa\AppData\Local\Temp\ccmMHdsD.s 			page 41
+
+
+ 2104 00f6 00       		.byte	0
+ 2105 00f7 14       		.uleb128 0x14
+ 2106 00f8 34       		.uleb128 0x34
+ 2107 00f9 00       		.byte	0
+ 2108 00fa 03       		.uleb128 0x3
+ 2109 00fb 0E       		.uleb128 0xe
+ 2110 00fc 3A       		.uleb128 0x3a
+ 2111 00fd 0B       		.uleb128 0xb
+ 2112 00fe 3B       		.uleb128 0x3b
+ 2113 00ff 0B       		.uleb128 0xb
+ 2114 0100 49       		.uleb128 0x49
+ 2115 0101 13       		.uleb128 0x13
+ 2116 0102 1C       		.uleb128 0x1c
+ 2117 0103 0B       		.uleb128 0xb
+ 2118 0104 00       		.byte	0
+ 2119 0105 00       		.byte	0
+ 2120 0106 15       		.uleb128 0x15
+ 2121 0107 34       		.uleb128 0x34
+ 2122 0108 00       		.byte	0
+ 2123 0109 03       		.uleb128 0x3
+ 2124 010a 0E       		.uleb128 0xe
+ 2125 010b 3A       		.uleb128 0x3a
+ 2126 010c 0B       		.uleb128 0xb
+ 2127 010d 3B       		.uleb128 0x3b
+ 2128 010e 0B       		.uleb128 0xb
+ 2129 010f 49       		.uleb128 0x49
+ 2130 0110 13       		.uleb128 0x13
+ 2131 0111 02       		.uleb128 0x2
+ 2132 0112 17       		.uleb128 0x17
+ 2133 0113 00       		.byte	0
+ 2134 0114 00       		.byte	0
+ 2135 0115 16       		.uleb128 0x16
+ 2136 0116 898201   		.uleb128 0x4109
+ 2137 0119 01       		.byte	0x1
+ 2138 011a 11       		.uleb128 0x11
+ 2139 011b 01       		.uleb128 0x1
+ 2140 011c 31       		.uleb128 0x31
+ 2141 011d 13       		.uleb128 0x13
+ 2142 011e 00       		.byte	0
+ 2143 011f 00       		.byte	0
+ 2144 0120 17       		.uleb128 0x17
+ 2145 0121 01       		.uleb128 0x1
+ 2146 0122 01       		.byte	0x1
+ 2147 0123 49       		.uleb128 0x49
+ 2148 0124 13       		.uleb128 0x13
+ 2149 0125 01       		.uleb128 0x1
+ 2150 0126 13       		.uleb128 0x13
+ 2151 0127 00       		.byte	0
+ 2152 0128 00       		.byte	0
+ 2153 0129 18       		.uleb128 0x18
+ 2154 012a 21       		.uleb128 0x21
+ 2155 012b 00       		.byte	0
+ 2156 012c 49       		.uleb128 0x49
+ 2157 012d 13       		.uleb128 0x13
+ 2158 012e 2F       		.uleb128 0x2f
+ 2159 012f 18       		.uleb128 0x18
+ 2160 0130 00       		.byte	0
+ARM GAS  C:\Users\alexa\AppData\Local\Temp\ccmMHdsD.s 			page 42
+
+
+ 2161 0131 00       		.byte	0
+ 2162 0132 19       		.uleb128 0x19
+ 2163 0133 34       		.uleb128 0x34
+ 2164 0134 00       		.byte	0
+ 2165 0135 03       		.uleb128 0x3
+ 2166 0136 08       		.uleb128 0x8
+ 2167 0137 3A       		.uleb128 0x3a
+ 2168 0138 0B       		.uleb128 0xb
+ 2169 0139 3B       		.uleb128 0x3b
+ 2170 013a 0B       		.uleb128 0xb
+ 2171 013b 49       		.uleb128 0x49
+ 2172 013c 13       		.uleb128 0x13
+ 2173 013d 02       		.uleb128 0x2
+ 2174 013e 18       		.uleb128 0x18
+ 2175 013f 00       		.byte	0
+ 2176 0140 00       		.byte	0
+ 2177 0141 1A       		.uleb128 0x1a
+ 2178 0142 2E       		.uleb128 0x2e
+ 2179 0143 01       		.byte	0x1
+ 2180 0144 3F       		.uleb128 0x3f
+ 2181 0145 19       		.uleb128 0x19
+ 2182 0146 03       		.uleb128 0x3
+ 2183 0147 0E       		.uleb128 0xe
+ 2184 0148 3A       		.uleb128 0x3a
+ 2185 0149 0B       		.uleb128 0xb
+ 2186 014a 3B       		.uleb128 0x3b
+ 2187 014b 0B       		.uleb128 0xb
+ 2188 014c 27       		.uleb128 0x27
+ 2189 014d 19       		.uleb128 0x19
+ 2190 014e 11       		.uleb128 0x11
+ 2191 014f 01       		.uleb128 0x1
+ 2192 0150 12       		.uleb128 0x12
+ 2193 0151 06       		.uleb128 0x6
+ 2194 0152 40       		.uleb128 0x40
+ 2195 0153 18       		.uleb128 0x18
+ 2196 0154 9742     		.uleb128 0x2117
+ 2197 0156 19       		.uleb128 0x19
+ 2198 0157 01       		.uleb128 0x1
+ 2199 0158 13       		.uleb128 0x13
+ 2200 0159 00       		.byte	0
+ 2201 015a 00       		.byte	0
+ 2202 015b 1B       		.uleb128 0x1b
+ 2203 015c 34       		.uleb128 0x34
+ 2204 015d 00       		.byte	0
+ 2205 015e 03       		.uleb128 0x3
+ 2206 015f 0E       		.uleb128 0xe
+ 2207 0160 3A       		.uleb128 0x3a
+ 2208 0161 0B       		.uleb128 0xb
+ 2209 0162 3B       		.uleb128 0x3b
+ 2210 0163 0B       		.uleb128 0xb
+ 2211 0164 49       		.uleb128 0x49
+ 2212 0165 13       		.uleb128 0x13
+ 2213 0166 02       		.uleb128 0x2
+ 2214 0167 18       		.uleb128 0x18
+ 2215 0168 00       		.byte	0
+ 2216 0169 00       		.byte	0
+ 2217 016a 1C       		.uleb128 0x1c
+ARM GAS  C:\Users\alexa\AppData\Local\Temp\ccmMHdsD.s 			page 43
+
+
+ 2218 016b 2E       		.uleb128 0x2e
+ 2219 016c 01       		.byte	0x1
+ 2220 016d 3F       		.uleb128 0x3f
+ 2221 016e 19       		.uleb128 0x19
+ 2222 016f 03       		.uleb128 0x3
+ 2223 0170 0E       		.uleb128 0xe
+ 2224 0171 3A       		.uleb128 0x3a
+ 2225 0172 0B       		.uleb128 0xb
+ 2226 0173 3B       		.uleb128 0x3b
+ 2227 0174 0B       		.uleb128 0xb
+ 2228 0175 27       		.uleb128 0x27
+ 2229 0176 19       		.uleb128 0x19
+ 2230 0177 49       		.uleb128 0x49
+ 2231 0178 13       		.uleb128 0x13
+ 2232 0179 11       		.uleb128 0x11
+ 2233 017a 01       		.uleb128 0x1
+ 2234 017b 12       		.uleb128 0x12
+ 2235 017c 06       		.uleb128 0x6
+ 2236 017d 40       		.uleb128 0x40
+ 2237 017e 18       		.uleb128 0x18
+ 2238 017f 9642     		.uleb128 0x2116
+ 2239 0181 19       		.uleb128 0x19
+ 2240 0182 01       		.uleb128 0x1
+ 2241 0183 13       		.uleb128 0x13
+ 2242 0184 00       		.byte	0
+ 2243 0185 00       		.byte	0
+ 2244 0186 1D       		.uleb128 0x1d
+ 2245 0187 34       		.uleb128 0x34
+ 2246 0188 00       		.byte	0
+ 2247 0189 03       		.uleb128 0x3
+ 2248 018a 08       		.uleb128 0x8
+ 2249 018b 3A       		.uleb128 0x3a
+ 2250 018c 0B       		.uleb128 0xb
+ 2251 018d 3B       		.uleb128 0x3b
+ 2252 018e 0B       		.uleb128 0xb
+ 2253 018f 49       		.uleb128 0x49
+ 2254 0190 13       		.uleb128 0x13
+ 2255 0191 1C       		.uleb128 0x1c
+ 2256 0192 0A       		.uleb128 0xa
+ 2257 0193 00       		.byte	0
+ 2258 0194 00       		.byte	0
+ 2259 0195 1E       		.uleb128 0x1e
+ 2260 0196 34       		.uleb128 0x34
+ 2261 0197 00       		.byte	0
+ 2262 0198 03       		.uleb128 0x3
+ 2263 0199 0E       		.uleb128 0xe
+ 2264 019a 3A       		.uleb128 0x3a
+ 2265 019b 0B       		.uleb128 0xb
+ 2266 019c 3B       		.uleb128 0x3b
+ 2267 019d 0B       		.uleb128 0xb
+ 2268 019e 49       		.uleb128 0x49
+ 2269 019f 13       		.uleb128 0x13
+ 2270 01a0 1C       		.uleb128 0x1c
+ 2271 01a1 0A       		.uleb128 0xa
+ 2272 01a2 00       		.byte	0
+ 2273 01a3 00       		.byte	0
+ 2274 01a4 1F       		.uleb128 0x1f
+ARM GAS  C:\Users\alexa\AppData\Local\Temp\ccmMHdsD.s 			page 44
+
+
+ 2275 01a5 21       		.uleb128 0x21
+ 2276 01a6 00       		.byte	0
+ 2277 01a7 49       		.uleb128 0x49
+ 2278 01a8 13       		.uleb128 0x13
+ 2279 01a9 2F       		.uleb128 0x2f
+ 2280 01aa 0B       		.uleb128 0xb
+ 2281 01ab 00       		.byte	0
+ 2282 01ac 00       		.byte	0
+ 2283 01ad 20       		.uleb128 0x20
+ 2284 01ae 0B       		.uleb128 0xb
+ 2285 01af 01       		.byte	0x1
+ 2286 01b0 55       		.uleb128 0x55
+ 2287 01b1 17       		.uleb128 0x17
+ 2288 01b2 01       		.uleb128 0x1
+ 2289 01b3 13       		.uleb128 0x13
+ 2290 01b4 00       		.byte	0
+ 2291 01b5 00       		.byte	0
+ 2292 01b6 21       		.uleb128 0x21
+ 2293 01b7 2E       		.uleb128 0x2e
+ 2294 01b8 01       		.byte	0x1
+ 2295 01b9 3F       		.uleb128 0x3f
+ 2296 01ba 19       		.uleb128 0x19
+ 2297 01bb 03       		.uleb128 0x3
+ 2298 01bc 0E       		.uleb128 0xe
+ 2299 01bd 3A       		.uleb128 0x3a
+ 2300 01be 0B       		.uleb128 0xb
+ 2301 01bf 3B       		.uleb128 0x3b
+ 2302 01c0 0B       		.uleb128 0xb
+ 2303 01c1 49       		.uleb128 0x49
+ 2304 01c2 13       		.uleb128 0x13
+ 2305 01c3 11       		.uleb128 0x11
+ 2306 01c4 01       		.uleb128 0x1
+ 2307 01c5 12       		.uleb128 0x12
+ 2308 01c6 06       		.uleb128 0x6
+ 2309 01c7 40       		.uleb128 0x40
+ 2310 01c8 18       		.uleb128 0x18
+ 2311 01c9 9742     		.uleb128 0x2117
+ 2312 01cb 19       		.uleb128 0x19
+ 2313 01cc 01       		.uleb128 0x1
+ 2314 01cd 13       		.uleb128 0x13
+ 2315 01ce 00       		.byte	0
+ 2316 01cf 00       		.byte	0
+ 2317 01d0 22       		.uleb128 0x22
+ 2318 01d1 34       		.uleb128 0x34
+ 2319 01d2 00       		.byte	0
+ 2320 01d3 03       		.uleb128 0x3
+ 2321 01d4 0E       		.uleb128 0xe
+ 2322 01d5 3A       		.uleb128 0x3a
+ 2323 01d6 0B       		.uleb128 0xb
+ 2324 01d7 3B       		.uleb128 0x3b
+ 2325 01d8 05       		.uleb128 0x5
+ 2326 01d9 49       		.uleb128 0x49
+ 2327 01da 13       		.uleb128 0x13
+ 2328 01db 3F       		.uleb128 0x3f
+ 2329 01dc 19       		.uleb128 0x19
+ 2330 01dd 3C       		.uleb128 0x3c
+ 2331 01de 19       		.uleb128 0x19
+ARM GAS  C:\Users\alexa\AppData\Local\Temp\ccmMHdsD.s 			page 45
+
+
+ 2332 01df 00       		.byte	0
+ 2333 01e0 00       		.byte	0
+ 2334 01e1 23       		.uleb128 0x23
+ 2335 01e2 35       		.uleb128 0x35
+ 2336 01e3 00       		.byte	0
+ 2337 01e4 49       		.uleb128 0x49
+ 2338 01e5 13       		.uleb128 0x13
+ 2339 01e6 00       		.byte	0
+ 2340 01e7 00       		.byte	0
+ 2341 01e8 24       		.uleb128 0x24
+ 2342 01e9 34       		.uleb128 0x34
+ 2343 01ea 00       		.byte	0
+ 2344 01eb 03       		.uleb128 0x3
+ 2345 01ec 0E       		.uleb128 0xe
+ 2346 01ed 3A       		.uleb128 0x3a
+ 2347 01ee 0B       		.uleb128 0xb
+ 2348 01ef 3B       		.uleb128 0x3b
+ 2349 01f0 0B       		.uleb128 0xb
+ 2350 01f1 49       		.uleb128 0x49
+ 2351 01f2 13       		.uleb128 0x13
+ 2352 01f3 3F       		.uleb128 0x3f
+ 2353 01f4 19       		.uleb128 0x19
+ 2354 01f5 02       		.uleb128 0x2
+ 2355 01f6 18       		.uleb128 0x18
+ 2356 01f7 00       		.byte	0
+ 2357 01f8 00       		.byte	0
+ 2358 01f9 25       		.uleb128 0x25
+ 2359 01fa 2E       		.uleb128 0x2e
+ 2360 01fb 00       		.byte	0
+ 2361 01fc 3F       		.uleb128 0x3f
+ 2362 01fd 19       		.uleb128 0x19
+ 2363 01fe 3C       		.uleb128 0x3c
+ 2364 01ff 19       		.uleb128 0x19
+ 2365 0200 6E       		.uleb128 0x6e
+ 2366 0201 0E       		.uleb128 0xe
+ 2367 0202 03       		.uleb128 0x3
+ 2368 0203 0E       		.uleb128 0xe
+ 2369 0204 3A       		.uleb128 0x3a
+ 2370 0205 0B       		.uleb128 0xb
+ 2371 0206 3B       		.uleb128 0x3b
+ 2372 0207 0B       		.uleb128 0xb
+ 2373 0208 00       		.byte	0
+ 2374 0209 00       		.byte	0
+ 2375 020a 00       		.byte	0
+ 2376              		.section	.debug_loc,"",%progbits
+ 2377              	.Ldebug_loc0:
+ 2378              	.LLST0:
+ 2379 0000 00000000 		.4byte	.LVL0
+ 2380 0004 0E000000 		.4byte	.LVL2
+ 2381 0008 0100     		.2byte	0x1
+ 2382 000a 50       		.byte	0x50
+ 2383 000b 0E000000 		.4byte	.LVL2
+ 2384 000f 64000000 		.4byte	.LFE64
+ 2385 0013 0400     		.2byte	0x4
+ 2386 0015 F3       		.byte	0xf3
+ 2387 0016 01       		.uleb128 0x1
+ 2388 0017 50       		.byte	0x50
+ARM GAS  C:\Users\alexa\AppData\Local\Temp\ccmMHdsD.s 			page 46
+
+
+ 2389 0018 9F       		.byte	0x9f
+ 2390 0019 00000000 		.4byte	0
+ 2391 001d 00000000 		.4byte	0
+ 2392              	.LLST1:
+ 2393 0021 00000000 		.4byte	.LVL0
+ 2394 0025 0C000000 		.4byte	.LVL1
+ 2395 0029 0100     		.2byte	0x1
+ 2396 002b 51       		.byte	0x51
+ 2397 002c 0C000000 		.4byte	.LVL1
+ 2398 0030 64000000 		.4byte	.LFE64
+ 2399 0034 0400     		.2byte	0x4
+ 2400 0036 F3       		.byte	0xf3
+ 2401 0037 01       		.uleb128 0x1
+ 2402 0038 51       		.byte	0x51
+ 2403 0039 9F       		.byte	0x9f
+ 2404 003a 00000000 		.4byte	0
+ 2405 003e 00000000 		.4byte	0
+ 2406              	.LLST2:
+ 2407 0042 00000000 		.4byte	.LVL0
+ 2408 0046 11000000 		.4byte	.LVL3-1
+ 2409 004a 0100     		.2byte	0x1
+ 2410 004c 52       		.byte	0x52
+ 2411 004d 11000000 		.4byte	.LVL3-1
+ 2412 0051 64000000 		.4byte	.LFE64
+ 2413 0055 0100     		.2byte	0x1
+ 2414 0057 56       		.byte	0x56
+ 2415 0058 00000000 		.4byte	0
+ 2416 005c 00000000 		.4byte	0
+ 2417              	.LLST3:
+ 2418 0060 2C000000 		.4byte	.LVL6
+ 2419 0064 42000000 		.4byte	.LVL8
+ 2420 0068 0100     		.2byte	0x1
+ 2421 006a 54       		.byte	0x54
+ 2422 006b 44000000 		.4byte	.LVL9
+ 2423 006f 52000000 		.4byte	.LVL11
+ 2424 0073 0100     		.2byte	0x1
+ 2425 0075 54       		.byte	0x54
+ 2426 0076 00000000 		.4byte	0
+ 2427 007a 00000000 		.4byte	0
+ 2428              	.LLST4:
+ 2429 007e 00000000 		.4byte	.LVL14
+ 2430 0082 0A000000 		.4byte	.LVL16
+ 2431 0086 0100     		.2byte	0x1
+ 2432 0088 50       		.byte	0x50
+ 2433 0089 0A000000 		.4byte	.LVL16
+ 2434 008d 34000000 		.4byte	.LFE65
+ 2435 0091 0400     		.2byte	0x4
+ 2436 0093 F3       		.byte	0xf3
+ 2437 0094 01       		.uleb128 0x1
+ 2438 0095 50       		.byte	0x50
+ 2439 0096 9F       		.byte	0x9f
+ 2440 0097 00000000 		.4byte	0
+ 2441 009b 00000000 		.4byte	0
+ 2442              	.LLST5:
+ 2443 009f 00000000 		.4byte	.LVL14
+ 2444 00a3 08000000 		.4byte	.LVL15
+ 2445 00a7 0100     		.2byte	0x1
+ARM GAS  C:\Users\alexa\AppData\Local\Temp\ccmMHdsD.s 			page 47
+
+
+ 2446 00a9 51       		.byte	0x51
+ 2447 00aa 08000000 		.4byte	.LVL15
+ 2448 00ae 34000000 		.4byte	.LFE65
+ 2449 00b2 0400     		.2byte	0x4
+ 2450 00b4 F3       		.byte	0xf3
+ 2451 00b5 01       		.uleb128 0x1
+ 2452 00b6 51       		.byte	0x51
+ 2453 00b7 9F       		.byte	0x9f
+ 2454 00b8 00000000 		.4byte	0
+ 2455 00bc 00000000 		.4byte	0
+ 2456              	.LLST6:
+ 2457 00c0 00000000 		.4byte	.LVL21
+ 2458 00c4 0C000000 		.4byte	.LVL24
+ 2459 00c8 0100     		.2byte	0x1
+ 2460 00ca 50       		.byte	0x50
+ 2461 00cb 0C000000 		.4byte	.LVL24
+ 2462 00cf 44000000 		.4byte	.LFE66
+ 2463 00d3 0100     		.2byte	0x1
+ 2464 00d5 54       		.byte	0x54
+ 2465 00d6 00000000 		.4byte	0
+ 2466 00da 00000000 		.4byte	0
+ 2467              	.LLST7:
+ 2468 00de 06000000 		.4byte	.LVL22
+ 2469 00e2 08000000 		.4byte	.LVL23
+ 2470 00e6 0200     		.2byte	0x2
+ 2471 00e8 91       		.byte	0x91
+ 2472 00e9 6C       		.sleb128 -20
+ 2473 00ea 08000000 		.4byte	.LVL23
+ 2474 00ee 0F000000 		.4byte	.LVL25-1
+ 2475 00f2 0200     		.2byte	0x2
+ 2476 00f4 72       		.byte	0x72
+ 2477 00f5 00       		.sleb128 0
+ 2478 00f6 0F000000 		.4byte	.LVL25-1
+ 2479 00fa 44000000 		.4byte	.LFE66
+ 2480 00fe 0200     		.2byte	0x2
+ 2481 0100 91       		.byte	0x91
+ 2482 0101 6C       		.sleb128 -20
+ 2483 0102 00000000 		.4byte	0
+ 2484 0106 00000000 		.4byte	0
+ 2485              	.LLST8:
+ 2486 010a 00000000 		.4byte	.LVL26
+ 2487 010e 0C000000 		.4byte	.LVL28
+ 2488 0112 0100     		.2byte	0x1
+ 2489 0114 50       		.byte	0x50
+ 2490 0115 0C000000 		.4byte	.LVL28
+ 2491 0119 14000000 		.4byte	.LFE67
+ 2492 011d 0400     		.2byte	0x4
+ 2493 011f F3       		.byte	0xf3
+ 2494 0120 01       		.uleb128 0x1
+ 2495 0121 50       		.byte	0x50
+ 2496 0122 9F       		.byte	0x9f
+ 2497 0123 00000000 		.4byte	0
+ 2498 0127 00000000 		.4byte	0
+ 2499              	.LLST9:
+ 2500 012b 00000000 		.4byte	.LVL29
+ 2501 012f 08000000 		.4byte	.LVL30
+ 2502 0133 0100     		.2byte	0x1
+ARM GAS  C:\Users\alexa\AppData\Local\Temp\ccmMHdsD.s 			page 48
+
+
+ 2503 0135 50       		.byte	0x50
+ 2504 0136 08000000 		.4byte	.LVL30
+ 2505 013a 3A000000 		.4byte	.LVL38
+ 2506 013e 0100     		.2byte	0x1
+ 2507 0140 55       		.byte	0x55
+ 2508 0141 3A000000 		.4byte	.LVL38
+ 2509 0145 40000000 		.4byte	.LFE68
+ 2510 0149 0400     		.2byte	0x4
+ 2511 014b F3       		.byte	0xf3
+ 2512 014c 01       		.uleb128 0x1
+ 2513 014d 50       		.byte	0x50
+ 2514 014e 9F       		.byte	0x9f
+ 2515 014f 00000000 		.4byte	0
+ 2516 0153 00000000 		.4byte	0
+ 2517              	.LLST10:
+ 2518 0157 00000000 		.4byte	.LVL29
+ 2519 015b 0B000000 		.4byte	.LVL31-1
+ 2520 015f 0100     		.2byte	0x1
+ 2521 0161 51       		.byte	0x51
+ 2522 0162 0B000000 		.4byte	.LVL31-1
+ 2523 0166 3A000000 		.4byte	.LVL38
+ 2524 016a 0100     		.2byte	0x1
+ 2525 016c 54       		.byte	0x54
+ 2526 016d 3A000000 		.4byte	.LVL38
+ 2527 0171 40000000 		.4byte	.LFE68
+ 2528 0175 0400     		.2byte	0x4
+ 2529 0177 F3       		.byte	0xf3
+ 2530 0178 01       		.uleb128 0x1
+ 2531 0179 51       		.byte	0x51
+ 2532 017a 9F       		.byte	0x9f
+ 2533 017b 00000000 		.4byte	0
+ 2534 017f 00000000 		.4byte	0
+ 2535              	.LLST11:
+ 2536 0183 0C000000 		.4byte	.LVL31
+ 2537 0187 10000000 		.4byte	.LVL32
+ 2538 018b 0200     		.2byte	0x2
+ 2539 018d 30       		.byte	0x30
+ 2540 018e 9F       		.byte	0x9f
+ 2541 018f 10000000 		.4byte	.LVL32
+ 2542 0193 32000000 		.4byte	.LVL36
+ 2543 0197 0100     		.2byte	0x1
+ 2544 0199 53       		.byte	0x53
+ 2545 019a 34000000 		.4byte	.LVL37
+ 2546 019e 3A000000 		.4byte	.LVL38
+ 2547 01a2 0100     		.2byte	0x1
+ 2548 01a4 53       		.byte	0x53
+ 2549 01a5 00000000 		.4byte	0
+ 2550 01a9 00000000 		.4byte	0
+ 2551              	.LLST12:
+ 2552 01ad 22000000 		.4byte	.LVL33
+ 2553 01b1 2C000000 		.4byte	.LVL34
+ 2554 01b5 0100     		.2byte	0x1
+ 2555 01b7 52       		.byte	0x52
+ 2556 01b8 2C000000 		.4byte	.LVL34
+ 2557 01bc 30000000 		.4byte	.LVL35
+ 2558 01c0 2800     		.2byte	0x28
+ 2559 01c2 73       		.byte	0x73
+ARM GAS  C:\Users\alexa\AppData\Local\Temp\ccmMHdsD.s 			page 49
+
+
+ 2560 01c3 00       		.sleb128 0
+ 2561 01c4 31       		.byte	0x31
+ 2562 01c5 24       		.byte	0x24
+ 2563 01c6 75       		.byte	0x75
+ 2564 01c7 00       		.sleb128 0
+ 2565 01c8 22       		.byte	0x22
+ 2566 01c9 94       		.byte	0x94
+ 2567 01ca 02       		.byte	0x2
+ 2568 01cb 0A       		.byte	0xa
+ 2569 01cc FFFF     		.2byte	0xffff
+ 2570 01ce 1A       		.byte	0x1a
+ 2571 01cf 70       		.byte	0x70
+ 2572 01d0 00       		.sleb128 0
+ 2573 01d1 1E       		.byte	0x1e
+ 2574 01d2 F7       		.byte	0xf7
+ 2575 01d3 25       		.uleb128 0x25
+ 2576 01d4 73       		.byte	0x73
+ 2577 01d5 00       		.sleb128 0
+ 2578 01d6 31       		.byte	0x31
+ 2579 01d7 24       		.byte	0x24
+ 2580 01d8 03       		.byte	0x3
+ 2581 01d9 00000000 		.4byte	.LANCHOR0
+ 2582 01dd 22       		.byte	0x22
+ 2583 01de 94       		.byte	0x94
+ 2584 01df 02       		.byte	0x2
+ 2585 01e0 0A       		.byte	0xa
+ 2586 01e1 FFFF     		.2byte	0xffff
+ 2587 01e3 1A       		.byte	0x1a
+ 2588 01e4 F7       		.byte	0xf7
+ 2589 01e5 25       		.uleb128 0x25
+ 2590 01e6 1B       		.byte	0x1b
+ 2591 01e7 F7       		.byte	0xf7
+ 2592 01e8 00       		.uleb128 0
+ 2593 01e9 9F       		.byte	0x9f
+ 2594 01ea 00000000 		.4byte	0
+ 2595 01ee 00000000 		.4byte	0
+ 2596              	.LLST13:
+ 2597 01f2 00000000 		.4byte	.LVL39
+ 2598 01f6 24000000 		.4byte	.LVL46
+ 2599 01fa 0100     		.2byte	0x1
+ 2600 01fc 50       		.byte	0x50
+ 2601 01fd 24000000 		.4byte	.LVL46
+ 2602 0201 26000000 		.4byte	.LVL47
+ 2603 0205 0400     		.2byte	0x4
+ 2604 0207 F3       		.byte	0xf3
+ 2605 0208 01       		.uleb128 0x1
+ 2606 0209 50       		.byte	0x50
+ 2607 020a 9F       		.byte	0x9f
+ 2608 020b 26000000 		.4byte	.LVL47
+ 2609 020f 28000000 		.4byte	.LVL48
+ 2610 0213 0100     		.2byte	0x1
+ 2611 0215 50       		.byte	0x50
+ 2612 0216 28000000 		.4byte	.LVL48
+ 2613 021a 74010000 		.4byte	.LFE69
+ 2614 021e 0400     		.2byte	0x4
+ 2615 0220 F3       		.byte	0xf3
+ 2616 0221 01       		.uleb128 0x1
+ARM GAS  C:\Users\alexa\AppData\Local\Temp\ccmMHdsD.s 			page 50
+
+
+ 2617 0222 50       		.byte	0x50
+ 2618 0223 9F       		.byte	0x9f
+ 2619 0224 00000000 		.4byte	0
+ 2620 0228 00000000 		.4byte	0
+ 2621              	.LLST14:
+ 2622 022c 08000000 		.4byte	.LVL41
+ 2623 0230 66010000 		.4byte	.LVL73
+ 2624 0234 0100     		.2byte	0x1
+ 2625 0236 55       		.byte	0x55
+ 2626 0237 00000000 		.4byte	0
+ 2627 023b 00000000 		.4byte	0
+ 2628              	.LLST15:
+ 2629 023f 0C000000 		.4byte	.LVL42
+ 2630 0243 66010000 		.4byte	.LVL73
+ 2631 0247 0100     		.2byte	0x1
+ 2632 0249 5A       		.byte	0x5a
+ 2633 024a 00000000 		.4byte	0
+ 2634 024e 00000000 		.4byte	0
+ 2635              	.LLST16:
+ 2636 0252 0E000000 		.4byte	.LVL43
+ 2637 0256 66010000 		.4byte	.LVL73
+ 2638 025a 0100     		.2byte	0x1
+ 2639 025c 54       		.byte	0x54
+ 2640 025d 00000000 		.4byte	0
+ 2641 0261 00000000 		.4byte	0
+ 2642              	.LLST17:
+ 2643 0265 0E000000 		.4byte	.LVL43
+ 2644 0269 18000000 		.4byte	.LVL44
+ 2645 026d 0100     		.2byte	0x1
+ 2646 026f 55       		.byte	0x55
+ 2647 0270 18000000 		.4byte	.LVL44
+ 2648 0274 6C000000 		.4byte	.LVL57
+ 2649 0278 0100     		.2byte	0x1
+ 2650 027a 58       		.byte	0x58
+ 2651 027b 3A010000 		.4byte	.LVL71
+ 2652 027f 3E010000 		.4byte	.LVL72
+ 2653 0283 0100     		.2byte	0x1
+ 2654 0285 58       		.byte	0x58
+ 2655 0286 00000000 		.4byte	0
+ 2656 028a 00000000 		.4byte	0
+ 2657              	.LLST18:
+ 2658 028e 1E000000 		.4byte	.LVL45
+ 2659 0292 28000000 		.4byte	.LVL48
+ 2660 0296 0100     		.2byte	0x1
+ 2661 0298 55       		.byte	0x55
+ 2662 0299 28000000 		.4byte	.LVL48
+ 2663 029d 32000000 		.4byte	.LVL50
+ 2664 02a1 0100     		.2byte	0x1
+ 2665 02a3 50       		.byte	0x50
+ 2666 02a4 00000000 		.4byte	0
+ 2667 02a8 00000000 		.4byte	0
+ 2668              	.LLST19:
+ 2669 02ac 00000000 		.4byte	.LVL74
+ 2670 02b0 12000000 		.4byte	.LVL75
+ 2671 02b4 0100     		.2byte	0x1
+ 2672 02b6 50       		.byte	0x50
+ 2673 02b7 12000000 		.4byte	.LVL75
+ARM GAS  C:\Users\alexa\AppData\Local\Temp\ccmMHdsD.s 			page 51
+
+
+ 2674 02bb 14000000 		.4byte	.LVL76
+ 2675 02bf 0400     		.2byte	0x4
+ 2676 02c1 F3       		.byte	0xf3
+ 2677 02c2 01       		.uleb128 0x1
+ 2678 02c3 50       		.byte	0x50
+ 2679 02c4 9F       		.byte	0x9f
+ 2680 02c5 14000000 		.4byte	.LVL76
+ 2681 02c9 16000000 		.4byte	.LVL77
+ 2682 02cd 0100     		.2byte	0x1
+ 2683 02cf 50       		.byte	0x50
+ 2684 02d0 16000000 		.4byte	.LVL77
+ 2685 02d4 18000000 		.4byte	.LVL78
+ 2686 02d8 0400     		.2byte	0x4
+ 2687 02da F3       		.byte	0xf3
+ 2688 02db 01       		.uleb128 0x1
+ 2689 02dc 50       		.byte	0x50
+ 2690 02dd 9F       		.byte	0x9f
+ 2691 02de 18000000 		.4byte	.LVL78
+ 2692 02e2 1A000000 		.4byte	.LVL79
+ 2693 02e6 0100     		.2byte	0x1
+ 2694 02e8 50       		.byte	0x50
+ 2695 02e9 1A000000 		.4byte	.LVL79
+ 2696 02ed 1C000000 		.4byte	.LVL80
+ 2697 02f1 0400     		.2byte	0x4
+ 2698 02f3 F3       		.byte	0xf3
+ 2699 02f4 01       		.uleb128 0x1
+ 2700 02f5 50       		.byte	0x50
+ 2701 02f6 9F       		.byte	0x9f
+ 2702 02f7 1C000000 		.4byte	.LVL80
+ 2703 02fb 1E000000 		.4byte	.LVL81
+ 2704 02ff 0100     		.2byte	0x1
+ 2705 0301 50       		.byte	0x50
+ 2706 0302 1E000000 		.4byte	.LVL81
+ 2707 0306 20000000 		.4byte	.LVL82
+ 2708 030a 0400     		.2byte	0x4
+ 2709 030c F3       		.byte	0xf3
+ 2710 030d 01       		.uleb128 0x1
+ 2711 030e 50       		.byte	0x50
+ 2712 030f 9F       		.byte	0x9f
+ 2713 0310 20000000 		.4byte	.LVL82
+ 2714 0314 22000000 		.4byte	.LVL83
+ 2715 0318 0100     		.2byte	0x1
+ 2716 031a 50       		.byte	0x50
+ 2717 031b 22000000 		.4byte	.LVL83
+ 2718 031f 24000000 		.4byte	.LVL84
+ 2719 0323 0400     		.2byte	0x4
+ 2720 0325 F3       		.byte	0xf3
+ 2721 0326 01       		.uleb128 0x1
+ 2722 0327 50       		.byte	0x50
+ 2723 0328 9F       		.byte	0x9f
+ 2724 0329 24000000 		.4byte	.LVL84
+ 2725 032d 26000000 		.4byte	.LVL85
+ 2726 0331 0100     		.2byte	0x1
+ 2727 0333 50       		.byte	0x50
+ 2728 0334 26000000 		.4byte	.LVL85
+ 2729 0338 28000000 		.4byte	.LVL86
+ 2730 033c 0400     		.2byte	0x4
+ARM GAS  C:\Users\alexa\AppData\Local\Temp\ccmMHdsD.s 			page 52
+
+
+ 2731 033e F3       		.byte	0xf3
+ 2732 033f 01       		.uleb128 0x1
+ 2733 0340 50       		.byte	0x50
+ 2734 0341 9F       		.byte	0x9f
+ 2735 0342 28000000 		.4byte	.LVL86
+ 2736 0346 2A000000 		.4byte	.LVL87
+ 2737 034a 0100     		.2byte	0x1
+ 2738 034c 50       		.byte	0x50
+ 2739 034d 2A000000 		.4byte	.LVL87
+ 2740 0351 2C000000 		.4byte	.LVL88
+ 2741 0355 0400     		.2byte	0x4
+ 2742 0357 F3       		.byte	0xf3
+ 2743 0358 01       		.uleb128 0x1
+ 2744 0359 50       		.byte	0x50
+ 2745 035a 9F       		.byte	0x9f
+ 2746 035b 2C000000 		.4byte	.LVL88
+ 2747 035f 2E000000 		.4byte	.LVL89
+ 2748 0363 0100     		.2byte	0x1
+ 2749 0365 50       		.byte	0x50
+ 2750 0366 2E000000 		.4byte	.LVL89
+ 2751 036a 50000000 		.4byte	.LFE70
+ 2752 036e 0400     		.2byte	0x4
+ 2753 0370 F3       		.byte	0xf3
+ 2754 0371 01       		.uleb128 0x1
+ 2755 0372 50       		.byte	0x50
+ 2756 0373 9F       		.byte	0x9f
+ 2757 0374 00000000 		.4byte	0
+ 2758 0378 00000000 		.4byte	0
+ 2759              	.LLST20:
+ 2760 037c 00000000 		.4byte	.LVL90
+ 2761 0380 08000000 		.4byte	.LVL91
+ 2762 0384 0100     		.2byte	0x1
+ 2763 0386 50       		.byte	0x50
+ 2764 0387 08000000 		.4byte	.LVL91
+ 2765 038b 26000000 		.4byte	.LFE71
+ 2766 038f 0100     		.2byte	0x1
+ 2767 0391 55       		.byte	0x55
+ 2768 0392 00000000 		.4byte	0
+ 2769 0396 00000000 		.4byte	0
+ 2770              	.LLST21:
+ 2771 039a 00000000 		.4byte	.LVL95
+ 2772 039e 12000000 		.4byte	.LVL97
+ 2773 03a2 0100     		.2byte	0x1
+ 2774 03a4 50       		.byte	0x50
+ 2775 03a5 12000000 		.4byte	.LVL97
+ 2776 03a9 74000000 		.4byte	.LVL110
+ 2777 03ad 0100     		.2byte	0x1
+ 2778 03af 55       		.byte	0x55
+ 2779 03b0 74000000 		.4byte	.LVL110
+ 2780 03b4 7C000000 		.4byte	.LFE72
+ 2781 03b8 0400     		.2byte	0x4
+ 2782 03ba F3       		.byte	0xf3
+ 2783 03bb 01       		.uleb128 0x1
+ 2784 03bc 50       		.byte	0x50
+ 2785 03bd 9F       		.byte	0x9f
+ 2786 03be 00000000 		.4byte	0
+ 2787 03c2 00000000 		.4byte	0
+ARM GAS  C:\Users\alexa\AppData\Local\Temp\ccmMHdsD.s 			page 53
+
+
+ 2788              	.LLST22:
+ 2789 03c6 00000000 		.4byte	.LVL95
+ 2790 03ca 15000000 		.4byte	.LVL98-1
+ 2791 03ce 0100     		.2byte	0x1
+ 2792 03d0 51       		.byte	0x51
+ 2793 03d1 15000000 		.4byte	.LVL98-1
+ 2794 03d5 7C000000 		.4byte	.LFE72
+ 2795 03d9 0400     		.2byte	0x4
+ 2796 03db F3       		.byte	0xf3
+ 2797 03dc 01       		.uleb128 0x1
+ 2798 03dd 51       		.byte	0x51
+ 2799 03de 9F       		.byte	0x9f
+ 2800 03df 00000000 		.4byte	0
+ 2801 03e3 00000000 		.4byte	0
+ 2802              	.LLST23:
+ 2803 03e7 08000000 		.4byte	.LVL96
+ 2804 03eb 1A000000 		.4byte	.LVL99
+ 2805 03ef 0200     		.2byte	0x2
+ 2806 03f1 31       		.byte	0x31
+ 2807 03f2 9F       		.byte	0x9f
+ 2808 03f3 1A000000 		.4byte	.LVL99
+ 2809 03f7 74000000 		.4byte	.LVL110
+ 2810 03fb 0100     		.2byte	0x1
+ 2811 03fd 56       		.byte	0x56
+ 2812 03fe 00000000 		.4byte	0
+ 2813 0402 00000000 		.4byte	0
+ 2814              	.LLST24:
+ 2815 0406 48000000 		.4byte	.LVL104
+ 2816 040a 4E000000 		.4byte	.LVL105
+ 2817 040e 0200     		.2byte	0x2
+ 2818 0410 30       		.byte	0x30
+ 2819 0411 9F       		.byte	0x9f
+ 2820 0412 4E000000 		.4byte	.LVL105
+ 2821 0416 70000000 		.4byte	.LVL109
+ 2822 041a 0100     		.2byte	0x1
+ 2823 041c 50       		.byte	0x50
+ 2824 041d 70000000 		.4byte	.LVL109
+ 2825 0421 74000000 		.4byte	.LVL110
+ 2826 0425 0200     		.2byte	0x2
+ 2827 0427 75       		.byte	0x75
+ 2828 0428 00       		.sleb128 0
+ 2829 0429 74000000 		.4byte	.LVL110
+ 2830 042d 7C000000 		.4byte	.LFE72
+ 2831 0431 0300     		.2byte	0x3
+ 2832 0433 F3       		.byte	0xf3
+ 2833 0434 01       		.uleb128 0x1
+ 2834 0435 50       		.byte	0x50
+ 2835 0436 00000000 		.4byte	0
+ 2836 043a 00000000 		.4byte	0
+ 2837              	.LLST25:
+ 2838 043e 16000000 		.4byte	.LVL98
+ 2839 0442 1A000000 		.4byte	.LVL99
+ 2840 0446 0200     		.2byte	0x2
+ 2841 0448 30       		.byte	0x30
+ 2842 0449 9F       		.byte	0x9f
+ 2843 044a 1A000000 		.4byte	.LVL99
+ 2844 044e 3C000000 		.4byte	.LVL102
+ARM GAS  C:\Users\alexa\AppData\Local\Temp\ccmMHdsD.s 			page 54
+
+
+ 2845 0452 0100     		.2byte	0x1
+ 2846 0454 54       		.byte	0x54
+ 2847 0455 3E000000 		.4byte	.LVL103
+ 2848 0459 74000000 		.4byte	.LVL110
+ 2849 045d 0100     		.2byte	0x1
+ 2850 045f 54       		.byte	0x54
+ 2851 0460 00000000 		.4byte	0
+ 2852 0464 00000000 		.4byte	0
+ 2853              	.LLST26:
+ 2854 0468 48000000 		.4byte	.LVL104
+ 2855 046c 4E000000 		.4byte	.LVL105
+ 2856 0470 0200     		.2byte	0x2
+ 2857 0472 31       		.byte	0x31
+ 2858 0473 9F       		.byte	0x9f
+ 2859 0474 4E000000 		.4byte	.LVL105
+ 2860 0478 66000000 		.4byte	.LVL107
+ 2861 047c 0100     		.2byte	0x1
+ 2862 047e 53       		.byte	0x53
+ 2863 047f 68000000 		.4byte	.LVL108
+ 2864 0483 7C000000 		.4byte	.LFE72
+ 2865 0487 0100     		.2byte	0x1
+ 2866 0489 53       		.byte	0x53
+ 2867 048a 00000000 		.4byte	0
+ 2868 048e 00000000 		.4byte	0
+ 2869              		.section	.debug_aranges,"",%progbits
+ 2870 0000 64000000 		.4byte	0x64
+ 2871 0004 0200     		.2byte	0x2
+ 2872 0006 00000000 		.4byte	.Ldebug_info0
+ 2873 000a 04       		.byte	0x4
+ 2874 000b 00       		.byte	0
+ 2875 000c 0000     		.2byte	0
+ 2876 000e 0000     		.2byte	0
+ 2877 0010 00000000 		.4byte	.LFB64
+ 2878 0014 64000000 		.4byte	.LFE64-.LFB64
+ 2879 0018 00000000 		.4byte	.LFB65
+ 2880 001c 34000000 		.4byte	.LFE65-.LFB65
+ 2881 0020 00000000 		.4byte	.LFB66
+ 2882 0024 44000000 		.4byte	.LFE66-.LFB66
+ 2883 0028 00000000 		.4byte	.LFB67
+ 2884 002c 14000000 		.4byte	.LFE67-.LFB67
+ 2885 0030 00000000 		.4byte	.LFB68
+ 2886 0034 40000000 		.4byte	.LFE68-.LFB68
+ 2887 0038 00000000 		.4byte	.LFB69
+ 2888 003c 74010000 		.4byte	.LFE69-.LFB69
+ 2889 0040 00000000 		.4byte	.LFB70
+ 2890 0044 50000000 		.4byte	.LFE70-.LFB70
+ 2891 0048 00000000 		.4byte	.LFB71
+ 2892 004c 26000000 		.4byte	.LFE71-.LFB71
+ 2893 0050 00000000 		.4byte	.LFB72
+ 2894 0054 7C000000 		.4byte	.LFE72-.LFB72
+ 2895 0058 00000000 		.4byte	.LFB73
+ 2896 005c 38000000 		.4byte	.LFE73-.LFB73
+ 2897 0060 00000000 		.4byte	0
+ 2898 0064 00000000 		.4byte	0
+ 2899              		.section	.debug_ranges,"",%progbits
+ 2900              	.Ldebug_ranges0:
+ 2901 0000 48000000 		.4byte	.LBB8
+ARM GAS  C:\Users\alexa\AppData\Local\Temp\ccmMHdsD.s 			page 55
+
+
+ 2902 0004 4A000000 		.4byte	.LBE8
+ 2903 0008 4C000000 		.4byte	.LBB9
+ 2904 000c 6C000000 		.4byte	.LBE9
+ 2905 0010 00000000 		.4byte	0
+ 2906 0014 00000000 		.4byte	0
+ 2907 0018 00000000 		.4byte	.LFB64
+ 2908 001c 64000000 		.4byte	.LFE64
+ 2909 0020 00000000 		.4byte	.LFB65
+ 2910 0024 34000000 		.4byte	.LFE65
+ 2911 0028 00000000 		.4byte	.LFB66
+ 2912 002c 44000000 		.4byte	.LFE66
+ 2913 0030 00000000 		.4byte	.LFB67
+ 2914 0034 14000000 		.4byte	.LFE67
+ 2915 0038 00000000 		.4byte	.LFB68
+ 2916 003c 40000000 		.4byte	.LFE68
+ 2917 0040 00000000 		.4byte	.LFB69
+ 2918 0044 74010000 		.4byte	.LFE69
+ 2919 0048 00000000 		.4byte	.LFB70
+ 2920 004c 50000000 		.4byte	.LFE70
+ 2921 0050 00000000 		.4byte	.LFB71
+ 2922 0054 26000000 		.4byte	.LFE71
+ 2923 0058 00000000 		.4byte	.LFB72
+ 2924 005c 7C000000 		.4byte	.LFE72
+ 2925 0060 00000000 		.4byte	.LFB73
+ 2926 0064 38000000 		.4byte	.LFE73
+ 2927 0068 00000000 		.4byte	0
+ 2928 006c 00000000 		.4byte	0
+ 2929              		.section	.debug_line,"",%progbits
+ 2930              	.Ldebug_line0:
+ 2931 0000 ED020000 		.section	.debug_str,"MS",%progbits,1
+ 2931      02006E01 
+ 2931      00000201 
+ 2931      FB0E0D00 
+ 2931      01010101 
+ 2932              	.LASF58:
+ 2933 0000 4932435F 		.ascii	"I2C_MasterSendRestart\000"
+ 2933      4D617374 
+ 2933      65725365 
+ 2933      6E645265 
+ 2933      73746172 
+ 2934              	.LASF49:
+ 2935 0016 686F7474 		.ascii	"hottestColor\000"
+ 2935      65737443 
+ 2935      6F6C6F72 
+ 2935      00
+ 2936              	.LASF3:
+ 2937 0023 73686F72 		.ascii	"short int\000"
+ 2937      7420696E 
+ 2937      7400
+ 2938              	.LASF43:
+ 2939 002d 636F6C6F 		.ascii	"color\000"
+ 2939      7200
+ 2940              	.LASF51:
+ 2941 0033 43616C69 		.ascii	"CalibrateColor\000"
+ 2941      62726174 
+ 2941      65436F6C 
+ 2941      6F7200
+ARM GAS  C:\Users\alexa\AppData\Local\Temp\ccmMHdsD.s 			page 56
+
+
+ 2942              	.LASF33:
+ 2943 0042 64617461 		.ascii	"data\000"
+ 2943      00
+ 2944              	.LASF5:
+ 2945 0047 5F5F7569 		.ascii	"__uint16_t\000"
+ 2945      6E743136 
+ 2945      5F7400
+ 2946              	.LASF39:
+ 2947 0052 6E6F726D 		.ascii	"norm\000"
+ 2947      00
+ 2948              	.LASF24:
+ 2949 0057 626C7565 		.ascii	"blue\000"
+ 2949      00
+ 2950              	.LASF13:
+ 2951 005c 75696E74 		.ascii	"uint8_t\000"
+ 2951      385F7400 
+ 2952              	.LASF35:
+ 2953 0064 72676244 		.ascii	"rgbData\000"
+ 2953      61746100 
+ 2954              	.LASF31:
+ 2955 006c 52656164 		.ascii	"ReadRegister\000"
+ 2955      52656769 
+ 2955      73746572 
+ 2955      00
+ 2956              	.LASF40:
+ 2957 0079 44657465 		.ascii	"DetectColor\000"
+ 2957      6374436F 
+ 2957      6C6F7200 
+ 2958              	.LASF28:
+ 2959 0085 64617461 		.ascii	"dataBytes\000"
+ 2959      42797465 
+ 2959      7300
+ 2960              	.LASF17:
+ 2961 008f 666C6F61 		.ascii	"float\000"
+ 2961      7400
+ 2962              	.LASF54:
+ 2963 0095 7267625F 		.ascii	"rgb_ref\000"
+ 2963      72656600 
+ 2964              	.LASF11:
+ 2965 009d 6C6F6E67 		.ascii	"long long int\000"
+ 2965      206C6F6E 
+ 2965      6720696E 
+ 2965      7400
+ 2966              	.LASF44:
+ 2967 00ab 436F6C6F 		.ascii	"ColorSensor_Read\000"
+ 2967      7253656E 
+ 2967      736F725F 
+ 2967      52656164 
+ 2967      00
+ 2968              	.LASF8:
+ 2969 00bc 6C6F6E67 		.ascii	"long int\000"
+ 2969      20696E74 
+ 2969      00
+ 2970              	.LASF41:
+ 2971 00c5 636C6F73 		.ascii	"closeTol\000"
+ 2971      65546F6C 
+ 2971      00
+ARM GAS  C:\Users\alexa\AppData\Local\Temp\ccmMHdsD.s 			page 57
+
+
+ 2972              	.LASF21:
+ 2973 00ce 73697A65 		.ascii	"sizetype\000"
+ 2973      74797065 
+ 2973      00
+ 2974              	.LASF27:
+ 2975 00d7 6D616765 		.ascii	"magenta\000"
+ 2975      6E746100 
+ 2976              	.LASF47:
+ 2977 00df 69735265 		.ascii	"isReadingSuccessful\000"
+ 2977      6164696E 
+ 2977      67537563 
+ 2977      63657373 
+ 2977      66756C00 
+ 2978              	.LASF34:
+ 2979 00f3 52656164 		.ascii	"ReadColorDataRegisters\000"
+ 2979      436F6C6F 
+ 2979      72446174 
+ 2979      61526567 
+ 2979      69737465 
+ 2980              	.LASF23:
+ 2981 010a 67726565 		.ascii	"green\000"
+ 2981      6E00
+ 2982              	.LASF42:
+ 2983 0110 436F6C6F 		.ascii	"ColorToString\000"
+ 2983      72546F53 
+ 2983      7472696E 
+ 2983      6700
+ 2984              	.LASF57:
+ 2985 011e 4932435F 		.ascii	"I2C_MasterWriteByte\000"
+ 2985      4D617374 
+ 2985      65725772 
+ 2985      69746542 
+ 2985      79746500 
+ 2986              	.LASF20:
+ 2987 0132 6C6F6E67 		.ascii	"long double\000"
+ 2987      20646F75 
+ 2987      626C6500 
+ 2988              	.LASF2:
+ 2989 013e 756E7369 		.ascii	"unsigned char\000"
+ 2989      676E6564 
+ 2989      20636861 
+ 2989      7200
+ 2990              	.LASF25:
+ 2991 014c 79656C6C 		.ascii	"yellow\000"
+ 2991      6F7700
+ 2992              	.LASF55:
+ 2993 0153 4932435F 		.ascii	"I2C_MasterReadByte\000"
+ 2993      4D617374 
+ 2993      65725265 
+ 2993      61644279 
+ 2993      746500
+ 2994              	.LASF1:
+ 2995 0166 7369676E 		.ascii	"signed char\000"
+ 2995      65642063 
+ 2995      68617200 
+ 2996              	.LASF15:
+ 2997 0172 696E7433 		.ascii	"int32_t\000"
+ARM GAS  C:\Users\alexa\AppData\Local\Temp\ccmMHdsD.s 			page 58
+
+
+ 2997      325F7400 
+ 2998              	.LASF12:
+ 2999 017a 6C6F6E67 		.ascii	"long long unsigned int\000"
+ 2999      206C6F6E 
+ 2999      6720756E 
+ 2999      7369676E 
+ 2999      65642069 
+ 3000              	.LASF16:
+ 3001 0191 75696E74 		.ascii	"uint32_t\000"
+ 3001      33325F74 
+ 3001      00
+ 3002              	.LASF0:
+ 3003 019a 756E7369 		.ascii	"unsigned int\000"
+ 3003      676E6564 
+ 3003      20696E74 
+ 3003      00
+ 3004              	.LASF38:
+ 3005 01a7 6D617852 		.ascii	"maxRef\000"
+ 3005      656600
+ 3006              	.LASF50:
+ 3007 01ae 636F6C6F 		.ascii	"color_index\000"
+ 3007      725F696E 
+ 3007      64657800 
+ 3008              	.LASF56:
+ 3009 01ba 4932435F 		.ascii	"I2C_MasterSendStart\000"
+ 3009      4D617374 
+ 3009      65725365 
+ 3009      6E645374 
+ 3009      61727400 
+ 3010              	.LASF37:
+ 3011 01ce 7267624E 		.ascii	"rgbNorm\000"
+ 3011      6F726D00 
+ 3012              	.LASF19:
+ 3013 01d6 63686172 		.ascii	"char\000"
+ 3013      00
+ 3014              	.LASF14:
+ 3015 01db 75696E74 		.ascii	"uint16_t\000"
+ 3015      31365F74 
+ 3015      00
+ 3016              	.LASF66:
+ 3017 01e4 69734C61 		.ascii	"isLastByte\000"
+ 3017      73744279 
+ 3017      746500
+ 3018              	.LASF48:
+ 3019 01ef 636F6C6F 		.ascii	"colorFrequency\000"
+ 3019      72467265 
+ 3019      7175656E 
+ 3019      637900
+ 3020              	.LASF26:
+ 3021 01fe 6379616E 		.ascii	"cyan\000"
+ 3021      00
+ 3022              	.LASF6:
+ 3023 0203 73686F72 		.ascii	"short unsigned int\000"
+ 3023      7420756E 
+ 3023      7369676E 
+ 3023      65642069 
+ 3023      6E7400
+ARM GAS  C:\Users\alexa\AppData\Local\Temp\ccmMHdsD.s 			page 59
+
+
+ 3024              	.LASF30:
+ 3025 0216 5F426F6F 		.ascii	"_Bool\000"
+ 3025      6C00
+ 3026              	.LASF63:
+ 3027 021c 436F6C6F 		.ascii	"ColorSensor.c\000"
+ 3027      7253656E 
+ 3027      736F722E 
+ 3027      6300
+ 3028              	.LASF32:
+ 3029 022a 57726974 		.ascii	"WriteRegister\000"
+ 3029      65526567 
+ 3029      69737465 
+ 3029      7200
+ 3030              	.LASF52:
+ 3031 0238 436F6C6F 		.ascii	"ColorSensor_Initialize\000"
+ 3031      7253656E 
+ 3031      736F725F 
+ 3031      496E6974 
+ 3031      69616C69 
+ 3032              	.LASF45:
+ 3033 024f 436F6C6F 		.ascii	"ColorSensor_ReadAverage\000"
+ 3033      7253656E 
+ 3033      736F725F 
+ 3033      52656164 
+ 3033      41766572 
+ 3034              	.LASF10:
+ 3035 0267 6C6F6E67 		.ascii	"long unsigned int\000"
+ 3035      20756E73 
+ 3035      69676E65 
+ 3035      6420696E 
+ 3035      7400
+ 3036              	.LASF29:
+ 3037 0279 62797465 		.ascii	"bytes\000"
+ 3037      7300
+ 3038              	.LASF18:
+ 3039 027f 646F7562 		.ascii	"double\000"
+ 3039      6C6500
+ 3040              	.LASF9:
+ 3041 0286 5F5F7569 		.ascii	"__uint32_t\000"
+ 3041      6E743332 
+ 3041      5F7400
+ 3042              	.LASF46:
+ 3043 0291 6D656173 		.ascii	"measurements\000"
+ 3043      7572656D 
+ 3043      656E7473 
+ 3043      00
+ 3044              	.LASF7:
+ 3045 029e 5F5F696E 		.ascii	"__int32_t\000"
+ 3045      7433325F 
+ 3045      7400
+ 3046              	.LASF64:
+ 3047 02a8 433A5C55 		.ascii	"C:\\Users\\alexa\\Documents\\GitHub\\Projekt-3\\PSo"
+ 3047      73657273 
+ 3047      5C616C65 
+ 3047      78615C44 
+ 3047      6F63756D 
+ 3048 02d5 435C5052 		.ascii	"C\\PRJ3.cydsn\000"
+ARM GAS  C:\Users\alexa\AppData\Local\Temp\ccmMHdsD.s 			page 60
+
+
+ 3048      4A332E63 
+ 3048      7964736E 
+ 3048      00
+ 3049              	.LASF65:
+ 3050 02e2 436F6C6F 		.ascii	"Colors\000"
+ 3050      727300
+ 3051              	.LASF22:
+ 3052 02e9 746F6E65 		.ascii	"tone\000"
+ 3052      00
+ 3053              	.LASF53:
+ 3054 02ee 49544D5F 		.ascii	"ITM_RxBuffer\000"
+ 3054      52784275 
+ 3054      66666572 
+ 3054      00
+ 3055              	.LASF62:
+ 3056 02fb 474E5520 		.ascii	"GNU C11 5.4.1 20160609 (release) [ARM/embedded-5-br"
+ 3056      43313120 
+ 3056      352E342E 
+ 3056      31203230 
+ 3056      31363036 
+ 3057 032e 616E6368 		.ascii	"anch revision 237715] -mcpu=cortex-m3 -mthumb -g -O"
+ 3057      20726576 
+ 3057      6973696F 
+ 3057      6E203233 
+ 3057      37373135 
+ 3058 0361 67202D66 		.ascii	"g -ffunction-sections -ffat-lto-objects\000"
+ 3058      66756E63 
+ 3058      74696F6E 
+ 3058      2D736563 
+ 3058      74696F6E 
+ 3059              	.LASF36:
+ 3060 0389 46696E64 		.ascii	"FindMaxColor\000"
+ 3060      4D617843 
+ 3060      6F6C6F72 
+ 3060      00
+ 3061              	.LASF61:
+ 3062 0396 4932435F 		.ascii	"I2C_Start\000"
+ 3062      53746172 
+ 3062      7400
+ 3063              	.LASF59:
+ 3064 03a0 4932435F 		.ascii	"I2C_MasterSendStop\000"
+ 3064      4D617374 
+ 3064      65725365 
+ 3064      6E645374 
+ 3064      6F7000
+ 3065              	.LASF60:
+ 3066 03b3 55415254 		.ascii	"UART_USB_PutString\000"
+ 3066      5F555342 
+ 3066      5F507574 
+ 3066      53747269 
+ 3066      6E6700
+ 3067              	.LASF4:
+ 3068 03c6 5F5F7569 		.ascii	"__uint8_t\000"
+ 3068      6E74385F 
+ 3068      7400
+ 3069              		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 5.4.1 20160609 (release) [ARM/embedded-5-bran

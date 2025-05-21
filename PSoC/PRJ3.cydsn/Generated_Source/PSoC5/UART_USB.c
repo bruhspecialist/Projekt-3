@@ -1157,6 +1157,58 @@ void  UART_USB_WriteControlRegister(uint8 control)
             }
         }
     }
+    
+    
+    /*******************************************************************************
+    * Function Name: UART_USB_PutInt
+    ********************************************************************************
+    *
+    * Summary:
+    *  Converts an integer to a null-terminated string and sends it to the TX buffer
+    *  for transmission over UART.
+    *
+    * Parameters:
+    *  num: Integer value to be sent over UART.
+    *
+    * Return:
+    *  None.
+    *
+    * Global Variables:
+    *  UART_USB_initVar - checked to identify that the component has been
+    *     initialized.
+    *
+    * Reentrant:
+    *  No.
+    *
+    * Theory:
+    *  Converts the integer to ASCII by working backward in a fixed-size buffer.
+    *  Handles both positive and negative values. Sends the resulting string using
+    *  UART_USB_PutString.
+    *
+    *******************************************************************************/
+    void UART_USB_PutInt(int num) {
+        char msg[12]; // -2147483648\0
+        int i = 11;
+        unsigned int n;
+
+        msg[i--] = '\0';
+
+        if (num < 0) {
+            n = -num;
+        } else {
+            n = num;
+        }
+
+        do {
+            msg[i--] = '0' + (n % 10);
+            n /= 10;
+        } while (n > 0);
+
+        if (num < 0)
+            msg[i--] = '-';
+
+        UART_USB_PutString(&msg[i + 1]);
+    }
 
 
     /*******************************************************************************

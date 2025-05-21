@@ -19,4 +19,5 @@ enum Colors {tone, red, green, blue, yellow, cyan, magenta};
 
 const char* ColorToString(uint8_t color);
 bool ColorSensor_Read(uint8_t* color);
+bool ColorSensor_ReadAverage(uint8_t* color, uint16_t measurements);
 bool ColorSensor_Initialize();

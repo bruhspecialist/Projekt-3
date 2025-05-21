@@ -1,69 +1,60 @@
 #include "project.h"
 #include "Motor.h"
 
-#include <stdio.h>
-#include <stdbool.h>
-#include <stdlib.h>
+#include <stdlib.h> // til abs()
 
-const uint8_t FULL_DRIVE_SEQUENCE[4][4] = {
+// Fuld sekvens til 4-trins fuld-step kørsel
+static const uint8_t DRIVE_SEQ[4][4] = {
     {1, 1, 0, 0},
     {0, 1, 1, 0},
     {0, 0, 1, 1},
     {1, 0, 0, 1}
 };
-const uint8_t STOPPED_DRIVE[4] = {0, 0, 0, 0};
 
-static uint16_t currentStep = 0; // 0 - 47 (0° - 352.5°)
+static const uint8_t DRIVE_OFF[4] = {0, 0, 0, 0};
 
-// Sætter tilstande af statore
-void SetStators(const uint8_t states[4]) {
-    STEP_1a_Write(states[0]);
-    STEP_2a_Write(states[1]);
-    STEP_1b_Write(states[2]);
-    STEP_2b_Write(states[3]);
+static uint16_t currentStep = 0; // 0 - 2047
+
+static inline void SetStators(const uint8_t s[4]) {
+    STEP_1a_Write(s[0]);
+    STEP_2a_Write(s[1]);
+    STEP_1b_Write(s[2]);
+    STEP_2b_Write(s[3]);
 }
 
-// Kalkulerer tiden (ms) til næste stator-skift
-uint16_t CalculateDelay(uint8_t speed) {
-    uint16_t delayLimitDiff = MAX_SPEED_DELAY - MIN_SPEED_DELAY;
-    uint16_t speedDiff = 100 - speed;
-    uint16_t delay = MIN_SPEED_DELAY + (delayLimitDiff * speedDiff * speedDiff) / (100 * 100);
-    return delay;
+static inline uint16_t CalculateDelay(uint8_t speedPercent) {
+    // Kvadratisk faldende delay med hastighed
+    uint16_t range = MAX_SPEED_DELAY - MIN_SPEED_DELAY;
+    uint16_t diff = 100 - speedPercent;
+    return MIN_SPEED_DELAY + (range * diff * diff) / 10000;
 }
 
-// Kalkulerer ny 'step-værdi', som er proportional med vinklen
-uint16_t CalculateNewStep(uint16_t step, int16_t stepDiff) {
-    int16_t newStep = (step + stepDiff) % TOTAL_STEPS;
-    if (newStep < 0) newStep += TOTAL_STEPS;
-    return newStep;
+static inline uint16_t WrapStep(int32_t step) {
+    step %= TOTAL_STEPS;
+    return (step < 0) ? step + TOTAL_STEPS : step;
 }
 
-// Indstil vinkel af motoren
-void SetAngle(int16_t newAngle, uint8_t speed) {
-    newAngle = ((newAngle % 360) + 360) % 360; // Sikrer 0–359
+void SetAngle(int16_t angleDeg, uint8_t speedPercent) {
+    angleDeg = ((angleDeg % 360) + 360) % 360; // Sikrer 0–359
+    uint16_t targetStep = (TOTAL_STEPS * angleDeg) / 360;
 
-    uint16_t newStep = (TOTAL_STEPS * newAngle) / 360;
-    
-    if (newStep == currentStep) return;
+    if (targetStep == currentStep) return;
 
-    int16_t stepDiff = newStep - currentStep;
-    int16_t altDiff = (stepDiff > 0) ? stepDiff - TOTAL_STEPS : stepDiff + TOTAL_STEPS;
+    int16_t delta = targetStep - currentStep;
+    int16_t altDelta = (delta > 0) ? delta - TOTAL_STEPS : delta + TOTAL_STEPS;
 
-    int16_t chosenDiff = (abs(stepDiff) <= abs(altDiff)) ? stepDiff : altDiff;
-    int8_t stepInc = (chosenDiff > 0) ? 1 : -1;
-    int16_t stepsRemaining = abs(chosenDiff);
-    
-    while (stepsRemaining--) {
-        currentStep = CalculateNewStep(currentStep, stepInc);
+    int16_t bestDelta = (abs(delta) <= abs(altDelta)) ? delta : altDelta;
+    int8_t stepDir = (bestDelta > 0) ? 1 : -1;
+    uint16_t steps = abs(bestDelta);
+    uint16_t delay = CalculateDelay(speedPercent);
 
-        char msg[64];
-        snprintf(msg, 64, "currentStep: %d\r\n", currentStep);
-        UART_USB_PutString(msg);
-
-        SetStators(FULL_DRIVE_SEQUENCE[currentStep % 4]);
-        CyDelay(CalculateDelay(speed));
+    while (steps--) {
+        currentStep = WrapStep(currentStep + stepDir);
+        SetStators(DRIVE_SEQ[currentStep % 4]);
+        CyDelay(delay);
     }
 }
 
-// Slukker statore
-void Deactivate() {SetStators(STOPPED_DRIVE);}
+void Deactivate(void) {
+    SetStators(DRIVE_OFF);
+}
