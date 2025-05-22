@@ -87,7 +87,7 @@ void UpdateState() {
             char msg[MAX_STR_LENGTH];
             snprintf(msg, MAX_STR_LENGTH, "Detected color: %s\r\n", ColorToString(color_index));
             UART_USB_PutString(msg);
-            if (color_index != tone) {
+            if (color_index >= red && color_index <= magenta) {
                 memset(msg, 0, MAX_STR_LENGTH); // Rydder bufferen i msg
                 snprintf(msg, MAX_STR_LENGTH, "result %s", ColorToString(color_index));
                 UART_PI_PutString(msg);

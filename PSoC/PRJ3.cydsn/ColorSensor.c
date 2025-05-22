@@ -10,13 +10,13 @@
 
 #define ATIME 29 // Antal af integrations-steps fra 1-256
 #define ASTEP 599 // ASTEP (Bits 15:0 - Integrations-tid mellem steps)
-#define AGAIN 2 // Sensitivitet af sensoren
+#define AGAIN 4 // Sensitivitet af sensoren
 #define MAX_VALUE (ATIME * ASTEP + ATIME + ASTEP)
 
-// Referenceværdier fra hvid skærm på iPhone 15 Pro (MAX_VALUE=17999)
-#define R_REF 17506
-#define G_REF 17156
-#define B_REF 15056
+// Referenceværdier fra hvidt papir (MAX_VALUE=17999)
+#define R_REF 11735
+#define G_REF 12037
+#define B_REF 7855
 
 #define ADDRESS 0x39
 
@@ -87,7 +87,7 @@ uint8_t DetectColor(const uint16_t* rgb) {
     if (g < min) min = g;
     if (b < min) min = b;
 
-    if (max - min <= max * closeTol) return tone; // For lidt kontrast til at afgøre farve
+    if (max - min <= max * closeTol) return 0; // For lidt kontrast til at afgøre farve
 
     if (r > g * (1 + tol) && r > b * (1 + tol)) return red;
     if (g > r * (1 + tol) && g > b * (1 + tol)) return green;
@@ -100,48 +100,38 @@ uint8_t DetectColor(const uint16_t* rgb) {
     return blue;
 }
 
-const char* ColorToString(enum Colors color) {
+uint8_t GetOpposingColor(enum Colors color) {
     switch (color) {
-        case tone    : return "tone";
-        case red     : return "red";
-        case green   : return "green";
-        case blue    : return "blue";
-        case yellow  : return "yellow";
-        case cyan    : return "cyan";
-        case magenta : return "magenta";
-        default      : return "error";
+        case red       : return yellow;
+        case green     : return magenta;
+        case blue      : return cyan;
+        case yellow    : return red;
+        case cyan      : return blue;
+        case magenta   : return green;
+        default        : return 0;
     }
 }
 
-bool ColorSensor_ReadRGB(uint16_t* rgbNorm) {
-    COLOR_SENSOR_LED_Write(1);
-    CyDelay(LED_ENABLE_DELAY);
-    uint16_t rgbData[3];
-    if (!ReadColorDataRegisters(rgbData)) return false;
-    CalibrateColor(rgbData, rgbNorm);
-    COLOR_SENSOR_LED_Write(1);
-    return true;
+const char* ColorToString(enum Colors color) {
+    switch (color) {
+        case red       : return "red";
+        case green     : return "green";
+        case blue      : return "blue";
+        case yellow    : return "yellow";
+        case cyan      : return "cyan";
+        case magenta   : return "magenta";
+        default        : return "error";
+    }
 }
 
-//bool ColorSensor_ReadAverage(uint8_t* color, uint16_t measurements) {
+//bool ColorSensor_ReadRGB(uint16_t* rgbNorm) {
 //    COLOR_SENSOR_LED_Write(1);
 //    CyDelay(LED_ENABLE_DELAY);
-//    bool isReadingSuccessful = true;
-//    uint8_t colorFrequency[7] = {0};
-//    UART_USB_PutString("Color measurement started\r\n");
-//    for (uint16_t i = 0; i < measurements; ++i) {
-//        uint8_t color_index;
-//        if (!ColorSensor_Read(&color_index)) isReadingSuccessful = false;
-//        else colorFrequency[color_index]++;
-//    }
-//    UART_USB_PutString("Color measurement stopped\r\n"); 
-//    uint8_t hottestColor = 0;
-//    for (uint8_t i = 1; i < 7; ++i) { // Find den farve der opstår mest
-//        if (colorFrequency[i] > colorFrequency[hottestColor]) hottestColor = i;
-//    }
-//    *color = hottestColor;
+//    uint16_t rgbData[3];
+//    if (!ReadColorDataRegisters(rgbData)) return false;
+//    CalibrateColor(rgbData, rgbNorm);
 //    COLOR_SENSOR_LED_Write(0);
-//    return isReadingSuccessful;
+//    return true;
 //}
 
 bool ColorSensor_Read(uint8_t* color) {
@@ -151,29 +141,18 @@ bool ColorSensor_Read(uint8_t* color) {
     uint16_t rgbNorm[3];
     if (!ReadColorDataRegisters(rgbData)) return false;
     CalibrateColor(rgbData, rgbNorm);
-    *color = DetectColor(rgbNorm);
+    *color = GetOpposingColor(DetectColor(rgbNorm));
     COLOR_SENSOR_LED_Write(0);
     return true;
 }
 
 bool ColorSensor_Initialize()
 {
-    // uint8_t ASTEP_MSB = (ASTEP >> 8);
     I2C_Start();
-    
-    
-    // char buffer[256];
-    // sprintf(
-    //     buffer,
-    //     "ATIME: %d\r\nASTEP_LSB: %d\r\nASTEP_MSB: %d\r\nAGAIN: %d\r\n",
-    //     ATIME, ASTEP_MSB, ASTEP - ASTEP_MSB, AGAIN
-    // );
-    
-    // UART_USB_PutString(buffer);
-    
+    uint8_t ASTEP_MSB = ASTEP >> 8;
     if (!WriteRegister(0x81, ATIME)) return false;
-    if (!WriteRegister(0xCA, ASTEP_MSB)) return false;
-    if (!WriteRegister(0xCB, ASTEP - ASTEP_MSB)) return false;
+    if (!WriteRegister(0xCA, ASTEP - ASTEP_MSB)) return false;
+    if (!WriteRegister(0xCB, ASTEP_MSB)) return false;
     if (!WriteRegister(0xAA, AGAIN)) return false;
     if (!WriteRegister(0x80, 0b00000011)) return false; // Enable AEN & PON bits
     return true;
