@@ -1,1 +1,0 @@
-'C:\Users\alexa\Documents\GitHub\Projekt-3\PSoC\PRJ3.cydsn\main.c' -o .o -T SOURCE_C__ARM_GCC_GENERIC -I 'C:\Users\alexa\Documents\GitHub\Projekt-3\PSoC\PRJ3.cydsn' -I 'C:\Users\alexa\Documents\GitHub\Projekt-3\PSoC\PRJ3.cydsn\Generated_Source\PSoC5' -f 'C:\Users\alexa\Documents\GitHub\Projekt-3\PSoC\PRJ3.cydsn\CortexM3\ARM_GCC_541\Debug\.deps\SOURCE_C__ARM_GCC_GENERIC.d'
