@@ -125,6 +125,11 @@ void UpdateState() {
     }
 }
 
+//void TestLoop() {
+//    TestSimpleColorSensor();
+//    CyDelay(1000);
+//}
+
 int main() {
     int8_t err = setup();
     if (err == 0) UART_USB_PutString("PSoC has booted and successfully completed setup\r\n");

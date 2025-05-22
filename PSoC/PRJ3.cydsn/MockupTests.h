@@ -6,6 +6,7 @@
 #include "CustomMath.h"
 #include "SimulationTests.h"
 #include "ErrorMessage.h"
+#include "UART.h"
 
 #include "stdint.h"
 
@@ -33,5 +34,13 @@ void TestColorSensor() {
     
     UART_USB_PutString("Detected color: ");
     UART_USB_PutString(ColorToString(mostFrequentColor));
+    UART_USB_PutString("\r\n");
+}
+
+void TestSimpleColorSensor() {
+    uint8_t color_index;
+    ColorSensor_Read(&color_index);
+    UART_USB_PutString("Detected color: ");
+    UART_USB_PutString(ColorToString(color_index));
     UART_USB_PutString("\r\n");
 }

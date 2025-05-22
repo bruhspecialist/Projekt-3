@@ -12,3 +12,4 @@ const char* UART_GetCommand();
 const char* UART_GetParameter(uint8_t parameter_index);
 void UART_ResetBuffer();
 void UART_Initialize();
+void UART_USB_PutInt(int num);

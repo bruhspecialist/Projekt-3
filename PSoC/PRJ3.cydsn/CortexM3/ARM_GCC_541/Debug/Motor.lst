@@ -1,4 +1,4 @@
-ARM GAS  C:\Users\alexa\AppData\Local\Temp\cckrIHiN.s 			page 1
+ARM GAS  C:\Users\alexa\AppData\Local\Temp\ccwJM5l8.s 			page 1
 
 
    1              		.syntax unified
@@ -58,7 +58,7 @@ ARM GAS  C:\Users\alexa\AppData\Local\Temp\cckrIHiN.s 			page 1
   28:Motor.c       ****     uint16_t diff = 100 - speedPercent;
   29:Motor.c       ****     return MIN_SPEED_DELAY + (range * diff * diff) / 10000;
   30:Motor.c       **** }
-ARM GAS  C:\Users\alexa\AppData\Local\Temp\cckrIHiN.s 			page 2
+ARM GAS  C:\Users\alexa\AppData\Local\Temp\ccwJM5l8.s 			page 2
 
 
   31:Motor.c       **** 
@@ -118,7 +118,7 @@ ARM GAS  C:\Users\alexa\AppData\Local\Temp\cckrIHiN.s 			page 1
   71 0042 9342     		cmp	r3, r2
   72 0044 60D0     		beq	.L1
   42:Motor.c       **** 
-ARM GAS  C:\Users\alexa\AppData\Local\Temp\cckrIHiN.s 			page 3
+ARM GAS  C:\Users\alexa\AppData\Local\Temp\ccwJM5l8.s 			page 3
 
 
   43:Motor.c       ****     int16_t delta = targetStep - currentStep;
@@ -178,7 +178,7 @@ ARM GAS  C:\Users\alexa\AppData\Local\Temp\cckrIHiN.s 			page 1
  121              	.LBB13:
   28:Motor.c       ****     return MIN_SPEED_DELAY + (range * diff * diff) / 10000;
  122              		.loc 1 28 0 discriminator 4
-ARM GAS  C:\Users\alexa\AppData\Local\Temp\cckrIHiN.s 			page 4
+ARM GAS  C:\Users\alexa\AppData\Local\Temp\ccwJM5l8.s 			page 4
 
 
  123 0088 C1F16401 		rsb	r1, r1, #100
@@ -238,7 +238,7 @@ ARM GAS  C:\Users\alexa\AppData\Local\Temp\cckrIHiN.s 			page 1
  170 00cc 00E0     		b	.L10
  171              	.LVL22:
  172              	.L9:
-ARM GAS  C:\Users\alexa\AppData\Local\Temp\cckrIHiN.s 			page 5
+ARM GAS  C:\Users\alexa\AppData\Local\Temp\ccwJM5l8.s 			page 5
 
 
  173 00ce 9BB2     		uxth	r3, r3
@@ -298,7 +298,7 @@ ARM GAS  C:\Users\alexa\AppData\Local\Temp\cckrIHiN.s 			page 1
  220              	.L1:
  221 0108 F8BD     		pop	{r3, r4, r5, r6, r7, pc}
  222              	.L15:
-ARM GAS  C:\Users\alexa\AppData\Local\Temp\cckrIHiN.s 			page 6
+ARM GAS  C:\Users\alexa\AppData\Local\Temp\ccwJM5l8.s 			page 6
 
 
  223 010a 00BF     		.align	2
@@ -358,7 +358,7 @@ ARM GAS  C:\Users\alexa\AppData\Local\Temp\cckrIHiN.s 			page 1
  269              	.LBE21:
  270              	.LBE20:
  271              		.cfi_endproc
-ARM GAS  C:\Users\alexa\AppData\Local\Temp\cckrIHiN.s 			page 7
+ARM GAS  C:\Users\alexa\AppData\Local\Temp\ccwJM5l8.s 			page 7
 
 
  272              	.LFE67:
@@ -418,7 +418,7 @@ ARM GAS  C:\Users\alexa\AppData\Local\Temp\cckrIHiN.s 			page 1
  326 0021 00000000 		.4byte	.Ldebug_line0
  327 0025 02       		.uleb128 0x2
  328 0026 AE020000 		.4byte	.LASF0
-ARM GAS  C:\Users\alexa\AppData\Local\Temp\cckrIHiN.s 			page 8
+ARM GAS  C:\Users\alexa\AppData\Local\Temp\ccwJM5l8.s 			page 8
 
 
  329 002a 02       		.byte	0x2
@@ -478,7 +478,7 @@ ARM GAS  C:\Users\alexa\AppData\Local\Temp\cckrIHiN.s 			page 1
  383 0090 19020000 		.4byte	.LASF12
  384 0094 04       		.uleb128 0x4
  385 0095 04       		.byte	0x4
-ARM GAS  C:\Users\alexa\AppData\Local\Temp\cckrIHiN.s 			page 9
+ARM GAS  C:\Users\alexa\AppData\Local\Temp\ccwJM5l8.s 			page 9
 
 
  386 0096 05       		.byte	0x5
@@ -538,7 +538,7 @@ ARM GAS  C:\Users\alexa\AppData\Local\Temp\cckrIHiN.s 			page 1
  440 0102 19       		.byte	0x19
  441 0103 C3000000 		.4byte	0xc3
  442 0107 03       		.byte	0x3
-ARM GAS  C:\Users\alexa\AppData\Local\Temp\cckrIHiN.s 			page 10
+ARM GAS  C:\Users\alexa\AppData\Local\Temp\ccwJM5l8.s 			page 10
 
 
  443 0108 2E010000 		.4byte	0x12e
@@ -598,7 +598,7 @@ ARM GAS  C:\Users\alexa\AppData\Local\Temp\cckrIHiN.s 			page 1
  497 017b 9C       		.byte	0x9c
  498 017c AB020000 		.4byte	0x2ab
  499 0180 0D       		.uleb128 0xd
-ARM GAS  C:\Users\alexa\AppData\Local\Temp\cckrIHiN.s 			page 11
+ARM GAS  C:\Users\alexa\AppData\Local\Temp\ccwJM5l8.s 			page 11
 
 
  500 0181 C6020000 		.4byte	.LASF30
@@ -658,7 +658,7 @@ ARM GAS  C:\Users\alexa\AppData\Local\Temp\cckrIHiN.s 			page 1
  554 0208 88000000 		.4byte	.LBB12
  555 020c 1E000000 		.4byte	.LBE12-.LBB12
  556 0210 01       		.byte	0x1
-ARM GAS  C:\Users\alexa\AppData\Local\Temp\cckrIHiN.s 			page 12
+ARM GAS  C:\Users\alexa\AppData\Local\Temp\ccwJM5l8.s 			page 12
 
 
  557 0211 31       		.byte	0x31
@@ -718,7 +718,7 @@ ARM GAS  C:\Users\alexa\AppData\Local\Temp\cckrIHiN.s 			page 1
  611 02a4 01       		.uleb128 0x1
  612 02a5 50       		.byte	0x50
  613 02a6 02       		.uleb128 0x2
-ARM GAS  C:\Users\alexa\AppData\Local\Temp\cckrIHiN.s 			page 13
+ARM GAS  C:\Users\alexa\AppData\Local\Temp\ccwJM5l8.s 			page 13
 
 
  614 02a7 75       		.byte	0x75
@@ -778,7 +778,7 @@ ARM GAS  C:\Users\alexa\AppData\Local\Temp\cckrIHiN.s 			page 1
  668 0316 B6030000 		.4byte	0x3b6
  669 031a 15       		.uleb128 0x15
  670 031b 01       		.uleb128 0x1
-ARM GAS  C:\Users\alexa\AppData\Local\Temp\cckrIHiN.s 			page 14
+ARM GAS  C:\Users\alexa\AppData\Local\Temp\ccwJM5l8.s 			page 14
 
 
  671 031c 50       		.byte	0x50
@@ -838,7 +838,7 @@ ARM GAS  C:\Users\alexa\AppData\Local\Temp\cckrIHiN.s 			page 1
  725 0385 90010000 		.4byte	.LASF52
  726 0389 09       		.byte	0x9
  727 038a 1207     		.2byte	0x712
-ARM GAS  C:\Users\alexa\AppData\Local\Temp\cckrIHiN.s 			page 15
+ARM GAS  C:\Users\alexa\AppData\Local\Temp\ccwJM5l8.s 			page 15
 
 
  728 038c 90030000 		.4byte	0x390
@@ -898,7 +898,7 @@ ARM GAS  C:\Users\alexa\AppData\Local\Temp\cckrIHiN.s 			page 1
  782 0017 0E       		.uleb128 0xe
  783 0018 3A       		.uleb128 0x3a
  784 0019 0B       		.uleb128 0xb
-ARM GAS  C:\Users\alexa\AppData\Local\Temp\cckrIHiN.s 			page 16
+ARM GAS  C:\Users\alexa\AppData\Local\Temp\ccwJM5l8.s 			page 16
 
 
  785 001a 3B       		.uleb128 0x3b
@@ -958,7 +958,7 @@ ARM GAS  C:\Users\alexa\AppData\Local\Temp\cckrIHiN.s 			page 1
  839 0050 3B       		.uleb128 0x3b
  840 0051 0B       		.uleb128 0xb
  841 0052 49       		.uleb128 0x49
-ARM GAS  C:\Users\alexa\AppData\Local\Temp\cckrIHiN.s 			page 17
+ARM GAS  C:\Users\alexa\AppData\Local\Temp\ccwJM5l8.s 			page 17
 
 
  842 0053 13       		.uleb128 0x13
@@ -1018,7 +1018,7 @@ ARM GAS  C:\Users\alexa\AppData\Local\Temp\cckrIHiN.s 			page 1
  896 0089 00       		.byte	0
  897 008a 0B       		.uleb128 0xb
  898 008b 26       		.uleb128 0x26
-ARM GAS  C:\Users\alexa\AppData\Local\Temp\cckrIHiN.s 			page 18
+ARM GAS  C:\Users\alexa\AppData\Local\Temp\ccwJM5l8.s 			page 18
 
 
  899 008c 00       		.byte	0
@@ -1078,7 +1078,7 @@ ARM GAS  C:\Users\alexa\AppData\Local\Temp\cckrIHiN.s 			page 1
  953 00c3 49       		.uleb128 0x49
  954 00c4 13       		.uleb128 0x13
  955 00c5 02       		.uleb128 0x2
-ARM GAS  C:\Users\alexa\AppData\Local\Temp\cckrIHiN.s 			page 19
+ARM GAS  C:\Users\alexa\AppData\Local\Temp\ccwJM5l8.s 			page 19
 
 
  956 00c6 17       		.uleb128 0x17
@@ -1138,7 +1138,7 @@ ARM GAS  C:\Users\alexa\AppData\Local\Temp\cckrIHiN.s 			page 1
  1010 00fe 00       		.byte	0
  1011 00ff 00       		.byte	0
  1012 0100 14       		.uleb128 0x14
-ARM GAS  C:\Users\alexa\AppData\Local\Temp\cckrIHiN.s 			page 20
+ARM GAS  C:\Users\alexa\AppData\Local\Temp\ccwJM5l8.s 			page 20
 
 
  1013 0101 898201   		.uleb128 0x4109
@@ -1198,7 +1198,7 @@ ARM GAS  C:\Users\alexa\AppData\Local\Temp\cckrIHiN.s 			page 1
  1067 013e 00       		.byte	0
  1068 013f 49       		.uleb128 0x49
  1069 0140 13       		.uleb128 0x13
-ARM GAS  C:\Users\alexa\AppData\Local\Temp\cckrIHiN.s 			page 21
+ARM GAS  C:\Users\alexa\AppData\Local\Temp\ccwJM5l8.s 			page 21
 
 
  1070 0141 2F       		.uleb128 0x2f
@@ -1258,7 +1258,7 @@ ARM GAS  C:\Users\alexa\AppData\Local\Temp\cckrIHiN.s 			page 1
  1124 0177 49       		.uleb128 0x49
  1125 0178 13       		.uleb128 0x13
  1126 0179 00       		.byte	0
-ARM GAS  C:\Users\alexa\AppData\Local\Temp\cckrIHiN.s 			page 22
+ARM GAS  C:\Users\alexa\AppData\Local\Temp\ccwJM5l8.s 			page 22
 
 
  1127 017a 00       		.byte	0
@@ -1318,7 +1318,7 @@ ARM GAS  C:\Users\alexa\AppData\Local\Temp\cckrIHiN.s 			page 1
  1181 004d 3E000000 		.4byte	.LVL4
  1182 0051 48000000 		.4byte	.LVL5
  1183 0055 0100     		.2byte	0x1
-ARM GAS  C:\Users\alexa\AppData\Local\Temp\cckrIHiN.s 			page 23
+ARM GAS  C:\Users\alexa\AppData\Local\Temp\ccwJM5l8.s 			page 23
 
 
  1184 0057 53       		.byte	0x53
@@ -1378,7 +1378,7 @@ ARM GAS  C:\Users\alexa\AppData\Local\Temp\cckrIHiN.s 			page 1
  1238 00ea 51       		.byte	0x51
  1239 00eb 8C000000 		.4byte	.LVL12
  1240 00ef A6000000 		.4byte	.LVL16
-ARM GAS  C:\Users\alexa\AppData\Local\Temp\cckrIHiN.s 			page 24
+ARM GAS  C:\Users\alexa\AppData\Local\Temp\ccwJM5l8.s 			page 24
 
 
  1241 00f3 0400     		.2byte	0x4
@@ -1438,7 +1438,7 @@ ARM GAS  C:\Users\alexa\AppData\Local\Temp\cckrIHiN.s 			page 1
  1295 017c F2       		.byte	0xf2
  1296 017d 5E030000 		.4byte	.Ldebug_info0+862
  1297 0181 00       		.sleb128 0
-ARM GAS  C:\Users\alexa\AppData\Local\Temp\cckrIHiN.s 			page 25
+ARM GAS  C:\Users\alexa\AppData\Local\Temp\ccwJM5l8.s 			page 25
 
 
  1298 0182 00000000 		.4byte	0
@@ -1498,7 +1498,7 @@ ARM GAS  C:\Users\alexa\AppData\Local\Temp\cckrIHiN.s 			page 1
  1335      4A332E63 
  1335      7964736E 
  1335      00
-ARM GAS  C:\Users\alexa\AppData\Local\Temp\cckrIHiN.s 			page 26
+ARM GAS  C:\Users\alexa\AppData\Local\Temp\ccwJM5l8.s 			page 26
 
 
  1336              	.LASF8:
@@ -1558,7 +1558,7 @@ ARM GAS  C:\Users\alexa\AppData\Local\Temp\cckrIHiN.s 			page 1
  1361      74696F6E 
  1362              	.LASF44:
  1363 0151 53544550 		.ascii	"STEP_2a_Write\000"
-ARM GAS  C:\Users\alexa\AppData\Local\Temp\cckrIHiN.s 			page 27
+ARM GAS  C:\Users\alexa\AppData\Local\Temp\ccwJM5l8.s 			page 27
 
 
  1363      5F32615F 
@@ -1618,7 +1618,7 @@ ARM GAS  C:\Users\alexa\AppData\Local\Temp\cckrIHiN.s 			page 1
  1387      657000
  1388              	.LASF39:
  1389 01ed 44656163 		.ascii	"Deactivate\000"
-ARM GAS  C:\Users\alexa\AppData\Local\Temp\cckrIHiN.s 			page 28
+ARM GAS  C:\Users\alexa\AppData\Local\Temp\ccwJM5l8.s 			page 28
 
 
  1389      74697661 
@@ -1678,7 +1678,7 @@ ARM GAS  C:\Users\alexa\AppData\Local\Temp\cckrIHiN.s 			page 1
  1416              	.LASF41:
  1417 027f 44524956 		.ascii	"DRIVE_OFF\000"
  1417      455F4F46 
-ARM GAS  C:\Users\alexa\AppData\Local\Temp\cckrIHiN.s 			page 29
+ARM GAS  C:\Users\alexa\AppData\Local\Temp\ccwJM5l8.s 			page 29
 
 
  1417      4600

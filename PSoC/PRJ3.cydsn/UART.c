@@ -85,3 +85,27 @@ void UART_Initialize() {
     UART_USB_Start();
     UART_PI_Start();
 }
+
+void UART_USB_PutInt(int num) {
+    char msg[12]; // -2147483648\0
+    int i = 11;
+    unsigned int n;
+
+    msg[i--] = '\0';
+
+    if (num < 0) {
+        n = -num;
+    } else {
+        n = num;
+    }
+
+    do {
+        msg[i--] = '0' + (n % 10);
+        n /= 10;
+    } while (n > 0);
+
+    if (num < 0)
+        msg[i--] = '-';
+
+    UART_USB_PutString(&msg[i + 1]);
+}
