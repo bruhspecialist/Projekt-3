@@ -4,6 +4,25 @@
 #include <stdio.h>
 #include <stdlib.h>
 
+/* Settings */
+#define DATA_REG_START_ADDR 0x95
+#define DATA_REG_END_ADDR 0xA0
+
+#define ATIME 29 // Antal af integrations-steps fra 1-256
+#define ASTEP 599 // ASTEP (Bits 15:0 - Integrations-tid mellem steps)
+#define AGAIN 2 // Sensitivitet af sensoren
+#define MAX_VALUE (ATIME * ASTEP + ATIME + ASTEP)
+
+// Referenceværdier fra hvid skærm på iPhone 15 Pro (MAX_VALUE=17999)
+#define R_REF 17506
+#define G_REF 17156
+#define B_REF 15056
+
+#define ADDRESS 0x39
+
+#define LED_ENABLE_DELAY 100 // ms
+
+
 const uint16_t rgb_ref[3] = {R_REF, G_REF, B_REF}; // Med udgangspunkt i hvid skærm fra iPhone 15 Pro
 
 bool ReadRegister(uint8_t REG, uint8_t dataBytes, uint8_t* bytes)
@@ -81,7 +100,7 @@ uint8_t DetectColor(const uint16_t* rgb) {
     return blue;
 }
 
-const char* ColorToString(uint8_t color) {
+const char* ColorToString(enum Colors color) {
     switch (color) {
         case tone    : return "tone";
         case red     : return "red";
@@ -139,18 +158,18 @@ bool ColorSensor_Read(uint8_t* color) {
 
 bool ColorSensor_Initialize()
 {
-    uint8_t ASTEP_MSB = (ASTEP >> 8);
+    // uint8_t ASTEP_MSB = (ASTEP >> 8);
     I2C_Start();
     
     
-    char buffer[256];
-    sprintf(
-        buffer,
-        "ATIME: %d\r\nASTEP_LSB: %d\r\nASTEP_MSB: %d\r\nAGAIN: %d\r\n",
-        ATIME, ASTEP_MSB, ASTEP - ASTEP_MSB, AGAIN
-    );
+    // char buffer[256];
+    // sprintf(
+    //     buffer,
+    //     "ATIME: %d\r\nASTEP_LSB: %d\r\nASTEP_MSB: %d\r\nAGAIN: %d\r\n",
+    //     ATIME, ASTEP_MSB, ASTEP - ASTEP_MSB, AGAIN
+    // );
     
-    UART_USB_PutString(buffer);
+    // UART_USB_PutString(buffer);
     
     if (!WriteRegister(0x81, ATIME)) return false;
     if (!WriteRegister(0xCA, ASTEP_MSB)) return false;

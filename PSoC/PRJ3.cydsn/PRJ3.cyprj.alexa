@@ -11,7 +11,7 @@
 <CyGuid_f44455c5-3770-4452-b988-0a7a7ff46256 type_name="CyDesigner.Common.ProjMgmt.Model.CyConfigDependencies" version="1">
 <dependency_info name="c9323d49-d323-40b8-9b59-cc008d68a989@Debug@CortexM3" xml_contents_version="2">
 <CyGuid_1173175f-1b9b-4ad4-a065-754a48a27021 type_name="CyDesigner.Common.Base.CyFileDeps" version="1">
-<file name=".\CortexM3\ARM_GCC_541\Debug\Pump.o">
+<file name=".\CortexM3\ARM_GCC_541\Debug\ColorSensor.o">
 <dep name=".\Generated_Source\PSoC5\COLOR_SENSOR_LED.h" />
 <dep name=".\Generated_Source\PSoC5\COLOR_SENSOR_LED_aliases.h" />
 <dep name=".\Generated_Source\PSoC5\CyDmac.h" />
@@ -65,8 +65,8 @@
 <dep name=".\Generated_Source\PSoC5\scl_aliases.h" />
 <dep name=".\Generated_Source\PSoC5\sda.h" />
 <dep name=".\Generated_Source\PSoC5\sda_aliases.h" />
-<dep name=".\Pump.c" />
-<dep name=".\Pump.h" />
+<dep name=".\ColorSensor.c" />
+<dep name=".\ColorSensor.h" />
 </file>
 <file name=".\Generated_Source\PSoC5\COLOR_SENSOR_LED.h" />
 <file name=".\Generated_Source\PSoC5\COLOR_SENSOR_LED_aliases.h" />
@@ -121,8 +121,8 @@
 <file name=".\Generated_Source\PSoC5\scl_aliases.h" />
 <file name=".\Generated_Source\PSoC5\sda.h" />
 <file name=".\Generated_Source\PSoC5\sda_aliases.h" />
-<file name=".\Pump.c" />
-<file name=".\Pump.h" />
+<file name=".\ColorSensor.c" />
+<file name=".\ColorSensor.h" />
 <file name=".\CortexM3\ARM_GCC_541\Debug\main.o">
 <dep name=".\Generated_Source\PSoC5\COLOR_SENSOR_LED.h" />
 <dep name=".\Generated_Source\PSoC5\COLOR_SENSOR_LED_aliases.h" />
@@ -188,16 +188,16 @@
 <dep name=".\Weight.h" />
 <dep name=".\main.c" />
 </file>
-<file name=".\ColorSensor.h" />
 <file name=".\CustomMath.h" />
 <file name=".\ErrorMessage.h" />
 <file name=".\MockupTests.h" />
 <file name=".\Motor.h" />
+<file name=".\Pump.h" />
 <file name=".\SimulationTests.h" />
 <file name=".\UART.h" />
 <file name=".\Weight.h" />
 <file name=".\main.c" />
-<file name=".\CortexM3\ARM_GCC_541\Debug\ColorSensor.o">
+<file name=".\CortexM3\ARM_GCC_541\Debug\Pump.o">
 <dep name=".\Generated_Source\PSoC5\COLOR_SENSOR_LED.h" />
 <dep name=".\Generated_Source\PSoC5\COLOR_SENSOR_LED_aliases.h" />
 <dep name=".\Generated_Source\PSoC5\CyDmac.h" />
@@ -251,10 +251,10 @@
 <dep name=".\Generated_Source\PSoC5\scl_aliases.h" />
 <dep name=".\Generated_Source\PSoC5\sda.h" />
 <dep name=".\Generated_Source\PSoC5\sda_aliases.h" />
-<dep name=".\ColorSensor.c" />
-<dep name=".\ColorSensor.h" />
+<dep name=".\Pump.c" />
+<dep name=".\Pump.h" />
 </file>
-<file name=".\ColorSensor.c" />
+<file name=".\Pump.c" />
 <file name=".\CortexM3\ARM_GCC_541\Debug\COLOR_SENSOR_LED.o">
 <dep name=".\Generated_Source\PSoC5\COLOR_SENSOR_LED.h" />
 <dep name=".\Generated_Source\PSoC5\COLOR_SENSOR_LED_aliases.h" />
@@ -1418,7 +1418,7 @@
 <dataGuid v="769d31ea-68b1-4f0c-b90a-7c10a43ee563">
 <CyGuid_769d31ea-68b1-4f0c-b90a-7c10a43ee563 type_name="CyDesigner.Common.ProjMgmt.Model.CyLinkCustomData" version="1">
 <link_deps_times>
-<name_val_pair name="c9323d49-d323-40b8-9b59-cc008d68a989@Debug@CortexM3" v="133923897235943890" />
+<name_val_pair name="c9323d49-d323-40b8-9b59-cc008d68a989@Debug@CortexM3" v="133923913031248417" />
 </link_deps_times>
 </CyGuid_769d31ea-68b1-4f0c-b90a-7c10a43ee563>
 </dataGuid>

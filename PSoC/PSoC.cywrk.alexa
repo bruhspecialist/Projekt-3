@@ -308,7 +308,19 @@
 </userData>
 </CyGuid_fdba8dfd-b15b-4469-9bbb-9e40c3e70997>
 <Unloaded />
-<OpenDocs />
+<OpenDocs>
+<name v=".\PRJ3.cydsn\TopDesign\TopDesign.cysch" />
+<name v=".\PRJ3.cydsn\main.c" />
+<name v=".\PRJ3.cydsn\ColorSensor.h" />
+<name v=".\PRJ3.cydsn\ColorSensor.c" />
+</OpenDocs>
+<OpenDocsLayout><![CDATA[<?xml version="1.0"?><!--
+
+  Actipro Docking/MDI for WinForms
+  Copyright (c) 2001-2016 Actipro Software LLC.  All rights reserved.
+  http://www.actiprosoftware.com
+
+--><DocumentLayout Version="1.0"><LayoutData><TabbedMdiRootContainer Orientation="Horizontal"><TabbedMdiContainer Size="697, 1091" SelectedTabbedMdiWindow="bd0e0a08-da38-4c6b-9ad5-e6eddce14fdd"><DocumentWindow Key="C:\Users\alexa\Documents\GitHub\Projekt-3\PSoC\PRJ3.cydsn\TopDesign\TopDesign.cysch" Guid="3ae5cf1a-f245-42a3-8130-114e9a764e37" /><DocumentWindow Key="C:\Users\alexa\Documents\GitHub\Projekt-3\PSoC\PRJ3.cydsn\main.c" Guid="bd0e0a08-da38-4c6b-9ad5-e6eddce14fdd" /><DocumentWindow Key="C:\Users\alexa\Documents\GitHub\Projekt-3\PSoC\PRJ3.cydsn\ColorSensor.h" Guid="869f6032-a945-4d78-937e-0ceb11c16d19" /><DocumentWindow Key="C:\Users\alexa\Documents\GitHub\Projekt-3\PSoC\PRJ3.cydsn\ColorSensor.c" Guid="f2982c22-94ce-4816-a592-de34d36f556c" /></TabbedMdiContainer></TabbedMdiRootContainer><FloatingContainers /></LayoutData></DocumentLayout>]]></OpenDocsLayout>
 <config v="" />
 <AutoUpdate v="true" />
 </CyGuid_843a90a4-0c4b-4e44-991d-05e7fb117a21>
