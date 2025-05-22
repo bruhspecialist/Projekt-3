@@ -104,26 +104,26 @@ bool ColorSensor_ReadRGB(uint16_t* rgbNorm) {
     return true;
 }
 
-bool ColorSensor_ReadAverage(uint8_t* color, uint16_t measurements) {
-    COLOR_SENSOR_LED_Write(1);
-    CyDelay(LED_ENABLE_DELAY);
-    bool isReadingSuccessful = true;
-    uint8_t colorFrequency[7] = {0};
-    UART_USB_PutString("Color measurement started\r\n");
-    for (uint16_t i = 0; i < measurements; ++i) {
-        uint8_t color_index;
-        if (!ColorSensor_Read(&color_index)) isReadingSuccessful = false;
-        else colorFrequency[color_index]++;
-    }
-    UART_USB_PutString("Color measurement stopped\r\n"); 
-    uint8_t hottestColor = 0;
-    for (uint8_t i = 1; i < 7; ++i) { // Find den farve der opstår mest
-        if (colorFrequency[i] > colorFrequency[hottestColor]) hottestColor = i;
-    }
-    *color = hottestColor;
-    COLOR_SENSOR_LED_Write(0);
-    return isReadingSuccessful;
-}
+//bool ColorSensor_ReadAverage(uint8_t* color, uint16_t measurements) {
+//    COLOR_SENSOR_LED_Write(1);
+//    CyDelay(LED_ENABLE_DELAY);
+//    bool isReadingSuccessful = true;
+//    uint8_t colorFrequency[7] = {0};
+//    UART_USB_PutString("Color measurement started\r\n");
+//    for (uint16_t i = 0; i < measurements; ++i) {
+//        uint8_t color_index;
+//        if (!ColorSensor_Read(&color_index)) isReadingSuccessful = false;
+//        else colorFrequency[color_index]++;
+//    }
+//    UART_USB_PutString("Color measurement stopped\r\n"); 
+//    uint8_t hottestColor = 0;
+//    for (uint8_t i = 1; i < 7; ++i) { // Find den farve der opstår mest
+//        if (colorFrequency[i] > colorFrequency[hottestColor]) hottestColor = i;
+//    }
+//    *color = hottestColor;
+//    COLOR_SENSOR_LED_Write(0);
+//    return isReadingSuccessful;
+//}
 
 bool ColorSensor_Read(uint8_t* color) {
     COLOR_SENSOR_LED_Write(1);
