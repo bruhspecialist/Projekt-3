@@ -8,39 +8,41 @@
 #include "ErrorMessage.h"
 #include "UART.h"
 
+#include "stdio.h"
 #include "stdint.h"
 
 #define COLOR_MEASUREMENTS 100  // Antal målinger
 #define COLOR_SENSING_TIME 1000 // ms
 
-void TestColorSensor() {
-    uint8_t colorFrequency[7] = {0};
-    for (uint8_t i = 0; i < COLOR_MEASUREMENTS; ++i) {
-        uint8_t color_index;
-        if (!ColorSensor_Read(&color_index)) PrintError(-2);
-        else colorFrequency[color_index]++;
-    }
-    uint8_t mostFrequentColor = GetMaxIndex(colorFrequency, 7);
-    UART_USB_PutString("colorFrequency: ");
-    for (uint8_t i = 0; i < sizeof(colorFrequency); ++i) {
-        UART_USB_PutInt(colorFrequency[i]);
-        if (i != sizeof(colorFrequency) - 1) UART_USB_PutString(", ");
-    }
-    UART_USB_PutString("\r\n");
-    
-    UART_USB_PutString("mostFrequentColor: ");
-    UART_USB_PutInt(mostFrequentColor);
-    UART_USB_PutString("\r\n");
-    
-    UART_USB_PutString("Detected color: ");
-    UART_USB_PutString(ColorToString(mostFrequentColor));
-    UART_USB_PutString("\r\n");
-}
+//void TestColorSensorRGB() {
+//    uint16_t rgb[3];
+//    char buffer[64];
+//    ColorSensor_ReadRGB(rgb);
+//    sprintf(buffer, "RGB = [%u, %u, %u]\r\n", rgb[0], rgb[1], rgb[2]);
+//    UART_USB_PutString(buffer);
+//}
+//
+//void TestAverageColorSensor() {
+//    uint8_t color_index;
+//    ColorSensor_ReadAverage(&color_index, 100);
+//    CyDelay(10);
+//    
+//    UART_USB_PutString("Detected color: ");
+//    UART_USB_PutString(ColorToString(color_index));
+//    UART_USB_PutString("\r\n");
+//}
 
-void TestSimpleColorSensor() {
+void TestColorSensor() {
+    uint16_t rgb[3];
     uint8_t color_index;
+    char buffer[64];
+    ColorSensor_ReadRGB(rgb);
     ColorSensor_Read(&color_index);
-    UART_USB_PutString("Detected color: ");
-    UART_USB_PutString(ColorToString(color_index));
-    UART_USB_PutString("\r\n");
+    sprintf(
+        buffer,
+        "RGB = [%u, %u, %u]    Detected color: %s\r\n",
+        rgb[0], rgb[1], rgb[2],
+        ColorToString(color_index)
+    );
+    UART_USB_PutString(buffer);
 }

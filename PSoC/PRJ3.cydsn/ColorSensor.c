@@ -34,9 +34,9 @@ bool ReadColorDataRegisters(uint16_t* rgbData) {
     
     if (!ReadRegister(DATA_REG_START_ADDR, dataBytes, data)) return false;
     
-    rgbData[0] = (data[3] << 8) | data[2];    // Rød (0x97 - 0x98)
-    rgbData[1] = (data[5] << 8) | data[4];  // Grøn (0x99 - 0x9A)
-    rgbData[2] = (data[7] << 8) | data[6];   // Blå (0x9B - 0x9C)
+    rgbData[0] = (data[3] << 8) | data[2]; // Rød  (0x97 - 0x98)
+    rgbData[1] = (data[5] << 8) | data[4]; // Grøn (0x99 - 0x9A)
+    rgbData[2] = (data[7] << 8) | data[6]; // Blå  (0x9B - 0x9C)
     
     return true;
 }
@@ -68,8 +68,7 @@ uint8_t DetectColor(const uint16_t* rgb) {
     if (g < min) min = g;
     if (b < min) min = b;
 
-    if (max - min <= max * closeTol)
-        return tone; // For lidt kontrast til at afgøre farve
+    if (max - min <= max * closeTol) return tone; // For lidt kontrast til at afgøre farve
 
     if (r > g * (1 + tol) && r > b * (1 + tol)) return red;
     if (g > r * (1 + tol) && g > b * (1 + tol)) return green;
@@ -95,16 +94,19 @@ const char* ColorToString(uint8_t color) {
     }
 }
 
-bool ColorSensor_Read(uint8_t* color) {
+bool ColorSensor_ReadRGB(uint16_t* rgbNorm) {
+    COLOR_SENSOR_LED_Write(1);
+    CyDelay(LED_ENABLE_DELAY);
     uint16_t rgbData[3];
-    uint16_t rgbNorm[3];
     if (!ReadColorDataRegisters(rgbData)) return false;
     CalibrateColor(rgbData, rgbNorm);
-    *color = DetectColor(rgbNorm);
+    COLOR_SENSOR_LED_Write(1);
     return true;
 }
 
 bool ColorSensor_ReadAverage(uint8_t* color, uint16_t measurements) {
+    COLOR_SENSOR_LED_Write(1);
+    CyDelay(LED_ENABLE_DELAY);
     bool isReadingSuccessful = true;
     uint8_t colorFrequency[7] = {0};
     UART_USB_PutString("Color measurement started\r\n");
@@ -119,15 +121,41 @@ bool ColorSensor_ReadAverage(uint8_t* color, uint16_t measurements) {
         if (colorFrequency[i] > colorFrequency[hottestColor]) hottestColor = i;
     }
     *color = hottestColor;
+    COLOR_SENSOR_LED_Write(0);
     return isReadingSuccessful;
+}
+
+bool ColorSensor_Read(uint8_t* color) {
+    COLOR_SENSOR_LED_Write(1);
+    CyDelay(LED_ENABLE_DELAY);
+    uint16_t rgbData[3];
+    uint16_t rgbNorm[3];
+    if (!ReadColorDataRegisters(rgbData)) return false;
+    CalibrateColor(rgbData, rgbNorm);
+    *color = DetectColor(rgbNorm);
+    COLOR_SENSOR_LED_Write(0);
+    return true;
 }
 
 bool ColorSensor_Initialize()
 {
+    uint8_t ASTEP_MSB = (ASTEP >> 8);
     I2C_Start();
-    if (!WriteRegister(0x81, 0x1D)) return false; // ?
-    if (!WriteRegister(0xCA, 0x57)) return false; // ?
-    if (!WriteRegister(0xCB, 0x02)) return false; // ?
+    
+    
+    char buffer[256];
+    sprintf(
+        buffer,
+        "ATIME: %d\r\nASTEP_LSB: %d\r\nASTEP_MSB: %d\r\nAGAIN: %d\r\n",
+        ATIME, ASTEP_MSB, ASTEP - ASTEP_MSB, AGAIN
+    );
+    
+    UART_USB_PutString(buffer);
+    
+    if (!WriteRegister(0x81, ATIME)) return false;
+    if (!WriteRegister(0xCA, ASTEP_MSB)) return false;
+    if (!WriteRegister(0xCB, ASTEP - ASTEP_MSB)) return false;
+    if (!WriteRegister(0xAA, AGAIN)) return false;
     if (!WriteRegister(0x80, 0b00000011)) return false; // Enable AEN & PON bits
     return true;
 }

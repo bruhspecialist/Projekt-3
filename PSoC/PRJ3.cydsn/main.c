@@ -82,14 +82,14 @@ void UpdateState() {
             break;
         }
         case STATE_COLOR_READING: {
-            uint8_t color;
-            ColorSensor_ReadAverage(&color, 200);
+            uint8_t color_index;
+            ColorSensor_Read(&color_index);
             char msg[MAX_STR_LENGTH];
-            snprintf(msg, MAX_STR_LENGTH, "Detected color: %s\r\n", ColorToString(color));
+            snprintf(msg, MAX_STR_LENGTH, "Detected color: %s\r\n", ColorToString(color_index));
             UART_USB_PutString(msg);
-            if (color != tone) {
+            if (color_index != tone) {
                 memset(msg, 0, MAX_STR_LENGTH); // Rydder bufferen i msg
-                snprintf(msg, MAX_STR_LENGTH, "result %s", ColorToString(color));
+                snprintf(msg, MAX_STR_LENGTH, "result %s", ColorToString(color_index));
                 UART_PI_PutString(msg);
                 currentState = STATE_PUMPING;
             }
@@ -125,14 +125,19 @@ void UpdateState() {
     }
 }
 
-//void TestLoop() {
-//    TestSimpleColorSensor();
+void TestLoop() {
+    TestColorSensor();
+    CyDelay(1000);
+    
+//    EnablePump(1);
 //    CyDelay(1000);
-//}
+//    DisablePump(1);
+//    CyDelay(1000);
+}
 
 int main() {
     int8_t err = setup();
     if (err == 0) UART_USB_PutString("PSoC has booted and successfully completed setup\r\n");
     else {PrintError(err); return -1;} // Stop hvis setup fejler
-    while (1) UpdateState();
+    while (1) TestLoop();
 }

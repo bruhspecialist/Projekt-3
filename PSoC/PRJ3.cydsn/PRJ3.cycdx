@@ -126,7 +126,7 @@
   </block>
   <block name="UART_USB_TX" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
   <block name="UART_USB_RX_ISR" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
-  <block name="LED_BUILTIN" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
+  <block name="COLOR_SENSOR_LED" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
   <block name="STEP_2b" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
   <block name="UART_USB" BASE="0x0" SIZE="0x0" desc="UART" visible="true" hidden="false">
     <block name="IntClock" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />

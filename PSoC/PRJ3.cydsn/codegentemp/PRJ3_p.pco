@@ -78,7 +78,7 @@ set_io "STEP_1a(0)" iocell 2 3
 set_io "STEP_1b(0)" iocell 2 4
 set_io "STEP_2a(0)" iocell 2 5
 set_io "STEP_2b(0)" iocell 2 6
-set_io "LED_BUILTIN(0)" iocell 2 1
+set_io "COLOR_SENSOR_LED(0)" iocell 2 1
 # Note: port 15 is the logical name for port 8
 set_io "PUMP_1(0)" iocell 15 0
 # Note: port 15 is the logical name for port 8

@@ -1,6 +1,6 @@
 // ======================================================================
 // PRJ3.v generated from TopDesign.cysch
-// 05/21/2025 at 22:11
+// 05/22/2025 at 12:48
 // This file is auto generated. ANY EDITS YOU MAKE MAY BE LOST WHEN THIS FILE IS REGENERATED!!!
 // ======================================================================
 
@@ -1243,11 +1243,11 @@ module top ;
 		 (.int_signal(Net_32));
 
 
-	wire [0:0] tmpOE__LED_BUILTIN_net;
-	wire [0:0] tmpFB_0__LED_BUILTIN_net;
-	wire [0:0] tmpIO_0__LED_BUILTIN_net;
-	wire [0:0] tmpINTERRUPT_0__LED_BUILTIN_net;
-	electrical [0:0] tmpSIOVREF__LED_BUILTIN_net;
+	wire [0:0] tmpOE__COLOR_SENSOR_LED_net;
+	wire [0:0] tmpFB_0__COLOR_SENSOR_LED_net;
+	wire [0:0] tmpIO_0__COLOR_SENSOR_LED_net;
+	wire [0:0] tmpINTERRUPT_0__COLOR_SENSOR_LED_net;
+	electrical [0:0] tmpSIOVREF__COLOR_SENSOR_LED_net;
 
 	cy_psoc3_pins_v1_10
 		#(.id("e851a3b9-efb8-48be-bbb8-b303b216c393"),
@@ -1302,13 +1302,13 @@ module top ;
 		  .ovt_needed(1'b0),
 		  .ovt_slew_control(2'b00),
 		  .input_buffer_sel(2'b00))
-		LED_BUILTIN
-		 (.oe(tmpOE__LED_BUILTIN_net),
+		COLOR_SENSOR_LED
+		 (.oe(tmpOE__COLOR_SENSOR_LED_net),
 		  .y({1'b0}),
-		  .fb({tmpFB_0__LED_BUILTIN_net[0:0]}),
-		  .io({tmpIO_0__LED_BUILTIN_net[0:0]}),
-		  .siovref(tmpSIOVREF__LED_BUILTIN_net),
-		  .interrupt({tmpINTERRUPT_0__LED_BUILTIN_net[0:0]}),
+		  .fb({tmpFB_0__COLOR_SENSOR_LED_net[0:0]}),
+		  .io({tmpIO_0__COLOR_SENSOR_LED_net[0:0]}),
+		  .siovref(tmpSIOVREF__COLOR_SENSOR_LED_net),
+		  .interrupt({tmpINTERRUPT_0__COLOR_SENSOR_LED_net[0:0]}),
 		  .in_clock({1'b0}),
 		  .in_clock_en({1'b1}),
 		  .in_reset({1'b0}),
@@ -1316,7 +1316,7 @@ module top ;
 		  .out_clock_en({1'b1}),
 		  .out_reset({1'b0}));
 
-	assign tmpOE__LED_BUILTIN_net = (`CYDEV_CHIP_MEMBER_USED == `CYDEV_CHIP_MEMBER_3A && `CYDEV_CHIP_REVISION_USED < `CYDEV_CHIP_REVISION_3A_ES3) ? ~{1'b1} : {1'b1};
+	assign tmpOE__COLOR_SENSOR_LED_net = (`CYDEV_CHIP_MEMBER_USED == `CYDEV_CHIP_MEMBER_3A && `CYDEV_CHIP_REVISION_USED < `CYDEV_CHIP_REVISION_3A_ES3) ? ~{1'b1} : {1'b1};
 
     UART_v2_50_2 UART_PI (
         .clock(1'b0),

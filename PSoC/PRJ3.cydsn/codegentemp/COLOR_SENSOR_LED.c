@@ -1,5 +1,5 @@
 /*******************************************************************************
-* File Name: LED_BUILTIN.c  
+* File Name: COLOR_SENSOR_LED.c  
 * Version 2.20
 *
 * Description:
@@ -15,15 +15,15 @@
 *******************************************************************************/
 
 #include "cytypes.h"
-#include "LED_BUILTIN.h"
+#include "COLOR_SENSOR_LED.h"
 
 /* APIs are not generated for P15[7:6] on PSoC 5 */
 #if !(CY_PSOC5A &&\
-	 LED_BUILTIN__PORT == 15 && ((LED_BUILTIN__MASK & 0xC0) != 0))
+	 COLOR_SENSOR_LED__PORT == 15 && ((COLOR_SENSOR_LED__MASK & 0xC0) != 0))
 
 
 /*******************************************************************************
-* Function Name: LED_BUILTIN_Write
+* Function Name: COLOR_SENSOR_LED_Write
 ****************************************************************************//**
 *
 * \brief Writes the value to the physical port (data output register), masking
@@ -52,17 +52,17 @@
 *  this function.
 *
 * \funcusage
-*  \snippet LED_BUILTIN_SUT.c usage_LED_BUILTIN_Write
+*  \snippet COLOR_SENSOR_LED_SUT.c usage_COLOR_SENSOR_LED_Write
 *******************************************************************************/
-void LED_BUILTIN_Write(uint8 value)
+void COLOR_SENSOR_LED_Write(uint8 value)
 {
-    uint8 staticBits = (LED_BUILTIN_DR & (uint8)(~LED_BUILTIN_MASK));
-    LED_BUILTIN_DR = staticBits | ((uint8)(value << LED_BUILTIN_SHIFT) & LED_BUILTIN_MASK);
+    uint8 staticBits = (COLOR_SENSOR_LED_DR & (uint8)(~COLOR_SENSOR_LED_MASK));
+    COLOR_SENSOR_LED_DR = staticBits | ((uint8)(value << COLOR_SENSOR_LED_SHIFT) & COLOR_SENSOR_LED_MASK);
 }
 
 
 /*******************************************************************************
-* Function Name: LED_BUILTIN_SetDriveMode
+* Function Name: COLOR_SENSOR_LED_SetDriveMode
 ****************************************************************************//**
 *
 * \brief Sets the drive mode for each of the Pins component's pins.
@@ -85,16 +85,16 @@ void LED_BUILTIN_Write(uint8 value)
 *  APIs (primary method) or disable interrupts around this function.
 *
 * \funcusage
-*  \snippet LED_BUILTIN_SUT.c usage_LED_BUILTIN_SetDriveMode
+*  \snippet COLOR_SENSOR_LED_SUT.c usage_COLOR_SENSOR_LED_SetDriveMode
 *******************************************************************************/
-void LED_BUILTIN_SetDriveMode(uint8 mode)
+void COLOR_SENSOR_LED_SetDriveMode(uint8 mode)
 {
-	CyPins_SetPinDriveMode(LED_BUILTIN_0, mode);
+	CyPins_SetPinDriveMode(COLOR_SENSOR_LED_0, mode);
 }
 
 
 /*******************************************************************************
-* Function Name: LED_BUILTIN_Read
+* Function Name: COLOR_SENSOR_LED_Read
 ****************************************************************************//**
 *
 * \brief Reads the associated physical port (pin status register) and masks 
@@ -108,16 +108,16 @@ void LED_BUILTIN_SetDriveMode(uint8 mode)
 *  The current value for the pins in the component as a right justified number.
 *
 * \funcusage
-*  \snippet LED_BUILTIN_SUT.c usage_LED_BUILTIN_Read  
+*  \snippet COLOR_SENSOR_LED_SUT.c usage_COLOR_SENSOR_LED_Read  
 *******************************************************************************/
-uint8 LED_BUILTIN_Read(void)
+uint8 COLOR_SENSOR_LED_Read(void)
 {
-    return (LED_BUILTIN_PS & LED_BUILTIN_MASK) >> LED_BUILTIN_SHIFT;
+    return (COLOR_SENSOR_LED_PS & COLOR_SENSOR_LED_MASK) >> COLOR_SENSOR_LED_SHIFT;
 }
 
 
 /*******************************************************************************
-* Function Name: LED_BUILTIN_ReadDataReg
+* Function Name: COLOR_SENSOR_LED_ReadDataReg
 ****************************************************************************//**
 *
 * \brief Reads the associated physical port's data output register and masks 
@@ -126,8 +126,8 @@ uint8 LED_BUILTIN_Read(void)
 *
 * The data output register controls the signal applied to the physical pin in 
 * conjunction with the drive mode parameter. This is not the same as the 
-* preferred LED_BUILTIN_Read() API because the 
-* LED_BUILTIN_ReadDataReg() reads the data register instead of the status 
+* preferred COLOR_SENSOR_LED_Read() API because the 
+* COLOR_SENSOR_LED_ReadDataReg() reads the data register instead of the status 
 * register. For output pins this is a useful function to determine the value 
 * just written to the pin.
 *
@@ -136,19 +136,19 @@ uint8 LED_BUILTIN_Read(void)
 *  justified number for the component instance.
 *
 * \funcusage
-*  \snippet LED_BUILTIN_SUT.c usage_LED_BUILTIN_ReadDataReg 
+*  \snippet COLOR_SENSOR_LED_SUT.c usage_COLOR_SENSOR_LED_ReadDataReg 
 *******************************************************************************/
-uint8 LED_BUILTIN_ReadDataReg(void)
+uint8 COLOR_SENSOR_LED_ReadDataReg(void)
 {
-    return (LED_BUILTIN_DR & LED_BUILTIN_MASK) >> LED_BUILTIN_SHIFT;
+    return (COLOR_SENSOR_LED_DR & COLOR_SENSOR_LED_MASK) >> COLOR_SENSOR_LED_SHIFT;
 }
 
 
 /* If interrupt is connected for this Pins component */ 
-#if defined(LED_BUILTIN_INTSTAT) 
+#if defined(COLOR_SENSOR_LED_INTSTAT) 
 
     /*******************************************************************************
-    * Function Name: LED_BUILTIN_SetInterruptMode
+    * Function Name: COLOR_SENSOR_LED_SetInterruptMode
     ****************************************************************************//**
     *
     * \brief Configures the interrupt mode for each of the Pins component's
@@ -161,12 +161,12 @@ uint8 LED_BUILTIN_ReadDataReg(void)
     * \param position
     *  The pin position as listed in the Pins component. You may OR these to be 
     *  able to configure the interrupt mode of multiple pins within a Pins 
-    *  component. Or you may use LED_BUILTIN_INTR_ALL to configure the
+    *  component. Or you may use COLOR_SENSOR_LED_INTR_ALL to configure the
     *  interrupt mode of all the pins in the Pins component.       
-    *  - LED_BUILTIN_0_INTR       (First pin in the list)
-    *  - LED_BUILTIN_1_INTR       (Second pin in the list)
+    *  - COLOR_SENSOR_LED_0_INTR       (First pin in the list)
+    *  - COLOR_SENSOR_LED_1_INTR       (Second pin in the list)
     *  - ...
-    *  - LED_BUILTIN_INTR_ALL     (All pins in Pins component)
+    *  - COLOR_SENSOR_LED_INTR_ALL     (All pins in Pins component)
     *
     * \param mode
     *  Interrupt mode for the selected pins. Valid options are documented in
@@ -182,19 +182,19 @@ uint8 LED_BUILTIN_ReadDataReg(void)
     *  port.
     *
     * \funcusage
-    *  \snippet LED_BUILTIN_SUT.c usage_LED_BUILTIN_SetInterruptMode
+    *  \snippet COLOR_SENSOR_LED_SUT.c usage_COLOR_SENSOR_LED_SetInterruptMode
     *******************************************************************************/
-    void LED_BUILTIN_SetInterruptMode(uint16 position, uint16 mode)
+    void COLOR_SENSOR_LED_SetInterruptMode(uint16 position, uint16 mode)
     {
-		if((position & LED_BUILTIN_0_INTR) != 0u) 
+		if((position & COLOR_SENSOR_LED_0_INTR) != 0u) 
 		{ 
-			 LED_BUILTIN_0_INTTYPE_REG = (uint8)mode; 
+			 COLOR_SENSOR_LED_0_INTTYPE_REG = (uint8)mode; 
 		}
     }
     
     
     /*******************************************************************************
-    * Function Name: LED_BUILTIN_ClearInterrupt
+    * Function Name: COLOR_SENSOR_LED_ClearInterrupt
     ****************************************************************************//**
     *
     * \brief Clears any active interrupts attached with the component and returns 
@@ -211,11 +211,11 @@ uint8 LED_BUILTIN_ReadDataReg(void)
     *  those associated with the Pins component.
     *
     * \funcusage
-    *  \snippet LED_BUILTIN_SUT.c usage_LED_BUILTIN_ClearInterrupt
+    *  \snippet COLOR_SENSOR_LED_SUT.c usage_COLOR_SENSOR_LED_ClearInterrupt
     *******************************************************************************/
-    uint8 LED_BUILTIN_ClearInterrupt(void)
+    uint8 COLOR_SENSOR_LED_ClearInterrupt(void)
     {
-        return (LED_BUILTIN_INTSTAT & LED_BUILTIN_MASK) >> LED_BUILTIN_SHIFT;
+        return (COLOR_SENSOR_LED_INTSTAT & COLOR_SENSOR_LED_MASK) >> COLOR_SENSOR_LED_SHIFT;
     }
 
 #endif /* If Interrupts Are Enabled for this Pins component */ 

@@ -51,9 +51,9 @@
   <file name="C:\Users\alexa\Documents\GitHub\Projekt-3\PSoC\PRJ3.cydsn\codegentemp\UART_USB_BOOT.c" value="SOURCE_C;CortexM3;;;;UART_USB" />
   <file name="C:\Users\alexa\Documents\GitHub\Projekt-3\PSoC\PRJ3.cydsn\codegentemp\UART_USB_RX_ISR.c" value="SOURCE_C;CortexM3;;;;UART_USB_RX_ISR" />
   <file name="C:\Users\alexa\Documents\GitHub\Projekt-3\PSoC\PRJ3.cydsn\codegentemp\UART_USB_RX_ISR.h" value="HEADER;;;;;UART_USB_RX_ISR" />
-  <file name="C:\Users\alexa\Documents\GitHub\Projekt-3\PSoC\PRJ3.cydsn\codegentemp\LED_BUILTIN_aliases.h" value="HEADER;;;;;LED_BUILTIN" />
-  <file name="C:\Users\alexa\Documents\GitHub\Projekt-3\PSoC\PRJ3.cydsn\codegentemp\LED_BUILTIN.c" value="SOURCE_C;CortexM3;;;;LED_BUILTIN" />
-  <file name="C:\Users\alexa\Documents\GitHub\Projekt-3\PSoC\PRJ3.cydsn\codegentemp\LED_BUILTIN.h" value="HEADER;;;;;LED_BUILTIN" />
+  <file name="C:\Users\alexa\Documents\GitHub\Projekt-3\PSoC\PRJ3.cydsn\codegentemp\COLOR_SENSOR_LED_aliases.h" value="HEADER;;;;;COLOR_SENSOR_LED" />
+  <file name="C:\Users\alexa\Documents\GitHub\Projekt-3\PSoC\PRJ3.cydsn\codegentemp\COLOR_SENSOR_LED.c" value="SOURCE_C;CortexM3;;;;COLOR_SENSOR_LED" />
+  <file name="C:\Users\alexa\Documents\GitHub\Projekt-3\PSoC\PRJ3.cydsn\codegentemp\COLOR_SENSOR_LED.h" value="HEADER;;;;;COLOR_SENSOR_LED" />
   <file name="C:\Users\alexa\Documents\GitHub\Projekt-3\PSoC\PRJ3.cydsn\codegentemp\UART_PI.c" value="SOURCE_C;CortexM3;;;;UART_PI" />
   <file name="C:\Users\alexa\Documents\GitHub\Projekt-3\PSoC\PRJ3.cydsn\codegentemp\UART_PI.h" value="HEADER;;;;;UART_PI" />
   <file name="C:\Users\alexa\Documents\GitHub\Projekt-3\PSoC\PRJ3.cydsn\codegentemp\UART_PI_PM.c" value="SOURCE_C;CortexM3;;;;UART_PI" />

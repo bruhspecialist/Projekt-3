@@ -12164,42 +12164,42 @@ ARM GAS  Generated_Source\PSoC5\CyBootAsmGnu.s 			page 1
  825              	.set UART_USB_TX__SIO_REG_HIFREQ, CYREG_PRT12_SIO_REG_HIFREQ
  826              	.set UART_USB_TX__SLW, CYREG_PRT12_SLW
  827              	
- 828              	/* LED_BUILTIN */
- 829              	.set LED_BUILTIN__0__INTTYPE, CYREG_PICU2_INTTYPE1
- 830              	.set LED_BUILTIN__0__MASK, 0x02
- 831              	.set LED_BUILTIN__0__PC, CYREG_PRT2_PC1
- 832              	.set LED_BUILTIN__0__PORT, 2
- 833              	.set LED_BUILTIN__0__SHIFT, 1
- 834              	.set LED_BUILTIN__AG, CYREG_PRT2_AG
- 835              	.set LED_BUILTIN__AMUX, CYREG_PRT2_AMUX
- 836              	.set LED_BUILTIN__BIE, CYREG_PRT2_BIE
- 837              	.set LED_BUILTIN__BIT_MASK, CYREG_PRT2_BIT_MASK
- 838              	.set LED_BUILTIN__BYP, CYREG_PRT2_BYP
- 839              	.set LED_BUILTIN__CTL, CYREG_PRT2_CTL
- 840              	.set LED_BUILTIN__DM0, CYREG_PRT2_DM0
- 841              	.set LED_BUILTIN__DM1, CYREG_PRT2_DM1
+ 828              	/* COLOR_SENSOR_LED */
+ 829              	.set COLOR_SENSOR_LED__0__INTTYPE, CYREG_PICU2_INTTYPE1
+ 830              	.set COLOR_SENSOR_LED__0__MASK, 0x02
+ 831              	.set COLOR_SENSOR_LED__0__PC, CYREG_PRT2_PC1
+ 832              	.set COLOR_SENSOR_LED__0__PORT, 2
+ 833              	.set COLOR_SENSOR_LED__0__SHIFT, 1
+ 834              	.set COLOR_SENSOR_LED__AG, CYREG_PRT2_AG
+ 835              	.set COLOR_SENSOR_LED__AMUX, CYREG_PRT2_AMUX
+ 836              	.set COLOR_SENSOR_LED__BIE, CYREG_PRT2_BIE
+ 837              	.set COLOR_SENSOR_LED__BIT_MASK, CYREG_PRT2_BIT_MASK
+ 838              	.set COLOR_SENSOR_LED__BYP, CYREG_PRT2_BYP
+ 839              	.set COLOR_SENSOR_LED__CTL, CYREG_PRT2_CTL
+ 840              	.set COLOR_SENSOR_LED__DM0, CYREG_PRT2_DM0
+ 841              	.set COLOR_SENSOR_LED__DM1, CYREG_PRT2_DM1
 ARM GAS  Generated_Source\PSoC5\CyBootAsmGnu.s 			page 204
 
 
- 842              	.set LED_BUILTIN__DM2, CYREG_PRT2_DM2
- 843              	.set LED_BUILTIN__DR, CYREG_PRT2_DR
- 844              	.set LED_BUILTIN__INP_DIS, CYREG_PRT2_INP_DIS
- 845              	.set LED_BUILTIN__INTTYPE_BASE, CYDEV_PICU_INTTYPE_PICU2_BASE
- 846              	.set LED_BUILTIN__LCD_COM_SEG, CYREG_PRT2_LCD_COM_SEG
- 847              	.set LED_BUILTIN__LCD_EN, CYREG_PRT2_LCD_EN
- 848              	.set LED_BUILTIN__MASK, 0x02
- 849              	.set LED_BUILTIN__PORT, 2
- 850              	.set LED_BUILTIN__PRT, CYREG_PRT2_PRT
- 851              	.set LED_BUILTIN__PRTDSI__CAPS_SEL, CYREG_PRT2_CAPS_SEL
- 852              	.set LED_BUILTIN__PRTDSI__DBL_SYNC_IN, CYREG_PRT2_DBL_SYNC_IN
- 853              	.set LED_BUILTIN__PRTDSI__OE_SEL0, CYREG_PRT2_OE_SEL0
- 854              	.set LED_BUILTIN__PRTDSI__OE_SEL1, CYREG_PRT2_OE_SEL1
- 855              	.set LED_BUILTIN__PRTDSI__OUT_SEL0, CYREG_PRT2_OUT_SEL0
- 856              	.set LED_BUILTIN__PRTDSI__OUT_SEL1, CYREG_PRT2_OUT_SEL1
- 857              	.set LED_BUILTIN__PRTDSI__SYNC_OUT, CYREG_PRT2_SYNC_OUT
- 858              	.set LED_BUILTIN__PS, CYREG_PRT2_PS
- 859              	.set LED_BUILTIN__SHIFT, 1
- 860              	.set LED_BUILTIN__SLW, CYREG_PRT2_SLW
+ 842              	.set COLOR_SENSOR_LED__DM2, CYREG_PRT2_DM2
+ 843              	.set COLOR_SENSOR_LED__DR, CYREG_PRT2_DR
+ 844              	.set COLOR_SENSOR_LED__INP_DIS, CYREG_PRT2_INP_DIS
+ 845              	.set COLOR_SENSOR_LED__INTTYPE_BASE, CYDEV_PICU_INTTYPE_PICU2_BASE
+ 846              	.set COLOR_SENSOR_LED__LCD_COM_SEG, CYREG_PRT2_LCD_COM_SEG
+ 847              	.set COLOR_SENSOR_LED__LCD_EN, CYREG_PRT2_LCD_EN
+ 848              	.set COLOR_SENSOR_LED__MASK, 0x02
+ 849              	.set COLOR_SENSOR_LED__PORT, 2
+ 850              	.set COLOR_SENSOR_LED__PRT, CYREG_PRT2_PRT
+ 851              	.set COLOR_SENSOR_LED__PRTDSI__CAPS_SEL, CYREG_PRT2_CAPS_SEL
+ 852              	.set COLOR_SENSOR_LED__PRTDSI__DBL_SYNC_IN, CYREG_PRT2_DBL_SYNC_IN
+ 853              	.set COLOR_SENSOR_LED__PRTDSI__OE_SEL0, CYREG_PRT2_OE_SEL0
+ 854              	.set COLOR_SENSOR_LED__PRTDSI__OE_SEL1, CYREG_PRT2_OE_SEL1
+ 855              	.set COLOR_SENSOR_LED__PRTDSI__OUT_SEL0, CYREG_PRT2_OUT_SEL0
+ 856              	.set COLOR_SENSOR_LED__PRTDSI__OUT_SEL1, CYREG_PRT2_OUT_SEL1
+ 857              	.set COLOR_SENSOR_LED__PRTDSI__SYNC_OUT, CYREG_PRT2_SYNC_OUT
+ 858              	.set COLOR_SENSOR_LED__PS, CYREG_PRT2_PS
+ 859              	.set COLOR_SENSOR_LED__SHIFT, 1
+ 860              	.set COLOR_SENSOR_LED__SLW, CYREG_PRT2_SLW
  861              	
  862              	/* Miscellaneous */
  863              	.set BCLK__BUS_CLK__HZ, 24000000
