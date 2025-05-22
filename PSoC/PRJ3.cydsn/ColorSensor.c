@@ -46,7 +46,7 @@ uint16_t FindMaxColor(const uint16_t rgb[3]) {
     return max > rgb[2] ? max : rgb[2];
 }
 
-void CalibrateColor(const uint16_t *rgb, uint16_t *rgbNorm) {
+void CalibrateColor(const uint16_t* rgb, uint16_t *rgbNorm) {
     uint16_t maxRef = FindMaxColor(rgb_ref);
     for (uint8_t i = 0; i < 3; ++i) {
         uint32_t norm = ((uint32_t)rgb[i] * maxRef) / rgb_ref[i];
