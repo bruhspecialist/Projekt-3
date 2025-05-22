@@ -21,6 +21,7 @@ typedef enum {
     STATE_DROPPING,
     STATE_COLOR_READING,
     STATE_PUMPING,
+    STATE_REPLACE_DIE,
     STATE_RESET,
     STATE_ERROR
 } State;
@@ -77,7 +78,6 @@ void UpdateState() {
             UART_USB_PutString("Dropping die!\n");
             SetAngle(-115, 100);
             SetAngle(0, 100);
-            CyDelay(1000); // Tiden det tager terningen at nå til bunds
             currentState = STATE_COLOR_READING;
             break;
         }
@@ -100,11 +100,16 @@ void UpdateState() {
             break;
         }
         case STATE_PUMPING: {
-            /*  Pseudo-kode:
+            /*
+                Pseudo-kode:
                 * Tænd pumpe én gang
                 * Vent indtil vægt er nået 80% af kendt grænse
                 * Sluk pumpe
                                                                 */
+            break;
+        }
+        case STATE_REPLACE_DIE: {
+            // kode
             break;
         }
         case STATE_RESET: {
@@ -139,5 +144,5 @@ int main() {
     int8_t err = setup();
     if (err == 0) UART_USB_PutString("PSoC has booted and successfully completed setup\r\n");
     else {PrintError(err); return -1;} // Stop hvis setup fejler
-    while (1) TestLoop();
+    while (1) UpdateState();
 }
