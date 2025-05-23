@@ -13,6 +13,6 @@ enum Colors {
 };
 
 const char* ColorToString(enum Colors color);
-//bool ColorSensor_ReadRGB(uint16_t* rgbNorm);
+bool ColorSensor_ReadRGB(uint16_t* rgbNorm);
 bool ColorSensor_Read(uint8_t* color);
 bool ColorSensor_Initialize();

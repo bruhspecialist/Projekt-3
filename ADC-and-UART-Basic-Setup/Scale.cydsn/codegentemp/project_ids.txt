@@ -1,0 +1,6 @@
+C:\Users\alexa\Documents\GitHub\Projekt-3\ADC-and-UART-Basic-Setup\Scale.cydsn\Scale.cyprj|906c6408-dd2c-4728-8b3c-8fa061bd3141
+C:\Program Files (x86)\Cypress\PSoC Creator\4.4\PSoC Creator\psoc\content\default\CyAnnotationLibrary\CyAnnotationLibrary.cylib\CyAnnotationLibrary.cyprj|23561343-ccbc-4eda-9e91-963375281bc9
+C:\Users\alexa\Documents\PSoC Creator\4.4\Downloads ( 4.4).cylib\Downloads ( 4.4).cyprj|26212ae9-3ef0-4412-8886-e80a79a3e758
+C:\Program Files (x86)\Cypress\PSoC Creator\4.4\PSoC Creator\psoc\content\cycomponentlibraryupdates\CyComponentLibraryUpdates.cylib\CyComponentLibraryUpdates.cyprj|a1602eea-47dc-4ef6-a4f3-fc615653349e
+C:\Program Files (x86)\Cypress\PSoC Creator\4.4\PSoC Creator\psoc\content\cycomponentlibrary\CyComponentLibrary.cylib\CyComponentLibrary.cyprj|d5b58aa7-bb3b-40cc-9cbb-4d42d386bfac
+C:\Program Files (x86)\Cypress\PSoC Creator\4.4\PSoC Creator\psoc\content\cyprimitives\CyPrimitives.cylib\CyPrimitives.cyprj|57d95b40-8bc5-400a-bd90-8dca82f9cd23

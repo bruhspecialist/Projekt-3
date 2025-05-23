@@ -2,5 +2,5 @@
 
 #include <stdint.h>
 
-void EnablePump(uint8_t color);
-void DisablePump(uint8_t color);
+void ActivatePump(uint8_t color);
+void DeactivatePump(uint8_t color);

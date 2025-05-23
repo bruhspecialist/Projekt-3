@@ -14,9 +14,9 @@
 #define MAX_VALUE (ATIME * ASTEP + ATIME + ASTEP)
 
 // Referenceværdier fra hvidt papir (MAX_VALUE=17999)
-#define R_REF 11735
-#define G_REF 12037
-#define B_REF 7855
+#define R_REF 9133 // gammel: 11735
+#define G_REF 9158 // gammel: 12037
+#define B_REF 6196 // gammel: 7855
 
 #define ADDRESS 0x39
 
@@ -124,15 +124,16 @@ const char* ColorToString(enum Colors color) {
     }
 }
 
-//bool ColorSensor_ReadRGB(uint16_t* rgbNorm) {
-//    COLOR_SENSOR_LED_Write(1);
-//    CyDelay(LED_ENABLE_DELAY);
-//    uint16_t rgbData[3];
-//    if (!ReadColorDataRegisters(rgbData)) return false;
-//    CalibrateColor(rgbData, rgbNorm);
-//    COLOR_SENSOR_LED_Write(0);
-//    return true;
-//}
+bool ColorSensor_ReadRGB(uint16_t* rgbNorm) {
+    COLOR_SENSOR_LED_Write(1);
+    CyDelay(LED_ENABLE_DELAY);
+    uint16_t rgbData[3];
+    if (!ReadColorDataRegisters(rgbData)) return false;
+    //if (!ReadColorDataRegisters(rgbNorm)) return false;
+    CalibrateColor(rgbData, rgbNorm);
+    COLOR_SENSOR_LED_Write(0);
+    return true;
+}
 
 bool ColorSensor_Read(uint8_t* color) {
     COLOR_SENSOR_LED_Write(1);

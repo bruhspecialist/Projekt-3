@@ -33,11 +33,13 @@ int8_t setup() {
     CyGlobalIntEnable;
     UART_Initialize();
     if (!ColorSensor_Initialize()) err = -1;
+    Weight_Initialize();
     InitializeSimulationConditions(); // Midlertidig
     return err;
 }
 
-char selectedCupSize[7] = "\0";
+uint8_t selectedCupSize = 0;
+uint8_t detectedColor = 0;
 void UpdateState() {
     const char* cmd = UART_GetCommand();
     const char* param1 = UART_GetParameter(1);
@@ -53,24 +55,26 @@ void UpdateState() {
                 strcmp(cmd, "medium") == 0 ||
                 strcmp(cmd, "large") == 0
             ) {
-                if (ValidateCupSize()) {
-                    UART_PI_PutString("ok");
-                    strncpy(selectedCupSize, cmd, 7); // 7 pga. medium er længst + nul-terminering
-                    selectedCupSize[sizeof(selectedCupSize) - 1] = '\0';
+                selectedCupSize = StringToCupSize(cmd);
+                if (
+                    (selectedCupSize >= shot && selectedCupSize <= large)
+                    && ValidateCupSize(selectedCupSize)
+                ) {
                     UART_USB_PutString("Cup size set to ");
-                    UART_USB_PutString(selectedCupSize);
+                    UART_USB_PutString(CupSizeToString(selectedCupSize));
                     UART_USB_PutString("\r\n");
                 }
                 else {
-                    UART_PI_PutString("err");
+                    UART_PI_PutString("err_badCup\n");
                     PrintError(-3);
-                    currentState = STATE_ERROR;
                 }
-                
             }
-            else if (strcmp(cmd, "test1") == 0) {
-                if (strcmp(selectedCupSize, "\0") != 0) currentState = STATE_DROPPING;
-                else PrintError(-4);
+            else if (strcmp(cmd, "start") == 0) {
+                if (selectedCupSize >= shot && selectedCupSize <= large) currentState = STATE_DROPPING;
+                else {
+                    UART_PI_PutString("err_noCup\n");
+                    PrintError(-4);
+                }
             }
             break;
         }
@@ -82,14 +86,13 @@ void UpdateState() {
             break;
         }
         case STATE_COLOR_READING: {
-            uint8_t color_index;
-            ColorSensor_Read(&color_index);
+            ColorSensor_Read(&detectedColor);
             char msg[MAX_STR_LENGTH];
-            snprintf(msg, MAX_STR_LENGTH, "Detected color: %s\r\n", ColorToString(color_index));
+            snprintf(msg, MAX_STR_LENGTH, "Detected color: %s\r\n", ColorToString(detectedColor));
             UART_USB_PutString(msg);
-            if (color_index >= red && color_index <= magenta) {
+            if (detectedColor >= red && detectedColor <= magenta) {
                 memset(msg, 0, MAX_STR_LENGTH); // Rydder bufferen i msg
-                snprintf(msg, MAX_STR_LENGTH, "result %s", ColorToString(color_index));
+                snprintf(msg, MAX_STR_LENGTH, "result %s", ColorToString(detectedColor));
                 UART_PI_PutString(msg);
                 currentState = STATE_PUMPING;
             }
@@ -100,12 +103,13 @@ void UpdateState() {
             break;
         }
         case STATE_PUMPING: {
-            /*
-                Pseudo-kode:
-                * Tænd pumpe én gang
-                * Vent indtil vægt er nået 80% af kendt grænse
-                * Sluk pumpe
-                                                                */
+            ActivatePump(detectedColor);
+            UART_USB_PutString("Pump activated!\r\n");
+            while (!isCupFull(shot)) {}; // Wait
+            //CyDelay(1000);
+            DeactivatePump(detectedColor);
+            UART_USB_PutString("Pump deactivated!\r\n");
+            currentState = STATE_REPLACE_DIE;
             break;
         }
         case STATE_REPLACE_DIE: {
@@ -113,8 +117,10 @@ void UpdateState() {
             break;
         }
         case STATE_RESET: {
-            memset(selectedCupSize, 0, 7);
-            selectedCupSize[0] = '\0';
+            //memset(selectedCupSize, 0, 7);
+            //selectedCupSize[0] = '\0';
+            selectedCupSize = 0;
+            detectedColor = 0;
             currentState = STATE_IDLE;
             break;
         }
@@ -131,7 +137,7 @@ void UpdateState() {
 }
 
 void TestLoop() {
-    TestColorSensor();
+    TestColorSensorRGB();
     CyDelay(1000);
     
 //    EnablePump(1);

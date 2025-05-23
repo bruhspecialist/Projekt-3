@@ -14,17 +14,17 @@
 #define COLOR_MEASUREMENTS 100  // Antal målinger
 #define COLOR_SENSING_TIME 1000 // ms
 
-//void TestColorSensorRGB() {
-//    uint16_t rgb[3];
-//    char buffer[64];
-//    ColorSensor_ReadRGB(rgb);
-//    sprintf(
-//        buffer,
-//        "RGB = [%u, %u, %u]\r\n",
-//        rgb[0], rgb[1], rgb[2]
-//    );
-//    UART_USB_PutString(buffer);
-//}
+void TestColorSensorRGB() {
+    uint16_t rgb[3];
+    char buffer[64];
+    ColorSensor_ReadRGB(rgb);
+    sprintf(
+        buffer,
+        "RGB = [%u, %u, %u]\r\n",
+        rgb[0], rgb[1], rgb[2]
+    );
+    UART_USB_PutString(buffer);
+}
 
 void TestColorSensor() {
     uint8_t color_index;
