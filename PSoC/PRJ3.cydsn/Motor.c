@@ -41,9 +41,9 @@ uint16_t WrapStep(int32_t step) {
     return (step < 0) ? step + TOTAL_STEPS : step;
 }
 
-void Motor_SetAngle(int16_t angleDeg, uint8_t speedPercent) {
-    angleDeg = ((angleDeg % 360) + 360) % 360; // Sikrer 0–359
-    uint16_t targetStep = (TOTAL_STEPS * angleDeg) / 360;
+void Motor_SetAngle(int16_t angle, uint8_t speed) {
+    angle = ((angle % 360) + 360) % 360; // Sikrer 0–359
+    uint16_t targetStep = (TOTAL_STEPS * angle) / 360;
 
     if (targetStep == currentStep) return;
 
@@ -53,7 +53,7 @@ void Motor_SetAngle(int16_t angleDeg, uint8_t speedPercent) {
     int16_t bestDelta = (abs(delta) <= abs(altDelta)) ? delta : altDelta;
     int8_t stepDir = (bestDelta > 0) ? 1 : -1;
     uint16_t steps = abs(bestDelta);
-    uint16_t delay = CalculateDelay(speedPercent);
+    uint16_t delay = CalculateDelay(speed);
 
     while (steps--) {
         currentStep = WrapStep(currentStep + stepDir);
