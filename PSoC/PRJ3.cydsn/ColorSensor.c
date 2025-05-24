@@ -13,7 +13,6 @@
 #define ATIME 29 // Antal af integrations-steps fra 1-256
 #define ASTEP 599 // ASTEP (Bits 15:0 - Integrations-tid mellem steps)
 #define AGAIN 4 // Sensitivitet af sensoren
-#define MAX_VALUE (ATIME * ASTEP + ATIME + ASTEP)
 
 // Referenceværdier fra hvidt papir (MAX_VALUE=17999)
 const uint16_t rgb_ref[3] = {8685, 8716, 5886};
@@ -60,16 +59,17 @@ bool ReadColorDataRegisters(uint16_t* rgbData) {
     return true;
 }
 
-uint16_t FindMaxColor(const uint16_t rgb[3]) {
+uint16_t GetDominatingColor(const uint16_t rgb[3]) {
     uint16_t max = rgb[0] > rgb[1] ? rgb[0] : rgb[1];
     return max > rgb[2] ? max : rgb[2];
 }
 
 void CalibrateColor(const uint16_t* rgb, uint16_t *rgbNorm) {
-    uint16_t maxRef = FindMaxColor(rgb_ref);
+    uint16_t maxRef = GetDominatingColor(rgb_ref);
+    uint16_t maxValue = ATIME * ASTEP + ATIME + ASTEP;
     for (uint8_t i = 0; i < 3; ++i) {
         uint32_t norm = ((uint32_t)rgb[i] * maxRef) / rgb_ref[i];
-        rgbNorm[i] = (norm > MAX_VALUE) ? MAX_VALUE : norm;
+        rgbNorm[i] = (norm > maxValue) ? maxValue : norm;
     }
 }
 
