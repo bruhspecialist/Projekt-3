@@ -92,9 +92,7 @@ uint8_t DetectColor(const uint16_t* rgb) {
     if (r > b && g > b) return yellow;
     if (g > r && b > r) return cyan;
     if (r > g && b > g) return magenta;
-    if (r >= g && r >= b) return red;
-    if (g >= r && g >= b) return green;
-    return blue;
+    return 0; // Hvis alt andet skulle fejle (Bør ikke ske)
 }
 
 uint8_t GetOpposingColor(enum Colors color) {
