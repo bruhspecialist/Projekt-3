@@ -10,7 +10,7 @@
 // Steps pr. omdrejning
 #define TOTAL_STEPS 2048
 
-// Fuld sekvens til 4-trins full-step kørsel
+// Sekvens til 4-trins full-step kørsel
 const uint8_t DRIVE_SEQ[4][4] = {
     {1, 1, 0, 0},
     {0, 1, 1, 0},
