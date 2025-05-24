@@ -3,33 +3,40 @@
 
 #include <stdlib.h> // til abs()
 
-// Fuld sekvens til 4-trins fuld-step kørsel
-static const uint8_t DRIVE_SEQ[4][4] = {
+// Delaygrænser (i ms) mellem stator-skift
+#define MIN_SPEED_DELAY 5
+#define MAX_SPEED_DELAY 20
+
+// Steps pr. omdrejning
+#define TOTAL_STEPS 2048
+
+// Fuld sekvens til 4-trins full-step kørsel
+const uint8_t DRIVE_SEQ[4][4] = {
     {1, 1, 0, 0},
     {0, 1, 1, 0},
     {0, 0, 1, 1},
     {1, 0, 0, 1}
 };
 
-static const uint8_t DRIVE_OFF[4] = {0, 0, 0, 0};
+const uint8_t DRIVE_OFF[4] = {0, 0, 0, 0};
 
-static uint16_t currentStep = 0; // 0 - 2047
+uint16_t currentStep = 0; // 0 - 2047
 
-static inline void SetStators(const uint8_t s[4]) {
+void SetStators(const uint8_t s[4]) {
     STEP_1a_Write(s[0]);
     STEP_2a_Write(s[1]);
     STEP_1b_Write(s[2]);
     STEP_2b_Write(s[3]);
 }
 
-static inline uint16_t CalculateDelay(uint8_t speedPercent) {
+uint16_t CalculateDelay(uint8_t speedPercent) {
     // Kvadratisk faldende delay med hastighed
     uint16_t range = MAX_SPEED_DELAY - MIN_SPEED_DELAY;
     uint16_t diff = 100 - speedPercent;
     return MIN_SPEED_DELAY + (range * diff * diff) / 10000;
 }
 
-static inline uint16_t WrapStep(int32_t step) {
+uint16_t WrapStep(int32_t step) {
     step %= TOTAL_STEPS;
     return (step < 0) ? step + TOTAL_STEPS : step;
 }
