@@ -219,11 +219,17 @@ Discarded input sections
  .text          0x00000000        0x0 .\CortexM3\ARM_GCC_541\Debug\Motor.o
  .data          0x00000000        0x0 .\CortexM3\ARM_GCC_541\Debug\Motor.o
  .bss           0x00000000        0x2 .\CortexM3\ARM_GCC_541\Debug\Motor.o
- .text.SetAngle
-                0x00000000      0x120 .\CortexM3\ARM_GCC_541\Debug\Motor.o
- .text.Deactivate
-                0x00000000       0x1c .\CortexM3\ARM_GCC_541\Debug\Motor.o
- .rodata        0x00000000       0x10 .\CortexM3\ARM_GCC_541\Debug\Motor.o
+ .text.SetStators
+                0x00000000       0x20 .\CortexM3\ARM_GCC_541\Debug\Motor.o
+ .text.CalculateDelay
+                0x00000000       0x24 .\CortexM3\ARM_GCC_541\Debug\Motor.o
+ .text.WrapStep
+                0x00000000       0x28 .\CortexM3\ARM_GCC_541\Debug\Motor.o
+ .text.Motor_SetAngle
+                0x00000000       0xcc .\CortexM3\ARM_GCC_541\Debug\Motor.o
+ .text.Motor_Deactivate
+                0x00000000       0x10 .\CortexM3\ARM_GCC_541\Debug\Motor.o
+ .rodata        0x00000000       0x14 .\CortexM3\ARM_GCC_541\Debug\Motor.o
  .text          0x00000000        0x0 .\CortexM3\ARM_GCC_541\Debug\Pump.o
  .data          0x00000000       0x18 .\CortexM3\ARM_GCC_541\Debug\Pump.o
  .bss           0x00000000        0x0 .\CortexM3\ARM_GCC_541\Debug\Pump.o
@@ -1835,429 +1841,429 @@ END GROUP
 .debug_sfnames
  *(.debug_sfnames)
 
-.debug_aranges  0x00000000      0xf90
+.debug_aranges  0x00000000      0xfa8
  *(.debug_aranges)
  .debug_aranges
                 0x00000000       0xd0 .\CortexM3\ARM_GCC_541\Debug\main.o
  .debug_aranges
                 0x000000d0       0x78 .\CortexM3\ARM_GCC_541\Debug\ColorSensor.o
  .debug_aranges
-                0x00000148       0x28 .\CortexM3\ARM_GCC_541\Debug\Motor.o
+                0x00000148       0x40 .\CortexM3\ARM_GCC_541\Debug\Motor.o
  .debug_aranges
-                0x00000170       0x28 .\CortexM3\ARM_GCC_541\Debug\Pump.o
+                0x00000188       0x28 .\CortexM3\ARM_GCC_541\Debug\Pump.o
  .debug_aranges
-                0x00000198       0x60 .\CortexM3\ARM_GCC_541\Debug\UART.o
+                0x000001b0       0x60 .\CortexM3\ARM_GCC_541\Debug\UART.o
  .debug_aranges
-                0x000001f8       0x58 .\CortexM3\ARM_GCC_541\Debug\cyfitter_cfg.o
+                0x00000210       0x58 .\CortexM3\ARM_GCC_541\Debug\cyfitter_cfg.o
  .debug_aranges
-                0x00000250       0x18 .\CortexM3\ARM_GCC_541\Debug\cymetadata.o
+                0x00000268       0x18 .\CortexM3\ARM_GCC_541\Debug\cymetadata.o
  .debug_aranges
-                0x00000268       0x48 .\CortexM3\ARM_GCC_541\Debug\Cm3Start.o
+                0x00000280       0x48 .\CortexM3\ARM_GCC_541\Debug\Cm3Start.o
  .debug_aranges
-                0x000002b0       0x38 .\CortexM3\ARM_GCC_541\Debug\PRJ3.a(I2C.o)
+                0x000002c8       0x38 .\CortexM3\ARM_GCC_541\Debug\PRJ3.a(I2C.o)
  .debug_aranges
-                0x000002e8       0x20 .\CortexM3\ARM_GCC_541\Debug\PRJ3.a(I2C_INT.o)
+                0x00000300       0x20 .\CortexM3\ARM_GCC_541\Debug\PRJ3.a(I2C_INT.o)
  .debug_aranges
-                0x00000308       0x38 .\CortexM3\ARM_GCC_541\Debug\PRJ3.a(I2C_PM.o)
+                0x00000320       0x38 .\CortexM3\ARM_GCC_541\Debug\PRJ3.a(I2C_PM.o)
  .debug_aranges
-                0x00000340       0x80 .\CortexM3\ARM_GCC_541\Debug\PRJ3.a(I2C_MASTER.o)
+                0x00000358       0x80 .\CortexM3\ARM_GCC_541\Debug\PRJ3.a(I2C_MASTER.o)
  .debug_aranges
-                0x000003c0       0x38 .\CortexM3\ARM_GCC_541\Debug\PRJ3.a(STEP_2a.o)
+                0x000003d8       0x38 .\CortexM3\ARM_GCC_541\Debug\PRJ3.a(STEP_2a.o)
  .debug_aranges
-                0x000003f8       0x38 .\CortexM3\ARM_GCC_541\Debug\PRJ3.a(STEP_1a.o)
+                0x00000410       0x38 .\CortexM3\ARM_GCC_541\Debug\PRJ3.a(STEP_1a.o)
  .debug_aranges
-                0x00000430       0x38 .\CortexM3\ARM_GCC_541\Debug\PRJ3.a(STEP_1b.o)
+                0x00000448       0x38 .\CortexM3\ARM_GCC_541\Debug\PRJ3.a(STEP_1b.o)
  .debug_aranges
-                0x00000468       0x38 .\CortexM3\ARM_GCC_541\Debug\PRJ3.a(STEP_2b.o)
+                0x00000480       0x38 .\CortexM3\ARM_GCC_541\Debug\PRJ3.a(STEP_2b.o)
  .debug_aranges
-                0x000004a0       0xf0 .\CortexM3\ARM_GCC_541\Debug\PRJ3.a(UART_USB.o)
+                0x000004b8       0xf0 .\CortexM3\ARM_GCC_541\Debug\PRJ3.a(UART_USB.o)
  .debug_aranges
-                0x00000590       0x80 .\CortexM3\ARM_GCC_541\Debug\PRJ3.a(UART_USB_RX_ISR.o)
+                0x000005a8       0x80 .\CortexM3\ARM_GCC_541\Debug\PRJ3.a(UART_USB_RX_ISR.o)
  .debug_aranges
-                0x00000610       0x38 .\CortexM3\ARM_GCC_541\Debug\PRJ3.a(COLOR_SENSOR_LED.o)
+                0x00000628       0x38 .\CortexM3\ARM_GCC_541\Debug\PRJ3.a(COLOR_SENSOR_LED.o)
  .debug_aranges
-                0x00000648       0xf0 .\CortexM3\ARM_GCC_541\Debug\PRJ3.a(UART_PI.o)
+                0x00000660       0xf0 .\CortexM3\ARM_GCC_541\Debug\PRJ3.a(UART_PI.o)
  .debug_aranges
-                0x00000738       0x80 .\CortexM3\ARM_GCC_541\Debug\PRJ3.a(UART_PI_RX_ISR.o)
+                0x00000750       0x80 .\CortexM3\ARM_GCC_541\Debug\PRJ3.a(UART_PI_RX_ISR.o)
  .debug_aranges
-                0x000007b8       0x38 .\CortexM3\ARM_GCC_541\Debug\PRJ3.a(PUMP_1.o)
+                0x000007d0       0x38 .\CortexM3\ARM_GCC_541\Debug\PRJ3.a(PUMP_1.o)
  .debug_aranges
-                0x000007f0       0x38 .\CortexM3\ARM_GCC_541\Debug\PRJ3.a(PUMP_2.o)
+                0x00000808       0x38 .\CortexM3\ARM_GCC_541\Debug\PRJ3.a(PUMP_2.o)
  .debug_aranges
-                0x00000828       0x38 .\CortexM3\ARM_GCC_541\Debug\PRJ3.a(PUMP_3.o)
+                0x00000840       0x38 .\CortexM3\ARM_GCC_541\Debug\PRJ3.a(PUMP_3.o)
  .debug_aranges
-                0x00000860       0x38 .\CortexM3\ARM_GCC_541\Debug\PRJ3.a(PUMP_4.o)
+                0x00000878       0x38 .\CortexM3\ARM_GCC_541\Debug\PRJ3.a(PUMP_4.o)
  .debug_aranges
-                0x00000898       0x38 .\CortexM3\ARM_GCC_541\Debug\PRJ3.a(PUMP_5.o)
+                0x000008b0       0x38 .\CortexM3\ARM_GCC_541\Debug\PRJ3.a(PUMP_5.o)
  .debug_aranges
-                0x000008d0       0x38 .\CortexM3\ARM_GCC_541\Debug\PRJ3.a(PUMP_6.o)
+                0x000008e8       0x38 .\CortexM3\ARM_GCC_541\Debug\PRJ3.a(PUMP_6.o)
  .debug_aranges
-                0x00000908       0x70 .\CortexM3\ARM_GCC_541\Debug\PRJ3.a(UART_USB_IntClock.o)
+                0x00000920       0x70 .\CortexM3\ARM_GCC_541\Debug\PRJ3.a(UART_USB_IntClock.o)
  .debug_aranges
-                0x00000978       0x70 .\CortexM3\ARM_GCC_541\Debug\PRJ3.a(UART_PI_IntClock.o)
+                0x00000990       0x70 .\CortexM3\ARM_GCC_541\Debug\PRJ3.a(UART_PI_IntClock.o)
  .debug_aranges
-                0x000009e8      0x2a0 .\CortexM3\ARM_GCC_541\Debug\PRJ3.a(CyLib.o)
+                0x00000a00      0x2a0 .\CortexM3\ARM_GCC_541\Debug\PRJ3.a(CyLib.o)
  .debug_aranges
-                0x00000c88       0x98 .\CortexM3\ARM_GCC_541\Debug\PRJ3.a(cyPm.o)
+                0x00000ca0       0x98 .\CortexM3\ARM_GCC_541\Debug\PRJ3.a(cyPm.o)
  .debug_aranges
-                0x00000d20       0xa8 .\CortexM3\ARM_GCC_541\Debug\PRJ3.a(WEIGHT_ADC.o)
+                0x00000d38       0xa8 .\CortexM3\ARM_GCC_541\Debug\PRJ3.a(WEIGHT_ADC.o)
  .debug_aranges
-                0x00000dc8       0x20 .\CortexM3\ARM_GCC_541\Debug\PRJ3.a(WEIGHT_ADC_INT.o)
+                0x00000de0       0x20 .\CortexM3\ARM_GCC_541\Debug\PRJ3.a(WEIGHT_ADC_INT.o)
  .debug_aranges
-                0x00000de8       0x80 .\CortexM3\ARM_GCC_541\Debug\PRJ3.a(WEIGHT_ADC_theACLK.o)
+                0x00000e00       0x80 .\CortexM3\ARM_GCC_541\Debug\PRJ3.a(WEIGHT_ADC_theACLK.o)
  .debug_aranges
-                0x00000e68       0x20 .\CortexM3\ARM_GCC_541\Debug\PRJ3.a(CyBootAsmGnu.o)
+                0x00000e80       0x20 .\CortexM3\ARM_GCC_541\Debug\PRJ3.a(CyBootAsmGnu.o)
  .debug_aranges
-                0x00000e88       0x88 .\CortexM3\ARM_GCC_541\Debug\PRJ3.a(CyFlash.o)
+                0x00000ea0       0x88 .\CortexM3\ARM_GCC_541\Debug\PRJ3.a(CyFlash.o)
  .debug_aranges
-                0x00000f10       0x80 .\CortexM3\ARM_GCC_541\Debug\PRJ3.a(CySpc.o)
+                0x00000f28       0x80 .\CortexM3\ARM_GCC_541\Debug\PRJ3.a(CySpc.o)
 
 .debug_pubnames
  *(.debug_pubnames)
 
-.debug_info     0x00000000     0x89f0
+.debug_info     0x00000000     0x897b
  *(.debug_info .gnu.linkonce.wi.*)
  .debug_info    0x00000000      0xd69 .\CortexM3\ARM_GCC_541\Debug\main.o
  .debug_info    0x00000d69      0x7ad .\CortexM3\ARM_GCC_541\Debug\ColorSensor.o
- .debug_info    0x00001516      0x3cd .\CortexM3\ARM_GCC_541\Debug\Motor.o
- .debug_info    0x000018e3      0x15e .\CortexM3\ARM_GCC_541\Debug\Pump.o
- .debug_info    0x00001a41      0x463 .\CortexM3\ARM_GCC_541\Debug\UART.o
- .debug_info    0x00001ea4      0x629 .\CortexM3\ARM_GCC_541\Debug\cyfitter_cfg.o
- .debug_info    0x000024cd      0x139 .\CortexM3\ARM_GCC_541\Debug\cymetadata.o
- .debug_info    0x00002606      0x3bb .\CortexM3\ARM_GCC_541\Debug\Cm3Start.o
- .debug_info    0x000029c1      0x2ad .\CortexM3\ARM_GCC_541\Debug\PRJ3.a(I2C.o)
- .debug_info    0x00002c6e      0x184 .\CortexM3\ARM_GCC_541\Debug\PRJ3.a(I2C_INT.o)
- .debug_info    0x00002df2      0x207 .\CortexM3\ARM_GCC_541\Debug\PRJ3.a(I2C_PM.o)
- .debug_info    0x00002ff9      0x407 .\CortexM3\ARM_GCC_541\Debug\PRJ3.a(I2C_MASTER.o)
- .debug_info    0x00003400      0x11f .\CortexM3\ARM_GCC_541\Debug\PRJ3.a(STEP_2a.o)
- .debug_info    0x0000351f      0x11f .\CortexM3\ARM_GCC_541\Debug\PRJ3.a(STEP_1a.o)
- .debug_info    0x0000363e      0x11f .\CortexM3\ARM_GCC_541\Debug\PRJ3.a(STEP_1b.o)
- .debug_info    0x0000375d      0x11f .\CortexM3\ARM_GCC_541\Debug\PRJ3.a(STEP_2b.o)
- .debug_info    0x0000387c      0x60c .\CortexM3\ARM_GCC_541\Debug\PRJ3.a(UART_USB.o)
- .debug_info    0x00003e88      0x2d2 .\CortexM3\ARM_GCC_541\Debug\PRJ3.a(UART_USB_RX_ISR.o)
- .debug_info    0x0000415a      0x11f .\CortexM3\ARM_GCC_541\Debug\PRJ3.a(COLOR_SENSOR_LED.o)
- .debug_info    0x00004279      0x60c .\CortexM3\ARM_GCC_541\Debug\PRJ3.a(UART_PI.o)
- .debug_info    0x00004885      0x2d2 .\CortexM3\ARM_GCC_541\Debug\PRJ3.a(UART_PI_RX_ISR.o)
- .debug_info    0x00004b57      0x11f .\CortexM3\ARM_GCC_541\Debug\PRJ3.a(PUMP_1.o)
- .debug_info    0x00004c76      0x11f .\CortexM3\ARM_GCC_541\Debug\PRJ3.a(PUMP_2.o)
- .debug_info    0x00004d95      0x11f .\CortexM3\ARM_GCC_541\Debug\PRJ3.a(PUMP_3.o)
- .debug_info    0x00004eb4      0x11f .\CortexM3\ARM_GCC_541\Debug\PRJ3.a(PUMP_4.o)
- .debug_info    0x00004fd3      0x11f .\CortexM3\ARM_GCC_541\Debug\PRJ3.a(PUMP_5.o)
- .debug_info    0x000050f2      0x11f .\CortexM3\ARM_GCC_541\Debug\PRJ3.a(PUMP_6.o)
- .debug_info    0x00005211      0x283 .\CortexM3\ARM_GCC_541\Debug\PRJ3.a(UART_USB_IntClock.o)
- .debug_info    0x00005494      0x283 .\CortexM3\ARM_GCC_541\Debug\PRJ3.a(UART_PI_IntClock.o)
- .debug_info    0x00005717     0x1374 .\CortexM3\ARM_GCC_541\Debug\PRJ3.a(CyLib.o)
- .debug_info    0x00006a8b      0xa2a .\CortexM3\ARM_GCC_541\Debug\PRJ3.a(cyPm.o)
- .debug_info    0x000074b5      0x5c0 .\CortexM3\ARM_GCC_541\Debug\PRJ3.a(WEIGHT_ADC.o)
- .debug_info    0x00007a75       0x92 .\CortexM3\ARM_GCC_541\Debug\PRJ3.a(WEIGHT_ADC_INT.o)
- .debug_info    0x00007b07      0x2c4 .\CortexM3\ARM_GCC_541\Debug\PRJ3.a(WEIGHT_ADC_theACLK.o)
- .debug_info    0x00007dcb       0x88 .\CortexM3\ARM_GCC_541\Debug\PRJ3.a(CyBootAsmGnu.o)
- .debug_info    0x00007e53      0x64d .\CortexM3\ARM_GCC_541\Debug\PRJ3.a(CyFlash.o)
- .debug_info    0x000084a0      0x550 .\CortexM3\ARM_GCC_541\Debug\PRJ3.a(CySpc.o)
+ .debug_info    0x00001516      0x358 .\CortexM3\ARM_GCC_541\Debug\Motor.o
+ .debug_info    0x0000186e      0x15e .\CortexM3\ARM_GCC_541\Debug\Pump.o
+ .debug_info    0x000019cc      0x463 .\CortexM3\ARM_GCC_541\Debug\UART.o
+ .debug_info    0x00001e2f      0x629 .\CortexM3\ARM_GCC_541\Debug\cyfitter_cfg.o
+ .debug_info    0x00002458      0x139 .\CortexM3\ARM_GCC_541\Debug\cymetadata.o
+ .debug_info    0x00002591      0x3bb .\CortexM3\ARM_GCC_541\Debug\Cm3Start.o
+ .debug_info    0x0000294c      0x2ad .\CortexM3\ARM_GCC_541\Debug\PRJ3.a(I2C.o)
+ .debug_info    0x00002bf9      0x184 .\CortexM3\ARM_GCC_541\Debug\PRJ3.a(I2C_INT.o)
+ .debug_info    0x00002d7d      0x207 .\CortexM3\ARM_GCC_541\Debug\PRJ3.a(I2C_PM.o)
+ .debug_info    0x00002f84      0x407 .\CortexM3\ARM_GCC_541\Debug\PRJ3.a(I2C_MASTER.o)
+ .debug_info    0x0000338b      0x11f .\CortexM3\ARM_GCC_541\Debug\PRJ3.a(STEP_2a.o)
+ .debug_info    0x000034aa      0x11f .\CortexM3\ARM_GCC_541\Debug\PRJ3.a(STEP_1a.o)
+ .debug_info    0x000035c9      0x11f .\CortexM3\ARM_GCC_541\Debug\PRJ3.a(STEP_1b.o)
+ .debug_info    0x000036e8      0x11f .\CortexM3\ARM_GCC_541\Debug\PRJ3.a(STEP_2b.o)
+ .debug_info    0x00003807      0x60c .\CortexM3\ARM_GCC_541\Debug\PRJ3.a(UART_USB.o)
+ .debug_info    0x00003e13      0x2d2 .\CortexM3\ARM_GCC_541\Debug\PRJ3.a(UART_USB_RX_ISR.o)
+ .debug_info    0x000040e5      0x11f .\CortexM3\ARM_GCC_541\Debug\PRJ3.a(COLOR_SENSOR_LED.o)
+ .debug_info    0x00004204      0x60c .\CortexM3\ARM_GCC_541\Debug\PRJ3.a(UART_PI.o)
+ .debug_info    0x00004810      0x2d2 .\CortexM3\ARM_GCC_541\Debug\PRJ3.a(UART_PI_RX_ISR.o)
+ .debug_info    0x00004ae2      0x11f .\CortexM3\ARM_GCC_541\Debug\PRJ3.a(PUMP_1.o)
+ .debug_info    0x00004c01      0x11f .\CortexM3\ARM_GCC_541\Debug\PRJ3.a(PUMP_2.o)
+ .debug_info    0x00004d20      0x11f .\CortexM3\ARM_GCC_541\Debug\PRJ3.a(PUMP_3.o)
+ .debug_info    0x00004e3f      0x11f .\CortexM3\ARM_GCC_541\Debug\PRJ3.a(PUMP_4.o)
+ .debug_info    0x00004f5e      0x11f .\CortexM3\ARM_GCC_541\Debug\PRJ3.a(PUMP_5.o)
+ .debug_info    0x0000507d      0x11f .\CortexM3\ARM_GCC_541\Debug\PRJ3.a(PUMP_6.o)
+ .debug_info    0x0000519c      0x283 .\CortexM3\ARM_GCC_541\Debug\PRJ3.a(UART_USB_IntClock.o)
+ .debug_info    0x0000541f      0x283 .\CortexM3\ARM_GCC_541\Debug\PRJ3.a(UART_PI_IntClock.o)
+ .debug_info    0x000056a2     0x1374 .\CortexM3\ARM_GCC_541\Debug\PRJ3.a(CyLib.o)
+ .debug_info    0x00006a16      0xa2a .\CortexM3\ARM_GCC_541\Debug\PRJ3.a(cyPm.o)
+ .debug_info    0x00007440      0x5c0 .\CortexM3\ARM_GCC_541\Debug\PRJ3.a(WEIGHT_ADC.o)
+ .debug_info    0x00007a00       0x92 .\CortexM3\ARM_GCC_541\Debug\PRJ3.a(WEIGHT_ADC_INT.o)
+ .debug_info    0x00007a92      0x2c4 .\CortexM3\ARM_GCC_541\Debug\PRJ3.a(WEIGHT_ADC_theACLK.o)
+ .debug_info    0x00007d56       0x88 .\CortexM3\ARM_GCC_541\Debug\PRJ3.a(CyBootAsmGnu.o)
+ .debug_info    0x00007dde      0x64d .\CortexM3\ARM_GCC_541\Debug\PRJ3.a(CyFlash.o)
+ .debug_info    0x0000842b      0x550 .\CortexM3\ARM_GCC_541\Debug\PRJ3.a(CySpc.o)
 
-.debug_abbrev   0x00000000     0x291f
+.debug_abbrev   0x00000000     0x28d1
  *(.debug_abbrev)
  .debug_abbrev  0x00000000      0x1f1 .\CortexM3\ARM_GCC_541\Debug\main.o
  .debug_abbrev  0x000001f1      0x1f3 .\CortexM3\ARM_GCC_541\Debug\ColorSensor.o
- .debug_abbrev  0x000003e4      0x18d .\CortexM3\ARM_GCC_541\Debug\Motor.o
- .debug_abbrev  0x00000571       0xc9 .\CortexM3\ARM_GCC_541\Debug\Pump.o
- .debug_abbrev  0x0000063a      0x1b0 .\CortexM3\ARM_GCC_541\Debug\UART.o
- .debug_abbrev  0x000007ea      0x20d .\CortexM3\ARM_GCC_541\Debug\cyfitter_cfg.o
- .debug_abbrev  0x000009f7       0x77 .\CortexM3\ARM_GCC_541\Debug\cymetadata.o
- .debug_abbrev  0x00000a6e      0x1e8 .\CortexM3\ARM_GCC_541\Debug\Cm3Start.o
- .debug_abbrev  0x00000c56      0x10a .\CortexM3\ARM_GCC_541\Debug\PRJ3.a(I2C.o)
- .debug_abbrev  0x00000d60       0xb6 .\CortexM3\ARM_GCC_541\Debug\PRJ3.a(I2C_INT.o)
- .debug_abbrev  0x00000e16       0xfe .\CortexM3\ARM_GCC_541\Debug\PRJ3.a(I2C_PM.o)
- .debug_abbrev  0x00000f14      0x13c .\CortexM3\ARM_GCC_541\Debug\PRJ3.a(I2C_MASTER.o)
- .debug_abbrev  0x00001050       0x90 .\CortexM3\ARM_GCC_541\Debug\PRJ3.a(STEP_2a.o)
- .debug_abbrev  0x000010e0       0x90 .\CortexM3\ARM_GCC_541\Debug\PRJ3.a(STEP_1a.o)
- .debug_abbrev  0x00001170       0x90 .\CortexM3\ARM_GCC_541\Debug\PRJ3.a(STEP_1b.o)
- .debug_abbrev  0x00001200       0x90 .\CortexM3\ARM_GCC_541\Debug\PRJ3.a(STEP_2b.o)
- .debug_abbrev  0x00001290      0x175 .\CortexM3\ARM_GCC_541\Debug\PRJ3.a(UART_USB.o)
- .debug_abbrev  0x00001405      0x173 .\CortexM3\ARM_GCC_541\Debug\PRJ3.a(UART_USB_RX_ISR.o)
- .debug_abbrev  0x00001578       0x90 .\CortexM3\ARM_GCC_541\Debug\PRJ3.a(COLOR_SENSOR_LED.o)
- .debug_abbrev  0x00001608      0x175 .\CortexM3\ARM_GCC_541\Debug\PRJ3.a(UART_PI.o)
- .debug_abbrev  0x0000177d      0x173 .\CortexM3\ARM_GCC_541\Debug\PRJ3.a(UART_PI_RX_ISR.o)
- .debug_abbrev  0x000018f0       0x90 .\CortexM3\ARM_GCC_541\Debug\PRJ3.a(PUMP_1.o)
- .debug_abbrev  0x00001980       0x90 .\CortexM3\ARM_GCC_541\Debug\PRJ3.a(PUMP_2.o)
- .debug_abbrev  0x00001a10       0x90 .\CortexM3\ARM_GCC_541\Debug\PRJ3.a(PUMP_3.o)
- .debug_abbrev  0x00001aa0       0x90 .\CortexM3\ARM_GCC_541\Debug\PRJ3.a(PUMP_4.o)
- .debug_abbrev  0x00001b30       0x90 .\CortexM3\ARM_GCC_541\Debug\PRJ3.a(PUMP_5.o)
- .debug_abbrev  0x00001bc0       0x90 .\CortexM3\ARM_GCC_541\Debug\PRJ3.a(PUMP_6.o)
- .debug_abbrev  0x00001c50      0x139 .\CortexM3\ARM_GCC_541\Debug\PRJ3.a(UART_USB_IntClock.o)
- .debug_abbrev  0x00001d89      0x139 .\CortexM3\ARM_GCC_541\Debug\PRJ3.a(UART_PI_IntClock.o)
- .debug_abbrev  0x00001ec2      0x254 .\CortexM3\ARM_GCC_541\Debug\PRJ3.a(CyLib.o)
- .debug_abbrev  0x00002116      0x1ab .\CortexM3\ARM_GCC_541\Debug\PRJ3.a(cyPm.o)
- .debug_abbrev  0x000022c1      0x1ac .\CortexM3\ARM_GCC_541\Debug\PRJ3.a(WEIGHT_ADC.o)
- .debug_abbrev  0x0000246d       0x42 .\CortexM3\ARM_GCC_541\Debug\PRJ3.a(WEIGHT_ADC_INT.o)
- .debug_abbrev  0x000024af      0x121 .\CortexM3\ARM_GCC_541\Debug\PRJ3.a(WEIGHT_ADC_theACLK.o)
- .debug_abbrev  0x000025d0       0x14 .\CortexM3\ARM_GCC_541\Debug\PRJ3.a(CyBootAsmGnu.o)
- .debug_abbrev  0x000025e4      0x1a7 .\CortexM3\ARM_GCC_541\Debug\PRJ3.a(CyFlash.o)
- .debug_abbrev  0x0000278b      0x194 .\CortexM3\ARM_GCC_541\Debug\PRJ3.a(CySpc.o)
+ .debug_abbrev  0x000003e4      0x13f .\CortexM3\ARM_GCC_541\Debug\Motor.o
+ .debug_abbrev  0x00000523       0xc9 .\CortexM3\ARM_GCC_541\Debug\Pump.o
+ .debug_abbrev  0x000005ec      0x1b0 .\CortexM3\ARM_GCC_541\Debug\UART.o
+ .debug_abbrev  0x0000079c      0x20d .\CortexM3\ARM_GCC_541\Debug\cyfitter_cfg.o
+ .debug_abbrev  0x000009a9       0x77 .\CortexM3\ARM_GCC_541\Debug\cymetadata.o
+ .debug_abbrev  0x00000a20      0x1e8 .\CortexM3\ARM_GCC_541\Debug\Cm3Start.o
+ .debug_abbrev  0x00000c08      0x10a .\CortexM3\ARM_GCC_541\Debug\PRJ3.a(I2C.o)
+ .debug_abbrev  0x00000d12       0xb6 .\CortexM3\ARM_GCC_541\Debug\PRJ3.a(I2C_INT.o)
+ .debug_abbrev  0x00000dc8       0xfe .\CortexM3\ARM_GCC_541\Debug\PRJ3.a(I2C_PM.o)
+ .debug_abbrev  0x00000ec6      0x13c .\CortexM3\ARM_GCC_541\Debug\PRJ3.a(I2C_MASTER.o)
+ .debug_abbrev  0x00001002       0x90 .\CortexM3\ARM_GCC_541\Debug\PRJ3.a(STEP_2a.o)
+ .debug_abbrev  0x00001092       0x90 .\CortexM3\ARM_GCC_541\Debug\PRJ3.a(STEP_1a.o)
+ .debug_abbrev  0x00001122       0x90 .\CortexM3\ARM_GCC_541\Debug\PRJ3.a(STEP_1b.o)
+ .debug_abbrev  0x000011b2       0x90 .\CortexM3\ARM_GCC_541\Debug\PRJ3.a(STEP_2b.o)
+ .debug_abbrev  0x00001242      0x175 .\CortexM3\ARM_GCC_541\Debug\PRJ3.a(UART_USB.o)
+ .debug_abbrev  0x000013b7      0x173 .\CortexM3\ARM_GCC_541\Debug\PRJ3.a(UART_USB_RX_ISR.o)
+ .debug_abbrev  0x0000152a       0x90 .\CortexM3\ARM_GCC_541\Debug\PRJ3.a(COLOR_SENSOR_LED.o)
+ .debug_abbrev  0x000015ba      0x175 .\CortexM3\ARM_GCC_541\Debug\PRJ3.a(UART_PI.o)
+ .debug_abbrev  0x0000172f      0x173 .\CortexM3\ARM_GCC_541\Debug\PRJ3.a(UART_PI_RX_ISR.o)
+ .debug_abbrev  0x000018a2       0x90 .\CortexM3\ARM_GCC_541\Debug\PRJ3.a(PUMP_1.o)
+ .debug_abbrev  0x00001932       0x90 .\CortexM3\ARM_GCC_541\Debug\PRJ3.a(PUMP_2.o)
+ .debug_abbrev  0x000019c2       0x90 .\CortexM3\ARM_GCC_541\Debug\PRJ3.a(PUMP_3.o)
+ .debug_abbrev  0x00001a52       0x90 .\CortexM3\ARM_GCC_541\Debug\PRJ3.a(PUMP_4.o)
+ .debug_abbrev  0x00001ae2       0x90 .\CortexM3\ARM_GCC_541\Debug\PRJ3.a(PUMP_5.o)
+ .debug_abbrev  0x00001b72       0x90 .\CortexM3\ARM_GCC_541\Debug\PRJ3.a(PUMP_6.o)
+ .debug_abbrev  0x00001c02      0x139 .\CortexM3\ARM_GCC_541\Debug\PRJ3.a(UART_USB_IntClock.o)
+ .debug_abbrev  0x00001d3b      0x139 .\CortexM3\ARM_GCC_541\Debug\PRJ3.a(UART_PI_IntClock.o)
+ .debug_abbrev  0x00001e74      0x254 .\CortexM3\ARM_GCC_541\Debug\PRJ3.a(CyLib.o)
+ .debug_abbrev  0x000020c8      0x1ab .\CortexM3\ARM_GCC_541\Debug\PRJ3.a(cyPm.o)
+ .debug_abbrev  0x00002273      0x1ac .\CortexM3\ARM_GCC_541\Debug\PRJ3.a(WEIGHT_ADC.o)
+ .debug_abbrev  0x0000241f       0x42 .\CortexM3\ARM_GCC_541\Debug\PRJ3.a(WEIGHT_ADC_INT.o)
+ .debug_abbrev  0x00002461      0x121 .\CortexM3\ARM_GCC_541\Debug\PRJ3.a(WEIGHT_ADC_theACLK.o)
+ .debug_abbrev  0x00002582       0x14 .\CortexM3\ARM_GCC_541\Debug\PRJ3.a(CyBootAsmGnu.o)
+ .debug_abbrev  0x00002596      0x1a7 .\CortexM3\ARM_GCC_541\Debug\PRJ3.a(CyFlash.o)
+ .debug_abbrev  0x0000273d      0x194 .\CortexM3\ARM_GCC_541\Debug\PRJ3.a(CySpc.o)
 
-.debug_line     0x00000000     0x3e19
+.debug_line     0x00000000     0x3e45
  *(.debug_line)
  .debug_line    0x00000000      0x4db .\CortexM3\ARM_GCC_541\Debug\main.o
  .debug_line    0x000004db      0x304 .\CortexM3\ARM_GCC_541\Debug\ColorSensor.o
- .debug_line    0x000007df      0x1f9 .\CortexM3\ARM_GCC_541\Debug\Motor.o
- .debug_line    0x000009d8      0x16b .\CortexM3\ARM_GCC_541\Debug\Pump.o
- .debug_line    0x00000b43      0x2e8 .\CortexM3\ARM_GCC_541\Debug\UART.o
- .debug_line    0x00000e2b      0x201 .\CortexM3\ARM_GCC_541\Debug\cyfitter_cfg.o
- .debug_line    0x0000102c      0x141 .\CortexM3\ARM_GCC_541\Debug\cymetadata.o
- .debug_line    0x0000116d      0x234 .\CortexM3\ARM_GCC_541\Debug\Cm3Start.o
- .debug_line    0x000013a1       0xd9 .\CortexM3\ARM_GCC_541\Debug\PRJ3.a(I2C.o)
- .debug_line    0x0000147a      0x114 .\CortexM3\ARM_GCC_541\Debug\PRJ3.a(I2C_INT.o)
- .debug_line    0x0000158e       0xbb .\CortexM3\ARM_GCC_541\Debug\PRJ3.a(I2C_PM.o)
- .debug_line    0x00001649      0x1fd .\CortexM3\ARM_GCC_541\Debug\PRJ3.a(I2C_MASTER.o)
- .debug_line    0x00001846       0x94 .\CortexM3\ARM_GCC_541\Debug\PRJ3.a(STEP_2a.o)
- .debug_line    0x000018da       0x94 .\CortexM3\ARM_GCC_541\Debug\PRJ3.a(STEP_1a.o)
- .debug_line    0x0000196e       0x94 .\CortexM3\ARM_GCC_541\Debug\PRJ3.a(STEP_1b.o)
- .debug_line    0x00001a02       0x94 .\CortexM3\ARM_GCC_541\Debug\PRJ3.a(STEP_2b.o)
- .debug_line    0x00001a96      0x2c4 .\CortexM3\ARM_GCC_541\Debug\PRJ3.a(UART_USB.o)
- .debug_line    0x00001d5a      0x13c .\CortexM3\ARM_GCC_541\Debug\PRJ3.a(UART_USB_RX_ISR.o)
- .debug_line    0x00001e96       0x9d .\CortexM3\ARM_GCC_541\Debug\PRJ3.a(COLOR_SENSOR_LED.o)
- .debug_line    0x00001f33      0x2c2 .\CortexM3\ARM_GCC_541\Debug\PRJ3.a(UART_PI.o)
- .debug_line    0x000021f5      0x13b .\CortexM3\ARM_GCC_541\Debug\PRJ3.a(UART_PI_RX_ISR.o)
- .debug_line    0x00002330       0x93 .\CortexM3\ARM_GCC_541\Debug\PRJ3.a(PUMP_1.o)
- .debug_line    0x000023c3       0x93 .\CortexM3\ARM_GCC_541\Debug\PRJ3.a(PUMP_2.o)
- .debug_line    0x00002456       0x93 .\CortexM3\ARM_GCC_541\Debug\PRJ3.a(PUMP_3.o)
- .debug_line    0x000024e9       0x93 .\CortexM3\ARM_GCC_541\Debug\PRJ3.a(PUMP_4.o)
- .debug_line    0x0000257c       0x93 .\CortexM3\ARM_GCC_541\Debug\PRJ3.a(PUMP_5.o)
- .debug_line    0x0000260f       0x93 .\CortexM3\ARM_GCC_541\Debug\PRJ3.a(PUMP_6.o)
- .debug_line    0x000026a2      0x180 .\CortexM3\ARM_GCC_541\Debug\PRJ3.a(UART_USB_IntClock.o)
- .debug_line    0x00002822      0x17f .\CortexM3\ARM_GCC_541\Debug\PRJ3.a(UART_PI_IntClock.o)
- .debug_line    0x000029a1      0x816 .\CortexM3\ARM_GCC_541\Debug\PRJ3.a(CyLib.o)
- .debug_line    0x000031b7      0x367 .\CortexM3\ARM_GCC_541\Debug\PRJ3.a(cyPm.o)
- .debug_line    0x0000351e      0x220 .\CortexM3\ARM_GCC_541\Debug\PRJ3.a(WEIGHT_ADC.o)
- .debug_line    0x0000373e       0x57 .\CortexM3\ARM_GCC_541\Debug\PRJ3.a(WEIGHT_ADC_INT.o)
- .debug_line    0x00003795      0x1a4 .\CortexM3\ARM_GCC_541\Debug\PRJ3.a(WEIGHT_ADC_theACLK.o)
- .debug_line    0x00003939       0x66 .\CortexM3\ARM_GCC_541\Debug\PRJ3.a(CyBootAsmGnu.o)
- .debug_line    0x0000399f      0x21a .\CortexM3\ARM_GCC_541\Debug\PRJ3.a(CyFlash.o)
- .debug_line    0x00003bb9      0x260 .\CortexM3\ARM_GCC_541\Debug\PRJ3.a(CySpc.o)
+ .debug_line    0x000007df      0x225 .\CortexM3\ARM_GCC_541\Debug\Motor.o
+ .debug_line    0x00000a04      0x16b .\CortexM3\ARM_GCC_541\Debug\Pump.o
+ .debug_line    0x00000b6f      0x2e8 .\CortexM3\ARM_GCC_541\Debug\UART.o
+ .debug_line    0x00000e57      0x201 .\CortexM3\ARM_GCC_541\Debug\cyfitter_cfg.o
+ .debug_line    0x00001058      0x141 .\CortexM3\ARM_GCC_541\Debug\cymetadata.o
+ .debug_line    0x00001199      0x234 .\CortexM3\ARM_GCC_541\Debug\Cm3Start.o
+ .debug_line    0x000013cd       0xd9 .\CortexM3\ARM_GCC_541\Debug\PRJ3.a(I2C.o)
+ .debug_line    0x000014a6      0x114 .\CortexM3\ARM_GCC_541\Debug\PRJ3.a(I2C_INT.o)
+ .debug_line    0x000015ba       0xbb .\CortexM3\ARM_GCC_541\Debug\PRJ3.a(I2C_PM.o)
+ .debug_line    0x00001675      0x1fd .\CortexM3\ARM_GCC_541\Debug\PRJ3.a(I2C_MASTER.o)
+ .debug_line    0x00001872       0x94 .\CortexM3\ARM_GCC_541\Debug\PRJ3.a(STEP_2a.o)
+ .debug_line    0x00001906       0x94 .\CortexM3\ARM_GCC_541\Debug\PRJ3.a(STEP_1a.o)
+ .debug_line    0x0000199a       0x94 .\CortexM3\ARM_GCC_541\Debug\PRJ3.a(STEP_1b.o)
+ .debug_line    0x00001a2e       0x94 .\CortexM3\ARM_GCC_541\Debug\PRJ3.a(STEP_2b.o)
+ .debug_line    0x00001ac2      0x2c4 .\CortexM3\ARM_GCC_541\Debug\PRJ3.a(UART_USB.o)
+ .debug_line    0x00001d86      0x13c .\CortexM3\ARM_GCC_541\Debug\PRJ3.a(UART_USB_RX_ISR.o)
+ .debug_line    0x00001ec2       0x9d .\CortexM3\ARM_GCC_541\Debug\PRJ3.a(COLOR_SENSOR_LED.o)
+ .debug_line    0x00001f5f      0x2c2 .\CortexM3\ARM_GCC_541\Debug\PRJ3.a(UART_PI.o)
+ .debug_line    0x00002221      0x13b .\CortexM3\ARM_GCC_541\Debug\PRJ3.a(UART_PI_RX_ISR.o)
+ .debug_line    0x0000235c       0x93 .\CortexM3\ARM_GCC_541\Debug\PRJ3.a(PUMP_1.o)
+ .debug_line    0x000023ef       0x93 .\CortexM3\ARM_GCC_541\Debug\PRJ3.a(PUMP_2.o)
+ .debug_line    0x00002482       0x93 .\CortexM3\ARM_GCC_541\Debug\PRJ3.a(PUMP_3.o)
+ .debug_line    0x00002515       0x93 .\CortexM3\ARM_GCC_541\Debug\PRJ3.a(PUMP_4.o)
+ .debug_line    0x000025a8       0x93 .\CortexM3\ARM_GCC_541\Debug\PRJ3.a(PUMP_5.o)
+ .debug_line    0x0000263b       0x93 .\CortexM3\ARM_GCC_541\Debug\PRJ3.a(PUMP_6.o)
+ .debug_line    0x000026ce      0x180 .\CortexM3\ARM_GCC_541\Debug\PRJ3.a(UART_USB_IntClock.o)
+ .debug_line    0x0000284e      0x17f .\CortexM3\ARM_GCC_541\Debug\PRJ3.a(UART_PI_IntClock.o)
+ .debug_line    0x000029cd      0x816 .\CortexM3\ARM_GCC_541\Debug\PRJ3.a(CyLib.o)
+ .debug_line    0x000031e3      0x367 .\CortexM3\ARM_GCC_541\Debug\PRJ3.a(cyPm.o)
+ .debug_line    0x0000354a      0x220 .\CortexM3\ARM_GCC_541\Debug\PRJ3.a(WEIGHT_ADC.o)
+ .debug_line    0x0000376a       0x57 .\CortexM3\ARM_GCC_541\Debug\PRJ3.a(WEIGHT_ADC_INT.o)
+ .debug_line    0x000037c1      0x1a4 .\CortexM3\ARM_GCC_541\Debug\PRJ3.a(WEIGHT_ADC_theACLK.o)
+ .debug_line    0x00003965       0x66 .\CortexM3\ARM_GCC_541\Debug\PRJ3.a(CyBootAsmGnu.o)
+ .debug_line    0x000039cb      0x21a .\CortexM3\ARM_GCC_541\Debug\PRJ3.a(CyFlash.o)
+ .debug_line    0x00003be5      0x260 .\CortexM3\ARM_GCC_541\Debug\PRJ3.a(CySpc.o)
 
-.debug_frame    0x00000000     0x2ec0
+.debug_frame    0x00000000     0x2efc
  *(.debug_frame)
  .debug_frame   0x00000000      0x26c .\CortexM3\ARM_GCC_541\Debug\main.o
  .debug_frame   0x0000026c      0x17c .\CortexM3\ARM_GCC_541\Debug\ColorSensor.o
- .debug_frame   0x000003e8       0x54 .\CortexM3\ARM_GCC_541\Debug\Motor.o
- .debug_frame   0x0000043c       0x48 .\CortexM3\ARM_GCC_541\Debug\Pump.o
- .debug_frame   0x00000484       0xf8 .\CortexM3\ARM_GCC_541\Debug\UART.o
- .debug_frame   0x0000057c       0xe4 .\CortexM3\ARM_GCC_541\Debug\cyfitter_cfg.o
- .debug_frame   0x00000660       0xb8 .\CortexM3\ARM_GCC_541\Debug\Cm3Start.o
- .debug_frame   0x00000718       0x94 .\CortexM3\ARM_GCC_541\Debug\PRJ3.a(I2C.o)
- .debug_frame   0x000007ac       0x30 .\CortexM3\ARM_GCC_541\Debug\PRJ3.a(I2C_INT.o)
- .debug_frame   0x000007dc       0x74 .\CortexM3\ARM_GCC_541\Debug\PRJ3.a(I2C_PM.o)
- .debug_frame   0x00000850      0x138 .\CortexM3\ARM_GCC_541\Debug\PRJ3.a(I2C_MASTER.o)
- .debug_frame   0x00000988       0x50 .\CortexM3\ARM_GCC_541\Debug\PRJ3.a(STEP_2a.o)
- .debug_frame   0x000009d8       0x50 .\CortexM3\ARM_GCC_541\Debug\PRJ3.a(STEP_1a.o)
- .debug_frame   0x00000a28       0x50 .\CortexM3\ARM_GCC_541\Debug\PRJ3.a(STEP_1b.o)
- .debug_frame   0x00000a78       0x50 .\CortexM3\ARM_GCC_541\Debug\PRJ3.a(STEP_2b.o)
- .debug_frame   0x00000ac8      0x250 .\CortexM3\ARM_GCC_541\Debug\PRJ3.a(UART_USB.o)
- .debug_frame   0x00000d18      0x104 .\CortexM3\ARM_GCC_541\Debug\PRJ3.a(UART_USB_RX_ISR.o)
- .debug_frame   0x00000e1c       0x50 .\CortexM3\ARM_GCC_541\Debug\PRJ3.a(COLOR_SENSOR_LED.o)
- .debug_frame   0x00000e6c      0x250 .\CortexM3\ARM_GCC_541\Debug\PRJ3.a(UART_PI.o)
- .debug_frame   0x000010bc      0x104 .\CortexM3\ARM_GCC_541\Debug\PRJ3.a(UART_PI_RX_ISR.o)
- .debug_frame   0x000011c0       0x50 .\CortexM3\ARM_GCC_541\Debug\PRJ3.a(PUMP_1.o)
- .debug_frame   0x00001210       0x50 .\CortexM3\ARM_GCC_541\Debug\PRJ3.a(PUMP_2.o)
- .debug_frame   0x00001260       0x50 .\CortexM3\ARM_GCC_541\Debug\PRJ3.a(PUMP_3.o)
- .debug_frame   0x000012b0       0x50 .\CortexM3\ARM_GCC_541\Debug\PRJ3.a(PUMP_4.o)
- .debug_frame   0x00001300       0x50 .\CortexM3\ARM_GCC_541\Debug\PRJ3.a(PUMP_5.o)
- .debug_frame   0x00001350       0x50 .\CortexM3\ARM_GCC_541\Debug\PRJ3.a(PUMP_6.o)
- .debug_frame   0x000013a0       0xe0 .\CortexM3\ARM_GCC_541\Debug\PRJ3.a(UART_USB_IntClock.o)
- .debug_frame   0x00001480       0xe0 .\CortexM3\ARM_GCC_541\Debug\PRJ3.a(UART_PI_IntClock.o)
- .debug_frame   0x00001560      0x738 .\CortexM3\ARM_GCC_541\Debug\PRJ3.a(CyLib.o)
- .debug_frame   0x00001c98      0x1f8 .\CortexM3\ARM_GCC_541\Debug\PRJ3.a(cyPm.o)
- .debug_frame   0x00001e90      0x1b4 .\CortexM3\ARM_GCC_541\Debug\PRJ3.a(WEIGHT_ADC.o)
- .debug_frame   0x00002044       0x20 .\CortexM3\ARM_GCC_541\Debug\PRJ3.a(WEIGHT_ADC_INT.o)
- .debug_frame   0x00002064      0x100 .\CortexM3\ARM_GCC_541\Debug\PRJ3.a(WEIGHT_ADC_theACLK.o)
- .debug_frame   0x00002164      0x194 .\CortexM3\ARM_GCC_541\Debug\PRJ3.a(CyFlash.o)
- .debug_frame   0x000022f8      0x180 .\CortexM3\ARM_GCC_541\Debug\PRJ3.a(CySpc.o)
- .debug_frame   0x00002478       0x44 c:/program files (x86)/cypress/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/armv7-m\libgcc.a(_aeabi_ldivmod.o)
- .debug_frame   0x000024bc       0x38 c:/program files (x86)/cypress/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/armv7-m\libgcc.a(_udivmoddi4.o)
- .debug_frame   0x000024f4       0x20 c:/program files (x86)/cypress/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libg_nano.a(lib_a-errno.o)
- .debug_frame   0x00002514       0x28 c:/program files (x86)/cypress/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libg_nano.a(lib_a-exit.o)
- .debug_frame   0x0000253c       0x2c c:/program files (x86)/cypress/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libg_nano.a(lib_a-init.o)
- .debug_frame   0x00002568       0x28 c:/program files (x86)/cypress/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libg_nano.a(lib_a-memcpy-stub.o)
- .debug_frame   0x00002590       0x20 c:/program files (x86)/cypress/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libg_nano.a(lib_a-memset.o)
- .debug_frame   0x000025b0       0x8c c:/program files (x86)/cypress/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libg_nano.a(lib_a-nano-vfprintf_float.o)
- .debug_frame   0x0000263c       0x60 c:/program files (x86)/cypress/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libg_nano.a(lib_a-nano-vfprintf_i.o)
- .debug_frame   0x0000269c       0x44 c:/program files (x86)/cypress/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libg_nano.a(lib_a-rand.o)
- .debug_frame   0x000026e0       0x74 c:/program files (x86)/cypress/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libg_nano.a(lib_a-snprintf.o)
- .debug_frame   0x00002754       0x70 c:/program files (x86)/cypress/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libg_nano.a(lib_a-sprintf.o)
- .debug_frame   0x000027c4       0x20 c:/program files (x86)/cypress/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libg_nano.a(lib_a-strcmp.o)
- .debug_frame   0x000027e4       0x38 c:/program files (x86)/cypress/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libg_nano.a(lib_a-strtok.o)
- .debug_frame   0x0000281c       0x40 c:/program files (x86)/cypress/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libg_nano.a(lib_a-strtok_r.o)
- .debug_frame   0x0000285c       0x2c c:/program files (x86)/cypress/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libg_nano.a(lib_a-time.o)
- .debug_frame   0x00002888       0x6c c:/program files (x86)/cypress/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libg_nano.a(lib_a-dtoa.o)
- .debug_frame   0x000028f4       0x2c c:/program files (x86)/cypress/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libg_nano.a(lib_a-gettimeofdayr.o)
- .debug_frame   0x00002920       0x98 c:/program files (x86)/cypress/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libg_nano.a(lib_a-locale.o)
- .debug_frame   0x000029b8       0x30 c:/program files (x86)/cypress/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libg_nano.a(lib_a-malloc.o)
- .debug_frame   0x000029e8       0x28 c:/program files (x86)/cypress/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libg_nano.a(lib_a-memchr-stub.o)
- .debug_frame   0x00002a10      0x234 c:/program files (x86)/cypress/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libg_nano.a(lib_a-mprec.o)
- .debug_frame   0x00002c44       0x2c c:/program files (x86)/cypress/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libg_nano.a(lib_a-nano-callocr.o)
- .debug_frame   0x00002c70       0x38 c:/program files (x86)/cypress/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libg_nano.a(lib_a-nano-freer.o)
- .debug_frame   0x00002ca8       0x2c c:/program files (x86)/cypress/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libg_nano.a(lib_a-nano-mallocr.o)
- .debug_frame   0x00002cd4       0x90 c:/program files (x86)/cypress/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libg_nano.a(lib_a-nano-svfprintf.o)
- .debug_frame   0x00002d64       0x5c c:/program files (x86)/cypress/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libg_nano.a(lib_a-reent.o)
- .debug_frame   0x00002dc0       0x2c c:/program files (x86)/cypress/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libg_nano.a(lib_a-sbrkr.o)
- .debug_frame   0x00002dec       0x28 c:/program files (x86)/cypress/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libg_nano.a(lib_a-memmove.o)
- .debug_frame   0x00002e14       0x30 c:/program files (x86)/cypress/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libg_nano.a(lib_a-mlock.o)
- .debug_frame   0x00002e44       0x3c c:/program files (x86)/cypress/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libg_nano.a(lib_a-nano-reallocr.o)
- .debug_frame   0x00002e80       0x20 c:/program files (x86)/cypress/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libg_nano.a(lib_a-nano-msizer.o)
- .debug_frame   0x00002ea0       0x20 c:/program files (x86)/cypress/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libnosys.a(gettod.o)
+ .debug_frame   0x000003e8       0x90 .\CortexM3\ARM_GCC_541\Debug\Motor.o
+ .debug_frame   0x00000478       0x48 .\CortexM3\ARM_GCC_541\Debug\Pump.o
+ .debug_frame   0x000004c0       0xf8 .\CortexM3\ARM_GCC_541\Debug\UART.o
+ .debug_frame   0x000005b8       0xe4 .\CortexM3\ARM_GCC_541\Debug\cyfitter_cfg.o
+ .debug_frame   0x0000069c       0xb8 .\CortexM3\ARM_GCC_541\Debug\Cm3Start.o
+ .debug_frame   0x00000754       0x94 .\CortexM3\ARM_GCC_541\Debug\PRJ3.a(I2C.o)
+ .debug_frame   0x000007e8       0x30 .\CortexM3\ARM_GCC_541\Debug\PRJ3.a(I2C_INT.o)
+ .debug_frame   0x00000818       0x74 .\CortexM3\ARM_GCC_541\Debug\PRJ3.a(I2C_PM.o)
+ .debug_frame   0x0000088c      0x138 .\CortexM3\ARM_GCC_541\Debug\PRJ3.a(I2C_MASTER.o)
+ .debug_frame   0x000009c4       0x50 .\CortexM3\ARM_GCC_541\Debug\PRJ3.a(STEP_2a.o)
+ .debug_frame   0x00000a14       0x50 .\CortexM3\ARM_GCC_541\Debug\PRJ3.a(STEP_1a.o)
+ .debug_frame   0x00000a64       0x50 .\CortexM3\ARM_GCC_541\Debug\PRJ3.a(STEP_1b.o)
+ .debug_frame   0x00000ab4       0x50 .\CortexM3\ARM_GCC_541\Debug\PRJ3.a(STEP_2b.o)
+ .debug_frame   0x00000b04      0x250 .\CortexM3\ARM_GCC_541\Debug\PRJ3.a(UART_USB.o)
+ .debug_frame   0x00000d54      0x104 .\CortexM3\ARM_GCC_541\Debug\PRJ3.a(UART_USB_RX_ISR.o)
+ .debug_frame   0x00000e58       0x50 .\CortexM3\ARM_GCC_541\Debug\PRJ3.a(COLOR_SENSOR_LED.o)
+ .debug_frame   0x00000ea8      0x250 .\CortexM3\ARM_GCC_541\Debug\PRJ3.a(UART_PI.o)
+ .debug_frame   0x000010f8      0x104 .\CortexM3\ARM_GCC_541\Debug\PRJ3.a(UART_PI_RX_ISR.o)
+ .debug_frame   0x000011fc       0x50 .\CortexM3\ARM_GCC_541\Debug\PRJ3.a(PUMP_1.o)
+ .debug_frame   0x0000124c       0x50 .\CortexM3\ARM_GCC_541\Debug\PRJ3.a(PUMP_2.o)
+ .debug_frame   0x0000129c       0x50 .\CortexM3\ARM_GCC_541\Debug\PRJ3.a(PUMP_3.o)
+ .debug_frame   0x000012ec       0x50 .\CortexM3\ARM_GCC_541\Debug\PRJ3.a(PUMP_4.o)
+ .debug_frame   0x0000133c       0x50 .\CortexM3\ARM_GCC_541\Debug\PRJ3.a(PUMP_5.o)
+ .debug_frame   0x0000138c       0x50 .\CortexM3\ARM_GCC_541\Debug\PRJ3.a(PUMP_6.o)
+ .debug_frame   0x000013dc       0xe0 .\CortexM3\ARM_GCC_541\Debug\PRJ3.a(UART_USB_IntClock.o)
+ .debug_frame   0x000014bc       0xe0 .\CortexM3\ARM_GCC_541\Debug\PRJ3.a(UART_PI_IntClock.o)
+ .debug_frame   0x0000159c      0x738 .\CortexM3\ARM_GCC_541\Debug\PRJ3.a(CyLib.o)
+ .debug_frame   0x00001cd4      0x1f8 .\CortexM3\ARM_GCC_541\Debug\PRJ3.a(cyPm.o)
+ .debug_frame   0x00001ecc      0x1b4 .\CortexM3\ARM_GCC_541\Debug\PRJ3.a(WEIGHT_ADC.o)
+ .debug_frame   0x00002080       0x20 .\CortexM3\ARM_GCC_541\Debug\PRJ3.a(WEIGHT_ADC_INT.o)
+ .debug_frame   0x000020a0      0x100 .\CortexM3\ARM_GCC_541\Debug\PRJ3.a(WEIGHT_ADC_theACLK.o)
+ .debug_frame   0x000021a0      0x194 .\CortexM3\ARM_GCC_541\Debug\PRJ3.a(CyFlash.o)
+ .debug_frame   0x00002334      0x180 .\CortexM3\ARM_GCC_541\Debug\PRJ3.a(CySpc.o)
+ .debug_frame   0x000024b4       0x44 c:/program files (x86)/cypress/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/armv7-m\libgcc.a(_aeabi_ldivmod.o)
+ .debug_frame   0x000024f8       0x38 c:/program files (x86)/cypress/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/armv7-m\libgcc.a(_udivmoddi4.o)
+ .debug_frame   0x00002530       0x20 c:/program files (x86)/cypress/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libg_nano.a(lib_a-errno.o)
+ .debug_frame   0x00002550       0x28 c:/program files (x86)/cypress/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libg_nano.a(lib_a-exit.o)
+ .debug_frame   0x00002578       0x2c c:/program files (x86)/cypress/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libg_nano.a(lib_a-init.o)
+ .debug_frame   0x000025a4       0x28 c:/program files (x86)/cypress/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libg_nano.a(lib_a-memcpy-stub.o)
+ .debug_frame   0x000025cc       0x20 c:/program files (x86)/cypress/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libg_nano.a(lib_a-memset.o)
+ .debug_frame   0x000025ec       0x8c c:/program files (x86)/cypress/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libg_nano.a(lib_a-nano-vfprintf_float.o)
+ .debug_frame   0x00002678       0x60 c:/program files (x86)/cypress/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libg_nano.a(lib_a-nano-vfprintf_i.o)
+ .debug_frame   0x000026d8       0x44 c:/program files (x86)/cypress/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libg_nano.a(lib_a-rand.o)
+ .debug_frame   0x0000271c       0x74 c:/program files (x86)/cypress/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libg_nano.a(lib_a-snprintf.o)
+ .debug_frame   0x00002790       0x70 c:/program files (x86)/cypress/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libg_nano.a(lib_a-sprintf.o)
+ .debug_frame   0x00002800       0x20 c:/program files (x86)/cypress/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libg_nano.a(lib_a-strcmp.o)
+ .debug_frame   0x00002820       0x38 c:/program files (x86)/cypress/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libg_nano.a(lib_a-strtok.o)
+ .debug_frame   0x00002858       0x40 c:/program files (x86)/cypress/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libg_nano.a(lib_a-strtok_r.o)
+ .debug_frame   0x00002898       0x2c c:/program files (x86)/cypress/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libg_nano.a(lib_a-time.o)
+ .debug_frame   0x000028c4       0x6c c:/program files (x86)/cypress/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libg_nano.a(lib_a-dtoa.o)
+ .debug_frame   0x00002930       0x2c c:/program files (x86)/cypress/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libg_nano.a(lib_a-gettimeofdayr.o)
+ .debug_frame   0x0000295c       0x98 c:/program files (x86)/cypress/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libg_nano.a(lib_a-locale.o)
+ .debug_frame   0x000029f4       0x30 c:/program files (x86)/cypress/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libg_nano.a(lib_a-malloc.o)
+ .debug_frame   0x00002a24       0x28 c:/program files (x86)/cypress/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libg_nano.a(lib_a-memchr-stub.o)
+ .debug_frame   0x00002a4c      0x234 c:/program files (x86)/cypress/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libg_nano.a(lib_a-mprec.o)
+ .debug_frame   0x00002c80       0x2c c:/program files (x86)/cypress/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libg_nano.a(lib_a-nano-callocr.o)
+ .debug_frame   0x00002cac       0x38 c:/program files (x86)/cypress/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libg_nano.a(lib_a-nano-freer.o)
+ .debug_frame   0x00002ce4       0x2c c:/program files (x86)/cypress/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libg_nano.a(lib_a-nano-mallocr.o)
+ .debug_frame   0x00002d10       0x90 c:/program files (x86)/cypress/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libg_nano.a(lib_a-nano-svfprintf.o)
+ .debug_frame   0x00002da0       0x5c c:/program files (x86)/cypress/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libg_nano.a(lib_a-reent.o)
+ .debug_frame   0x00002dfc       0x2c c:/program files (x86)/cypress/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libg_nano.a(lib_a-sbrkr.o)
+ .debug_frame   0x00002e28       0x28 c:/program files (x86)/cypress/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libg_nano.a(lib_a-memmove.o)
+ .debug_frame   0x00002e50       0x30 c:/program files (x86)/cypress/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libg_nano.a(lib_a-mlock.o)
+ .debug_frame   0x00002e80       0x3c c:/program files (x86)/cypress/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libg_nano.a(lib_a-nano-reallocr.o)
+ .debug_frame   0x00002ebc       0x20 c:/program files (x86)/cypress/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libg_nano.a(lib_a-nano-msizer.o)
+ .debug_frame   0x00002edc       0x20 c:/program files (x86)/cypress/psoc creator/4.4/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libnosys.a(gettod.o)
 
-.debug_str      0x00000000     0x3092
+.debug_str      0x00000000     0x309e
  *(.debug_str)
- .debug_str     0x00000000      0x5be .\CortexM3\ARM_GCC_541\Debug\main.o
-                                0x636 (size before relaxing)
- .debug_str     0x000005be      0x15b .\CortexM3\ARM_GCC_541\Debug\ColorSensor.o
+ .debug_str     0x00000000      0x5c4 .\CortexM3\ARM_GCC_541\Debug\main.o
+                                0x63c (size before relaxing)
+ .debug_str     0x000005c4      0x15b .\CortexM3\ARM_GCC_541\Debug\ColorSensor.o
                                 0x3c2 (size before relaxing)
- .debug_str     0x00000719       0xe7 .\CortexM3\ARM_GCC_541\Debug\Motor.o
-                                0x2d7 (size before relaxing)
- .debug_str     0x00000800       0x11 .\CortexM3\ARM_GCC_541\Debug\Pump.o
+ .debug_str     0x0000071f       0xed .\CortexM3\ARM_GCC_541\Debug\Motor.o
+                                0x2e3 (size before relaxing)
+ .debug_str     0x0000080c       0x11 .\CortexM3\ARM_GCC_541\Debug\Pump.o
                                 0x1d7 (size before relaxing)
- .debug_str     0x00000811      0x156 .\CortexM3\ARM_GCC_541\Debug\UART.o
+ .debug_str     0x0000081d      0x156 .\CortexM3\ARM_GCC_541\Debug\UART.o
                                 0x36d (size before relaxing)
- .debug_str     0x00000967      0x1a8 .\CortexM3\ARM_GCC_541\Debug\cyfitter_cfg.o
+ .debug_str     0x00000973      0x1a8 .\CortexM3\ARM_GCC_541\Debug\cyfitter_cfg.o
                                 0x33c (size before relaxing)
- .debug_str     0x00000b0f       0x75 .\CortexM3\ARM_GCC_541\Debug\cymetadata.o
+ .debug_str     0x00000b1b       0x75 .\CortexM3\ARM_GCC_541\Debug\cymetadata.o
                                 0x1dc (size before relaxing)
- .debug_str     0x00000b84      0x144 .\CortexM3\ARM_GCC_541\Debug\Cm3Start.o
+ .debug_str     0x00000b90      0x144 .\CortexM3\ARM_GCC_541\Debug\Cm3Start.o
                                 0x302 (size before relaxing)
- .debug_str     0x00000cc8      0x12f .\CortexM3\ARM_GCC_541\Debug\PRJ3.a(I2C.o)
+ .debug_str     0x00000cd4      0x12f .\CortexM3\ARM_GCC_541\Debug\PRJ3.a(I2C.o)
                                 0x2d9 (size before relaxing)
- .debug_str     0x00000df7       0x86 .\CortexM3\ARM_GCC_541\Debug\PRJ3.a(I2C_INT.o)
+ .debug_str     0x00000e03       0x86 .\CortexM3\ARM_GCC_541\Debug\PRJ3.a(I2C_INT.o)
                                 0x257 (size before relaxing)
- .debug_str     0x00000e7d       0x56 .\CortexM3\ARM_GCC_541\Debug\PRJ3.a(I2C_PM.o)
+ .debug_str     0x00000e89       0x56 .\CortexM3\ARM_GCC_541\Debug\PRJ3.a(I2C_PM.o)
                                 0x275 (size before relaxing)
- .debug_str     0x00000ed3      0x111 .\CortexM3\ARM_GCC_541\Debug\PRJ3.a(I2C_MASTER.o)
+ .debug_str     0x00000edf      0x111 .\CortexM3\ARM_GCC_541\Debug\PRJ3.a(I2C_MASTER.o)
                                 0x39c (size before relaxing)
- .debug_str     0x00000fe4       0x62 .\CortexM3\ARM_GCC_541\Debug\PRJ3.a(STEP_2a.o)
+ .debug_str     0x00000ff0       0x62 .\CortexM3\ARM_GCC_541\Debug\PRJ3.a(STEP_2a.o)
                                 0x1e4 (size before relaxing)
- .debug_str     0x00001046       0x57 .\CortexM3\ARM_GCC_541\Debug\PRJ3.a(STEP_1a.o)
+ .debug_str     0x00001052       0x57 .\CortexM3\ARM_GCC_541\Debug\PRJ3.a(STEP_1a.o)
                                 0x1e4 (size before relaxing)
- .debug_str     0x0000109d       0x57 .\CortexM3\ARM_GCC_541\Debug\PRJ3.a(STEP_1b.o)
+ .debug_str     0x000010a9       0x57 .\CortexM3\ARM_GCC_541\Debug\PRJ3.a(STEP_1b.o)
                                 0x1e4 (size before relaxing)
- .debug_str     0x000010f4       0x57 .\CortexM3\ARM_GCC_541\Debug\PRJ3.a(STEP_2b.o)
+ .debug_str     0x00001100       0x57 .\CortexM3\ARM_GCC_541\Debug\PRJ3.a(STEP_2b.o)
                                 0x1e4 (size before relaxing)
- .debug_str     0x0000114b      0x2d4 .\CortexM3\ARM_GCC_541\Debug\PRJ3.a(UART_USB.o)
+ .debug_str     0x00001157      0x2d4 .\CortexM3\ARM_GCC_541\Debug\PRJ3.a(UART_USB.o)
                                 0x4e9 (size before relaxing)
- .debug_str     0x0000141f      0x172 .\CortexM3\ARM_GCC_541\Debug\PRJ3.a(UART_USB_RX_ISR.o)
+ .debug_str     0x0000142b      0x172 .\CortexM3\ARM_GCC_541\Debug\PRJ3.a(UART_USB_RX_ISR.o)
                                 0x32a (size before relaxing)
- .debug_str     0x00001591       0x7b .\CortexM3\ARM_GCC_541\Debug\PRJ3.a(COLOR_SENSOR_LED.o)
+ .debug_str     0x0000159d       0x7b .\CortexM3\ARM_GCC_541\Debug\PRJ3.a(COLOR_SENSOR_LED.o)
                                 0x211 (size before relaxing)
- .debug_str     0x0000160c      0x239 .\CortexM3\ARM_GCC_541\Debug\PRJ3.a(UART_PI.o)
+ .debug_str     0x00001618      0x239 .\CortexM3\ARM_GCC_541\Debug\PRJ3.a(UART_PI.o)
                                 0x4ca (size before relaxing)
- .debug_str     0x00001845      0x14d .\CortexM3\ARM_GCC_541\Debug\PRJ3.a(UART_PI_RX_ISR.o)
+ .debug_str     0x00001851      0x14d .\CortexM3\ARM_GCC_541\Debug\PRJ3.a(UART_PI_RX_ISR.o)
                                 0x31c (size before relaxing)
- .debug_str     0x00001992       0x60 .\CortexM3\ARM_GCC_541\Debug\PRJ3.a(PUMP_1.o)
+ .debug_str     0x0000199e       0x60 .\CortexM3\ARM_GCC_541\Debug\PRJ3.a(PUMP_1.o)
                                 0x1df (size before relaxing)
- .debug_str     0x000019f2       0x60 .\CortexM3\ARM_GCC_541\Debug\PRJ3.a(PUMP_2.o)
+ .debug_str     0x000019fe       0x60 .\CortexM3\ARM_GCC_541\Debug\PRJ3.a(PUMP_2.o)
                                 0x1df (size before relaxing)
- .debug_str     0x00001a52       0x60 .\CortexM3\ARM_GCC_541\Debug\PRJ3.a(PUMP_3.o)
+ .debug_str     0x00001a5e       0x60 .\CortexM3\ARM_GCC_541\Debug\PRJ3.a(PUMP_3.o)
                                 0x1df (size before relaxing)
- .debug_str     0x00001ab2       0x60 .\CortexM3\ARM_GCC_541\Debug\PRJ3.a(PUMP_4.o)
+ .debug_str     0x00001abe       0x60 .\CortexM3\ARM_GCC_541\Debug\PRJ3.a(PUMP_4.o)
                                 0x1df (size before relaxing)
- .debug_str     0x00001b12       0x60 .\CortexM3\ARM_GCC_541\Debug\PRJ3.a(PUMP_5.o)
+ .debug_str     0x00001b1e       0x60 .\CortexM3\ARM_GCC_541\Debug\PRJ3.a(PUMP_5.o)
                                 0x1df (size before relaxing)
- .debug_str     0x00001b72       0x60 .\CortexM3\ARM_GCC_541\Debug\PRJ3.a(PUMP_6.o)
+ .debug_str     0x00001b7e       0x60 .\CortexM3\ARM_GCC_541\Debug\PRJ3.a(PUMP_6.o)
                                 0x1df (size before relaxing)
- .debug_str     0x00001bd2      0x1ab .\CortexM3\ARM_GCC_541\Debug\PRJ3.a(UART_USB_IntClock.o)
+ .debug_str     0x00001bde      0x1ab .\CortexM3\ARM_GCC_541\Debug\PRJ3.a(UART_USB_IntClock.o)
                                 0x35e (size before relaxing)
- .debug_str     0x00001d7d      0x156 .\CortexM3\ARM_GCC_541\Debug\PRJ3.a(UART_PI_IntClock.o)
+ .debug_str     0x00001d89      0x156 .\CortexM3\ARM_GCC_541\Debug\PRJ3.a(UART_PI_IntClock.o)
                                 0x352 (size before relaxing)
- .debug_str     0x00001ed3      0x7d3 .\CortexM3\ARM_GCC_541\Debug\PRJ3.a(CyLib.o)
+ .debug_str     0x00001edf      0x7d3 .\CortexM3\ARM_GCC_541\Debug\PRJ3.a(CyLib.o)
                                 0xa3f (size before relaxing)
- .debug_str     0x000026a6      0x365 .\CortexM3\ARM_GCC_541\Debug\PRJ3.a(cyPm.o)
+ .debug_str     0x000026b2      0x365 .\CortexM3\ARM_GCC_541\Debug\PRJ3.a(cyPm.o)
                                 0x72b (size before relaxing)
- .debug_str     0x00002a0b      0x227 .\CortexM3\ARM_GCC_541\Debug\PRJ3.a(WEIGHT_ADC.o)
+ .debug_str     0x00002a17      0x227 .\CortexM3\ARM_GCC_541\Debug\PRJ3.a(WEIGHT_ADC.o)
                                 0x4ce (size before relaxing)
- .debug_str     0x00002c32       0x37 .\CortexM3\ARM_GCC_541\Debug\PRJ3.a(WEIGHT_ADC_INT.o)
+ .debug_str     0x00002c3e       0x37 .\CortexM3\ARM_GCC_541\Debug\PRJ3.a(WEIGHT_ADC_INT.o)
                                 0x195 (size before relaxing)
- .debug_str     0x00002c69      0x1c9 .\CortexM3\ARM_GCC_541\Debug\PRJ3.a(WEIGHT_ADC_theACLK.o)
+ .debug_str     0x00002c75      0x1c9 .\CortexM3\ARM_GCC_541\Debug\PRJ3.a(WEIGHT_ADC_theACLK.o)
                                 0x3bb (size before relaxing)
- .debug_str     0x00002e32      0x1b4 .\CortexM3\ARM_GCC_541\Debug\PRJ3.a(CyFlash.o)
+ .debug_str     0x00002e3e      0x1b4 .\CortexM3\ARM_GCC_541\Debug\PRJ3.a(CyFlash.o)
                                 0x3b8 (size before relaxing)
- .debug_str     0x00002fe6       0xac .\CortexM3\ARM_GCC_541\Debug\PRJ3.a(CySpc.o)
+ .debug_str     0x00002ff2       0xac .\CortexM3\ARM_GCC_541\Debug\PRJ3.a(CySpc.o)
                                 0x330 (size before relaxing)
 
-.debug_loc      0x00000000     0x3851
+.debug_loc      0x00000000     0x3843
  *(.debug_loc)
  .debug_loc     0x00000000      0x32c .\CortexM3\ARM_GCC_541\Debug\main.o
  .debug_loc     0x0000032c      0x356 .\CortexM3\ARM_GCC_541\Debug\ColorSensor.o
- .debug_loc     0x00000682      0x18a .\CortexM3\ARM_GCC_541\Debug\Motor.o
- .debug_loc     0x0000080c       0x42 .\CortexM3\ARM_GCC_541\Debug\Pump.o
- .debug_loc     0x0000084e      0x1b0 .\CortexM3\ARM_GCC_541\Debug\UART.o
- .debug_loc     0x000009fe      0x25a .\CortexM3\ARM_GCC_541\Debug\cyfitter_cfg.o
- .debug_loc     0x00000c58      0x144 .\CortexM3\ARM_GCC_541\Debug\Cm3Start.o
- .debug_loc     0x00000d9c       0x39 .\CortexM3\ARM_GCC_541\Debug\PRJ3.a(I2C.o)
- .debug_loc     0x00000dd5       0x29 .\CortexM3\ARM_GCC_541\Debug\PRJ3.a(I2C_INT.o)
- .debug_loc     0x00000dfe       0x13 .\CortexM3\ARM_GCC_541\Debug\PRJ3.a(I2C_PM.o)
- .debug_loc     0x00000e11      0x52f .\CortexM3\ARM_GCC_541\Debug\PRJ3.a(I2C_MASTER.o)
- .debug_loc     0x00001340       0x42 .\CortexM3\ARM_GCC_541\Debug\PRJ3.a(STEP_2a.o)
- .debug_loc     0x00001382       0x42 .\CortexM3\ARM_GCC_541\Debug\PRJ3.a(STEP_1a.o)
- .debug_loc     0x000013c4       0x42 .\CortexM3\ARM_GCC_541\Debug\PRJ3.a(STEP_1b.o)
- .debug_loc     0x00001406       0x42 .\CortexM3\ARM_GCC_541\Debug\PRJ3.a(STEP_2b.o)
- .debug_loc     0x00001448      0x258 .\CortexM3\ARM_GCC_541\Debug\PRJ3.a(UART_USB.o)
- .debug_loc     0x000016a0       0x56 .\CortexM3\ARM_GCC_541\Debug\PRJ3.a(UART_USB_RX_ISR.o)
- .debug_loc     0x000016f6       0x42 .\CortexM3\ARM_GCC_541\Debug\PRJ3.a(COLOR_SENSOR_LED.o)
- .debug_loc     0x00001738      0x258 .\CortexM3\ARM_GCC_541\Debug\PRJ3.a(UART_PI.o)
- .debug_loc     0x00001990       0x56 .\CortexM3\ARM_GCC_541\Debug\PRJ3.a(UART_PI_RX_ISR.o)
- .debug_loc     0x000019e6       0x42 .\CortexM3\ARM_GCC_541\Debug\PRJ3.a(PUMP_1.o)
- .debug_loc     0x00001a28       0x42 .\CortexM3\ARM_GCC_541\Debug\PRJ3.a(PUMP_2.o)
- .debug_loc     0x00001a6a       0x42 .\CortexM3\ARM_GCC_541\Debug\PRJ3.a(PUMP_3.o)
- .debug_loc     0x00001aac       0x42 .\CortexM3\ARM_GCC_541\Debug\PRJ3.a(PUMP_4.o)
- .debug_loc     0x00001aee       0x42 .\CortexM3\ARM_GCC_541\Debug\PRJ3.a(PUMP_5.o)
- .debug_loc     0x00001b30       0x42 .\CortexM3\ARM_GCC_541\Debug\PRJ3.a(PUMP_6.o)
- .debug_loc     0x00001b72      0x12c .\CortexM3\ARM_GCC_541\Debug\PRJ3.a(UART_USB_IntClock.o)
- .debug_loc     0x00001c9e      0x128 .\CortexM3\ARM_GCC_541\Debug\PRJ3.a(UART_PI_IntClock.o)
- .debug_loc     0x00001dc6      0xa11 .\CortexM3\ARM_GCC_541\Debug\PRJ3.a(CyLib.o)
- .debug_loc     0x000027d7      0x1e4 .\CortexM3\ARM_GCC_541\Debug\PRJ3.a(cyPm.o)
- .debug_loc     0x000029bb      0x292 .\CortexM3\ARM_GCC_541\Debug\PRJ3.a(WEIGHT_ADC.o)
- .debug_loc     0x00002c4d      0x14d .\CortexM3\ARM_GCC_541\Debug\PRJ3.a(WEIGHT_ADC_theACLK.o)
- .debug_loc     0x00002d9a      0x3b2 .\CortexM3\ARM_GCC_541\Debug\PRJ3.a(CyFlash.o)
- .debug_loc     0x0000314c      0x705 .\CortexM3\ARM_GCC_541\Debug\PRJ3.a(CySpc.o)
+ .debug_loc     0x00000682      0x17c .\CortexM3\ARM_GCC_541\Debug\Motor.o
+ .debug_loc     0x000007fe       0x42 .\CortexM3\ARM_GCC_541\Debug\Pump.o
+ .debug_loc     0x00000840      0x1b0 .\CortexM3\ARM_GCC_541\Debug\UART.o
+ .debug_loc     0x000009f0      0x25a .\CortexM3\ARM_GCC_541\Debug\cyfitter_cfg.o
+ .debug_loc     0x00000c4a      0x144 .\CortexM3\ARM_GCC_541\Debug\Cm3Start.o
+ .debug_loc     0x00000d8e       0x39 .\CortexM3\ARM_GCC_541\Debug\PRJ3.a(I2C.o)
+ .debug_loc     0x00000dc7       0x29 .\CortexM3\ARM_GCC_541\Debug\PRJ3.a(I2C_INT.o)
+ .debug_loc     0x00000df0       0x13 .\CortexM3\ARM_GCC_541\Debug\PRJ3.a(I2C_PM.o)
+ .debug_loc     0x00000e03      0x52f .\CortexM3\ARM_GCC_541\Debug\PRJ3.a(I2C_MASTER.o)
+ .debug_loc     0x00001332       0x42 .\CortexM3\ARM_GCC_541\Debug\PRJ3.a(STEP_2a.o)
+ .debug_loc     0x00001374       0x42 .\CortexM3\ARM_GCC_541\Debug\PRJ3.a(STEP_1a.o)
+ .debug_loc     0x000013b6       0x42 .\CortexM3\ARM_GCC_541\Debug\PRJ3.a(STEP_1b.o)
+ .debug_loc     0x000013f8       0x42 .\CortexM3\ARM_GCC_541\Debug\PRJ3.a(STEP_2b.o)
+ .debug_loc     0x0000143a      0x258 .\CortexM3\ARM_GCC_541\Debug\PRJ3.a(UART_USB.o)
+ .debug_loc     0x00001692       0x56 .\CortexM3\ARM_GCC_541\Debug\PRJ3.a(UART_USB_RX_ISR.o)
+ .debug_loc     0x000016e8       0x42 .\CortexM3\ARM_GCC_541\Debug\PRJ3.a(COLOR_SENSOR_LED.o)
+ .debug_loc     0x0000172a      0x258 .\CortexM3\ARM_GCC_541\Debug\PRJ3.a(UART_PI.o)
+ .debug_loc     0x00001982       0x56 .\CortexM3\ARM_GCC_541\Debug\PRJ3.a(UART_PI_RX_ISR.o)
+ .debug_loc     0x000019d8       0x42 .\CortexM3\ARM_GCC_541\Debug\PRJ3.a(PUMP_1.o)
+ .debug_loc     0x00001a1a       0x42 .\CortexM3\ARM_GCC_541\Debug\PRJ3.a(PUMP_2.o)
+ .debug_loc     0x00001a5c       0x42 .\CortexM3\ARM_GCC_541\Debug\PRJ3.a(PUMP_3.o)
+ .debug_loc     0x00001a9e       0x42 .\CortexM3\ARM_GCC_541\Debug\PRJ3.a(PUMP_4.o)
+ .debug_loc     0x00001ae0       0x42 .\CortexM3\ARM_GCC_541\Debug\PRJ3.a(PUMP_5.o)
+ .debug_loc     0x00001b22       0x42 .\CortexM3\ARM_GCC_541\Debug\PRJ3.a(PUMP_6.o)
+ .debug_loc     0x00001b64      0x12c .\CortexM3\ARM_GCC_541\Debug\PRJ3.a(UART_USB_IntClock.o)
+ .debug_loc     0x00001c90      0x128 .\CortexM3\ARM_GCC_541\Debug\PRJ3.a(UART_PI_IntClock.o)
+ .debug_loc     0x00001db8      0xa11 .\CortexM3\ARM_GCC_541\Debug\PRJ3.a(CyLib.o)
+ .debug_loc     0x000027c9      0x1e4 .\CortexM3\ARM_GCC_541\Debug\PRJ3.a(cyPm.o)
+ .debug_loc     0x000029ad      0x292 .\CortexM3\ARM_GCC_541\Debug\PRJ3.a(WEIGHT_ADC.o)
+ .debug_loc     0x00002c3f      0x14d .\CortexM3\ARM_GCC_541\Debug\PRJ3.a(WEIGHT_ADC_theACLK.o)
+ .debug_loc     0x00002d8c      0x3b2 .\CortexM3\ARM_GCC_541\Debug\PRJ3.a(CyFlash.o)
+ .debug_loc     0x0000313e      0x705 .\CortexM3\ARM_GCC_541\Debug\PRJ3.a(CySpc.o)
 
 .debug_macinfo
  *(.debug_macinfo)
 
-.debug_ranges   0x00000000      0xd40
+.debug_ranges   0x00000000      0xd58
  *(.debug_ranges)
  .debug_ranges  0x00000000       0xd8 .\CortexM3\ARM_GCC_541\Debug\main.o
  .debug_ranges  0x000000d8       0x68 .\CortexM3\ARM_GCC_541\Debug\ColorSensor.o
- .debug_ranges  0x00000140       0x18 .\CortexM3\ARM_GCC_541\Debug\Motor.o
- .debug_ranges  0x00000158       0x18 .\CortexM3\ARM_GCC_541\Debug\Pump.o
- .debug_ranges  0x00000170       0x50 .\CortexM3\ARM_GCC_541\Debug\UART.o
- .debug_ranges  0x000001c0       0x48 .\CortexM3\ARM_GCC_541\Debug\cyfitter_cfg.o
- .debug_ranges  0x00000208       0x38 .\CortexM3\ARM_GCC_541\Debug\Cm3Start.o
- .debug_ranges  0x00000240       0x28 .\CortexM3\ARM_GCC_541\Debug\PRJ3.a(I2C.o)
- .debug_ranges  0x00000268       0x10 .\CortexM3\ARM_GCC_541\Debug\PRJ3.a(I2C_INT.o)
- .debug_ranges  0x00000278       0x28 .\CortexM3\ARM_GCC_541\Debug\PRJ3.a(I2C_PM.o)
- .debug_ranges  0x000002a0       0x70 .\CortexM3\ARM_GCC_541\Debug\PRJ3.a(I2C_MASTER.o)
- .debug_ranges  0x00000310       0x28 .\CortexM3\ARM_GCC_541\Debug\PRJ3.a(STEP_2a.o)
- .debug_ranges  0x00000338       0x28 .\CortexM3\ARM_GCC_541\Debug\PRJ3.a(STEP_1a.o)
- .debug_ranges  0x00000360       0x28 .\CortexM3\ARM_GCC_541\Debug\PRJ3.a(STEP_1b.o)
- .debug_ranges  0x00000388       0x28 .\CortexM3\ARM_GCC_541\Debug\PRJ3.a(STEP_2b.o)
- .debug_ranges  0x000003b0       0xe0 .\CortexM3\ARM_GCC_541\Debug\PRJ3.a(UART_USB.o)
- .debug_ranges  0x00000490       0x70 .\CortexM3\ARM_GCC_541\Debug\PRJ3.a(UART_USB_RX_ISR.o)
- .debug_ranges  0x00000500       0x28 .\CortexM3\ARM_GCC_541\Debug\PRJ3.a(COLOR_SENSOR_LED.o)
- .debug_ranges  0x00000528       0xe0 .\CortexM3\ARM_GCC_541\Debug\PRJ3.a(UART_PI.o)
- .debug_ranges  0x00000608       0x70 .\CortexM3\ARM_GCC_541\Debug\PRJ3.a(UART_PI_RX_ISR.o)
- .debug_ranges  0x00000678       0x28 .\CortexM3\ARM_GCC_541\Debug\PRJ3.a(PUMP_1.o)
- .debug_ranges  0x000006a0       0x28 .\CortexM3\ARM_GCC_541\Debug\PRJ3.a(PUMP_2.o)
- .debug_ranges  0x000006c8       0x28 .\CortexM3\ARM_GCC_541\Debug\PRJ3.a(PUMP_3.o)
- .debug_ranges  0x000006f0       0x28 .\CortexM3\ARM_GCC_541\Debug\PRJ3.a(PUMP_4.o)
- .debug_ranges  0x00000718       0x28 .\CortexM3\ARM_GCC_541\Debug\PRJ3.a(PUMP_5.o)
- .debug_ranges  0x00000740       0x28 .\CortexM3\ARM_GCC_541\Debug\PRJ3.a(PUMP_6.o)
- .debug_ranges  0x00000768       0x60 .\CortexM3\ARM_GCC_541\Debug\PRJ3.a(UART_USB_IntClock.o)
- .debug_ranges  0x000007c8       0x60 .\CortexM3\ARM_GCC_541\Debug\PRJ3.a(UART_PI_IntClock.o)
- .debug_ranges  0x00000828      0x290 .\CortexM3\ARM_GCC_541\Debug\PRJ3.a(CyLib.o)
- .debug_ranges  0x00000ab8       0x88 .\CortexM3\ARM_GCC_541\Debug\PRJ3.a(cyPm.o)
- .debug_ranges  0x00000b40       0x98 .\CortexM3\ARM_GCC_541\Debug\PRJ3.a(WEIGHT_ADC.o)
- .debug_ranges  0x00000bd8       0x10 .\CortexM3\ARM_GCC_541\Debug\PRJ3.a(WEIGHT_ADC_INT.o)
- .debug_ranges  0x00000be8       0x70 .\CortexM3\ARM_GCC_541\Debug\PRJ3.a(WEIGHT_ADC_theACLK.o)
- .debug_ranges  0x00000c58       0x78 .\CortexM3\ARM_GCC_541\Debug\PRJ3.a(CyFlash.o)
- .debug_ranges  0x00000cd0       0x70 .\CortexM3\ARM_GCC_541\Debug\PRJ3.a(CySpc.o)
+ .debug_ranges  0x00000140       0x30 .\CortexM3\ARM_GCC_541\Debug\Motor.o
+ .debug_ranges  0x00000170       0x18 .\CortexM3\ARM_GCC_541\Debug\Pump.o
+ .debug_ranges  0x00000188       0x50 .\CortexM3\ARM_GCC_541\Debug\UART.o
+ .debug_ranges  0x000001d8       0x48 .\CortexM3\ARM_GCC_541\Debug\cyfitter_cfg.o
+ .debug_ranges  0x00000220       0x38 .\CortexM3\ARM_GCC_541\Debug\Cm3Start.o
+ .debug_ranges  0x00000258       0x28 .\CortexM3\ARM_GCC_541\Debug\PRJ3.a(I2C.o)
+ .debug_ranges  0x00000280       0x10 .\CortexM3\ARM_GCC_541\Debug\PRJ3.a(I2C_INT.o)
+ .debug_ranges  0x00000290       0x28 .\CortexM3\ARM_GCC_541\Debug\PRJ3.a(I2C_PM.o)
+ .debug_ranges  0x000002b8       0x70 .\CortexM3\ARM_GCC_541\Debug\PRJ3.a(I2C_MASTER.o)
+ .debug_ranges  0x00000328       0x28 .\CortexM3\ARM_GCC_541\Debug\PRJ3.a(STEP_2a.o)
+ .debug_ranges  0x00000350       0x28 .\CortexM3\ARM_GCC_541\Debug\PRJ3.a(STEP_1a.o)
+ .debug_ranges  0x00000378       0x28 .\CortexM3\ARM_GCC_541\Debug\PRJ3.a(STEP_1b.o)
+ .debug_ranges  0x000003a0       0x28 .\CortexM3\ARM_GCC_541\Debug\PRJ3.a(STEP_2b.o)
+ .debug_ranges  0x000003c8       0xe0 .\CortexM3\ARM_GCC_541\Debug\PRJ3.a(UART_USB.o)
+ .debug_ranges  0x000004a8       0x70 .\CortexM3\ARM_GCC_541\Debug\PRJ3.a(UART_USB_RX_ISR.o)
+ .debug_ranges  0x00000518       0x28 .\CortexM3\ARM_GCC_541\Debug\PRJ3.a(COLOR_SENSOR_LED.o)
+ .debug_ranges  0x00000540       0xe0 .\CortexM3\ARM_GCC_541\Debug\PRJ3.a(UART_PI.o)
+ .debug_ranges  0x00000620       0x70 .\CortexM3\ARM_GCC_541\Debug\PRJ3.a(UART_PI_RX_ISR.o)
+ .debug_ranges  0x00000690       0x28 .\CortexM3\ARM_GCC_541\Debug\PRJ3.a(PUMP_1.o)
+ .debug_ranges  0x000006b8       0x28 .\CortexM3\ARM_GCC_541\Debug\PRJ3.a(PUMP_2.o)
+ .debug_ranges  0x000006e0       0x28 .\CortexM3\ARM_GCC_541\Debug\PRJ3.a(PUMP_3.o)
+ .debug_ranges  0x00000708       0x28 .\CortexM3\ARM_GCC_541\Debug\PRJ3.a(PUMP_4.o)
+ .debug_ranges  0x00000730       0x28 .\CortexM3\ARM_GCC_541\Debug\PRJ3.a(PUMP_5.o)
+ .debug_ranges  0x00000758       0x28 .\CortexM3\ARM_GCC_541\Debug\PRJ3.a(PUMP_6.o)
+ .debug_ranges  0x00000780       0x60 .\CortexM3\ARM_GCC_541\Debug\PRJ3.a(UART_USB_IntClock.o)
+ .debug_ranges  0x000007e0       0x60 .\CortexM3\ARM_GCC_541\Debug\PRJ3.a(UART_PI_IntClock.o)
+ .debug_ranges  0x00000840      0x290 .\CortexM3\ARM_GCC_541\Debug\PRJ3.a(CyLib.o)
+ .debug_ranges  0x00000ad0       0x88 .\CortexM3\ARM_GCC_541\Debug\PRJ3.a(cyPm.o)
+ .debug_ranges  0x00000b58       0x98 .\CortexM3\ARM_GCC_541\Debug\PRJ3.a(WEIGHT_ADC.o)
+ .debug_ranges  0x00000bf0       0x10 .\CortexM3\ARM_GCC_541\Debug\PRJ3.a(WEIGHT_ADC_INT.o)
+ .debug_ranges  0x00000c00       0x70 .\CortexM3\ARM_GCC_541\Debug\PRJ3.a(WEIGHT_ADC_theACLK.o)
+ .debug_ranges  0x00000c70       0x78 .\CortexM3\ARM_GCC_541\Debug\PRJ3.a(CyFlash.o)
+ .debug_ranges  0x00000ce8       0x70 .\CortexM3\ARM_GCC_541\Debug\PRJ3.a(CySpc.o)
 
 .comment        0x00000000       0x6e
  .comment       0x00000000       0x6e .\CortexM3\ARM_GCC_541\Debug\main.o

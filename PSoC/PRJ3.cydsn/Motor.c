@@ -41,7 +41,7 @@ uint16_t WrapStep(int32_t step) {
     return (step < 0) ? step + TOTAL_STEPS : step;
 }
 
-void SetAngle(int16_t angleDeg, uint8_t speedPercent) {
+void Motor_SetAngle(int16_t angleDeg, uint8_t speedPercent) {
     angleDeg = ((angleDeg % 360) + 360) % 360; // Sikrer 0–359
     uint16_t targetStep = (TOTAL_STEPS * angleDeg) / 360;
 
@@ -62,6 +62,6 @@ void SetAngle(int16_t angleDeg, uint8_t speedPercent) {
     }
 }
 
-void Deactivate(void) {
+void Motor_Deactivate() {
     SetStators(DRIVE_OFF);
 }

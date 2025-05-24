@@ -80,8 +80,8 @@ void UpdateState() {
         }
         case STATE_DROPPING: {
             UART_USB_PutString("Dropping die!\n");
-            SetAngle(-115, 100);
-            SetAngle(0, 100);
+            Motor_SetAngle(-115, 100);
+            Motor_SetAngle(0, 100);
             currentState = STATE_COLOR_READING;
             break;
         }
