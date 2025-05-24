@@ -1,4 +1,4 @@
-ARM GAS  C:\Users\alexa\AppData\Local\Temp\ccEZLzn9.s 			page 1
+ARM GAS  C:\Users\alexa\AppData\Local\Temp\ccKpobWx.s 			page 1
 
 
    1              		.syntax unified
@@ -58,7 +58,7 @@ ARM GAS  C:\Users\alexa\AppData\Local\Temp\ccEZLzn9.s 			page 1
   40 0006 052B     		cmp	r3, #5
   41 0008 05D8     		bhi	.L1
   16:Pump.c        ****     pumpWrite[color - 1](1); // Tænd pumpen
-ARM GAS  C:\Users\alexa\AppData\Local\Temp\ccEZLzn9.s 			page 2
+ARM GAS  C:\Users\alexa\AppData\Local\Temp\ccKpobWx.s 			page 2
 
 
   42              		.loc 1 16 0
@@ -118,7 +118,7 @@ ARM GAS  C:\Users\alexa\AppData\Local\Temp\ccEZLzn9.s 			page 1
   90 0016 08BD     		pop	{r3, pc}
   91              	.L10:
   92              		.align	2
-ARM GAS  C:\Users\alexa\AppData\Local\Temp\ccEZLzn9.s 			page 3
+ARM GAS  C:\Users\alexa\AppData\Local\Temp\ccKpobWx.s 			page 3
 
 
   93              	.L9:
@@ -178,7 +178,7 @@ ARM GAS  C:\Users\alexa\AppData\Local\Temp\ccEZLzn9.s 			page 1
  147 0045 02       		.uleb128 0x2
  148 0046 02       		.byte	0x2
  149 0047 07       		.byte	0x7
-ARM GAS  C:\Users\alexa\AppData\Local\Temp\ccEZLzn9.s 			page 4
+ARM GAS  C:\Users\alexa\AppData\Local\Temp\ccKpobWx.s 			page 4
 
 
  150 0048 0E000000 		.4byte	.LASF3
@@ -238,7 +238,7 @@ ARM GAS  C:\Users\alexa\AppData\Local\Temp\ccEZLzn9.s 			page 1
  204 00ae 04       		.byte	0x4
  205 00af A0010000 		.4byte	.LASF16
  206 00b3 02       		.uleb128 0x2
-ARM GAS  C:\Users\alexa\AppData\Local\Temp\ccEZLzn9.s 			page 5
+ARM GAS  C:\Users\alexa\AppData\Local\Temp\ccKpobWx.s 			page 5
 
 
  207 00b4 04       		.byte	0x4
@@ -298,7 +298,7 @@ ARM GAS  C:\Users\alexa\AppData\Local\Temp\ccEZLzn9.s 			page 1
  261 0120 1207     		.2byte	0x712
  262 0122 26010000 		.4byte	0x126
  263 0126 0A       		.uleb128 0xa
-ARM GAS  C:\Users\alexa\AppData\Local\Temp\ccEZLzn9.s 			page 6
+ARM GAS  C:\Users\alexa\AppData\Local\Temp\ccKpobWx.s 			page 6
 
 
  264 0127 8C000000 		.4byte	0x8c
@@ -358,7 +358,7 @@ ARM GAS  C:\Users\alexa\AppData\Local\Temp\ccEZLzn9.s 			page 1
  318 001b 0E       		.uleb128 0xe
  319 001c 00       		.byte	0
  320 001d 00       		.byte	0
-ARM GAS  C:\Users\alexa\AppData\Local\Temp\ccEZLzn9.s 			page 7
+ARM GAS  C:\Users\alexa\AppData\Local\Temp\ccKpobWx.s 			page 7
 
 
  321 001e 03       		.uleb128 0x3
@@ -418,7 +418,7 @@ ARM GAS  C:\Users\alexa\AppData\Local\Temp\ccEZLzn9.s 			page 1
  375 0055 3A       		.uleb128 0x3a
  376 0056 0B       		.uleb128 0xb
  377 0057 3B       		.uleb128 0x3b
-ARM GAS  C:\Users\alexa\AppData\Local\Temp\ccEZLzn9.s 			page 8
+ARM GAS  C:\Users\alexa\AppData\Local\Temp\ccKpobWx.s 			page 8
 
 
  378 0058 0B       		.uleb128 0xb
@@ -478,7 +478,7 @@ ARM GAS  C:\Users\alexa\AppData\Local\Temp\ccEZLzn9.s 			page 1
  432 0093 00       		.byte	0
  433 0094 00       		.byte	0
  434 0095 0C       		.uleb128 0xc
-ARM GAS  C:\Users\alexa\AppData\Local\Temp\ccEZLzn9.s 			page 9
+ARM GAS  C:\Users\alexa\AppData\Local\Temp\ccKpobWx.s 			page 9
 
 
  435 0096 21       		.uleb128 0x21
@@ -538,7 +538,7 @@ ARM GAS  C:\Users\alexa\AppData\Local\Temp\ccEZLzn9.s 			page 1
  489 0000 00000000 		.4byte	.LVL0
  490 0004 0C000000 		.4byte	.LVL1
  491 0008 0100     		.2byte	0x1
-ARM GAS  C:\Users\alexa\AppData\Local\Temp\ccEZLzn9.s 			page 10
+ARM GAS  C:\Users\alexa\AppData\Local\Temp\ccKpobWx.s 			page 10
 
 
  492 000a 50       		.byte	0x50
@@ -598,7 +598,7 @@ ARM GAS  C:\Users\alexa\AppData\Local\Temp\ccEZLzn9.s 			page 1
  542 0000 6C6F6E67 		.ascii	"long long int\000"
  542      206C6F6E 
  542      6720696E 
-ARM GAS  C:\Users\alexa\AppData\Local\Temp\ccEZLzn9.s 			page 11
+ARM GAS  C:\Users\alexa\AppData\Local\Temp\ccKpobWx.s 			page 11
 
 
  542      7400
@@ -658,7 +658,7 @@ ARM GAS  C:\Users\alexa\AppData\Local\Temp\ccEZLzn9.s 			page 1
  562      65642069 
  563              	.LASF4:
  564 010a 5F5F7569 		.ascii	"__uint8_t\000"
-ARM GAS  C:\Users\alexa\AppData\Local\Temp\ccEZLzn9.s 			page 12
+ARM GAS  C:\Users\alexa\AppData\Local\Temp\ccKpobWx.s 			page 12
 
 
  564      6E74385F 
@@ -718,7 +718,7 @@ ARM GAS  C:\Users\alexa\AppData\Local\Temp\ccEZLzn9.s 			page 1
  589      7400
  590              	.LASF2:
  591 01bc 73686F72 		.ascii	"short int\000"
-ARM GAS  C:\Users\alexa\AppData\Local\Temp\ccEZLzn9.s 			page 13
+ARM GAS  C:\Users\alexa\AppData\Local\Temp\ccKpobWx.s 			page 13
 
 
  591      7420696E 

@@ -4,7 +4,9 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-/* Settings */
+/* TCS37073M indstillinger */
+#define ADDRESS 0x39
+
 #define DATA_REG_START_ADDR 0x95
 #define DATA_REG_END_ADDR 0xA0
 
@@ -14,16 +16,14 @@
 #define MAX_VALUE (ATIME * ASTEP + ATIME + ASTEP)
 
 // Referenceværdier fra hvidt papir (MAX_VALUE=17999)
-#define R_REF 9133 // gammel: 11735
-#define G_REF 9158 // gammel: 12037
-#define B_REF 6196 // gammel: 7855
+const uint16_t rgb_ref[3] = {8685, 8716, 5886};
 
-#define ADDRESS 0x39
-
+// Tiden før farveaflæsning, at lysioden skal tænde
 #define LED_ENABLE_DELAY 100 // ms
 
-
-const uint16_t rgb_ref[3] = {R_REF, G_REF, B_REF}; // Med udgangspunkt i hvid skærm fra iPhone 15 Pro
+// Tolerance-værdier for farveaflæsning
+#define SEC_TOL 0.20 // 20% tolerance for at farve afgøres som sekundær farve
+#define UNDEF_TOL 0.05 // 5% tolerance for at farve afgøres som udefineret
 
 bool ReadRegister(uint8_t REG, uint8_t dataBytes, uint8_t* bytes)
 {
@@ -74,9 +74,6 @@ void CalibrateColor(const uint16_t* rgb, uint16_t *rgbNorm) {
 }
 
 uint8_t DetectColor(const uint16_t* rgb) {
-    const double tol = 0.20; // 20%
-    const double closeTol = 0.05; // 5%
-
     uint16_t r = rgb[0], g = rgb[1], b = rgb[2];
 
     uint16_t max = r;
@@ -87,11 +84,11 @@ uint8_t DetectColor(const uint16_t* rgb) {
     if (g < min) min = g;
     if (b < min) min = b;
 
-    if (max - min <= max * closeTol) return 0; // For lidt kontrast til at afgøre farve
+    if (max - min <= max * UNDEF_TOL) return 0; // For lidt kontrast til at afgøre farve
 
-    if (r > g * (1 + tol) && r > b * (1 + tol)) return red;
-    if (g > r * (1 + tol) && g > b * (1 + tol)) return green;
-    if (b > r * (1 + tol) && b > g * (1 + tol)) return blue;
+    if (r > g * (1 + SEC_TOL) && r > b * (1 + SEC_TOL)) return red;
+    if (g > r * (1 + SEC_TOL) && g > b * (1 + SEC_TOL)) return green;
+    if (b > r * (1 + SEC_TOL) && b > g * (1 + SEC_TOL)) return blue;
     if (r > b && g > b) return yellow;
     if (g > r && b > r) return cyan;
     if (r > g && b > g) return magenta;
@@ -124,12 +121,19 @@ const char* ColorToString(enum Colors color) {
     }
 }
 
+bool ColorSensor_ReadRawRGB(uint16_t* rgbData) {
+    COLOR_SENSOR_LED_Write(1);
+    CyDelay(LED_ENABLE_DELAY);
+    if (!ReadColorDataRegisters(rgbData)) return false;
+    COLOR_SENSOR_LED_Write(0);
+    return true;
+}
+
 bool ColorSensor_ReadRGB(uint16_t* rgbNorm) {
     COLOR_SENSOR_LED_Write(1);
     CyDelay(LED_ENABLE_DELAY);
     uint16_t rgbData[3];
     if (!ReadColorDataRegisters(rgbData)) return false;
-    //if (!ReadColorDataRegisters(rgbNorm)) return false;
     CalibrateColor(rgbData, rgbNorm);
     COLOR_SENSOR_LED_Write(0);
     return true;

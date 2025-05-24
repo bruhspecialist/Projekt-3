@@ -2,7 +2,7 @@
 --	Conversion of PRJ3.v to vh2:
 --
 --	Cypress Semiconductor - WARP Version 6.3 IR 41
---	Fri May 23 16:24:47 2025
+--	Fri May 23 20:49:04 2025
 --
 
 USE cypress.cypress.all;
@@ -799,7 +799,7 @@ SIGNAL tmpIO_0__PUMP_6_net_0 : bit;
 TERMINAL tmpSIOVREF__PUMP_6_net_0 : bit;
 SIGNAL tmpINTERRUPT_0__PUMP_6_net_0 : bit;
 TERMINAL \WEIGHT_ADC:Net_248\ : bit;
-TERMINAL \WEIGHT_ADC:Net_235\ : bit;
+TERMINAL \WEIGHT_ADC:Net_368\ : bit;
 SIGNAL Net_53 : bit;
 SIGNAL \WEIGHT_ADC:vp_ctl_0\ : bit;
 SIGNAL \WEIGHT_ADC:vp_ctl_2\ : bit;
@@ -832,10 +832,15 @@ SIGNAL \WEIGHT_ADC:Net_207_3\ : bit;
 SIGNAL \WEIGHT_ADC:Net_207_2\ : bit;
 SIGNAL \WEIGHT_ADC:Net_207_1\ : bit;
 SIGNAL \WEIGHT_ADC:Net_207_0\ : bit;
-TERMINAL \WEIGHT_ADC:Net_209\ : bit;
+TERMINAL \WEIGHT_ADC:Net_267\ : bit;
 TERMINAL \WEIGHT_ADC:Net_149\ : bit;
+TERMINAL \WEIGHT_ADC:Net_209\ : bit;
 TERMINAL \WEIGHT_ADC:Net_255\ : bit;
-TERMINAL \WEIGHT_ADC:Net_368\ : bit;
+SIGNAL \WEIGHT_ADC:tmpOE__ExtVref_net_0\ : bit;
+SIGNAL \WEIGHT_ADC:tmpFB_0__ExtVref_net_0\ : bit;
+SIGNAL \WEIGHT_ADC:tmpIO_0__ExtVref_net_0\ : bit;
+TERMINAL \WEIGHT_ADC:tmpSIOVREF__ExtVref_net_0\ : bit;
+SIGNAL \WEIGHT_ADC:tmpINTERRUPT_0__ExtVref_net_0\ : bit;
 SIGNAL \WEIGHT_ADC:Net_383\ : bit;
 SIGNAL tmpOE__WEIGHT_ADC_Pin_net_0 : bit;
 SIGNAL tmpFB_0__WEIGHT_ADC_Pin_net_0 : bit;
@@ -2967,7 +2972,7 @@ PUMP_6:cy_psoc3_pins_v1_10
 	GENERIC MAP(sig_width=>1,
 		is_net_join=>'0')
 	PORT MAP(signal1=>\WEIGHT_ADC:Net_248\,
-		signal2=>\WEIGHT_ADC:Net_235\);
+		signal2=>\WEIGHT_ADC:Net_368\);
 \WEIGHT_ADC:IRQ\:cy_isr_v1_0
 	GENERIC MAP(int_type=>"10",
 		is_nmi=>'0')
@@ -2977,7 +2982,7 @@ PUMP_6:cy_psoc3_pins_v1_10
 		id=>"3a627475-a83a-4d42-9153-9fce8a2d9b42/696a0979-21fc-4185-bf38-6c79febcde7a",
 		source_clock_id=>"",
 		divisor=>0,
-		period=>"625000000",
+		period=>"555555555.555556",
 		is_direct=>'0',
 		is_digital=>'0')
 	PORT MAP(clock_out=>\WEIGHT_ADC:Net_385\,
@@ -3005,7 +3010,7 @@ PUMP_6:cy_psoc3_pins_v1_10
 	GENERIC MAP(sig_width=>1,
 		is_net_join=>'0')
 	PORT MAP(signal1=>\WEIGHT_ADC:Net_215\,
-		signal2=>\WEIGHT_ADC:Net_209\);
+		signal2=>\WEIGHT_ADC:Net_267\);
 \WEIGHT_ADC:cy_analog_virtualmux_1_connect\:cy_connect_v1_0
 	GENERIC MAP(sig_width=>1,
 		is_net_join=>'0')
@@ -3020,12 +3025,76 @@ PUMP_6:cy_psoc3_pins_v1_10
 		signal2=>\WEIGHT_ADC:Net_149\);
 \WEIGHT_ADC:cy_analog_noconnect_1\:cy_analog_noconnect_v1_0
 	PORT MAP(noconnect=>\WEIGHT_ADC:Net_255\);
-\WEIGHT_ADC:vRef_Vdda_1\:cy_vref_v1_0
-	GENERIC MAP(guid=>"4720866E-BC14-478d-B8A0-3E44F38CADAC",
-		name=>"Vdda/2",
-		autoenable=>'1',
-		ignoresleep=>'0')
-	PORT MAP(vout=>\WEIGHT_ADC:Net_235\);
+\WEIGHT_ADC:ExtVref\:cy_psoc3_pins_v1_10
+	GENERIC MAP(id=>"3a627475-a83a-4d42-9153-9fce8a2d9b42/7e0d1a6c-1235-4546-a71b-ea6e528924f8",
+		drive_mode=>"000",
+		ibuf_enabled=>"0",
+		init_dr_st=>"0",
+		input_sync=>"1",
+		input_clk_en=>'0',
+		input_sync_mode=>"0",
+		intr_mode=>"00",
+		invert_in_clock=>'0',
+		invert_in_clock_en=>'0',
+		invert_in_reset=>'0',
+		invert_out_clock=>'0',
+		invert_out_clock_en=>'0',
+		invert_out_reset=>'0',
+		io_voltage=>"",
+		layout_mode=>"CONTIGUOUS",
+		output_conn=>"0",
+		output_sync=>"0",
+		output_clk_en=>'0',
+		output_mode=>"0",
+		output_reset=>'0',
+		output_clock_mode=>"0",
+		oe_sync=>"0",
+		oe_conn=>"0",
+		oe_reset=>'0',
+		pin_aliases=>"",
+		pin_mode=>"A",
+		por_state=>4,
+		sio_group_cnt=>0,
+		sio_hifreq=>"00000000",
+		sio_hyst=>"1",
+		sio_ibuf=>"00000000",
+		sio_info=>"00",
+		sio_obuf=>"00000000",
+		sio_refsel=>"00000000",
+		sio_vtrip=>"00000000",
+		sio_vohsel=>"00000000",
+		slew_rate=>"0",
+		spanning=>'0',
+		sw_only=>'0',
+		vtrip=>"10",
+		width=>1,
+		port_alias_required=>'0',
+		port_alias_group=>"",
+		use_annotation=>"0",
+		pa_in_clock=>-1,
+		pa_in_clock_en=>-1,
+		pa_in_reset=>-1,
+		pa_out_clock=>-1,
+		pa_out_clock_en=>-1,
+		pa_out_reset=>-1,
+		ovt_needed=>"0",
+		ovt_slew_control=>"00",
+		ovt_hyst_trim=>"0",
+		input_buffer_sel=>"00")
+	PORT MAP(oe=>(tmpOE__sda_net_0),
+		y=>(zero),
+		fb=>(\WEIGHT_ADC:tmpFB_0__ExtVref_net_0\),
+		analog=>\WEIGHT_ADC:Net_267\,
+		io=>(\WEIGHT_ADC:tmpIO_0__ExtVref_net_0\),
+		siovref=>(\WEIGHT_ADC:tmpSIOVREF__ExtVref_net_0\),
+		annotation=>(open),
+		in_clock=>zero,
+		in_clock_en=>tmpOE__sda_net_0,
+		in_reset=>zero,
+		out_clock=>zero,
+		out_clock_en=>tmpOE__sda_net_0,
+		out_reset=>zero,
+		interrupt=>\WEIGHT_ADC:tmpINTERRUPT_0__ExtVref_net_0\);
 \WEIGHT_ADC:noconnect_1\:cy_analog_noconnect_v1_0
 	PORT MAP(noconnect=>\WEIGHT_ADC:Net_368\);
 WEIGHT_ADC_Pin:cy_psoc3_pins_v1_10

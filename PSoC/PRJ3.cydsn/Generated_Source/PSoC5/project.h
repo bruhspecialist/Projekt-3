@@ -58,6 +58,8 @@
 #include "UART_PI_IntClock.h"
 #include "WEIGHT_ADC_IRQ.h"
 #include "WEIGHT_ADC_theACLK.h"
+#include "WEIGHT_ADC_ExtVref_aliases.h"
+#include "WEIGHT_ADC_ExtVref.h"
 #include "core_cm3_psoc5.h"
 #include "CyDmac.h"
 #include "CyFlash.h"

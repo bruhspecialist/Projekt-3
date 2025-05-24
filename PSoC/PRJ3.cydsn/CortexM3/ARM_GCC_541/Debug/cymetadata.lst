@@ -1,4 +1,4 @@
-ARM GAS  C:\Users\alexa\AppData\Local\Temp\ccx1ML7r.s 			page 1
+ARM GAS  C:\Users\alexa\AppData\Local\Temp\cc0Fhkn9.s 			page 1
 
 
    1              		.syntax unified
@@ -27,7 +27,7 @@ ARM GAS  C:\Users\alexa\AppData\Local\Temp\ccx1ML7r.s 			page 1
   24              		.section	.cyconfigecc,"a",%progbits
   25              		.align	2
   26              		.type	cy_meta_configecc, %object
-  27              		.size	cy_meta_configecc, 1716
+  27              		.size	cy_meta_configecc, 1720
   28              	cy_meta_configecc:
   29 0000 04       		.byte	4
   30 0001 52       		.byte	82
@@ -58,1387 +58,1387 @@ ARM GAS  C:\Users\alexa\AppData\Local\Temp\ccx1ML7r.s 			page 1
   55 001a 01       		.byte	1
   56 001b 40       		.byte	64
   57 001c 57       		.byte	87
-ARM GAS  C:\Users\alexa\AppData\Local\Temp\ccx1ML7r.s 			page 2
+ARM GAS  C:\Users\alexa\AppData\Local\Temp\cc0Fhkn9.s 			page 2
 
 
   58 001d 07       		.byte	7
   59 001e 01       		.byte	1
   60 001f 40       		.byte	64
   61 0020 01       		.byte	1
-  62 0021 09       		.byte	9
+  62 0021 0D       		.byte	13
   63 0022 01       		.byte	1
   64 0023 40       		.byte	64
-  65 0024 01       		.byte	1
-  66 0025 0D       		.byte	13
+  65 0024 4B       		.byte	75
+  66 0025 14       		.byte	20
   67 0026 01       		.byte	1
   68 0027 40       		.byte	64
   69 0028 4B       		.byte	75
-  70 0029 14       		.byte	20
+  70 0029 15       		.byte	21
   71 002a 01       		.byte	1
   72 002b 40       		.byte	64
-  73 002c 4B       		.byte	75
-  74 002d 15       		.byte	21
+  73 002c 30       		.byte	48
+  74 002d 16       		.byte	22
   75 002e 01       		.byte	1
   76 002f 40       		.byte	64
-  77 0030 30       		.byte	48
-  78 0031 16       		.byte	22
+  77 0030 56       		.byte	86
+  78 0031 17       		.byte	23
   79 0032 01       		.byte	1
   80 0033 40       		.byte	64
-  81 0034 4F       		.byte	79
-  82 0035 17       		.byte	23
+  81 0034 05       		.byte	5
+  82 0035 1B       		.byte	27
   83 0036 01       		.byte	1
   84 0037 40       		.byte	64
-  85 0038 04       		.byte	4
-  86 0039 1B       		.byte	27
+  85 0038 03       		.byte	3
+  86 0039 40       		.byte	64
   87 003a 01       		.byte	1
   88 003b 40       		.byte	64
-  89 003c 03       		.byte	3
-  90 003d 40       		.byte	64
+  89 003c 02       		.byte	2
+  90 003d 41       		.byte	65
   91 003e 01       		.byte	1
   92 003f 40       		.byte	64
-  93 0040 02       		.byte	2
-  94 0041 41       		.byte	65
+  93 0040 04       		.byte	4
+  94 0041 42       		.byte	66
   95 0042 01       		.byte	1
   96 0043 40       		.byte	64
   97 0044 04       		.byte	4
-  98 0045 42       		.byte	66
+  98 0045 43       		.byte	67
   99 0046 01       		.byte	1
  100 0047 40       		.byte	64
- 101 0048 06       		.byte	6
- 102 0049 43       		.byte	67
+ 101 0048 02       		.byte	2
+ 102 0049 44       		.byte	68
  103 004a 01       		.byte	1
  104 004b 40       		.byte	64
  105 004c 02       		.byte	2
- 106 004d 44       		.byte	68
+ 106 004d 45       		.byte	69
  107 004e 01       		.byte	1
  108 004f 40       		.byte	64
- 109 0050 02       		.byte	2
- 110 0051 45       		.byte	69
+ 109 0050 06       		.byte	6
+ 110 0051 48       		.byte	72
  111 0052 01       		.byte	1
  112 0053 40       		.byte	64
- 113 0054 02       		.byte	2
- 114 0055 46       		.byte	70
-ARM GAS  C:\Users\alexa\AppData\Local\Temp\ccx1ML7r.s 			page 3
+ 113 0054 1A       		.byte	26
+ 114 0055 49       		.byte	73
+ARM GAS  C:\Users\alexa\AppData\Local\Temp\cc0Fhkn9.s 			page 3
 
 
  115 0056 01       		.byte	1
  116 0057 40       		.byte	64
- 117 0058 01       		.byte	1
- 118 0059 47       		.byte	71
+ 117 0058 08       		.byte	8
+ 118 0059 4C       		.byte	76
  119 005a 01       		.byte	1
  120 005b 40       		.byte	64
- 121 005c 06       		.byte	6
- 122 005d 48       		.byte	72
+ 121 005c 0C       		.byte	12
+ 122 005d 4D       		.byte	77
  123 005e 01       		.byte	1
  124 005f 40       		.byte	64
- 125 0060 18       		.byte	24
- 126 0061 49       		.byte	73
+ 125 0060 04       		.byte	4
+ 126 0061 50       		.byte	80
  127 0062 01       		.byte	1
  128 0063 40       		.byte	64
- 129 0064 06       		.byte	6
- 130 0065 4C       		.byte	76
+ 129 0064 02       		.byte	2
+ 130 0065 51       		.byte	81
  131 0066 01       		.byte	1
  132 0067 40       		.byte	64
- 133 0068 0B       		.byte	11
- 134 0069 4D       		.byte	77
- 135 006a 01       		.byte	1
+ 133 0068 18       		.byte	24
+ 134 0069 80       		.byte	-128
+ 135 006a 1C       		.byte	28
  136 006b 40       		.byte	64
- 137 006c 04       		.byte	4
- 138 006d 50       		.byte	80
- 139 006e 01       		.byte	1
- 140 006f 40       		.byte	64
- 141 0070 02       		.byte	2
- 142 0071 51       		.byte	81
- 143 0072 01       		.byte	1
- 144 0073 40       		.byte	64
- 145 0074 18       		.byte	24
- 146 0075 80       		.byte	-128
- 147 0076 1C       		.byte	28
- 148 0077 40       		.byte	64
- 149 0078 60       		.byte	96
- 150 0079 02       		.byte	2
- 151 007a 64       		.byte	100
- 152 007b 43       		.byte	67
- 153 007c 84       		.byte	-124
- 154 007d 0F       		.byte	15
- 155 007e 86       		.byte	-122
- 156 007f 0F       		.byte	15
- 157 0080 87       		.byte	-121
- 158 0081 72       		.byte	114
- 159 0082 84       		.byte	-124
- 160 0083 38       		.byte	56
- 161 0084 85       		.byte	-123
- 162 0085 72       		.byte	114
- 163 0086 86       		.byte	-122
- 164 0087 38       		.byte	56
- 165 0088 87       		.byte	-121
- 166 0089 20       		.byte	32
- 167 008a E0       		.byte	-32
- 168 008b 02       		.byte	2
- 169 008c 06       		.byte	6
- 170 008d 08       		.byte	8
- 171 008e 0D       		.byte	13
-ARM GAS  C:\Users\alexa\AppData\Local\Temp\ccx1ML7r.s 			page 4
+ 137 006c 60       		.byte	96
+ 138 006d 02       		.byte	2
+ 139 006e 64       		.byte	100
+ 140 006f 43       		.byte	67
+ 141 0070 84       		.byte	-124
+ 142 0071 0F       		.byte	15
+ 143 0072 86       		.byte	-122
+ 144 0073 0F       		.byte	15
+ 145 0074 87       		.byte	-121
+ 146 0075 72       		.byte	114
+ 147 0076 84       		.byte	-124
+ 148 0077 38       		.byte	56
+ 149 0078 85       		.byte	-123
+ 150 0079 72       		.byte	114
+ 151 007a 86       		.byte	-122
+ 152 007b 38       		.byte	56
+ 153 007c 83       		.byte	-125
+ 154 007d 01       		.byte	1
+ 155 007e E0       		.byte	-32
+ 156 007f 01       		.byte	1
+ 157 0080 06       		.byte	6
+ 158 0081 08       		.byte	8
+ 159 0082 0D       		.byte	13
+ 160 0083 01       		.byte	1
+ 161 0084 16       		.byte	22
+ 162 0085 80       		.byte	-128
+ 163 0086 18       		.byte	24
+ 164 0087 53       		.byte	83
+ 165 0088 1A       		.byte	26
+ 166 0089 04       		.byte	4
+ 167 008a 1C       		.byte	28
+ 168 008b 53       		.byte	83
+ 169 008c 1E       		.byte	30
+ 170 008d 0C       		.byte	12
+ 171 008e 20       		.byte	32
+ARM GAS  C:\Users\alexa\AppData\Local\Temp\cc0Fhkn9.s 			page 4
 
 
- 172 008f 01       		.byte	1
- 173 0090 16       		.byte	22
- 174 0091 80       		.byte	-128
- 175 0092 18       		.byte	24
- 176 0093 53       		.byte	83
- 177 0094 1A       		.byte	26
- 178 0095 04       		.byte	4
- 179 0096 1C       		.byte	28
- 180 0097 53       		.byte	83
- 181 0098 1E       		.byte	30
- 182 0099 0C       		.byte	12
- 183 009a 20       		.byte	32
- 184 009b 03       		.byte	3
- 185 009c 22       		.byte	34
- 186 009d 44       		.byte	68
- 187 009e 24       		.byte	36
- 188 009f 0A       		.byte	10
- 189 00a0 26       		.byte	38
- 190 00a1 54       		.byte	84
- 191 00a2 28       		.byte	40
- 192 00a3 20       		.byte	32
- 193 00a4 2A       		.byte	42
- 194 00a5 45       		.byte	69
- 195 00a6 30       		.byte	48
+ 172 008f 03       		.byte	3
+ 173 0090 22       		.byte	34
+ 174 0091 44       		.byte	68
+ 175 0092 24       		.byte	36
+ 176 0093 0A       		.byte	10
+ 177 0094 26       		.byte	38
+ 178 0095 54       		.byte	84
+ 179 0096 28       		.byte	40
+ 180 0097 20       		.byte	32
+ 181 0098 2A       		.byte	42
+ 182 0099 45       		.byte	69
+ 183 009a 30       		.byte	48
+ 184 009b 80       		.byte	-128
+ 185 009c 32       		.byte	50
+ 186 009d 30       		.byte	48
+ 187 009e 34       		.byte	52
+ 188 009f 40       		.byte	64
+ 189 00a0 36       		.byte	54
+ 190 00a1 0F       		.byte	15
+ 191 00a2 37       		.byte	55
+ 192 00a3 01       		.byte	1
+ 193 00a4 38       		.byte	56
+ 194 00a5 08       		.byte	8
+ 195 00a6 3A       		.byte	58
  196 00a7 80       		.byte	-128
- 197 00a8 32       		.byte	50
- 198 00a9 30       		.byte	48
- 199 00aa 33       		.byte	51
- 200 00ab 01       		.byte	1
- 201 00ac 34       		.byte	52
- 202 00ad 40       		.byte	64
- 203 00ae 36       		.byte	54
- 204 00af 0F       		.byte	15
- 205 00b0 38       		.byte	56
- 206 00b1 08       		.byte	8
- 207 00b2 3A       		.byte	58
- 208 00b3 80       		.byte	-128
- 209 00b4 3E       		.byte	62
- 210 00b5 10       		.byte	16
- 211 00b6 3F       		.byte	63
- 212 00b7 04       		.byte	4
- 213 00b8 40       		.byte	64
- 214 00b9 53       		.byte	83
- 215 00ba 41       		.byte	65
- 216 00bb 02       		.byte	2
- 217 00bc 46       		.byte	70
- 218 00bd EC       		.byte	-20
- 219 00be 47       		.byte	71
- 220 00bf 0B       		.byte	11
- 221 00c0 48       		.byte	72
- 222 00c1 1C       		.byte	28
- 223 00c2 49       		.byte	73
- 224 00c3 FF       		.byte	-1
- 225 00c4 4A       		.byte	74
- 226 00c5 FF       		.byte	-1
- 227 00c6 4B       		.byte	75
- 228 00c7 FF       		.byte	-1
-ARM GAS  C:\Users\alexa\AppData\Local\Temp\ccx1ML7r.s 			page 5
+ 197 00a8 3E       		.byte	62
+ 198 00a9 10       		.byte	16
+ 199 00aa 3F       		.byte	63
+ 200 00ab 40       		.byte	64
+ 201 00ac 40       		.byte	64
+ 202 00ad 53       		.byte	83
+ 203 00ae 41       		.byte	65
+ 204 00af 02       		.byte	2
+ 205 00b0 46       		.byte	70
+ 206 00b1 EC       		.byte	-20
+ 207 00b2 47       		.byte	71
+ 208 00b3 0B       		.byte	11
+ 209 00b4 48       		.byte	72
+ 210 00b5 1C       		.byte	28
+ 211 00b6 49       		.byte	73
+ 212 00b7 FF       		.byte	-1
+ 213 00b8 4A       		.byte	74
+ 214 00b9 FF       		.byte	-1
+ 215 00ba 4B       		.byte	75
+ 216 00bb FF       		.byte	-1
+ 217 00bc 4E       		.byte	78
+ 218 00bd F0       		.byte	-16
+ 219 00be 4F       		.byte	79
+ 220 00bf 44       		.byte	68
+ 221 00c0 50       		.byte	80
+ 222 00c1 0C       		.byte	12
+ 223 00c2 54       		.byte	84
+ 224 00c3 01       		.byte	1
+ 225 00c4 58       		.byte	88
+ 226 00c5 04       		.byte	4
+ 227 00c6 59       		.byte	89
+ 228 00c7 04       		.byte	4
+ARM GAS  C:\Users\alexa\AppData\Local\Temp\cc0Fhkn9.s 			page 5
 
 
- 229 00c8 4E       		.byte	78
- 230 00c9 F0       		.byte	-16
- 231 00ca 4F       		.byte	79
- 232 00cb 44       		.byte	68
- 233 00cc 50       		.byte	80
- 234 00cd 0C       		.byte	12
- 235 00ce 54       		.byte	84
- 236 00cf 01       		.byte	1
- 237 00d0 58       		.byte	88
- 238 00d1 04       		.byte	4
- 239 00d2 59       		.byte	89
- 240 00d3 04       		.byte	4
- 241 00d4 5A       		.byte	90
- 242 00d5 04       		.byte	4
- 243 00d6 5B       		.byte	91
- 244 00d7 04       		.byte	4
- 245 00d8 5F       		.byte	95
- 246 00d9 01       		.byte	1
- 247 00da 66       		.byte	102
- 248 00db C0       		.byte	-64
- 249 00dc 6A       		.byte	106
- 250 00dd 40       		.byte	64
- 251 00de 6B       		.byte	107
- 252 00df 02       		.byte	2
- 253 00e0 83       		.byte	-125
- 254 00e1 08       		.byte	8
- 255 00e2 84       		.byte	-124
- 256 00e3 0C       		.byte	12
- 257 00e4 86       		.byte	-122
- 258 00e5 71       		.byte	113
- 259 00e6 87       		.byte	-121
- 260 00e7 0C       		.byte	12
- 261 00e8 8A       		.byte	-118
+ 229 00c8 5A       		.byte	90
+ 230 00c9 04       		.byte	4
+ 231 00ca 5B       		.byte	91
+ 232 00cb 04       		.byte	4
+ 233 00cc 5F       		.byte	95
+ 234 00cd 01       		.byte	1
+ 235 00ce 66       		.byte	102
+ 236 00cf C0       		.byte	-64
+ 237 00d0 6A       		.byte	106
+ 238 00d1 40       		.byte	64
+ 239 00d2 6B       		.byte	107
+ 240 00d3 02       		.byte	2
+ 241 00d4 83       		.byte	-125
+ 242 00d5 08       		.byte	8
+ 243 00d6 84       		.byte	-124
+ 244 00d7 0C       		.byte	12
+ 245 00d8 86       		.byte	-122
+ 246 00d9 71       		.byte	113
+ 247 00da 87       		.byte	-121
+ 248 00db 0C       		.byte	12
+ 249 00dc 8A       		.byte	-118
+ 250 00dd 20       		.byte	32
+ 251 00de 8B       		.byte	-117
+ 252 00df 43       		.byte	67
+ 253 00e0 8D       		.byte	-115
+ 254 00e1 C1       		.byte	-63
+ 255 00e2 8E       		.byte	-114
+ 256 00e3 03       		.byte	3
+ 257 00e4 8F       		.byte	-113
+ 258 00e5 06       		.byte	6
+ 259 00e6 90       		.byte	-112
+ 260 00e7 10       		.byte	16
+ 261 00e8 91       		.byte	-111
  262 00e9 20       		.byte	32
- 263 00ea 8B       		.byte	-117
- 264 00eb 43       		.byte	67
- 265 00ec 8D       		.byte	-115
- 266 00ed C1       		.byte	-63
- 267 00ee 8E       		.byte	-114
- 268 00ef 03       		.byte	3
- 269 00f0 8F       		.byte	-113
- 270 00f1 06       		.byte	6
- 271 00f2 90       		.byte	-112
- 272 00f3 10       		.byte	16
- 273 00f4 91       		.byte	-111
- 274 00f5 20       		.byte	32
- 275 00f6 92       		.byte	-110
- 276 00f7 AC       		.byte	-84
- 277 00f8 94       		.byte	-108
- 278 00f9 DC       		.byte	-36
- 279 00fa 95       		.byte	-107
- 280 00fb 30       		.byte	48
- 281 00fc 96       		.byte	-106
- 282 00fd 22       		.byte	34
- 283 00fe 98       		.byte	-104
- 284 00ff 09       		.byte	9
- 285 0100 99       		.byte	-103
-ARM GAS  C:\Users\alexa\AppData\Local\Temp\ccx1ML7r.s 			page 6
+ 263 00ea 92       		.byte	-110
+ 264 00eb AC       		.byte	-84
+ 265 00ec 94       		.byte	-108
+ 266 00ed DC       		.byte	-36
+ 267 00ee 95       		.byte	-107
+ 268 00ef 30       		.byte	48
+ 269 00f0 96       		.byte	-106
+ 270 00f1 22       		.byte	34
+ 271 00f2 98       		.byte	-104
+ 272 00f3 09       		.byte	9
+ 273 00f4 99       		.byte	-103
+ 274 00f5 8C       		.byte	-116
+ 275 00f6 9A       		.byte	-102
+ 276 00f7 D0       		.byte	-48
+ 277 00f8 9B       		.byte	-101
+ 278 00f9 03       		.byte	3
+ 279 00fa 9F       		.byte	-97
+ 280 00fb 10       		.byte	16
+ 281 00fc A4       		.byte	-92
+ 282 00fd 14       		.byte	20
+ 283 00fe A5       		.byte	-91
+ 284 00ff C1       		.byte	-63
+ 285 0100 A7       		.byte	-89
+ARM GAS  C:\Users\alexa\AppData\Local\Temp\cc0Fhkn9.s 			page 6
 
 
- 286 0101 8C       		.byte	-116
- 287 0102 9A       		.byte	-102
- 288 0103 D0       		.byte	-48
- 289 0104 9B       		.byte	-101
- 290 0105 03       		.byte	3
- 291 0106 9F       		.byte	-97
- 292 0107 10       		.byte	16
- 293 0108 A4       		.byte	-92
- 294 0109 14       		.byte	20
- 295 010a A5       		.byte	-91
- 296 010b C1       		.byte	-63
- 297 010c A7       		.byte	-89
- 298 010d 0E       		.byte	14
- 299 010e A9       		.byte	-87
- 300 010f 30       		.byte	48
- 301 0110 AC       		.byte	-84
- 302 0111 10       		.byte	16
- 303 0112 AE       		.byte	-82
- 304 0113 40       		.byte	64
- 305 0114 B0       		.byte	-80
- 306 0115 1F       		.byte	31
- 307 0116 B3       		.byte	-77
- 308 0117 30       		.byte	48
- 309 0118 B4       		.byte	-76
- 310 0119 E0       		.byte	-32
- 311 011a B5       		.byte	-75
- 312 011b 0F       		.byte	15
- 313 011c B7       		.byte	-73
- 314 011d C0       		.byte	-64
- 315 011e B9       		.byte	-71
- 316 011f 88       		.byte	-120
- 317 0120 BA       		.byte	-70
- 318 0121 20       		.byte	32
- 319 0122 BB       		.byte	-69
- 320 0123 20       		.byte	32
- 321 0124 BF       		.byte	-65
- 322 0125 44       		.byte	68
- 323 0126 C0       		.byte	-64
- 324 0127 01       		.byte	1
- 325 0128 C7       		.byte	-57
- 326 0129 40       		.byte	64
- 327 012a C9       		.byte	-55
- 328 012b FF       		.byte	-1
- 329 012c CA       		.byte	-54
- 330 012d 07       		.byte	7
- 331 012e CB       		.byte	-53
- 332 012f FF       		.byte	-1
- 333 0130 CC       		.byte	-52
- 334 0131 40       		.byte	64
- 335 0132 CD       		.byte	-51
- 336 0133 20       		.byte	32
- 337 0134 CE       		.byte	-50
- 338 0135 F0       		.byte	-16
- 339 0136 CF       		.byte	-49
- 340 0137 05       		.byte	5
- 341 0138 D0       		.byte	-48
- 342 0139 08       		.byte	8
-ARM GAS  C:\Users\alexa\AppData\Local\Temp\ccx1ML7r.s 			page 7
+ 286 0101 0E       		.byte	14
+ 287 0102 A9       		.byte	-87
+ 288 0103 30       		.byte	48
+ 289 0104 AC       		.byte	-84
+ 290 0105 10       		.byte	16
+ 291 0106 AE       		.byte	-82
+ 292 0107 40       		.byte	64
+ 293 0108 B0       		.byte	-80
+ 294 0109 1F       		.byte	31
+ 295 010a B3       		.byte	-77
+ 296 010b 30       		.byte	48
+ 297 010c B4       		.byte	-76
+ 298 010d E0       		.byte	-32
+ 299 010e B5       		.byte	-75
+ 300 010f 0F       		.byte	15
+ 301 0110 B7       		.byte	-73
+ 302 0111 C0       		.byte	-64
+ 303 0112 B9       		.byte	-71
+ 304 0113 88       		.byte	-120
+ 305 0114 BA       		.byte	-70
+ 306 0115 20       		.byte	32
+ 307 0116 BB       		.byte	-69
+ 308 0117 20       		.byte	32
+ 309 0118 BF       		.byte	-65
+ 310 0119 44       		.byte	68
+ 311 011a C0       		.byte	-64
+ 312 011b 01       		.byte	1
+ 313 011c C7       		.byte	-57
+ 314 011d 40       		.byte	64
+ 315 011e C9       		.byte	-55
+ 316 011f FF       		.byte	-1
+ 317 0120 CA       		.byte	-54
+ 318 0121 07       		.byte	7
+ 319 0122 CB       		.byte	-53
+ 320 0123 FF       		.byte	-1
+ 321 0124 CC       		.byte	-52
+ 322 0125 40       		.byte	64
+ 323 0126 CD       		.byte	-51
+ 324 0127 20       		.byte	32
+ 325 0128 CE       		.byte	-50
+ 326 0129 F0       		.byte	-16
+ 327 012a CF       		.byte	-49
+ 328 012b 05       		.byte	5
+ 329 012c D0       		.byte	-48
+ 330 012d 08       		.byte	8
+ 331 012e D8       		.byte	-40
+ 332 012f 04       		.byte	4
+ 333 0130 D9       		.byte	-39
+ 334 0131 04       		.byte	4
+ 335 0132 DA       		.byte	-38
+ 336 0133 04       		.byte	4
+ 337 0134 DF       		.byte	-33
+ 338 0135 01       		.byte	1
+ 339 0136 E0       		.byte	-32
+ 340 0137 40       		.byte	64
+ 341 0138 E1       		.byte	-31
+ 342 0139 A8       		.byte	-88
+ARM GAS  C:\Users\alexa\AppData\Local\Temp\cc0Fhkn9.s 			page 7
 
 
- 343 013a D8       		.byte	-40
- 344 013b 04       		.byte	4
- 345 013c D9       		.byte	-39
- 346 013d 04       		.byte	4
- 347 013e DA       		.byte	-38
- 348 013f 04       		.byte	4
- 349 0140 DF       		.byte	-33
- 350 0141 01       		.byte	1
- 351 0142 E0       		.byte	-32
- 352 0143 40       		.byte	64
- 353 0144 E1       		.byte	-31
- 354 0145 A8       		.byte	-88
- 355 0146 E2       		.byte	-30
- 356 0147 40       		.byte	64
- 357 0148 E3       		.byte	-29
+ 343 013a E2       		.byte	-30
+ 344 013b 40       		.byte	64
+ 345 013c E3       		.byte	-29
+ 346 013d 20       		.byte	32
+ 347 013e 01       		.byte	1
+ 348 013f 08       		.byte	8
+ 349 0140 04       		.byte	4
+ 350 0141 44       		.byte	68
+ 351 0142 07       		.byte	7
+ 352 0143 04       		.byte	4
+ 353 0144 09       		.byte	9
+ 354 0145 08       		.byte	8
+ 355 0146 0A       		.byte	10
+ 356 0147 06       		.byte	6
+ 357 0148 0E       		.byte	14
  358 0149 20       		.byte	32
- 359 014a 01       		.byte	1
- 360 014b 08       		.byte	8
- 361 014c 04       		.byte	4
- 362 014d 44       		.byte	68
- 363 014e 07       		.byte	7
- 364 014f 04       		.byte	4
- 365 0150 09       		.byte	9
- 366 0151 08       		.byte	8
- 367 0152 0A       		.byte	10
- 368 0153 06       		.byte	6
- 369 0154 0E       		.byte	14
- 370 0155 20       		.byte	32
- 371 0156 0F       		.byte	15
- 372 0157 88       		.byte	-120
- 373 0158 10       		.byte	16
- 374 0159 80       		.byte	-128
- 375 015a 11       		.byte	17
- 376 015b 20       		.byte	32
- 377 015c 12       		.byte	18
- 378 015d 20       		.byte	32
- 379 015e 15       		.byte	21
- 380 015f 08       		.byte	8
- 381 0160 16       		.byte	22
- 382 0161 01       		.byte	1
- 383 0162 18       		.byte	24
- 384 0163 80       		.byte	-128
- 385 0164 19       		.byte	25
- 386 0165 28       		.byte	40
- 387 0166 1A       		.byte	26
- 388 0167 02       		.byte	2
- 389 0168 1B       		.byte	27
- 390 0169 44       		.byte	68
- 391 016a 1C       		.byte	28
- 392 016b 44       		.byte	68
- 393 016c 1E       		.byte	30
- 394 016d 04       		.byte	4
- 395 016e 1F       		.byte	31
- 396 016f 10       		.byte	16
- 397 0170 23       		.byte	35
- 398 0171 20       		.byte	32
- 399 0172 25       		.byte	37
-ARM GAS  C:\Users\alexa\AppData\Local\Temp\ccx1ML7r.s 			page 8
+ 359 014a 0F       		.byte	15
+ 360 014b 88       		.byte	-120
+ 361 014c 10       		.byte	16
+ 362 014d 80       		.byte	-128
+ 363 014e 11       		.byte	17
+ 364 014f 20       		.byte	32
+ 365 0150 12       		.byte	18
+ 366 0151 20       		.byte	32
+ 367 0152 15       		.byte	21
+ 368 0153 08       		.byte	8
+ 369 0154 16       		.byte	22
+ 370 0155 01       		.byte	1
+ 371 0156 18       		.byte	24
+ 372 0157 80       		.byte	-128
+ 373 0158 19       		.byte	25
+ 374 0159 28       		.byte	40
+ 375 015a 1A       		.byte	26
+ 376 015b 02       		.byte	2
+ 377 015c 1B       		.byte	27
+ 378 015d 44       		.byte	68
+ 379 015e 1C       		.byte	28
+ 380 015f 44       		.byte	68
+ 381 0160 1E       		.byte	30
+ 382 0161 04       		.byte	4
+ 383 0162 1F       		.byte	31
+ 384 0163 10       		.byte	16
+ 385 0164 23       		.byte	35
+ 386 0165 01       		.byte	1
+ 387 0166 25       		.byte	37
+ 388 0167 40       		.byte	64
+ 389 0168 26       		.byte	38
+ 390 0169 38       		.byte	56
+ 391 016a 2F       		.byte	47
+ 392 016b 14       		.byte	20
+ 393 016c 35       		.byte	53
+ 394 016d 01       		.byte	1
+ 395 016e 36       		.byte	54
+ 396 016f A0       		.byte	-96
+ 397 0170 37       		.byte	55
+ 398 0171 08       		.byte	8
+ 399 0172 38       		.byte	56
+ARM GAS  C:\Users\alexa\AppData\Local\Temp\cc0Fhkn9.s 			page 8
 
 
  400 0173 40       		.byte	64
- 401 0174 26       		.byte	38
- 402 0175 38       		.byte	56
- 403 0176 2F       		.byte	47
- 404 0177 14       		.byte	20
- 405 0178 35       		.byte	53
- 406 0179 01       		.byte	1
- 407 017a 36       		.byte	54
- 408 017b A0       		.byte	-96
- 409 017c 37       		.byte	55
- 410 017d 08       		.byte	8
- 411 017e 38       		.byte	56
- 412 017f 40       		.byte	64
- 413 0180 3F       		.byte	63
- 414 0181 EA       		.byte	-22
- 415 0182 42       		.byte	66
- 416 0183 24       		.byte	36
- 417 0184 43       		.byte	67
- 418 0185 04       		.byte	4
- 419 0186 45       		.byte	69
- 420 0187 40       		.byte	64
- 421 0188 4B       		.byte	75
- 422 0189 40       		.byte	64
- 423 018a 50       		.byte	80
- 424 018b 80       		.byte	-128
- 425 018c 51       		.byte	81
- 426 018d 04       		.byte	4
- 427 018e 52       		.byte	82
+ 401 0174 3F       		.byte	63
+ 402 0175 EA       		.byte	-22
+ 403 0176 42       		.byte	66
+ 404 0177 24       		.byte	36
+ 405 0178 43       		.byte	67
+ 406 0179 04       		.byte	4
+ 407 017a 45       		.byte	69
+ 408 017b 40       		.byte	64
+ 409 017c 4B       		.byte	75
+ 410 017d 40       		.byte	64
+ 411 017e 50       		.byte	80
+ 412 017f 80       		.byte	-128
+ 413 0180 51       		.byte	81
+ 414 0181 04       		.byte	4
+ 415 0182 52       		.byte	82
+ 416 0183 10       		.byte	16
+ 417 0184 55       		.byte	85
+ 418 0185 10       		.byte	16
+ 419 0186 56       		.byte	86
+ 420 0187 21       		.byte	33
+ 421 0188 57       		.byte	87
+ 422 0189 11       		.byte	17
+ 423 018a 58       		.byte	88
+ 424 018b 81       		.byte	-127
+ 425 018c 5A       		.byte	90
+ 426 018d 08       		.byte	8
+ 427 018e 5B       		.byte	91
  428 018f 10       		.byte	16
- 429 0190 55       		.byte	85
- 430 0191 10       		.byte	16
- 431 0192 56       		.byte	86
- 432 0193 21       		.byte	33
- 433 0194 57       		.byte	87
- 434 0195 11       		.byte	17
- 435 0196 58       		.byte	88
- 436 0197 81       		.byte	-127
- 437 0198 5A       		.byte	90
- 438 0199 08       		.byte	8
- 439 019a 5B       		.byte	91
- 440 019b 10       		.byte	16
- 441 019c 9F       		.byte	-97
- 442 019d 20       		.byte	32
- 443 019e C0       		.byte	-64
- 444 019f E4       		.byte	-28
- 445 01a0 C2       		.byte	-62
- 446 01a1 77       		.byte	119
- 447 01a2 C4       		.byte	-60
- 448 01a3 AE       		.byte	-82
- 449 01a4 CA       		.byte	-54
- 450 01a5 60       		.byte	96
- 451 01a6 CC       		.byte	-52
- 452 01a7 F0       		.byte	-16
- 453 01a8 CE       		.byte	-50
- 454 01a9 F8       		.byte	-8
- 455 01aa D0       		.byte	-48
- 456 01ab 16       		.byte	22
-ARM GAS  C:\Users\alexa\AppData\Local\Temp\ccx1ML7r.s 			page 9
+ 429 0190 97       		.byte	-105
+ 430 0191 01       		.byte	1
+ 431 0192 C0       		.byte	-64
+ 432 0193 E4       		.byte	-28
+ 433 0194 C2       		.byte	-62
+ 434 0195 77       		.byte	119
+ 435 0196 C4       		.byte	-60
+ 436 0197 AE       		.byte	-82
+ 437 0198 CA       		.byte	-54
+ 438 0199 60       		.byte	96
+ 439 019a CC       		.byte	-52
+ 440 019b F0       		.byte	-16
+ 441 019c CE       		.byte	-50
+ 442 019d F8       		.byte	-8
+ 443 019e D0       		.byte	-48
+ 444 019f 16       		.byte	22
+ 445 01a0 D2       		.byte	-46
+ 446 01a1 08       		.byte	8
+ 447 01a2 D6       		.byte	-42
+ 448 01a3 0F       		.byte	15
+ 449 01a4 02       		.byte	2
+ 450 01a5 04       		.byte	4
+ 451 01a6 04       		.byte	4
+ 452 01a7 64       		.byte	100
+ 453 01a8 06       		.byte	6
+ 454 01a9 88       		.byte	-120
+ 455 01aa 08       		.byte	8
+ 456 01ab 01       		.byte	1
+ARM GAS  C:\Users\alexa\AppData\Local\Temp\cc0Fhkn9.s 			page 9
 
 
- 457 01ac D2       		.byte	-46
- 458 01ad 08       		.byte	8
- 459 01ae D6       		.byte	-42
- 460 01af 0F       		.byte	15
- 461 01b0 02       		.byte	2
- 462 01b1 04       		.byte	4
- 463 01b2 04       		.byte	4
- 464 01b3 64       		.byte	100
- 465 01b4 06       		.byte	6
- 466 01b5 88       		.byte	-120
- 467 01b6 08       		.byte	8
- 468 01b7 01       		.byte	1
- 469 01b8 0A       		.byte	10
- 470 01b9 18       		.byte	24
- 471 01ba 10       		.byte	16
- 472 01bb 02       		.byte	2
- 473 01bc 14       		.byte	20
- 474 01bd 80       		.byte	-128
- 475 01be 1C       		.byte	28
- 476 01bf 48       		.byte	72
- 477 01c0 1E       		.byte	30
- 478 01c1 80       		.byte	-128
- 479 01c2 20       		.byte	32
- 480 01c3 A0       		.byte	-96
- 481 01c4 24       		.byte	36
- 482 01c5 84       		.byte	-124
- 483 01c6 26       		.byte	38
- 484 01c7 60       		.byte	96
- 485 01c8 2A       		.byte	42
+ 457 01ac 0A       		.byte	10
+ 458 01ad 18       		.byte	24
+ 459 01ae 10       		.byte	16
+ 460 01af 02       		.byte	2
+ 461 01b0 14       		.byte	20
+ 462 01b1 80       		.byte	-128
+ 463 01b2 1C       		.byte	28
+ 464 01b3 48       		.byte	72
+ 465 01b4 1E       		.byte	30
+ 466 01b5 80       		.byte	-128
+ 467 01b6 20       		.byte	32
+ 468 01b7 A0       		.byte	-96
+ 469 01b8 24       		.byte	36
+ 470 01b9 84       		.byte	-124
+ 471 01ba 26       		.byte	38
+ 472 01bb 60       		.byte	96
+ 473 01bc 2A       		.byte	42
+ 474 01bd 04       		.byte	4
+ 475 01be 2C       		.byte	44
+ 476 01bf E0       		.byte	-32
+ 477 01c0 2E       		.byte	46
+ 478 01c1 14       		.byte	20
+ 479 01c2 30       		.byte	48
+ 480 01c3 01       		.byte	1
+ 481 01c4 32       		.byte	50
+ 482 01c5 F8       		.byte	-8
+ 483 01c6 34       		.byte	52
+ 484 01c7 02       		.byte	2
+ 485 01c8 36       		.byte	54
  486 01c9 04       		.byte	4
- 487 01ca 2C       		.byte	44
- 488 01cb E0       		.byte	-32
- 489 01cc 2E       		.byte	46
- 490 01cd 14       		.byte	20
- 491 01ce 30       		.byte	48
- 492 01cf 01       		.byte	1
- 493 01d0 32       		.byte	50
- 494 01d1 F8       		.byte	-8
- 495 01d2 34       		.byte	52
- 496 01d3 02       		.byte	2
- 497 01d4 36       		.byte	54
- 498 01d5 04       		.byte	4
- 499 01d6 3E       		.byte	62
- 500 01d7 51       		.byte	81
- 501 01d8 40       		.byte	64
- 502 01d9 34       		.byte	52
- 503 01da 41       		.byte	65
- 504 01db 02       		.byte	2
- 505 01dc 46       		.byte	70
- 506 01dd 0B       		.byte	11
- 507 01de 47       		.byte	71
- 508 01df EC       		.byte	-20
- 509 01e0 48       		.byte	72
- 510 01e1 34       		.byte	52
- 511 01e2 49       		.byte	73
- 512 01e3 FF       		.byte	-1
- 513 01e4 4A       		.byte	74
-ARM GAS  C:\Users\alexa\AppData\Local\Temp\ccx1ML7r.s 			page 10
+ 487 01ca 3E       		.byte	62
+ 488 01cb 51       		.byte	81
+ 489 01cc 40       		.byte	64
+ 490 01cd 34       		.byte	52
+ 491 01ce 41       		.byte	65
+ 492 01cf 02       		.byte	2
+ 493 01d0 46       		.byte	70
+ 494 01d1 0B       		.byte	11
+ 495 01d2 47       		.byte	71
+ 496 01d3 EC       		.byte	-20
+ 497 01d4 48       		.byte	72
+ 498 01d5 34       		.byte	52
+ 499 01d6 49       		.byte	73
+ 500 01d7 FF       		.byte	-1
+ 501 01d8 4A       		.byte	74
+ 502 01d9 FF       		.byte	-1
+ 503 01da 4B       		.byte	75
+ 504 01db FF       		.byte	-1
+ 505 01dc 4E       		.byte	78
+ 506 01dd F0       		.byte	-16
+ 507 01de 4F       		.byte	79
+ 508 01df 44       		.byte	68
+ 509 01e0 50       		.byte	80
+ 510 01e1 0C       		.byte	12
+ 511 01e2 54       		.byte	84
+ 512 01e3 01       		.byte	1
+ 513 01e4 58       		.byte	88
+ARM GAS  C:\Users\alexa\AppData\Local\Temp\cc0Fhkn9.s 			page 10
 
 
- 514 01e5 FF       		.byte	-1
- 515 01e6 4B       		.byte	75
- 516 01e7 FF       		.byte	-1
- 517 01e8 4E       		.byte	78
- 518 01e9 F0       		.byte	-16
- 519 01ea 4F       		.byte	79
- 520 01eb 44       		.byte	68
- 521 01ec 50       		.byte	80
- 522 01ed 0C       		.byte	12
- 523 01ee 54       		.byte	84
+ 514 01e5 04       		.byte	4
+ 515 01e6 5A       		.byte	90
+ 516 01e7 04       		.byte	4
+ 517 01e8 5B       		.byte	91
+ 518 01e9 04       		.byte	4
+ 519 01ea 5C       		.byte	92
+ 520 01eb 01       		.byte	1
+ 521 01ec 5D       		.byte	93
+ 522 01ed 11       		.byte	17
+ 523 01ee 5F       		.byte	95
  524 01ef 01       		.byte	1
- 525 01f0 58       		.byte	88
- 526 01f1 04       		.byte	4
- 527 01f2 5A       		.byte	90
- 528 01f3 04       		.byte	4
- 529 01f4 5B       		.byte	91
- 530 01f5 04       		.byte	4
- 531 01f6 5C       		.byte	92
- 532 01f7 01       		.byte	1
- 533 01f8 5D       		.byte	93
- 534 01f9 11       		.byte	17
- 535 01fa 5F       		.byte	95
- 536 01fb 01       		.byte	1
- 537 01fc 66       		.byte	102
- 538 01fd C0       		.byte	-64
- 539 01fe 6A       		.byte	106
- 540 01ff 40       		.byte	64
- 541 0200 6B       		.byte	107
- 542 0201 02       		.byte	2
- 543 0202 81       		.byte	-127
- 544 0203 FF       		.byte	-1
- 545 0204 84       		.byte	-124
- 546 0205 7F       		.byte	127
- 547 0206 85       		.byte	-123
- 548 0207 08       		.byte	8
- 549 0208 8A       		.byte	-118
- 550 0209 63       		.byte	99
- 551 020a 8B       		.byte	-117
- 552 020b 63       		.byte	99
- 553 020c 8C       		.byte	-116
- 554 020d 1F       		.byte	31
- 555 020e 8E       		.byte	-114
- 556 020f 60       		.byte	96
- 557 0210 8F       		.byte	-113
- 558 0211 04       		.byte	4
- 559 0212 90       		.byte	-112
- 560 0213 5C       		.byte	92
- 561 0214 91       		.byte	-111
- 562 0215 1C       		.byte	28
- 563 0216 92       		.byte	-110
- 564 0217 23       		.byte	35
- 565 0218 93       		.byte	-109
- 566 0219 E1       		.byte	-31
- 567 021a 94       		.byte	-108
- 568 021b 01       		.byte	1
- 569 021c 95       		.byte	-107
- 570 021d 24       		.byte	36
-ARM GAS  C:\Users\alexa\AppData\Local\Temp\ccx1ML7r.s 			page 11
+ 525 01f0 66       		.byte	102
+ 526 01f1 C0       		.byte	-64
+ 527 01f2 6A       		.byte	106
+ 528 01f3 40       		.byte	64
+ 529 01f4 6B       		.byte	107
+ 530 01f5 02       		.byte	2
+ 531 01f6 81       		.byte	-127
+ 532 01f7 FF       		.byte	-1
+ 533 01f8 84       		.byte	-124
+ 534 01f9 7F       		.byte	127
+ 535 01fa 85       		.byte	-123
+ 536 01fb 08       		.byte	8
+ 537 01fc 8A       		.byte	-118
+ 538 01fd 63       		.byte	99
+ 539 01fe 8B       		.byte	-117
+ 540 01ff 63       		.byte	99
+ 541 0200 8C       		.byte	-116
+ 542 0201 1F       		.byte	31
+ 543 0202 8E       		.byte	-114
+ 544 0203 60       		.byte	96
+ 545 0204 8F       		.byte	-113
+ 546 0205 04       		.byte	4
+ 547 0206 90       		.byte	-112
+ 548 0207 5C       		.byte	92
+ 549 0208 91       		.byte	-111
+ 550 0209 1C       		.byte	28
+ 551 020a 92       		.byte	-110
+ 552 020b 23       		.byte	35
+ 553 020c 93       		.byte	-109
+ 554 020d E1       		.byte	-31
+ 555 020e 94       		.byte	-108
+ 556 020f 01       		.byte	1
+ 557 0210 95       		.byte	-107
+ 558 0211 24       		.byte	36
+ 559 0212 98       		.byte	-104
+ 560 0213 73       		.byte	115
+ 561 0214 99       		.byte	-103
+ 562 0215 60       		.byte	96
+ 563 0216 9A       		.byte	-102
+ 564 0217 0C       		.byte	12
+ 565 0218 9C       		.byte	-100
+ 566 0219 03       		.byte	3
+ 567 021a 9D       		.byte	-99
+ 568 021b 1C       		.byte	28
+ 569 021c 9F       		.byte	-97
+ 570 021d E2       		.byte	-30
+ARM GAS  C:\Users\alexa\AppData\Local\Temp\cc0Fhkn9.s 			page 11
 
 
- 571 021e 98       		.byte	-104
- 572 021f 73       		.byte	115
- 573 0220 99       		.byte	-103
- 574 0221 60       		.byte	96
- 575 0222 9A       		.byte	-102
- 576 0223 0C       		.byte	12
- 577 0224 9C       		.byte	-100
- 578 0225 03       		.byte	3
- 579 0226 9D       		.byte	-99
- 580 0227 1C       		.byte	28
- 581 0228 9F       		.byte	-97
- 582 0229 E2       		.byte	-30
- 583 022a A0       		.byte	-96
- 584 022b 08       		.byte	8
- 585 022c A1       		.byte	-95
- 586 022d 10       		.byte	16
- 587 022e A4       		.byte	-92
- 588 022f 04       		.byte	4
- 589 0230 A5       		.byte	-91
- 590 0231 18       		.byte	24
- 591 0232 A8       		.byte	-88
- 592 0233 0C       		.byte	12
- 593 0234 A9       		.byte	-87
- 594 0235 E7       		.byte	-25
- 595 0236 AB       		.byte	-85
- 596 0237 18       		.byte	24
- 597 0238 AC       		.byte	-84
- 598 0239 02       		.byte	2
- 599 023a AD       		.byte	-83
- 600 023b 40       		.byte	64
- 601 023c B0       		.byte	-80
- 602 023d 2C       		.byte	44
- 603 023e B1       		.byte	-79
- 604 023f 60       		.byte	96
- 605 0240 B2       		.byte	-78
- 606 0241 10       		.byte	16
- 607 0242 B3       		.byte	-77
+ 571 021e A0       		.byte	-96
+ 572 021f 08       		.byte	8
+ 573 0220 A1       		.byte	-95
+ 574 0221 10       		.byte	16
+ 575 0222 A4       		.byte	-92
+ 576 0223 04       		.byte	4
+ 577 0224 A5       		.byte	-91
+ 578 0225 18       		.byte	24
+ 579 0226 A8       		.byte	-88
+ 580 0227 0C       		.byte	12
+ 581 0228 A9       		.byte	-87
+ 582 0229 E7       		.byte	-25
+ 583 022a AB       		.byte	-85
+ 584 022b 18       		.byte	24
+ 585 022c AC       		.byte	-84
+ 586 022d 02       		.byte	2
+ 587 022e AD       		.byte	-83
+ 588 022f 40       		.byte	64
+ 589 0230 B0       		.byte	-80
+ 590 0231 2C       		.byte	44
+ 591 0232 B1       		.byte	-79
+ 592 0233 60       		.byte	96
+ 593 0234 B2       		.byte	-78
+ 594 0235 10       		.byte	16
+ 595 0236 B3       		.byte	-77
+ 596 0237 80       		.byte	-128
+ 597 0238 B4       		.byte	-76
+ 598 0239 0F       		.byte	15
+ 599 023a B6       		.byte	-74
+ 600 023b 4C       		.byte	76
+ 601 023c B7       		.byte	-73
+ 602 023d 1F       		.byte	31
+ 603 023e B9       		.byte	-71
+ 604 023f 08       		.byte	8
+ 605 0240 BA       		.byte	-70
+ 606 0241 22       		.byte	34
+ 607 0242 BB       		.byte	-69
  608 0243 80       		.byte	-128
- 609 0244 B4       		.byte	-76
- 610 0245 0F       		.byte	15
- 611 0246 B6       		.byte	-74
- 612 0247 4C       		.byte	76
- 613 0248 B7       		.byte	-73
- 614 0249 1F       		.byte	31
- 615 024a B9       		.byte	-71
- 616 024b 08       		.byte	8
- 617 024c BA       		.byte	-70
- 618 024d 22       		.byte	34
- 619 024e BB       		.byte	-69
- 620 024f 80       		.byte	-128
- 621 0250 BE       		.byte	-66
- 622 0251 04       		.byte	4
- 623 0252 C0       		.byte	-64
- 624 0253 06       		.byte	6
- 625 0254 C7       		.byte	-57
- 626 0255 04       		.byte	4
- 627 0256 C9       		.byte	-55
-ARM GAS  C:\Users\alexa\AppData\Local\Temp\ccx1ML7r.s 			page 12
+ 609 0244 BE       		.byte	-66
+ 610 0245 04       		.byte	4
+ 611 0246 C0       		.byte	-64
+ 612 0247 06       		.byte	6
+ 613 0248 C7       		.byte	-57
+ 614 0249 04       		.byte	4
+ 615 024a C9       		.byte	-55
+ 616 024b FF       		.byte	-1
+ 617 024c CA       		.byte	-54
+ 618 024d 07       		.byte	7
+ 619 024e CB       		.byte	-53
+ 620 024f FF       		.byte	-1
+ 621 0250 CC       		.byte	-52
+ 622 0251 40       		.byte	64
+ 623 0252 CD       		.byte	-51
+ 624 0253 20       		.byte	32
+ 625 0254 CE       		.byte	-50
+ 626 0255 F0       		.byte	-16
+ 627 0256 CF       		.byte	-49
+ARM GAS  C:\Users\alexa\AppData\Local\Temp\cc0Fhkn9.s 			page 12
 
 
- 628 0257 FF       		.byte	-1
- 629 0258 CA       		.byte	-54
- 630 0259 07       		.byte	7
- 631 025a CB       		.byte	-53
- 632 025b FF       		.byte	-1
- 633 025c CC       		.byte	-52
- 634 025d 40       		.byte	64
- 635 025e CD       		.byte	-51
- 636 025f 20       		.byte	32
- 637 0260 CE       		.byte	-50
- 638 0261 F0       		.byte	-16
- 639 0262 CF       		.byte	-49
- 640 0263 05       		.byte	5
- 641 0264 D0       		.byte	-48
- 642 0265 08       		.byte	8
- 643 0266 D6       		.byte	-42
- 644 0267 02       		.byte	2
- 645 0268 D7       		.byte	-41
- 646 0269 11       		.byte	17
- 647 026a D8       		.byte	-40
- 648 026b 04       		.byte	4
- 649 026c D9       		.byte	-39
- 650 026d 04       		.byte	4
- 651 026e DA       		.byte	-38
- 652 026f 04       		.byte	4
- 653 0270 DB       		.byte	-37
- 654 0271 04       		.byte	4
- 655 0272 DD       		.byte	-35
- 656 0273 01       		.byte	1
- 657 0274 DF       		.byte	-33
- 658 0275 01       		.byte	1
- 659 0276 E0       		.byte	-32
- 660 0277 40       		.byte	64
- 661 0278 E1       		.byte	-31
- 662 0279 A8       		.byte	-88
- 663 027a E2       		.byte	-30
- 664 027b 40       		.byte	64
- 665 027c E3       		.byte	-29
- 666 027d 20       		.byte	32
- 667 027e 00       		.byte	0
- 668 027f 48       		.byte	72
- 669 0280 01       		.byte	1
- 670 0281 10       		.byte	16
- 671 0282 02       		.byte	2
- 672 0283 02       		.byte	2
- 673 0284 04       		.byte	4
- 674 0285 10       		.byte	16
- 675 0286 05       		.byte	5
- 676 0287 06       		.byte	6
- 677 0288 06       		.byte	6
- 678 0289 40       		.byte	64
- 679 028a 07       		.byte	7
- 680 028b 10       		.byte	16
- 681 028c 08       		.byte	8
- 682 028d 40       		.byte	64
- 683 028e 09       		.byte	9
- 684 028f 08       		.byte	8
-ARM GAS  C:\Users\alexa\AppData\Local\Temp\ccx1ML7r.s 			page 13
+ 628 0257 05       		.byte	5
+ 629 0258 D0       		.byte	-48
+ 630 0259 08       		.byte	8
+ 631 025a D6       		.byte	-42
+ 632 025b 02       		.byte	2
+ 633 025c D7       		.byte	-41
+ 634 025d 11       		.byte	17
+ 635 025e D8       		.byte	-40
+ 636 025f 04       		.byte	4
+ 637 0260 D9       		.byte	-39
+ 638 0261 04       		.byte	4
+ 639 0262 DA       		.byte	-38
+ 640 0263 04       		.byte	4
+ 641 0264 DB       		.byte	-37
+ 642 0265 04       		.byte	4
+ 643 0266 DD       		.byte	-35
+ 644 0267 01       		.byte	1
+ 645 0268 DF       		.byte	-33
+ 646 0269 01       		.byte	1
+ 647 026a E0       		.byte	-32
+ 648 026b 40       		.byte	64
+ 649 026c E1       		.byte	-31
+ 650 026d A8       		.byte	-88
+ 651 026e E2       		.byte	-30
+ 652 026f 40       		.byte	64
+ 653 0270 E3       		.byte	-29
+ 654 0271 20       		.byte	32
+ 655 0272 00       		.byte	0
+ 656 0273 48       		.byte	72
+ 657 0274 01       		.byte	1
+ 658 0275 10       		.byte	16
+ 659 0276 02       		.byte	2
+ 660 0277 02       		.byte	2
+ 661 0278 04       		.byte	4
+ 662 0279 10       		.byte	16
+ 663 027a 05       		.byte	5
+ 664 027b 06       		.byte	6
+ 665 027c 06       		.byte	6
+ 666 027d 40       		.byte	64
+ 667 027e 07       		.byte	7
+ 668 027f 10       		.byte	16
+ 669 0280 08       		.byte	8
+ 670 0281 40       		.byte	64
+ 671 0282 09       		.byte	9
+ 672 0283 08       		.byte	8
+ 673 0284 0A       		.byte	10
+ 674 0285 84       		.byte	-124
+ 675 0286 0C       		.byte	12
+ 676 0287 02       		.byte	2
+ 677 0288 0D       		.byte	13
+ 678 0289 84       		.byte	-124
+ 679 028a 10       		.byte	16
+ 680 028b 81       		.byte	-127
+ 681 028c 12       		.byte	18
+ 682 028d 04       		.byte	4
+ 683 028e 13       		.byte	19
+ 684 028f 24       		.byte	36
+ARM GAS  C:\Users\alexa\AppData\Local\Temp\cc0Fhkn9.s 			page 13
 
 
- 685 0290 0A       		.byte	10
- 686 0291 84       		.byte	-124
- 687 0292 0C       		.byte	12
- 688 0293 02       		.byte	2
- 689 0294 0D       		.byte	13
- 690 0295 84       		.byte	-124
- 691 0296 10       		.byte	16
- 692 0297 81       		.byte	-127
- 693 0298 12       		.byte	18
- 694 0299 04       		.byte	4
- 695 029a 13       		.byte	19
+ 685 0290 14       		.byte	20
+ 686 0291 02       		.byte	2
+ 687 0292 16       		.byte	22
+ 688 0293 88       		.byte	-120
+ 689 0294 17       		.byte	23
+ 690 0295 08       		.byte	8
+ 691 0296 18       		.byte	24
+ 692 0297 40       		.byte	64
+ 693 0298 19       		.byte	25
+ 694 0299 20       		.byte	32
+ 695 029a 1A       		.byte	26
  696 029b 24       		.byte	36
- 697 029c 14       		.byte	20
- 698 029d 02       		.byte	2
- 699 029e 16       		.byte	22
- 700 029f 88       		.byte	-120
- 701 02a0 17       		.byte	23
+ 697 029c 1B       		.byte	27
+ 698 029d 40       		.byte	64
+ 699 029e 1C       		.byte	28
+ 700 029f 10       		.byte	16
+ 701 02a0 1E       		.byte	30
  702 02a1 08       		.byte	8
- 703 02a2 18       		.byte	24
- 704 02a3 40       		.byte	64
- 705 02a4 19       		.byte	25
- 706 02a5 A0       		.byte	-96
- 707 02a6 1A       		.byte	26
- 708 02a7 24       		.byte	36
- 709 02a8 1C       		.byte	28
- 710 02a9 10       		.byte	16
- 711 02aa 1E       		.byte	30
- 712 02ab 08       		.byte	8
- 713 02ac 1F       		.byte	31
- 714 02ad 42       		.byte	66
- 715 02ae 22       		.byte	34
- 716 02af 41       		.byte	65
- 717 02b0 23       		.byte	35
- 718 02b1 10       		.byte	16
- 719 02b2 28       		.byte	40
- 720 02b3 01       		.byte	1
- 721 02b4 29       		.byte	41
+ 703 02a2 1F       		.byte	31
+ 704 02a3 42       		.byte	66
+ 705 02a4 22       		.byte	34
+ 706 02a5 41       		.byte	65
+ 707 02a6 23       		.byte	35
+ 708 02a7 10       		.byte	16
+ 709 02a8 28       		.byte	40
+ 710 02a9 01       		.byte	1
+ 711 02aa 29       		.byte	41
+ 712 02ab 20       		.byte	32
+ 713 02ac 2A       		.byte	42
+ 714 02ad 06       		.byte	6
+ 715 02ae 2B       		.byte	43
+ 716 02af 01       		.byte	1
+ 717 02b0 31       		.byte	49
+ 718 02b1 08       		.byte	8
+ 719 02b2 32       		.byte	50
+ 720 02b3 42       		.byte	66
+ 721 02b4 33       		.byte	51
  722 02b5 20       		.byte	32
- 723 02b6 2A       		.byte	42
- 724 02b7 06       		.byte	6
- 725 02b8 2B       		.byte	43
+ 723 02b6 34       		.byte	52
+ 724 02b7 02       		.byte	2
+ 725 02b8 35       		.byte	53
  726 02b9 01       		.byte	1
- 727 02ba 31       		.byte	49
- 728 02bb 08       		.byte	8
- 729 02bc 32       		.byte	50
- 730 02bd 42       		.byte	66
- 731 02be 33       		.byte	51
- 732 02bf 20       		.byte	32
- 733 02c0 34       		.byte	52
- 734 02c1 02       		.byte	2
- 735 02c2 35       		.byte	53
- 736 02c3 01       		.byte	1
- 737 02c4 38       		.byte	56
- 738 02c5 A0       		.byte	-96
- 739 02c6 39       		.byte	57
- 740 02c7 12       		.byte	18
- 741 02c8 3B       		.byte	59
-ARM GAS  C:\Users\alexa\AppData\Local\Temp\ccx1ML7r.s 			page 14
+ 727 02ba 38       		.byte	56
+ 728 02bb A0       		.byte	-96
+ 729 02bc 39       		.byte	57
+ 730 02bd 12       		.byte	18
+ 731 02be 3B       		.byte	59
+ 732 02bf 04       		.byte	4
+ 733 02c0 45       		.byte	69
+ 734 02c1 01       		.byte	1
+ 735 02c2 46       		.byte	70
+ 736 02c3 40       		.byte	64
+ 737 02c4 47       		.byte	71
+ 738 02c5 18       		.byte	24
+ 739 02c6 49       		.byte	73
+ 740 02c7 02       		.byte	2
+ 741 02c8 4A       		.byte	74
+ARM GAS  C:\Users\alexa\AppData\Local\Temp\cc0Fhkn9.s 			page 14
 
 
- 742 02c9 04       		.byte	4
- 743 02ca 45       		.byte	69
- 744 02cb 01       		.byte	1
- 745 02cc 46       		.byte	70
- 746 02cd 40       		.byte	64
- 747 02ce 47       		.byte	71
- 748 02cf 18       		.byte	24
- 749 02d0 49       		.byte	73
- 750 02d1 02       		.byte	2
- 751 02d2 4A       		.byte	74
- 752 02d3 88       		.byte	-120
- 753 02d4 4B       		.byte	75
- 754 02d5 C0       		.byte	-64
- 755 02d6 51       		.byte	81
- 756 02d7 04       		.byte	4
- 757 02d8 54       		.byte	84
- 758 02d9 02       		.byte	2
- 759 02da 56       		.byte	86
- 760 02db 88       		.byte	-120
- 761 02dc 5A       		.byte	90
- 762 02dd 20       		.byte	32
- 763 02de 5C       		.byte	92
- 764 02df 20       		.byte	32
- 765 02e0 5E       		.byte	94
- 766 02e1 09       		.byte	9
- 767 02e2 5F       		.byte	95
- 768 02e3 40       		.byte	64
- 769 02e4 64       		.byte	100
- 770 02e5 20       		.byte	32
- 771 02e6 66       		.byte	102
- 772 02e7 08       		.byte	8
- 773 02e8 68       		.byte	104
- 774 02e9 08       		.byte	8
- 775 02ea 69       		.byte	105
- 776 02eb 44       		.byte	68
- 777 02ec 70       		.byte	112
- 778 02ed 80       		.byte	-128
- 779 02ee 72       		.byte	114
- 780 02ef 02       		.byte	2
- 781 02f0 73       		.byte	115
- 782 02f1 24       		.byte	36
- 783 02f2 84       		.byte	-124
- 784 02f3 04       		.byte	4
- 785 02f4 85       		.byte	-123
- 786 02f5 01       		.byte	1
- 787 02f6 8B       		.byte	-117
- 788 02f7 02       		.byte	2
- 789 02f8 90       		.byte	-112
- 790 02f9 80       		.byte	-128
- 791 02fa 96       		.byte	-106
+ 742 02c9 88       		.byte	-120
+ 743 02ca 4B       		.byte	75
+ 744 02cb C0       		.byte	-64
+ 745 02cc 51       		.byte	81
+ 746 02cd 04       		.byte	4
+ 747 02ce 54       		.byte	84
+ 748 02cf 02       		.byte	2
+ 749 02d0 56       		.byte	86
+ 750 02d1 88       		.byte	-120
+ 751 02d2 5A       		.byte	90
+ 752 02d3 20       		.byte	32
+ 753 02d4 5C       		.byte	92
+ 754 02d5 20       		.byte	32
+ 755 02d6 5E       		.byte	94
+ 756 02d7 09       		.byte	9
+ 757 02d8 5F       		.byte	95
+ 758 02d9 40       		.byte	64
+ 759 02da 64       		.byte	100
+ 760 02db 20       		.byte	32
+ 761 02dc 66       		.byte	102
+ 762 02dd 08       		.byte	8
+ 763 02de 68       		.byte	104
+ 764 02df 08       		.byte	8
+ 765 02e0 69       		.byte	105
+ 766 02e1 44       		.byte	68
+ 767 02e2 70       		.byte	112
+ 768 02e3 80       		.byte	-128
+ 769 02e4 72       		.byte	114
+ 770 02e5 02       		.byte	2
+ 771 02e6 73       		.byte	115
+ 772 02e7 24       		.byte	36
+ 773 02e8 84       		.byte	-124
+ 774 02e9 04       		.byte	4
+ 775 02ea 85       		.byte	-123
+ 776 02eb 01       		.byte	1
+ 777 02ec 8B       		.byte	-117
+ 778 02ed 02       		.byte	2
+ 779 02ee 90       		.byte	-112
+ 780 02ef 80       		.byte	-128
+ 781 02f0 96       		.byte	-106
+ 782 02f1 08       		.byte	8
+ 783 02f2 97       		.byte	-105
+ 784 02f3 08       		.byte	8
+ 785 02f4 9A       		.byte	-102
+ 786 02f5 10       		.byte	16
+ 787 02f6 9D       		.byte	-99
+ 788 02f7 01       		.byte	1
+ 789 02f8 9F       		.byte	-97
+ 790 02f9 08       		.byte	8
+ 791 02fa A2       		.byte	-94
  792 02fb 08       		.byte	8
- 793 02fc 97       		.byte	-105
+ 793 02fc A5       		.byte	-91
  794 02fd 08       		.byte	8
- 795 02fe 9A       		.byte	-102
- 796 02ff 10       		.byte	16
- 797 0300 9D       		.byte	-99
- 798 0301 01       		.byte	1
-ARM GAS  C:\Users\alexa\AppData\Local\Temp\ccx1ML7r.s 			page 15
+ 795 02fe A6       		.byte	-90
+ 796 02ff 80       		.byte	-128
+ 797 0300 AC       		.byte	-84
+ 798 0301 80       		.byte	-128
+ARM GAS  C:\Users\alexa\AppData\Local\Temp\cc0Fhkn9.s 			page 15
 
 
- 799 0302 9F       		.byte	-97
- 800 0303 08       		.byte	8
- 801 0304 A2       		.byte	-94
- 802 0305 08       		.byte	8
- 803 0306 A5       		.byte	-91
- 804 0307 08       		.byte	8
- 805 0308 A6       		.byte	-90
+ 799 0302 AD       		.byte	-83
+ 800 0303 20       		.byte	32
+ 801 0304 B0       		.byte	-80
+ 802 0305 01       		.byte	1
+ 803 0306 B2       		.byte	-78
+ 804 0307 10       		.byte	16
+ 805 0308 B4       		.byte	-76
  806 0309 80       		.byte	-128
- 807 030a AC       		.byte	-84
- 808 030b 80       		.byte	-128
- 809 030c AD       		.byte	-83
- 810 030d 20       		.byte	32
- 811 030e B0       		.byte	-80
- 812 030f 01       		.byte	1
- 813 0310 B2       		.byte	-78
- 814 0311 10       		.byte	16
- 815 0312 B4       		.byte	-76
- 816 0313 80       		.byte	-128
- 817 0314 B7       		.byte	-73
- 818 0315 10       		.byte	16
- 819 0316 C0       		.byte	-64
- 820 0317 77       		.byte	119
- 821 0318 C2       		.byte	-62
- 822 0319 BF       		.byte	-65
- 823 031a C4       		.byte	-60
- 824 031b FF       		.byte	-1
- 825 031c CA       		.byte	-54
- 826 031d 0F       		.byte	15
- 827 031e CC       		.byte	-52
- 828 031f 0F       		.byte	15
- 829 0320 CE       		.byte	-50
- 830 0321 0F       		.byte	15
- 831 0322 D0       		.byte	-48
- 832 0323 E0       		.byte	-32
- 833 0324 D2       		.byte	-46
- 834 0325 04       		.byte	4
- 835 0326 D6       		.byte	-42
- 836 0327 F4       		.byte	-12
- 837 0328 E6       		.byte	-26
- 838 0329 80       		.byte	-128
- 839 032a EE       		.byte	-18
+ 807 030a B7       		.byte	-73
+ 808 030b 10       		.byte	16
+ 809 030c C0       		.byte	-64
+ 810 030d 77       		.byte	119
+ 811 030e C2       		.byte	-62
+ 812 030f BF       		.byte	-65
+ 813 0310 C4       		.byte	-60
+ 814 0311 FF       		.byte	-1
+ 815 0312 CA       		.byte	-54
+ 816 0313 0F       		.byte	15
+ 817 0314 CC       		.byte	-52
+ 818 0315 0F       		.byte	15
+ 819 0316 CE       		.byte	-50
+ 820 0317 0F       		.byte	15
+ 821 0318 D0       		.byte	-48
+ 822 0319 E0       		.byte	-32
+ 823 031a D2       		.byte	-46
+ 824 031b 04       		.byte	4
+ 825 031c D6       		.byte	-42
+ 826 031d F4       		.byte	-12
+ 827 031e E6       		.byte	-26
+ 828 031f 80       		.byte	-128
+ 829 0320 E0       		.byte	-32
+ 830 0321 01       		.byte	1
+ 831 0322 00       		.byte	0
+ 832 0323 08       		.byte	8
+ 833 0324 02       		.byte	2
+ 834 0325 02       		.byte	2
+ 835 0326 04       		.byte	4
+ 836 0327 0F       		.byte	15
+ 837 0328 08       		.byte	8
+ 838 0329 0F       		.byte	15
+ 839 032a 0C       		.byte	12
  840 032b 01       		.byte	1
- 841 032c EE       		.byte	-18
- 842 032d 01       		.byte	1
- 843 032e E0       		.byte	-32
- 844 032f 02       		.byte	2
- 845 0330 00       		.byte	0
- 846 0331 08       		.byte	8
- 847 0332 02       		.byte	2
- 848 0333 02       		.byte	2
- 849 0334 04       		.byte	4
- 850 0335 0F       		.byte	15
- 851 0336 08       		.byte	8
- 852 0337 0F       		.byte	15
- 853 0338 0C       		.byte	12
- 854 0339 01       		.byte	1
- 855 033a 10       		.byte	16
-ARM GAS  C:\Users\alexa\AppData\Local\Temp\ccx1ML7r.s 			page 16
+ 841 032c 10       		.byte	16
+ 842 032d 02       		.byte	2
+ 843 032e 12       		.byte	18
+ 844 032f 0C       		.byte	12
+ 845 0330 16       		.byte	22
+ 846 0331 20       		.byte	32
+ 847 0332 18       		.byte	24
+ 848 0333 04       		.byte	4
+ 849 0334 1A       		.byte	26
+ 850 0335 02       		.byte	2
+ 851 0336 1E       		.byte	30
+ 852 0337 10       		.byte	16
+ 853 0338 22       		.byte	34
+ 854 0339 10       		.byte	16
+ 855 033a 26       		.byte	38
+ARM GAS  C:\Users\alexa\AppData\Local\Temp\cc0Fhkn9.s 			page 16
 
 
- 856 033b 02       		.byte	2
- 857 033c 12       		.byte	18
- 858 033d 0C       		.byte	12
- 859 033e 16       		.byte	22
- 860 033f 20       		.byte	32
- 861 0340 18       		.byte	24
- 862 0341 04       		.byte	4
- 863 0342 1A       		.byte	26
- 864 0343 02       		.byte	2
- 865 0344 1E       		.byte	30
- 866 0345 10       		.byte	16
- 867 0346 22       		.byte	34
- 868 0347 10       		.byte	16
- 869 0348 26       		.byte	38
- 870 0349 20       		.byte	32
- 871 034a 2F       		.byte	47
- 872 034b 01       		.byte	1
- 873 034c 30       		.byte	48
- 874 034d 0E       		.byte	14
- 875 034e 32       		.byte	50
- 876 034f 10       		.byte	16
- 877 0350 34       		.byte	52
- 878 0351 20       		.byte	32
- 879 0352 35       		.byte	53
- 880 0353 01       		.byte	1
- 881 0354 36       		.byte	54
- 882 0355 01       		.byte	1
- 883 0356 3E       		.byte	62
- 884 0357 14       		.byte	20
- 885 0358 54       		.byte	84
- 886 0359 18       		.byte	24
- 887 035a 56       		.byte	86
- 888 035b 04       		.byte	4
- 889 035c 58       		.byte	88
- 890 035d 04       		.byte	4
- 891 035e 59       		.byte	89
- 892 035f 04       		.byte	4
- 893 0360 5B       		.byte	91
- 894 0361 04       		.byte	4
- 895 0362 5C       		.byte	92
- 896 0363 11       		.byte	17
- 897 0364 5F       		.byte	95
- 898 0365 01       		.byte	1
- 899 0366 80       		.byte	-128
- 900 0367 1F       		.byte	31
- 901 0368 81       		.byte	-127
- 902 0369 10       		.byte	16
- 903 036a 82       		.byte	-126
- 904 036b 60       		.byte	96
- 905 036c 84       		.byte	-124
- 906 036d 7F       		.byte	127
- 907 036e 85       		.byte	-123
- 908 036f 08       		.byte	8
- 909 0370 88       		.byte	-120
- 910 0371 73       		.byte	115
- 911 0372 89       		.byte	-119
- 912 0373 E7       		.byte	-25
-ARM GAS  C:\Users\alexa\AppData\Local\Temp\ccx1ML7r.s 			page 17
+ 856 033b 20       		.byte	32
+ 857 033c 2F       		.byte	47
+ 858 033d 01       		.byte	1
+ 859 033e 30       		.byte	48
+ 860 033f 0E       		.byte	14
+ 861 0340 32       		.byte	50
+ 862 0341 10       		.byte	16
+ 863 0342 34       		.byte	52
+ 864 0343 20       		.byte	32
+ 865 0344 35       		.byte	53
+ 866 0345 01       		.byte	1
+ 867 0346 36       		.byte	54
+ 868 0347 01       		.byte	1
+ 869 0348 3E       		.byte	62
+ 870 0349 14       		.byte	20
+ 871 034a 54       		.byte	84
+ 872 034b 18       		.byte	24
+ 873 034c 56       		.byte	86
+ 874 034d 04       		.byte	4
+ 875 034e 58       		.byte	88
+ 876 034f 04       		.byte	4
+ 877 0350 59       		.byte	89
+ 878 0351 04       		.byte	4
+ 879 0352 5B       		.byte	91
+ 880 0353 04       		.byte	4
+ 881 0354 5C       		.byte	92
+ 882 0355 11       		.byte	17
+ 883 0356 5F       		.byte	95
+ 884 0357 01       		.byte	1
+ 885 0358 80       		.byte	-128
+ 886 0359 1F       		.byte	31
+ 887 035a 81       		.byte	-127
+ 888 035b 10       		.byte	16
+ 889 035c 82       		.byte	-126
+ 890 035d 60       		.byte	96
+ 891 035e 84       		.byte	-124
+ 892 035f 7F       		.byte	127
+ 893 0360 85       		.byte	-123
+ 894 0361 08       		.byte	8
+ 895 0362 88       		.byte	-120
+ 896 0363 73       		.byte	115
+ 897 0364 89       		.byte	-119
+ 898 0365 E7       		.byte	-25
+ 899 0366 8A       		.byte	-118
+ 900 0367 0C       		.byte	12
+ 901 0368 8B       		.byte	-117
+ 902 0369 18       		.byte	24
+ 903 036a 8D       		.byte	-115
+ 904 036b 24       		.byte	36
+ 905 036c 8E       		.byte	-114
+ 906 036d 63       		.byte	99
+ 907 036e 90       		.byte	-112
+ 908 036f 03       		.byte	3
+ 909 0370 93       		.byte	-109
+ 910 0371 63       		.byte	99
+ 911 0372 94       		.byte	-108
+ 912 0373 5C       		.byte	92
+ARM GAS  C:\Users\alexa\AppData\Local\Temp\cc0Fhkn9.s 			page 17
 
 
- 913 0374 8A       		.byte	-118
- 914 0375 0C       		.byte	12
- 915 0376 8B       		.byte	-117
- 916 0377 18       		.byte	24
- 917 0378 8D       		.byte	-115
- 918 0379 24       		.byte	36
- 919 037a 8E       		.byte	-114
- 920 037b 63       		.byte	99
- 921 037c 90       		.byte	-112
- 922 037d 03       		.byte	3
- 923 037e 93       		.byte	-109
- 924 037f 63       		.byte	99
- 925 0380 94       		.byte	-108
- 926 0381 5C       		.byte	92
- 927 0382 95       		.byte	-107
- 928 0383 FF       		.byte	-1
- 929 0384 96       		.byte	-106
- 930 0385 23       		.byte	35
- 931 0386 98       		.byte	-104
- 932 0387 01       		.byte	1
- 933 0388 9B       		.byte	-101
- 934 0389 04       		.byte	4
- 935 038a 9D       		.byte	-99
- 936 038b 40       		.byte	64
- 937 038c A0       		.byte	-96
- 938 038d 02       		.byte	2
- 939 038e A1       		.byte	-95
- 940 038f 1C       		.byte	28
- 941 0390 A3       		.byte	-93
- 942 0391 E1       		.byte	-31
- 943 0392 A4       		.byte	-92
- 944 0393 04       		.byte	4
- 945 0394 A5       		.byte	-91
- 946 0395 18       		.byte	24
- 947 0396 A8       		.byte	-88
- 948 0397 0C       		.byte	12
- 949 0398 A9       		.byte	-87
- 950 0399 1C       		.byte	28
- 951 039a AB       		.byte	-85
- 952 039b E2       		.byte	-30
- 953 039c AC       		.byte	-84
- 954 039d 08       		.byte	8
- 955 039e AD       		.byte	-83
- 956 039f 60       		.byte	96
- 957 03a0 B0       		.byte	-80
- 958 03a1 2C       		.byte	44
- 959 03a2 B1       		.byte	-79
- 960 03a3 60       		.byte	96
- 961 03a4 B2       		.byte	-78
- 962 03a5 0F       		.byte	15
- 963 03a6 B4       		.byte	-76
+ 913 0374 95       		.byte	-107
+ 914 0375 FF       		.byte	-1
+ 915 0376 96       		.byte	-106
+ 916 0377 23       		.byte	35
+ 917 0378 98       		.byte	-104
+ 918 0379 01       		.byte	1
+ 919 037a 9B       		.byte	-101
+ 920 037b 04       		.byte	4
+ 921 037c 9D       		.byte	-99
+ 922 037d 40       		.byte	64
+ 923 037e A0       		.byte	-96
+ 924 037f 02       		.byte	2
+ 925 0380 A1       		.byte	-95
+ 926 0381 1C       		.byte	28
+ 927 0382 A3       		.byte	-93
+ 928 0383 E1       		.byte	-31
+ 929 0384 A4       		.byte	-92
+ 930 0385 04       		.byte	4
+ 931 0386 A5       		.byte	-91
+ 932 0387 18       		.byte	24
+ 933 0388 A8       		.byte	-88
+ 934 0389 0C       		.byte	12
+ 935 038a A9       		.byte	-87
+ 936 038b 1C       		.byte	28
+ 937 038c AB       		.byte	-85
+ 938 038d E2       		.byte	-30
+ 939 038e AC       		.byte	-84
+ 940 038f 08       		.byte	8
+ 941 0390 AD       		.byte	-83
+ 942 0391 60       		.byte	96
+ 943 0392 B0       		.byte	-80
+ 944 0393 2C       		.byte	44
+ 945 0394 B1       		.byte	-79
+ 946 0395 60       		.byte	96
+ 947 0396 B2       		.byte	-78
+ 948 0397 0F       		.byte	15
+ 949 0398 B4       		.byte	-76
+ 950 0399 10       		.byte	16
+ 951 039a B5       		.byte	-75
+ 952 039b 1F       		.byte	31
+ 953 039c B6       		.byte	-74
+ 954 039d 4C       		.byte	76
+ 955 039e B7       		.byte	-73
+ 956 039f 80       		.byte	-128
+ 957 03a0 B9       		.byte	-71
+ 958 03a1 80       		.byte	-128
+ 959 03a2 BA       		.byte	-70
+ 960 03a3 0A       		.byte	10
+ 961 03a4 BB       		.byte	-69
+ 962 03a5 28       		.byte	40
+ 963 03a6 BE       		.byte	-66
  964 03a7 10       		.byte	16
- 965 03a8 B5       		.byte	-75
- 966 03a9 1F       		.byte	31
- 967 03aa B6       		.byte	-74
- 968 03ab 4C       		.byte	76
- 969 03ac B7       		.byte	-73
-ARM GAS  C:\Users\alexa\AppData\Local\Temp\ccx1ML7r.s 			page 18
+ 965 03a8 D6       		.byte	-42
+ 966 03a9 02       		.byte	2
+ 967 03aa D7       		.byte	-41
+ 968 03ab 12       		.byte	18
+ 969 03ac D8       		.byte	-40
+ARM GAS  C:\Users\alexa\AppData\Local\Temp\cc0Fhkn9.s 			page 18
 
 
- 970 03ad 80       		.byte	-128
- 971 03ae B9       		.byte	-71
- 972 03af 80       		.byte	-128
- 973 03b0 BA       		.byte	-70
- 974 03b1 0A       		.byte	10
- 975 03b2 BB       		.byte	-69
- 976 03b3 28       		.byte	40
- 977 03b4 BE       		.byte	-66
+ 970 03ad 04       		.byte	4
+ 971 03ae D9       		.byte	-39
+ 972 03af 04       		.byte	4
+ 973 03b0 DB       		.byte	-37
+ 974 03b1 04       		.byte	4
+ 975 03b2 DC       		.byte	-36
+ 976 03b3 11       		.byte	17
+ 977 03b4 DD       		.byte	-35
  978 03b5 10       		.byte	16
- 979 03b6 D6       		.byte	-42
- 980 03b7 02       		.byte	2
- 981 03b8 D7       		.byte	-41
- 982 03b9 12       		.byte	18
- 983 03ba D8       		.byte	-40
- 984 03bb 04       		.byte	4
- 985 03bc D9       		.byte	-39
- 986 03bd 04       		.byte	4
- 987 03be DB       		.byte	-37
- 988 03bf 04       		.byte	4
- 989 03c0 DC       		.byte	-36
- 990 03c1 11       		.byte	17
- 991 03c2 DD       		.byte	-35
- 992 03c3 10       		.byte	16
- 993 03c4 DF       		.byte	-33
- 994 03c5 01       		.byte	1
- 995 03c6 01       		.byte	1
- 996 03c7 50       		.byte	80
- 997 03c8 02       		.byte	2
- 998 03c9 40       		.byte	64
- 999 03ca 03       		.byte	3
- 1000 03cb 60       		.byte	96
- 1001 03cc 04       		.byte	4
- 1002 03cd 10       		.byte	16
- 1003 03ce 05       		.byte	5
- 1004 03cf 83       		.byte	-125
- 1005 03d0 07       		.byte	7
- 1006 03d1 15       		.byte	21
- 1007 03d2 09       		.byte	9
- 1008 03d3 40       		.byte	64
- 1009 03d4 0A       		.byte	10
- 1010 03d5 44       		.byte	68
- 1011 03d6 0B       		.byte	11
- 1012 03d7 10       		.byte	16
- 1013 03d8 0E       		.byte	14
- 1014 03d9 74       		.byte	116
- 1015 03da 10       		.byte	16
- 1016 03db A0       		.byte	-96
- 1017 03dc 16       		.byte	22
+ 979 03b6 DF       		.byte	-33
+ 980 03b7 01       		.byte	1
+ 981 03b8 01       		.byte	1
+ 982 03b9 50       		.byte	80
+ 983 03ba 02       		.byte	2
+ 984 03bb 40       		.byte	64
+ 985 03bc 03       		.byte	3
+ 986 03bd 60       		.byte	96
+ 987 03be 04       		.byte	4
+ 988 03bf 10       		.byte	16
+ 989 03c0 05       		.byte	5
+ 990 03c1 83       		.byte	-125
+ 991 03c2 07       		.byte	7
+ 992 03c3 15       		.byte	21
+ 993 03c4 09       		.byte	9
+ 994 03c5 40       		.byte	64
+ 995 03c6 0A       		.byte	10
+ 996 03c7 44       		.byte	68
+ 997 03c8 0B       		.byte	11
+ 998 03c9 10       		.byte	16
+ 999 03ca 0E       		.byte	14
+ 1000 03cb 74       		.byte	116
+ 1001 03cc 10       		.byte	16
+ 1002 03cd A0       		.byte	-96
+ 1003 03ce 16       		.byte	22
+ 1004 03cf 41       		.byte	65
+ 1005 03d0 17       		.byte	23
+ 1006 03d1 28       		.byte	40
+ 1007 03d2 18       		.byte	24
+ 1008 03d3 06       		.byte	6
+ 1009 03d4 19       		.byte	25
+ 1010 03d5 80       		.byte	-128
+ 1011 03d6 1A       		.byte	26
+ 1012 03d7 60       		.byte	96
+ 1013 03d8 1B       		.byte	27
+ 1014 03d9 02       		.byte	2
+ 1015 03da 1C       		.byte	28
+ 1016 03db 10       		.byte	16
+ 1017 03dc 1D       		.byte	29
  1018 03dd 41       		.byte	65
- 1019 03de 17       		.byte	23
- 1020 03df 28       		.byte	40
- 1021 03e0 18       		.byte	24
- 1022 03e1 06       		.byte	6
- 1023 03e2 19       		.byte	25
- 1024 03e3 80       		.byte	-128
- 1025 03e4 1A       		.byte	26
- 1026 03e5 60       		.byte	96
-ARM GAS  C:\Users\alexa\AppData\Local\Temp\ccx1ML7r.s 			page 19
+ 1019 03de 1E       		.byte	30
+ 1020 03df 08       		.byte	8
+ 1021 03e0 22       		.byte	34
+ 1022 03e1 20       		.byte	32
+ 1023 03e2 25       		.byte	37
+ 1024 03e3 40       		.byte	64
+ 1025 03e4 26       		.byte	38
+ 1026 03e5 19       		.byte	25
+ARM GAS  C:\Users\alexa\AppData\Local\Temp\cc0Fhkn9.s 			page 19
 
 
- 1027 03e6 1B       		.byte	27
- 1028 03e7 02       		.byte	2
- 1029 03e8 1C       		.byte	28
- 1030 03e9 10       		.byte	16
- 1031 03ea 1D       		.byte	29
- 1032 03eb 41       		.byte	65
- 1033 03ec 1E       		.byte	30
- 1034 03ed 08       		.byte	8
- 1035 03ee 22       		.byte	34
- 1036 03ef 20       		.byte	32
- 1037 03f0 25       		.byte	37
- 1038 03f1 40       		.byte	64
- 1039 03f2 26       		.byte	38
- 1040 03f3 19       		.byte	25
- 1041 03f4 27       		.byte	39
+ 1027 03e6 27       		.byte	39
+ 1028 03e7 10       		.byte	16
+ 1029 03e8 2A       		.byte	42
+ 1030 03e9 80       		.byte	-128
+ 1031 03ea 2D       		.byte	45
+ 1032 03eb 0A       		.byte	10
+ 1033 03ec 2E       		.byte	46
+ 1034 03ed 10       		.byte	16
+ 1035 03ee 2F       		.byte	47
+ 1036 03ef 02       		.byte	2
+ 1037 03f0 36       		.byte	54
+ 1038 03f1 28       		.byte	40
+ 1039 03f2 37       		.byte	55
+ 1040 03f3 41       		.byte	65
+ 1041 03f4 3C       		.byte	60
  1042 03f5 10       		.byte	16
- 1043 03f6 2A       		.byte	42
- 1044 03f7 80       		.byte	-128
- 1045 03f8 2D       		.byte	45
- 1046 03f9 0A       		.byte	10
- 1047 03fa 2E       		.byte	46
- 1048 03fb 10       		.byte	16
- 1049 03fc 2F       		.byte	47
- 1050 03fd 02       		.byte	2
- 1051 03fe 36       		.byte	54
- 1052 03ff 28       		.byte	40
- 1053 0400 37       		.byte	55
- 1054 0401 41       		.byte	65
- 1055 0402 3C       		.byte	60
- 1056 0403 10       		.byte	16
- 1057 0404 3E       		.byte	62
- 1058 0405 8A       		.byte	-118
- 1059 0406 5A       		.byte	90
- 1060 0407 02       		.byte	2
- 1061 0408 5E       		.byte	94
- 1062 0409 08       		.byte	8
- 1063 040a 60       		.byte	96
- 1064 040b 04       		.byte	4
- 1065 040c 62       		.byte	98
- 1066 040d 80       		.byte	-128
- 1067 040e 63       		.byte	99
- 1068 040f 40       		.byte	64
- 1069 0410 6D       		.byte	109
- 1070 0411 50       		.byte	80
- 1071 0412 6F       		.byte	111
- 1072 0413 20       		.byte	32
- 1073 0414 75       		.byte	117
- 1074 0415 08       		.byte	8
- 1075 0416 76       		.byte	118
- 1076 0417 0B       		.byte	11
- 1077 0418 77       		.byte	119
- 1078 0419 28       		.byte	40
- 1079 041a 7C       		.byte	124
- 1080 041b 08       		.byte	8
- 1081 041c 7E       		.byte	126
- 1082 041d 10       		.byte	16
- 1083 041e 86       		.byte	-122
-ARM GAS  C:\Users\alexa\AppData\Local\Temp\ccx1ML7r.s 			page 20
+ 1043 03f6 3E       		.byte	62
+ 1044 03f7 8A       		.byte	-118
+ 1045 03f8 5A       		.byte	90
+ 1046 03f9 02       		.byte	2
+ 1047 03fa 5E       		.byte	94
+ 1048 03fb 08       		.byte	8
+ 1049 03fc 60       		.byte	96
+ 1050 03fd 04       		.byte	4
+ 1051 03fe 61       		.byte	97
+ 1052 03ff 02       		.byte	2
+ 1053 0400 62       		.byte	98
+ 1054 0401 80       		.byte	-128
+ 1055 0402 6D       		.byte	109
+ 1056 0403 50       		.byte	80
+ 1057 0404 6F       		.byte	111
+ 1058 0405 20       		.byte	32
+ 1059 0406 75       		.byte	117
+ 1060 0407 08       		.byte	8
+ 1061 0408 76       		.byte	118
+ 1062 0409 0B       		.byte	11
+ 1063 040a 77       		.byte	119
+ 1064 040b 28       		.byte	40
+ 1065 040c 7C       		.byte	124
+ 1066 040d 08       		.byte	8
+ 1067 040e 7E       		.byte	126
+ 1068 040f 10       		.byte	16
+ 1069 0410 81       		.byte	-127
+ 1070 0411 02       		.byte	2
+ 1071 0412 86       		.byte	-122
+ 1072 0413 84       		.byte	-124
+ 1073 0414 8C       		.byte	-116
+ 1074 0415 01       		.byte	1
+ 1075 0416 8D       		.byte	-115
+ 1076 0417 08       		.byte	8
+ 1077 0418 92       		.byte	-110
+ 1078 0419 02       		.byte	2
+ 1079 041a 93       		.byte	-109
+ 1080 041b 10       		.byte	16
+ 1081 041c 94       		.byte	-108
+ 1082 041d 03       		.byte	3
+ 1083 041e 95       		.byte	-107
+ARM GAS  C:\Users\alexa\AppData\Local\Temp\cc0Fhkn9.s 			page 20
 
 
- 1084 041f 84       		.byte	-124
- 1085 0420 8B       		.byte	-117
+ 1084 041f 10       		.byte	16
+ 1085 0420 9B       		.byte	-101
  1086 0421 40       		.byte	64
- 1087 0422 8C       		.byte	-116
- 1088 0423 01       		.byte	1
- 1089 0424 8D       		.byte	-115
- 1090 0425 08       		.byte	8
- 1091 0426 92       		.byte	-110
- 1092 0427 02       		.byte	2
- 1093 0428 93       		.byte	-109
- 1094 0429 10       		.byte	16
- 1095 042a 94       		.byte	-108
- 1096 042b 03       		.byte	3
- 1097 042c 95       		.byte	-107
- 1098 042d 10       		.byte	16
- 1099 042e 9B       		.byte	-101
- 1100 042f 40       		.byte	64
- 1101 0430 9C       		.byte	-100
- 1102 0431 08       		.byte	8
- 1103 0432 9D       		.byte	-99
- 1104 0433 40       		.byte	64
- 1105 0434 9E       		.byte	-98
- 1106 0435 80       		.byte	-128
- 1107 0436 9F       		.byte	-97
- 1108 0437 04       		.byte	4
- 1109 0438 A0       		.byte	-96
- 1110 0439 A0       		.byte	-96
- 1111 043a A2       		.byte	-94
- 1112 043b 80       		.byte	-128
- 1113 043c A5       		.byte	-91
- 1114 043d 08       		.byte	8
- 1115 043e A6       		.byte	-90
- 1116 043f 09       		.byte	9
- 1117 0440 A7       		.byte	-89
- 1118 0441 22       		.byte	34
- 1119 0442 C0       		.byte	-64
- 1120 0443 FF       		.byte	-1
- 1121 0444 C2       		.byte	-62
- 1122 0445 7F       		.byte	127
- 1123 0446 C4       		.byte	-60
- 1124 0447 FC       		.byte	-4
- 1125 0448 CA       		.byte	-54
- 1126 0449 F8       		.byte	-8
- 1127 044a CC       		.byte	-52
- 1128 044b F0       		.byte	-16
- 1129 044c CE       		.byte	-50
- 1130 044d F0       		.byte	-16
- 1131 044e D6       		.byte	-42
- 1132 044f 41       		.byte	65
- 1133 0450 D8       		.byte	-40
- 1134 0451 0D       		.byte	13
- 1135 0452 E0       		.byte	-32
- 1136 0453 08       		.byte	8
- 1137 0454 E2       		.byte	-30
- 1138 0455 20       		.byte	32
- 1139 0456 E6       		.byte	-26
- 1140 0457 02       		.byte	2
-ARM GAS  C:\Users\alexa\AppData\Local\Temp\ccx1ML7r.s 			page 21
+ 1087 0422 9C       		.byte	-100
+ 1088 0423 08       		.byte	8
+ 1089 0424 9D       		.byte	-99
+ 1090 0425 40       		.byte	64
+ 1091 0426 9E       		.byte	-98
+ 1092 0427 80       		.byte	-128
+ 1093 0428 9F       		.byte	-97
+ 1094 0429 04       		.byte	4
+ 1095 042a A0       		.byte	-96
+ 1096 042b A0       		.byte	-96
+ 1097 042c A2       		.byte	-94
+ 1098 042d 80       		.byte	-128
+ 1099 042e A5       		.byte	-91
+ 1100 042f 08       		.byte	8
+ 1101 0430 A6       		.byte	-90
+ 1102 0431 09       		.byte	9
+ 1103 0432 A7       		.byte	-89
+ 1104 0433 22       		.byte	34
+ 1105 0434 C0       		.byte	-64
+ 1106 0435 FF       		.byte	-1
+ 1107 0436 C2       		.byte	-62
+ 1108 0437 7F       		.byte	127
+ 1109 0438 C4       		.byte	-60
+ 1110 0439 FC       		.byte	-4
+ 1111 043a CA       		.byte	-54
+ 1112 043b F8       		.byte	-8
+ 1113 043c CC       		.byte	-52
+ 1114 043d F0       		.byte	-16
+ 1115 043e CE       		.byte	-50
+ 1116 043f F0       		.byte	-16
+ 1117 0440 D6       		.byte	-42
+ 1118 0441 41       		.byte	65
+ 1119 0442 D8       		.byte	-40
+ 1120 0443 0D       		.byte	13
+ 1121 0444 E0       		.byte	-32
+ 1122 0445 08       		.byte	8
+ 1123 0446 E6       		.byte	-26
+ 1124 0447 02       		.byte	2
+ 1125 0448 E8       		.byte	-24
+ 1126 0449 20       		.byte	32
+ 1127 044a EA       		.byte	-22
+ 1128 044b 05       		.byte	5
+ 1129 044c EE       		.byte	-18
+ 1130 044d 02       		.byte	2
+ 1131 044e 80       		.byte	-128
+ 1132 044f 21       		.byte	33
+ 1133 0450 82       		.byte	-126
+ 1134 0451 4A       		.byte	74
+ 1135 0452 87       		.byte	-121
+ 1136 0453 01       		.byte	1
+ 1137 0454 89       		.byte	-119
+ 1138 0455 02       		.byte	2
+ 1139 0456 8C       		.byte	-116
+ 1140 0457 44       		.byte	68
+ARM GAS  C:\Users\alexa\AppData\Local\Temp\cc0Fhkn9.s 			page 21
 
 
- 1141 0458 E8       		.byte	-24
- 1142 0459 20       		.byte	32
- 1143 045a EA       		.byte	-22
- 1144 045b 05       		.byte	5
- 1145 045c 80       		.byte	-128
- 1146 045d 21       		.byte	33
- 1147 045e 82       		.byte	-126
- 1148 045f 4A       		.byte	74
- 1149 0460 87       		.byte	-121
- 1150 0461 01       		.byte	1
- 1151 0462 89       		.byte	-119
- 1152 0463 02       		.byte	2
- 1153 0464 8C       		.byte	-116
- 1154 0465 44       		.byte	68
- 1155 0466 8E       		.byte	-114
- 1156 0467 2A       		.byte	42
- 1157 0468 9C       		.byte	-100
- 1158 0469 02       		.byte	2
- 1159 046a 9E       		.byte	-98
- 1160 046b 15       		.byte	21
- 1161 046c A4       		.byte	-92
- 1162 046d E7       		.byte	-25
- 1163 046e A8       		.byte	-88
- 1164 046f E7       		.byte	-25
- 1165 0470 AC       		.byte	-84
- 1166 0471 80       		.byte	-128
- 1167 0472 AF       		.byte	-81
- 1168 0473 01       		.byte	1
- 1169 0474 B0       		.byte	-80
- 1170 0475 60       		.byte	96
- 1171 0476 B2       		.byte	-78
- 1172 0477 80       		.byte	-128
- 1173 0478 B3       		.byte	-77
- 1174 0479 02       		.byte	2
- 1175 047a B4       		.byte	-76
- 1176 047b 18       		.byte	24
- 1177 047c B6       		.byte	-74
- 1178 047d 07       		.byte	7
- 1179 047e B7       		.byte	-73
- 1180 047f 01       		.byte	1
- 1181 0480 BB       		.byte	-69
- 1182 0481 20       		.byte	32
- 1183 0482 BE       		.byte	-66
- 1184 0483 10       		.byte	16
- 1185 0484 BF       		.byte	-65
- 1186 0485 44       		.byte	68
- 1187 0486 C0       		.byte	-64
- 1188 0487 63       		.byte	99
- 1189 0488 C1       		.byte	-63
- 1190 0489 04       		.byte	4
- 1191 048a C2       		.byte	-62
- 1192 048b 05       		.byte	5
- 1193 048c C4       		.byte	-60
- 1194 048d 02       		.byte	2
- 1195 048e C5       		.byte	-59
- 1196 048f 0E       		.byte	14
- 1197 0490 C7       		.byte	-57
-ARM GAS  C:\Users\alexa\AppData\Local\Temp\ccx1ML7r.s 			page 22
+ 1141 0458 8E       		.byte	-114
+ 1142 0459 2A       		.byte	42
+ 1143 045a 90       		.byte	-112
+ 1144 045b 02       		.byte	2
+ 1145 045c 92       		.byte	-110
+ 1146 045d 15       		.byte	21
+ 1147 045e A3       		.byte	-93
+ 1148 045f 01       		.byte	1
+ 1149 0460 A4       		.byte	-92
+ 1150 0461 E7       		.byte	-25
+ 1151 0462 A8       		.byte	-88
+ 1152 0463 E7       		.byte	-25
+ 1153 0464 AC       		.byte	-84
+ 1154 0465 80       		.byte	-128
+ 1155 0466 B0       		.byte	-80
+ 1156 0467 60       		.byte	96
+ 1157 0468 B2       		.byte	-78
+ 1158 0469 80       		.byte	-128
+ 1159 046a B3       		.byte	-77
+ 1160 046b 02       		.byte	2
+ 1161 046c B4       		.byte	-76
+ 1162 046d 18       		.byte	24
+ 1163 046e B6       		.byte	-74
+ 1164 046f 07       		.byte	7
+ 1165 0470 B7       		.byte	-73
+ 1166 0471 01       		.byte	1
+ 1167 0472 BB       		.byte	-69
+ 1168 0473 20       		.byte	32
+ 1169 0474 BE       		.byte	-66
+ 1170 0475 10       		.byte	16
+ 1171 0476 BF       		.byte	-65
+ 1172 0477 44       		.byte	68
+ 1173 0478 C0       		.byte	-64
+ 1174 0479 63       		.byte	99
+ 1175 047a C1       		.byte	-63
+ 1176 047b 05       		.byte	5
+ 1177 047c C2       		.byte	-62
+ 1178 047d 04       		.byte	4
+ 1179 047e C4       		.byte	-60
+ 1180 047f 02       		.byte	2
+ 1181 0480 C5       		.byte	-59
+ 1182 0481 0E       		.byte	14
+ 1183 0482 C7       		.byte	-57
+ 1184 0483 0C       		.byte	12
+ 1185 0484 C8       		.byte	-56
+ 1186 0485 11       		.byte	17
+ 1187 0486 C9       		.byte	-55
+ 1188 0487 FF       		.byte	-1
+ 1189 0488 CA       		.byte	-54
+ 1190 0489 FF       		.byte	-1
+ 1191 048a CB       		.byte	-53
+ 1192 048b FF       		.byte	-1
+ 1193 048c CC       		.byte	-52
+ 1194 048d 62       		.byte	98
+ 1195 048e CD       		.byte	-51
+ 1196 048f A0       		.byte	-96
+ 1197 0490 CE       		.byte	-50
+ARM GAS  C:\Users\alexa\AppData\Local\Temp\cc0Fhkn9.s 			page 22
 
 
- 1198 0491 0C       		.byte	12
- 1199 0492 C8       		.byte	-56
- 1200 0493 11       		.byte	17
- 1201 0494 C9       		.byte	-55
- 1202 0495 FF       		.byte	-1
- 1203 0496 CA       		.byte	-54
- 1204 0497 FF       		.byte	-1
- 1205 0498 CB       		.byte	-53
- 1206 0499 FF       		.byte	-1
- 1207 049a CC       		.byte	-52
- 1208 049b 62       		.byte	98
- 1209 049c CD       		.byte	-51
- 1210 049d A0       		.byte	-96
- 1211 049e CE       		.byte	-50
- 1212 049f F0       		.byte	-16
- 1213 04a0 CF       		.byte	-49
- 1214 04a1 41       		.byte	65
- 1215 04a2 D0       		.byte	-48
- 1216 04a3 0C       		.byte	12
- 1217 04a4 D8       		.byte	-40
- 1218 04a5 04       		.byte	4
- 1219 04a6 D9       		.byte	-39
- 1220 04a7 04       		.byte	4
- 1221 04a8 DA       		.byte	-38
- 1222 04a9 04       		.byte	4
- 1223 04aa DF       		.byte	-33
- 1224 04ab 01       		.byte	1
- 1225 04ac E6       		.byte	-26
- 1226 04ad 40       		.byte	64
- 1227 04ae E7       		.byte	-25
- 1228 04af 02       		.byte	2
- 1229 04b0 E9       		.byte	-23
- 1230 04b1 10       		.byte	16
- 1231 04b2 EA       		.byte	-22
- 1232 04b3 30       		.byte	48
- 1233 04b4 EB       		.byte	-21
- 1234 04b5 10       		.byte	16
- 1235 04b6 ED       		.byte	-19
- 1236 04b7 10       		.byte	16
- 1237 04b8 EE       		.byte	-18
- 1238 04b9 10       		.byte	16
- 1239 04ba EF       		.byte	-17
- 1240 04bb 12       		.byte	18
- 1241 04bc 00       		.byte	0
- 1242 04bd 41       		.byte	65
- 1243 04be 05       		.byte	5
+ 1198 0491 F0       		.byte	-16
+ 1199 0492 CF       		.byte	-49
+ 1200 0493 41       		.byte	65
+ 1201 0494 D0       		.byte	-48
+ 1202 0495 0C       		.byte	12
+ 1203 0496 D8       		.byte	-40
+ 1204 0497 04       		.byte	4
+ 1205 0498 D9       		.byte	-39
+ 1206 0499 04       		.byte	4
+ 1207 049a DA       		.byte	-38
+ 1208 049b 04       		.byte	4
+ 1209 049c DF       		.byte	-33
+ 1210 049d 01       		.byte	1
+ 1211 049e E6       		.byte	-26
+ 1212 049f 40       		.byte	64
+ 1213 04a0 E7       		.byte	-25
+ 1214 04a1 02       		.byte	2
+ 1215 04a2 E9       		.byte	-23
+ 1216 04a3 10       		.byte	16
+ 1217 04a4 EA       		.byte	-22
+ 1218 04a5 30       		.byte	48
+ 1219 04a6 EB       		.byte	-21
+ 1220 04a7 10       		.byte	16
+ 1221 04a8 ED       		.byte	-19
+ 1222 04a9 10       		.byte	16
+ 1223 04aa EE       		.byte	-18
+ 1224 04ab 10       		.byte	16
+ 1225 04ac EF       		.byte	-17
+ 1226 04ad 12       		.byte	18
+ 1227 04ae 00       		.byte	0
+ 1228 04af 41       		.byte	65
+ 1229 04b0 05       		.byte	5
+ 1230 04b1 44       		.byte	68
+ 1231 04b2 06       		.byte	6
+ 1232 04b3 40       		.byte	64
+ 1233 04b4 07       		.byte	7
+ 1234 04b5 01       		.byte	1
+ 1235 04b6 08       		.byte	8
+ 1236 04b7 01       		.byte	1
+ 1237 04b8 0D       		.byte	13
+ 1238 04b9 84       		.byte	-124
+ 1239 04ba 0F       		.byte	15
+ 1240 04bb 08       		.byte	8
+ 1241 04bc 10       		.byte	16
+ 1242 04bd 08       		.byte	8
+ 1243 04be 11       		.byte	17
  1244 04bf 44       		.byte	68
- 1245 04c0 06       		.byte	6
- 1246 04c1 40       		.byte	64
- 1247 04c2 07       		.byte	7
- 1248 04c3 01       		.byte	1
- 1249 04c4 08       		.byte	8
- 1250 04c5 40       		.byte	64
- 1251 04c6 0D       		.byte	13
- 1252 04c7 84       		.byte	-124
- 1253 04c8 0F       		.byte	15
- 1254 04c9 08       		.byte	8
-ARM GAS  C:\Users\alexa\AppData\Local\Temp\ccx1ML7r.s 			page 23
+ 1245 04c0 17       		.byte	23
+ 1246 04c1 0A       		.byte	10
+ 1247 04c2 18       		.byte	24
+ 1248 04c3 64       		.byte	100
+ 1249 04c4 19       		.byte	25
+ 1250 04c5 80       		.byte	-128
+ 1251 04c6 1A       		.byte	26
+ 1252 04c7 10       		.byte	16
+ 1253 04c8 1B       		.byte	27
+ 1254 04c9 01       		.byte	1
+ARM GAS  C:\Users\alexa\AppData\Local\Temp\cc0Fhkn9.s 			page 23
 
 
- 1255 04ca 10       		.byte	16
- 1256 04cb 08       		.byte	8
- 1257 04cc 11       		.byte	17
- 1258 04cd 44       		.byte	68
- 1259 04ce 17       		.byte	23
- 1260 04cf 0A       		.byte	10
- 1261 04d0 18       		.byte	24
- 1262 04d1 64       		.byte	100
- 1263 04d2 1A       		.byte	26
- 1264 04d3 10       		.byte	16
- 1265 04d4 1B       		.byte	27
- 1266 04d5 41       		.byte	65
- 1267 04d6 1D       		.byte	29
- 1268 04d7 85       		.byte	-123
- 1269 04d8 1E       		.byte	30
- 1270 04d9 09       		.byte	9
- 1271 04da 1F       		.byte	31
- 1272 04db 04       		.byte	4
- 1273 04dc 20       		.byte	32
- 1274 04dd 08       		.byte	8
- 1275 04de 22       		.byte	34
- 1276 04df 84       		.byte	-124
- 1277 04e0 26       		.byte	38
- 1278 04e1 10       		.byte	16
- 1279 04e2 27       		.byte	39
- 1280 04e3 68       		.byte	104
- 1281 04e4 28       		.byte	40
- 1282 04e5 40       		.byte	64
- 1283 04e6 29       		.byte	41
- 1284 04e7 80       		.byte	-128
- 1285 04e8 2B       		.byte	43
- 1286 04e9 40       		.byte	64
- 1287 04ea 2E       		.byte	46
- 1288 04eb 01       		.byte	1
- 1289 04ec 2F       		.byte	47
- 1290 04ed 22       		.byte	34
- 1291 04ee 35       		.byte	53
- 1292 04ef 05       		.byte	5
- 1293 04f0 36       		.byte	54
- 1294 04f1 10       		.byte	16
- 1295 04f2 37       		.byte	55
- 1296 04f3 42       		.byte	66
- 1297 04f4 38       		.byte	56
- 1298 04f5 08       		.byte	8
- 1299 04f6 3A       		.byte	58
- 1300 04f7 10       		.byte	16
- 1301 04f8 3D       		.byte	61
- 1302 04f9 12       		.byte	18
- 1303 04fa 3E       		.byte	62
- 1304 04fb 88       		.byte	-120
- 1305 04fc 40       		.byte	64
- 1306 04fd 04       		.byte	4
- 1307 04fe 41       		.byte	65
- 1308 04ff 01       		.byte	1
- 1309 0500 42       		.byte	66
- 1310 0501 10       		.byte	16
- 1311 0502 47       		.byte	71
-ARM GAS  C:\Users\alexa\AppData\Local\Temp\ccx1ML7r.s 			page 24
+ 1255 04ca 1D       		.byte	29
+ 1256 04cb 85       		.byte	-123
+ 1257 04cc 1E       		.byte	30
+ 1258 04cd 09       		.byte	9
+ 1259 04ce 1F       		.byte	31
+ 1260 04cf 04       		.byte	4
+ 1261 04d0 20       		.byte	32
+ 1262 04d1 08       		.byte	8
+ 1263 04d2 22       		.byte	34
+ 1264 04d3 84       		.byte	-124
+ 1265 04d4 23       		.byte	35
+ 1266 04d5 04       		.byte	4
+ 1267 04d6 26       		.byte	38
+ 1268 04d7 10       		.byte	16
+ 1269 04d8 27       		.byte	39
+ 1270 04d9 68       		.byte	104
+ 1271 04da 28       		.byte	40
+ 1272 04db 81       		.byte	-127
+ 1273 04dc 29       		.byte	41
+ 1274 04dd 80       		.byte	-128
+ 1275 04de 2B       		.byte	43
+ 1276 04df 40       		.byte	64
+ 1277 04e0 2E       		.byte	46
+ 1278 04e1 01       		.byte	1
+ 1279 04e2 2F       		.byte	47
+ 1280 04e3 22       		.byte	34
+ 1281 04e4 35       		.byte	53
+ 1282 04e5 05       		.byte	5
+ 1283 04e6 36       		.byte	54
+ 1284 04e7 10       		.byte	16
+ 1285 04e8 37       		.byte	55
+ 1286 04e9 42       		.byte	66
+ 1287 04ea 38       		.byte	56
+ 1288 04eb 08       		.byte	8
+ 1289 04ec 3A       		.byte	58
+ 1290 04ed 10       		.byte	16
+ 1291 04ee 3D       		.byte	61
+ 1292 04ef 12       		.byte	18
+ 1293 04f0 3E       		.byte	62
+ 1294 04f1 88       		.byte	-120
+ 1295 04f2 40       		.byte	64
+ 1296 04f3 84       		.byte	-124
+ 1297 04f4 42       		.byte	66
+ 1298 04f5 10       		.byte	16
+ 1299 04f6 47       		.byte	71
+ 1300 04f7 25       		.byte	37
+ 1301 04f8 48       		.byte	72
+ 1302 04f9 20       		.byte	32
+ 1303 04fa 49       		.byte	73
+ 1304 04fb 20       		.byte	32
+ 1305 04fc 4A       		.byte	74
+ 1306 04fd 02       		.byte	2
+ 1307 04fe 4C       		.byte	76
+ 1308 04ff 81       		.byte	-127
+ 1309 0500 4E       		.byte	78
+ 1310 0501 08       		.byte	8
+ 1311 0502 4F       		.byte	79
+ARM GAS  C:\Users\alexa\AppData\Local\Temp\cc0Fhkn9.s 			page 24
 
 
- 1312 0503 25       		.byte	37
- 1313 0504 48       		.byte	72
- 1314 0505 20       		.byte	32
- 1315 0506 49       		.byte	73
- 1316 0507 A0       		.byte	-96
- 1317 0508 4C       		.byte	76
- 1318 0509 81       		.byte	-127
- 1319 050a 4E       		.byte	78
- 1320 050b 08       		.byte	8
- 1321 050c 4F       		.byte	79
+ 1312 0503 08       		.byte	8
+ 1313 0504 50       		.byte	80
+ 1314 0505 04       		.byte	4
+ 1315 0506 58       		.byte	88
+ 1316 0507 40       		.byte	64
+ 1317 0508 59       		.byte	89
+ 1318 0509 80       		.byte	-128
+ 1319 050a 5E       		.byte	94
+ 1320 050b 02       		.byte	2
+ 1321 050c 64       		.byte	100
  1322 050d 08       		.byte	8
- 1323 050e 50       		.byte	80
- 1324 050f 04       		.byte	4
- 1325 0510 5E       		.byte	94
+ 1323 050e 65       		.byte	101
+ 1324 050f 02       		.byte	2
+ 1325 0510 67       		.byte	103
  1326 0511 02       		.byte	2
- 1327 0512 64       		.byte	100
- 1328 0513 08       		.byte	8
- 1329 0514 65       		.byte	101
- 1330 0515 02       		.byte	2
- 1331 0516 67       		.byte	103
+ 1327 0512 82       		.byte	-126
+ 1328 0513 04       		.byte	4
+ 1329 0514 83       		.byte	-125
+ 1330 0515 01       		.byte	1
+ 1331 0516 85       		.byte	-123
  1332 0517 02       		.byte	2
- 1333 0518 82       		.byte	-126
- 1334 0519 04       		.byte	4
- 1335 051a 83       		.byte	-125
- 1336 051b 01       		.byte	1
- 1337 051c 85       		.byte	-123
- 1338 051d 02       		.byte	2
- 1339 051e 91       		.byte	-111
- 1340 051f 4E       		.byte	78
- 1341 0520 92       		.byte	-110
- 1342 0521 02       		.byte	2
- 1343 0522 93       		.byte	-109
- 1344 0523 10       		.byte	16
- 1345 0524 94       		.byte	-108
- 1346 0525 20       		.byte	32
- 1347 0526 96       		.byte	-106
+ 1333 0518 86       		.byte	-122
+ 1334 0519 02       		.byte	2
+ 1335 051a 87       		.byte	-121
+ 1336 051b 04       		.byte	4
+ 1337 051c 91       		.byte	-111
+ 1338 051d 4C       		.byte	76
+ 1339 051e 92       		.byte	-110
+ 1340 051f 02       		.byte	2
+ 1341 0520 93       		.byte	-109
+ 1342 0521 10       		.byte	16
+ 1343 0522 94       		.byte	-108
+ 1344 0523 20       		.byte	32
+ 1345 0524 96       		.byte	-106
+ 1346 0525 08       		.byte	8
+ 1347 0526 97       		.byte	-105
  1348 0527 08       		.byte	8
- 1349 0528 97       		.byte	-105
- 1350 0529 08       		.byte	8
- 1351 052a 99       		.byte	-103
- 1352 052b A0       		.byte	-96
- 1353 052c 9A       		.byte	-102
- 1354 052d 58       		.byte	88
- 1355 052e 9C       		.byte	-100
- 1356 052f 40       		.byte	64
- 1357 0530 9D       		.byte	-99
- 1358 0531 05       		.byte	5
- 1359 0532 9F       		.byte	-97
+ 1349 0528 99       		.byte	-103
+ 1350 0529 20       		.byte	32
+ 1351 052a 9A       		.byte	-102
+ 1352 052b 58       		.byte	88
+ 1353 052c 9C       		.byte	-100
+ 1354 052d 40       		.byte	64
+ 1355 052e 9D       		.byte	-99
+ 1356 052f 05       		.byte	5
+ 1357 0530 9F       		.byte	-97
+ 1358 0531 08       		.byte	8
+ 1359 0532 A0       		.byte	-96
  1360 0533 08       		.byte	8
- 1361 0534 A0       		.byte	-96
- 1362 0535 08       		.byte	8
- 1363 0536 A1       		.byte	-95
- 1364 0537 01       		.byte	1
+ 1361 0534 A1       		.byte	-95
+ 1362 0535 01       		.byte	1
+ 1363 0536 A3       		.byte	-93
+ 1364 0537 40       		.byte	64
  1365 0538 A4       		.byte	-92
  1366 0539 04       		.byte	4
  1367 053a A5       		.byte	-91
  1368 053b 88       		.byte	-120
-ARM GAS  C:\Users\alexa\AppData\Local\Temp\ccx1ML7r.s 			page 25
+ARM GAS  C:\Users\alexa\AppData\Local\Temp\cc0Fhkn9.s 			page 25
 
 
  1369 053c A7       		.byte	-89
@@ -1454,11 +1454,11 @@ ARM GAS  C:\Users\alexa\AppData\Local\Temp\ccx1ML7r.s 			page 1
  1379 0546 C0       		.byte	-64
  1380 0547 B9       		.byte	-71
  1381 0548 C2       		.byte	-62
- 1382 0549 E1       		.byte	-31
+ 1382 0549 E8       		.byte	-24
  1383 054a C4       		.byte	-60
  1384 054b 37       		.byte	55
  1385 054c CA       		.byte	-54
- 1386 054d D8       		.byte	-40
+ 1386 054d D1       		.byte	-47
  1387 054e CC       		.byte	-52
  1388 054f F0       		.byte	-16
  1389 0550 CE       		.byte	-50
@@ -1479,287 +1479,287 @@ ARM GAS  C:\Users\alexa\AppData\Local\Temp\ccx1ML7r.s 			page 1
  1404 055f 20       		.byte	32
  1405 0560 EA       		.byte	-22
  1406 0561 05       		.byte	5
- 1407 0562 33       		.byte	51
- 1408 0563 88       		.byte	-120
- 1409 0564 36       		.byte	54
- 1410 0565 40       		.byte	64
- 1411 0566 CC       		.byte	-52
- 1412 0567 70       		.byte	112
- 1413 0568 A6       		.byte	-90
- 1414 0569 40       		.byte	64
- 1415 056a A7       		.byte	-89
- 1416 056b 88       		.byte	-120
- 1417 056c 3E       		.byte	62
- 1418 056d 10       		.byte	16
- 1419 056e A6       		.byte	-90
- 1420 056f 40       		.byte	64
- 1421 0570 A7       		.byte	-89
- 1422 0571 88       		.byte	-120
- 1423 0572 CE       		.byte	-50
- 1424 0573 20       		.byte	32
- 1425 0574 8B       		.byte	-117
-ARM GAS  C:\Users\alexa\AppData\Local\Temp\ccx1ML7r.s 			page 26
+ 1407 0562 EE       		.byte	-18
+ 1408 0563 02       		.byte	2
+ 1409 0564 33       		.byte	51
+ 1410 0565 88       		.byte	-120
+ 1411 0566 37       		.byte	55
+ 1412 0567 80       		.byte	-128
+ 1413 0568 CC       		.byte	-52
+ 1414 0569 70       		.byte	112
+ 1415 056a 9F       		.byte	-97
+ 1416 056b 80       		.byte	-128
+ 1417 056c A7       		.byte	-89
+ 1418 056d 88       		.byte	-120
+ 1419 056e 3E       		.byte	62
+ 1420 056f 10       		.byte	16
+ 1421 0570 9F       		.byte	-97
+ 1422 0571 80       		.byte	-128
+ 1423 0572 A7       		.byte	-89
+ 1424 0573 88       		.byte	-120
+ 1425 0574 CE       		.byte	-50
+ARM GAS  C:\Users\alexa\AppData\Local\Temp\cc0Fhkn9.s 			page 26
 
 
- 1426 0575 08       		.byte	8
- 1427 0576 96       		.byte	-106
- 1428 0577 10       		.byte	16
- 1429 0578 A6       		.byte	-90
- 1430 0579 40       		.byte	64
- 1431 057a A7       		.byte	-89
+ 1426 0575 20       		.byte	32
+ 1427 0576 8B       		.byte	-117
+ 1428 0577 08       		.byte	8
+ 1429 0578 96       		.byte	-106
+ 1430 0579 10       		.byte	16
+ 1431 057a 9F       		.byte	-97
  1432 057b 80       		.byte	-128
- 1433 057c AB       		.byte	-85
- 1434 057d 08       		.byte	8
- 1435 057e EE       		.byte	-18
+ 1433 057c A7       		.byte	-89
+ 1434 057d 88       		.byte	-120
+ 1435 057e 72       		.byte	114
  1436 057f 80       		.byte	-128
- 1437 0580 72       		.byte	114
- 1438 0581 80       		.byte	-128
- 1439 0582 DC       		.byte	-36
- 1440 0583 01       		.byte	1
- 1441 0584 86       		.byte	-122
+ 1437 0580 DC       		.byte	-36
+ 1438 0581 01       		.byte	1
+ 1439 0582 82       		.byte	-126
+ 1440 0583 80       		.byte	-128
+ 1441 0584 9E       		.byte	-98
  1442 0585 80       		.byte	-128
- 1443 0586 9E       		.byte	-98
+ 1443 0586 87       		.byte	-121
  1444 0587 80       		.byte	-128
- 1445 0588 1A       		.byte	26
- 1446 0589 80       		.byte	-128
- 1447 058a C6       		.byte	-58
+ 1445 0588 96       		.byte	-106
+ 1446 0589 10       		.byte	16
+ 1447 058a 9B       		.byte	-101
  1448 058b 08       		.byte	8
- 1449 058c AA       		.byte	-86
- 1450 058d 40       		.byte	64
- 1451 058e 87       		.byte	-121
- 1452 058f 80       		.byte	-128
- 1453 0590 96       		.byte	-106
+ 1449 058c 9F       		.byte	-97
+ 1450 058d 80       		.byte	-128
+ 1451 058e A7       		.byte	-89
+ 1452 058f 88       		.byte	-120
+ 1453 0590 E6       		.byte	-26
  1454 0591 10       		.byte	16
- 1455 0592 9B       		.byte	-101
- 1456 0593 08       		.byte	8
- 1457 0594 A6       		.byte	-90
- 1458 0595 40       		.byte	64
- 1459 0596 A7       		.byte	-89
- 1460 0597 80       		.byte	-128
- 1461 0598 E6       		.byte	-26
- 1462 0599 10       		.byte	16
- 1463 059a 0B       		.byte	11
- 1464 059b 04       		.byte	4
- 1465 059c 13       		.byte	19
- 1466 059d 02       		.byte	2
- 1467 059e 16       		.byte	22
- 1468 059f 40       		.byte	64
- 1469 05a0 5F       		.byte	95
- 1470 05a1 08       		.byte	8
- 1471 05a2 7B       		.byte	123
- 1472 05a3 02       		.byte	2
- 1473 05a4 7E       		.byte	126
- 1474 05a5 01       		.byte	1
- 1475 05a6 86       		.byte	-122
- 1476 05a7 41       		.byte	65
- 1477 05a8 87       		.byte	-121
- 1478 05a9 04       		.byte	4
- 1479 05aa 8A       		.byte	-118
- 1480 05ab 40       		.byte	64
- 1481 05ac 9B       		.byte	-101
- 1482 05ad 08       		.byte	8
-ARM GAS  C:\Users\alexa\AppData\Local\Temp\ccx1ML7r.s 			page 27
+ 1455 0592 0B       		.byte	11
+ 1456 0593 04       		.byte	4
+ 1457 0594 13       		.byte	19
+ 1458 0595 02       		.byte	2
+ 1459 0596 16       		.byte	22
+ 1460 0597 40       		.byte	64
+ 1461 0598 5F       		.byte	95
+ 1462 0599 08       		.byte	8
+ 1463 059a 7B       		.byte	123
+ 1464 059b 02       		.byte	2
+ 1465 059c 7E       		.byte	126
+ 1466 059d 01       		.byte	1
+ 1467 059e 83       		.byte	-125
+ 1468 059f 80       		.byte	-128
+ 1469 05a0 86       		.byte	-122
+ 1470 05a1 41       		.byte	65
+ 1471 05a2 87       		.byte	-121
+ 1472 05a3 04       		.byte	4
+ 1473 05a4 9B       		.byte	-101
+ 1474 05a5 08       		.byte	8
+ 1475 05a6 9F       		.byte	-97
+ 1476 05a7 82       		.byte	-126
+ 1477 05a8 A3       		.byte	-93
+ 1478 05a9 02       		.byte	2
+ 1479 05aa AA       		.byte	-86
+ 1480 05ab 10       		.byte	16
+ 1481 05ac AB       		.byte	-85
+ 1482 05ad 02       		.byte	2
+ARM GAS  C:\Users\alexa\AppData\Local\Temp\cc0Fhkn9.s 			page 27
 
 
- 1483 05ae 9F       		.byte	-97
- 1484 05af 02       		.byte	2
- 1485 05b0 A3       		.byte	-93
+ 1483 05ae AF       		.byte	-81
+ 1484 05af 08       		.byte	8
+ 1485 05b0 B3       		.byte	-77
  1486 05b1 02       		.byte	2
- 1487 05b2 A6       		.byte	-90
+ 1487 05b2 C2       		.byte	-62
  1488 05b3 40       		.byte	64
- 1489 05b4 AA       		.byte	-86
- 1490 05b5 10       		.byte	16
- 1491 05b6 AB       		.byte	-85
- 1492 05b7 02       		.byte	2
- 1493 05b8 B3       		.byte	-77
- 1494 05b9 02       		.byte	2
- 1495 05ba C2       		.byte	-62
- 1496 05bb 40       		.byte	64
- 1497 05bc C4       		.byte	-60
- 1498 05bd 30       		.byte	48
- 1499 05be D6       		.byte	-42
+ 1489 05b4 C4       		.byte	-60
+ 1490 05b5 30       		.byte	48
+ 1491 05b6 D6       		.byte	-42
+ 1492 05b7 80       		.byte	-128
+ 1493 05b8 DC       		.byte	-36
+ 1494 05b9 80       		.byte	-128
+ 1495 05ba DE       		.byte	-34
+ 1496 05bb 20       		.byte	32
+ 1497 05bc E0       		.byte	-32
+ 1498 05bd 50       		.byte	80
+ 1499 05be E2       		.byte	-30
  1500 05bf 80       		.byte	-128
- 1501 05c0 DC       		.byte	-36
- 1502 05c1 80       		.byte	-128
- 1503 05c2 DE       		.byte	-34
- 1504 05c3 20       		.byte	32
- 1505 05c4 E0       		.byte	-32
- 1506 05c5 50       		.byte	80
- 1507 05c6 E6       		.byte	-26
- 1508 05c7 40       		.byte	64
- 1509 05c8 EA       		.byte	-22
- 1510 05c9 A0       		.byte	-96
- 1511 05ca 13       		.byte	19
- 1512 05cb 28       		.byte	40
- 1513 05cc 15       		.byte	21
- 1514 05cd 02       		.byte	2
- 1515 05ce 78       		.byte	120
- 1516 05cf 10       		.byte	16
- 1517 05d0 7F       		.byte	127
- 1518 05d1 40       		.byte	64
- 1519 05d2 C4       		.byte	-60
- 1520 05d3 0E       		.byte	14
+ 1501 05c0 E6       		.byte	-26
+ 1502 05c1 40       		.byte	64
+ 1503 05c2 EA       		.byte	-22
+ 1504 05c3 A0       		.byte	-96
+ 1505 05c4 EE       		.byte	-18
+ 1506 05c5 40       		.byte	64
+ 1507 05c6 13       		.byte	19
+ 1508 05c7 28       		.byte	40
+ 1509 05c8 14       		.byte	20
+ 1510 05c9 80       		.byte	-128
+ 1511 05ca 1F       		.byte	31
+ 1512 05cb 10       		.byte	16
+ 1513 05cc 78       		.byte	120
+ 1514 05cd 10       		.byte	16
+ 1515 05ce 7F       		.byte	127
+ 1516 05cf 40       		.byte	64
+ 1517 05d0 C4       		.byte	-60
+ 1518 05d1 0E       		.byte	14
+ 1519 05d2 C6       		.byte	-58
+ 1520 05d3 01       		.byte	1
  1521 05d4 DE       		.byte	-34
  1522 05d5 03       		.byte	3
  1523 05d6 10       		.byte	16
  1524 05d7 20       		.byte	32
- 1525 05d8 85       		.byte	-123
- 1526 05d9 01       		.byte	1
+ 1525 05d8 84       		.byte	-124
+ 1526 05d9 80       		.byte	-128
  1527 05da 87       		.byte	-121
  1528 05db 40       		.byte	64
  1529 05dc 8C       		.byte	-116
  1530 05dd 20       		.byte	32
- 1531 05de 91       		.byte	-111
- 1532 05df 02       		.byte	2
- 1533 05e0 97       		.byte	-105
+ 1531 05de 97       		.byte	-105
+ 1532 05df 80       		.byte	-128
+ 1533 05e0 98       		.byte	-104
  1534 05e1 80       		.byte	-128
  1535 05e2 AB       		.byte	-85
  1536 05e3 28       		.byte	40
- 1537 05e4 B0       		.byte	-80
+ 1537 05e4 AF       		.byte	-81
  1538 05e5 10       		.byte	16
- 1539 05e6 C4       		.byte	-60
-ARM GAS  C:\Users\alexa\AppData\Local\Temp\ccx1ML7r.s 			page 28
+ 1539 05e6 B0       		.byte	-80
+ARM GAS  C:\Users\alexa\AppData\Local\Temp\cc0Fhkn9.s 			page 28
 
 
- 1540 05e7 08       		.byte	8
- 1541 05e8 E6       		.byte	-26
+ 1540 05e7 10       		.byte	16
+ 1541 05e8 C4       		.byte	-60
  1542 05e9 08       		.byte	8
- 1543 05ea E8       		.byte	-24
- 1544 05eb 04       		.byte	4
- 1545 05ec 00       		.byte	0
- 1546 05ed 03       		.byte	3
- 1547 05ee 0A       		.byte	10
+ 1543 05ea E6       		.byte	-26
+ 1544 05eb 08       		.byte	8
+ 1545 05ec E8       		.byte	-24
+ 1546 05ed 04       		.byte	4
+ 1547 05ee 00       		.byte	0
  1548 05ef 03       		.byte	3
- 1549 05f0 10       		.byte	16
+ 1549 05f0 0A       		.byte	10
  1550 05f1 03       		.byte	3
- 1551 05f2 1A       		.byte	26
+ 1551 05f2 10       		.byte	16
  1552 05f3 03       		.byte	3
- 1553 05f4 00       		.byte	0
- 1554 05f5 3F       		.byte	63
- 1555 05f6 03       		.byte	3
- 1556 05f7 C0       		.byte	-64
- 1557 05f8 40       		.byte	64
- 1558 05f9 00       		.byte	0
- 1559 05fa 03       		.byte	3
- 1560 05fb 05       		.byte	5
- 1561 05fc 21       		.byte	33
- 1562 05fd 03       		.byte	3
- 1563 05fe 0E       		.byte	14
- 1564 05ff 04       		.byte	4
- 1565 0600 00       		.byte	0
- 1566 0601 30       		.byte	48
- 1567 0602 00       		.byte	0
- 1568 0603 00       		.byte	0
+ 1553 05f4 1A       		.byte	26
+ 1554 05f5 03       		.byte	3
+ 1555 05f6 00       		.byte	0
+ 1556 05f7 3F       		.byte	63
+ 1557 05f8 03       		.byte	3
+ 1558 05f9 C0       		.byte	-64
+ 1559 05fa 00       		.byte	0
+ 1560 05fb 00       		.byte	0
+ 1561 05fc 40       		.byte	64
+ 1562 05fd 00       		.byte	0
+ 1563 05fe 03       		.byte	3
+ 1564 05ff 05       		.byte	5
+ 1565 0600 21       		.byte	33
+ 1566 0601 03       		.byte	3
+ 1567 0602 0E       		.byte	14
+ 1568 0603 04       		.byte	4
  1569 0604 00       		.byte	0
- 1570 0605 10       		.byte	16
- 1571 0606 80       		.byte	-128
- 1572 0607 A0       		.byte	-96
+ 1570 0605 30       		.byte	48
+ 1571 0606 00       		.byte	0
+ 1572 0607 00       		.byte	0
  1573 0608 00       		.byte	0
- 1574 0609 0A       		.byte	10
- 1575 060a 00       		.byte	0
- 1576 060b 04       		.byte	4
+ 1574 0609 10       		.byte	16
+ 1575 060a 80       		.byte	-128
+ 1576 060b A0       		.byte	-96
  1577 060c 00       		.byte	0
- 1578 060d 03       		.byte	3
- 1579 060e 08       		.byte	8
+ 1578 060d 0A       		.byte	10
+ 1579 060e 00       		.byte	0
  1580 060f 04       		.byte	4
  1581 0610 00       		.byte	0
  1582 0611 03       		.byte	3
- 1583 0612 80       		.byte	-128
- 1584 0613 0C       		.byte	12
+ 1583 0612 08       		.byte	8
+ 1584 0613 04       		.byte	4
  1585 0614 00       		.byte	0
- 1586 0615 20       		.byte	32
- 1587 0616 1C       		.byte	28
- 1588 0617 90       		.byte	-112
- 1589 0618 1C       		.byte	28
- 1590 0619 00       		.byte	0
- 1591 061a 23       		.byte	35
- 1592 061b 08       		.byte	8
- 1593 061c 21       		.byte	33
- 1594 061d 30       		.byte	48
- 1595 061e 16       		.byte	22
- 1596 061f 00       		.byte	0
-ARM GAS  C:\Users\alexa\AppData\Local\Temp\ccx1ML7r.s 			page 29
+ 1586 0615 03       		.byte	3
+ 1587 0616 80       		.byte	-128
+ 1588 0617 0C       		.byte	12
+ 1589 0618 00       		.byte	0
+ 1590 0619 20       		.byte	32
+ 1591 061a 1C       		.byte	28
+ 1592 061b 90       		.byte	-112
+ 1593 061c 1C       		.byte	28
+ 1594 061d 00       		.byte	0
+ 1595 061e 23       		.byte	35
+ 1596 061f 08       		.byte	8
+ARM GAS  C:\Users\alexa\AppData\Local\Temp\cc0Fhkn9.s 			page 29
 
 
- 1597 0620 00       		.byte	0
- 1598 0621 00       		.byte	0
- 1599 0622 00       		.byte	0
+ 1597 0620 21       		.byte	33
+ 1598 0621 30       		.byte	48
+ 1599 0622 16       		.byte	22
  1600 0623 00       		.byte	0
  1601 0624 00       		.byte	0
  1602 0625 00       		.byte	0
  1603 0626 00       		.byte	0
- 1604 0627 40       		.byte	64
- 1605 0628 0F       		.byte	15
- 1606 0629 30       		.byte	48
- 1607 062a 1A       		.byte	26
- 1608 062b C0       		.byte	-64
- 1609 062c 80       		.byte	-128
- 1610 062d 0F       		.byte	15
- 1611 062e 60       		.byte	96
- 1612 062f 00       		.byte	0
+ 1604 0627 00       		.byte	0
+ 1605 0628 00       		.byte	0
+ 1606 0629 00       		.byte	0
+ 1607 062a 00       		.byte	0
+ 1608 062b 40       		.byte	64
+ 1609 062c 0F       		.byte	15
+ 1610 062d 30       		.byte	48
+ 1611 062e 1A       		.byte	26
+ 1612 062f C0       		.byte	-64
  1613 0630 80       		.byte	-128
- 1614 0631 00       		.byte	0
- 1615 0632 0A       		.byte	10
- 1616 0633 20       		.byte	32
- 1617 0634 00       		.byte	0
+ 1614 0631 0F       		.byte	15
+ 1615 0632 60       		.byte	96
+ 1616 0633 00       		.byte	0
+ 1617 0634 80       		.byte	-128
  1618 0635 00       		.byte	0
- 1619 0636 10       		.byte	16
- 1620 0637 04       		.byte	4
- 1621 0638 35       		.byte	53
- 1622 0639 06       		.byte	6
- 1623 063a 04       		.byte	4
- 1624 063b 00       		.byte	0
- 1625 063c 02       		.byte	2
- 1626 063d EC       		.byte	-20
- 1627 063e 00       		.byte	0
+ 1619 0636 0A       		.byte	10
+ 1620 0637 20       		.byte	32
+ 1621 0638 00       		.byte	0
+ 1622 0639 00       		.byte	0
+ 1623 063a 10       		.byte	16
+ 1624 063b 04       		.byte	4
+ 1625 063c 35       		.byte	53
+ 1626 063d 06       		.byte	6
+ 1627 063e 04       		.byte	4
  1628 063f 00       		.byte	0
- 1629 0640 03       		.byte	3
- 1630 0641 FF       		.byte	-1
- 1631 0642 FF       		.byte	-1
- 1632 0643 FF       		.byte	-1
- 1633 0644 62       		.byte	98
- 1634 0645 A0       		.byte	-96
- 1635 0646 F0       		.byte	-16
- 1636 0647 41       		.byte	65
- 1637 0648 0C       		.byte	12
- 1638 0649 00       		.byte	0
- 1639 064a 00       		.byte	0
- 1640 064b 00       		.byte	0
- 1641 064c 18       		.byte	24
+ 1629 0640 02       		.byte	2
+ 1630 0641 EC       		.byte	-20
+ 1631 0642 00       		.byte	0
+ 1632 0643 00       		.byte	0
+ 1633 0644 03       		.byte	3
+ 1634 0645 FF       		.byte	-1
+ 1635 0646 FF       		.byte	-1
+ 1636 0647 FF       		.byte	-1
+ 1637 0648 62       		.byte	98
+ 1638 0649 A0       		.byte	-96
+ 1639 064a F0       		.byte	-16
+ 1640 064b 41       		.byte	65
+ 1641 064c 0C       		.byte	12
  1642 064d 00       		.byte	0
- 1643 064e 04       		.byte	4
+ 1643 064e 00       		.byte	0
  1644 064f 00       		.byte	0
- 1645 0650 04       		.byte	4
- 1646 0651 04       		.byte	4
+ 1645 0650 18       		.byte	24
+ 1646 0651 00       		.byte	0
  1647 0652 04       		.byte	4
- 1648 0653 04       		.byte	4
- 1649 0654 11       		.byte	17
- 1650 0655 11       		.byte	17
- 1651 0656 00       		.byte	0
- 1652 0657 01       		.byte	1
- 1653 0658 00       		.byte	0
-ARM GAS  C:\Users\alexa\AppData\Local\Temp\ccx1ML7r.s 			page 30
+ 1648 0653 00       		.byte	0
+ 1649 0654 04       		.byte	4
+ 1650 0655 04       		.byte	4
+ 1651 0656 04       		.byte	4
+ 1652 0657 04       		.byte	4
+ 1653 0658 11       		.byte	17
+ARM GAS  C:\Users\alexa\AppData\Local\Temp\cc0Fhkn9.s 			page 30
 
 
- 1654 0659 00       		.byte	0
+ 1654 0659 11       		.byte	17
  1655 065a 00       		.byte	0
- 1656 065b 00       		.byte	0
+ 1656 065b 01       		.byte	1
  1657 065c 00       		.byte	0
  1658 065d 00       		.byte	0
- 1659 065e 40       		.byte	64
- 1660 065f 02       		.byte	2
+ 1659 065e 00       		.byte	0
+ 1660 065f 00       		.byte	0
  1661 0660 00       		.byte	0
- 1662 0661 10       		.byte	16
- 1663 0662 30       		.byte	48
- 1664 0663 10       		.byte	16
+ 1662 0661 00       		.byte	0
+ 1663 0662 40       		.byte	64
+ 1664 0663 02       		.byte	2
  1665 0664 00       		.byte	0
  1666 0665 10       		.byte	16
- 1667 0666 10       		.byte	16
- 1668 0667 12       		.byte	18
+ 1667 0666 30       		.byte	48
+ 1668 0667 10       		.byte	16
  1669 0668 00       		.byte	0
- 1670 0669 00       		.byte	0
- 1671 066a 00       		.byte	0
- 1672 066b 00       		.byte	0
+ 1670 0669 10       		.byte	16
+ 1671 066a 10       		.byte	16
+ 1672 066b 12       		.byte	18
  1673 066c 00       		.byte	0
  1674 066d 00       		.byte	0
  1675 066e 00       		.byte	0
@@ -1778,534 +1778,538 @@ ARM GAS  C:\Users\alexa\AppData\Local\Temp\ccx1ML7r.s 			page 1
  1688 067b 00       		.byte	0
  1689 067c 00       		.byte	0
  1690 067d 00       		.byte	0
- 1691 067e 01       		.byte	1
+ 1691 067e 00       		.byte	0
  1692 067f 00       		.byte	0
- 1693 0680 83       		.byte	-125
+ 1693 0680 00       		.byte	0
  1694 0681 00       		.byte	0
- 1695 0682 40       		.byte	64
- 1696 0683 80       		.byte	-128
+ 1695 0682 05       		.byte	5
+ 1696 0683 00       		.byte	0
  1697 0684 83       		.byte	-125
  1698 0685 00       		.byte	0
- 1699 0686 83       		.byte	-125
- 1700 0687 00       		.byte	0
- 1701 0688 00       		.byte	0
+ 1699 0686 40       		.byte	64
+ 1700 0687 80       		.byte	-128
+ 1701 0688 83       		.byte	-125
  1702 0689 00       		.byte	0
- 1703 068a 00       		.byte	0
+ 1703 068a 83       		.byte	-125
  1704 068b 00       		.byte	0
  1705 068c 00       		.byte	0
- 1706 068d 3F       		.byte	63
- 1707 068e 3F       		.byte	63
+ 1706 068d 00       		.byte	0
+ 1707 068e 00       		.byte	0
  1708 068f 00       		.byte	0
  1709 0690 00       		.byte	0
- 1710 0691 00       		.byte	0
-ARM GAS  C:\Users\alexa\AppData\Local\Temp\ccx1ML7r.s 			page 31
+ 1710 0691 3F       		.byte	63
+ARM GAS  C:\Users\alexa\AppData\Local\Temp\cc0Fhkn9.s 			page 31
 
 
- 1711 0692 00       		.byte	0
+ 1711 0692 3F       		.byte	63
  1712 0693 00       		.byte	0
  1713 0694 00       		.byte	0
- 1714 0695 0B       		.byte	11
- 1715 0696 0B       		.byte	11
+ 1714 0695 00       		.byte	0
+ 1715 0696 00       		.byte	0
  1716 0697 00       		.byte	0
  1717 0698 00       		.byte	0
- 1718 0699 00       		.byte	0
- 1719 069a 00       		.byte	0
+ 1718 0699 0B       		.byte	11
+ 1719 069a 0B       		.byte	11
  1720 069b 00       		.byte	0
  1721 069c 00       		.byte	0
- 1722 069d 7A       		.byte	122
- 1723 069e 7A       		.byte	122
+ 1722 069d 00       		.byte	0
+ 1723 069e 00       		.byte	0
  1724 069f 00       		.byte	0
  1725 06a0 00       		.byte	0
- 1726 06a1 00       		.byte	0
- 1727 06a2 00       		.byte	0
+ 1726 06a1 7A       		.byte	122
+ 1727 06a2 7A       		.byte	122
  1728 06a3 00       		.byte	0
- 1729 06a4 80       		.byte	-128
+ 1729 06a4 00       		.byte	0
  1730 06a5 00       		.byte	0
- 1731 06a6 40       		.byte	64
- 1732 06a7 80       		.byte	-128
+ 1731 06a6 00       		.byte	0
+ 1732 06a7 00       		.byte	0
  1733 06a8 80       		.byte	-128
  1734 06a9 00       		.byte	0
- 1735 06aa 80       		.byte	-128
- 1736 06ab 00       		.byte	0
- 1737 06ac 00       		.byte	0
+ 1735 06aa 40       		.byte	64
+ 1736 06ab 80       		.byte	-128
+ 1737 06ac 80       		.byte	-128
  1738 06ad 00       		.byte	0
- 1739 06ae 00       		.byte	0
+ 1739 06ae 80       		.byte	-128
  1740 06af 00       		.byte	0
- 1741 06b0 0E       		.byte	14
+ 1741 06b0 00       		.byte	0
  1742 06b1 00       		.byte	0
- 1743 06b2 18       		.byte	24
- 1744 06b3 01       		.byte	1
- 1745              		.section	.cywolatch,"a",%progbits
- 1746              		.align	2
- 1747              		.type	cy_meta_wonvl, %object
- 1748              		.size	cy_meta_wonvl, 4
- 1749              	cy_meta_wonvl:
- 1750 0000 BC       		.byte	-68
- 1751 0001 90       		.byte	-112
- 1752 0002 AC       		.byte	-84
- 1753 0003 AF       		.byte	-81
- 1754              		.section	.cycustnvl,"a",%progbits
- 1755              		.align	2
- 1756              		.type	cy_meta_custnvl, %object
- 1757              		.size	cy_meta_custnvl, 4
- 1758              	cy_meta_custnvl:
- 1759 0000 00       		.byte	0
- 1760 0001 00       		.byte	0
- 1761 0002 40       		.byte	64
- 1762 0003 05       		.byte	5
- 1763              		.section	.cymeta,"a",%progbits
- 1764              		.align	2
- 1765              		.type	cy_metadata, %object
- 1766              		.size	cy_metadata, 12
- 1767              	cy_metadata:
-ARM GAS  C:\Users\alexa\AppData\Local\Temp\ccx1ML7r.s 			page 32
+ 1743 06b2 00       		.byte	0
+ 1744 06b3 00       		.byte	0
+ 1745 06b4 0C       		.byte	12
+ 1746 06b5 00       		.byte	0
+ 1747 06b6 18       		.byte	24
+ 1748 06b7 01       		.byte	1
+ 1749              		.section	.cywolatch,"a",%progbits
+ 1750              		.align	2
+ 1751              		.type	cy_meta_wonvl, %object
+ 1752              		.size	cy_meta_wonvl, 4
+ 1753              	cy_meta_wonvl:
+ 1754 0000 BC       		.byte	-68
+ 1755 0001 90       		.byte	-112
+ 1756 0002 AC       		.byte	-84
+ 1757 0003 AF       		.byte	-81
+ 1758              		.section	.cycustnvl,"a",%progbits
+ 1759              		.align	2
+ 1760              		.type	cy_meta_custnvl, %object
+ 1761              		.size	cy_meta_custnvl, 4
+ 1762              	cy_meta_custnvl:
+ 1763 0000 00       		.byte	0
+ 1764 0001 00       		.byte	0
+ 1765 0002 40       		.byte	64
+ 1766 0003 05       		.byte	5
+ 1767              		.section	.cymeta,"a",%progbits
+ARM GAS  C:\Users\alexa\AppData\Local\Temp\cc0Fhkn9.s 			page 32
 
 
- 1768 0000 00       		.byte	0
- 1769 0001 01       		.byte	1
- 1770 0002 2E       		.byte	46
- 1771 0003 16       		.byte	22
- 1772 0004 10       		.byte	16
- 1773 0005 69       		.byte	105
- 1774 0006 00       		.byte	0
- 1775 0007 01       		.byte	1
- 1776 0008 00       		.byte	0
- 1777 0009 00       		.byte	0
- 1778 000a 00       		.byte	0
- 1779 000b 00       		.byte	0
- 1780              		.section	.cyflashprotect,"a",%progbits
- 1781              		.align	2
- 1782              		.type	cy_meta_flashprotect, %object
- 1783              		.size	cy_meta_flashprotect, 256
- 1784              	cy_meta_flashprotect:
- 1785 0000 00000000 		.space	256
- 1785      00000000 
- 1785      00000000 
- 1785      00000000 
- 1785      00000000 
- 1786              		.text
- 1787              	.Letext0:
- 1788              		.file 1 "c:\\program files (x86)\\cypress\\psoc creator\\4.4\\psoc creator\\import\\gnu\\arm\\5.4.
- 1789              		.file 2 "c:\\program files (x86)\\cypress\\psoc creator\\4.4\\psoc creator\\import\\gnu\\arm\\5.4.
- 1790              		.file 3 "Generated_Source\\PSoC5\\cymetadata.c"
- 1791              		.section	.debug_info,"",%progbits
- 1792              	.Ldebug_info0:
- 1793 0000 35010000 		.4byte	0x135
- 1794 0004 0400     		.2byte	0x4
- 1795 0006 00000000 		.4byte	.Ldebug_abbrev0
- 1796 000a 04       		.byte	0x4
- 1797 000b 01       		.uleb128 0x1
- 1798 000c 5E000000 		.4byte	.LASF17
- 1799 0010 0C       		.byte	0xc
- 1800 0011 B8010000 		.4byte	.LASF18
- 1801 0015 0A000000 		.4byte	.LASF19
- 1802 0019 00000000 		.4byte	.Ldebug_line0
- 1803 001d 02       		.uleb128 0x2
- 1804 001e 01       		.byte	0x1
- 1805 001f 06       		.byte	0x6
- 1806 0020 AC010000 		.4byte	.LASF0
- 1807 0024 03       		.uleb128 0x3
- 1808 0025 00000000 		.4byte	.LASF9
- 1809 0029 01       		.byte	0x1
- 1810 002a 1D       		.byte	0x1d
- 1811 002b 2F000000 		.4byte	0x2f
- 1812 002f 02       		.uleb128 0x2
- 1813 0030 01       		.byte	0x1
- 1814 0031 08       		.byte	0x8
- 1815 0032 50000000 		.4byte	.LASF1
- 1816 0036 02       		.uleb128 0x2
- 1817 0037 02       		.byte	0x2
- 1818 0038 05       		.byte	0x5
- 1819 0039 99010000 		.4byte	.LASF2
- 1820 003d 02       		.uleb128 0x2
-ARM GAS  C:\Users\alexa\AppData\Local\Temp\ccx1ML7r.s 			page 33
+ 1768              		.align	2
+ 1769              		.type	cy_metadata, %object
+ 1770              		.size	cy_metadata, 12
+ 1771              	cy_metadata:
+ 1772 0000 00       		.byte	0
+ 1773 0001 01       		.byte	1
+ 1774 0002 2E       		.byte	46
+ 1775 0003 16       		.byte	22
+ 1776 0004 10       		.byte	16
+ 1777 0005 69       		.byte	105
+ 1778 0006 00       		.byte	0
+ 1779 0007 01       		.byte	1
+ 1780 0008 00       		.byte	0
+ 1781 0009 00       		.byte	0
+ 1782 000a 00       		.byte	0
+ 1783 000b 00       		.byte	0
+ 1784              		.section	.cyflashprotect,"a",%progbits
+ 1785              		.align	2
+ 1786              		.type	cy_meta_flashprotect, %object
+ 1787              		.size	cy_meta_flashprotect, 256
+ 1788              	cy_meta_flashprotect:
+ 1789 0000 00000000 		.space	256
+ 1789      00000000 
+ 1789      00000000 
+ 1789      00000000 
+ 1789      00000000 
+ 1790              		.text
+ 1791              	.Letext0:
+ 1792              		.file 1 "c:\\program files (x86)\\cypress\\psoc creator\\4.4\\psoc creator\\import\\gnu\\arm\\5.4.
+ 1793              		.file 2 "c:\\program files (x86)\\cypress\\psoc creator\\4.4\\psoc creator\\import\\gnu\\arm\\5.4.
+ 1794              		.file 3 "Generated_Source\\PSoC5\\cymetadata.c"
+ 1795              		.section	.debug_info,"",%progbits
+ 1796              	.Ldebug_info0:
+ 1797 0000 35010000 		.4byte	0x135
+ 1798 0004 0400     		.2byte	0x4
+ 1799 0006 00000000 		.4byte	.Ldebug_abbrev0
+ 1800 000a 04       		.byte	0x4
+ 1801 000b 01       		.uleb128 0x1
+ 1802 000c 5E000000 		.4byte	.LASF17
+ 1803 0010 0C       		.byte	0xc
+ 1804 0011 B8010000 		.4byte	.LASF18
+ 1805 0015 0A000000 		.4byte	.LASF19
+ 1806 0019 00000000 		.4byte	.Ldebug_line0
+ 1807 001d 02       		.uleb128 0x2
+ 1808 001e 01       		.byte	0x1
+ 1809 001f 06       		.byte	0x6
+ 1810 0020 AC010000 		.4byte	.LASF0
+ 1811 0024 03       		.uleb128 0x3
+ 1812 0025 00000000 		.4byte	.LASF9
+ 1813 0029 01       		.byte	0x1
+ 1814 002a 1D       		.byte	0x1d
+ 1815 002b 2F000000 		.4byte	0x2f
+ 1816 002f 02       		.uleb128 0x2
+ 1817 0030 01       		.byte	0x1
+ 1818 0031 08       		.byte	0x8
+ 1819 0032 50000000 		.4byte	.LASF1
+ 1820 0036 02       		.uleb128 0x2
+ARM GAS  C:\Users\alexa\AppData\Local\Temp\cc0Fhkn9.s 			page 33
 
 
- 1821 003e 02       		.byte	0x2
- 1822 003f 07       		.byte	0x7
- 1823 0040 FE000000 		.4byte	.LASF3
- 1824 0044 02       		.uleb128 0x2
- 1825 0045 04       		.byte	0x4
- 1826 0046 05       		.byte	0x5
- 1827 0047 A3010000 		.4byte	.LASF4
- 1828 004b 02       		.uleb128 0x2
- 1829 004c 04       		.byte	0x4
- 1830 004d 07       		.byte	0x7
- 1831 004e EC000000 		.4byte	.LASF5
- 1832 0052 02       		.uleb128 0x2
- 1833 0053 08       		.byte	0x8
- 1834 0054 05       		.byte	0x5
- 1835 0055 8B010000 		.4byte	.LASF6
- 1836 0059 02       		.uleb128 0x2
- 1837 005a 08       		.byte	0x8
- 1838 005b 07       		.byte	0x7
- 1839 005c 40010000 		.4byte	.LASF7
- 1840 0060 04       		.uleb128 0x4
- 1841 0061 04       		.byte	0x4
- 1842 0062 05       		.byte	0x5
- 1843 0063 696E7400 		.ascii	"int\000"
- 1844 0067 02       		.uleb128 0x2
- 1845 0068 04       		.byte	0x4
- 1846 0069 07       		.byte	0x7
- 1847 006a 33010000 		.4byte	.LASF8
- 1848 006e 03       		.uleb128 0x3
- 1849 006f 57010000 		.4byte	.LASF10
- 1850 0073 02       		.byte	0x2
- 1851 0074 18       		.byte	0x18
- 1852 0075 24000000 		.4byte	0x24
- 1853 0079 05       		.uleb128 0x5
- 1854 007a 91000000 		.4byte	0x91
- 1855 007e 8A000000 		.4byte	0x8a
- 1856 0082 06       		.uleb128 0x6
- 1857 0083 8A000000 		.4byte	0x8a
- 1858 0087 B306     		.2byte	0x6b3
- 1859 0089 00       		.byte	0
- 1860 008a 02       		.uleb128 0x2
- 1861 008b 04       		.byte	0x4
- 1862 008c 07       		.byte	0x7
- 1863 008d 82010000 		.4byte	.LASF11
- 1864 0091 07       		.uleb128 0x7
- 1865 0092 6E000000 		.4byte	0x6e
- 1866 0096 08       		.uleb128 0x8
- 1867 0097 21010000 		.4byte	.LASF12
- 1868 009b 03       		.byte	0x3
- 1869 009c 1F       		.byte	0x1f
- 1870 009d A7000000 		.4byte	0xa7
- 1871 00a1 05       		.uleb128 0x5
- 1872 00a2 03       		.byte	0x3
- 1873 00a3 00000000 		.4byte	cy_meta_configecc
- 1874 00a7 07       		.uleb128 0x7
- 1875 00a8 79000000 		.4byte	0x79
- 1876 00ac 05       		.uleb128 0x5
- 1877 00ad 91000000 		.4byte	0x91
-ARM GAS  C:\Users\alexa\AppData\Local\Temp\ccx1ML7r.s 			page 34
+ 1821 0037 02       		.byte	0x2
+ 1822 0038 05       		.byte	0x5
+ 1823 0039 99010000 		.4byte	.LASF2
+ 1824 003d 02       		.uleb128 0x2
+ 1825 003e 02       		.byte	0x2
+ 1826 003f 07       		.byte	0x7
+ 1827 0040 FE000000 		.4byte	.LASF3
+ 1828 0044 02       		.uleb128 0x2
+ 1829 0045 04       		.byte	0x4
+ 1830 0046 05       		.byte	0x5
+ 1831 0047 A3010000 		.4byte	.LASF4
+ 1832 004b 02       		.uleb128 0x2
+ 1833 004c 04       		.byte	0x4
+ 1834 004d 07       		.byte	0x7
+ 1835 004e EC000000 		.4byte	.LASF5
+ 1836 0052 02       		.uleb128 0x2
+ 1837 0053 08       		.byte	0x8
+ 1838 0054 05       		.byte	0x5
+ 1839 0055 8B010000 		.4byte	.LASF6
+ 1840 0059 02       		.uleb128 0x2
+ 1841 005a 08       		.byte	0x8
+ 1842 005b 07       		.byte	0x7
+ 1843 005c 40010000 		.4byte	.LASF7
+ 1844 0060 04       		.uleb128 0x4
+ 1845 0061 04       		.byte	0x4
+ 1846 0062 05       		.byte	0x5
+ 1847 0063 696E7400 		.ascii	"int\000"
+ 1848 0067 02       		.uleb128 0x2
+ 1849 0068 04       		.byte	0x4
+ 1850 0069 07       		.byte	0x7
+ 1851 006a 33010000 		.4byte	.LASF8
+ 1852 006e 03       		.uleb128 0x3
+ 1853 006f 57010000 		.4byte	.LASF10
+ 1854 0073 02       		.byte	0x2
+ 1855 0074 18       		.byte	0x18
+ 1856 0075 24000000 		.4byte	0x24
+ 1857 0079 05       		.uleb128 0x5
+ 1858 007a 91000000 		.4byte	0x91
+ 1859 007e 8A000000 		.4byte	0x8a
+ 1860 0082 06       		.uleb128 0x6
+ 1861 0083 8A000000 		.4byte	0x8a
+ 1862 0087 B706     		.2byte	0x6b7
+ 1863 0089 00       		.byte	0
+ 1864 008a 02       		.uleb128 0x2
+ 1865 008b 04       		.byte	0x4
+ 1866 008c 07       		.byte	0x7
+ 1867 008d 82010000 		.4byte	.LASF11
+ 1868 0091 07       		.uleb128 0x7
+ 1869 0092 6E000000 		.4byte	0x6e
+ 1870 0096 08       		.uleb128 0x8
+ 1871 0097 21010000 		.4byte	.LASF12
+ 1872 009b 03       		.byte	0x3
+ 1873 009c 1F       		.byte	0x1f
+ 1874 009d A7000000 		.4byte	0xa7
+ 1875 00a1 05       		.uleb128 0x5
+ 1876 00a2 03       		.byte	0x3
+ 1877 00a3 00000000 		.4byte	cy_meta_configecc
+ARM GAS  C:\Users\alexa\AppData\Local\Temp\cc0Fhkn9.s 			page 34
 
 
- 1878 00b1 BC000000 		.4byte	0xbc
- 1879 00b5 09       		.uleb128 0x9
- 1880 00b6 8A000000 		.4byte	0x8a
- 1881 00ba 03       		.byte	0x3
- 1882 00bb 00       		.byte	0
- 1883 00bc 0A       		.uleb128 0xa
- 1884 00bd 11010000 		.4byte	.LASF13
- 1885 00c1 03       		.byte	0x3
- 1886 00c2 0301     		.2byte	0x103
- 1887 00c4 CE000000 		.4byte	0xce
- 1888 00c8 05       		.uleb128 0x5
- 1889 00c9 03       		.byte	0x3
- 1890 00ca 00000000 		.4byte	cy_meta_custnvl
- 1891 00ce 07       		.uleb128 0x7
- 1892 00cf AC000000 		.4byte	0xac
- 1893 00d3 0A       		.uleb128 0xa
- 1894 00d4 74010000 		.4byte	.LASF14
- 1895 00d8 03       		.byte	0x3
- 1896 00d9 1101     		.2byte	0x111
- 1897 00db E5000000 		.4byte	0xe5
- 1898 00df 05       		.uleb128 0x5
- 1899 00e0 03       		.byte	0x3
- 1900 00e1 00000000 		.4byte	cy_meta_wonvl
- 1901 00e5 07       		.uleb128 0x7
- 1902 00e6 AC000000 		.4byte	0xac
- 1903 00ea 05       		.uleb128 0x5
- 1904 00eb 91000000 		.4byte	0x91
- 1905 00ef FA000000 		.4byte	0xfa
- 1906 00f3 09       		.uleb128 0x9
- 1907 00f4 8A000000 		.4byte	0x8a
- 1908 00f8 FF       		.byte	0xff
- 1909 00f9 00       		.byte	0
- 1910 00fa 0A       		.uleb128 0xa
- 1911 00fb 5F010000 		.4byte	.LASF15
- 1912 00ff 03       		.byte	0x3
- 1913 0100 1F01     		.2byte	0x11f
- 1914 0102 0C010000 		.4byte	0x10c
- 1915 0106 05       		.uleb128 0x5
- 1916 0107 03       		.byte	0x3
- 1917 0108 00000000 		.4byte	cy_meta_flashprotect
- 1918 010c 07       		.uleb128 0x7
- 1919 010d EA000000 		.4byte	0xea
- 1920 0111 05       		.uleb128 0x5
- 1921 0112 91000000 		.4byte	0x91
- 1922 0116 21010000 		.4byte	0x121
- 1923 011a 09       		.uleb128 0x9
- 1924 011b 8A000000 		.4byte	0x8a
- 1925 011f 0B       		.byte	0xb
- 1926 0120 00       		.byte	0
- 1927 0121 0A       		.uleb128 0xa
- 1928 0122 44000000 		.4byte	.LASF16
- 1929 0126 03       		.byte	0x3
- 1930 0127 4C01     		.2byte	0x14c
- 1931 0129 33010000 		.4byte	0x133
- 1932 012d 05       		.uleb128 0x5
- 1933 012e 03       		.byte	0x3
- 1934 012f 00000000 		.4byte	cy_metadata
-ARM GAS  C:\Users\alexa\AppData\Local\Temp\ccx1ML7r.s 			page 35
+ 1878 00a7 07       		.uleb128 0x7
+ 1879 00a8 79000000 		.4byte	0x79
+ 1880 00ac 05       		.uleb128 0x5
+ 1881 00ad 91000000 		.4byte	0x91
+ 1882 00b1 BC000000 		.4byte	0xbc
+ 1883 00b5 09       		.uleb128 0x9
+ 1884 00b6 8A000000 		.4byte	0x8a
+ 1885 00ba 03       		.byte	0x3
+ 1886 00bb 00       		.byte	0
+ 1887 00bc 0A       		.uleb128 0xa
+ 1888 00bd 11010000 		.4byte	.LASF13
+ 1889 00c1 03       		.byte	0x3
+ 1890 00c2 0301     		.2byte	0x103
+ 1891 00c4 CE000000 		.4byte	0xce
+ 1892 00c8 05       		.uleb128 0x5
+ 1893 00c9 03       		.byte	0x3
+ 1894 00ca 00000000 		.4byte	cy_meta_custnvl
+ 1895 00ce 07       		.uleb128 0x7
+ 1896 00cf AC000000 		.4byte	0xac
+ 1897 00d3 0A       		.uleb128 0xa
+ 1898 00d4 74010000 		.4byte	.LASF14
+ 1899 00d8 03       		.byte	0x3
+ 1900 00d9 1101     		.2byte	0x111
+ 1901 00db E5000000 		.4byte	0xe5
+ 1902 00df 05       		.uleb128 0x5
+ 1903 00e0 03       		.byte	0x3
+ 1904 00e1 00000000 		.4byte	cy_meta_wonvl
+ 1905 00e5 07       		.uleb128 0x7
+ 1906 00e6 AC000000 		.4byte	0xac
+ 1907 00ea 05       		.uleb128 0x5
+ 1908 00eb 91000000 		.4byte	0x91
+ 1909 00ef FA000000 		.4byte	0xfa
+ 1910 00f3 09       		.uleb128 0x9
+ 1911 00f4 8A000000 		.4byte	0x8a
+ 1912 00f8 FF       		.byte	0xff
+ 1913 00f9 00       		.byte	0
+ 1914 00fa 0A       		.uleb128 0xa
+ 1915 00fb 5F010000 		.4byte	.LASF15
+ 1916 00ff 03       		.byte	0x3
+ 1917 0100 1F01     		.2byte	0x11f
+ 1918 0102 0C010000 		.4byte	0x10c
+ 1919 0106 05       		.uleb128 0x5
+ 1920 0107 03       		.byte	0x3
+ 1921 0108 00000000 		.4byte	cy_meta_flashprotect
+ 1922 010c 07       		.uleb128 0x7
+ 1923 010d EA000000 		.4byte	0xea
+ 1924 0111 05       		.uleb128 0x5
+ 1925 0112 91000000 		.4byte	0x91
+ 1926 0116 21010000 		.4byte	0x121
+ 1927 011a 09       		.uleb128 0x9
+ 1928 011b 8A000000 		.4byte	0x8a
+ 1929 011f 0B       		.byte	0xb
+ 1930 0120 00       		.byte	0
+ 1931 0121 0A       		.uleb128 0xa
+ 1932 0122 44000000 		.4byte	.LASF16
+ 1933 0126 03       		.byte	0x3
+ 1934 0127 4C01     		.2byte	0x14c
+ARM GAS  C:\Users\alexa\AppData\Local\Temp\cc0Fhkn9.s 			page 35
 
 
- 1935 0133 07       		.uleb128 0x7
- 1936 0134 11010000 		.4byte	0x111
- 1937 0138 00       		.byte	0
- 1938              		.section	.debug_abbrev,"",%progbits
- 1939              	.Ldebug_abbrev0:
- 1940 0000 01       		.uleb128 0x1
- 1941 0001 11       		.uleb128 0x11
- 1942 0002 01       		.byte	0x1
- 1943 0003 25       		.uleb128 0x25
- 1944 0004 0E       		.uleb128 0xe
- 1945 0005 13       		.uleb128 0x13
- 1946 0006 0B       		.uleb128 0xb
- 1947 0007 03       		.uleb128 0x3
- 1948 0008 0E       		.uleb128 0xe
- 1949 0009 1B       		.uleb128 0x1b
- 1950 000a 0E       		.uleb128 0xe
- 1951 000b 10       		.uleb128 0x10
- 1952 000c 17       		.uleb128 0x17
- 1953 000d 00       		.byte	0
- 1954 000e 00       		.byte	0
- 1955 000f 02       		.uleb128 0x2
- 1956 0010 24       		.uleb128 0x24
- 1957 0011 00       		.byte	0
- 1958 0012 0B       		.uleb128 0xb
- 1959 0013 0B       		.uleb128 0xb
- 1960 0014 3E       		.uleb128 0x3e
- 1961 0015 0B       		.uleb128 0xb
- 1962 0016 03       		.uleb128 0x3
- 1963 0017 0E       		.uleb128 0xe
- 1964 0018 00       		.byte	0
- 1965 0019 00       		.byte	0
- 1966 001a 03       		.uleb128 0x3
- 1967 001b 16       		.uleb128 0x16
- 1968 001c 00       		.byte	0
- 1969 001d 03       		.uleb128 0x3
- 1970 001e 0E       		.uleb128 0xe
- 1971 001f 3A       		.uleb128 0x3a
- 1972 0020 0B       		.uleb128 0xb
- 1973 0021 3B       		.uleb128 0x3b
- 1974 0022 0B       		.uleb128 0xb
- 1975 0023 49       		.uleb128 0x49
- 1976 0024 13       		.uleb128 0x13
- 1977 0025 00       		.byte	0
- 1978 0026 00       		.byte	0
- 1979 0027 04       		.uleb128 0x4
- 1980 0028 24       		.uleb128 0x24
- 1981 0029 00       		.byte	0
- 1982 002a 0B       		.uleb128 0xb
- 1983 002b 0B       		.uleb128 0xb
- 1984 002c 3E       		.uleb128 0x3e
- 1985 002d 0B       		.uleb128 0xb
- 1986 002e 03       		.uleb128 0x3
- 1987 002f 08       		.uleb128 0x8
- 1988 0030 00       		.byte	0
- 1989 0031 00       		.byte	0
- 1990 0032 05       		.uleb128 0x5
- 1991 0033 01       		.uleb128 0x1
-ARM GAS  C:\Users\alexa\AppData\Local\Temp\ccx1ML7r.s 			page 36
+ 1935 0129 33010000 		.4byte	0x133
+ 1936 012d 05       		.uleb128 0x5
+ 1937 012e 03       		.byte	0x3
+ 1938 012f 00000000 		.4byte	cy_metadata
+ 1939 0133 07       		.uleb128 0x7
+ 1940 0134 11010000 		.4byte	0x111
+ 1941 0138 00       		.byte	0
+ 1942              		.section	.debug_abbrev,"",%progbits
+ 1943              	.Ldebug_abbrev0:
+ 1944 0000 01       		.uleb128 0x1
+ 1945 0001 11       		.uleb128 0x11
+ 1946 0002 01       		.byte	0x1
+ 1947 0003 25       		.uleb128 0x25
+ 1948 0004 0E       		.uleb128 0xe
+ 1949 0005 13       		.uleb128 0x13
+ 1950 0006 0B       		.uleb128 0xb
+ 1951 0007 03       		.uleb128 0x3
+ 1952 0008 0E       		.uleb128 0xe
+ 1953 0009 1B       		.uleb128 0x1b
+ 1954 000a 0E       		.uleb128 0xe
+ 1955 000b 10       		.uleb128 0x10
+ 1956 000c 17       		.uleb128 0x17
+ 1957 000d 00       		.byte	0
+ 1958 000e 00       		.byte	0
+ 1959 000f 02       		.uleb128 0x2
+ 1960 0010 24       		.uleb128 0x24
+ 1961 0011 00       		.byte	0
+ 1962 0012 0B       		.uleb128 0xb
+ 1963 0013 0B       		.uleb128 0xb
+ 1964 0014 3E       		.uleb128 0x3e
+ 1965 0015 0B       		.uleb128 0xb
+ 1966 0016 03       		.uleb128 0x3
+ 1967 0017 0E       		.uleb128 0xe
+ 1968 0018 00       		.byte	0
+ 1969 0019 00       		.byte	0
+ 1970 001a 03       		.uleb128 0x3
+ 1971 001b 16       		.uleb128 0x16
+ 1972 001c 00       		.byte	0
+ 1973 001d 03       		.uleb128 0x3
+ 1974 001e 0E       		.uleb128 0xe
+ 1975 001f 3A       		.uleb128 0x3a
+ 1976 0020 0B       		.uleb128 0xb
+ 1977 0021 3B       		.uleb128 0x3b
+ 1978 0022 0B       		.uleb128 0xb
+ 1979 0023 49       		.uleb128 0x49
+ 1980 0024 13       		.uleb128 0x13
+ 1981 0025 00       		.byte	0
+ 1982 0026 00       		.byte	0
+ 1983 0027 04       		.uleb128 0x4
+ 1984 0028 24       		.uleb128 0x24
+ 1985 0029 00       		.byte	0
+ 1986 002a 0B       		.uleb128 0xb
+ 1987 002b 0B       		.uleb128 0xb
+ 1988 002c 3E       		.uleb128 0x3e
+ 1989 002d 0B       		.uleb128 0xb
+ 1990 002e 03       		.uleb128 0x3
+ 1991 002f 08       		.uleb128 0x8
+ARM GAS  C:\Users\alexa\AppData\Local\Temp\cc0Fhkn9.s 			page 36
 
 
- 1992 0034 01       		.byte	0x1
- 1993 0035 49       		.uleb128 0x49
- 1994 0036 13       		.uleb128 0x13
- 1995 0037 01       		.uleb128 0x1
- 1996 0038 13       		.uleb128 0x13
- 1997 0039 00       		.byte	0
- 1998 003a 00       		.byte	0
- 1999 003b 06       		.uleb128 0x6
- 2000 003c 21       		.uleb128 0x21
- 2001 003d 00       		.byte	0
- 2002 003e 49       		.uleb128 0x49
- 2003 003f 13       		.uleb128 0x13
- 2004 0040 2F       		.uleb128 0x2f
- 2005 0041 05       		.uleb128 0x5
- 2006 0042 00       		.byte	0
- 2007 0043 00       		.byte	0
- 2008 0044 07       		.uleb128 0x7
- 2009 0045 26       		.uleb128 0x26
- 2010 0046 00       		.byte	0
- 2011 0047 49       		.uleb128 0x49
- 2012 0048 13       		.uleb128 0x13
- 2013 0049 00       		.byte	0
- 2014 004a 00       		.byte	0
- 2015 004b 08       		.uleb128 0x8
- 2016 004c 34       		.uleb128 0x34
- 2017 004d 00       		.byte	0
- 2018 004e 03       		.uleb128 0x3
- 2019 004f 0E       		.uleb128 0xe
- 2020 0050 3A       		.uleb128 0x3a
- 2021 0051 0B       		.uleb128 0xb
- 2022 0052 3B       		.uleb128 0x3b
- 2023 0053 0B       		.uleb128 0xb
- 2024 0054 49       		.uleb128 0x49
- 2025 0055 13       		.uleb128 0x13
- 2026 0056 3F       		.uleb128 0x3f
- 2027 0057 19       		.uleb128 0x19
- 2028 0058 02       		.uleb128 0x2
- 2029 0059 18       		.uleb128 0x18
- 2030 005a 00       		.byte	0
- 2031 005b 00       		.byte	0
- 2032 005c 09       		.uleb128 0x9
- 2033 005d 21       		.uleb128 0x21
- 2034 005e 00       		.byte	0
- 2035 005f 49       		.uleb128 0x49
- 2036 0060 13       		.uleb128 0x13
- 2037 0061 2F       		.uleb128 0x2f
- 2038 0062 0B       		.uleb128 0xb
- 2039 0063 00       		.byte	0
- 2040 0064 00       		.byte	0
- 2041 0065 0A       		.uleb128 0xa
- 2042 0066 34       		.uleb128 0x34
- 2043 0067 00       		.byte	0
- 2044 0068 03       		.uleb128 0x3
- 2045 0069 0E       		.uleb128 0xe
- 2046 006a 3A       		.uleb128 0x3a
- 2047 006b 0B       		.uleb128 0xb
- 2048 006c 3B       		.uleb128 0x3b
-ARM GAS  C:\Users\alexa\AppData\Local\Temp\ccx1ML7r.s 			page 37
+ 1992 0030 00       		.byte	0
+ 1993 0031 00       		.byte	0
+ 1994 0032 05       		.uleb128 0x5
+ 1995 0033 01       		.uleb128 0x1
+ 1996 0034 01       		.byte	0x1
+ 1997 0035 49       		.uleb128 0x49
+ 1998 0036 13       		.uleb128 0x13
+ 1999 0037 01       		.uleb128 0x1
+ 2000 0038 13       		.uleb128 0x13
+ 2001 0039 00       		.byte	0
+ 2002 003a 00       		.byte	0
+ 2003 003b 06       		.uleb128 0x6
+ 2004 003c 21       		.uleb128 0x21
+ 2005 003d 00       		.byte	0
+ 2006 003e 49       		.uleb128 0x49
+ 2007 003f 13       		.uleb128 0x13
+ 2008 0040 2F       		.uleb128 0x2f
+ 2009 0041 05       		.uleb128 0x5
+ 2010 0042 00       		.byte	0
+ 2011 0043 00       		.byte	0
+ 2012 0044 07       		.uleb128 0x7
+ 2013 0045 26       		.uleb128 0x26
+ 2014 0046 00       		.byte	0
+ 2015 0047 49       		.uleb128 0x49
+ 2016 0048 13       		.uleb128 0x13
+ 2017 0049 00       		.byte	0
+ 2018 004a 00       		.byte	0
+ 2019 004b 08       		.uleb128 0x8
+ 2020 004c 34       		.uleb128 0x34
+ 2021 004d 00       		.byte	0
+ 2022 004e 03       		.uleb128 0x3
+ 2023 004f 0E       		.uleb128 0xe
+ 2024 0050 3A       		.uleb128 0x3a
+ 2025 0051 0B       		.uleb128 0xb
+ 2026 0052 3B       		.uleb128 0x3b
+ 2027 0053 0B       		.uleb128 0xb
+ 2028 0054 49       		.uleb128 0x49
+ 2029 0055 13       		.uleb128 0x13
+ 2030 0056 3F       		.uleb128 0x3f
+ 2031 0057 19       		.uleb128 0x19
+ 2032 0058 02       		.uleb128 0x2
+ 2033 0059 18       		.uleb128 0x18
+ 2034 005a 00       		.byte	0
+ 2035 005b 00       		.byte	0
+ 2036 005c 09       		.uleb128 0x9
+ 2037 005d 21       		.uleb128 0x21
+ 2038 005e 00       		.byte	0
+ 2039 005f 49       		.uleb128 0x49
+ 2040 0060 13       		.uleb128 0x13
+ 2041 0061 2F       		.uleb128 0x2f
+ 2042 0062 0B       		.uleb128 0xb
+ 2043 0063 00       		.byte	0
+ 2044 0064 00       		.byte	0
+ 2045 0065 0A       		.uleb128 0xa
+ 2046 0066 34       		.uleb128 0x34
+ 2047 0067 00       		.byte	0
+ 2048 0068 03       		.uleb128 0x3
+ARM GAS  C:\Users\alexa\AppData\Local\Temp\cc0Fhkn9.s 			page 37
 
 
- 2049 006d 05       		.uleb128 0x5
- 2050 006e 49       		.uleb128 0x49
- 2051 006f 13       		.uleb128 0x13
- 2052 0070 3F       		.uleb128 0x3f
- 2053 0071 19       		.uleb128 0x19
- 2054 0072 02       		.uleb128 0x2
- 2055 0073 18       		.uleb128 0x18
- 2056 0074 00       		.byte	0
- 2057 0075 00       		.byte	0
- 2058 0076 00       		.byte	0
- 2059              		.section	.debug_aranges,"",%progbits
- 2060 0000 14000000 		.4byte	0x14
- 2061 0004 0200     		.2byte	0x2
- 2062 0006 00000000 		.4byte	.Ldebug_info0
- 2063 000a 04       		.byte	0x4
- 2064 000b 00       		.byte	0
- 2065 000c 0000     		.2byte	0
- 2066 000e 0000     		.2byte	0
- 2067 0010 00000000 		.4byte	0
- 2068 0014 00000000 		.4byte	0
- 2069              		.section	.debug_line,"",%progbits
- 2070              	.Ldebug_line0:
- 2071 0000 3D010000 		.section	.debug_str,"MS",%progbits,1
- 2071      02003701 
- 2071      00000201 
- 2071      FB0E0D00 
- 2071      01010101 
- 2072              	.LASF9:
- 2073 0000 5F5F7569 		.ascii	"__uint8_t\000"
- 2073      6E74385F 
- 2073      7400
- 2074              	.LASF19:
- 2075 000a 433A5C55 		.ascii	"C:\\Users\\alexa\\Documents\\GitHub\\Projekt-3\\PSo"
- 2075      73657273 
- 2075      5C616C65 
- 2075      78615C44 
- 2075      6F63756D 
- 2076 0037 435C5052 		.ascii	"C\\PRJ3.cydsn\000"
- 2076      4A332E63 
- 2076      7964736E 
- 2076      00
- 2077              	.LASF16:
- 2078 0044 63795F6D 		.ascii	"cy_metadata\000"
- 2078      65746164 
- 2078      61746100 
- 2079              	.LASF1:
- 2080 0050 756E7369 		.ascii	"unsigned char\000"
- 2080      676E6564 
- 2080      20636861 
- 2080      7200
- 2081              	.LASF17:
- 2082 005e 474E5520 		.ascii	"GNU C11 5.4.1 20160609 (release) [ARM/embedded-5-br"
- 2082      43313120 
- 2082      352E342E 
- 2082      31203230 
- 2082      31363036 
- 2083 0091 616E6368 		.ascii	"anch revision 237715] -mcpu=cortex-m3 -mthumb -g -O"
-ARM GAS  C:\Users\alexa\AppData\Local\Temp\ccx1ML7r.s 			page 38
+ 2049 0069 0E       		.uleb128 0xe
+ 2050 006a 3A       		.uleb128 0x3a
+ 2051 006b 0B       		.uleb128 0xb
+ 2052 006c 3B       		.uleb128 0x3b
+ 2053 006d 05       		.uleb128 0x5
+ 2054 006e 49       		.uleb128 0x49
+ 2055 006f 13       		.uleb128 0x13
+ 2056 0070 3F       		.uleb128 0x3f
+ 2057 0071 19       		.uleb128 0x19
+ 2058 0072 02       		.uleb128 0x2
+ 2059 0073 18       		.uleb128 0x18
+ 2060 0074 00       		.byte	0
+ 2061 0075 00       		.byte	0
+ 2062 0076 00       		.byte	0
+ 2063              		.section	.debug_aranges,"",%progbits
+ 2064 0000 14000000 		.4byte	0x14
+ 2065 0004 0200     		.2byte	0x2
+ 2066 0006 00000000 		.4byte	.Ldebug_info0
+ 2067 000a 04       		.byte	0x4
+ 2068 000b 00       		.byte	0
+ 2069 000c 0000     		.2byte	0
+ 2070 000e 0000     		.2byte	0
+ 2071 0010 00000000 		.4byte	0
+ 2072 0014 00000000 		.4byte	0
+ 2073              		.section	.debug_line,"",%progbits
+ 2074              	.Ldebug_line0:
+ 2075 0000 3D010000 		.section	.debug_str,"MS",%progbits,1
+ 2075      02003701 
+ 2075      00000201 
+ 2075      FB0E0D00 
+ 2075      01010101 
+ 2076              	.LASF9:
+ 2077 0000 5F5F7569 		.ascii	"__uint8_t\000"
+ 2077      6E74385F 
+ 2077      7400
+ 2078              	.LASF19:
+ 2079 000a 433A5C55 		.ascii	"C:\\Users\\alexa\\Documents\\GitHub\\Projekt-3\\PSo"
+ 2079      73657273 
+ 2079      5C616C65 
+ 2079      78615C44 
+ 2079      6F63756D 
+ 2080 0037 435C5052 		.ascii	"C\\PRJ3.cydsn\000"
+ 2080      4A332E63 
+ 2080      7964736E 
+ 2080      00
+ 2081              	.LASF16:
+ 2082 0044 63795F6D 		.ascii	"cy_metadata\000"
+ 2082      65746164 
+ 2082      61746100 
+ 2083              	.LASF1:
+ 2084 0050 756E7369 		.ascii	"unsigned char\000"
+ 2084      676E6564 
+ 2084      20636861 
+ 2084      7200
+ 2085              	.LASF17:
+ 2086 005e 474E5520 		.ascii	"GNU C11 5.4.1 20160609 (release) [ARM/embedded-5-br"
+ 2086      43313120 
+ARM GAS  C:\Users\alexa\AppData\Local\Temp\cc0Fhkn9.s 			page 38
 
 
- 2083      20726576 
- 2083      6973696F 
- 2083      6E203233 
- 2083      37373135 
- 2084 00c4 67202D66 		.ascii	"g -ffunction-sections -ffat-lto-objects\000"
- 2084      66756E63 
- 2084      74696F6E 
- 2084      2D736563 
- 2084      74696F6E 
- 2085              	.LASF5:
- 2086 00ec 6C6F6E67 		.ascii	"long unsigned int\000"
- 2086      20756E73 
- 2086      69676E65 
- 2086      6420696E 
- 2086      7400
- 2087              	.LASF3:
- 2088 00fe 73686F72 		.ascii	"short unsigned int\000"
- 2088      7420756E 
- 2088      7369676E 
- 2088      65642069 
- 2088      6E7400
- 2089              	.LASF13:
- 2090 0111 63795F6D 		.ascii	"cy_meta_custnvl\000"
- 2090      6574615F 
- 2090      63757374 
- 2090      6E766C00 
- 2091              	.LASF12:
- 2092 0121 63795F6D 		.ascii	"cy_meta_configecc\000"
- 2092      6574615F 
- 2092      636F6E66 
- 2092      69676563 
- 2092      6300
- 2093              	.LASF8:
- 2094 0133 756E7369 		.ascii	"unsigned int\000"
- 2094      676E6564 
- 2094      20696E74 
- 2094      00
- 2095              	.LASF7:
- 2096 0140 6C6F6E67 		.ascii	"long long unsigned int\000"
- 2096      206C6F6E 
- 2096      6720756E 
- 2096      7369676E 
- 2096      65642069 
- 2097              	.LASF10:
- 2098 0157 75696E74 		.ascii	"uint8_t\000"
- 2098      385F7400 
- 2099              	.LASF15:
- 2100 015f 63795F6D 		.ascii	"cy_meta_flashprotect\000"
- 2100      6574615F 
- 2100      666C6173 
- 2100      6870726F 
- 2100      74656374 
- 2101              	.LASF14:
- 2102 0174 63795F6D 		.ascii	"cy_meta_wonvl\000"
- 2102      6574615F 
- 2102      776F6E76 
- 2102      6C00
-ARM GAS  C:\Users\alexa\AppData\Local\Temp\ccx1ML7r.s 			page 39
+ 2086      352E342E 
+ 2086      31203230 
+ 2086      31363036 
+ 2087 0091 616E6368 		.ascii	"anch revision 237715] -mcpu=cortex-m3 -mthumb -g -O"
+ 2087      20726576 
+ 2087      6973696F 
+ 2087      6E203233 
+ 2087      37373135 
+ 2088 00c4 67202D66 		.ascii	"g -ffunction-sections -ffat-lto-objects\000"
+ 2088      66756E63 
+ 2088      74696F6E 
+ 2088      2D736563 
+ 2088      74696F6E 
+ 2089              	.LASF5:
+ 2090 00ec 6C6F6E67 		.ascii	"long unsigned int\000"
+ 2090      20756E73 
+ 2090      69676E65 
+ 2090      6420696E 
+ 2090      7400
+ 2091              	.LASF3:
+ 2092 00fe 73686F72 		.ascii	"short unsigned int\000"
+ 2092      7420756E 
+ 2092      7369676E 
+ 2092      65642069 
+ 2092      6E7400
+ 2093              	.LASF13:
+ 2094 0111 63795F6D 		.ascii	"cy_meta_custnvl\000"
+ 2094      6574615F 
+ 2094      63757374 
+ 2094      6E766C00 
+ 2095              	.LASF12:
+ 2096 0121 63795F6D 		.ascii	"cy_meta_configecc\000"
+ 2096      6574615F 
+ 2096      636F6E66 
+ 2096      69676563 
+ 2096      6300
+ 2097              	.LASF8:
+ 2098 0133 756E7369 		.ascii	"unsigned int\000"
+ 2098      676E6564 
+ 2098      20696E74 
+ 2098      00
+ 2099              	.LASF7:
+ 2100 0140 6C6F6E67 		.ascii	"long long unsigned int\000"
+ 2100      206C6F6E 
+ 2100      6720756E 
+ 2100      7369676E 
+ 2100      65642069 
+ 2101              	.LASF10:
+ 2102 0157 75696E74 		.ascii	"uint8_t\000"
+ 2102      385F7400 
+ 2103              	.LASF15:
+ 2104 015f 63795F6D 		.ascii	"cy_meta_flashprotect\000"
+ 2104      6574615F 
+ 2104      666C6173 
+ 2104      6870726F 
+ 2104      74656374 
+ 2105              	.LASF14:
+ARM GAS  C:\Users\alexa\AppData\Local\Temp\cc0Fhkn9.s 			page 39
 
 
- 2103              	.LASF11:
- 2104 0182 73697A65 		.ascii	"sizetype\000"
- 2104      74797065 
- 2104      00
- 2105              	.LASF6:
- 2106 018b 6C6F6E67 		.ascii	"long long int\000"
- 2106      206C6F6E 
- 2106      6720696E 
- 2106      7400
- 2107              	.LASF2:
- 2108 0199 73686F72 		.ascii	"short int\000"
- 2108      7420696E 
- 2108      7400
- 2109              	.LASF4:
- 2110 01a3 6C6F6E67 		.ascii	"long int\000"
- 2110      20696E74 
- 2110      00
- 2111              	.LASF0:
- 2112 01ac 7369676E 		.ascii	"signed char\000"
- 2112      65642063 
- 2112      68617200 
- 2113              	.LASF18:
- 2114 01b8 47656E65 		.ascii	"Generated_Source\\PSoC5\\cymetadata.c\000"
- 2114      72617465 
- 2114      645F536F 
- 2114      75726365 
- 2114      5C50536F 
- 2115              		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 5.4.1 20160609 (release) [ARM/embedded-5-bran
+ 2106 0174 63795F6D 		.ascii	"cy_meta_wonvl\000"
+ 2106      6574615F 
+ 2106      776F6E76 
+ 2106      6C00
+ 2107              	.LASF11:
+ 2108 0182 73697A65 		.ascii	"sizetype\000"
+ 2108      74797065 
+ 2108      00
+ 2109              	.LASF6:
+ 2110 018b 6C6F6E67 		.ascii	"long long int\000"
+ 2110      206C6F6E 
+ 2110      6720696E 
+ 2110      7400
+ 2111              	.LASF2:
+ 2112 0199 73686F72 		.ascii	"short int\000"
+ 2112      7420696E 
+ 2112      7400
+ 2113              	.LASF4:
+ 2114 01a3 6C6F6E67 		.ascii	"long int\000"
+ 2114      20696E74 
+ 2114      00
+ 2115              	.LASF0:
+ 2116 01ac 7369676E 		.ascii	"signed char\000"
+ 2116      65642063 
+ 2116      68617200 
+ 2117              	.LASF18:
+ 2118 01b8 47656E65 		.ascii	"Generated_Source\\PSoC5\\cymetadata.c\000"
+ 2118      72617465 
+ 2118      645F536F 
+ 2118      75726365 
+ 2118      5C50536F 
+ 2119              		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 5.4.1 20160609 (release) [ARM/embedded-5-bran

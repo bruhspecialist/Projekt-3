@@ -1,6 +1,6 @@
-C:\Users\alexa\Documents\GitHub\Projekt-3\PSoC\PRJ3.cydsn\PRJ3.cyprj|c5fe46d7-8dbe-4f7f-b1f7-ffdb229b5667
-C:\Program Files (x86)\Cypress\PSoC Creator\4.4\PSoC Creator\psoc\content\default\CyAnnotationLibrary\CyAnnotationLibrary.cylib\CyAnnotationLibrary.cyprj|2ddaa9ba-0084-44fa-a059-902a859852f6
-C:\Users\alexa\Documents\PSoC Creator\4.4\Downloads ( 4.4).cylib\Downloads ( 4.4).cyprj|3136e0c7-cde1-4422-bb77-1afab46f96d5
-C:\Program Files (x86)\Cypress\PSoC Creator\4.4\PSoC Creator\psoc\content\cycomponentlibraryupdates\CyComponentLibraryUpdates.cylib\CyComponentLibraryUpdates.cyprj|865e0d2f-c629-42b2-bde5-8fe1cf9c7f3c
-C:\Program Files (x86)\Cypress\PSoC Creator\4.4\PSoC Creator\psoc\content\cycomponentlibrary\CyComponentLibrary.cylib\CyComponentLibrary.cyprj|a012ae2d-9021-4382-9987-f4f5d0c7f185
-C:\Program Files (x86)\Cypress\PSoC Creator\4.4\PSoC Creator\psoc\content\cyprimitives\CyPrimitives.cylib\CyPrimitives.cyprj|e8383bde-c9fe-42e6-b0d9-c4a382c58630
+C:\Users\alexa\Documents\GitHub\Projekt-3\PSoC\PRJ3.cydsn\PRJ3.cyprj|14c8c183-49fc-4f2a-8585-d83901782856
+C:\Program Files (x86)\Cypress\PSoC Creator\4.4\PSoC Creator\psoc\content\default\CyAnnotationLibrary\CyAnnotationLibrary.cylib\CyAnnotationLibrary.cyprj|f96173e6-a565-4525-8f73-6baca6216b5f
+C:\Users\alexa\Documents\PSoC Creator\4.4\Downloads ( 4.4).cylib\Downloads ( 4.4).cyprj|3406efab-a267-47fb-b4cf-358dc259024b
+C:\Program Files (x86)\Cypress\PSoC Creator\4.4\PSoC Creator\psoc\content\cycomponentlibraryupdates\CyComponentLibraryUpdates.cylib\CyComponentLibraryUpdates.cyprj|abb7c13f-64f5-466e-b89f-88d38d53e64d
+C:\Program Files (x86)\Cypress\PSoC Creator\4.4\PSoC Creator\psoc\content\cycomponentlibrary\CyComponentLibrary.cylib\CyComponentLibrary.cyprj|de8686ba-82ce-4729-96a8-faf18c5e9a8e
+C:\Program Files (x86)\Cypress\PSoC Creator\4.4\PSoC Creator\psoc\content\cyprimitives\CyPrimitives.cylib\CyPrimitives.cyprj|58003367-c52a-4c61-9d6e-3157c3362356

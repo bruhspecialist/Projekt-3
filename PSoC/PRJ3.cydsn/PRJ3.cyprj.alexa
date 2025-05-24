@@ -47,6 +47,8 @@
 <dep name=".\Generated_Source\PSoC5\UART_USB_IntClock.h" />
 <dep name=".\Generated_Source\PSoC5\UART_USB_RX_ISR.h" />
 <dep name=".\Generated_Source\PSoC5\WEIGHT_ADC.h" />
+<dep name=".\Generated_Source\PSoC5\WEIGHT_ADC_ExtVref.h" />
+<dep name=".\Generated_Source\PSoC5\WEIGHT_ADC_ExtVref_aliases.h" />
 <dep name=".\Generated_Source\PSoC5\WEIGHT_ADC_IRQ.h" />
 <dep name=".\Generated_Source\PSoC5\WEIGHT_ADC_Pin.h" />
 <dep name=".\Generated_Source\PSoC5\WEIGHT_ADC_Pin_aliases.h" />
@@ -116,6 +118,8 @@
 <file name=".\Generated_Source\PSoC5\UART_USB_IntClock.h" />
 <file name=".\Generated_Source\PSoC5\UART_USB_RX_ISR.h" />
 <file name=".\Generated_Source\PSoC5\WEIGHT_ADC.h" />
+<file name=".\Generated_Source\PSoC5\WEIGHT_ADC_ExtVref.h" />
+<file name=".\Generated_Source\PSoC5\WEIGHT_ADC_ExtVref_aliases.h" />
 <file name=".\Generated_Source\PSoC5\WEIGHT_ADC_IRQ.h" />
 <file name=".\Generated_Source\PSoC5\WEIGHT_ADC_Pin.h" />
 <file name=".\Generated_Source\PSoC5\WEIGHT_ADC_Pin_aliases.h" />
@@ -185,6 +189,8 @@
 <dep name=".\Generated_Source\PSoC5\UART_USB_IntClock.h" />
 <dep name=".\Generated_Source\PSoC5\UART_USB_RX_ISR.h" />
 <dep name=".\Generated_Source\PSoC5\WEIGHT_ADC.h" />
+<dep name=".\Generated_Source\PSoC5\WEIGHT_ADC_ExtVref.h" />
+<dep name=".\Generated_Source\PSoC5\WEIGHT_ADC_ExtVref_aliases.h" />
 <dep name=".\Generated_Source\PSoC5\WEIGHT_ADC_IRQ.h" />
 <dep name=".\Generated_Source\PSoC5\WEIGHT_ADC_Pin.h" />
 <dep name=".\Generated_Source\PSoC5\WEIGHT_ADC_Pin_aliases.h" />
@@ -651,6 +657,17 @@
 <dep name=".\Generated_Source\PSoC5\WEIGHT_ADC.c" />
 </file>
 <file name=".\Generated_Source\PSoC5\WEIGHT_ADC.c" />
+<file name=".\CortexM3\ARM_GCC_541\Debug\WEIGHT_ADC_ExtVref.o">
+<dep name=".\Generated_Source\PSoC5\WEIGHT_ADC_ExtVref.h" />
+<dep name=".\Generated_Source\PSoC5\WEIGHT_ADC_ExtVref_aliases.h" />
+<dep name=".\Generated_Source\PSoC5\cydevice.h" />
+<dep name=".\Generated_Source\PSoC5\cydevice_trm.h" />
+<dep name=".\Generated_Source\PSoC5\cyfitter.h" />
+<dep name=".\Generated_Source\PSoC5\cypins.h" />
+<dep name=".\Generated_Source\PSoC5\cytypes.h" />
+<dep name=".\Generated_Source\PSoC5\WEIGHT_ADC_ExtVref.c" />
+</file>
+<file name=".\Generated_Source\PSoC5\WEIGHT_ADC_ExtVref.c" />
 <file name=".\CortexM3\ARM_GCC_541\Debug\WEIGHT_ADC_INT.o">
 <dep name=".\Generated_Source\PSoC5\WEIGHT_ADC.h" />
 <dep name=".\Generated_Source\PSoC5\cydevice.h" />
@@ -814,6 +831,8 @@
 <dep name=".\Generated_Source\PSoC5\UART_USB_IntClock.h" />
 <dep name=".\Generated_Source\PSoC5\UART_USB_RX_ISR.h" />
 <dep name=".\Generated_Source\PSoC5\WEIGHT_ADC.h" />
+<dep name=".\Generated_Source\PSoC5\WEIGHT_ADC_ExtVref.h" />
+<dep name=".\Generated_Source\PSoC5\WEIGHT_ADC_ExtVref_aliases.h" />
 <dep name=".\Generated_Source\PSoC5\WEIGHT_ADC_IRQ.h" />
 <dep name=".\Generated_Source\PSoC5\WEIGHT_ADC_Pin.h" />
 <dep name=".\Generated_Source\PSoC5\WEIGHT_ADC_Pin_aliases.h" />
@@ -877,6 +896,8 @@
 <dep name=".\Generated_Source\PSoC5\UART_USB_IntClock.h" />
 <dep name=".\Generated_Source\PSoC5\UART_USB_RX_ISR.h" />
 <dep name=".\Generated_Source\PSoC5\WEIGHT_ADC.h" />
+<dep name=".\Generated_Source\PSoC5\WEIGHT_ADC_ExtVref.h" />
+<dep name=".\Generated_Source\PSoC5\WEIGHT_ADC_ExtVref_aliases.h" />
 <dep name=".\Generated_Source\PSoC5\WEIGHT_ADC_IRQ.h" />
 <dep name=".\Generated_Source\PSoC5\WEIGHT_ADC_Pin.h" />
 <dep name=".\Generated_Source\PSoC5\WEIGHT_ADC_Pin_aliases.h" />
@@ -940,6 +961,8 @@
 <dep name=".\Generated_Source\PSoC5\UART_USB_IntClock.h" />
 <dep name=".\Generated_Source\PSoC5\UART_USB_RX_ISR.h" />
 <dep name=".\Generated_Source\PSoC5\WEIGHT_ADC.h" />
+<dep name=".\Generated_Source\PSoC5\WEIGHT_ADC_ExtVref.h" />
+<dep name=".\Generated_Source\PSoC5\WEIGHT_ADC_ExtVref_aliases.h" />
 <dep name=".\Generated_Source\PSoC5\WEIGHT_ADC_IRQ.h" />
 <dep name=".\Generated_Source\PSoC5\WEIGHT_ADC_Pin.h" />
 <dep name=".\Generated_Source\PSoC5\WEIGHT_ADC_Pin_aliases.h" />
@@ -977,19 +1000,6 @@
 <file name=".\Generated_Source\PSoC5\cydevicegnu.inc" />
 <file name=".\Generated_Source\PSoC5\cydevicegnu_trm.inc" />
 <file name=".\Generated_Source\PSoC5\cyfittergnu.inc" />
-<file name=".\Generated_Source\PSoC5\WEIGHT_ADC_ExtVref.h" />
-<file name=".\Generated_Source\PSoC5\WEIGHT_ADC_ExtVref_aliases.h" />
-<file name=".\CortexM3\ARM_GCC_541\Debug\WEIGHT_ADC_ExtVref.o">
-<dep name=".\Generated_Source\PSoC5\WEIGHT_ADC_ExtVref.h" />
-<dep name=".\Generated_Source\PSoC5\WEIGHT_ADC_ExtVref_aliases.h" />
-<dep name=".\Generated_Source\PSoC5\cydevice.h" />
-<dep name=".\Generated_Source\PSoC5\cydevice_trm.h" />
-<dep name=".\Generated_Source\PSoC5\cyfitter.h" />
-<dep name=".\Generated_Source\PSoC5\cypins.h" />
-<dep name=".\Generated_Source\PSoC5\cytypes.h" />
-<dep name=".\Generated_Source\PSoC5\WEIGHT_ADC_ExtVref.c" />
-</file>
-<file name=".\Generated_Source\PSoC5\WEIGHT_ADC_ExtVref.c" />
 <file name=".\Generated_Source\PSoC5\LED_BUILTIN.h" />
 <file name=".\Generated_Source\PSoC5\LED_BUILTIN_aliases.h" />
 <file name=".\CortexM3\ARM_GCC_541\Debug\LED_BUILTIN.o">
@@ -1135,6 +1145,7 @@
 <dep name=".\CortexM3\ARM_GCC_541\Debug\WEIGHT_ADC_Pin.o" />
 <dep name=".\CortexM3\ARM_GCC_541\Debug\WEIGHT_ADC_IRQ.o" />
 <dep name=".\CortexM3\ARM_GCC_541\Debug\WEIGHT_ADC_theACLK.o" />
+<dep name=".\CortexM3\ARM_GCC_541\Debug\WEIGHT_ADC_ExtVref.o" />
 <dep name=".\CortexM3\ARM_GCC_541\Debug\PRJ3.a" />
 <dep name="${CyRoot}\psoc\content\cycomponentlibrary\CyComponentLibrary.cylib\CortexM3\ARM_GCC_541\Debug\CyComponentLibrary.a" />
 </file>
@@ -1394,18 +1405,6 @@
 <v>${CyRoot}\psoc\content\CyPrimitives\cyprimitives.cylib\cy_analog_noconnect_v1_0\cy_analog_noconnect_v1_0.primitive</v>
 <v>${CyRoot}\psoc\content\CyPrimitives\cyprimitives.cylib\cy_analog_noconnect_v1_0\version.cypatch</v>
 <v>${CyRoot}\psoc\content\CyPrimitives\cyprimitives.cylib\cy_analog_noconnect_v1_0\Custom\custom.cs</v>
-<v>${CyRoot}\psoc\content\CyPrimitives\cyprimitives.cylib\cy_vref_v1_70\cy_vref_v1_70.cysym</v>
-<v>${CyRoot}\psoc\content\CyPrimitives\cyprimitives.cylib\cy_vref_v1_70\cy_vref_v1_70.v</v>
-<v>${CyRoot}\psoc\content\CyPrimitives\cyprimitives.cylib\cy_vref_v1_70\cy_vref_v1_70.cystate</v>
-<v>${CyRoot}\psoc\content\CyPrimitives\cyprimitives.cylib\cy_vref_v1_70\cy_vref_v1_70.cyprimitive</v>
-<v>${CyRoot}\psoc\content\CyPrimitives\cyprimitives.cylib\cy_vref_v1_70\cy_vref_v1_70.pdf</v>
-<v>${CyRoot}\psoc\content\CyPrimitives\cyprimitives.cylib\cy_vref_v1_70\version.cypatch</v>
-<v>${CyRoot}\psoc\content\CyPrimitives\cyprimitives.cylib\cy_vref_v1_70\Custom\custom.cs</v>
-<v>${CyRoot}\psoc\content\CyPrimitives\cyprimitives.cylib\cy_vref_v1_70\Custom\cyvrefidcontrol.cs</v>
-<v>${CyRoot}\psoc\content\CyPrimitives\cyprimitives.cylib\cy_vref_v1_70\Custom\cyvrefidcontrol.Designer.cs</v>
-<v>${CyRoot}\psoc\content\CyPrimitives\cyprimitives.cylib\cy_vref_v1_70\Custom\Resources.Designer.cs</v>
-<v>${CyRoot}\psoc\content\CyPrimitives\cyprimitives.cylib\cy_vref_v1_70\Custom\cyvrefidcontrol.resx</v>
-<v>${CyRoot}\psoc\content\CyPrimitives\cyprimitives.cylib\cy_vref_v1_70\Custom\Resources.resx</v>
 <v>${CyRoot}\psoc\content\CyPrimitives\cyprimitives.cylib\cy_constant_v1_0\cy_constant_v1_0.cysym</v>
 <v>${CyRoot}\psoc\content\CyPrimitives\cyprimitives.cylib\cy_constant_v1_0\cy_constant_v1_0.v</v>
 <v>${CyRoot}\psoc\content\CyPrimitives\cyprimitives.cylib\cy_constant_v1_0\cy_constant_v1_0.cystate</v>
@@ -1583,7 +1582,7 @@
 <v>C:\Program Files (x86)\Cypress\PSoC Creator\4.4\PSoC Creator\warp\lib\common\stdlogic\rtlpkg.vif</v>
 <v>C:\Program Files (x86)\Cypress\PSoC Creator\4.4\PSoC Creator\warp\lib\common\stdlogic\cy_psoc3.vif</v>
 </warp_dep>
-<deps_time v="133924838922922923" />
+<deps_time v="133924997523699315" />
 <top_block v="TopDesign" />
 <last_generation v="0" />
 <pdl_path v="" />
@@ -1593,7 +1592,7 @@
 <dataGuid v="769d31ea-68b1-4f0c-b90a-7c10a43ee563">
 <CyGuid_769d31ea-68b1-4f0c-b90a-7c10a43ee563 type_name="CyDesigner.Common.ProjMgmt.Model.CyLinkCustomData" version="1">
 <link_deps_times>
-<name_val_pair name="c9323d49-d323-40b8-9b59-cc008d68a989@Debug@CortexM3" v="133924854193846601" />
+<name_val_pair name="c9323d49-d323-40b8-9b59-cc008d68a989@Debug@CortexM3" v="133925015709441308" />
 </link_deps_times>
 </CyGuid_769d31ea-68b1-4f0c-b90a-7c10a43ee563>
 </dataGuid>
