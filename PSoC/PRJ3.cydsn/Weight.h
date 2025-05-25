@@ -57,7 +57,7 @@ const char* CupSizeToString(enum cupSizes cupSize) {
     }
 }
 
-uint8_t StringToCupSize(const char* cupSizeString) {
+enum cupSizes StringToCupSize(const char* cupSizeString) {
     if (strcmp(cupSizeString, "shot") == 0)
         return shot;
     else if (strcmp(cupSizeString, "medium") == 0)
