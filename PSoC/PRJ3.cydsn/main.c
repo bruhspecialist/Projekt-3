@@ -34,7 +34,7 @@ int8_t setup() {
     CyGlobalIntEnable;
     UART_Initialize();
     //if (!ColorSensor_Initialize()) err = -1;
-    Weight_Initialize();
+    Weight_Initialize(); // Vægten nulstilles ved opstart, så ingen vægt på der!
     InitializeSimulationConditions(); // Midlertidig
     return err;
 }
@@ -53,7 +53,7 @@ void UpdateState() {
                 uint8_t cupSize = StringToCupSize(cmd);
                 if (
                     (cupSize >= shot && cupSize <= large)
-                    && Weight_ValidateCupSize(selectedCupSize)
+                    && Weight_ValidateCupSize(cupSize)
                 ) {
                     selectedCupSize = cupSize;
                     UART_USB_PutString("Cup size set to ");
@@ -66,7 +66,9 @@ void UpdateState() {
                 }
             }
             else if (strcmp(cmd, "start") == 0) {
-                if (selectedCupSize >= shot && selectedCupSize <= large) currentState = STATE_DROPPING;
+                if (selectedCupSize >= shot && selectedCupSize <= large)
+                    currentState = STATE_PUMPING;
+                    //currentState = STATE_DROPPING;
                 else {
                     UART_PI_PutString("err_noCup\n");
                     PrintError(-4);
@@ -101,7 +103,7 @@ void UpdateState() {
         case STATE_PUMPING: {
             ActivatePump(detectedColor);
             UART_USB_PutString("Pump activated!\r\n");
-            while (!Weight_IsCupFull(shot)) {}; // Vent til koppen er fyldt
+            while (!Weight_IsCupFull(selectedCupSize)) {}; // Vent til koppen er fyldt
             DeactivatePump(detectedColor);
             UART_USB_PutString("Pump deactivated!\r\n");
             currentState = STATE_RESET;
@@ -110,7 +112,6 @@ void UpdateState() {
         case STATE_RESET: {
             selectedCupSize = 0;
             detectedColor = 0;
-            Weight_Tare();
             currentState = STATE_IDLE;
             break;
         }
@@ -139,5 +140,5 @@ int main() {
     int8_t err = setup();
     if (err == 0) UART_USB_PutString("PSoC has booted and successfully completed setup\r\n");
     else {PrintError(err); return -1;} // Stop hvis setup fejler
-    while (1) TestLoop();
+    while (1) UpdateState();
 }

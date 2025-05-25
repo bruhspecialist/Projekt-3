@@ -5,13 +5,13 @@
 #include <string.h>
 
 // Med 3D printet kopholder som preload
-#define WEIGHT_TOLERANCE 20
+#define WEIGHT_TOLERANCE 10
 #define ADC_M1      476
 #define ADC_M2      1802
 #define M1_WEIGHT   0
 #define M2_WEIGHT   750
 
-enum cupSizes { shot = 1, medium = 2, large = 3 };
+enum cupSizes { none = 0, shot = 1, medium = 2, large = 3 };
 
 #define SHOT_WEIGHT 39 // Faktisk: 46g
 #define MEDIUM_WEIGHT 65 // Faktisk: 67g
@@ -22,7 +22,7 @@ enum cupSizes { shot = 1, medium = 2, large = 3 };
 
 static const uint16_t cup_weights[]      = { 0, SHOT_WEIGHT, MEDIUM_WEIGHT, LARGE_WEIGHT };
 static const uint16_t cup_full_weights[] = { 0, SHOT_FULL_WEIGHT, MEDIUM_FULL_WEIGHT, LARGE_FULL_WEIGHT };
-static const char*    cup_names[]        = { "", "shot", "medium", "large" };
+static const char*    cup_names[]        = { "none", "shot", "medium", "large" };
 
 int16_t ADC_zeroOffset = 0;
 
@@ -50,9 +50,9 @@ uint16_t ConvertToGram(uint16_t adc_count) {
 uint16_t Weight_ADC_Read() {
     if (WEIGHT_ADC_IsEndConversion(WEIGHT_ADC_WAIT_FOR_RESULT)) {
         uint16_t rawADC = WEIGHT_ADC_GetResult16();
-        UART_USB_PutString("ADC: ");
-        UART_USB_PutInt(rawADC);
-        UART_USB_PutString("\r\n");
+        //UART_USB_PutString("ADC: ");
+        //UART_USB_PutInt(rawADC);
+        //UART_USB_PutString("\r\n");
         return rawADC - ADC_zeroOffset;
     }
     else return 0;
@@ -68,15 +68,21 @@ uint16_t Weight_Read() {
 }
 
 bool Weight_ValidateCupSize(enum cupSizes cupSize) {
-    uint16_t weight = Weight_Read();
-    uint16_t target = CupWeight(cupSize);
-    return (weight >= target - WEIGHT_TOLERANCE) && (weight <= target + WEIGHT_TOLERANCE);
+    if (cupSize != none) {
+        uint16_t weight = Weight_Read();
+        uint16_t target = CupWeight(cupSize);
+        return (weight >= target - WEIGHT_TOLERANCE) && (weight <= target + WEIGHT_TOLERANCE);
+    }
+    else return false;
 }
 
 bool Weight_IsCupFull(enum cupSizes cupSize) {
-    uint16_t weight = Weight_Read();
-    uint16_t target = CupFullWeight(cupSize);
-    return (weight >= target - WEIGHT_TOLERANCE) && (weight <= target + WEIGHT_TOLERANCE);
+    if (cupSize != none) {
+        uint16_t weight = Weight_Read();
+        uint16_t target = CupFullWeight(cupSize);
+        return (weight >= target - WEIGHT_TOLERANCE) && (weight <= target + WEIGHT_TOLERANCE);
+    }
+    else return false;
 }
 
 void Weight_Tare() {
