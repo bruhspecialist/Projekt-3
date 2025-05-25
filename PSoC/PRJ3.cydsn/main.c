@@ -67,8 +67,8 @@ void UpdateState() {
             }
             else if (strcmp(cmd, "start") == 0) {
                 if (selectedCupSize >= shot && selectedCupSize <= large)
-                    currentState = STATE_PUMPING;
-                    //currentState = STATE_DROPPING;
+                    currentState = STATE_DROPPING;
+                    //currentState = STATE_PUMPING;
                 else {
                     UART_PI_PutString("err_noCup\n");
                     PrintError(-4);
