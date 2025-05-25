@@ -27,6 +27,8 @@ typedef enum {
 } State;
 
 State currentState = STATE_IDLE;
+uint8_t selectedCupSize = 0;
+uint8_t detectedColor = 0;
 
 int8_t setup() {
     int8_t err = 0;
@@ -38,8 +40,6 @@ int8_t setup() {
     return err;
 }
 
-uint8_t selectedCupSize = 0;
-uint8_t detectedColor = 0;
 void UpdateState() {
     const char* cmd = UART_GetCommand();
     const char* param1 = UART_GetParameter(1);
