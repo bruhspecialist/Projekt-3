@@ -178,6 +178,48 @@
 <VisibleNodeIds>
 <v>PSoC</v>
 <v>PSoC\PRJ3</v>
+<v>PSoC\PRJ3\CortexM3</v>
+<v>PSoC\PRJ3\CortexM3\ARM_GCC_541</v>
+<v>PSoC\PRJ3\CortexM3\ARM_GCC_541\Debug</v>
+<v>PSoC\PRJ3\CortexM3\ARM_GCC_541\Debug\Listing Files</v>
+<v>PSoC\PRJ3\CortexM3\ARM_GCC_541\Debug\Listing Files\Cm3Start.lst</v>
+<v>PSoC\PRJ3\CortexM3\ARM_GCC_541\Debug\Listing Files\COLOR_SENSOR_LED.lst</v>
+<v>PSoC\PRJ3\CortexM3\ARM_GCC_541\Debug\Listing Files\ColorSensor.lst</v>
+<v>PSoC\PRJ3\CortexM3\ARM_GCC_541\Debug\Listing Files\cy_em_eeprom.lst</v>
+<v>PSoC\PRJ3\CortexM3\ARM_GCC_541\Debug\Listing Files\CyBootAsmGnu.lst</v>
+<v>PSoC\PRJ3\CortexM3\ARM_GCC_541\Debug\Listing Files\CyDmac.lst</v>
+<v>PSoC\PRJ3\CortexM3\ARM_GCC_541\Debug\Listing Files\cyfitter_cfg.lst</v>
+<v>PSoC\PRJ3\CortexM3\ARM_GCC_541\Debug\Listing Files\CyFlash.lst</v>
+<v>PSoC\PRJ3\CortexM3\ARM_GCC_541\Debug\Listing Files\CyLib.lst</v>
+<v>PSoC\PRJ3\CortexM3\ARM_GCC_541\Debug\Listing Files\cymetadata.lst</v>
+<v>PSoC\PRJ3\CortexM3\ARM_GCC_541\Debug\Listing Files\cyPm.lst</v>
+<v>PSoC\PRJ3\CortexM3\ARM_GCC_541\Debug\Listing Files\CySpc.lst</v>
+<v>PSoC\PRJ3\CortexM3\ARM_GCC_541\Debug\Listing Files\cyutils.lst</v>
+<v>PSoC\PRJ3\CortexM3\ARM_GCC_541\Debug\Listing Files\I2C.lst</v>
+<v>PSoC\PRJ3\CortexM3\ARM_GCC_541\Debug\Listing Files\I2C_BOOT.lst</v>
+<v>PSoC\PRJ3\CortexM3\ARM_GCC_541\Debug\Listing Files\I2C_INT.lst</v>
+<v>PSoC\PRJ3\CortexM3\ARM_GCC_541\Debug\Listing Files\I2C_MASTER.lst</v>
+<v>PSoC\PRJ3\CortexM3\ARM_GCC_541\Debug\Listing Files\I2C_PM.lst</v>
+<v>PSoC\PRJ3\CortexM3\ARM_GCC_541\Debug\Listing Files\I2C_SLAVE.lst</v>
+<v>PSoC\PRJ3\CortexM3\ARM_GCC_541\Debug\Listing Files\main.lst</v>
+<v>PSoC\PRJ3\CortexM3\ARM_GCC_541\Debug\Listing Files\Motor.lst</v>
+<v>PSoC\PRJ3\CortexM3\ARM_GCC_541\Debug\Listing Files\Pump.lst</v>
+<v>PSoC\PRJ3\CortexM3\ARM_GCC_541\Debug\Listing Files\PUMP_1.lst</v>
+<v>PSoC\PRJ3\CortexM3\ARM_GCC_541\Debug\Listing Files\PUMP_2.lst</v>
+<v>PSoC\PRJ3\CortexM3\ARM_GCC_541\Debug\Listing Files\PUMP_3.lst</v>
+<v>PSoC\PRJ3\CortexM3\ARM_GCC_541\Debug\Listing Files\PUMP_4.lst</v>
+<v>PSoC\PRJ3\CortexM3\ARM_GCC_541\Debug\Listing Files\PUMP_5.lst</v>
+<v>PSoC\PRJ3\CortexM3\ARM_GCC_541\Debug\Listing Files\PUMP_6.lst</v>
+<v>PSoC\PRJ3\CortexM3\ARM_GCC_541\Debug\Listing Files\scl.lst</v>
+<v>PSoC\PRJ3\CortexM3\ARM_GCC_541\Debug\Listing Files\sda.lst</v>
+<v>PSoC\PRJ3\CortexM3\ARM_GCC_541\Debug\Listing Files\STEP_1a.lst</v>
+<v>PSoC\PRJ3\CortexM3\ARM_GCC_541\Debug\Listing Files\STEP_1b.lst</v>
+<v>PSoC\PRJ3\CortexM3\ARM_GCC_541\Debug\Listing Files\STEP_2a.lst</v>
+<v>PSoC\PRJ3\CortexM3\ARM_GCC_541\Debug\Listing Files\STEP_2b.lst</v>
+<v>PSoC\PRJ3\CortexM3\ARM_GCC_541\Debug\Listing Files\UART.lst</v>
+<v>PSoC\PRJ3\CortexM3\ARM_GCC_541\Debug\Listing Files\UART_PI.lst</v>
+<v>PSoC\PRJ3\CortexM3\ARM_GCC_541\Debug\Listing Files\UART_PI_BOOT.lst</v>
+<v>PSoC\PRJ3\CortexM3\ARM_GCC_541\Debug\Listing Files\UART_PI_INT.lst</v>
 </VisibleNodeIds>
 </CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237>
 </TreeStates>
