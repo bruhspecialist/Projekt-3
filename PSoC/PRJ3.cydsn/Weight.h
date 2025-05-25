@@ -96,7 +96,7 @@ uint16_t Weight_Read() {
     return weight;
 }
 
-bool ValidateCupSize(uint8_t cupSize) {
+bool Weight_ValidateCupSize(uint8_t cupSize) {
     uint16_t weight = Weight_Read();
     if (
         (weight >= CupWeight(cupSize) - WEIGHT_TOLERANCE)
@@ -107,7 +107,7 @@ bool ValidateCupSize(uint8_t cupSize) {
     else return false;
 }
 
-bool isCupFull(uint8_t cupSize) {
+bool Weight_IsCupFull(uint8_t cupSize) {
     uint16_t weight = Weight_Read();
     if (
         (weight >= CupFullWeight(cupSize) - WEIGHT_TOLERANCE)
