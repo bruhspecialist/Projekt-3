@@ -33,7 +33,7 @@ int8_t setup() {
     int8_t err = 0;
     CyGlobalIntEnable;
     UART_Initialize();
-    if (!ColorSensor_Initialize()) err = -1;
+    //if (!ColorSensor_Initialize()) err = -1;
     //Weight_Initialize();
     InitializeSimulationConditions(); // Midlertidig
     return err;
@@ -41,11 +41,7 @@ int8_t setup() {
 
 void UpdateState() {
     const char* cmd = UART_GetCommand();
-    const char* param1 = UART_GetParameter(1);
-    const char* param2 = UART_GetParameter(2);
     if (cmd != NULL) UART_ResetBuffer();
-    (void)param1; // Fjerner warning at de potentielt er ubrugt
-    (void)param2;
 
     switch (currentState) {
         case STATE_IDLE: {
@@ -54,13 +50,14 @@ void UpdateState() {
                 strcmp(cmd, "medium") == 0 ||
                 strcmp(cmd, "large") == 0
             ) {
-                selectedCupSize = StringToCupSize(cmd);
+                uint8_t cupSize = StringToCupSize(cmd);
                 if (
-                    (selectedCupSize >= shot && selectedCupSize <= large)
+                    (cupSize >= shot && cupSize <= large)
                     && Weight_ValidateCupSize(selectedCupSize)
                 ) {
+                    selectedCupSize = cupSize;
                     UART_USB_PutString("Cup size set to ");
-                    UART_USB_PutString(CupSizeToString(selectedCupSize));
+                    UART_USB_PutString(cmd);
                     UART_USB_PutString("\r\n");
                 }
                 else {
@@ -104,23 +101,20 @@ void UpdateState() {
         case STATE_PUMPING: {
             ActivatePump(detectedColor);
             UART_USB_PutString("Pump activated!\r\n");
-            while (!Weight_IsCupFull(shot)) {}; // Wait
-            //CyDelay(1000);
+            while (!Weight_IsCupFull(shot)) {}; // Vent til koppen er fyldt
             DeactivatePump(detectedColor);
             UART_USB_PutString("Pump deactivated!\r\n");
             currentState = STATE_RESET;
             break;
         }
         case STATE_RESET: {
-            //memset(selectedCupSize, 0, 7);
-            //selectedCupSize[0] = '\0';
             selectedCupSize = 0;
             detectedColor = 0;
             currentState = STATE_IDLE;
             break;
         }
         case STATE_ERROR: {
-            UART_USB_PutString("In ERROR state\r\n");
+            UART_USB_PutString("Fatal error has occured, restarting system!\r\n");
             currentState = STATE_RESET;
             break;
         }
@@ -135,16 +129,11 @@ void TestLoop() {
     TestColorSensorRGB();
     TestColorSensor();
     CyDelay(1000);
-    
-//    EnablePump(1);
-//    CyDelay(1000);
-//    DisablePump(1);
-//    CyDelay(1000);
 }
 
 int main() {
     int8_t err = setup();
     if (err == 0) UART_USB_PutString("PSoC has booted and successfully completed setup\r\n");
     else {PrintError(err); return -1;} // Stop hvis setup fejler
-    while (1) TestLoop();
+    while (1) UpdateState();
 }
