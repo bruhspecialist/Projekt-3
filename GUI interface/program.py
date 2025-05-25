@@ -1,116 +1,79 @@
 import customtkinter as ctk
 import UART as UART
-import threading
-import time
 
 
-# list of buttons to be tracked
-buttons = []
+# ##### setup of window #####
 
-# Create main window
-root = ctk.CTk() # creation of main application window
-root.geometry("800x480")
-root.attributes("-fullscreen", True)
-root.title("Beer game!")
-root.eval('tk::PlaceWindow . center')
-ctk.set_appearance_mode("dark") # dark mode
-ctk.set_default_color_theme("blue") # blue theme
+app = ctk.CTk() # creation of main application window
+app.geometry("800x480") ## Waveshare 800x480
+app.attributes("-fullscreen", True)
+app.title("Beer game!")
+app.eval('tk::PlaceWindow . center')
+ctk.set_appearance_mode("dark")
+ctk.set_default_color_theme("blue") #blue theme
 
-#Grid layout configuration
-root.columnconfigure(0, weight=1) # left
-root.columnconfigure(1, weight=1) # right
-root.rowconfigure((0, 1, 2, 3), weight=1) # row heights
-root.grid_propagate(False) # prevent resizing of the window
+##### Grid layout configuration of window #####
 
-
-
-# when button is pressed, check if it is already green. If not, set it to green and reset others to blue with label update
-def updateWhenButtonPressed(selectedButton, text):
-    for button in buttons:
-        if button == selectedButton:
-            if button.cget("fg_color") == "green":
-                return
-            else:
-                button.configure(fg_color="green")
-        else:
-            #reset all to blue
-            button.configure(fg_color="blue")
-
-    # update the label
-    label_right2.configure(text=f"{text}")
-    #prints the button pressed to the console
-    print(f"Button pressed: {selectedButton.cget('text')}")
+#Grid layout configuration of window
+app.columnconfigure(0, weight=1) # left
+app.columnconfigure(1, weight=1) # right
+app.rowconfigure((0, 1, 2, 3), weight=1) # row heights
+app.grid_propagate(False) # prevent resizing of the window
 
 
+##### text labels #####
 
-# function to handle glass size selection
-def HandleGlassSize(button, size_text, glassSize):
-    updateWhenButtonPressed(button, size_text)
-    glassSizeChosen = UART.sendGlassSize(glassSize)
-    print(f"DEBUG: Received from UART: {glassSizeChosen}")  
-    if glassSizeChosen == "err":
-        label_right2.configure(text="wrong glass size")
-    elif glassSizeChosen == "ok":
-        label_right2.configure(text=f"Glass size: {glassSize}")
-    else:
-        label_right2.configure(text="timeout\nerror in glass size")
+#text update right side top of window
+textUpdateDrinkSize = ctk.CTkLabel(app, text="size of drink:", font=("Arial", 38))
+textUpdateDrinkSize.grid(row=0, column=1, padx=20, pady=20)
+
+#text update right side middle of window (main text)
+primaryTextUpdate = ctk.CTkLabel(app, text="welcome to\n Likør Lotto!", font=("Arial", 52))
+primaryTextUpdate.grid(row=1, column=1, padx=5, pady=5)
 
 
+##### buttons 
 
-
-
-
-
-
-#label right side top
-label_right = ctk.CTkLabel(root, text="size of drink:", font=("Arial", 38))
-label_right.grid(row=0, column=1, padx=20, pady=20)
-
-# label that updates drink size. 
-label_right2 = ctk.CTkLabel(root, text="\nnone", font=("Arial", 52))
-label_right2.grid(row=1, column=1, padx=5, pady=5)
-
-
-
-# buttons left side (shot)
-button1 = ctk.CTkButton(root, text="Shots size", width=200, height=100, font=("Arial", 24), 
+# button left side (shot)
+shotGlassButton = ctk.CTkButton(app, text="Shots size", width=200, height=100, font=("Arial", 24), 
                         command=lambda: 
                         [
-                            HandleGlassSize(button1, "Shot size", "shot")
+                            UART.HandleGlassSize(shotGlassButton, "Shot size", "shot", primaryTextUpdate)
                         ])
-button1.grid(row=0, column=0, padx=10, pady=10)
-buttons.append(button1)
+shotGlassButton.grid(row=0, column=0, padx=10, pady=10)
+UART.buttons.append(shotGlassButton)
 
-# buttons left side (mediom)
-button2 = ctk.CTkButton(root, text="Medium size", width=200, height=100, font=("Arial", 24), 
+# button left side (medium)
+mediumGlassButton = ctk.CTkButton(app, text="Medium size", width=200, height=100, font=("Arial", 24), 
                         command=lambda:
                         [
-                            HandleGlassSize(button2, "medium size", "medium")
+                            UART.HandleGlassSize(mediumGlassButton, "medium size", "medium", primaryTextUpdate)
                         ])
-button2.grid(row=1, column=0, padx=10, pady=10)
-buttons.append(button2)
+mediumGlassButton.grid(row=1, column=0, padx=10, pady=10)
+UART.buttons.append(mediumGlassButton)
 
-# buttons left side (large)
-button3 = ctk.CTkButton(root, text="Large size", width=200, height=100, font=("Arial", 24), 
+# button left side (large)
+largeGlassButton = ctk.CTkButton(app, text="Large size", width=200, height=100, font=("Arial", 24), 
                         command=lambda:
                         [
-                            HandleGlassSize(button3, "Large size", "large")
+                            UART.HandleGlassSize(largeGlassButton, "Large size", "large", primaryTextUpdate)
                         ])
-button3.grid(row=2, column=0, padx=10, pady=10)
-buttons.append(button3)
+largeGlassButton.grid(row=2, column=0, padx=10, pady=10)
+UART.buttons.append(largeGlassButton)
 
 
-#buttons right side bottom
-button4 = ctk.CTkButton(root, text="Throw the dice!", width=300, height=175, font=("Arial", 24), 
+#buttons right side bottom (starting game button)
+beginGameButton = ctk.CTkButton(app, text="Throw the dice!", width=300, height=175, font=("Arial", 24), 
                         command=lambda: 
                         [
-                            updateWhenButtonPressed(button4,"Dice has\n been dropped!!"),
-                            UART.testbuttonlight()
+                            UART.handleStartGame(beginGameButton,"start", primaryTextUpdate),
+                            app.after(4000, lambda: [primaryTextUpdate.configure(text="welcome to\n Likør Lotto!"), # reset buttons to blue after 4 sec (same with text)
+                                                     beginGameButton.configure(fg_color="blue")
+                            ])
                         ])
-
-button4.grid(row=3, column=1, padx=10, pady=10)
-buttons.append(button4)
+beginGameButton.grid(row=3, column=1, padx=10, pady=10)
+UART.buttons.append(beginGameButton)
 
 
 # Run the app
-root.mainloop()
+app.mainloop()
