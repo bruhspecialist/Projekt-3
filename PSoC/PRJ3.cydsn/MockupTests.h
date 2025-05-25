@@ -3,6 +3,7 @@
 #include "project.h"
 
 #include "ColorSensor.h"
+#include "Weight.h"
 #include "CustomMath.h"
 #include "SimulationTests.h"
 #include "ErrorMessage.h"

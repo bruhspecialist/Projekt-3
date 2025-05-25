@@ -34,7 +34,7 @@ int8_t setup() {
     CyGlobalIntEnable;
     UART_Initialize();
     //if (!ColorSensor_Initialize()) err = -1;
-    //Weight_Initialize();
+    Weight_Initialize();
     InitializeSimulationConditions(); // Midlertidig
     return err;
 }
@@ -110,6 +110,7 @@ void UpdateState() {
         case STATE_RESET: {
             selectedCupSize = 0;
             detectedColor = 0;
+            Weight_Tare();
             currentState = STATE_IDLE;
             break;
         }
@@ -126,14 +127,17 @@ void UpdateState() {
 }
 
 void TestLoop() {
-    TestColorSensorRGB();
-    TestColorSensor();
-    CyDelay(1000);
+    //TestColorSensorRGB();
+    //TestColorSensor();
+    
+    Weight_Read();
+    
+    CyDelay(100);
 }
 
 int main() {
     int8_t err = setup();
     if (err == 0) UART_USB_PutString("PSoC has booted and successfully completed setup\r\n");
     else {PrintError(err); return -1;} // Stop hvis setup fejler
-    while (1) UpdateState();
+    while (1) TestLoop();
 }
