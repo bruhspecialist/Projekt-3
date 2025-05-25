@@ -1,4 +1,4 @@
-ARM GAS  C:\Users\alexa\AppData\Local\Temp\ccKpobWx.s 			page 1
+ARM GAS  C:\Users\alexa\AppData\Local\Temp\ccpJ6xeR.s 			page 1
 
 
    1              		.syntax unified
@@ -31,7 +31,7 @@ ARM GAS  C:\Users\alexa\AppData\Local\Temp\ccKpobWx.s 			page 1
    1:Pump.c        **** #include "project.h"
    2:Pump.c        **** #include "Pump.h"
    3:Pump.c        **** 
-   4:Pump.c        **** void (*pumpWrite[])(uint8_t) = {
+   4:Pump.c        **** void (*PumpWrite[])(uint8_t) = {
    5:Pump.c        ****         PUMP_1_Write,
    6:Pump.c        ****         PUMP_2_Write,
    7:Pump.c        ****         PUMP_3_Write,
@@ -57,8 +57,8 @@ ARM GAS  C:\Users\alexa\AppData\Local\Temp\ccKpobWx.s 			page 1
   39 0004 DBB2     		uxtb	r3, r3
   40 0006 052B     		cmp	r3, #5
   41 0008 05D8     		bhi	.L1
-  16:Pump.c        ****     pumpWrite[color - 1](1); // Tænd pumpen
-ARM GAS  C:\Users\alexa\AppData\Local\Temp\ccKpobWx.s 			page 2
+  16:Pump.c        ****     PumpWrite[color - 1](1); // Tænd pumpen
+ARM GAS  C:\Users\alexa\AppData\Local\Temp\ccpJ6xeR.s 			page 2
 
 
   42              		.loc 1 16 0
@@ -105,7 +105,7 @@ ARM GAS  C:\Users\alexa\AppData\Local\Temp\ccKpobWx.s 			page 1
   78 0004 DBB2     		uxtb	r3, r3
   79 0006 052B     		cmp	r3, #5
   80 0008 05D8     		bhi	.L6
-  22:Pump.c        ****     pumpWrite[color - 1](0); // Sluk pumpen
+  22:Pump.c        ****     PumpWrite[color - 1](0); // Sluk pumpen
   81              		.loc 1 22 0
   82 000a 0138     		subs	r0, r0, #1
   83              	.LVL4:
@@ -118,7 +118,7 @@ ARM GAS  C:\Users\alexa\AppData\Local\Temp\ccKpobWx.s 			page 1
   90 0016 08BD     		pop	{r3, pc}
   91              	.L10:
   92              		.align	2
-ARM GAS  C:\Users\alexa\AppData\Local\Temp\ccKpobWx.s 			page 3
+ARM GAS  C:\Users\alexa\AppData\Local\Temp\ccpJ6xeR.s 			page 3
 
 
   93              	.L9:
@@ -126,13 +126,13 @@ ARM GAS  C:\Users\alexa\AppData\Local\Temp\ccKpobWx.s 			page 1
   95              		.cfi_endproc
   96              	.LFE64:
   97              		.size	DeactivatePump, .-DeactivatePump
-  98              		.global	pumpWrite
+  98              		.global	PumpWrite
   99              		.data
  100              		.align	2
  101              		.set	.LANCHOR0,. + 0
- 102              		.type	pumpWrite, %object
- 103              		.size	pumpWrite, 24
- 104              	pumpWrite:
+ 102              		.type	PumpWrite, %object
+ 103              		.size	PumpWrite, 24
+ 104              	PumpWrite:
  105 0000 00000000 		.word	PUMP_1_Write
  106 0004 00000000 		.word	PUMP_2_Write
  107 0008 00000000 		.word	PUMP_3_Write
@@ -151,9 +151,9 @@ ARM GAS  C:\Users\alexa\AppData\Local\Temp\ccKpobWx.s 			page 1
  120 0006 00000000 		.4byte	.Ldebug_abbrev0
  121 000a 04       		.byte	0x4
  122 000b 01       		.uleb128 0x1
- 123 000c 55000000 		.4byte	.LASF23
+ 123 000c 5F000000 		.4byte	.LASF23
  124 0010 0C       		.byte	0xc
- 125 0011 1C010000 		.4byte	.LASF24
+ 125 0011 2E010000 		.4byte	.LASF24
  126 0015 4A010000 		.4byte	.LASF25
  127 0019 00000000 		.4byte	.Ldebug_ranges0+0
  128 001d 00000000 		.4byte	0
@@ -163,7 +163,7 @@ ARM GAS  C:\Users\alexa\AppData\Local\Temp\ccKpobWx.s 			page 1
  132 0027 06       		.byte	0x6
  133 0028 49000000 		.4byte	.LASF0
  134 002c 03       		.uleb128 0x3
- 135 002d 0A010000 		.4byte	.LASF4
+ 135 002d 1C010000 		.4byte	.LASF4
  136 0031 02       		.byte	0x2
  137 0032 1D       		.byte	0x1d
  138 0033 37000000 		.4byte	0x37
@@ -178,7 +178,7 @@ ARM GAS  C:\Users\alexa\AppData\Local\Temp\ccKpobWx.s 			page 1
  147 0045 02       		.uleb128 0x2
  148 0046 02       		.byte	0x2
  149 0047 07       		.byte	0x7
-ARM GAS  C:\Users\alexa\AppData\Local\Temp\ccKpobWx.s 			page 4
+ARM GAS  C:\Users\alexa\AppData\Local\Temp\ccpJ6xeR.s 			page 4
 
 
  150 0048 0E000000 		.4byte	.LASF3
@@ -190,11 +190,11 @@ ARM GAS  C:\Users\alexa\AppData\Local\Temp\ccKpobWx.s 			page 1
  156 0057 02       		.uleb128 0x2
  157 0058 04       		.byte	0x4
  158 0059 05       		.byte	0x5
- 159 005a 28010000 		.4byte	.LASF6
+ 159 005a 3A010000 		.4byte	.LASF6
  160 005e 02       		.uleb128 0x2
  161 005f 04       		.byte	0x4
  162 0060 07       		.byte	0x7
- 163 0061 31010000 		.4byte	.LASF7
+ 163 0061 ED000000 		.4byte	.LASF7
  164 0065 02       		.uleb128 0x2
  165 0066 08       		.byte	0x8
  166 0067 05       		.byte	0x5
@@ -202,7 +202,7 @@ ARM GAS  C:\Users\alexa\AppData\Local\Temp\ccKpobWx.s 			page 1
  168 006c 02       		.uleb128 0x2
  169 006d 08       		.byte	0x8
  170 006e 07       		.byte	0x7
- 171 006f F3000000 		.4byte	.LASF9
+ 171 006f 05010000 		.4byte	.LASF9
  172 0073 04       		.uleb128 0x4
  173 0074 04       		.byte	0x4
  174 0075 05       		.byte	0x5
@@ -212,7 +212,7 @@ ARM GAS  C:\Users\alexa\AppData\Local\Temp\ccKpobWx.s 			page 1
  178 007c 07       		.byte	0x7
  179 007d 2E000000 		.4byte	.LASF10
  180 0081 03       		.uleb128 0x3
- 181 0082 14010000 		.4byte	.LASF11
+ 181 0082 26010000 		.4byte	.LASF11
  182 0086 03       		.byte	0x3
  183 0087 18       		.byte	0x18
  184 0088 2C000000 		.4byte	0x2c
@@ -232,13 +232,13 @@ ARM GAS  C:\Users\alexa\AppData\Local\Temp\ccKpobWx.s 			page 1
  198 00a5 02       		.uleb128 0x2
  199 00a6 01       		.byte	0x1
  200 00a7 08       		.byte	0x8
- 201 00a8 23010000 		.4byte	.LASF15
+ 201 00a8 35010000 		.4byte	.LASF15
  202 00ac 02       		.uleb128 0x2
  203 00ad 08       		.byte	0x8
  204 00ae 04       		.byte	0x4
  205 00af A0010000 		.4byte	.LASF16
  206 00b3 02       		.uleb128 0x2
-ARM GAS  C:\Users\alexa\AppData\Local\Temp\ccKpobWx.s 			page 5
+ARM GAS  C:\Users\alexa\AppData\Local\Temp\ccpJ6xeR.s 			page 5
 
 
  207 00b4 04       		.byte	0x4
@@ -254,7 +254,7 @@ ARM GAS  C:\Users\alexa\AppData\Local\Temp\ccKpobWx.s 			page 1
  217 00ca 9C       		.byte	0x9c
  218 00cb EA000000 		.4byte	0xea
  219 00cf 06       		.uleb128 0x6
- 220 00d0 ED000000 		.4byte	.LASF20
+ 220 00d0 FF000000 		.4byte	.LASF20
  221 00d4 01       		.byte	0x1
  222 00d5 0D       		.byte	0xd
  223 00d6 81000000 		.4byte	0x81
@@ -278,7 +278,7 @@ ARM GAS  C:\Users\alexa\AppData\Local\Temp\ccKpobWx.s 			page 1
  241 00fa 9C       		.byte	0x9c
  242 00fb 1A010000 		.4byte	0x11a
  243 00ff 06       		.uleb128 0x6
- 244 0100 ED000000 		.4byte	.LASF20
+ 244 0100 FF000000 		.4byte	.LASF20
  245 0104 01       		.byte	0x1
  246 0105 13       		.byte	0x13
  247 0106 81000000 		.4byte	0x81
@@ -298,7 +298,7 @@ ARM GAS  C:\Users\alexa\AppData\Local\Temp\ccKpobWx.s 			page 1
  261 0120 1207     		.2byte	0x712
  262 0122 26010000 		.4byte	0x126
  263 0126 0A       		.uleb128 0xa
-ARM GAS  C:\Users\alexa\AppData\Local\Temp\ccKpobWx.s 			page 6
+ARM GAS  C:\Users\alexa\AppData\Local\Temp\ccpJ6xeR.s 			page 6
 
 
  264 0127 8C000000 		.4byte	0x8c
@@ -318,13 +318,13 @@ ARM GAS  C:\Users\alexa\AppData\Local\Temp\ccKpobWx.s 			page 1
  278 0147 81000000 		.4byte	0x81
  279 014b 00       		.byte	0
  280 014c 10       		.uleb128 0x10
- 281 014d E3000000 		.4byte	.LASF22
+ 281 014d 55000000 		.4byte	.LASF22
  282 0151 01       		.byte	0x1
  283 0152 04       		.byte	0x4
  284 0153 2B010000 		.4byte	0x12b
  285 0157 05       		.uleb128 0x5
  286 0158 03       		.byte	0x3
- 287 0159 00000000 		.4byte	pumpWrite
+ 287 0159 00000000 		.4byte	PumpWrite
  288 015d 00       		.byte	0
  289              		.section	.debug_abbrev,"",%progbits
  290              	.Ldebug_abbrev0:
@@ -358,7 +358,7 @@ ARM GAS  C:\Users\alexa\AppData\Local\Temp\ccKpobWx.s 			page 1
  318 001b 0E       		.uleb128 0xe
  319 001c 00       		.byte	0
  320 001d 00       		.byte	0
-ARM GAS  C:\Users\alexa\AppData\Local\Temp\ccKpobWx.s 			page 7
+ARM GAS  C:\Users\alexa\AppData\Local\Temp\ccpJ6xeR.s 			page 7
 
 
  321 001e 03       		.uleb128 0x3
@@ -418,7 +418,7 @@ ARM GAS  C:\Users\alexa\AppData\Local\Temp\ccKpobWx.s 			page 1
  375 0055 3A       		.uleb128 0x3a
  376 0056 0B       		.uleb128 0xb
  377 0057 3B       		.uleb128 0x3b
-ARM GAS  C:\Users\alexa\AppData\Local\Temp\ccKpobWx.s 			page 8
+ARM GAS  C:\Users\alexa\AppData\Local\Temp\ccpJ6xeR.s 			page 8
 
 
  378 0058 0B       		.uleb128 0xb
@@ -478,7 +478,7 @@ ARM GAS  C:\Users\alexa\AppData\Local\Temp\ccKpobWx.s 			page 1
  432 0093 00       		.byte	0
  433 0094 00       		.byte	0
  434 0095 0C       		.uleb128 0xc
-ARM GAS  C:\Users\alexa\AppData\Local\Temp\ccKpobWx.s 			page 9
+ARM GAS  C:\Users\alexa\AppData\Local\Temp\ccpJ6xeR.s 			page 9
 
 
  435 0096 21       		.uleb128 0x21
@@ -538,7 +538,7 @@ ARM GAS  C:\Users\alexa\AppData\Local\Temp\ccKpobWx.s 			page 1
  489 0000 00000000 		.4byte	.LVL0
  490 0004 0C000000 		.4byte	.LVL1
  491 0008 0100     		.2byte	0x1
-ARM GAS  C:\Users\alexa\AppData\Local\Temp\ccKpobWx.s 			page 10
+ARM GAS  C:\Users\alexa\AppData\Local\Temp\ccpJ6xeR.s 			page 10
 
 
  492 000a 50       		.byte	0x50
@@ -598,7 +598,7 @@ ARM GAS  C:\Users\alexa\AppData\Local\Temp\ccKpobWx.s 			page 1
  542 0000 6C6F6E67 		.ascii	"long long int\000"
  542      206C6F6E 
  542      6720696E 
-ARM GAS  C:\Users\alexa\AppData\Local\Temp\ccKpobWx.s 			page 11
+ARM GAS  C:\Users\alexa\AppData\Local\Temp\ccpJ6xeR.s 			page 11
 
 
  542      7400
@@ -627,61 +627,61 @@ ARM GAS  C:\Users\alexa\AppData\Local\Temp\ccKpobWx.s 			page 1
  552 0049 7369676E 		.ascii	"signed char\000"
  552      65642063 
  552      68617200 
- 553              	.LASF23:
- 554 0055 474E5520 		.ascii	"GNU C11 5.4.1 20160609 (release) [ARM/embedded-5-br"
- 554      43313120 
- 554      352E342E 
- 554      31203230 
- 554      31363036 
- 555 0088 616E6368 		.ascii	"anch revision 237715] -mcpu=cortex-m3 -mthumb -g -O"
- 555      20726576 
- 555      6973696F 
- 555      6E203233 
- 555      37373135 
- 556 00bb 67202D66 		.ascii	"g -ffunction-sections -ffat-lto-objects\000"
- 556      66756E63 
- 556      74696F6E 
- 556      2D736563 
- 556      74696F6E 
- 557              	.LASF22:
- 558 00e3 70756D70 		.ascii	"pumpWrite\000"
- 558      57726974 
- 558      6500
- 559              	.LASF20:
- 560 00ed 636F6C6F 		.ascii	"color\000"
- 560      7200
- 561              	.LASF9:
- 562 00f3 6C6F6E67 		.ascii	"long long unsigned int\000"
- 562      206C6F6E 
- 562      6720756E 
- 562      7369676E 
- 562      65642069 
- 563              	.LASF4:
- 564 010a 5F5F7569 		.ascii	"__uint8_t\000"
-ARM GAS  C:\Users\alexa\AppData\Local\Temp\ccKpobWx.s 			page 12
+ 553              	.LASF22:
+ 554 0055 50756D70 		.ascii	"PumpWrite\000"
+ 554      57726974 
+ 554      6500
+ 555              	.LASF23:
+ 556 005f 474E5520 		.ascii	"GNU C11 5.4.1 20160609 (release) [ARM/embedded-5-br"
+ 556      43313120 
+ 556      352E342E 
+ 556      31203230 
+ 556      31363036 
+ 557 0092 616E6368 		.ascii	"anch revision 237715] -mcpu=cortex-m3 -mthumb -g -O"
+ 557      20726576 
+ 557      6973696F 
+ 557      6E203233 
+ 557      37373135 
+ 558 00c5 67202D66 		.ascii	"g -ffunction-sections -ffat-lto-objects\000"
+ 558      66756E63 
+ 558      74696F6E 
+ 558      2D736563 
+ 558      74696F6E 
+ 559              	.LASF7:
+ 560 00ed 6C6F6E67 		.ascii	"long unsigned int\000"
+ 560      20756E73 
+ 560      69676E65 
+ 560      6420696E 
+ 560      7400
+ 561              	.LASF20:
+ 562 00ff 636F6C6F 		.ascii	"color\000"
+ 562      7200
+ 563              	.LASF9:
+ 564 0105 6C6F6E67 		.ascii	"long long unsigned int\000"
+ARM GAS  C:\Users\alexa\AppData\Local\Temp\ccpJ6xeR.s 			page 12
 
 
- 564      6E74385F 
- 564      7400
- 565              	.LASF11:
- 566 0114 75696E74 		.ascii	"uint8_t\000"
- 566      385F7400 
- 567              	.LASF24:
- 568 011c 50756D70 		.ascii	"Pump.c\000"
- 568      2E6300
- 569              	.LASF15:
- 570 0123 63686172 		.ascii	"char\000"
- 570      00
- 571              	.LASF6:
- 572 0128 6C6F6E67 		.ascii	"long int\000"
- 572      20696E74 
+ 564      206C6F6E 
+ 564      6720756E 
+ 564      7369676E 
+ 564      65642069 
+ 565              	.LASF4:
+ 566 011c 5F5F7569 		.ascii	"__uint8_t\000"
+ 566      6E74385F 
+ 566      7400
+ 567              	.LASF11:
+ 568 0126 75696E74 		.ascii	"uint8_t\000"
+ 568      385F7400 
+ 569              	.LASF24:
+ 570 012e 50756D70 		.ascii	"Pump.c\000"
+ 570      2E6300
+ 571              	.LASF15:
+ 572 0135 63686172 		.ascii	"char\000"
  572      00
- 573              	.LASF7:
- 574 0131 6C6F6E67 		.ascii	"long unsigned int\000"
- 574      20756E73 
- 574      69676E65 
- 574      6420696E 
- 574      7400
+ 573              	.LASF6:
+ 574 013a 6C6F6E67 		.ascii	"long int\000"
+ 574      20696E74 
+ 574      00
  575              	.LASF14:
  576 0143 646F7562 		.ascii	"double\000"
  576      6C6500
@@ -718,7 +718,7 @@ ARM GAS  C:\Users\alexa\AppData\Local\Temp\ccKpobWx.s 			page 1
  589      7400
  590              	.LASF2:
  591 01bc 73686F72 		.ascii	"short int\000"
-ARM GAS  C:\Users\alexa\AppData\Local\Temp\ccKpobWx.s 			page 13
+ARM GAS  C:\Users\alexa\AppData\Local\Temp\ccpJ6xeR.s 			page 13
 
 
  591      7420696E 
