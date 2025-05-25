@@ -73,12 +73,9 @@
 <dep name=".\Generated_Source\PSoC5\sda.h" />
 <dep name=".\Generated_Source\PSoC5\sda_aliases.h" />
 <dep name=".\ColorSensor.h" />
-<dep name=".\CustomMath.h" />
 <dep name=".\ErrorMessage.h" />
-<dep name=".\MockupTests.h" />
 <dep name=".\Motor.h" />
 <dep name=".\Pump.h" />
-<dep name=".\SimulationTests.h" />
 <dep name=".\UART.h" />
 <dep name=".\Weight.h" />
 <dep name=".\main.c" />
@@ -144,15 +141,15 @@
 <file name=".\Generated_Source\PSoC5\sda.h" />
 <file name=".\Generated_Source\PSoC5\sda_aliases.h" />
 <file name=".\ColorSensor.h" />
-<file name=".\CustomMath.h" />
 <file name=".\ErrorMessage.h" />
-<file name=".\MockupTests.h" />
 <file name=".\Motor.h" />
 <file name=".\Pump.h" />
-<file name=".\SimulationTests.h" />
 <file name=".\UART.h" />
 <file name=".\Weight.h" />
 <file name=".\main.c" />
+<file name=".\MockupTests.h" />
+<file name=".\CustomMath.h" />
+<file name=".\SimulationTests.h" />
 <file name=".\CortexM3\ARM_GCC_541\Debug\UART.o">
 <dep name=".\Generated_Source\PSoC5\COLOR_SENSOR_LED.h" />
 <dep name=".\Generated_Source\PSoC5\COLOR_SENSOR_LED_aliases.h" />
@@ -1592,7 +1589,7 @@
 <dataGuid v="769d31ea-68b1-4f0c-b90a-7c10a43ee563">
 <CyGuid_769d31ea-68b1-4f0c-b90a-7c10a43ee563 type_name="CyDesigner.Common.ProjMgmt.Model.CyLinkCustomData" version="1">
 <link_deps_times>
-<name_val_pair name="c9323d49-d323-40b8-9b59-cc008d68a989@Debug@CortexM3" v="133926833571182813" />
+<name_val_pair name="c9323d49-d323-40b8-9b59-cc008d68a989@Debug@CortexM3" v="133926836085204295" />
 </link_deps_times>
 </CyGuid_769d31ea-68b1-4f0c-b90a-7c10a43ee563>
 </dataGuid>

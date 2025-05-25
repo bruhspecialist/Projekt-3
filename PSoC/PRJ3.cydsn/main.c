@@ -6,9 +6,6 @@
 #include "Weight.h"
 #include "UART.h"
 #include "ErrorMessage.h"
-#include "MockupTests.h"
-#include "SimulationTests.h"
-#include "CustomMath.h"
 
 #include "time.h"
 #include "stdio.h"
@@ -35,7 +32,6 @@ int8_t setup() {
     UART_Initialize();
     //if (!ColorSensor_Initialize()) err = -1;
     Weight_Initialize(); // Vægten nulstilles ved opstart, så ingen vægt på der!
-    InitializeSimulationConditions(); // Midlertidig
     return err;
 }
 
@@ -128,10 +124,17 @@ void UpdateState() {
 }
 
 void TestLoop() {
-    //TestColorSensorRGB();
-    //TestColorSensor();
+    uint16_t rgb[3];
+    char buffer[64];
+    ColorSensor_ReadRawRGB(rgb);
+    sprintf(
+        buffer,
+        "RGB = [%u, %u, %u]\r\n",
+        rgb[0], rgb[1], rgb[2]
+    );
+    UART_USB_PutString(buffer);
     
-    Weight_Read();
+    //Weight_Read();
     
     CyDelay(100);
 }
