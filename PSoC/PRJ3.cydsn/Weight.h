@@ -18,11 +18,12 @@
 
 enum cupSize {shot = 1, medium = 2, large = 3};
 
-// Værdier for glas og når de er fyldt
+// Værdier for glas
 #define SHOT_WEIGHT 100
 #define MEDIUM_WEIGHT 200
 #define LARGE_WEIGHT 300
 
+// Værdier for glas, når de er fyldt
 #define SHOT_FULL_WEIGHT 400
 #define MEDIUM_FULL_WEIGHT 400
 #define LARGE_FULL_WEIGHT 400
@@ -75,14 +76,6 @@ uint16_t ConvertToGram(uint16_t adc_count) {
     if (grams < 0) grams = 0; // Clamp til 0, hvis negativ værdi
     return grams;
 }
-
-//uint16_t Weight_TempRead1() {
-//    return SHOT_FULL_WEIGHT; // Midlertidigt
-//}
-//
-//uint16_t Weight_TempRead2() {
-//    return SHOT_FULL_WEIGHT; // Midlertidigt
-//}
 
 uint16_t Weight_ADC_Read() {
     if (WEIGHT_ADC_IsEndConversion(WEIGHT_ADC_WAIT_FOR_RESULT)) { // OBS. Kan hænge her
