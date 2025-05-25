@@ -16,21 +16,21 @@
 #define M1_WEIGHT   0
 #define M2_WEIGHT   415
 
-enum cupSize {shot = 1, medium = 2, large = 3};
+enum cupSizes {shot = 1, medium = 2, large = 3};
 
 // Værdier for glas
-#define SHOT_WEIGHT 100
-#define MEDIUM_WEIGHT 200
-#define LARGE_WEIGHT 300
+#define SHOT_WEIGHT 46
+#define MEDIUM_WEIGHT 67
+#define LARGE_WEIGHT 89
 
-// Værdier for glas, når de er fyldt
-#define SHOT_FULL_WEIGHT 400
-#define MEDIUM_FULL_WEIGHT 400
-#define LARGE_FULL_WEIGHT 400
+// Værdier for glas, når de er fyldt helt op (100%)
+#define SHOT_FULL_WEIGHT 91
+#define MEDIUM_FULL_WEIGHT 142
+#define LARGE_FULL_WEIGHT 199
 
 int16_t ADC_zeroOffset = 0;
 
-uint16_t CupWeight(uint8_t cupSize) {
+uint16_t CupWeight(enum cupSizes cupSize) {
     switch (cupSize) {
         case (shot) : return SHOT_WEIGHT;
         case (medium) : return MEDIUM_WEIGHT;
@@ -39,7 +39,7 @@ uint16_t CupWeight(uint8_t cupSize) {
     }
 }
 
-uint16_t CupFullWeight(uint8_t cupSize) {
+uint16_t CupFullWeight(enum cupSizes cupSize) {
     switch (cupSize) {
         case (shot) : return SHOT_FULL_WEIGHT;
         case (medium) : return MEDIUM_FULL_WEIGHT;
@@ -48,7 +48,7 @@ uint16_t CupFullWeight(uint8_t cupSize) {
     }
 }
 
-const char* CupSizeToString(uint8_t cupSize) {
+const char* CupSizeToString(enum cupSizes cupSize) {
     switch (cupSize) {
         case (shot) : return "shot";
         case (medium) : return "medium";
@@ -96,7 +96,7 @@ uint16_t Weight_Read() {
     return weight;
 }
 
-bool Weight_ValidateCupSize(uint8_t cupSize) {
+bool Weight_ValidateCupSize(enum cupSizes cupSize) {
     uint16_t weight = Weight_Read();
     if (
         (weight >= CupWeight(cupSize) - WEIGHT_TOLERANCE)
@@ -107,7 +107,7 @@ bool Weight_ValidateCupSize(uint8_t cupSize) {
     else return false;
 }
 
-bool Weight_IsCupFull(uint8_t cupSize) {
+bool Weight_IsCupFull(enum cupSizes cupSize) {
     uint16_t weight = Weight_Read();
     if (
         (weight >= CupFullWeight(cupSize) - WEIGHT_TOLERANCE)
