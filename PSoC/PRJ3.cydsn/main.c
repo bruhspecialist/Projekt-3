@@ -21,7 +21,6 @@ typedef enum {
     STATE_DROPPING,
     STATE_COLOR_READING,
     STATE_PUMPING,
-    STATE_REPLACE_DIE,
     STATE_RESET,
     STATE_ERROR
 } State;
@@ -58,7 +57,7 @@ void UpdateState() {
                 selectedCupSize = StringToCupSize(cmd);
                 if (
                     (selectedCupSize >= shot && selectedCupSize <= large)
-                    && ValidateCupSize(selectedCupSize)
+                    && Weight_ValidateCupSize(selectedCupSize)
                 ) {
                     UART_USB_PutString("Cup size set to ");
                     UART_USB_PutString(CupSizeToString(selectedCupSize));
@@ -110,10 +109,6 @@ void UpdateState() {
             DeactivatePump(detectedColor);
             UART_USB_PutString("Pump deactivated!\r\n");
             currentState = STATE_REPLACE_DIE;
-            break;
-        }
-        case STATE_REPLACE_DIE: {
-            // kode
             break;
         }
         case STATE_RESET: {
