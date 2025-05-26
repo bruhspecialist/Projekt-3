@@ -30,7 +30,7 @@ int8_t setup() {
     int8_t err = 0;
     CyGlobalIntEnable;
     UART_Initialize();
-    //if (!ColorSensor_Initialize()) err = -1;
+    if (!ColorSensor_Initialize()) err = -1;
     Weight_Initialize(); // Vægten nulstilles ved opstart, så ingen vægt på der!
     return err;
 }
@@ -58,6 +58,7 @@ void UpdateState() {
                 }
                 else {
                     UART_PI_PutString("err_badCup\n");
+                    UART_USB_PutString("err_badCup sent to PI\n");
                     PrintError(-3);
                 }
             }
@@ -67,6 +68,7 @@ void UpdateState() {
                     //currentState = STATE_PUMPING;
                 else {
                     UART_PI_PutString("err_noCup\n");
+                    UART_USB_PutString("err_noCup sent to PI\n");
                     PrintError(-4);
                 }
             }
@@ -84,10 +86,11 @@ void UpdateState() {
             char msg[MAX_STR_LENGTH];
             snprintf(msg, MAX_STR_LENGTH, "Detected color: %s\r\n", ColorToString(detectedColor));
             UART_USB_PutString(msg);
+            //detectedColor = green; // MIDLERTIDIGT
             if (detectedColor >= red && detectedColor <= magenta) {
                 memset(msg, 0, MAX_STR_LENGTH); // Rydder bufferen i msg
                 snprintf(msg, MAX_STR_LENGTH, "result %s", ColorToString(detectedColor));
-                UART_PI_PutString(msg);
+                //UART_PI_PutString(msg);
                 currentState = STATE_PUMPING;
             }
             else {
@@ -133,6 +136,17 @@ void TestLoop() {
         rgb[0], rgb[1], rgb[2]
     );
     UART_USB_PutString(buffer);
+    
+    uint8_t color;
+    ColorSensor_Read(&color);
+    sprintf(
+        buffer,
+        "Color = %s\r\n",
+        ColorToString(color)
+    );
+    UART_USB_PutString(buffer);
+    
+    
     
     //Weight_Read();
     

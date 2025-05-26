@@ -16,9 +16,9 @@ enum cupSizes { none = 0, shot = 1, medium = 2, large = 3 };
 #define SHOT_WEIGHT 39 // Faktisk: 46g
 #define MEDIUM_WEIGHT 65 // Faktisk: 67g
 #define LARGE_WEIGHT 84 // Faktisk: 89g
-#define SHOT_FULL_WEIGHT 87 // Faktisk: 91g
-#define MEDIUM_FULL_WEIGHT 143 // Faktisk: 142g
-#define LARGE_FULL_WEIGHT 194 // Faktisk: 199g
+#define SHOT_FULL_WEIGHT 87 - 20 // Faktisk: 91g
+#define MEDIUM_FULL_WEIGHT 143 - 20 // Faktisk: 142g
+#define LARGE_FULL_WEIGHT 194 - 20 // Faktisk: 199g
 
 static const uint16_t cup_weights[]      = { 0, SHOT_WEIGHT, MEDIUM_WEIGHT, LARGE_WEIGHT };
 static const uint16_t cup_full_weights[] = { 0, SHOT_FULL_WEIGHT, MEDIUM_FULL_WEIGHT, LARGE_FULL_WEIGHT };
