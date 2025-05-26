@@ -4,12 +4,14 @@
 #include <stdbool.h>
 #include <string.h>
 
+// Internal reference er godt for første vægt (Omer), external skal bruges ved anden vægt
+
 // Med 3D printet kopholder som preload
 #define WEIGHT_TOLERANCE 10
-#define ADC_M1      476
-#define ADC_M2      1802
+#define ADC_M1      32
+#define ADC_M2      256 // Anden vægt: 1802
 #define M1_WEIGHT   0
-#define M2_WEIGHT   750
+#define M2_WEIGHT   515 // Anden vægt: 750
 
 enum cupSizes { none = 0, shot = 1, medium = 2, large = 3 };
 
@@ -86,6 +88,7 @@ bool Weight_IsCupFull(enum cupSizes cupSize) {
 }
 
 void Weight_Tare() {
+    
     uint32_t sum = 0;
     uint16_t reading;
     for (uint16_t i = 0; i < 100; ++i) {

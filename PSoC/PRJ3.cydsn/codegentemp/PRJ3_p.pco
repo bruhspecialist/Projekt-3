@@ -71,7 +71,7 @@ set_io "UART_PI_TX(0)" iocell 3 7
 set_location "ClockBlock" clockblockcell -1 -1 0
 # Note: port 12 is the logical name for port 7
 set_io "UART_USB_RX(0)" iocell 12 6
-set_location "\WEIGHT_ADC:ADC_SAR\" sarcell -1 -1 1
+set_location "\WEIGHT_ADC:ADC_SAR\" sarcell -1 -1 0
 # Note: port 12 is the logical name for port 7
 set_io "scl(0)" iocell 12 0
 set_location "UART_PI_RX_ISR" interrupt -1 -1 0
@@ -94,6 +94,5 @@ set_io "PUMP_4(0)" iocell 15 3
 set_io "PUMP_5(0)" iocell 15 4
 # Note: port 15 is the logical name for port 8
 set_io "PUMP_6(0)" iocell 15 5
-set_io "\WEIGHT_ADC:ExtVref(0)\" iocell 0 2
 set_io "WEIGHT_ADC_Pin(0)" iocell 0 0
 set_io "UART_PI_RX(0)" iocell 3 6

@@ -49,7 +49,7 @@ void UpdateState() {
                 uint8_t cupSize = StringToCupSize(cmd);
                 if (
                     (cupSize >= shot && cupSize <= large)
-                    && Weight_ValidateCupSize(cupSize)
+                    //&& Weight_ValidateCupSize(cupSize)
                 ) {
                     selectedCupSize = cupSize;
                     UART_USB_PutString("Cup size set to ");
@@ -127,28 +127,28 @@ void UpdateState() {
 }
 
 void TestLoop() {
-    uint16_t rgb[3];
-    char buffer[64];
-    ColorSensor_ReadRawRGB(rgb);
-    sprintf(
-        buffer,
-        "RGB = [%u, %u, %u]\r\n",
-        rgb[0], rgb[1], rgb[2]
-    );
-    UART_USB_PutString(buffer);
+//    uint16_t rgb[3];
+//    char buffer[64];
+//    ColorSensor_ReadRawRGB(rgb);
+//    sprintf(
+//        buffer,
+//        "RGB = [%u, %u, %u]\r\n",
+//        rgb[0], rgb[1], rgb[2]
+//    );
+//    UART_USB_PutString(buffer);
+//    
+//    uint8_t color;
+//    ColorSensor_Read(&color);
+//    sprintf(
+//        buffer,
+//        "Color = %s\r\n",
+//        ColorToString(color)
+//    );
+//    UART_USB_PutString(buffer);
     
-    uint8_t color;
-    ColorSensor_Read(&color);
-    sprintf(
-        buffer,
-        "Color = %s\r\n",
-        ColorToString(color)
-    );
-    UART_USB_PutString(buffer);
     
     
-    
-    //Weight_Read();
+    Weight_Read();
     
     CyDelay(100);
 }

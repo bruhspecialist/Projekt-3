@@ -167,10 +167,10 @@ extern volatile int16 WEIGHT_ADC_shift;
 #define WEIGHT_ADC_DEFAULT_RESOLUTION     (12u)   /* ADC resolution selected with parameters.*/
 #define WEIGHT_ADC_DEFAULT_CONV_MODE      (0u)        /* Default conversion method */
 #define WEIGHT_ADC_DEFAULT_INTERNAL_CLK   (1u)             /* Default clock selection */
-#define WEIGHT_ADC_DEFAULT_REFERENCE      (2u)         /* Default reference */
+#define WEIGHT_ADC_DEFAULT_REFERENCE      (0u)         /* Default reference */
 #define WEIGHT_ADC_DEFAULT_RANGE          (1u)       /* ADC Input Range selection */
-#define WEIGHT_ADC_CLOCK_FREQUENCY        (1800000u)   /* Clock frequency */
-#define WEIGHT_ADC_NOMINAL_CLOCK_FREQ     (1846154)  /* Nominal Clock Frequency */
+#define WEIGHT_ADC_CLOCK_FREQUENCY        (1600000u)   /* Clock frequency */
+#define WEIGHT_ADC_NOMINAL_CLOCK_FREQ     (1600000)  /* Nominal Clock Frequency */
 #define WEIGHT_ADC_HIGH_POWER_PULSE       (1u)        /* Not zero when clock pulse > 50 ns */
 #define WEIGHT_ADC_IRQ_REMOVE             (0u)                /* Removes internal interrupt */
 
@@ -198,7 +198,7 @@ extern volatile int16 WEIGHT_ADC_shift;
                                                                                        WEIGHT_ADC__MINPOWER))
 /* Constant for a global usage */
 /* Number of additional clocks for sampling data*/
-#define WEIGHT_ADC_SAMPLE_PRECHARGE       (6u)
+#define WEIGHT_ADC_SAMPLE_PRECHARGE       (4u)
 
 
 /***************************************

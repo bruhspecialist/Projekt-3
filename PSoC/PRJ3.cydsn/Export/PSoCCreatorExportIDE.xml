@@ -177,9 +177,6 @@
           <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\WEIGHT_ADC_IRQ.h</File>
           <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\WEIGHT_ADC_theACLK.c</File>
           <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\WEIGHT_ADC_theACLK.h</File>
-          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\WEIGHT_ADC_ExtVref_aliases.h</File>
-          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\WEIGHT_ADC_ExtVref.c</File>
-          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\WEIGHT_ADC_ExtVref.h</File>
         </Files>
       </Folder>
       <Folder BuildType="STRICT" Path="C:\Users\alexa\Documents\GitHub\Projekt-3\PSoC\PRJ3.cydsn\Export\ARM_GCC_Generic">
