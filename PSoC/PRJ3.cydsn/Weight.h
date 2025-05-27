@@ -8,19 +8,19 @@
 
 // Med 3D printet kopholder som preload
 #define WEIGHT_TOLERANCE 10
-#define ADC_M1      32
-#define ADC_M2      256 // Anden vægt: 1802
+#define ADC_M1      386
+#define ADC_M2      805 // Anden vægt: 1802
 #define M1_WEIGHT   0
 #define M2_WEIGHT   515 // Anden vægt: 750
 
 enum cupSizes { no_cupSize = 0, shot = 1, medium = 2, large = 3 };
 
-#define SHOT_WEIGHT 39 // Faktisk: 46g
-#define MEDIUM_WEIGHT 65 // Faktisk: 67g
-#define LARGE_WEIGHT 84 // Faktisk: 89g
-#define SHOT_FULL_WEIGHT 87 - 20 // Faktisk: 91g
-#define MEDIUM_FULL_WEIGHT 143 - 20 // Faktisk: 142g
-#define LARGE_FULL_WEIGHT 194 - 20 // Faktisk: 199g
+#define SHOT_WEIGHT 40 // Faktisk: 46g
+#define MEDIUM_WEIGHT 60 // Faktisk: 67g
+#define LARGE_WEIGHT 95 // Faktisk: 89g
+#define SHOT_FULL_WEIGHT 95 - 20 // Faktisk: 91g
+#define MEDIUM_FULL_WEIGHT 142 - 20 // Faktisk: 142g
+#define LARGE_FULL_WEIGHT 182 - 20 // Faktisk: 199g
 
 static const uint16_t cup_weights[]      = { 0, SHOT_WEIGHT, MEDIUM_WEIGHT, LARGE_WEIGHT };
 static const uint16_t cup_full_weights[] = { 0, SHOT_FULL_WEIGHT, MEDIUM_FULL_WEIGHT, LARGE_FULL_WEIGHT };
@@ -52,9 +52,9 @@ uint16_t ConvertToGram(uint16_t adc_count) {
 uint16_t Weight_ADC_Read() {
     if (WEIGHT_ADC_IsEndConversion(WEIGHT_ADC_WAIT_FOR_RESULT)) {
         uint16_t rawADC = WEIGHT_ADC_GetResult16();
-        //UART_USB_PutString("ADC: ");
-        //UART_USB_PutInt(rawADC);
-        //UART_USB_PutString("\r\n");
+        UART_USB_PutString("ADC: ");
+        UART_USB_PutInt(rawADC);
+        UART_USB_PutString("\r\n");
         return rawADC - ADC_zeroOffset;
     }
     else return 0;
@@ -82,7 +82,8 @@ bool Weight_IsCupFull(enum cupSizes cupSize) {
     if (cupSize != no_cupSize) {
         uint16_t weight = Weight_Read();
         uint16_t target = CupFullWeight(cupSize);
-        return (weight >= target - WEIGHT_TOLERANCE) && (weight <= target + WEIGHT_TOLERANCE);
+        return false;
+        //return (weight >= target - WEIGHT_TOLERANCE) && (weight <= target + WEIGHT_TOLERANCE);
     }
     else return false;
 }
@@ -98,9 +99,9 @@ void Weight_Tare() {
     }
     uint16_t avg = (uint16_t)(sum / 100);
     ADC_zeroOffset = avg - ADC_M1;
-    UART_USB_PutString("ADC_zeroOffset: ");
-    UART_USB_PutInt(ADC_zeroOffset);
-    UART_USB_PutString("\r\n");
+//    UART_USB_PutString("ADC_zeroOffset: ");
+//    UART_USB_PutInt(ADC_zeroOffset);
+//    UART_USB_PutString("\r\n");
 }
 
 void Weight_Initialize() {

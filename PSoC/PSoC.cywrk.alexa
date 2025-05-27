@@ -13,7 +13,7 @@
 <v>Output</v>
 </TreeKeys>
 <TreeStates>
-<CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237 type_name="CyDesigner.Common.Base.Controls.CyTreeViewState" version="1" SelectedNodeId="">
+<CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237 type_name="CyDesigner.Common.Base.Controls.CyTreeViewState" version="1" SelectedNodeId="PSoC\PRJ3\TopDesign">
 <ExpandedNodeIds>
 <v>PSoC</v>
 <v>PSoC\PRJ3</v>
@@ -98,6 +98,7 @@
 <v>PSoC\PRJ3\Generated_Source\PSoC5\UART_USB_IntClock</v>
 <v>PSoC\PRJ3\Generated_Source\PSoC5\UART_USB_RX_ISR</v>
 <v>PSoC\PRJ3\Generated_Source\PSoC5\WEIGHT_ADC</v>
+<v>PSoC\PRJ3\Generated_Source\PSoC5\WEIGHT_ADC_ExtVref</v>
 <v>PSoC\PRJ3\Generated_Source\PSoC5\WEIGHT_ADC_IRQ</v>
 <v>PSoC\PRJ3\Generated_Source\PSoC5\WEIGHT_ADC_Pin</v>
 <v>PSoC\PRJ3\Generated_Source\PSoC5\WEIGHT_ADC_theACLK</v>
@@ -193,6 +194,7 @@
 <v>PSoC\PRJ3\CortexM3\ARM_GCC_541\Debug\Listing Files\UART_USB_PM.lst</v>
 <v>PSoC\PRJ3\CortexM3\ARM_GCC_541\Debug\Listing Files\UART_USB_RX_ISR.lst</v>
 <v>PSoC\PRJ3\CortexM3\ARM_GCC_541\Debug\Listing Files\WEIGHT_ADC.lst</v>
+<v>PSoC\PRJ3\CortexM3\ARM_GCC_541\Debug\Listing Files\WEIGHT_ADC_ExtVref.lst</v>
 <v>PSoC\PRJ3\CortexM3\ARM_GCC_541\Debug\Listing Files\WEIGHT_ADC_INT.lst</v>
 <v>PSoC\PRJ3\CortexM3\ARM_GCC_541\Debug\Listing Files\WEIGHT_ADC_IRQ.lst</v>
 <v>PSoC\PRJ3\CortexM3\ARM_GCC_541\Debug\Listing Files\WEIGHT_ADC_Pin.lst</v>
@@ -260,6 +262,7 @@
 <v>PSoC\PRJ3\CortexM3\ARM_GCC_541\Debug\Listing Files\UART_USB_PM.lst</v>
 <v>PSoC\PRJ3\CortexM3\ARM_GCC_541\Debug\Listing Files\UART_USB_RX_ISR.lst</v>
 <v>PSoC\PRJ3\CortexM3\ARM_GCC_541\Debug\Listing Files\WEIGHT_ADC.lst</v>
+<v>PSoC\PRJ3\CortexM3\ARM_GCC_541\Debug\Listing Files\WEIGHT_ADC_ExtVref.lst</v>
 <v>PSoC\PRJ3\CortexM3\ARM_GCC_541\Debug\Listing Files\WEIGHT_ADC_INT.lst</v>
 <v>PSoC\PRJ3\CortexM3\ARM_GCC_541\Debug\Listing Files\WEIGHT_ADC_IRQ.lst</v>
 <v>PSoC\PRJ3\CortexM3\ARM_GCC_541\Debug\Listing Files\WEIGHT_ADC_Pin.lst</v>
@@ -318,21 +321,7 @@
 </userData>
 </CyGuid_fdba8dfd-b15b-4469-9bbb-9e40c3e70997>
 <Unloaded />
-<OpenDocs>
-<name v=".\PRJ3.cydsn\main.c" />
-<name v=".\PRJ3.cydsn\PRJ3.cydwr" />
-<name v=".\PRJ3.cydsn\ColorSensor.c" />
-<name v=".\PRJ3.cydsn\Pump.c" />
-<name v=".\PRJ3.cydsn\Weight.h" />
-<name v=".\PRJ3.cydsn\TopDesign\TopDesign.cysch" />
-</OpenDocs>
-<OpenDocsLayout><![CDATA[<?xml version="1.0"?><!--
-
-  Actipro Docking/MDI for WinForms
-  Copyright (c) 2001-2016 Actipro Software LLC.  All rights reserved.
-  http://www.actiprosoftware.com
-
---><DocumentLayout Version="1.0"><LayoutData><TabbedMdiRootContainer Orientation="Horizontal"><TabbedMdiContainer Size="1983, 1100" SelectedTabbedMdiWindow="1c0aa8f9-4b9a-488a-88a0-664c847c6c76"><DocumentWindow Key="C:\Users\alexa\Documents\GitHub\Projekt-3\PSoC\PRJ3.cydsn\main.c" Guid="1c0aa8f9-4b9a-488a-88a0-664c847c6c76" /><DocumentWindow Key="C:\Users\alexa\Documents\GitHub\Projekt-3\PSoC\PRJ3.cydsn\PRJ3.cydwr" Guid="07969168-0097-48e9-b272-9d831bfe5287" /><DocumentWindow Key="C:\Users\alexa\Documents\GitHub\Projekt-3\PSoC\PRJ3.cydsn\ColorSensor.c" Guid="7386f9f8-0133-438c-9411-a82f1fb0a06b" /><DocumentWindow Key="C:\Users\alexa\Documents\GitHub\Projekt-3\PSoC\PRJ3.cydsn\Pump.c" Guid="d67ad801-4a73-48e1-93e0-6507ee3f998a" /><DocumentWindow Key="C:\Users\alexa\Documents\GitHub\Projekt-3\PSoC\PRJ3.cydsn\Weight.h" Guid="b44bcb5a-893c-43a8-99f0-8894eaf5be65" /><DocumentWindow Key="C:\Users\alexa\Documents\GitHub\Projekt-3\PSoC\PRJ3.cydsn\TopDesign\TopDesign.cysch" Guid="0915bfb1-0de1-45a4-96e8-8cf382401f8f" /></TabbedMdiContainer></TabbedMdiRootContainer><FloatingContainers /></LayoutData></DocumentLayout>]]></OpenDocsLayout>
+<OpenDocs />
 <config v="" />
 <AutoUpdate v="true" />
 </CyGuid_843a90a4-0c4b-4e44-991d-05e7fb117a21>

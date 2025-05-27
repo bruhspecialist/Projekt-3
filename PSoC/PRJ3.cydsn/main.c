@@ -31,7 +31,7 @@ int8_t setup() {
     CyGlobalIntEnable;
     UART_Initialize();
     if (!ColorSensor_Initialize()) err = -1;
-    Weight_Initialize(); // Vægten nulstilles ved opstart, så ingen vægt på der!
+    //Weight_Initialize(); // Vægten nulstilles ved opstart, så ingen vægt på der!
     return err;
 }
 
@@ -52,6 +52,7 @@ void UpdateState() {
                     //&& Weight_ValidateCupSize(cupSize)
                 ) {
                     selectedCupSize = cupSize;
+                    UART_PI_PutString("ok\n");
                     UART_USB_PutString("Cup size set to ");
                     UART_USB_PutString(cmd);
                     UART_USB_PutString("\r\n");
@@ -63,8 +64,10 @@ void UpdateState() {
                 }
             }
             else if (strcmp(cmd, "start") == 0) {
-                if (selectedCupSize != no_cupSize)
+                if (selectedCupSize != no_cupSize) {
+                    UART_PI_PutString("ok\n");
                     currentState = STATE_DROPPING;
+                }
                 else {
                     UART_PI_PutString("err_noCup\n");
                     UART_USB_PutString("err_noCup sent to PI\n");
@@ -147,8 +150,19 @@ void TestLoop() {
     
     
     Weight_Read();
-    
     CyDelay(100);
+    
+    
+    //UART_PI_PutString("err_badCup\n");
+    //UART_USB_PutString("err_badCup sent to PI!\r\n");
+    //CyDelay(2000);
+    //UART_PI_PutString("err_noCup\n");
+    //UART_USB_PutString("err_noCup sent to PI!\r\n");
+    //CyDelay(2000);
+    
+    //UART_PI_PutString("ok\n");
+    //UART_USB_PutString("ok sent to PI!\r\n");
+    //CyDelay(2000);
 }
 
 int main() {
