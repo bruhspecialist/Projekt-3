@@ -23,8 +23,8 @@ typedef enum {
 } State;
 
 State currentState = STATE_IDLE;
-uint8_t selectedCupSize = 0;
-uint8_t detectedColor = 0;
+uint8_t selectedCupSize = no_cupSize;
+uint8_t detectedColor = no_color;
 
 int8_t setup() {
     int8_t err = 0;
@@ -48,7 +48,7 @@ void UpdateState() {
             ) {
                 uint8_t cupSize = StringToCupSize(cmd);
                 if (
-                    (cupSize >= shot && cupSize <= large)
+                    (cupSize != no_cupSize)
                     //&& Weight_ValidateCupSize(cupSize)
                 ) {
                     selectedCupSize = cupSize;
@@ -63,9 +63,8 @@ void UpdateState() {
                 }
             }
             else if (strcmp(cmd, "start") == 0) {
-                if (selectedCupSize >= shot && selectedCupSize <= large)
+                if (selectedCupSize != no_cupSize)
                     currentState = STATE_DROPPING;
-                    //currentState = STATE_PUMPING;
                 else {
                     UART_PI_PutString("err_noCup\n");
                     UART_USB_PutString("err_noCup sent to PI\n");
@@ -86,10 +85,9 @@ void UpdateState() {
             char msg[MAX_STR_LENGTH];
             snprintf(msg, MAX_STR_LENGTH, "Detected color: %s\r\n", ColorToString(detectedColor));
             UART_USB_PutString(msg);
-            //detectedColor = green; // MIDLERTIDIGT
-            if (detectedColor >= red && detectedColor <= magenta) {
-                memset(msg, 0, MAX_STR_LENGTH); // Rydder bufferen i msg
-                snprintf(msg, MAX_STR_LENGTH, "result %s", ColorToString(detectedColor));
+            if (detectedColor != no_color) {
+                //memset(msg, 0, MAX_STR_LENGTH); // Rydder bufferen i msg
+                //snprintf(msg, MAX_STR_LENGTH, "result %s", ColorToString(detectedColor));
                 //UART_PI_PutString(msg);
                 currentState = STATE_PUMPING;
             }
@@ -109,8 +107,8 @@ void UpdateState() {
             break;
         }
         case STATE_RESET: {
-            selectedCupSize = 0;
-            detectedColor = 0;
+            selectedCupSize = no_cupSize;
+            detectedColor = no_color;
             currentState = STATE_IDLE;
             break;
         }
