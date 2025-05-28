@@ -21,6 +21,7 @@ app.rowconfigure((0, 1, 2, 3), weight=1) # row heights
 app.grid_propagate(False) # prevent resizing of the window
 
 
+
 ##### text labels #####
 
 #text update right side top of window

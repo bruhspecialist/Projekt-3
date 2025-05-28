@@ -6,11 +6,12 @@ buttons = []
 
 ##### UART communication setup ####
 try:
-    ser = serial.Serial('/dev/serial0', 9600, timeout=1)  # Open serial port with baudrate 57600
+    ser = serial.Serial('/dev/serial0', 9600, timeout=1)  # Open serial port with baudrate 9600
     ser.flush()
 except serial.SerialException as e:
     print("Error opening serial port:", e)
     ser = None
+
 
 
 ##### send commands to PSoC ####
@@ -18,6 +19,9 @@ except serial.SerialException as e:
 def sendCommand(text):
     try:         
         ser.write(text.encode())  # Send string command
+        ser.flush()
+        if ser is None:
+            return "serial_unavailable: sendCommand"
     except Exception as e:
         print("UART Error:", e)
 
@@ -36,9 +40,8 @@ def updateWhenButtonPressed(selectedButton, text, label):
     # update the label
     label.configure(text=f"{text}")
     #prints the button pressed to the console
-    print(f"Button pressed: {selectedButton.cget('text')}")
+    print(f"\nButton pressed: {selectedButton.cget('text')}")
 
-# err_noCup
 
 # function to handle glass size selection
 def HandleGlassSize(button, size_text, glassSize, label):
@@ -50,12 +53,12 @@ def HandleGlassSize(button, size_text, glassSize, label):
     
     # badCup = soemthing chosen on GUI but wrong size
     if glassSizeChosen == "err_badCup":
-        label.configure(text="wrong glass / no cup placed \n choose new size")
+        label.configure(text="wrong or no cup placed \n choose new size")
     elif glassSizeChosen == "ok":
         label.configure(text=f"Glass size: {glassSize}")
     else:
-        label.configure(text="timeout\nno response from PSoC")
-
+        label.configure(text="timeout: Err_badCup\nno response from PSoC")
+       
 def handleStartGame(button, size_text, label):
     updateWhenButtonPressed(button, size_text, label)
     gameStarted = startGameFunc()
@@ -63,11 +66,11 @@ def handleStartGame(button, size_text, label):
 
 # noCup = nothing chosen on GUI 
     if gameStarted == "err_noCup":
-        label.configure(text="no glass size chosen!\n choose a size first")
+        label.configure(text="no glass size chosen\n choose a size first")
     elif gameStarted == "ok":
         label.configure(text="Game started!")
     else:
-        label.configure(text="timeout\nno response from PSoC")
+        label.configure(text="timeout: err_noCup\nno response from PSoC")
 
 
 # test function (primary button)
@@ -79,14 +82,12 @@ def startGameFunc():
         if response:
             return response
         else:
-            print("No response received within timeout")
+            print("No response received within timeout: start error")
             return "no_response"
 
     except Exception as e:
         print("UART communication error: ", e)
         return "serial_err"
-
-
 
 
 # sending glass size to PSoC and waiting for response
@@ -98,7 +99,7 @@ def sendGlassSize(size):
         if response:
             return response
         else:
-            print("No response received within timeout")
+            print("No response received within timeout: glass error: ", {response})
             return "no_response"
 
     except Exception as e:
@@ -109,14 +110,15 @@ def sendGlassSize(size):
 # Fucction for timeout loop 
 
 def timeoutFunc(timeout=1.0):
+    if ser is None:
+        return "serial_unavailable: timeFunc"
     start_time = time.time()
     while time.time() - start_time < timeout:
         if ser.in_waiting > 0:
             try:
                 response = ser.readline().decode(errors="ignore").strip()
-                print("Received: ", response)
                 return response
             except Exception as e:
                 print("Decode error:", e)
                 return "decode_error"
-        time.sleep(0.05)  #loop runs for 1 second and checks for response every 0.05 seconds
+        time.sleep(0.01)  #loop runs for 1 second and checks for response every 0.05 seconds
