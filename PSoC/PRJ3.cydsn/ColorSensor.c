@@ -84,7 +84,7 @@ uint8_t DetectColor(const uint16_t* rgb) {
     if (g < min) min = g;
     if (b < min) min = b;
 
-    if (max - min <= max * UNDEF_TOL) return 0; // For lidt kontrast til at afgøre farve
+    if (max - min <= max * UNDEF_TOL) return no_color; // For lidt kontrast til at afgøre farve
 
     if (r > g * (1 + SEC_TOL) && r > b * (1 + SEC_TOL)) return red;
     if (g > r * (1 + SEC_TOL) && g > b * (1 + SEC_TOL)) return green;
@@ -92,7 +92,7 @@ uint8_t DetectColor(const uint16_t* rgb) {
     if (r > b && g > b) return yellow;
     if (g > r && b > r) return cyan;
     if (r > g && b > g) return magenta;
-    return 0; // Hvis alt andet skulle fejle (Bør ikke ske)
+    return no_color; // Hvis alt andet skulle fejle (Bør ikke ske)
 }
 
 uint8_t GetOpposingColor(enum Colors color) {
@@ -103,7 +103,7 @@ uint8_t GetOpposingColor(enum Colors color) {
         case yellow    : return red;
         case cyan      : return blue;
         case magenta   : return green;
-        default        : return 0;
+        default        : return no_color;
     }
 }
 

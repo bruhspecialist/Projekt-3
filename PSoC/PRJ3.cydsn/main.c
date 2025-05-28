@@ -6,9 +6,6 @@
 #include "Weight.h"
 #include "UART.h"
 #include "ErrorMessage.h"
-#include "MockupTests.h"
-#include "SimulationTests.h"
-#include "CustomMath.h"
 
 #include "time.h"
 #include "stdio.h"
@@ -26,16 +23,15 @@ typedef enum {
 } State;
 
 State currentState = STATE_IDLE;
-uint8_t selectedCupSize = 0;
-uint8_t detectedColor = 0;
+uint8_t selectedCupSize = no_cupSize;
+uint8_t detectedColor = no_color;
 
 int8_t setup() {
     int8_t err = 0;
     CyGlobalIntEnable;
     UART_Initialize();
-    //if (!ColorSensor_Initialize()) err = -1;
-    //Weight_Initialize();
-    InitializeSimulationConditions(); // Midlertidig
+    if (!ColorSensor_Initialize()) err = -1;
+    //Weight_Initialize(); // Vægten nulstilles ved opstart, så ingen vægt på der!
     return err;
 }
 
@@ -52,23 +48,29 @@ void UpdateState() {
             ) {
                 uint8_t cupSize = StringToCupSize(cmd);
                 if (
-                    (cupSize >= shot && cupSize <= large)
-                    && Weight_ValidateCupSize(selectedCupSize)
+                    (cupSize != no_cupSize)
+                    //&& Weight_ValidateCupSize(cupSize)
                 ) {
                     selectedCupSize = cupSize;
+                    UART_PI_PutString("ok\n");
                     UART_USB_PutString("Cup size set to ");
                     UART_USB_PutString(cmd);
                     UART_USB_PutString("\r\n");
                 }
                 else {
                     UART_PI_PutString("err_badCup\n");
+                    UART_USB_PutString("err_badCup sent to PI\n");
                     PrintError(-3);
                 }
             }
             else if (strcmp(cmd, "start") == 0) {
-                if (selectedCupSize >= shot && selectedCupSize <= large) currentState = STATE_DROPPING;
+                if (selectedCupSize != no_cupSize) {
+                    UART_PI_PutString("ok\n");
+                    currentState = STATE_DROPPING;
+                }
                 else {
                     UART_PI_PutString("err_noCup\n");
+                    UART_USB_PutString("err_noCup sent to PI\n");
                     PrintError(-4);
                 }
             }
@@ -86,10 +88,10 @@ void UpdateState() {
             char msg[MAX_STR_LENGTH];
             snprintf(msg, MAX_STR_LENGTH, "Detected color: %s\r\n", ColorToString(detectedColor));
             UART_USB_PutString(msg);
-            if (detectedColor >= red && detectedColor <= magenta) {
-                memset(msg, 0, MAX_STR_LENGTH); // Rydder bufferen i msg
-                snprintf(msg, MAX_STR_LENGTH, "result %s", ColorToString(detectedColor));
-                UART_PI_PutString(msg);
+            if (detectedColor != no_color) {
+                //memset(msg, 0, MAX_STR_LENGTH); // Rydder bufferen i msg
+                //snprintf(msg, MAX_STR_LENGTH, "result %s", ColorToString(detectedColor));
+                //UART_PI_PutString(msg);
                 currentState = STATE_PUMPING;
             }
             else {
@@ -101,15 +103,15 @@ void UpdateState() {
         case STATE_PUMPING: {
             ActivatePump(detectedColor);
             UART_USB_PutString("Pump activated!\r\n");
-            while (!Weight_IsCupFull(shot)) {}; // Vent til koppen er fyldt
+            while (!Weight_IsCupFull(selectedCupSize)) {}; // Vent til koppen er fyldt
             DeactivatePump(detectedColor);
             UART_USB_PutString("Pump deactivated!\r\n");
             currentState = STATE_RESET;
             break;
         }
         case STATE_RESET: {
-            selectedCupSize = 0;
-            detectedColor = 0;
+            selectedCupSize = no_cupSize;
+            detectedColor = no_color;
             currentState = STATE_IDLE;
             break;
         }
@@ -126,9 +128,41 @@ void UpdateState() {
 }
 
 void TestLoop() {
-    TestColorSensorRGB();
-    TestColorSensor();
-    CyDelay(1000);
+//    uint16_t rgb[3];
+//    char buffer[64];
+//    ColorSensor_ReadRawRGB(rgb);
+//    sprintf(
+//        buffer,
+//        "RGB = [%u, %u, %u]\r\n",
+//        rgb[0], rgb[1], rgb[2]
+//    );
+//    UART_USB_PutString(buffer);
+//    
+//    uint8_t color;
+//    ColorSensor_Read(&color);
+//    sprintf(
+//        buffer,
+//        "Color = %s\r\n",
+//        ColorToString(color)
+//    );
+//    UART_USB_PutString(buffer);
+    
+    
+    
+    Weight_Read();
+    CyDelay(100);
+    
+    
+    //UART_PI_PutString("err_badCup\n");
+    //UART_USB_PutString("err_badCup sent to PI!\r\n");
+    //CyDelay(2000);
+    //UART_PI_PutString("err_noCup\n");
+    //UART_USB_PutString("err_noCup sent to PI!\r\n");
+    //CyDelay(2000);
+    
+    //UART_PI_PutString("ok\n");
+    //UART_USB_PutString("ok sent to PI!\r\n");
+    //CyDelay(2000);
 }
 
 int main() {
