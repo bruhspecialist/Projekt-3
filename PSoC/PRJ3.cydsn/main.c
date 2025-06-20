@@ -103,7 +103,8 @@ void UpdateState() {
         case STATE_PUMPING: {
             ActivatePump(detectedColor);
             UART_USB_PutString("Pump activated!\r\n");
-            while (!Weight_IsCupFull(selectedCupSize)) {}; // Vent til koppen er fyldt
+            //while (!Weight_IsCupFull(selectedCupSize)) {}; // Vent til koppen er fyldt
+            CyDelay(5000);
             DeactivatePump(detectedColor);
             UART_USB_PutString("Pump deactivated!\r\n");
             currentState = STATE_RESET;
